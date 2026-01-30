@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>High School Learning Tools - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <!-- Return to High School Button -->
+  <div class="mb-6">
+    <a href="high-school.html" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back to High School</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="flex justify-center mb-4">
+      <div class="p-4 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full">
+        <i data-lucide="wrench" class="w-16 h-16 text-white"></i>
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">High School Learning Tools</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Interactive tools and resources to help you master high school subjects
+    </p>
+  </div>
+
+  <!-- Math Tools Section -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
+      <i data-lucide="calculator" class="w-8 h-8 text-blue-600"></i>
+      Math Tools
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Algebra Tools -->
+      <a href="algebra-learning-tools.html" class="block h-full">
+        <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-red-500 hover:shadow-xl transition cursor-pointer h-full flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="function-square" class="w-6 h-6 text-red-500"></i>
+            <h3 class="text-xl font-bold">Algebra</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Tools for solving equations, graphing functions, and understanding algebraic concepts</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-red-500">•</span>
+              <span>Equation solver</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-500">•</span>
+              <span>Function graphing calculator</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-500">•</span>
+              <span>Step-by-step solutions</span>
+            </li>
+          </ul>
+        </div>
+      </a>
+
+      <!-- Geometry Tools -->
+      <a href="geometry-learning-tools.html" class="block h-full">
+        <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500 hover:shadow-xl transition cursor-pointer h-full flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="shapes" class="w-6 h-6 text-blue-500"></i>
+            <h3 class="text-xl font-bold">Geometry</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Visualize shapes, calculate areas, and explore geometric theorems</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-500">•</span>
+              <span>Shape calculator (area, perimeter, volume)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-500">•</span>
+              <span>Angle solver</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-500">•</span>
+              <span>Interactive geometric proofs</span>
+            </li>
+          </ul>
+        </div>
+      </a>
+
+      <!-- Statistics & Probability Tools -->
+      <a href="probability-statistics-learning-tools.html" class="block h-full">
+        <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-500 hover:shadow-xl transition cursor-pointer h-full flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="bar-chart-3" class="w-6 h-6 text-green-500"></i>
+            <h3 class="text-xl font-bold">Statistics & Probability</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Analyze data, calculate probabilities, and create visualizations</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-green-500">•</span>
+              <span>Statistical calculator (mean, median, mode)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-500">•</span>
+              <span>Probability calculator</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-500">•</span>
+              <span>Data visualization tools</span>
+            </li>
+          </ul>
+        </div>
+      </a>
+
+      <!-- Calculus Tools -->
+      <a href="ap-calculus-learning-tools.html" class="block h-full">
+        <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-indigo-500 hover:shadow-xl transition cursor-pointer h-full flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="function-square" class="w-6 h-6 text-indigo-500"></i>
+            <h3 class="text-xl font-bold">AP Calculus</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Tools for limits, derivatives, integrals, and advanced calculus concepts</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-500">•</span>
+              <span>Derivative calculator</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-500">•</span>
+              <span>Integral solver</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-500">•</span>
+              <span>Limit calculator</span>
+            </li>
+          </ul>
+        </div>
+      </a>
+
+      <!-- Basic Math Tools -->
+      <a href="basic-arithmetic-learning-tools.html" class="block h-full">
+        <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-orange-500 hover:shadow-xl transition cursor-pointer h-full flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="calculator" class="w-6 h-6 text-orange-500"></i>
+            <h3 class="text-xl font-bold">Basic & Arithmetic Math</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Fundamental math operations and practice exercises</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-500">•</span>
+              <span>Basic calculator</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-500">•</span>
+              <span>Fraction converter</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-500">•</span>
+              <span>Practice problem generator</span>
+            </li>
+          </ul>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- English Tools Section -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
+      <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+      English & Writing Tools
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Essay Writing Tools -->
+      <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-purple-500 hover:shadow-xl transition h-full flex flex-col">
+        <div class="flex items-center gap-3 mb-4">
+          <i data-lucide="file-text" class="w-6 h-6 text-purple-500"></i>
+          <h3 class="text-xl font-bold">Essay Formatting (APA/MLA)</h3>
+        </div>
+        <p class="text-gray-600 mb-4">Format essays according to APA and MLA guidelines</p>
+        <div class="space-y-3 mb-4">
+          <a href="apa-essays-learning-tools.html" class="block px-4 py-2 bg-purple-100 hover:bg-purple-200 rounded-lg text-purple-700 font-semibold text-center transition">
+            APA Essay Tools →
+          </a>
+          <a href="mla-essays-learning-tools.html" class="block px-4 py-2 bg-purple-100 hover:bg-purple-200 rounded-lg text-purple-700 font-semibold text-center transition">
+            MLA Essay Tools →
+          </a>
+        </div>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li class="flex items-start gap-2">
+            <span class="text-purple-500">•</span>
+            <span>Citation generator</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-purple-500">•</span>
+            <span>Format checker</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-purple-500">•</span>
+            <span>Reference list builder</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Argumentative Writing Tools -->
+      <a href="argumentative-essays-learning-tools.html" class="block h-full">
+        <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-rose-500 hover:shadow-xl transition cursor-pointer h-full flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="scale" class="w-6 h-6 text-rose-500"></i>
+            <h3 class="text-xl font-bold">Argumentative Writing</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Structure and strengthen your arguments</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-500">•</span>
+              <span>Argument structure template</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-500">•</span>
+              <span>Counterargument generator</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-500">•</span>
+              <span>Thesis statement builder</span>
+            </li>
+          </ul>
+        </div>
+      </a>
+
+      <!-- Rhetorical Analysis Tools -->
+      <a href="rhetorical-appeals-learning-tools.html" class="block h-full">
+        <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-pink-500 hover:shadow-xl transition cursor-pointer h-full flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="message-square" class="w-6 h-6 text-pink-500"></i>
+            <h3 class="text-xl font-bold">Rhetorical Appeals</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Identify and analyze ethos, pathos, and logos</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-pink-500">•</span>
+              <span>Rhetorical device identifier</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-500">•</span>
+              <span>Appeal analyzer</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-500">•</span>
+              <span>Example library</span>
+            </li>
+          </ul>
+        </div>
+      </a>
+
+      <!-- AMA Essays Tools -->
+      <a href="ama-essays-learning-tools.html" class="block h-full">
+        <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-teal-500 hover:shadow-xl transition cursor-pointer h-full flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="file-text" class="w-6 h-6 text-teal-500"></i>
+            <h3 class="text-xl font-bold">AMA Essays</h3>
+          </div>
+          <p class="text-gray-600 mb-4">American Medical Association essay format and citations</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-500">•</span>
+              <span>AMA citation generator</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-500">•</span>
+              <span>Medical manuscript formatting</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-500">•</span>
+              <span>Reference style guide</span>
+            </li>
+          </ul>
+        </div>
+      </a>
+
+      <!-- Research Tools -->
+      <a href="research-methods-learning-tools.html" class="block h-full">
+        <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-emerald-500 hover:shadow-xl transition cursor-pointer h-full flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="flask-conical" class="w-6 h-6 text-emerald-500"></i>
+            <h3 class="text-xl font-bold">Research Methods</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Organize and conduct research effectively</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-500">•</span>
+              <span>Source credibility checker</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-500">•</span>
+              <span>Note-taking template</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-500">•</span>
+              <span>Research question generator</span>
+            </li>
+          </ul>
+        </div>
+      </a>
+
+      <!-- Public Speaking Tools -->
+      <a href="public-speaking-learning-tools.html" class="block h-full">
+        <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-violet-500 hover:shadow-xl transition cursor-pointer h-full flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="mic" class="w-6 h-6 text-violet-500"></i>
+            <h3 class="text-xl font-bold">Public Speaking</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Prepare and practice presentations</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-500">•</span>
+              <span>Speech outline generator</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-500">•</span>
+              <span>Timer and pace checker</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-500">•</span>
+              <span>Presentation tips guide</span>
+            </li>
+          </ul>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Computers Tools Section -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
+      <i data-lucide="monitor" class="w-8 h-8 text-blue-600"></i>
+      Computer Skills Tools
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Typing Tools -->
+      <a href="typing-learning-tools.html" class="block h-full">
+        <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-purple-500 hover:shadow-xl transition cursor-pointer h-full flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="keyboard" class="w-6 h-6 text-purple-500"></i>
+            <h3 class="text-xl font-bold">Typing Skills</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Improve your typing speed and accuracy</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-500">•</span>
+              <span>Typing speed test</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-500">•</span>
+              <span>Touch typing lessons</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-500">•</span>
+              <span>Progress tracker</span>
+            </li>
+          </ul>
+        </div>
+      </a>
+
+      <!-- Artificial Intelligence Tools -->
+      <a href="artificial-intelligence-learning-tools.html" class="block h-full">
+        <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-pink-500 hover:shadow-xl transition cursor-pointer h-full flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="brain-circuit" class="w-6 h-6 text-pink-500"></i>
+            <h3 class="text-xl font-bold">Artificial Intelligence</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Machine learning and AI applications</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-pink-500">•</span>
+              <span>Neural network visualizer</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-500">•</span>
+              <span>ML algorithm playground</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-500">•</span>
+              <span>AI ethics case studies</span>
+            </li>
+          </ul>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- General Study Tools Section -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
+      <i data-lucide="graduation-cap" class="w-8 h-8 text-blue-600"></i>
+      General Study Tools
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Flashcards -->
+      <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
+        <div class="flex items-center gap-3 mb-3">
+          <i data-lucide="layers" class="w-6 h-6 text-blue-600"></i>
+          <h3 class="text-lg font-bold">Flashcards</h3>
+        </div>
+        <p class="text-gray-600 text-sm">Create and study with digital flashcards</p>
+      </div>
+
+      <!-- Study Timer -->
+      <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
+        <div class="flex items-center gap-3 mb-3">
+          <i data-lucide="clock" class="w-6 h-6 text-blue-600"></i>
+          <h3 class="text-lg font-bold">Study Timer</h3>
+        </div>
+        <p class="text-gray-600 text-sm">Pomodoro timer for focused study sessions</p>
+      </div>
+
+      <!-- Note Taking -->
+      <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
+        <div class="flex items-center gap-3 mb-3">
+          <i data-lucide="notebook" class="w-6 h-6 text-blue-600"></i>
+          <h3 class="text-lg font-bold">Note Taking</h3>
+        </div>
+        <p class="text-gray-600 text-sm">Digital notebook and organization tools</p>
+      </div>
+
+      <!-- Study Planner -->
+      <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
+        <div class="flex items-center gap-3 mb-3">
+          <i data-lucide="calendar" class="w-6 h-6 text-blue-600"></i>
+          <h3 class="text-lg font-bold">Study Planner</h3>
+        </div>
+        <p class="text-gray-600 text-sm">Plan your study schedule and track progress</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

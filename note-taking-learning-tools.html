@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Note Taking Learning Tools - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <!-- Back Button -->
+  <div class="mb-6">
+    <a href="college-learning-tools.html" class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back to Learning Tools</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="flex justify-center mb-4">
+      <div class="p-4 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full">
+        <i data-lucide="notebook" class="w-16 h-16 text-white"></i>
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Note Taking Learning Tools</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Master effective note-taking with digital tools, methods, and organizational systems
+    </p>
+  </div>
+
+  <!-- Digital Note-Taking Apps -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl shadow-lg p-8 border-l-4 border-indigo-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="laptop" class="w-7 h-7 text-indigo-600"></i>
+        Digital Note-Taking Apps
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.notion.so/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Notion ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">All-in-one workspace for notes and organization</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Databases & templates</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Collaboration features</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Cross-platform sync</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.onenote.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Microsoft OneNote ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free digital notebook with handwriting support</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Flexible canvas</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Audio recording</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>OCR text search</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://evernote.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Evernote ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Note-taking and organization platform</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Web clipper</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Document scanning</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Advanced search</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://obsidian.md/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Obsidian ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Markdown-based knowledge management system</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Linked notes graph</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Local storage</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Plugin ecosystem</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cornell Note-Taking Method -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl shadow-lg p-8 border-l-4 border-emerald-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="layout-grid" class="w-7 h-7 text-emerald-600"></i>
+        Cornell Note-Taking Method
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.notion.so/templates/cornell-notes" target="_blank" class="text-emerald-600 hover:text-emerald-700 hover:underline">Notion Cornell Template ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Cornell method template for Notion</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Pre-formatted layout</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Three-section design</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Easy customization</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.cornell-notes.com/" target="_blank" class="text-emerald-600 hover:text-emerald-700 hover:underline">Cornell Notes Guide ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Complete guide to Cornell note-taking</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Method explanation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Examples & tips</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Printable templates</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.goodnotes.com/cornell-notes" target="_blank" class="text-emerald-600 hover:text-emerald-700 hover:underline">GoodNotes Cornell ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Cornell templates for digital handwriting</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>iPad compatible</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Apple Pencil support</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>PDF export</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://templates.office.com/cornell-notes" target="_blank" class="text-emerald-600 hover:text-emerald-700 hover:underline">Office Cornell Templates ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Microsoft Office Cornell note templates</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Word & OneNote</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Free downloads</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Multiple formats</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Handwriting & Tablet Apps -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="pen-tool" class="w-7 h-7 text-blue-600"></i>
+        Handwriting & Tablet Apps
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.goodnotes.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">GoodNotes ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Handwriting app for iPad with OCR</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Natural handwriting</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>PDF annotation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Searchable notes</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://notability.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Notability ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Note-taking with audio recording</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Synced audio notes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Multi-note view</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>iCloud backup</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.xodo.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Xodo ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free PDF reader and annotator</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Cross-platform</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Annotation tools</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Cloud sync</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://squidnotes.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Squid ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Natural handwriting on Android devices</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Stylus support</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Shape recognition</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Export options</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mind Mapping & Visual Notes -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl shadow-lg p-8 border-l-4 border-purple-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="git-branch" class="w-7 h-7 text-purple-600"></i>
+        Mind Mapping & Visual Notes
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.mindmeister.com/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">MindMeister ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Collaborative online mind mapping tool</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Real-time collaboration</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Presentation mode</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Multiple export formats</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.xmind.net/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">XMind ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Professional mind mapping software</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Multiple structures</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Brainstorming mode</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Business templates</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.coggle.it/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Coggle ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Simple and beautiful mind maps</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Unlimited free maps</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Team collaboration</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Image uploads</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://excalidraw.com/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Excalidraw ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Virtual whiteboard for sketching diagrams</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Hand-drawn style</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Open source</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>No account needed</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Voice & Audio Note-Taking -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl shadow-lg p-8 border-l-4 border-amber-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="mic" class="w-7 h-7 text-amber-600"></i>
+        Voice & Audio Note-Taking
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://otter.ai/" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">Otter.ai ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AI-powered transcription for meetings and lectures</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Real-time transcription</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Speaker identification</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Searchable transcripts</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.rev.com/services/voice-recorder" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">Rev Voice Recorder ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free voice recorder with transcription service</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>High-quality recording</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Professional transcription</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Cloud storage</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.notta.ai/" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">Notta ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AI transcription and note-taking assistant</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Live transcription</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Multi-language support</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Meeting summaries</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.sonocent.com/en-us/products/audio-notetaker" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">Sonocent Audio Notetaker ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Combines audio with visual note organization</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Visual audio notes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Automatic highlighting</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Study mode</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Note-Taking Methods & Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-rose-50 to-red-50 rounded-xl shadow-lg p-8 border-l-4 border-rose-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="book-open" class="w-7 h-7 text-rose-600"></i>
+        Note-Taking Methods & Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/watch?v=WtW9IyE04OQ" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">How to Take Great Notes ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive guide to effective note-taking</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Video tutorial</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Multiple methods</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Practical examples</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.intelligent.com/note-taking-methods/" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">6 Note-Taking Methods ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Compare Cornell, Outlining, Mind Mapping, and more</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Method comparisons</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Pros & cons</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Best use cases</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.coursera.org/learn/learning-how-to-learn" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">Learning How to Learn ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Popular course on effective learning strategies</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Note-taking science</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Memory techniques</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Free certificate</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.reddit.com/r/notetaking/" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">r/NoteTaking ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Community for note-taking tips and tools</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Tool reviews</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Method discussions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Templates & examples</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links to Related Pages -->
+  <section class="mb-12">
+    <div class="bg-white rounded-xl shadow-lg p-8">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="link" class="w-7 h-7 text-blue-600"></i>
+        Related Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-3 gap-4">
+        <a href="college-learning-tools.html" class="flex items-center gap-3 p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg border-l-4 border-indigo-500 hover:shadow-md transition">
+          <i data-lucide="library" class="w-6 h-6 text-indigo-600"></i>
+          <div>
+            <h3 class="font-semibold text-gray-800">All Learning Tools</h3>
+            <p class="text-sm text-gray-600">Browse other study resources</p>
+          </div>
+        </a>
+
+        <a href="study-timer-learning-tools.html" class="flex items-center gap-3 p-4 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-lg border-l-4 border-emerald-500 hover:shadow-md transition">
+          <i data-lucide="clock" class="w-6 h-6 text-emerald-600"></i>
+          <div>
+            <h3 class="font-semibold text-gray-800">Study Timers</h3>
+            <p class="text-sm text-gray-600">Pomodoro & focus tools</p>
+          </div>
+        </a>
+
+        <a href="flashcards-learning-tools.html" class="flex items-center gap-3 p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg border-l-4 border-blue-500 hover:shadow-md transition">
+          <i data-lucide="layers" class="w-6 h-6 text-blue-600"></i>
+          <div>
+            <h3 class="font-semibold text-gray-800">Flashcard Tools</h3>
+            <p class="text-sm text-gray-600">Spaced repetition systems</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-white border-t mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <div class="text-center text-gray-600">
+      <p>&copy; 2026 StudyZone. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="script.js"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+</body>
+</html>

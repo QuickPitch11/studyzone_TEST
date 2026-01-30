@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kinesiology Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full mb-6">
+      <i data-lucide="activity" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Kinesiology Quiz</h1>
+    <p class="text-xl text-gray-600">Test your knowledge of biomechanics, motor learning, and exercise physiology</p>
+  </div>
+
+  <div id="quizContainer" class="space-y-8"></div>
+
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-orange-600 text-white text-lg font-semibold rounded-lg hover:bg-orange-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <div id="quizResults" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-orange-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="kinesiology-analysis.html" class="px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition flex items-center gap-2">
+        <i data-lucide="book-open" class="w-5 h-5"></i>
+        Review Material
+      </a>
+      <button onclick="location.reload()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+        Retake Quiz
+      </button>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="kinesiology.html" class="px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Back to Kinesiology
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  const questionBank = [
+    {question:"What is biomechanics?",options:["Study of nutrition","Application of mechanical principles to study movement and forces in living organisms","Study of muscles only","Cardiology","Psychology of movement"],correct:1,explanation:"Biomechanics applies mechanical principles (physics and engineering) to analyze biological systems, particularly movement. It examines forces, torques, kinematics, and kinetics of the musculoskeletal system during activities, helping understand performance, prevent injuries, and improve rehabilitation techniques."},
+    {question:"What is the primary energy system used during a 100-meter sprint?",options:["Aerobic system","Phosphagen (ATP-PC) system","Oxidative phosphorylation","Glycolysis only","Fatty acid oxidation"],correct:1,explanation:"The phosphagen (ATP-PC) system provides immediate energy for high-intensity, short-duration activities (0-10 seconds) like sprints. It uses stored ATP and creatine phosphate without requiring oxygen. After depletion, the body transitions to anaerobic glycolysis and then aerobic metabolism for longer activities."},
+    {question:"What is VO2 max?",options:["Maximum heart rate","Maximum oxygen uptake during intense exercise","Maximum breathing rate","Maximum blood pressure","Maximum muscle strength"],correct:1,explanation:"VO2 max is the maximum rate of oxygen consumption during maximal exercise. It's measured in ml/kg/min and reflects cardiovascular fitness and aerobic capacity. Higher VO2 max indicates better endurance capacity. It's influenced by genetics, training, age, and sex. Elite endurance athletes have very high VO2 max values."},
+    {question:"What is the sliding filament theory?",options:["Theory of muscle growth","Mechanism of muscle contraction involving actin and myosin filaments sliding past each other","Theory of joint movement","Nervous system theory","Bone growth theory"],correct:1,explanation:"The sliding filament theory explains muscle contraction: myosin heads bind to actin filaments, pull them inward (power stroke), and slide them past each other, shortening the sarcomere. This process requires ATP and calcium. Multiple sarcomeres contracting together produce muscle force and movement."},
+    {question:"What is the difference between concentric and eccentric muscle contractions?",options:["No difference","Concentric: muscle shortens; Eccentric: muscle lengthens while contracting","Concentric is stronger","Eccentric requires no energy","Concentric is always slower"],correct:1,explanation:"Concentric contractions occur when muscle shortens while generating force (e.g., lifting phase of bicep curl). Eccentric contractions occur when muscle lengthens while under tension (e.g., lowering phase). Eccentric contractions can generate more force and cause more muscle damage (delayed onset muscle soreness), making them important for strength training."},
+    {question:"What is proprioception?",options:["Vision","The sense of body position and movement in space","Hearing","Taste","Smell"],correct:1,explanation:"Proprioception is the unconscious perception of body position and movement provided by mechanoreceptors in muscles, tendons, joints, and skin. It allows coordinated movement without visual feedback. Proprioceptive training improves balance, coordination, and injury prevention. Damage to proprioceptive pathways impairs motor control."},
+    {question:"What is the SAID principle?",options:["Safety And Injury Detection","Specific Adaptation to Imposed Demands","Standard Athletic Injury Diagnosis","Strength And Intensity Development","Speed And Interval Dynamics"],correct:1,explanation:"The SAID principle states that the body adapts specifically to the type of demands placed upon it. Training should match the specific requirements of the target activity (movement patterns, energy systems, muscle groups). For example, endurance training improves aerobic capacity but not maximal strength, and vice versa."},
+    {question:"What is motor learning?",options:["Learning about cars","The process of acquiring and refining movement skills through practice and experience","Muscle growth","Cardiovascular adaptation","Flexibility training"],correct:1,explanation:"Motor learning is the relatively permanent change in motor skill performance resulting from practice or experience. It involves stages: cognitive (understanding the task), associative (refining movements), and autonomous (automatic performance). Feedback, practice variability, and contextual interference affect learning. Motor learning is distinct from motor performance (temporary changes)."},
+    {question:"What is the stretch-shortening cycle (SSC)?",options:["A stretching routine","Eccentric contraction immediately followed by concentric contraction, storing and releasing elastic energy","A flexibility test","A type of injury","A breathing technique"],correct:1,explanation:"The stretch-shortening cycle combines an eccentric (lengthening) muscle action immediately followed by a concentric (shortening) action. This stores elastic energy in tendons and muscle during the stretch, which is released during the shortening phase, enhancing power output. Examples include jumping, hopping, and plyometric exercises. SSC improves athletic performance."},
+    {question:"What is the role of fast-twitch (Type II) muscle fibers?",options:["Endurance activities","High-power, short-duration activities","Digestion","Temperature regulation","Blood circulation only"],correct:1,explanation:"Type II (fast-twitch) muscle fibers contract quickly and powerfully but fatigue rapidly. They rely on anaerobic metabolism and are recruited for high-intensity, explosive activities like sprinting, jumping, and weightlifting. Type IIa fibers are intermediate; Type IIx are fastest. Training can shift fiber characteristics but not type. Genetics largely determines fiber type distribution."},
+    {question:"What is the overload principle?",options:["Lifting too much weight","To improve, stress applied must be greater than what the body is accustomed to","Resting too much","Eating too much","Avoiding exercise"],correct:1,explanation:"The overload principle states that to improve fitness or performance, the body must be stressed beyond its current capacity. This can be achieved by increasing intensity, duration, frequency, or complexity of training. Progressive overload ensures continued adaptation. Without overload, plateaus occur. Overload must be balanced with recovery to prevent overtraining."},
+    {question:"What is the function of the Golgi tendon organ?",options:["Produce force","Detect muscle stretch","Detect tension in tendons and prevent excessive force","Control breathing","Regulate heart rate"],correct:2,explanation:"Golgi tendon organs (GTOs) are proprioceptors located at the muscle-tendon junction that sense tension. When excessive force is detected, GTOs activate inhibitory interneurons that reduce motor neuron firing, causing muscle relaxation (autogenic inhibition). This protective mechanism prevents tendon damage and muscle tears. GTOs contribute to force regulation and proprioception."},
+    {question:"What is delayed onset muscle soreness (DOMS)?",options:["Immediate pain during exercise","Muscle pain and stiffness that appears 24-72 hours after exercise, typically from eccentric contractions","Chronic injury","Joint inflammation","Nerve damage"],correct:1,explanation:"DOMS is muscle pain and stiffness that peaks 24-72 hours after unaccustomed or intense exercise, especially eccentric contractions. It's caused by microscopic muscle damage, inflammation, and repair processes. DOMS is normal and not harmful, but it temporarily reduces force production and range of motion. It decreases with repeated bouts (repeated bout effect)."},
+    {question:"What is the role of the muscle spindle?",options:["Produce force","Detect changes in muscle length and rate of stretch, triggering stretch reflex","Detect tension","Control digestion","Regulate blood pressure"],correct:1,explanation:"Muscle spindles are proprioceptors within muscles that detect changes in muscle length (stretch) and the velocity of stretch. When stretched rapidly, spindles activate motor neurons causing muscle contraction (stretch reflex), protecting against overstretching. They provide feedback for motor control, posture, and coordination. The knee-jerk reflex is a classic example."},
+    {question:"What is anaerobic threshold?",options:["Maximum heart rate","The exercise intensity at which lactate begins to accumulate faster than it can be cleared","Minimum exercise intensity","Maximum strength","Flexibility limit"],correct:1,explanation:"Anaerobic threshold (lactate threshold) is the exercise intensity above which lactate production exceeds removal, causing accumulation in blood and muscles. It marks the transition from primarily aerobic to increased anaerobic metabolism. Training can increase anaerobic threshold, allowing higher intensity exercise before fatigue. It's a key predictor of endurance performance."},
+    {question:"What is the principle of specificity in training?",options:["Training must be general","Training adaptations are specific to the type of training performed","All training produces the same results","Only strength training matters","Specificity doesn't exist"],correct:1,explanation:"The principle of specificity states that training produces specific adaptations based on the type of exercise performed. Adaptations are specific to muscle groups, movement patterns, energy systems, speed, and range of motion used. For optimal results, training should mimic the demands of the target activity. Specificity is closely related to the SAID principle."},
+    {question:"What is Newton's First Law of Motion in the context of kinesiology?",options:["Force equals mass times acceleration","A body at rest stays at rest; a body in motion stays in motion unless acted upon by external force","Action and reaction are equal","Gravity pulls downward","Speed equals distance over time"],correct:1,explanation:"Newton's First Law (Law of Inertia) states that an object remains at rest or in uniform motion unless acted upon by an external force. In kinesiology, this explains why greater force is needed to start movement (overcome inertia) than to maintain it. It applies to starting, stopping, and changing direction during activities."},
+    {question:"What is the purpose of a warm-up?",options:["Cool down the body","Increase body temperature, blood flow, and prepare the neuromuscular system for activity","Dehydrate the body","Reduce flexibility","Waste time"],correct:1,explanation:"A warm-up gradually increases body temperature, heart rate, blood flow to muscles, and neural activation. It improves muscle elasticity, range of motion, and performance while reducing injury risk. An effective warm-up includes low-intensity aerobic activity, dynamic stretching, and sport-specific movements. Duration and intensity should match the upcoming activity."},
+    {question:"What is hypertrophy?",options:["Muscle atrophy","Increase in muscle size due to growth of muscle fibers","Decrease in muscle size","Bone growth","Fat loss"],correct:1,explanation:"Hypertrophy is the increase in muscle size resulting from enlargement of individual muscle fibers (myofibrillar hypertrophy increases contractile proteins; sarcoplasmic hypertrophy increases fluid and energy stores). It's stimulated by mechanical tension, muscle damage, and metabolic stress from resistance training. Progressive overload, adequate nutrition (especially protein), and recovery are essential for hypertrophy."},
+    {question:"What is the difference between open and closed kinetic chain exercises?",options:["No difference","Open: distal segment moves freely; Closed: distal segment is fixed","Open is always better","Closed uses no equipment","Open is for beginners only"],correct:1,explanation:"Open kinetic chain (OKC) exercises involve the distal segment (hand/foot) moving freely in space (e.g., leg extension, bicep curl). Closed kinetic chain (CKC) exercises involve the distal segment fixed against resistance (e.g., squats, push-ups). CKC exercises are more functional, engage multiple joints/muscles, and are often safer for joint rehabilitation. Both have specific applications."},
+    {question:"What is the Valsalva maneuver?",options:["A stretching technique","Forceful exhalation against a closed glottis, increasing intra-abdominal pressure","A type of jump","A balance exercise","A cardiovascular test"],correct:1,explanation:"The Valsalva maneuver involves holding the breath and contracting abdominal muscles against a closed glottis, increasing intra-abdominal and intrathoracic pressure. It stabilizes the spine during heavy lifting but temporarily increases blood pressure and can reduce venous return and cardiac output. It should be avoided by those with cardiovascular issues. Proper breathing is generally recommended."},
+    {question:"What is metabolic equivalent of task (MET)?",options:["A type of workout","A measure of exercise intensity: 1 MET equals resting metabolic rate","Maximum effort test","Muscle endurance test","Flexibility assessment"],correct:1,explanation:"MET is a physiological measure of energy expenditure during physical activity. 1 MET equals the energy cost at rest (~3.5 ml O2/kg/min). Activities are rated in METs: light (<3 METs), moderate (3-6 METs), vigorous (>6 METs). Walking at 3 mph is ~3.3 METs, running at 6 mph is ~10 METs. METs help quantify and prescribe exercise intensity."},
+    {question:"What is the function of creatine phosphate in muscle?",options:["Build muscle tissue","Rapidly regenerate ATP for short bursts of high-intensity activity","Provide long-term energy","Store oxygen","Remove waste products"],correct:1,explanation:"Creatine phosphate (phosphocreatine) serves as a rapid energy reserve in muscle. It donates a phosphate group to ADP to quickly regenerate ATP during the first 10 seconds of high-intensity activity (phosphagen system). This allows immediate energy availability for explosive movements. Creatine supplementation increases muscle creatine phosphate stores, potentially enhancing high-intensity performance and recovery."},
+    {question:"What is the center of gravity (COG)?",options:["Point of maximum force","The point where the body's mass is equally distributed in all directions","The brain","The heart","The feet"],correct:1,explanation:"The center of gravity is the point at which the body's mass is evenly distributed. In anatomical position, it's typically around the second sacral vertebra. COG position affects balance and stability - a lower COG increases stability. During movement, COG shifts; maintaining COG over the base of support prevents falling. Understanding COG is crucial for balance, posture, and movement analysis."},
+    {question:"What is plyometric training?",options:["Slow strength training","Exercises utilizing the stretch-shortening cycle to develop explosive power","Flexibility training","Endurance training","Balance training only"],correct:1,explanation:"Plyometric training uses rapid stretch-shortening cycles to develop explosive power and speed. Exercises include jumps, bounds, and hops. The eccentric landing phase rapidly stretches muscles, storing elastic energy that's immediately released in the concentric takeoff phase. Plyometrics improve neuromuscular coordination, rate of force development, and athletic performance but require proper progression to avoid injury."},
+    {question:"What is the all-or-none principle?",options:["Work hard or not at all","When a motor neuron fires, all muscle fibers in its motor unit contract maximally","Some muscles never contract","Muscles work independently","Only applies to cardiac muscle"],correct:1,explanation:"The all-or-none principle states that when a motor neuron reaches threshold and fires an action potential, all muscle fibers in that motor unit contract with maximal force. Individual fibers don't partially contract - they're either fully contracted or relaxed. Force is graded by recruiting more motor units (recruitment) and increasing firing frequency (rate coding), not by varying individual fiber contraction strength."},
+    {question:"What is the FITT principle?",options:["Fitness Interval Training Technique","Frequency, Intensity, Time, and Type - guidelines for exercise prescription","Fast Interval Tension Training","Functional Integrated Training Test","Flexibility Improvement Through Training"],correct:1,explanation:"The FITT principle provides a framework for designing exercise programs: Frequency (how often), Intensity (how hard), Time (duration), and Type (mode of exercise). Manipulating these variables creates progressive overload and specific adaptations. For example, for aerobic fitness: 3-5 days/week, moderate-vigorous intensity, 20-60 minutes, activities using large muscle groups. FITT principles apply to all fitness components."},
+    {question:"What is isokinetic exercise?",options:["Static exercise","Exercise at constant speed with variable resistance throughout range of motion","Exercise at variable speed","No resistance exercise","Isometric exercise"],correct:1,explanation:"Isokinetic exercise maintains constant movement speed through specialized equipment that adjusts resistance to match applied force. This allows maximal muscle activation throughout the entire range of motion. It's used for testing, rehabilitation, and training. Isokinetic dynamometers measure torque production at various speeds. While effective, equipment cost limits accessibility compared to traditional resistance training."},
+    {question:"What is the lactate threshold?",options:["Maximum lactate level","The exercise intensity at which lactate production exceeds clearance, causing accumulation","Minimum lactate level","Point of muscle failure","Maximum heart rate"],correct:1,explanation:"Lactate threshold is the exercise intensity where blood lactate begins accumulating faster than it can be removed. Below this intensity, lactate is cleared as fast as it's produced. Above it, lactate accumulates, causing fatigue. Training increases lactate threshold, allowing higher intensity work before fatigue. It's typically 50-70% of VO2 max in untrained individuals, higher in trained. It's a strong predictor of endurance performance."},
+    {question:"What is the difference between static and dynamic stretching?",options:["No difference","Static: held stretch without movement; Dynamic: controlled movement through range of motion","Static is dangerous","Dynamic doesn't work","Static is only for experts"],correct:1,explanation:"Static stretching involves holding a stretch position for 15-60 seconds without movement, increasing flexibility through sustained muscle elongation. Dynamic stretching uses controlled, sport-specific movements through progressively increasing range of motion (e.g., leg swings, arm circles). Dynamic stretching is preferred pre-exercise (improves performance without reducing force); static stretching is better post-exercise (improves flexibility when muscles are warm)."},
+    {question:"What is the role of mitochondria in muscle cells?",options:["Store calcium","Produce ATP through aerobic metabolism","Contract the muscle","Store glycogen","Remove waste only"],correct:1,explanation:"Mitochondria are the powerhouses of muscle cells, producing ATP through oxidative phosphorylation using oxygen. They're essential for aerobic energy production during sustained activities. Slow-twitch (Type I) fibers have more mitochondria than fast-twitch fibers. Endurance training increases mitochondrial density and function, improving aerobic capacity. Mitochondrial dysfunction impairs energy production and exercise capacity."},
+    {question:"What is agility?",options:["Maximum strength","The ability to quickly change direction while maintaining speed, balance, and control","Endurance capacity","Flexibility","Power output"],correct:1,explanation:"Agility is the ability to rapidly change direction and position of the body with speed and accuracy while maintaining control. It requires strength, speed, balance, coordination, and neuromuscular control. Agility training includes drills with multidirectional movements, rapid accelerations/decelerations, and reaction components. It's crucial for sports requiring quick directional changes like basketball, soccer, and tennis."},
+    {question:"What is the role of calcium in muscle contraction?",options:["Provide energy","Bind to troponin, exposing myosin binding sites on actin to enable contraction","Build bone only","Remove waste","Cool the muscle"],correct:1,explanation:"Calcium is essential for muscle contraction. When a motor neuron signals, calcium is released from the sarcoplasmic reticulum into the muscle fiber. Calcium binds to troponin, causing a conformational change that moves tropomyosin away from myosin binding sites on actin. This allows myosin heads to bind actin and perform power strokes, generating force. Calcium is then pumped back, ending contraction."},
+    {question:"What is the difference between aerobic and anaerobic exercise?",options:["They are the same","Aerobic: uses oxygen; Anaerobic: doesn't rely on oxygen","Aerobic is always harder","Anaerobic uses more oxygen","Aerobic is for beginners only"],correct:1,explanation:"Aerobic exercise uses oxygen to produce energy (oxidative phosphorylation) and can be sustained for extended periods (e.g., jogging, cycling). Anaerobic exercise doesn't rely on oxygen, using ATP-PC and glycolysis for high-intensity, short-duration activities (e.g., sprinting, heavy lifting). Anaerobic metabolism produces lactate. Both systems contribute during most activities, but dominance depends on intensity and duration."},
+    {question:"What is the stretch reflex?",options:["Voluntary stretching","Involuntary muscle contraction in response to sudden stretch, protecting against overstretching","A flexibility test","Joint pain response","Breathing reflex"],correct:1,explanation:"The stretch reflex (myotatic reflex) is a monosynaptic reflex causing muscle contraction in response to rapid stretch. When muscle spindles detect sudden lengthening, sensory neurons activate motor neurons, causing the stretched muscle to contract. This protects against overstretching and maintains posture. The patellar (knee-jerk) reflex is a common example. It occurs automatically without conscious thought."},
+    {question:"What is power in the context of kinesiology?",options:["Maximum force","The rate of doing work: Power = Force × Velocity or Work / Time","Endurance","Flexibility","Balance"],correct:1,explanation:"Power is the rate of performing work, calculated as force multiplied by velocity or work divided by time. It combines strength and speed. Powerful movements generate high force quickly (e.g., jumping, throwing, sprinting). Training for power requires exercises that optimize the force-velocity relationship, such as plyometrics and Olympic lifts. Power is crucial for athletic performance in most sports."},
+    {question:"What is the principle of reversibility?",options:["All gains are permanent","Fitness gains are lost when training stops or decreases (use it or lose it)","Exercise makes you weaker","Training effects last forever","Reversibility doesn't occur"],correct:1,explanation:"The principle of reversibility states that fitness adaptations gained from training are lost when training ceases or significantly decreases. Detraining effects occur relatively quickly - aerobic capacity can decline within 2 weeks, strength within 3-4 weeks. The rate of loss depends on training status, age, and length of inactivity. Maintaining adaptations requires ongoing training stimulus, though maintenance requires less volume than development."},
+    {question:"What is the difference between strength and power?",options:["They are identical","Strength: maximum force production; Power: force × velocity (rate of force production)","Strength is always better","Power requires no strength","Strength is only for bodybuilders"],correct:1,explanation:"Strength is the maximal force a muscle or muscle group can generate (e.g., 1-rep max squat). Power is the rate of force production, combining strength and speed (Power = Force × Velocity). You can be strong but not powerful if you can't move the load quickly. Power is crucial for explosive activities. Training for strength emphasizes heavy loads at slow speeds; power training uses moderate loads moved rapidly."},
+    {question:"What is the role of ATP in muscle contraction?",options:["Store oxygen","Provide immediate energy for myosin power strokes and pump calcium","Build muscle tissue","Remove waste products","Regulate temperature"],correct:1,explanation:"ATP (adenosine triphosphate) is the immediate energy source for muscle contraction. ATP hydrolysis provides energy for: (1) myosin head power strokes that pull actin filaments, generating force; (2) detaching myosin from actin; (3) pumping calcium back into the sarcoplasmic reticulum to end contraction. Muscle stores limited ATP, so it must be continuously regenerated via phosphagen, glycolytic, and oxidative systems during sustained activity."}
+  ];
+
+  function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  const selectedQuestions = shuffleArray(questionBank).slice(0, 15);
+  const correctAnswers = {};
+  const explanations = {};
+  const quizContainer = document.getElementById('quizContainer');
+  
+  selectedQuestions.forEach((q, index) => {
+    const questionNum = index + 1;
+    const questionId = "q" + questionNum;
+    correctAnswers[questionId] = q.correct;
+    explanations[questionId] = q.explanation;
+    const optionsWithIndex = q.options.map((opt, idx) => ({ text: opt, originalIndex: idx }));
+    const shuffledOptions = shuffleArray(optionsWithIndex);
+    const newCorrectIndex = shuffledOptions.findIndex(opt => opt.originalIndex === q.correct);
+    correctAnswers[questionId] = newCorrectIndex;
+    
+    const questionHTML = '<div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-orange-500 quiz-question"><h3 class="text-2xl font-bold mb-4 text-gray-800">Question ' + questionNum + '</h3><p class="text-lg text-gray-700 mb-6">' + q.question + '</p><div class="space-y-3">' + shuffledOptions.map((opt, optIndex) => '<label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition"><input type="radio" name="' + questionId + '" value="' + optIndex + '" class="mt-1"><span class="text-gray-700">' + opt.text + '</span></label>').join('') + '</div><div class="feedback mt-4 hidden"></div></div>';
+    
+    quizContainer.innerHTML += questionHTML;
+  });
+
+  lucide.createIcons();
+
+  document.getElementById('submitQuiz').addEventListener('click', () => {
+    let score = 0;
+    let answered = 0;
+    const questions = document.querySelectorAll('.quiz-question');
+    
+    questions.forEach((question, index) => {
+      const questionId = "q" + (index + 1);
+      const selected = question.querySelector('input[name="' + questionId + '"]:checked');
+      const feedback = question.querySelector('.feedback');
+      
+      if (selected) {
+        answered++;
+        const selectedValue = parseInt(selected.value);
+        const isCorrect = selectedValue === correctAnswers[questionId];
+        
+        if (isCorrect) {
+          score++;
+          question.classList.remove('border-orange-500', 'border-yellow-500');
+          question.classList.add('border-orange-500');
+          feedback.innerHTML = '<div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded"><p class="font-semibold text-orange-800 mb-2">✓ Correct!</p><p class="text-orange-700">' + explanations[questionId] + '</p></div>';
+        } else {
+          question.classList.remove('border-orange-500', 'border-yellow-500');
+          question.classList.add('border-red-500');
+          feedback.innerHTML = '<div class="bg-red-50 border-l-4 border-red-500 p-4 rounded"><p class="font-semibold text-red-800 mb-2">✗ Incorrect</p><p class="text-red-700">' + explanations[questionId] + '</p></div>';
+        }
+        feedback.classList.remove('hidden');
+      } else {
+        question.classList.remove('border-orange-500', 'border-red-500');
+        question.classList.add('border-yellow-500');
+        feedback.innerHTML = '<div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded"><p class="font-semibold text-yellow-800">Question not answered</p></div>';
+        feedback.classList.remove('hidden');
+      }
+    });
+    
+    const percentage = answered > 0 ? Math.round((score / 15) * 100) : 0;
+    const resultDiv = document.getElementById('quizResults');
+    const scoreDisplay = document.getElementById('scoreDisplay');
+    
+    let gradeColor = 'text-red-600';
+    let message = 'Keep studying!';
+    
+    if (percentage >= 90) {
+      gradeColor = 'text-orange-600';
+      message = 'Excellent! You have mastered this material!';
+    } else if (percentage >= 80) {
+      gradeColor = 'text-blue-600';
+      message = 'Great job! You have a strong understanding!';
+    } else if (percentage >= 70) {
+      gradeColor = 'text-yellow-600';
+      message = 'Good work! Review the explanations to improve.';
+    } else if (percentage >= 60) {
+      gradeColor = 'text-orange-600';
+      message = 'Fair. Consider reviewing the material more thoroughly.';
+    }
+    
+    scoreDisplay.innerHTML = '<div class="text-center"><div class="text-6xl font-bold ' + gradeColor + ' mb-4">' + percentage + '%</div><p class="text-2xl text-gray-700 mb-2">' + score + ' out of 15 correct</p><p class="text-xl text-gray-600 mb-6">' + message + '</p></div>';
+    
+    resultDiv.classList.remove('hidden');
+    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+</body>
+</html>

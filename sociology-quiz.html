@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sociology Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mb-6">
+      <i data-lucide="clipboard-check" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Sociology Quiz</h1>
+    <p class="text-xl text-gray-600">Test your knowledge of social structures, theories, and human behavior</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Questions will be dynamically generated here -->
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-green-600 text-white text-lg font-semibold rounded-lg hover:bg-green-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="quizResults" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="sociology-analysis.html" class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition flex items-center gap-2">
+        <i data-lucide="book-open" class="w-5 h-5"></i>
+        Review Material
+      </a>
+      <button onclick="location.reload()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+        Retake Quiz
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Question Bank - 40 questions total
+  const questionBank = [
+    {
+      question: "What is sociology?",
+      options: ["The study of individual psychology", "The systematic study of society and social interaction", "The study of economics and finance", "The study of government and politics only", "The study of biological evolution"],
+      correct: 1,
+      explanation: "Sociology is the systematic study of society and social interaction. It examines how individuals and groups interact, how social institutions function, and how social forces shape human behavior. Sociology uses scientific methods to study social patterns, relationships, and structures."
+    },
+    {
+      question: "Who is considered the founder of sociology as a formal academic discipline?",
+      options: ["Karl Marx", "Max Weber", "Auguste Comte", "Émile Durkheim", "Herbert Spencer"],
+      correct: 2,
+      explanation: "Auguste Comte (1798-1857) is considered the founder of sociology. He coined the term 'sociology' and advocated for the use of scientific methods to study society. Comte believed society could be studied objectively through observation and systematic analysis, establishing sociology as a distinct academic discipline."
+    },
+    {
+      question: "What is the sociological imagination, a concept developed by C. Wright Mills?",
+      options: ["The ability to daydream about social situations", "The connection between personal troubles and larger social issues", "Imagining ideal societies", "Creating fictional social scenarios", "Predicting future social trends"],
+      correct: 1,
+      explanation: "The sociological imagination, developed by C. Wright Mills, is the ability to see the connection between personal experiences (individual troubles) and larger social and historical forces (public issues). It helps us understand how biography intersects with history and social structure, allowing us to see personal problems within their broader social context."
+    },
+    {
+      question: "What is a social institution?",
+      options: ["A building where people gather", "A complex group of interdependent positions that perform a social function", "A rule or law", "A political organization", "A charitable organization"],
+      correct: 1,
+      explanation: "A social institution is a complex group of interdependent positions that together perform a social function and meet a social need. Major social institutions include family, education, religion, economy, and government. They are organized patterns of beliefs and behavior centered on basic social needs."
+    },
+    {
+      question: "What is socialization?",
+      options: ["Attending social events", "The process by which people learn culture and become functioning members of society", "Making friends", "Political activism", "Economic cooperation"],
+      correct: 1,
+      explanation: "Socialization is the lifelong process by which people learn their culture, develop their human potential, and learn to participate effectively in social groups. Through socialization, individuals learn norms, values, beliefs, and behaviors appropriate to their society. Primary socialization occurs in childhood, while secondary socialization continues throughout life."
+    },
+    {
+      question: "According to Émile Durkheim, what is a social fact?",
+      options: ["Any true statement about society", "Patterns of behavior that are external to individuals and exert control over them", "Statistics about social issues", "Historical events", "Individual opinions about society"],
+      correct: 1,
+      explanation: "Émile Durkheim defined social facts as patterns of behavior, thinking, and feeling that exist outside any individual but exert social control over all individuals. Social facts include laws, customs, moral codes, and social institutions. They are external to individuals, coercive (they constrain behavior), and exist at the societal level rather than the individual level."
+    },
+    {
+      question: "What is Karl Marx's concept of alienation?",
+      options: ["Feeling lonely in society", "Workers' separation from the products of their labor and from their own humanity", "Immigration to foreign countries", "Social isolation", "Cultural differences"],
+      correct: 1,
+      explanation: "Karl Marx's concept of alienation refers to workers' separation from the products of their labor, the process of production, other workers, and their own human potential under capitalism. Marx argued that when workers don't control their labor or its products, they become estranged from their work, which becomes merely a means of survival rather than a fulfilling expression of human creativity."
+    },
+    {
+      question: "What is Max Weber's concept of the 'iron cage'?",
+      options: ["A prison system", "The trap of increasing rationalization and bureaucratization in modern society", "A form of social control", "Economic imprisonment", "Religious doctrine"],
+      correct: 1,
+      explanation: "Max Weber's 'iron cage' refers to the increasing rationalization and bureaucratization of modern society that traps individuals in systems of efficiency, calculability, and control. Weber worried that the pursuit of rationality would lead to a dehumanizing society where people become cogs in a bureaucratic machine, losing freedom and creativity in exchange for efficiency and predictability."
+    },
+    {
+      question: "What is social stratification?",
+      options: ["Social media layers", "The hierarchical arrangement of individuals or groups in society", "Geographic distribution of populations", "Age groups in society", "Educational levels"],
+      correct: 1,
+      explanation: "Social stratification is the hierarchical arrangement of individuals or groups in society based on unequal distribution of resources, power, and prestige. Systems of stratification include class (economic), status (prestige), and power. All societies have some form of stratification, though the degree and type vary across cultures and time periods."
+    },
+    {
+      question: "What is the difference between a folkway and a more?",
+      options: ["Folkways are old, mores are new", "Folkways are informal norms, mores are norms with moral significance", "Folkways are written, mores are unwritten", "Folkways are legal, mores are illegal", "There is no difference"],
+      correct: 1,
+      explanation: "Folkways are informal norms or everyday customs that may be violated without serious consequences (like saying 'please' and 'thank you'). Mores are norms with strong moral significance, and violating them typically results in serious social disapproval or sanctions (like prohibitions against theft or violence). Both are types of social norms, but mores carry greater weight."
+    },
+    {
+      question: "What is symbolic interactionism?",
+      options: ["The study of symbols in art", "A theoretical perspective focused on how people create meaning through social interaction", "The study of language", "A method of mathematical analysis", "The study of religious symbols"],
+      correct: 1,
+      explanation: "Symbolic interactionism is a theoretical perspective that focuses on how people create meaning through social interaction using symbols, especially language. Developed by George Herbert Mead and Herbert Blumer, it emphasizes that reality is socially constructed through interactions, and people act based on the meanings things have for them. It's a micro-level theory focusing on individual interactions."
+    },
+    {
+      question: "What is anomie, according to Émile Durkheim?",
+      options: ["A rare disease", "A state of normlessness where social norms are weak or absent", "Strong social bonds", "Political revolution", "Economic prosperity"],
+      correct: 1,
+      explanation: "Anomie is a state of normlessness that occurs when social norms are weak, unclear, or absent. Durkheim argued that anomie results from rapid social change that disrupts traditional norms without replacing them with new ones. This lack of moral regulation can lead to deviant behavior and, in extreme cases, suicide. Durkheim linked anomie to increased suicide rates during times of social upheaval."
+    },
+    {
+      question: "What is ethnocentrism?",
+      options: ["The practice of studying different cultures", "Judging other cultures by the standards of one's own culture", "Cultural diversity", "Accepting all cultures equally", "Cultural relativism"],
+      correct: 1,
+      explanation: "Ethnocentrism is the practice of judging other cultures by the standards and values of one's own culture, often viewing one's own culture as superior. While some ethnocentrism is normal and helps maintain cultural identity, extreme ethnocentrism can lead to prejudice, discrimination, and cultural misunderstanding. It contrasts with cultural relativism, which seeks to understand cultures on their own terms."
+    },
+    {
+      question: "What is cultural relativism?",
+      options: ["The belief that all cultures are inferior", "The practice of understanding cultures on their own terms rather than judging by one's own standards", "The study of family relatives", "Cultural isolation", "Promoting one's own culture"],
+      correct: 1,
+      explanation: "Cultural relativism is the practice of understanding and evaluating cultural beliefs and practices within their own cultural context rather than judging them by the standards of another culture. It promotes empathy and cross-cultural understanding by recognizing that what may seem strange or wrong from one cultural perspective may be perfectly logical and appropriate within another cultural framework."
+    },
+    {
+      question: "What is role conflict?",
+      options: ["Disagreement between two people", "Tension between the demands of two or more roles held by the same person", "Personality disorder", "Job dissatisfaction", "Communication breakdown"],
+      correct: 1,
+      explanation: "Role conflict occurs when there is tension between the demands, expectations, or obligations of two or more social roles that a person holds simultaneously. For example, a working parent may experience conflict between the demands of being an employee and the demands of being a parent. Role conflict can create stress as individuals try to meet competing expectations."
+    },
+    {
+      question: "What is the looking-glass self, a concept developed by Charles Cooley?",
+      options: ["Mirror reflection", "Self-concept based on how we think others perceive us", "Physical appearance", "Self-confidence", "Narcissism"],
+      correct: 1,
+      explanation: "The looking-glass self is Charles Cooley's concept that our self-concept develops based on how we think others perceive us. It involves three steps: (1) we imagine how we appear to others, (2) we imagine their judgment of that appearance, and (3) we develop feelings about ourselves based on those imagined judgments. This emphasizes the social nature of self-development."
+    },
+    {
+      question: "What is a total institution, according to Erving Goffman?",
+      options: ["A complete educational system", "A place where individuals are isolated from society and controlled in all aspects of life", "A democratic organization", "A family unit", "A religious organization"],
+      correct: 1,
+      explanation: "Erving Goffman defined a total institution as a place where individuals are isolated from the rest of society and subjected to strict control over all aspects of their daily lives. Examples include prisons, mental hospitals, military barracks, and monasteries. In total institutions, barriers exist between inmates and the outside world, and residents follow a highly regulated routine designed to resocialize them."
+    },
+    {
+      question: "What is the Thomas Theorem?",
+      options: ["A mathematical formula", "'If people define situations as real, they are real in their consequences'", "A legal principle", "An economic theory", "A biological law"],
+      correct: 1,
+      explanation: "The Thomas Theorem, formulated by W.I. Thomas, states: 'If people define situations as real, they are real in their consequences.' This means that people's subjective interpretations of reality affect their behavior and create real outcomes, even if the initial interpretation was inaccurate. For example, if people believe a bank will fail, they may rush to withdraw money, actually causing the bank to fail."
+    },
+    {
+      question: "What is the difference between material and non-material culture?",
+      options: ["Material culture is important, non-material is not", "Material culture consists of physical objects; non-material culture consists of ideas, values, and norms", "Material culture is modern, non-material is traditional", "Material culture is visible, non-material is invisible", "There is no difference"],
+      correct: 1,
+      explanation: "Material culture consists of the physical objects and artifacts created and used by a society (like buildings, tools, clothing, art). Non-material culture consists of the intangible aspects of culture, including values, beliefs, norms, language, and symbols. Both are important components of culture, and they often interact—material objects reflect and reinforce non-material cultural values."
+    },
+    {
+      question: "What is social control?",
+      options: ["Government regulation only", "Mechanisms that create conformity to social norms", "Mind control", "Social media influence", "Peer pressure only"],
+      correct: 1,
+      explanation: "Social control refers to the mechanisms, strategies, and institutions that societies use to encourage conformity to norms and regulate behavior. It includes both informal mechanisms (like gossip, ridicule, praise) and formal mechanisms (like laws, police, courts). Social control helps maintain social order by rewarding conformity and punishing deviance."
+    },
+    {
+      question: "What is anticipatory socialization?",
+      options: ["Learning in advance", "Preparing for future roles by learning the norms and values of groups one aspires to join", "Predicting the future", "Early childhood education", "Parental expectations"],
+      correct: 1,
+      explanation: "Anticipatory socialization is the process of learning and adopting the values, norms, and behaviors of a group one aspires to join or a role one expects to occupy in the future. For example, a medical student may begin adopting professional behaviors and language before becoming a doctor. This helps prepare individuals for role transitions."
+    },
+    {
+      question: "What is the difference between achieved status and ascribed status?",
+      options: ["Achieved is better than ascribed", "Achieved status is earned; ascribed status is assigned at birth", "Achieved is temporary; ascribed is permanent", "Achieved is formal; ascribed is informal", "There is no difference"],
+      correct: 1,
+      explanation: "Ascribed status is a social position assigned at birth or involuntarily later in life (like race, sex, age, family background). Achieved status is a social position that a person earns or chooses (like occupation, education level, marital status). Most people have both types of statuses, and their importance varies across societies."
+    },
+    {
+      question: "What is resocialization?",
+      options: ["Making new friends", "The process of learning new norms and values to replace old ones", "Rejoining society after isolation", "Social media activity", "Political activism"],
+      correct: 1,
+      explanation: "Resocialization is the process of discarding old norms, values, and behaviors and learning new ones, often involving a dramatic change in identity. It frequently occurs in total institutions (prisons, military, rehabilitation centers) where individuals undergo intensive socialization designed to change their self-concept and behavior patterns. Resocialization can be voluntary (joining a monastery) or involuntary (imprisonment)."
+    },
+    {
+      question: "What is structural functionalism?",
+      options: ["The study of buildings", "A theoretical perspective that views society as a system of interconnected parts working together", "The study of organizational structure", "A method of construction", "The study of body systems"],
+      correct: 1,
+      explanation: "Structural functionalism is a theoretical perspective that views society as a complex system whose parts work together to promote solidarity and stability. Developed by Émile Durkheim and later theorists like Talcott Parsons, it emphasizes how social institutions and practices contribute to the maintenance and functioning of society as a whole. It focuses on social order and consensus."
+    },
+    {
+      question: "What is conflict theory in sociology?",
+      options: ["The study of wars", "A perspective emphasizing competition and inequality between social groups", "Marriage counseling", "Dispute resolution", "Anger management"],
+      correct: 1,
+      explanation: "Conflict theory is a theoretical perspective that emphasizes the role of power, inequality, and competition in shaping society. Influenced by Karl Marx, conflict theorists view society as characterized by conflicts between groups competing for limited resources. They focus on how dominant groups maintain power and how subordinate groups resist and seek change. Unlike functionalism, it emphasizes social change and inequality rather than stability."
+    },
+    {
+      question: "What is the Hawthorne Effect?",
+      options: ["A lighting phenomenon", "People changing their behavior because they know they are being observed", "A psychological disorder", "A statistical error", "A chemical reaction"],
+      correct: 1,
+      explanation: "The Hawthorne Effect refers to the tendency of people to change their behavior when they know they are being observed or studied. Discovered during workplace studies at the Hawthorne Works factory in the 1920s-30s, it highlights the importance of considering observer effects in social research and demonstrates how awareness of observation can influence behavior independently of other variables."
+    },
+    {
+      question: "What is social capital?",
+      options: ["Money in society", "The networks, relationships, and norms that facilitate cooperation and mutual benefit", "Investment in social programs", "Government funding", "Charitable donations"],
+      correct: 1,
+      explanation: "Social capital refers to the networks of relationships among people, along with the norms of reciprocity and trust that arise from them. Developed by Pierre Bourdieu and Robert Putnam, social capital enables cooperation for mutual benefit. It includes connections, social networks, civic engagement, and the resources accessible through these relationships. High social capital correlates with better community outcomes."
+    },
+    {
+      question: "What is a self-fulfilling prophecy?",
+      options: ["Accurate predictions", "A prediction that becomes true because people believe it and act accordingly", "Religious prophecy", "Fortune telling", "Goal setting"],
+      correct: 1,
+      explanation: "A self-fulfilling prophecy occurs when a false belief or prediction causes behavior that makes the belief come true. For example, if a teacher believes certain students are less capable and treats them accordingly, those students may perform worse, confirming the initial (false) belief. This concept, developed by Robert Merton, demonstrates how subjective definitions can create objective consequences."
+    },
+    {
+      question: "What is cultural lag?",
+      options: ["Delayed cultural development", "The gap between technological change and cultural adaptation to that change", "Time zone differences", "Generational differences", "Cultural decline"],
+      correct: 1,
+      explanation: "Cultural lag, a concept developed by William Ogburn, refers to the period of adjustment when non-material culture (values, norms, laws) struggles to adapt to rapid changes in material culture (technology). For example, laws and ethical norms often lag behind technological innovations like social media, genetic engineering, or artificial intelligence, creating social problems and conflicts during the adjustment period."
+    },
+    {
+      question: "What is deviance in sociology?",
+      options: ["Criminal behavior only", "Violation of social norms", "Mental illness", "Rebellious behavior", "Immoral actions"],
+      correct: 1,
+      explanation: "In sociology, deviance is behavior that violates social norms. Deviance is relative—what is considered deviant varies across cultures, time periods, and social contexts. Not all deviance is criminal (like unusual fashion choices), and not all crimes are considered highly deviant in all contexts. Sociologists study how deviance is defined, labeled, and sanctioned, and how it relates to social control and power."
+    },
+    {
+      question: "What is the difference between primary and secondary groups?",
+      options: ["Primary groups are more important", "Primary groups are small and intimate; secondary groups are larger and more impersonal", "Primary groups come first chronologically", "Primary groups are families only", "There is no difference"],
+      correct: 1,
+      explanation: "Primary groups are small, intimate groups characterized by face-to-face interaction, emotional depth, and long-term relationships (like families and close friends). Secondary groups are larger, more impersonal groups organized around specific goals or activities with formal, less emotional relationships (like workplaces or professional associations). Charles Cooley made this distinction, noting that primary groups are essential for social and emotional development."
+    },
+    {
+      question: "What is McDonaldization, according to George Ritzer?",
+      options: ["The spread of fast food restaurants", "The process by which principles of fast-food restaurants dominate more sectors of society", "American cultural imperialism", "Corporate expansion", "Unhealthy eating habits"],
+      correct: 1,
+      explanation: "McDonaldization, a concept developed by George Ritzer, refers to the process by which the principles of fast-food restaurants—efficiency, calculability, predictability, and control—increasingly dominate more sectors of American society and the world. Building on Max Weber's rationalization theory, Ritzer argues this process leads to dehumanization and loss of individuality despite increased efficiency."
+    },
+    {
+      question: "What is impression management, according to Erving Goffman?",
+      options: ["Artistic technique", "The process by which people control how others perceive them", "Memory improvement", "Public relations", "Marketing strategy"],
+      correct: 1,
+      explanation: "Impression management is Erving Goffman's concept describing how people attempt to control the impressions others form of them. Using a dramaturgical approach, Goffman compared social interaction to theater, where people perform roles and manage their 'frontstage' presentation to create desired impressions while keeping inconsistent behaviors 'backstage.' This is a key concept in symbolic interactionism and the study of everyday social interaction."
+    },
+    {
+      question: "What is the sociological concept of 'intersectionality'?",
+      options: ["Road design", "The interconnected nature of social categories like race, class, and gender creating overlapping systems of discrimination", "Cross-cultural studies", "Statistical analysis", "Urban planning"],
+      correct: 1,
+      explanation: "Intersectionality, developed by Kimberlé Crenshaw, recognizes that people have multiple, intersecting social identities (race, class, gender, sexuality, disability, etc.) that combine to create unique experiences of privilege and oppression. Rather than examining these categories separately, intersectionality analyzes how they interact and compound, creating distinct forms of discrimination and advantage. It's crucial for understanding complex social inequalities."
+    },
+    {
+      question: "What is the difference between folkways, mores, and laws?",
+      options: ["They are the same thing", "Folkways are informal customs, mores have moral weight, laws are formal rules enforced by the state", "Folkways are modern, mores are traditional, laws are international", "Folkways are written, mores are spoken, laws are implied", "The difference is insignificant"],
+      correct: 1,
+      explanation: "Folkways are informal norms or everyday customs with minor consequences for violation (like table manners). Mores are norms with strong moral significance; violating them results in serious social disapproval (like prohibitions against cheating). Laws are formal norms codified and enforced by the state with official sanctions (like traffic laws or criminal codes). All three regulate behavior but differ in formality, moral weight, and consequences."
+    },
+    {
+      question: "What is bureaucracy, according to Max Weber?",
+      options: ["Government corruption", "A formal organization characterized by hierarchical authority, written rules, and specialized roles", "Red tape and inefficiency", "Political system", "Office work"],
+      correct: 1,
+      explanation: "Max Weber defined bureaucracy as a type of formal organization characterized by: hierarchical authority structure, written rules and regulations, specialized division of labor, impersonal relationships, employment based on qualifications, and career advancement based on merit. While often criticized as inefficient, Weber argued bureaucracy is the most technically efficient form of organization for coordinating large-scale administrative tasks in modern societies."
+    },
+    {
+      question: "What is social mobility?",
+      options: ["Moving to a new city", "Movement between different positions in the social stratification system", "Geographic migration", "Career changes", "Social media activity"],
+      correct: 1,
+      explanation: "Social mobility refers to movement of individuals or groups between different positions in a society's stratification system. Vertical mobility involves moving up or down (like from working class to middle class), while horizontal mobility involves changing positions at the same level. Intergenerational mobility compares children's status to their parents', while intragenerational mobility examines changes within one person's lifetime. Mobility rates indicate how open or closed a stratification system is."
+    },
+    {
+      question: "What is groupthink?",
+      options: ["Collective intelligence", "A psychological phenomenon where desire for harmony leads to poor decision-making", "Brainstorming", "Democratic voting", "Mob mentality"],
+      correct: 1,
+      explanation: "Groupthink is a psychological phenomenon identified by Irving Janis where a group's desire for harmony and conformity leads to irrational or poor decision-making. Group members suppress dissenting viewpoints, fail to critically analyze alternatives, and make decisions based on maintaining consensus rather than careful evaluation. Groupthink is more likely in highly cohesive groups with directive leadership and isolation from outside opinions."
+    },
+    {
+      question: "What is the concept of 'cultural capital' developed by Pierre Bourdieu?",
+      options: ["Economic wealth", "Non-financial social assets like education, knowledge, and cultural competencies that promote social mobility", "Investment in arts", "Tourism revenue", "National heritage"],
+      correct: 1,
+      explanation: "Cultural capital, developed by Pierre Bourdieu, refers to non-financial social assets that promote social mobility beyond economic means. It includes education, knowledge, skills, language proficiency, cultural competencies, and aesthetic preferences. Cultural capital exists in three forms: embodied (personal skills and knowledge), objectified (cultural goods like books or art), and institutionalized (educational credentials). Those with more cultural capital have advantages in education and employment."
+    },
+    {
+      question: "What is the difference between reliability and validity in sociological research?",
+      options: ["They mean the same thing", "Reliability means consistent results; validity means measuring what you intend to measure", "Reliability is more important than validity", "Validity is easier to achieve than reliability", "Only validity matters in research"],
+      correct: 1,
+      explanation: "In sociological research, reliability refers to the consistency and repeatability of measurements—a reliable measure produces similar results under similar conditions. Validity refers to whether a measure actually measures what it claims to measure—a valid measure accurately captures the concept being studied. A measure can be reliable but not valid (consistently measuring the wrong thing), but it cannot be valid without being reliable. Both are essential for quality research."
+    }
+  ];
+
+  // Shuffle and select 15 random questions
+  function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  const selectedQuestions = shuffleArray(questionBank).slice(0, 15);
+  const quizContainer = document.getElementById('quizContainer');
+
+  // Generate quiz questions
+  selectedQuestions.forEach((q, index) => {
+    const questionDiv = document.createElement('div');
+    questionDiv.className = 'bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-500';
+    questionDiv.innerHTML = `
+      <h3 class="text-xl font-bold mb-4 text-gray-800">Question ${index + 1}</h3>
+      <p class="text-lg mb-4 text-gray-700">${q.question}</p>
+      <div class="space-y-3">
+        ${q.options.map((option, i) => `
+          <label class="flex items-start p-3 rounded-lg border-2 border-gray-200 cursor-pointer hover:bg-green-50 transition">
+            <input type="radio" name="q${index}" value="${i}" class="mt-1 mr-3">
+            <span class="text-gray-700">${option}</span>
+          </label>
+        `).join('')}
+      </div>
+      <div class="mt-4 p-4 bg-gray-50 rounded-lg hidden" id="explanation${index}">
+        <p class="text-sm font-semibold mb-2 text-gray-700">Explanation:</p>
+        <p class="text-sm text-gray-600">${q.explanation}</p>
+      </div>
+    `;
+    quizContainer.appendChild(questionDiv);
+  });
+
+  // Submit quiz
+  const submitBtn = document.getElementById('submitQuiz');
+  const resultDiv = document.getElementById('quizResults');
+  const scoreDisplay = document.getElementById('scoreDisplay');
+
+  submitBtn.addEventListener('click', () => {
+    let score = 0;
+    let answered = 0;
+    
+    selectedQuestions.forEach((q, index) => {
+      const selected = document.querySelector(`input[name="q${index}"]:checked`);
+      const explanationDiv = document.getElementById(`explanation${index}`);
+      
+      if (selected) {
+        answered++;
+        const answer = parseInt(selected.value);
+        
+        if (answer === q.correct) {
+          score++;
+          selected.parentElement.classList.add('!border-green-500', 'bg-green-50');
+        } else {
+          selected.parentElement.classList.add('!border-red-500', 'bg-red-50');
+          // Highlight correct answer
+          const labels = document.querySelectorAll(`input[name="q${index}"]`);
+          labels[q.correct].parentElement.classList.add('!border-green-500', 'bg-green-50');
+        }
+        
+        explanationDiv.classList.remove('hidden');
+      }
+    });
+    
+    if (answered < 15) {
+      alert('Please answer all questions before submitting.');
+      return;
+    }
+    
+    const percentage = Math.round((score / 15) * 100);
+    let gradeColor = 'text-red-600';
+    let message = 'Keep studying! Review the material and try again.';
+    
+    if (percentage >= 90) {
+      gradeColor = 'text-green-600';
+      message = 'Excellent! You have mastered this material!';
+    } else if (percentage >= 80) {
+      gradeColor = 'text-blue-600';
+      message = 'Great job! You have a strong understanding!';
+    } else if (percentage >= 70) {
+      gradeColor = 'text-yellow-600';
+      message = 'Good work! Review the explanations to improve.';
+    } else if (percentage >= 60) {
+      gradeColor = 'text-orange-600';
+      message = 'Fair. Consider reviewing the material more thoroughly.';
+    }
+    
+    scoreDisplay.innerHTML = `
+      <div class="text-center">
+        <div class="text-6xl font-bold ${gradeColor} mb-4">${percentage}%</div>
+        <p class="text-2xl text-gray-700 mb-2">${score} out of 15 correct</p>
+        <p class="text-xl text-gray-600 mb-6">${message}</p>
+      </div>
+    `;
+    
+    resultDiv.classList.remove('hidden');
+    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

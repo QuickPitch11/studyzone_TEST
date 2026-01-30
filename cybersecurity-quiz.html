@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cybersecurity Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-rose-500 rounded-full mb-6">
+      <i data-lucide="clipboard-check" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Cybersecurity Quiz</h1>
+    <p class="text-xl text-gray-600">Test your knowledge of network security and digital protection</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Questions will be dynamically generated here -->
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-red-600 text-white text-lg font-semibold rounded-lg hover:bg-red-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="quizResults" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-red-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="cybersecurity-analysis.html" class="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition flex items-center gap-2">
+        <i data-lucide="book-open" class="w-5 h-5"></i>
+        Review Material
+      </a>
+      <button onclick="location.reload()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+        Retake Quiz
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="cybersecurity.html" class="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition flex items-center gap-2">
+      <i data-lucide="shield" class="w-5 h-5"></i>
+      Back to Cybersecurity
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Question Bank - 30 questions total
+  const questionBank = [
+    {
+      question: "What does the 'C' in the CIA triad stand for?",
+      options: ["Compliance", "Confidentiality", "Continuity", "Control", "Certification"],
+      correct: 1,
+      explanation: "The CIA triad consists of Confidentiality, Integrity, and Availability. Confidentiality ensures that information is accessible only to authorized parties through encryption, access controls, and authentication mechanisms."
+    },
+    {
+      question: "Which type of attack involves an attacker inserting malicious SQL code into a query?",
+      options: ["Cross-Site Scripting (XSS)", "SQL Injection", "Buffer Overflow", "Man-in-the-Middle", "DDoS"],
+      correct: 1,
+      explanation: "SQL Injection is a code injection attack where malicious SQL statements are inserted into application queries. This can allow attackers to view, modify, or delete database data. Prevention includes using parameterized queries and input validation."
+    },
+    {
+      question: "What is the primary purpose of a firewall?",
+      options: ["Encrypt data", "Scan for viruses", "Control network traffic", "Store passwords", "Monitor employee activity"],
+      correct: 2,
+      explanation: "A firewall controls incoming and outgoing network traffic based on predetermined security rules. It acts as a barrier between trusted internal networks and untrusted external networks, filtering traffic to prevent unauthorized access."
+    },
+    {
+      question: "Which encryption method uses the same key for both encryption and decryption?",
+      options: ["Asymmetric encryption", "Public key encryption", "Symmetric encryption", "Hashing", "Digital signatures"],
+      correct: 2,
+      explanation: "Symmetric encryption uses the same secret key for both encryption and decryption. It's fast and efficient for large data volumes. Examples include AES and ChaCha20. The challenge is securely distributing the key between parties."
+    },
+    {
+      question: "What does HTTPS stand for?",
+      options: ["Hyper Text Transfer Protocol Secure", "High Transfer Text Protocol System", "Hyperlink Text Transfer Protection Standard", "Hyper Text Transmission Protection Service", "Hypertext Transfer Transmission Protocol Secure"],
+      correct: 0,
+      explanation: "HTTPS stands for Hypertext Transfer Protocol Secure. It's the secure version of HTTP, using TLS/SSL encryption to protect data transmitted between web browsers and servers, ensuring confidentiality and integrity."
+    },
+    {
+      question: "Which of the following is an example of two-factor authentication (2FA)?",
+      options: ["Password only", "Password + Username", "Password + SMS code", "Two different passwords", "Biometric scan only"],
+      correct: 2,
+      explanation: "Two-factor authentication requires two different types of credentials. Password (something you know) + SMS code (something you have) represents two distinct authentication factors, significantly improving security over single-factor authentication."
+    },
+    {
+      question: "What type of malware encrypts files and demands payment for decryption?",
+      options: ["Virus", "Worm", "Trojan", "Ransomware", "Spyware"],
+      correct: 3,
+      explanation: "Ransomware encrypts victim's files and demands payment (usually cryptocurrency) for the decryption key. Modern ransomware often includes double extortion, threatening to publish stolen data. Prevention includes regular backups and security awareness."
+    },
+    {
+      question: "Which port is commonly used for HTTPS traffic?",
+      options: ["21", "80", "443", "8080", "3389"],
+      correct: 2,
+      explanation: "Port 443 is the standard port for HTTPS traffic. Port 80 is used for HTTP, port 21 for FTP, port 8080 as an alternative HTTP port, and port 3389 for Remote Desktop Protocol (RDP)."
+    },
+    {
+      question: "What does VPN stand for?",
+      options: ["Virtual Private Network", "Very Protected Network", "Verified Personal Network", "Virtual Public Network", "Visual Privacy Network"],
+      correct: 0,
+      explanation: "VPN stands for Virtual Private Network. It creates an encrypted tunnel over untrusted networks (like the internet) for secure remote access, protecting data confidentiality and enabling secure connections from any location."
+    },
+    {
+      question: "Which type of attack floods a target with traffic to make it unavailable?",
+      options: ["Phishing", "SQL Injection", "DDoS", "Man-in-the-Middle", "Cross-Site Scripting"],
+      correct: 2,
+      explanation: "DDoS (Distributed Denial of Service) attacks overwhelm target systems with massive amounts of traffic from multiple sources, making services unavailable to legitimate users. Mitigations include rate limiting, traffic filtering, and DDoS protection services."
+    },
+    {
+      question: "What is phishing?",
+      options: ["A type of firewall", "Social engineering via fake emails/messages", "A network protocol", "An encryption method", "A password manager"],
+      correct: 1,
+      explanation: "Phishing is a social engineering attack where attackers send fraudulent emails or messages impersonating legitimate entities to trick victims into revealing sensitive information like passwords or clicking malicious links. Defense includes user training and email filtering."
+    },
+    {
+      question: "Which cryptographic function is one-way and produces a fixed-size output?",
+      options: ["AES", "RSA", "Hashing", "Diffie-Hellman", "ECC"],
+      correct: 2,
+      explanation: "Cryptographic hash functions are one-way functions that produce fixed-size outputs (digests) from arbitrary inputs. They're used for password storage, data integrity verification, and digital signatures. Examples include SHA-256 and SHA-3."
+    },
+    {
+      question: "What does IDS stand for in cybersecurity?",
+      options: ["Internet Data Service", "Intrusion Detection System", "Internal Defense Shield", "Information Distribution System", "Integrated Data Security"],
+      correct: 1,
+      explanation: "IDS stands for Intrusion Detection System. It monitors network traffic for suspicious activity and policy violations, generating alerts for security teams. IPS (Intrusion Prevention System) actively blocks detected threats."
+    },
+    {
+      question: "Which principle states users should have only the minimum permissions needed?",
+      options: ["Defense in Depth", "Least Privilege", "Zero Trust", "Separation of Duties", "Need to Know"],
+      correct: 1,
+      explanation: "The Principle of Least Privilege states that users and systems should have only the minimum permissions necessary to perform their functions. This limits the potential damage from compromised accounts and reduces attack surface."
+    },
+    {
+      question: "What is a zero-day vulnerability?",
+      options: ["A vulnerability discovered on day zero of deployment", "A vulnerability with zero impact", "An unknown vulnerability with no available patch", "A vulnerability that takes zero days to exploit", "A vulnerability in legacy systems"],
+      correct: 2,
+      explanation: "A zero-day vulnerability is a security flaw unknown to the vendor or public, with no patch available. Attackers can exploit these before developers create fixes, making them highly valuable and dangerous."
+    },
+    {
+      question: "Which of the following is NOT part of the OWASP Top 10?",
+      options: ["Injection", "Broken Authentication", "SQL Database", "Sensitive Data Exposure", "Cross-Site Scripting (XSS)"],
+      correct: 2,
+      explanation: "The OWASP Top 10 lists critical web application security risks including Injection, Broken Authentication, Sensitive Data Exposure, and XSS. 'SQL Database' is not a vulnerability category, though SQL Injection is part of the Injection category."
+    },
+    {
+      question: "What does SSL/TLS primarily provide?",
+      options: ["Virus protection", "Data backup", "Encrypted communication", "Firewall protection", "User authentication only"],
+      correct: 2,
+      explanation: "SSL/TLS (Secure Sockets Layer/Transport Layer Security) provides encrypted communication over networks. It ensures confidentiality and integrity of data in transit, commonly used in HTTPS, email, and VPNs."
+    },
+    {
+      question: "Which attack intercepts communication between two parties?",
+      options: ["DDoS", "Man-in-the-Middle", "Phishing", "Ransomware", "SQL Injection"],
+      correct: 1,
+      explanation: "Man-in-the-Middle (MitM) attacks occur when attackers intercept and potentially modify communication between two parties without their knowledge. Prevention includes encryption (TLS/SSL) and certificate validation."
+    },
+    {
+      question: "What is the purpose of a digital signature?",
+      options: ["Encrypt data", "Verify authenticity and integrity", "Scan for malware", "Monitor network traffic", "Create backups"],
+      correct: 1,
+      explanation: "Digital signatures use asymmetric cryptography to verify the authenticity of the sender and ensure data integrity. They prove a message came from a specific sender and wasn't altered in transit."
+    },
+    {
+      question: "Which regulation protects EU citizens' personal data?",
+      options: ["HIPAA", "PCI-DSS", "GDPR", "SOC 2", "FERPA"],
+      correct: 2,
+      explanation: "GDPR (General Data Protection Regulation) is the EU regulation governing data privacy and protection. It requires explicit consent, data minimization, breach notification within 72 hours, and grants users rights over their data. Non-compliance can result in significant penalties."
+    },
+    {
+      question: "What does APT stand for in cybersecurity?",
+      options: ["Automated Protection Tool", "Advanced Persistent Threat", "Application Protection Technology", "Active Prevention Technique", "Authorized Penetration Testing"],
+      correct: 1,
+      explanation: "APT stands for Advanced Persistent Threat. These are sophisticated, long-term cyberattacks typically conducted by nation-state actors with significant resources, targeting specific organizations for espionage or sabotage."
+    },
+    {
+      question: "Which authentication factor is a fingerprint scan?",
+      options: ["Something you know", "Something you have", "Something you are", "Somewhere you are", "Something you do"],
+      correct: 2,
+      explanation: "Biometric authentication like fingerprints, facial recognition, or iris scans represent 'something you are' - inherent characteristics of the user. This is one of the three main authentication factors used in multi-factor authentication."
+    },
+    {
+      question: "What is the main purpose of penetration testing?",
+      options: ["Install antivirus", "Create backups", "Identify vulnerabilities before attackers do", "Monitor employee emails", "Encrypt all data"],
+      correct: 2,
+      explanation: "Penetration testing (pen testing) is authorized simulated cyberattacks to identify security vulnerabilities before malicious actors can exploit them. Ethical hackers test systems and provide recommendations for remediation."
+    },
+    {
+      question: "Which protocol is considered insecure and should be replaced with SSH?",
+      options: ["HTTPS", "FTP", "Telnet", "SMTP", "DNS"],
+      correct: 2,
+      explanation: "Telnet transmits data including passwords in plaintext, making it highly insecure. SSH (Secure Shell) provides encrypted communication and should replace Telnet for remote system administration."
+    },
+    {
+      question: "What does the 'I' in CIA triad stand for?",
+      options: ["Internet", "Integrity", "Information", "Intrusion", "Implementation"],
+      correct: 1,
+      explanation: "The 'I' in the CIA triad stands for Integrity - ensuring data accuracy and trustworthiness throughout its lifecycle. Integrity is protected through hashing, digital signatures, version control, and input validation."
+    },
+    {
+      question: "Which type of malware disguises itself as legitimate software?",
+      options: ["Virus", "Worm", "Trojan", "Ransomware", "Adware"],
+      correct: 2,
+      explanation: "A Trojan (Trojan Horse) disguises itself as legitimate software to trick users into installing it. Unlike viruses and worms, Trojans don't self-replicate but can create backdoors, steal data, or download additional malware."
+    },
+    {
+      question: "What is the primary purpose of encryption?",
+      options: ["Speed up networks", "Protect confidentiality of data", "Delete viruses", "Monitor users", "Create backups"],
+      correct: 1,
+      explanation: "Encryption's primary purpose is protecting data confidentiality by transforming readable data (plaintext) into unreadable ciphertext. Only authorized parties with the correct decryption key can access the original data."
+    },
+    {
+      question: "Which security model assumes all users and devices are potentially compromised?",
+      options: ["Perimeter Security", "Defense in Depth", "Zero Trust", "Layered Security", "Firewall Model"],
+      correct: 2,
+      explanation: "Zero Trust security assumes breach is inevitable and treats all users and devices as potentially compromised. It requires continuous verification of every access request regardless of location, replacing traditional perimeter-based security."
+    },
+    {
+      question: "What is a honeypot in cybersecurity?",
+      options: ["A password manager", "A decoy system to attract attackers", "An encryption algorithm", "A type of firewall", "A backup solution"],
+      correct: 1,
+      explanation: "A honeypot is a decoy system designed to attract attackers and study their methods while protecting real systems. It helps security teams understand attack techniques, gather threat intelligence, and detect intrusions."
+    },
+    {
+      question: "Which of the following best describes 'Defense in Depth'?",
+      options: ["Using the strongest firewall available", "Relying solely on antivirus", "Multiple layers of security controls", "Focusing only on network perimeter", "Using complex passwords"],
+      correct: 2,
+      explanation: "Defense in Depth is a layered security strategy using multiple defensive mechanisms at different levels. If one layer fails, others provide continued protection. Layers include physical security, network defenses, host controls, application security, and data protection."
+    }
+  ];
+
+  // Randomly select 10 questions from the question bank
+  function getRandomQuestions(bank, count) {
+    const shuffled = [...bank].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, count);
+  }
+
+  const selectedQuestions = getRandomQuestions(questionBank, 10);
+
+  // Generate quiz HTML
+  const quizContainer = document.getElementById('quizContainer');
+  selectedQuestions.forEach((q, index) => {
+    const questionDiv = document.createElement('div');
+    questionDiv.className = 'bg-white rounded-xl shadow-lg p-8 border-l-4 border-red-500';
+    questionDiv.innerHTML = `
+      <h3 class="text-xl font-bold mb-4 text-gray-800">Question ${index + 1}</h3>
+      <p class="text-lg text-gray-700 mb-4">${q.question}</p>
+      <div class="space-y-3">
+        ${q.options.map((option, optIndex) => `
+          <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+            <input type="radio" name="q${index}" value="${optIndex}" class="w-5 h-5 text-red-600">
+            <span class="text-gray-700">${option}</span>
+          </label>
+        `).join('')}
+      </div>
+      <div class="feedback hidden mt-4"></div>
+    `;
+    quizContainer.appendChild(questionDiv);
+  });
+
+  // Submit Quiz
+  document.getElementById('submitQuiz').addEventListener('click', function() {
+    let score = 0;
+    let totalQuestions = selectedQuestions.length;
+
+    selectedQuestions.forEach((q, index) => {
+      const selected = document.querySelector(`input[name="q${index}"]:checked`);
+      const questionDiv = document.querySelectorAll('.bg-white.rounded-xl.shadow-lg')[index];
+      const feedbackDiv = questionDiv.querySelector('.feedback');
+      
+      if (selected) {
+        if (parseInt(selected.value) === q.correct) {
+          score++;
+          feedbackDiv.innerHTML = `<div class="p-4 bg-green-100 border-l-4 border-green-500 rounded"><p class="font-semibold text-green-800">✓ Correct!</p><p class="text-green-700 mt-2">${q.explanation}</p></div>`;
+        } else {
+          feedbackDiv.innerHTML = `<div class="p-4 bg-red-100 border-l-4 border-red-500 rounded"><p class="font-semibold text-red-800">✗ Incorrect</p><p class="text-red-700 mt-2">${q.explanation}</p></div>`;
+        }
+        feedbackDiv.classList.remove('hidden');
+      } else {
+        feedbackDiv.innerHTML = `<div class="p-4 bg-yellow-100 border-l-4 border-yellow-500 rounded"><p class="font-semibold text-yellow-800">⚠ Not answered</p><p class="text-yellow-700 mt-2">${q.explanation}</p></div>`;
+        feedbackDiv.classList.remove('hidden');
+      }
+    });
+
+    // Calculate percentage
+    let percentage = Math.round((score / totalQuestions) * 100);
+    
+    // Display results
+    let resultColor = percentage >= 70 ? 'text-green-600' : percentage >= 50 ? 'text-yellow-600' : 'text-red-600';
+    let resultMessage = percentage >= 70 ? 'Great job!' : percentage >= 50 ? 'Good effort!' : 'Keep studying!';
+    
+    document.getElementById('scoreDisplay').innerHTML = `
+      <div class="text-6xl font-bold ${resultColor} mb-4">${score}/${totalQuestions}</div>
+      <div class="text-2xl font-semibold text-gray-700">${percentage}%</div>
+      <div class="text-xl text-gray-600 mt-2">${resultMessage}</div>
+    `;
+    
+    document.getElementById('quizResults').classList.remove('hidden');
+    
+    // Scroll to results
+    document.getElementById('quizResults').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

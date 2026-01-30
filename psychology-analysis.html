@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Psychology - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full mb-6">
+      <i data-lucide="brain" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Psychology: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">Comprehensive exploration of mind and behavior</p>
+  </div>
+
+  <div class="space-y-10">
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-pink-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Biological Psychology (Biopsychology)</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Biological psychology, also called biopsychology or behavioral neuroscience, examines how biological processes (genetics, hormones, brain structure, neurotransmitters) influence behavior, thoughts, and emotions. It bridges psychology and neuroscience, using methods from both fields to understand the biological basis of psychological phenomena. This perspective emphasizes that all behavior has a biological foundation, from simple reflexes to complex cognitive processes.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Neural Communication - The Nervous System:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Neurons (Nerve Cells):</strong> Basic functional units of the nervous system, numbering ~100 billion in human brain. Structure: cell body (soma: contains nucleus, organelles, protein synthesis), dendrites (receive signals from other neurons, highly branched, increase surface area for connections), axon (transmits signals to other cells, can be myelinated for faster conduction, branches into axon terminals), myelin sheath (fatty insulation, formed by oligodendrocytes in CNS or Schwann cells in PNS, increases conduction speed via saltatory conduction). Types: sensory neurons (afferent, carry information toward CNS), motor neurons (efferent, carry commands away from CNS), interneurons (within CNS, process and integrate information, most numerous).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Action Potential:</strong> Electrical signal (nerve impulse) that travels down axon when threshold (~-55 mV) is reached. Phases: resting potential (~-70 mV, maintained by Na⁺/K⁺ ATPase pump), depolarization (Na⁺ channels open, Na⁺ influx, membrane potential becomes positive), repolarization (Na⁺ channels close, K⁺ channels open, K⁺ efflux, returns to negative), hyperpolarization (brief overshoot, then returns to resting). All-or-nothing principle: either fires completely or doesn't fire at all. Frequency (not amplitude) encodes information intensity. Refractory periods (absolute and relative) prevent backward propagation and limit firing rate.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Synaptic Transmission:</strong> Communication between neurons at synapses. Process: action potential arrives at axon terminal → depolarizes membrane → voltage-gated Ca²⁺ channels open → Ca²⁺ influx → triggers exocytosis of synaptic vesicles → neurotransmitters released into synaptic cleft → diffuse across cleft → bind to receptors on postsynaptic membrane → generate postsynaptic potential (excitatory EPSP or inhibitory IPSP). Neurotransmitter termination: reuptake (taken back into presynaptic terminal), enzymatic degradation (e.g., acetylcholinesterase breaks down ACh), diffusion away from synapse.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Major Neurotransmitters:</strong> Dopamine (reward, motivation, motor control, implicated in Parkinson's, schizophrenia, addiction), serotonin (mood, sleep, appetite, implicated in depression, anxiety), GABA (gamma-aminobutyric acid, major inhibitory neurotransmitter, reduces neural activity, implicated in anxiety, seizures), glutamate (major excitatory neurotransmitter, learning and memory, implicated in seizures, neurodegenerative diseases), acetylcholine (ACh, muscle contraction, attention, memory, implicated in Alzheimer's), norepinephrine (arousal, attention, stress response, fight-or-flight), endorphins (pain relief, pleasure, "runner's high").</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Neuroplasticity:</strong> Brain's ability to reorganize and form new neural connections throughout life. Synaptic plasticity: strengthening (long-term potentiation, LTP) or weakening (long-term depression, LTD) of synapses based on activity. Structural plasticity: formation of new neurons (neurogenesis, limited in adults, occurs in hippocampus), new dendrites, new synapses. Critical for learning, memory, recovery from brain injury. Experience-dependent plasticity: brain changes based on experiences, use-dependent reorganization.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Brain Structure and Function:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Cerebrum (Cerebral Cortex):</strong> Largest part of brain, responsible for higher cognitive functions. Two hemispheres (left and right) connected by corpus callosum. Left hemisphere: language, logical reasoning, analytical thinking, right-hand control. Right hemisphere: spatial processing, face recognition, creativity, left-hand control. Cerebral cortex divided into lobes: frontal lobe (motor control, planning, judgment, personality, Broca's area for speech production), parietal lobe (somatosensory processing, spatial awareness, attention), temporal lobe (auditory processing, memory, language comprehension, Wernicke's area), occipital lobe (visual processing). Prefrontal cortex: executive functions (planning, decision-making, impulse control, working memory).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Limbic System:</strong> Emotional processing and memory. Components: amygdala (fear, aggression, emotional memory, processes emotional significance), hippocampus (memory formation and consolidation, spatial navigation, converts short-term to long-term memory), hypothalamus (homeostasis, hunger, thirst, temperature, links nervous and endocrine systems, controls pituitary), thalamus (sensory relay station, filters and routes sensory information to cortex, except smell), cingulate gyrus (emotion, pain processing, attention).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Basal Ganglia:</strong> Motor control, procedural learning, habit formation. Components: caudate nucleus, putamen, globus pallidus, substantia nigra. Implicated in Parkinson's disease (degeneration of substantia nigra), Huntington's disease, Tourette's syndrome.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Cerebellum:</strong> "Little brain," coordinates voluntary movements, balance, posture, motor learning, timing. Compares intended movements with actual movements, makes corrections. Damage causes ataxia (lack of coordination), tremors, balance problems. Also involved in some cognitive functions (language, attention).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Brainstem:</strong> Connects brain to spinal cord, controls vital functions. Components: midbrain (visual/auditory reflexes, motor control, contains substantia nigra), pons (relay between cerebrum and cerebellum, respiratory centers), medulla oblongata (vital centers: cardiovascular, respiratory, vomiting, coughing, swallowing). Contains reticular formation (arousal, consciousness, sleep-wake cycle, filters sensory information).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Spinal Cord:</strong> Extends from brainstem, transmits signals between brain and body. Reflexes: automatic responses to stimuli (knee-jerk reflex, withdrawal reflex). Gray matter (cell bodies, interneurons) and white matter (myelinated tracts: ascending sensory, descending motor).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Endocrine System and Hormones:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Hormones:</strong> Chemical messengers secreted by endocrine glands into bloodstream. Act more slowly than neurotransmitters but have longer-lasting effects. Hypothalamic-pituitary-adrenal (HPA) axis: stress response, cortisol release. Hypothalamic-pituitary-gonadal (HPG) axis: reproductive hormones (estrogen, testosterone).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Key Hormones:</strong> Cortisol (stress hormone, increases blood glucose, suppresses immune system, chronic elevation harmful), adrenaline/epinephrine (fight-or-flight, increases heart rate, blood pressure), oxytocin (bonding, trust, social attachment, released during childbirth, breastfeeding), testosterone (male sex hormone, aggression, libido, muscle mass, also in females), estrogen (female sex hormone, mood, cognitive function, also in males), thyroid hormones (metabolism, energy, mood, cognitive function).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Genetics and Behavior:</strong> Behavioral genetics studies genetic influences on behavior. Heritability: proportion of variance in trait due to genetics (0-1 scale). Twin studies (identical vs. fraternal) and adoption studies separate genetic and environmental influences. Gene-environment interaction: genes influence how environment affects us, environment influences gene expression (epigenetics). Polygenic traits: influenced by multiple genes (intelligence, personality, mental disorders).</span></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-pink-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Cognitive Psychology</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Cognitive psychology studies mental processes including perception, attention, memory, language, problem-solving, decision-making, and thinking. It views the mind as an information-processing system, similar to a computer. Cognitive psychologists use experimental methods to understand how people acquire, process, store, and retrieve information. This field has revolutionized understanding of human cognition and has applications in education, therapy, technology design, and artificial intelligence.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Memory Systems - Information Processing Model:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Sensory Memory:</strong> Brief storage of sensory information (milliseconds to seconds). Iconic memory (visual, ~0.5 seconds, large capacity, allows perception of continuity), echoic memory (auditory, ~2-4 seconds, allows understanding of speech). Acts as buffer, most information lost unless attended to. Sperling's partial report technique demonstrated large capacity of iconic memory.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Short-Term Memory (STM) / Working Memory:</strong> Active processing and temporary storage. Limited capacity: Miller's "magic number" 7±2 items (chunking increases effective capacity). Duration: ~20-30 seconds without rehearsal (maintenance rehearsal: simple repetition, elaborative rehearsal: meaningful processing, more effective). Working memory model (Baddeley): central executive (controls attention), phonological loop (verbal information), visuospatial sketchpad (visual-spatial information), episodic buffer (integrates information). Working memory capacity predicts academic performance, intelligence, problem-solving ability.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Long-Term Memory (LTM):</strong> Relatively permanent storage, unlimited capacity. Explicit (declarative) memory: conscious recall. Semantic memory (facts, knowledge, concepts, "knowing that"), episodic memory (personal experiences, events, "remembering when," includes time and place). Implicit (non-declarative) memory: unconscious influence. Procedural memory (skills, habits, "knowing how," e.g., riding bike, typing), priming (previous exposure facilitates processing), classical conditioning (associations). Consolidation: process of stabilizing memories, involves hippocampus initially, then distributed to cortex. Reconsolidation: memories can be modified when retrieved.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Encoding:</strong> Process of transferring information into memory. Levels of processing (Craik & Lockhart): shallow (physical features, poor retention), intermediate (acoustic/phonetic, moderate), deep (semantic/meaningful, best retention). Elaborative rehearsal (relating to existing knowledge) superior to maintenance rehearsal. Encoding specificity: memory better when encoding and retrieval contexts match. Mnemonic devices: method of loci (mental walk), peg-word system, acronyms, chunking.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Storage:</strong> Maintaining information over time. Distributed storage: memories stored across brain networks, not single location. Engram: physical trace of memory. Long-term potentiation (LTP): strengthening of synapses, basis of memory storage. Sleep important for memory consolidation (especially REM sleep for procedural, slow-wave sleep for declarative).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Retrieval:</strong> Accessing stored information. Recognition (identifying previously encountered information, easier than recall) vs. recall (reproducing information without cues, more difficult). Retrieval cues: context-dependent memory (better recall in same environment), state-dependent memory (better recall in same physiological/emotional state), mood-congruent memory (recall memories matching current mood). Serial position effect: primacy effect (better recall of first items) and recency effect (better recall of last items). Forgetting: decay (fading over time), interference (proactive: old interferes with new, retroactive: new interferes with old), retrieval failure (information available but not accessible, tip-of-the-tongue phenomenon), motivated forgetting (repression, suppression).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Memory Errors:</strong> False memories (remembering events that didn't occur, influenced by suggestion, misinformation effect), source monitoring errors (confusing source of information), schema distortion (memories distorted to fit expectations), flashbulb memories (vivid, detailed memories of emotional events, may be inaccurate despite confidence).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Perception and Attention:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Perception:</strong> Process of organizing and interpreting sensory information. Bottom-up processing (data-driven, from sensory input to perception) vs. top-down processing (concept-driven, from expectations/knowledge to perception). Gestalt principles: figure-ground, proximity, similarity, continuity, closure, connectedness. Perceptual constancy: size, shape, color constancy despite changing sensory input. Depth perception: binocular cues (retinal disparity, convergence), monocular cues (relative size, interposition, linear perspective, texture gradient, motion parallax).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Attention:</strong> Selective focus on specific stimuli while ignoring others. Selective attention: cocktail party effect (ability to focus on one conversation in noisy environment), inattentional blindness (missing obvious stimuli when attention elsewhere), change blindness (failing to notice changes). Divided attention: multitasking, performance decreases with task complexity. Sustained attention: vigilance, maintaining focus over time. Attention deficit: ADHD, difficulty sustaining attention, impulsivity, hyperactivity.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Language and Thought:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Language Structure:</strong> Phonemes (smallest sound units, ~40 in English), morphemes (smallest meaningful units, e.g., "un-" + "happy"), syntax (grammar rules, word order), semantics (meaning of words and sentences), pragmatics (social use of language, context).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Language Acquisition:</strong> Critical period hypothesis (optimal time window for language learning, childhood). Stages: babbling (6-12 months, universal sounds), one-word stage (12-18 months, holophrases), two-word stage (18-24 months, telegraphic speech), multi-word sentences (2+ years, grammar develops). Theories: behaviorist (Skinner: operant conditioning, imitation), nativist (Chomsky: innate language acquisition device, universal grammar), interactionist (combination of biological and environmental factors).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Language and Thought:</strong> Linguistic relativity (Sapir-Whorf hypothesis: language influences thought, strong vs. weak versions). Bilingualism: cognitive benefits (executive control, metalinguistic awareness), code-switching. Aphasia: language impairment from brain damage. Broca's aphasia (expressive, difficulty producing speech, grammar impaired), Wernicke's aphasia (receptive, fluent but meaningless speech, comprehension impaired).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Problem-Solving and Decision-Making:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Problem-Solving Strategies:</strong> Algorithms: step-by-step procedures guaranteeing solution (mathematical formulas, systematic search). Heuristics: mental shortcuts, faster but may lead to errors. Types: availability heuristic (judging probability by ease of recall), representativeness heuristic (judging by similarity to prototype), anchoring heuristic (relying on first information). Means-end analysis: breaking problem into subgoals. Working backward: starting from goal. Analogical reasoning: using solution from similar problem.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Obstacles to Problem-Solving:</strong> Functional fixedness (difficulty seeing new uses for objects), mental set (tendency to use previously successful strategies, even when inappropriate), confirmation bias (seeking information confirming existing beliefs), fixation (inability to see problem from new perspective).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Insight:</strong> Sudden realization of solution, "aha!" moment. Often occurs after incubation period (stepping away from problem). Kohler's chimpanzee experiments demonstrated insight learning. Different from trial-and-error or gradual problem-solving.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Decision-Making:</strong> Expected utility theory (rational decision-making based on probabilities and outcomes). Bounded rationality (Simon: limited by cognitive resources, time, information). Prospect theory (Kahneman & Tversky): people value losses more than equivalent gains (loss aversion), framing effects (decisions influenced by how options presented), overconfidence bias (overestimating accuracy of judgments).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Cognitive Biases:</strong> Systematic errors in thinking. Confirmation bias (favoring information confirming beliefs), hindsight bias ("I knew it all along"), availability bias (overestimating probability of memorable events), representativeness bias (ignoring base rates, judging by stereotypes), anchoring bias (over-relying on first information), sunk cost fallacy (continuing because of past investment).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Intelligence and Creativity:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Intelligence Theories:</strong> General intelligence (g factor, Spearman: underlying general ability), multiple intelligences (Gardner: linguistic, logical-mathematical, spatial, musical, bodily-kinesthetic, interpersonal, intrapersonal, naturalistic), triarchic theory (Sternberg: analytical, creative, practical), emotional intelligence (EQ: ability to perceive, understand, manage emotions).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Intelligence Testing:</strong> IQ (intelligence quotient): mental age/chronological age × 100, mean = 100, SD = 15. Tests: Stanford-Binet, Wechsler scales (WAIS, WISC). Validity (measures what it claims), reliability (consistent results). Nature vs. nurture: both genetics and environment important, heritability ~0.5-0.7. Flynn effect: IQ scores increasing over generations (environmental factors).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Creativity:</strong> Ability to produce novel and valuable ideas. Divergent thinking (generating multiple solutions) vs. convergent thinking (finding single correct answer). Components: expertise (knowledge base), creative thinking skills, motivation (intrinsic vs. extrinsic). Brain networks: default mode network (imagination, daydreaming), executive control network (focus, evaluation), salience network (switching between networks).</span></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-pink-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Developmental Psychology</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Developmental psychology examines human growth and change across the lifespan, from conception to death. It studies physical, cognitive, social, and emotional development, exploring both universal patterns and individual differences. Developmental psychologists investigate how nature (genetics, biology) and nurture (environment, experience) interact to shape development. Key themes include continuity vs. discontinuity (gradual vs. stage-like), stability vs. change (personality traits over time), and critical/sensitive periods (optimal times for development).
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Piaget's Theory of Cognitive Development:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Sensorimotor Stage (0-2 years):</strong> Learning through senses and motor actions. Key achievements: object permanence (understanding objects exist when out of sight, develops ~8 months, A-not-B error before full development), stranger anxiety (8-12 months), separation anxiety. Circular reactions: primary (repeating actions with own body), secondary (repeating actions with objects), tertiary (varying actions to explore). Symbolic thought begins at end of stage. Limitations: no mental representation, no understanding of cause-effect beyond immediate actions.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Preoperational Stage (2-7 years):</strong> Symbolic thinking, language development, pretend play. Key characteristics: egocentrism (inability to take another's perspective, demonstrated by three-mountain task), animism (attributing life to inanimate objects), centration (focusing on one aspect, ignoring others), lack of conservation (understanding quantity remains same despite appearance changes, e.g., liquid, number, mass conservation tasks), irreversibility (inability to mentally reverse operations). Symbolic representation: use of symbols, language, pretend play. Theory of mind begins developing (understanding others have thoughts, beliefs, desires).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Concrete Operational Stage (7-11 years):</strong> Logical thinking about concrete objects and events. Key achievements: conservation (understanding quantity, number, mass, volume, weight, area), classification (grouping objects by multiple attributes), seriation (ordering objects along dimension), reversibility (mentally reversing operations), decentration (considering multiple aspects). Limitations: difficulty with abstract, hypothetical reasoning, tied to concrete, observable reality.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Formal Operational Stage (12+ years):</strong> Abstract thinking, hypothetical-deductive reasoning. Key abilities: abstract concepts (justice, freedom, love), hypothetical reasoning ("what if" questions), systematic problem-solving (scientific method), metacognition (thinking about thinking), idealism and planning for future. Not all adults reach this stage. Adolescent egocentrism: personal fable (belief in uniqueness, invincibility), imaginary audience (belief others focus on them).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Piagetian Concepts:</strong> Schema (mental framework for organizing information), assimilation (fitting new information into existing schemas), accommodation (modifying schemas to fit new information), equilibration (balance between assimilation and accommodation, drives development). Criticisms: underestimated children's abilities, stages not as discrete as proposed, cultural variations, domain-specific development (different rates in different areas).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Vygotsky's Sociocultural Theory:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Key Concepts:</strong> Social interaction crucial for cognitive development. Zone of proximal development (ZPD): difference between what child can do alone vs. with assistance. Scaffolding: adjusting support to match learner's current level, gradually reducing as competence increases. Private speech: self-directed speech, guides behavior, becomes internalized as inner speech. Cultural tools: language, symbols, artifacts that shape thinking. More knowledgeable other (MKO): person with greater knowledge/skill who provides guidance.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Comparison with Piaget:</strong> Vygotsky emphasized social and cultural factors, continuous development, language as primary tool, learning leads development. Piaget emphasized individual construction, stage-like development, language reflects thought, development leads learning.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Erikson's Psychosocial Development:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Eight Stages:</strong> Each stage presents psychosocial crisis. Trust vs. mistrust (0-1 year: basic needs met → trust, unmet → mistrust), autonomy vs. shame/doubt (1-3 years: independence, toilet training), initiative vs. guilt (3-6 years: planning, taking initiative), industry vs. inferiority (6-12 years: competence, school, peer comparison), identity vs. role confusion (12-18 years: "Who am I?", identity formation), intimacy vs. isolation (young adulthood: close relationships), generativity vs. stagnation (middle adulthood: contributing to next generation), integrity vs. despair (late adulthood: life review, acceptance).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Attachment Theory (Bowlby, Ainsworth):</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Attachment Styles:</strong> Secure attachment (caregiver as secure base, explores confidently, distressed when caregiver leaves, happy on return, ~60-65% of children), insecure-avoidant (indifferent to caregiver, little distress on separation, avoids on return, ~20%), insecure-resistant/ambivalent (clings to caregiver, very distressed on separation, ambivalent on return, ~10-15%), disorganized-disoriented (inconsistent, confused behavior, ~5-10%). Strange Situation procedure (Ainsworth) measures attachment. Attachment styles influence later relationships, social competence, emotional regulation.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Factors Influencing Attachment:</strong> Caregiver sensitivity and responsiveness, consistency, warmth. Critical period: first 2-3 years important but not absolute. Internal working models: mental representations of relationships, expectations about others' availability and responsiveness.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Adolescence and Adulthood:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Adolescence (12-18 years):</strong> Puberty: physical changes, hormonal changes, growth spurt, secondary sex characteristics. Identity formation (Erikson): identity crisis, identity statuses (achievement, foreclosure, moratorium, diffusion). Peer relationships: increased importance, peer pressure, conformity. Risk-taking: brain development (prefrontal cortex matures last), sensation-seeking, impulsivity. Cognitive changes: formal operational thinking, metacognition, abstract reasoning.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Early Adulthood (20-40 years):</strong> Peak physical performance, establishing career, intimate relationships, starting families. Emerging adulthood (18-25): extended transition, identity exploration, instability, self-focus, feeling "in-between."</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Middle Adulthood (40-65 years):</strong> Generativity (Erikson): contributing to next generation, mentoring, productivity. Midlife transition/crisis: reassessment, potential changes. Physical changes: gradual decline, menopause (women), andropause (men). Cognitive changes: crystallized intelligence (accumulated knowledge) increases, fluid intelligence (processing speed, abstract reasoning) may decline, expertise increases.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Late Adulthood (65+ years):</strong> Integrity vs. despair (Erikson): life review, acceptance. Physical changes: sensory decline, slower reaction time, increased health issues. Cognitive changes: wisdom (expert knowledge about life), selective optimization with compensation (focusing on strengths, compensating for weaknesses), cognitive reserve (education, mental activity protect against decline). Successful aging: activity theory (staying active), disengagement theory (withdrawal), continuity theory (maintaining patterns).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Moral Development:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Kohlberg's Stages:</strong> Preconventional (punishment/obedience, instrumental relativism), conventional (interpersonal concordance, law and order), postconventional (social contract, universal ethical principles). Criticisms: gender bias (Gilligan: care vs. justice orientation), cultural bias, hypothetical dilemmas may not reflect real behavior.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Gilligan's Ethics of Care:</strong> Alternative perspective emphasizing relationships, care, responsibility. Three levels: orientation to individual survival, goodness as self-sacrifice, morality of nonviolence (caring for self and others).</span></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-pink-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Social Psychology</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Social psychology studies how individuals think, feel, and behave in social contexts and how social situations influence behavior. It examines the interaction between individual and social factors, exploring topics such as social perception, attitudes, group dynamics, relationships, and social influence. Social psychologists investigate how people are influenced by the presence (real or imagined) of others, how they form impressions of others, and how they navigate social relationships. Key principle: behavior is a function of both the person and the situation.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Social Cognition and Attribution:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Attribution Theory (Heider, Kelley):</strong> How people explain behavior. Internal (dispositional) attributions: behavior due to person's traits, abilities, motives. External (situational) attributions: behavior due to situation, circumstances, luck. Covariation model (Kelley): consistency (does person always behave this way?), distinctiveness (does person behave differently in other situations?), consensus (do others behave similarly?). Fundamental attribution error (correspondence bias): overestimating internal factors, underestimating external factors when explaining others' behavior (especially in Western cultures). Self-serving bias: attributing successes to internal factors, failures to external factors. Actor-observer bias: attributing own behavior to situation, others' behavior to disposition.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Social Perception:</strong> Forming impressions of others. Primacy effect: first impressions matter, difficult to change. Halo effect: one positive trait influences perception of other traits. Stereotypes: cognitive schemas about groups, can be positive or negative, often automatic, can lead to prejudice. Self-fulfilling prophecy: expectations influence behavior, causing expectations to come true (Rosenthal & Jacobson: Pygmalion effect in classrooms).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Attitudes:</strong> Evaluations (positive/negative) of people, objects, ideas. Components: affective (emotions), behavioral (actions), cognitive (beliefs). Attitude-behavior consistency: attitudes predict behavior when strong, accessible, specific, when social pressures minimal. Theory of planned behavior: attitudes, subjective norms, perceived behavioral control predict intentions and behavior. Cognitive dissonance (Festinger): discomfort from holding conflicting beliefs/attitudes, motivates change (reduce dissonance by changing attitude, behavior, or adding consonant cognitions).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Social Influence:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Conformity:</strong> Adjusting behavior to match group norms. Asch's line experiments: ~75% conformed at least once, even when clearly wrong. Types: informational conformity (believing others are correct, seeking accuracy), normative conformity (fitting in, avoiding rejection). Factors increasing conformity: group size (up to 3-4), unanimity (one dissenter reduces conformity), culture (collectivistic > individualistic), low self-esteem, ambiguity of situation. Factors decreasing: one dissenter, high self-confidence, individualistic culture.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Compliance:</strong> Agreeing to request. Techniques: foot-in-the-door (small request → larger request), door-in-the-face (large request → smaller request), low-ball (agree to attractive offer → reveal hidden costs), that's-not-all (add bonus before response), scarcity (limited availability increases value).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Obedience:</strong> Following orders from authority. Milgram's experiments: ~65% administered maximum shock (450V) when ordered by experimenter. Factors: proximity of authority (closer = more obedience), legitimacy of authority, distance from victim (further = more obedience), gradual escalation (small steps), responsibility diffusion. Ethical concerns raised about Milgram's research. Real-world applications: understanding Holocaust, military obedience, workplace compliance.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Group Dynamics:</strong> Social facilitation: presence of others improves performance on simple/well-learned tasks, impairs complex/new tasks (Zajonc: arousal increases dominant response). Social loafing: reduced effort in groups (free-rider effect), more common in larger groups, when individual contributions not identifiable. Deindividuation: loss of self-awareness in groups, reduced personal responsibility, can lead to antisocial behavior (mob behavior, online anonymity). Group polarization: groups make more extreme decisions than individuals (risky shift, cautious shift).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Groupthink (Janis):</strong> Poor decision-making in cohesive groups due to pressure for consensus. Symptoms: illusion of invulnerability, collective rationalization, belief in group's morality, stereotyping outgroups, self-censorship, illusion of unanimity, mindguards (protecting group from dissenting information). Conditions: cohesive group, isolated from outside, directive leader, high stress, lack of decision-making procedures. Examples: Bay of Pigs, Challenger disaster. Prevention: encourage dissent, outside experts, subgroups, anonymous input, leader holds back opinions.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Prejudice, Stereotyping, and Discrimination:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Definitions:</strong> Prejudice: negative attitude toward group (affective component). Stereotype: belief about group (cognitive component). Discrimination: negative behavior toward group (behavioral component). Can exist independently: can have prejudice without discrimination (suppressed), discrimination without prejudice (institutional), stereotypes without prejudice (positive stereotypes).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Origins of Prejudice:</strong> Social learning: learned from parents, peers, media. Social categorization: us vs. them (in-group vs. out-group), in-group favoritism, out-group homogeneity (seeing out-group as more similar than in-group). Realistic conflict theory: competition for resources increases prejudice. Scapegoat theory: blaming out-group for problems. Authoritarian personality: rigid thinking, submission to authority, aggression toward out-groups. Just-world hypothesis: belief world is fair, victims deserve fate.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Implicit Bias:</strong> Unconscious attitudes, measured by Implicit Association Test (IAT). Can conflict with explicit attitudes. Automatic activation of stereotypes. Reducing prejudice: contact hypothesis (intergroup contact reduces prejudice when: equal status, common goals, cooperation, institutional support), education, perspective-taking, superordinate goals (shared goals requiring cooperation).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Interpersonal Relationships:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Attraction:</strong> Proximity: mere exposure effect (familiarity increases liking). Physical attractiveness: halo effect, "what is beautiful is good" stereotype, symmetry, averageness. Similarity: birds of a feather (similarity > complementarity), shared attitudes, values, interests. Reciprocity: we like those who like us. Self-disclosure: sharing personal information builds intimacy (social penetration theory).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Love:</strong> Sternberg's triangular theory: intimacy (emotional closeness), passion (physical/romantic attraction), commitment (decision to maintain relationship). Types: consummate love (all three), romantic love (intimacy + passion), companionate love (intimacy + commitment), empty love (commitment only). Attachment styles in relationships: secure, anxious-ambivalent, avoidant (Hazan & Shaver).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Altruism and Prosocial Behavior:</strong> Altruism: helping without expectation of reward. Bystander effect (Darley & Latané): presence of others reduces likelihood of helping. Factors: diffusion of responsibility, pluralistic ignorance (looking to others for cues), evaluation apprehension. Factors increasing helping: clear emergency, personal responsibility, similarity to victim, good mood, empathy. Empathy-altruism hypothesis: empathy motivates genuine altruism.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Aggression:</strong> Intentional harm to others. Types: instrumental (goal-directed), hostile (emotional, impulsive). Biological factors: genetics, hormones (testosterone), neurotransmitters (low serotonin), brain regions (amygdala, prefrontal cortex). Social factors: frustration-aggression hypothesis (frustration → aggression), social learning (Bandura: Bobo doll experiments), media violence, deindividuation. Reducing aggression: punishment (may increase), catharsis (not effective), social skills training, reducing frustration, controlling media exposure.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Social Identity and Self:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Social Identity Theory (Tajfel & Turner):</strong> Self-concept derived from group memberships. In-group favoritism: positive evaluation of own group. Out-group derogation: negative evaluation of other groups. Social comparison: comparing in-group to out-groups to maintain positive identity. Minimal group paradigm: even arbitrary group assignments lead to in-group favoritism.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Self-Concept and Self-Esteem:</strong> Self-concept: beliefs about self. Self-schema: organized knowledge about self. Self-esteem: evaluation of self-worth. Social comparison theory (Festinger): comparing self to others (upward: better than us, downward: worse than us). Self-serving bias: taking credit for successes, blaming failures on external factors. Self-handicapping: creating obstacles to protect self-esteem. Culture and self: independent self (Western: individual, unique) vs. interdependent self (Eastern: connected, relational).</span></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-pink-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Clinical Psychology and Abnormal Psychology</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Clinical psychology focuses on assessment, diagnosis, and treatment of mental health disorders. It applies psychological principles to understand, prevent, and treat psychological distress and dysfunction. Clinical psychologists work with individuals, families, and groups across diverse settings (hospitals, private practice, schools, community centers). They use evidence-based treatments and conduct research to improve understanding and treatment of mental disorders. Abnormal psychology examines the nature, causes, and treatment of psychological disorders.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Defining Abnormality:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Criteria:</strong> Statistical deviance (rare, unusual), violation of social norms (cultural context matters), personal distress (suffering), dysfunction (impairing daily life), dangerousness (harm to self/others). No single criterion sufficient. DSM-5 (Diagnostic and Statistical Manual of Mental Disorders): standard classification system, categorical approach, includes diagnostic criteria, prevalence, risk factors. Criticisms: medicalization of normal behavior, cultural bias, comorbidity (multiple disorders common), dimensional vs. categorical debate.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Historical Perspectives:</strong> Ancient: supernatural causes, exorcism. Middle Ages: demonic possession, witchcraft. 19th century: medical model, asylums, moral treatment. 20th century: psychoanalysis, behaviorism, cognitive revolution, deinstitutionalization, community mental health. Current: biopsychosocial model (biological, psychological, social factors interact).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Major Psychological Disorders:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Anxiety Disorders:</strong> Excessive fear and anxiety. Generalized anxiety disorder (GAD): persistent, excessive worry, physical symptoms (muscle tension, fatigue, sleep problems). Panic disorder: recurrent panic attacks (intense fear, physical symptoms: heart palpitations, shortness of breath, dizziness), agoraphobia (fear of situations where escape difficult). Phobias: specific phobias (irrational fear of objects/situations), social anxiety disorder (fear of social situations, scrutiny). Obsessive-compulsive disorder (OCD): obsessions (intrusive, unwanted thoughts), compulsions (repetitive behaviors to reduce anxiety). Post-traumatic stress disorder (PTSD): exposure to trauma, re-experiencing, avoidance, hyperarousal, negative mood/cognition. Etiology: biological (genetics, neurotransmitters: GABA, serotonin, norepinephrine), psychological (classical conditioning, cognitive factors: catastrophic thinking), social (stress, trauma).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Mood Disorders:</strong> Disturbances in mood. Major depressive disorder: persistent sadness, loss of interest, changes in sleep/appetite, fatigue, feelings of worthlessness, difficulty concentrating, thoughts of death/suicide, lasts ≥2 weeks. Persistent depressive disorder (dysthymia): chronic, milder depression, ≥2 years. Bipolar disorder: manic episodes (elevated mood, increased energy, grandiosity, decreased need for sleep, racing thoughts, impulsivity) and depressive episodes. Bipolar I: at least one manic episode. Bipolar II: hypomanic (milder) and depressive episodes. Etiology: biological (genetics, neurotransmitters: serotonin, norepinephrine, dopamine, brain regions: prefrontal cortex, amygdala), psychological (cognitive triad: negative views of self, world, future, learned helplessness), social (stress, loss, trauma).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Schizophrenia Spectrum Disorders:</strong> Psychotic disorders. Symptoms: positive symptoms (additions: hallucinations, delusions, disorganized speech, disorganized behavior), negative symptoms (subtractions: flat affect, avolition, alogia, anhedonia, social withdrawal), cognitive symptoms (impaired attention, memory, executive function). Types: paranoid (delusions, hallucinations, relatively preserved cognition), disorganized (disorganized speech/behavior, flat/inappropriate affect), catatonic (motor disturbances: immobility, excessive movement, mutism). Etiology: biological (genetics: ~50% heritability, dopamine hypothesis: excess dopamine, brain abnormalities: enlarged ventricles, reduced gray matter), psychological (stress-vulnerability model: genetic vulnerability + stress), social (urban environment, migration, trauma, family expressed emotion).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Personality Disorders:</strong> Enduring patterns of behavior, cognition, emotion. Cluster A (odd/eccentric): paranoid (distrust, suspicion), schizoid (social detachment, restricted emotions), schizotypal (odd beliefs, eccentric behavior). Cluster B (dramatic/erratic): antisocial (disregard for others' rights, lack of remorse, conduct disorder history), borderline (unstable relationships, self-image, emotions, impulsivity, fear of abandonment), histrionic (attention-seeking, excessive emotion), narcissistic (grandiosity, need for admiration, lack of empathy). Cluster C (anxious/fearful): avoidant (social inhibition, feelings of inadequacy), dependent (excessive need to be cared for), obsessive-compulsive (perfectionism, orderliness, control). Etiology: genetics, childhood trauma, attachment issues, parenting styles.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Eating Disorders:</strong> Anorexia nervosa: restriction of food, intense fear of weight gain, distorted body image, significantly low weight. Bulimia nervosa: binge eating + compensatory behaviors (purging, excessive exercise, fasting), normal or above-normal weight. Binge-eating disorder: recurrent binges without compensatory behaviors. Etiology: biological (genetics, neurotransmitters), psychological (perfectionism, low self-esteem, body dissatisfaction), social (cultural pressure, media, family dynamics).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Substance-Related Disorders:</strong> Substance use disorder: problematic pattern of use, impaired control, social problems, risky use, tolerance, withdrawal. Dependence: physical (tolerance, withdrawal) and psychological (craving, loss of control). Common substances: alcohol, opioids, stimulants (cocaine, amphetamines), cannabis, hallucinogens, sedatives. Etiology: biological (genetics, reward pathway: dopamine), psychological (self-medication, coping), social (peer influence, availability, stress).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Therapeutic Approaches:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Psychodynamic Therapy:</strong> Based on Freud's psychoanalysis. Explores unconscious processes, early experiences, defense mechanisms. Techniques: free association, dream analysis, transference (client's feelings toward therapist reflect past relationships), interpretation. Modern psychodynamic: shorter-term, more focused, emphasis on relationships. Goals: insight into unconscious conflicts, working through past experiences, improving relationships.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Humanistic Therapy:</strong> Emphasizes personal growth, self-actualization, human potential. Client-centered therapy (Rogers): unconditional positive regard (acceptance without judgment), empathy (understanding client's perspective), genuineness (authenticity). Non-directive: client leads, therapist reflects. Gestalt therapy (Perls): awareness of present moment, integration of conflicting parts, empty chair technique. Existential therapy: meaning, freedom, responsibility, death anxiety.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Behavioral Therapy:</strong> Uses conditioning principles to modify behavior. Classical conditioning techniques: systematic desensitization (gradual exposure to feared stimulus while relaxed, counterconditioning), exposure therapy (flooding: immediate exposure, gradual exposure), aversion therapy (pairing unwanted behavior with unpleasant stimulus). Operant conditioning: token economy (reinforcement system), contingency management, behavioral activation (increasing rewarding activities). Social skills training: teaching appropriate social behaviors through modeling, role-playing, reinforcement.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Cognitive Therapy:</strong> Focuses on changing maladaptive thoughts. Cognitive therapy (Beck): identifying and challenging negative automatic thoughts, cognitive distortions (all-or-nothing thinking, overgeneralization, catastrophizing, mental filter, jumping to conclusions, emotional reasoning, "should" statements, labeling, personalization). Cognitive restructuring: examining evidence, alternative explanations, decatastrophizing, behavioral experiments.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Cognitive-Behavioral Therapy (CBT):</strong> Combines cognitive and behavioral techniques. Most extensively researched, evidence-based for many disorders. Principles: thoughts, feelings, behaviors interconnected; changing thoughts/behaviors changes emotions; collaborative, structured, time-limited, goal-oriented, homework assignments. Applications: depression, anxiety disorders, PTSD, eating disorders, substance use, personality disorders. Variations: dialectical behavior therapy (DBT, Linehan: for borderline personality, combines CBT with mindfulness, acceptance, emotion regulation, interpersonal effectiveness), acceptance and commitment therapy (ACT: acceptance, mindfulness, values-based action), mindfulness-based cognitive therapy (MBCT: prevents depression relapse).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Group Therapy:</strong> Multiple clients, one or more therapists. Benefits: universality (not alone), interpersonal learning, group cohesion, cost-effective. Types: psychoeducational (teaching skills), process groups (exploring relationships), support groups (mutual support). Family therapy: treats family as system, improves communication, resolves conflicts, changes family dynamics. Couples therapy: improves relationship, communication skills, conflict resolution.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Biological Treatments:</strong> Psychopharmacology: antidepressants (SSRIs: selective serotonin reuptake inhibitors, most common, fewer side effects; tricyclics, MAOIs), mood stabilizers (lithium, anticonvulsants for bipolar), antipsychotics (typical/atypical, block dopamine, for schizophrenia), anxiolytics (benzodiazepines: fast-acting but addictive, buspirone: non-addictive), stimulants (for ADHD). Electroconvulsive therapy (ECT): for severe depression, brief electrical seizure, effective but side effects (memory loss). Transcranial magnetic stimulation (TMS): magnetic pulses to brain, for depression. Deep brain stimulation: electrodes in brain, for severe OCD, depression.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Assessment and Diagnosis:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Clinical Assessment:</strong> Gathering information to understand client, make diagnosis, plan treatment. Methods: clinical interview (structured, semi-structured, unstructured), mental status examination (appearance, behavior, speech, mood, affect, thought process, thought content, perception, cognition, insight, judgment), psychological testing (personality tests: MMPI-2, projective tests: Rorschach, TAT; intelligence tests: WAIS, WISC; neuropsychological tests: assess cognitive function), behavioral observation, self-report measures, collateral information (family, friends, records).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Treatment Planning:</strong> Based on assessment, diagnosis, client goals. Evidence-based treatments: interventions supported by research. Treatment goals: symptom reduction, improved functioning, prevention of relapse, personal growth. Therapeutic alliance: relationship between therapist and client, crucial for outcome. Cultural competence: understanding cultural factors, adapting treatment to cultural context.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Ethics:</strong> Confidentiality (exceptions: harm to self/others, child abuse, court orders), informed consent, competence, boundaries (no dual relationships, no exploitation), cultural sensitivity, evidence-based practice. Professional organizations: APA (American Psychological Association), state licensing boards.</span></li>
+      </ul>
+    </div>
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-pink-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Personality Psychology</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Personality psychology studies individual differences in characteristic patterns of thinking, feeling, and behaving. It seeks to understand how personality develops, how it influences behavior, and how it can be measured. Personality psychologists investigate both universal aspects of personality and individual differences, exploring questions about consistency, stability, and change across situations and over time.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Major Personality Theories:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Psychoanalytic Theory (Freud):</strong> Personality structure: id (pleasure principle, unconscious, primitive drives), ego (reality principle, mediates between id and superego), superego (morality principle, conscience, internalized values). Psychosexual stages: oral (0-1 year, mouth), anal (1-3 years, control), phallic (3-6 years, Oedipus/Electra complex), latency (6-12 years, sexual feelings repressed), genital (puberty+, mature sexuality). Defense mechanisms: repression (unconscious blocking), denial (refusing to accept reality), projection (attributing own unacceptable feelings to others), displacement (redirecting emotions to safer target), rationalization (justifying with excuses), sublimation (channeling into acceptable activities), regression (returning to earlier stage). Criticisms: difficult to test, overemphasis on sexuality, male bias, lack of empirical support.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Trait Theory:</strong> Personality consists of stable traits (enduring characteristics). Big Five (Five-Factor Model): openness (imagination, curiosity, creativity), conscientiousness (organization, self-discipline, dependability), extraversion (sociability, assertiveness, positive emotions), agreeableness (trust, altruism, cooperation), neuroticism (anxiety, emotional instability, negative emotions). Each trait on continuum, relatively stable over time, heritable (~40-60%), cross-culturally valid. HEXACO model: adds honesty-humility. Eysenck's three-factor model: extraversion, neuroticism, psychoticism. Trait vs. state: traits are stable, states are temporary.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Humanistic Theory:</strong> Emphasizes personal growth, self-actualization, free will. Maslow's hierarchy of needs: physiological, safety, love/belonging, esteem, self-actualization (fulfilling potential). Rogers: self-concept (perceptions of self), unconditional positive regard (acceptance), conditions of worth (conditional acceptance leads to incongruence), fully functioning person (open to experience, trust in self, internal locus of evaluation).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Social-Cognitive Theory (Bandura):</strong> Interaction between person, behavior, and environment (reciprocal determinism). Observational learning (modeling): attention, retention, reproduction, motivation. Self-efficacy: belief in ability to succeed, influences behavior, effort, persistence. Locus of control: internal (control own outcomes) vs. external (outcomes due to luck/fate).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Biological Approaches:</strong> Genetics: heritability of personality traits (~40-50%). Temperament: early-appearing, biologically based individual differences (activity level, emotionality, sociability). Eysenck: extraversion related to arousal (introverts more easily aroused), neuroticism related to emotional reactivity. Brain structure: prefrontal cortex (conscientiousness, self-control), amygdala (neuroticism, fear).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Personality Assessment:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Methods:</strong> Self-report inventories (MMPI-2: Minnesota Multiphasic Personality Inventory, NEO-PI-R: Big Five, 16PF), projective tests (Rorschach Inkblot Test, Thematic Apperception Test TAT: ambiguous pictures, reveal unconscious), behavioral observation, interviews, peer ratings. Reliability (consistency) and validity (accuracy) important. Personality-situation debate: traits vs. situations in predicting behavior, interactionist perspective (both important).</span></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-pink-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Learning and Conditioning</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Learning is a relatively permanent change in behavior or knowledge due to experience. Behavioral psychology focuses on observable behavior and how it's acquired and modified through learning processes. Two primary forms of learning are classical conditioning and operant conditioning, which explain how associations are formed between stimuli and responses.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Classical Conditioning (Pavlov):</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Basic Principles:</strong> Unconditioned stimulus (UCS: naturally elicits response, e.g., food), unconditioned response (UCR: natural response, e.g., salivation), neutral stimulus (NS: initially no response, e.g., bell), conditioned stimulus (CS: after pairing, elicits response, e.g., bell), conditioned response (CR: learned response, e.g., salivation to bell). Acquisition: pairing CS with UCS, CR develops. Extinction: CS presented without UCS, CR weakens. Spontaneous recovery: extinguished CR reappears after rest period. Generalization: similar stimuli elicit CR. Discrimination: distinguishing between similar stimuli. Higher-order conditioning: CS becomes UCS for new conditioning.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Applications:</strong> Phobias (Watson & Rayner: Little Albert, fear conditioning), taste aversions (one-trial learning, long-delay learning), drug tolerance (environmental cues), advertising (pairing products with positive stimuli). Counterconditioning: systematic desensitization, exposure therapy.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Operant Conditioning (Skinner):</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Basic Principles:</strong> Behavior operates on environment, consequences determine future behavior. Reinforcement: increases behavior. Positive reinforcement (adding desirable stimulus, e.g., praise, money), negative reinforcement (removing aversive stimulus, e.g., removing pain, escaping unpleasant situation). Punishment: decreases behavior. Positive punishment (adding aversive stimulus, e.g., spanking, scolding), negative punishment (removing desirable stimulus, e.g., time-out, taking away privileges). Reinforcement schedules: continuous (every response reinforced, rapid learning, rapid extinction), partial/intermittent (some responses reinforced, slower learning, slower extinction). Fixed ratio (FR: after set number of responses, e.g., FR-5), variable ratio (VR: average number, e.g., VR-5, high rate, resistant to extinction, e.g., gambling), fixed interval (FI: after set time, e.g., FI-60s, scalloped pattern), variable interval (VI: average time, e.g., VI-60s, steady rate).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Shaping and Chaining:</strong> Shaping: reinforcing successive approximations to target behavior. Chaining: linking behaviors in sequence, forward chaining, backward chaining. Extinction: behavior decreases when reinforcement stops, extinction burst (temporary increase).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Applications:</strong> Behavior modification, token economies, classroom management, parenting, animal training, organizational behavior management. Criticisms: ignores cognition, internal processes, free will, ethical concerns (control, manipulation).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Observational Learning (Bandura):</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Social Learning Theory:</strong> Learning through observation and imitation. Bobo doll experiments: children imitated aggressive behavior they observed. Processes: attention (must observe behavior), retention (remember behavior), reproduction (able to perform behavior), motivation (want to perform, reinforcement). Vicarious reinforcement/punishment: learning from others' consequences. Applications: media violence, prosocial behavior, education, therapy (modeling).</span></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-pink-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Motivation and Emotion</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Motivation refers to the processes that initiate, direct, and sustain goal-directed behavior. Emotion involves subjective experience, physiological arousal, and expressive behavior. Both motivation and emotion are fundamental to understanding human behavior, influencing what we do, how we feel, and how we respond to the world around us.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Theories of Motivation:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Instinct Theory:</strong> Behavior driven by innate, fixed patterns (instincts). Limited explanatory power, circular reasoning.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Drive-Reduction Theory (Hull):</strong> Physiological needs create drives (tension states), behavior reduces drives, homeostasis. Primary drives (biological: hunger, thirst, sex), secondary drives (learned: money, achievement). Criticisms: doesn't explain all behavior (exploration, curiosity), optimal arousal theory (people seek moderate arousal).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Arousal Theory:</strong> Optimal level of arousal (Yerkes-Dodson law: performance best at moderate arousal, inverted U-curve, varies by task complexity). Sensation-seeking: individual differences in optimal arousal level.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Incentive Theory:</strong> Behavior pulled by external goals (incentives), not just pushed by internal drives. Positive incentives (rewards) and negative incentives (punishments).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Maslow's Hierarchy of Needs:</strong> Physiological, safety, love/belonging, esteem, self-actualization. Lower needs must be met before higher needs. Criticisms: not always hierarchical, cultural variations, self-actualization rare.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Self-Determination Theory (Deci & Ryan):</strong> Three basic needs: autonomy (control), competence (mastery), relatedness (connection). Intrinsic motivation (internal, enjoyment) vs. extrinsic motivation (external, rewards). Extrinsic rewards can undermine intrinsic motivation (overjustification effect).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Goal-Setting Theory (Locke):</strong> Specific, challenging goals lead to better performance than easy or vague goals. Feedback important. Self-efficacy influences goal commitment and achievement.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Specific Motivations:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Hunger:</strong> Biological factors: hypothalamus (lateral: hunger center, ventromedial: satiety center), stomach signals (ghrelin: hunger hormone), blood glucose, leptin (fat cells signal satiety), set point theory (body maintains weight). Psychological factors: learning, culture, stress, emotions. Eating disorders: anorexia, bulimia, binge-eating.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Sexual Motivation:</strong> Biological factors: hormones (testosterone, estrogen), brain regions. Psychological factors: learning, culture, emotions, relationships. Sexual orientation: complex interaction of biological, psychological, social factors.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Achievement Motivation:</strong> Need for achievement (McClelland): desire to excel, accomplish challenging goals. High achievers: moderate risk-taking, persistence, value feedback. Attribution: internal vs. external, stable vs. unstable, controllable vs. uncontrollable.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Theories of Emotion:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>James-Lange Theory:</strong> Emotion results from physiological arousal. Stimulus → arousal → emotion. "We feel sorry because we cry." Criticisms: similar arousal for different emotions, emotions can occur without arousal.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Cannon-Bard Theory:</strong> Emotion and arousal occur simultaneously, independently. Stimulus → thalamus → emotion + arousal. Criticisms: oversimplified, doesn't account for cognitive factors.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Schachter-Singer Two-Factor Theory:</strong> Emotion = arousal + cognitive label. Stimulus → arousal → cognitive interpretation → emotion. Misattribution of arousal: arousal from one source attributed to another. Supports: Dutton & Aron bridge study (misattributed arousal to attraction).</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Lazarus's Cognitive-Mediational Theory:</strong> Cognitive appraisal determines emotion. Primary appraisal (relevance, threat/benefit), secondary appraisal (coping ability, resources). Emotion follows cognitive evaluation.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Facial Feedback Hypothesis:</strong> Facial expressions influence emotions. Smiling can make you feel happier. Supports: Ekman's research on universal facial expressions.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Emotions:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Basic Emotions:</strong> Ekman: universal emotions with distinct facial expressions. Happiness, sadness, anger, fear, surprise, disgust (contempt sometimes added). Universal across cultures, but display rules (cultural norms for expression) vary.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Emotional Expression:</strong> Facial expressions (universal, but cultural display rules), body language, voice (paralanguage: tone, pitch, speed). Microexpressions: brief, involuntary facial expressions revealing true emotions.</span></li>
+        <li class="flex items-start gap-3"><span class="text-pink-600 font-bold">•</span><span><strong>Emotion Regulation:</strong> Strategies to influence which emotions we have, when we have them, how we experience/express them. Reappraisal (changing interpretation), suppression (inhibiting expression), distraction, acceptance. Suppression less effective, can have negative consequences. Emotional intelligence (EQ): perceiving, understanding, managing emotions (own and others').</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+
+    <a href="psychology-quiz.html" class="px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nutrition Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-lime-500 to-green-500 rounded-full mb-6">
+      <i data-lucide="apple" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Nutrition Quiz</h1>
+    <p class="text-xl text-gray-600">Test your knowledge of nutrients, metabolism, and dietary principles</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Questions will be dynamically generated here -->
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-lime-600 text-white text-lg font-semibold rounded-lg hover:bg-lime-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="quizResults" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-lime-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="nutrition-analysis.html" class="px-6 py-3 bg-lime-600 text-white rounded-lg hover:bg-lime-700 transition flex items-center gap-2">
+        <i data-lucide="book-open" class="w-5 h-5"></i>
+        Review Material
+      </a>
+      <button onclick="location.reload()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+        Retake Quiz
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="nutrition.html" class="px-6 py-3 bg-lime-600 text-white rounded-lg hover:bg-lime-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Back to Nutrition
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Question Bank - 40 questions total
+  const questionBank = [
+    {
+      question: "Which macronutrient provides the most calories per gram?",
+      options: ["Carbohydrates", "Protein", "Fat", "Vitamins", "Minerals"],
+      correct: 2,
+      explanation: "Fat provides 9 calories per gram, more than double the 4 calories per gram provided by carbohydrates and proteins. This makes fats the most calorie-dense macronutrient."
+    },
+    {
+      question: "What is the recommended daily water intake for adults?",
+      options: ["1-2 liters", "2-3 liters", "3-4 liters", "4-5 liters", "5-6 liters"],
+      correct: 1,
+      explanation: "Adults should aim for approximately 2-3 liters (8-12 cups) of water daily, though individual needs vary based on activity level, climate, and health status."
+    },
+    {
+      question: "Which vitamin is produced by the body when exposed to sunlight?",
+      options: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin E", "Vitamin K"],
+      correct: 2,
+      explanation: "Vitamin D is synthesized in the skin when exposed to UVB rays from sunlight. It's essential for calcium absorption and bone health."
+    },
+    {
+      question: "What is the primary function of carbohydrates in the body?",
+      options: ["Building muscle", "Providing energy", "Storing vitamins", "Regulating hormones", "Forming antibodies"],
+      correct: 1,
+      explanation: "Carbohydrates are the body's primary and preferred source of energy. They're broken down into glucose, which cells use for immediate energy or store as glycogen."
+    },
+    {
+      question: "Which mineral is essential for oxygen transport in blood?",
+      options: ["Calcium", "Iron", "Sodium", "Potassium", "Magnesium"],
+      correct: 1,
+      explanation: "Iron is a critical component of hemoglobin, the protein in red blood cells that binds and transports oxygen throughout the body."
+    },
+    {
+      question: "What are complete proteins?",
+      options: ["Proteins from plants only", "Proteins containing all essential amino acids", "Proteins high in calories", "Proteins that are easily digested", "Proteins from animals only"],
+      correct: 1,
+      explanation: "Complete proteins contain all nine essential amino acids that the body cannot produce on its own. Most animal proteins are complete, while most plant proteins are incomplete."
+    },
+    {
+      question: "Which B vitamin is crucial for preventing neural tube defects in pregnancy?",
+      options: ["B1 (Thiamine)", "B6 (Pyridoxine)", "B9 (Folate)", "B12 (Cobalamin)", "B3 (Niacin)"],
+      correct: 2,
+      explanation: "Folate (Folic acid/B9) is critical during early pregnancy for proper neural tube development. Adequate intake before and during pregnancy helps prevent birth defects."
+    },
+    {
+      question: "What is the glycemic index?",
+      options: ["Measure of protein quality", "Measure of fat content", "Measure of how quickly foods raise blood sugar", "Measure of vitamin content", "Measure of caloric density"],
+      correct: 2,
+      explanation: "The glycemic index measures how quickly carbohydrate-containing foods raise blood glucose levels. High GI foods cause rapid spikes, while low GI foods provide more sustained energy."
+    },
+    {
+      question: "Which type of fat is considered the healthiest?",
+      options: ["Saturated fat", "Trans fat", "Monounsaturated fat", "Partially hydrogenated fat", "Animal fat"],
+      correct: 2,
+      explanation: "Monounsaturated fats (found in olive oil, avocados, nuts) are considered the healthiest, helping to reduce bad cholesterol and provide essential fatty acids."
+    },
+    {
+      question: "What is basal metabolic rate (BMR)?",
+      options: ["Calories burned during exercise", "Calories needed to maintain basic body functions at rest", "Calories from carbohydrates", "Calories stored as fat", "Calories from protein synthesis"],
+      correct: 1,
+      explanation: "BMR is the number of calories your body needs to maintain basic physiological functions (breathing, circulation, cell production) while at complete rest."
+    },
+    {
+      question: "Which antioxidant vitamin helps protect cells from damage?",
+      options: ["Vitamin D", "Vitamin K", "Vitamin E", "Vitamin B12", "Vitamin B6"],
+      correct: 2,
+      explanation: "Vitamin E is a powerful antioxidant that protects cells from oxidative damage caused by free radicals. It's important for immune function and skin health."
+    },
+    {
+      question: "What is the primary function of dietary fiber?",
+      options: ["Providing energy", "Building muscle", "Aiding digestion and promoting regular bowel movements", "Storing vitamins", "Producing hormones"],
+      correct: 2,
+      explanation: "Dietary fiber aids digestion, promotes regular bowel movements, helps control blood sugar levels, and may lower cholesterol. It's found in fruits, vegetables, whole grains, and legumes."
+    },
+    {
+      question: "Which mineral is most important for bone health alongside calcium?",
+      options: ["Iron", "Sodium", "Vitamin D", "Zinc", "Copper"],
+      correct: 2,
+      explanation: "While Vitamin D is technically a vitamin (not a mineral), it works synergistically with calcium for bone health. Magnesium and phosphorus are also important minerals for bones."
+    },
+    {
+      question: "What are essential fatty acids?",
+      options: ["Fats the body can produce", "Fats that must be obtained from diet", "Fats found only in meat", "Fats that are always unhealthy", "Fats stored in adipose tissue"],
+      correct: 1,
+      explanation: "Essential fatty acids (omega-3 and omega-6) cannot be synthesized by the body and must be obtained through diet. They're crucial for brain function, growth, and development."
+    },
+    {
+      question: "What is the recommended percentage of daily calories from protein?",
+      options: ["5-10%", "10-35%", "35-50%", "50-65%", "65-80%"],
+      correct: 1,
+      explanation: "The recommended dietary allowance suggests 10-35% of daily calories should come from protein, which equals about 0.8 grams per kilogram of body weight for adults."
+    },
+    {
+      question: "Which nutrient deficiency causes scurvy?",
+      options: ["Vitamin A", "Vitamin B12", "Vitamin C", "Vitamin D", "Iron"],
+      correct: 2,
+      explanation: "Scurvy is caused by severe Vitamin C deficiency. Symptoms include bleeding gums, bruising, and poor wound healing. Vitamin C is essential for collagen synthesis."
+    },
+    {
+      question: "What is the difference between soluble and insoluble fiber?",
+      options: ["Color difference", "Soluble dissolves in water; insoluble does not", "Source (animal vs. plant)", "Caloric content", "Vitamin content"],
+      correct: 1,
+      explanation: "Soluble fiber dissolves in water, forming a gel that can help lower cholesterol and glucose levels. Insoluble fiber doesn't dissolve and helps move material through the digestive system."
+    },
+    {
+      question: "Which process breaks down food into smaller molecules for absorption?",
+      options: ["Respiration", "Circulation", "Digestion", "Excretion", "Metabolism"],
+      correct: 2,
+      explanation: "Digestion is the process of breaking down food into smaller molecules (nutrients) that can be absorbed and used by the body's cells."
+    },
+    {
+      question: "What is the primary storage form of carbohydrates in the body?",
+      options: ["Glucose", "Glycogen", "Starch", "Cellulose", "Fructose"],
+      correct: 1,
+      explanation: "Glycogen is the storage form of glucose in animals and humans. It's primarily stored in the liver and muscles for quick energy mobilization when needed."
+    },
+    {
+      question: "Which vitamin is necessary for proper blood clotting?",
+      options: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin E", "Vitamin K"],
+      correct: 4,
+      explanation: "Vitamin K is essential for the synthesis of proteins required for blood clotting. It also plays a role in bone metabolism."
+    },
+    {
+      question: "What are probiotics?",
+      options: ["Harmful bacteria", "Beneficial live bacteria and yeasts", "Types of vitamins", "Protein supplements", "Digestive enzymes"],
+      correct: 1,
+      explanation: "Probiotics are beneficial live microorganisms (bacteria and yeasts) that support digestive health and immune function. They're found in fermented foods like yogurt and kimchi."
+    },
+    {
+      question: "Which electrolyte is crucial for maintaining fluid balance?",
+      options: ["Iron", "Calcium", "Sodium", "Vitamin C", "Vitamin D"],
+      correct: 2,
+      explanation: "Sodium is the primary electrolyte responsible for maintaining fluid balance, nerve function, and muscle contraction. It works in balance with potassium."
+    },
+    {
+      question: "What is the thermic effect of food?",
+      options: ["Temperature of food when eaten", "Calories burned digesting and processing food", "Heat produced during exercise", "Cooking method used", "Food's effect on body temperature"],
+      correct: 1,
+      explanation: "The thermic effect of food (TEF) is the energy expended to digest, absorb, and process nutrients. Protein has the highest TEF at 20-30% of calories consumed."
+    },
+    {
+      question: "Which nutrient is the primary component of cell membranes?",
+      options: ["Carbohydrates", "Proteins", "Phospholipids (fats)", "Vitamins", "Minerals"],
+      correct: 2,
+      explanation: "Phospholipids, a type of fat, are the primary structural component of all cell membranes, forming the lipid bilayer that controls what enters and exits cells."
+    },
+    {
+      question: "What is the recommended daily intake of added sugar for adults?",
+      options: ["Less than 5% of calories", "Less than 10% of calories", "Less than 25% of calories", "Less than 50% of calories", "No limit"],
+      correct: 1,
+      explanation: "WHO and many health organizations recommend limiting added sugars to less than 10% of total daily calories, with further benefits if reduced to below 5%."
+    },
+    {
+      question: "Which amino acids cannot be produced by the body?",
+      options: ["Non-essential amino acids", "Essential amino acids", "Conditional amino acids", "Branched-chain amino acids", "All amino acids"],
+      correct: 1,
+      explanation: "Essential amino acids cannot be synthesized by the body and must be obtained from dietary protein sources. There are nine essential amino acids."
+    },
+    {
+      question: "What is the primary function of Vitamin A?",
+      options: ["Blood clotting", "Vision and immune function", "Energy production", "Bone formation", "Muscle contraction"],
+      correct: 1,
+      explanation: "Vitamin A is crucial for vision (especially night vision), immune function, skin health, and cell growth. It's found in orange/yellow vegetables and animal products."
+    },
+    {
+      question: "Which macronutrient has the primary role of tissue repair and growth?",
+      options: ["Carbohydrates", "Protein", "Fats", "Water", "Vitamins"],
+      correct: 1,
+      explanation: "Protein is the primary macronutrient responsible for tissue repair, growth, and maintenance. It provides the amino acids needed to build and repair muscles, organs, and other tissues."
+    },
+    {
+      question: "What is metabolic syndrome?",
+      options: ["Fast metabolism", "Cluster of conditions increasing disease risk", "Inability to digest food", "Vitamin deficiency", "Food allergy"],
+      correct: 1,
+      explanation: "Metabolic syndrome is a cluster of conditions (high blood pressure, high blood sugar, excess abdominal fat, abnormal cholesterol) that increase the risk of heart disease, stroke, and diabetes."
+    },
+    {
+      question: "Which vitamin deficiency causes rickets in children?",
+      options: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin E", "Vitamin K"],
+      correct: 2,
+      explanation: "Rickets is caused by severe Vitamin D deficiency, leading to soft and weak bones in children. Vitamin D is essential for calcium absorption and bone mineralization."
+    },
+    {
+      question: "What are phytochemicals?",
+      options: ["Harmful plant compounds", "Beneficial plant compounds with health-promoting properties", "Pesticides", "Food additives", "Synthetic vitamins"],
+      correct: 1,
+      explanation: "Phytochemicals are beneficial compounds found in plants that have health-promoting properties, including antioxidant and anti-inflammatory effects. Examples include lycopene and flavonoids."
+    },
+    {
+      question: "Which mineral is crucial for thyroid hormone production?",
+      options: ["Iron", "Calcium", "Iodine", "Zinc", "Magnesium"],
+      correct: 2,
+      explanation: "Iodine is essential for the production of thyroid hormones, which regulate metabolism, growth, and development. Iodine deficiency can lead to goiter and hypothyroidism."
+    },
+    {
+      question: "What is the primary difference between saturated and unsaturated fats?",
+      options: ["Source (animal vs. plant)", "Chemical structure (single vs. double bonds)", "Color", "Taste", "Digestibility"],
+      correct: 1,
+      explanation: "Saturated fats have no double bonds between carbon atoms (saturated with hydrogen), while unsaturated fats have one or more double bonds. This affects their physical properties and health effects."
+    },
+    {
+      question: "Which B vitamin is essential for energy metabolism?",
+      options: ["All B vitamins", "B1 only", "B12 only", "B6 only", "B9 only"],
+      correct: 0,
+      explanation: "All B vitamins (B1, B2, B3, B5, B6, B7, B9, B12) play crucial roles in energy metabolism, helping convert food into usable energy for the body's cells."
+    },
+    {
+      question: "What is the recommended daily fiber intake for adults?",
+      options: ["5-10 grams", "10-15 grams", "15-20 grams", "25-38 grams", "50-60 grams"],
+      correct: 3,
+      explanation: "Adults should aim for 25-38 grams of fiber daily (25g for women, 38g for men). Most people consume less than half this amount."
+    },
+    {
+      question: "Which nutrient deficiency causes anemia?",
+      options: ["Calcium", "Iron or B12", "Vitamin C", "Sodium", "Vitamin A"],
+      correct: 1,
+      explanation: "Anemia can be caused by iron deficiency (most common), Vitamin B12 deficiency, or folate deficiency. These nutrients are essential for red blood cell production."
+    },
+    {
+      question: "What is the primary function of cholesterol in the body?",
+      options: ["Energy source", "Hormone production and cell membrane structure", "Protein synthesis", "Vitamin storage", "Waste removal"],
+      correct: 1,
+      explanation: "Cholesterol is essential for producing hormones (including sex hormones and cortisol), forming cell membranes, and synthesizing Vitamin D. It's only harmful in excess."
+    },
+    {
+      question: "Which type of carbohydrate is found in milk?",
+      options: ["Glucose", "Fructose", "Lactose", "Sucrose", "Maltose"],
+      correct: 2,
+      explanation: "Lactose is the natural sugar found in milk and dairy products. It's a disaccharide composed of glucose and galactose. Some people cannot digest it (lactose intolerance)."
+    },
+    {
+      question: "What is the primary role of antioxidants in nutrition?",
+      options: ["Provide energy", "Protect cells from oxidative damage", "Build muscle", "Aid digestion", "Regulate hormones"],
+      correct: 1,
+      explanation: "Antioxidants neutralize free radicals, protecting cells from oxidative damage that can lead to chronic diseases and aging. They're found in colorful fruits, vegetables, and certain beverages."
+    },
+    {
+      question: "Which organ produces bile to aid in fat digestion?",
+      options: ["Pancreas", "Stomach", "Liver", "Gallbladder", "Small intestine"],
+      correct: 2,
+      explanation: "The liver produces bile, which is stored in the gallbladder and released into the small intestine to emulsify fats, making them easier to digest and absorb."
+    }
+  ];
+
+  // Shuffle array function
+  function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  // Select 15 random questions
+  const selectedQuestions = shuffleArray(questionBank).slice(0, 15);
+  const correctAnswers = {};
+  const explanations = {};
+
+  // Generate quiz HTML
+  const quizContainer = document.getElementById('quizContainer');
+  selectedQuestions.forEach((q, index) => {
+    const questionNum = index + 1;
+    const questionId = `q${questionNum}`;
+    
+    // Store correct answer and explanation
+    correctAnswers[questionId] = q.correct;
+    explanations[questionId] = q.explanation;
+    
+    // Shuffle options with correct answer tracking
+    const optionsWithIndex = q.options.map((opt, idx) => ({ text: opt, originalIndex: idx }));
+    const shuffledOptions = shuffleArray(optionsWithIndex);
+    
+    // Find new position of correct answer
+    const newCorrectIndex = shuffledOptions.findIndex(opt => opt.originalIndex === q.correct);
+    correctAnswers[questionId] = newCorrectIndex;
+    
+    // Create question HTML
+    const questionHTML = `
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-lime-500 quiz-question">
+        <h3 class="text-2xl font-bold mb-4 text-gray-800">Question ${questionNum}</h3>
+        <p class="text-lg text-gray-700 mb-6">${q.question}</p>
+        <div class="space-y-3">
+          ${shuffledOptions.map((opt, optIndex) => `
+            <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+              <input type="radio" name="${questionId}" value="${optIndex}" class="mt-1">
+              <span class="text-gray-700">${opt.text}</span>
+            </label>
+          `).join('')}
+        </div>
+        <div class="feedback mt-4 hidden"></div>
+      </div>
+    `;
+    
+    quizContainer.innerHTML += questionHTML;
+  });
+
+  lucide.createIcons();
+
+  // Submit button handler
+  document.getElementById('submitQuiz').addEventListener('click', () => {
+    let score = 0;
+    let answered = 0;
+    
+    const questions = document.querySelectorAll('.quiz-question');
+    
+    questions.forEach((question, index) => {
+      const questionId = `q${index + 1}`;
+      const selected = question.querySelector(`input[name="${questionId}"]:checked`);
+      const feedback = question.querySelector('.feedback');
+      
+      if (selected) {
+        answered++;
+        const selectedValue = parseInt(selected.value);
+        const isCorrect = selectedValue === correctAnswers[questionId];
+        
+        if (isCorrect) {
+          score++;
+          question.classList.remove('border-red-500', 'border-yellow-500');
+          question.classList.add('border-lime-500');
+          feedback.innerHTML = `
+            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <p class="font-semibold text-green-800 mb-2">✓ Correct!</p>
+              <p class="text-green-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        } else {
+          question.classList.remove('border-lime-500', 'border-yellow-500');
+          question.classList.add('border-red-500');
+          feedback.innerHTML = `
+            <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded">
+              <p class="font-semibold text-red-800 mb-2">✗ Incorrect</p>
+              <p class="text-red-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        }
+        
+        feedback.classList.remove('hidden');
+      } else {
+        question.classList.remove('border-lime-500', 'border-red-500');
+        question.classList.add('border-yellow-500');
+        feedback.innerHTML = `
+          <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+            <p class="font-semibold text-yellow-800">Question not answered</p>
+          </div>
+        `;
+        feedback.classList.remove('hidden');
+      }
+    });
+    
+    const percentage = answered > 0 ? Math.round((score / 15) * 100) : 0;
+    const resultDiv = document.getElementById('quizResults');
+    const scoreDisplay = document.getElementById('scoreDisplay');
+    
+    let gradeColor = 'text-red-600';
+    let message = 'Keep studying!';
+    
+    if (percentage >= 90) {
+      gradeColor = 'text-green-600';
+      message = 'Excellent! You have mastered this material!';
+    } else if (percentage >= 80) {
+      gradeColor = 'text-blue-600';
+      message = 'Great job! You have a strong understanding!';
+    } else if (percentage >= 70) {
+      gradeColor = 'text-yellow-600';
+      message = 'Good work! Review the explanations to improve.';
+    } else if (percentage >= 60) {
+      gradeColor = 'text-orange-600';
+      message = 'Fair. Consider reviewing the material more thoroughly.';
+    }
+    
+    scoreDisplay.innerHTML = `
+      <div class="text-center">
+        <div class="text-6xl font-bold ${gradeColor} mb-4">${percentage}%</div>
+        <p class="text-2xl text-gray-700 mb-2">${score} out of 15 correct</p>
+        <p class="text-xl text-gray-600 mb-6">${message}</p>
+      </div>
+    `;
+    
+    resultDiv.classList.remove('hidden');
+    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

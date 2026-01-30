@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="account.html" class="font-medium text-gray-700 hover:text-blue-600">My Account</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-blue-600">Contact Us</a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <a href="index.html" class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition md:hidden">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back</span>
+    </a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <!-- Return to Homepage Button -->
+  <div class="mb-6">
+    <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+      <i data-lucide="home" class="w-5 h-5"></i>
+      <span>Return to Homepage</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-6">
+      <i data-lucide="mail" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Contact Us</h1>
+    <p class="text-xl text-gray-600">
+      Get in touch with us - we'd love to hear from you
+    </p>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 mb-8">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Send us a Message</h2>
+    <form class="space-y-6">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          placeholder="Your name"
+        />
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          placeholder="your.email@example.com"
+        />
+      </div>
+      <div>
+        <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          required
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          placeholder="What is this regarding?"
+        />
+      </div>
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          required
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          placeholder="Your message here..."
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition font-semibold"
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
+
+  <!-- Contact Information -->
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="bg-white rounded-xl shadow-lg p-6">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+          <i data-lucide="mail" class="w-6 h-6 text-blue-600"></i>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg text-gray-800">Email</h3>
+          <p class="text-gray-600">sciencestudyzone21@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow-lg p-6">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+          <i data-lucide="clock" class="w-6 h-6 text-blue-600"></i>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg text-gray-800">Response Time</h3>
+          <p class="text-gray-600">We typically respond within 24-48 hours</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

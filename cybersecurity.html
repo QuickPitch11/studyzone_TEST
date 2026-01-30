@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cybersecurity - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-rose-500 rounded-full mb-6">
+      <i data-lucide="shield" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Cybersecurity</h1>
+    <p class="text-xl text-gray-600">Network security, cryptography, and threat protection</p>
+  </div>
+
+  <div class="space-y-12">
+    <!-- What is Cybersecurity -->
+    <section class="bg-white rounded-xl shadow-lg p-8 md:p-10">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">What is Cybersecurity?</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Cybersecurity is the practice of protecting computer systems, networks, programs, and data from digital attacks, unauthorized access, and damage. In an increasingly connected world, cybersecurity has become critical to protecting personal information, business operations, national infrastructure, and global communications.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        The field encompasses a wide range of protective measures, from implementing firewalls and encryption to conducting penetration testing and security audits. Cybersecurity professionals work to identify vulnerabilities, prevent attacks, detect intrusions, and respond to security incidents when they occur.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        As cyber threats become more sophisticated—ranging from ransomware and phishing to advanced persistent threats (APTs) and zero-day exploits—the demand for skilled cybersecurity professionals continues to grow exponentially across all industries and government sectors.
+      </p>
+    </section>
+
+    <!-- Key Areas -->
+    <section>
+      <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">Key Areas in Cybersecurity</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-red-500">
+          <h3 class="text-xl font-bold mb-3 text-gray-800">Network Security</h3>
+          <p class="text-gray-700">Protecting networks from unauthorized access, misuse, and attacks through firewalls, VPNs, intrusion detection systems, and network segmentation.</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-rose-500">
+          <h3 class="text-xl font-bold mb-3 text-gray-800">Cryptography</h3>
+          <p class="text-gray-700">Using mathematical algorithms to secure communications, encrypt data, authenticate users, and ensure data integrity through public-key infrastructure and hashing.</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-red-500">
+          <h3 class="text-xl font-bold mb-3 text-gray-800">Application Security</h3>
+          <p class="text-gray-700">Securing software and applications throughout their lifecycle, from secure coding practices to vulnerability assessments and patch management.</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-rose-500">
+          <h3 class="text-xl font-bold mb-3 text-gray-800">Threat Intelligence</h3>
+          <p class="text-gray-700">Gathering, analyzing, and applying information about current and emerging cybersecurity threats to proactively defend against attacks.</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-red-500">
+          <h3 class="text-xl font-bold mb-3 text-gray-800">Incident Response</h3>
+          <p class="text-gray-700">Detecting, investigating, containing, and recovering from security breaches and cyberattacks through established protocols and forensic analysis.</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-rose-500">
+          <h3 class="text-xl font-bold mb-3 text-gray-800">Identity & Access Management</h3>
+          <p class="text-gray-700">Controlling who has access to what resources through authentication, authorization, and privilege management systems.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What You'll Learn -->
+    <section>
+      <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">What You'll Learn</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gradient-to-br from-red-500 to-rose-500 text-white rounded-xl shadow-lg p-6">
+          <i data-lucide="lock" class="w-8 h-8 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Security Fundamentals</h3>
+          <p class="text-white/90">CIA triad (Confidentiality, Integrity, Availability), defense in depth, least privilege, and zero trust principles.</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-red-500 to-rose-500 text-white rounded-xl shadow-lg p-6">
+          <i data-lucide="network" class="w-8 h-8 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Network Defense</h3>
+          <p class="text-white/90">Firewalls, IDS/IPS, VPNs, network segmentation, and secure network architecture design.</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-red-500 to-rose-500 text-white rounded-xl shadow-lg p-6">
+          <i data-lucide="key" class="w-8 h-8 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Cryptographic Systems</h3>
+          <p class="text-white/90">Encryption algorithms, digital signatures, PKI, SSL/TLS, and secure key management.</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-red-500 to-rose-500 text-white rounded-xl shadow-lg p-6">
+          <i data-lucide="bug" class="w-8 h-8 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Ethical Hacking</h3>
+          <p class="text-white/90">Penetration testing methodologies, vulnerability assessment, exploit techniques, and security auditing.</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-red-500 to-rose-500 text-white rounded-xl shadow-lg p-6">
+          <i data-lucide="alert-triangle" class="w-8 h-8 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Threat Analysis</h3>
+          <p class="text-white/90">Malware analysis, threat hunting, security information and event management (SIEM), and attack attribution.</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-red-500 to-rose-500 text-white rounded-xl shadow-lg p-6">
+          <i data-lucide="file-text" class="w-8 h-8 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Compliance & Governance</h3>
+          <p class="text-white/90">GDPR, HIPAA, PCI-DSS, ISO 27001, security frameworks, risk management, and regulatory requirements.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Study Cybersecurity -->
+    <section class="bg-white rounded-xl shadow-lg p-8 md:p-10">
+      <h2 class="text-3xl font-bold mb-8 text-gray-800">Why Study Cybersecurity?</h2>
+      <div class="space-y-4">
+        <div class="flex gap-4">
+          <i data-lucide="trending-up" class="w-6 h-6 text-red-500 flex-shrink-0 mt-1"></i>
+          <div>
+            <h3 class="font-bold text-lg mb-1 text-gray-800">Critical Global Demand</h3>
+            <p class="text-gray-700">Millions of cybersecurity positions remain unfilled worldwide, with organizations desperately seeking qualified professionals to protect their assets.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <i data-lucide="dollar-sign" class="w-6 h-6 text-red-500 flex-shrink-0 mt-1"></i>
+          <div>
+            <h3 class="font-bold text-lg mb-1 text-gray-800">Excellent Compensation</h3>
+            <p class="text-gray-700">Cybersecurity professionals command premium salaries due to skill scarcity and the critical importance of their work.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <i data-lucide="shield-check" class="w-6 h-6 text-red-500 flex-shrink-0 mt-1"></i>
+          <div>
+            <h3 class="font-bold text-lg mb-1 text-gray-800">Protect What Matters</h3>
+            <p class="text-gray-700">Make a real difference by defending critical infrastructure, protecting personal data, and safeguarding organizations from devastating attacks.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <i data-lucide="briefcase" class="w-6 h-6 text-red-500 flex-shrink-0 mt-1"></i>
+          <div>
+            <h3 class="font-bold text-lg mb-1 text-gray-800">Diverse Career Paths</h3>
+            <p class="text-gray-700">Choose from penetration testing, security architecture, incident response, forensics, compliance, threat intelligence, and many specialized roles.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <i data-lucide="zap" class="w-6 h-6 text-red-500 flex-shrink-0 mt-1"></i>
+          <div>
+            <h3 class="font-bold text-lg mb-1 text-gray-800">Constantly Evolving Field</h3>
+            <p class="text-gray-700">Face new challenges daily as attack methods evolve, technologies advance, and the cyber threat landscape continuously transforms.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <div class="text-center">
+      <a href="cybersecurity-analysis.html" class="inline-block px-8 py-4 bg-gradient-to-r from-red-500 to-rose-500 text-white font-bold text-lg rounded-lg hover:shadow-xl transition transform hover:scale-105">
+        View In-Depth Analysis
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

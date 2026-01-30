@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Software Engineering — In-Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-6">
+      <i data-lucide="code" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Software Engineering: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">Software development lifecycle, design patterns, architecture, testing, agile methodologies, and professional practices</p>
+  </div>
+
+  <div class="space-y-10">
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Overview & Scope</h2>
+      <p class="text-gray-700 leading-relaxed text-lg">This comprehensive guide covers the complete spectrum of software engineering principles, practices, and methodologies used in professional software development. It includes the software development lifecycle (SDLC), requirements engineering, system design and architecture, design patterns, coding standards and best practices, testing strategies (unit, integration, system, acceptance), version control, agile and DevOps methodologies, project management, software quality assurance, maintenance, security, and professional ethics. This resource is designed to be a complete teaching tool for students, aspiring software engineers, developers, project managers, and anyone involved in building software systems.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">What is Software Engineering?</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Software engineering is the systematic application of engineering principles to the design, development, testing, deployment, and maintenance of software systems. It goes beyond programming to encompass the entire software lifecycle, emphasizing quality, reliability, maintainability, scalability, and cost-effectiveness.</p>
+      
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Key Principles of Software Engineering</h3>
+      <ul class="text-gray-700 space-y-2 mb-4">
+        <li><strong>Abstraction:</strong> Hiding complexity by defining simplified interfaces and models</li>
+        <li><strong>Modularity:</strong> Breaking systems into independent, interchangeable components</li>
+        <li><strong>Encapsulation:</strong> Bundling data and methods while hiding internal implementation</li>
+        <li><strong>Separation of Concerns:</strong> Dividing program into distinct sections, each addressing a specific concern</li>
+        <li><strong>DRY (Don't Repeat Yourself):</strong> Avoiding code duplication; single source of truth</li>
+        <li><strong>KISS (Keep It Simple, Stupid):</strong> Favoring simplicity over unnecessary complexity</li>
+        <li><strong>YAGNI (You Aren't Gonna Need It):</strong> Don't add functionality until it's needed</li>
+        <li><strong>SOLID Principles:</strong> Five design principles for object-oriented programming (detailed below)</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Software vs. Programming</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-3">
+        <p class="text-gray-800 mb-2"><strong>Programming:</strong> Writing code to solve specific problems; focus on implementation</p>
+        <p class="text-gray-800"><strong>Software Engineering:</strong> Systematic approach to entire software lifecycle including requirements analysis, design, implementation, testing, deployment, maintenance, documentation, and team collaboration</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Software Development Lifecycle (SDLC)</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">The SDLC is a structured process for planning, creating, testing, and deploying software systems. It provides a systematic approach to software development.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Phase 1: Requirements Engineering</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3"><strong>Purpose:</strong> Understand and document what the software must do and the constraints it must satisfy</p>
+        
+        <p class="text-gray-800 font-semibold mb-2">Requirements Gathering</p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Stakeholder interviews and workshops</li>
+          <li>• Observation of current systems and processes</li>
+          <li>• Document analysis (existing systems, regulations)</li>
+          <li>• Prototyping and mockups</li>
+          <li>• Use cases and user stories</li>
+        </ul>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Types of Requirements</p>
+        <p class="text-gray-700 mb-2"><strong>Functional Requirements:</strong> What the system must do (features, capabilities, functions)</p>
+        <p class="text-gray-700 mb-2"><em>Example:</em> "System must allow users to reset password via email"</p>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>Non-Functional Requirements:</strong> Quality attributes and constraints (performance, security, usability, scalability)</p>
+        <p class="text-gray-700"><em>Example:</em> "System must respond to user requests within 2 seconds" or "System must support 10,000 concurrent users"</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Phase 2: System Design</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3"><strong>Purpose:</strong> Define system architecture, components, interfaces, and data structures to satisfy requirements</p>
+        
+        <p class="text-gray-800 font-semibold mb-2">High-Level Design (Architectural Design)</p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Define overall system architecture (monolithic, microservices, layered, etc.)</li>
+          <li>• Identify major components/modules and their relationships</li>
+          <li>• Define technology stack (languages, frameworks, databases)</li>
+          <li>• Design system interfaces and APIs</li>
+          <li>• Plan data storage and management strategy</li>
+        </ul>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Low-Level Design (Detailed Design)</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Design individual classes, functions, and algorithms</li>
+          <li>• Define data structures and database schemas</li>
+          <li>• Create detailed interface specifications</li>
+          <li>• Design error handling and logging mechanisms</li>
+          <li>• Document design with UML diagrams, flowcharts, pseudocode</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Phase 3: Implementation (Coding)</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3"><strong>Purpose:</strong> Transform design into working code following best practices and coding standards</p>
+        
+        <p class="text-gray-800 font-semibold mb-2">Best Practices</p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Follow coding standards and style guides (consistent naming, formatting)</li>
+          <li>• Write self-documenting code with meaningful names</li>
+          <li>• Add comments for complex logic, not obvious code</li>
+          <li>• Keep functions small and focused (single responsibility)</li>
+          <li>• Use version control from day one (Git)</li>
+          <li>• Conduct code reviews for quality and knowledge sharing</li>
+          <li>• Write unit tests alongside production code (TDD)</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Phase 4: Testing</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3"><strong>Purpose:</strong> Verify software works correctly, meets requirements, and is free of defects</p>
+        
+        <p class="text-gray-800 font-semibold mb-2">Testing Levels (detailed in Testing section below)</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Unit Testing: Test individual components in isolation</li>
+          <li>• Integration Testing: Test interactions between components</li>
+          <li>• System Testing: Test complete, integrated system</li>
+          <li>• Acceptance Testing: Validate system meets business requirements</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Phase 5: Deployment</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3"><strong>Purpose:</strong> Release software to production environment for end users</p>
+        
+        <ul class="text-gray-700 space-y-1">
+          <li>• Plan deployment strategy (big bang, phased, parallel)</li>
+          <li>• Set up production infrastructure and environments</li>
+          <li>• Migrate data if replacing existing system</li>
+          <li>• Configure monitoring and logging</li>
+          <li>• Train users and provide documentation</li>
+          <li>• Establish support procedures</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Phase 6: Maintenance</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3"><strong>Purpose:</strong> Keep software operational, fix bugs, add features, adapt to changing environment</p>
+        
+        <p class="text-gray-800 font-semibold mb-2">Types of Maintenance</p>
+        <p class="text-gray-700 mb-2"><strong>Corrective:</strong> Fix bugs and errors discovered after deployment</p>
+        <p class="text-gray-700 mb-2"><strong>Adaptive:</strong> Modify software to work in new environments (OS updates, new hardware)</p>
+        <p class="text-gray-700 mb-2"><strong>Perfective:</strong> Enhance functionality, improve performance, add new features</p>
+        <p class="text-gray-700"><strong>Preventive:</strong> Refactor code, update documentation to prevent future problems</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">SDLC Models & Methodologies</h2>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Waterfall Model</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-2"><strong>Description:</strong> Sequential, linear approach where each phase must be completed before next begins</p>
+        <p class="text-gray-700 mb-2"><strong>Phases:</strong> Requirements → Design → Implementation → Testing → Deployment → Maintenance</p>
+        <p class="text-gray-700 mb-2"><strong>Best for:</strong> Well-defined requirements, stable technology, small projects</p>
+        <p class="text-gray-700 mb-2"><strong>Advantages:</strong> Simple, structured, easy to manage, clear milestones</p>
+        <p class="text-gray-700"><strong>Disadvantages:</strong> Inflexible, late testing, difficult to accommodate changes, risky for complex projects</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Agile Methodology</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3"><strong>Description:</strong> Iterative, incremental approach emphasizing flexibility, collaboration, and customer feedback</p>
+        
+        <p class="text-gray-800 font-semibold mb-2">Agile Manifesto Values</p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Individuals and interactions over processes and tools</li>
+          <li>• Working software over comprehensive documentation</li>
+          <li>• Customer collaboration over contract negotiation</li>
+          <li>• Responding to change over following a plan</li>
+        </ul>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Agile Principles</p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Deliver working software frequently (weeks rather than months)</li>
+          <li>• Welcome changing requirements, even late in development</li>
+          <li>• Business and developers collaborate daily</li>
+          <li>• Build projects around motivated, trusted individuals</li>
+          <li>• Face-to-face conversation is most effective communication</li>
+          <li>• Working software is primary measure of progress</li>
+          <li>• Sustainable development pace</li>
+          <li>• Continuous attention to technical excellence and good design</li>
+          <li>• Simplicity—maximize amount of work not done</li>
+          <li>• Self-organizing teams produce best results</li>
+          <li>• Regular reflection and adjustment</li>
+        </ul>
+        
+        <p class="text-gray-700 mb-2"><strong>Best for:</strong> Evolving requirements, complex projects, customer involvement</p>
+        <p class="text-gray-700 mb-2"><strong>Advantages:</strong> Flexible, early and continuous delivery, high customer satisfaction, adaptive to change</p>
+        <p class="text-gray-700"><strong>Disadvantages:</strong> Requires experienced team, less predictable timeline/budget, minimal documentation</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Scrum Framework (Agile Implementation)</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3"><strong>Description:</strong> Popular agile framework organizing work into time-boxed iterations called sprints (typically 2-4 weeks)</p>
+        
+        <p class="text-gray-800 font-semibold mb-2">Scrum Roles</p>
+        <p class="text-gray-700 mb-2"><strong>Product Owner:</strong> Represents stakeholders; manages product backlog; prioritizes features</p>
+        <p class="text-gray-700 mb-2"><strong>Scrum Master:</strong> Facilitates scrum process; removes impediments; coaches team</p>
+        <p class="text-gray-700 mb-3"><strong>Development Team:</strong> Cross-functional team (5-9 people) that builds product</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Scrum Artifacts</p>
+        <p class="text-gray-700 mb-2"><strong>Product Backlog:</strong> Prioritized list of all desired features and improvements</p>
+        <p class="text-gray-700 mb-2"><strong>Sprint Backlog:</strong> Items selected for current sprint plus plan to deliver them</p>
+        <p class="text-gray-700 mb-3"><strong>Increment:</strong> Sum of all product backlog items completed during sprint (potentially shippable)</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Scrum Events</p>
+        <p class="text-gray-700 mb-2"><strong>Sprint Planning:</strong> Team selects backlog items to complete in upcoming sprint</p>
+        <p class="text-gray-700 mb-2"><strong>Daily Standup:</strong> 15-minute daily sync (What did I do? What will I do? Any blockers?)</p>
+        <p class="text-gray-700 mb-2"><strong>Sprint Review:</strong> Demo completed work to stakeholders; gather feedback</p>
+        <p class="text-gray-700"><strong>Sprint Retrospective:</strong> Team reflects on process; identifies improvements</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">DevOps</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3"><strong>Description:</strong> Cultural and technical practices uniting software development (Dev) and IT operations (Ops) to shorten development lifecycle and provide continuous delivery</p>
+        
+        <p class="text-gray-800 font-semibold mb-2">Key Practices</p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Continuous Integration (CI): Frequently merge code changes; automated builds and tests</li>
+          <li>• Continuous Delivery/Deployment (CD): Automated release pipeline to production</li>
+          <li>• Infrastructure as Code: Manage infrastructure through code and version control</li>
+          <li>• Monitoring and Logging: Real-time visibility into system health and performance</li>
+          <li>• Collaboration and Communication: Break down silos between teams</li>
+          <li>• Automation: Automate repetitive tasks (testing, deployment, infrastructure provisioning)</li>
+        </ul>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">DevOps Tools</p>
+        <p class="text-gray-700 mb-2"><strong>Version Control:</strong> Git, GitHub, GitLab, Bitbucket</p>
+        <p class="text-gray-700 mb-2"><strong>CI/CD:</strong> Jenkins, GitLab CI, GitHub Actions, CircleCI, Travis CI</p>
+        <p class="text-gray-700 mb-2"><strong>Containerization:</strong> Docker, Kubernetes</p>
+        <p class="text-gray-700 mb-2"><strong>Infrastructure as Code:</strong> Terraform, Ansible, Puppet, Chef</p>
+        <p class="text-gray-700"><strong>Monitoring:</strong> Prometheus, Grafana, ELK Stack, Datadog, New Relic</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Software Architecture & Design Patterns</h2>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">SOLID Principles (Object-Oriented Design)</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">S - Single Responsibility Principle</p>
+        <p class="text-gray-700 mb-3">A class should have one, and only one, reason to change. Each class should focus on a single task or responsibility.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">O - Open/Closed Principle</p>
+        <p class="text-gray-700 mb-3">Software entities should be open for extension but closed for modification. Add new functionality through inheritance or composition, not by modifying existing code.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">L - Liskov Substitution Principle</p>
+        <p class="text-gray-700 mb-3">Objects of a superclass should be replaceable with objects of its subclasses without breaking application. Derived classes must be substitutable for base classes.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">I - Interface Segregation Principle</p>
+        <p class="text-gray-700 mb-3">Clients should not be forced to depend on interfaces they don't use. Create specific, focused interfaces rather than large, general-purpose ones.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">D - Dependency Inversion Principle</p>
+        <p class="text-gray-700">High-level modules should not depend on low-level modules; both should depend on abstractions. Depend on interfaces, not concrete implementations.</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Architectural Patterns</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Layered (N-Tier) Architecture</p>
+        <p class="text-gray-700 mb-2">Organize system into horizontal layers, each providing specific functionality. Typically: Presentation → Business Logic → Data Access → Database</p>
+        <p class="text-gray-700 mb-3"><strong>Use case:</strong> Traditional web applications, enterprise systems</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Model-View-Controller (MVC)</p>
+        <p class="text-gray-700 mb-2">Separate application into three interconnected components: Model (data), View (UI), Controller (business logic)</p>
+        <p class="text-gray-700 mb-3"><strong>Use case:</strong> Web applications (Django, Ruby on Rails, ASP.NET MVC)</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Microservices Architecture</p>
+        <p class="text-gray-700 mb-2">Structure application as collection of small, independent services communicating via APIs. Each service runs independently and focuses on specific business capability.</p>
+        <p class="text-gray-700 mb-2"><strong>Advantages:</strong> Scalability, flexibility, independent deployment, technology diversity</p>
+        <p class="text-gray-700 mb-3"><strong>Use case:</strong> Large-scale, complex applications (Netflix, Amazon)</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Event-Driven Architecture</p>
+        <p class="text-gray-700 mb-2">Components communicate through production and consumption of events. Loose coupling enables high scalability.</p>
+        <p class="text-gray-700"><strong>Use case:</strong> Real-time systems, IoT applications, stock trading platforms</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Design Patterns (Gang of Four)</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Creational Patterns (Object Creation)</p>
+        <p class="text-gray-700 mb-2"><strong>Singleton:</strong> Ensure class has only one instance and provide global access point</p>
+        <p class="text-gray-700 mb-2"><strong>Factory Method:</strong> Define interface for creating objects; let subclasses decide which class to instantiate</p>
+        <p class="text-gray-700 mb-3"><strong>Builder:</strong> Construct complex objects step by step; separate construction from representation</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Structural Patterns (Object Composition)</p>
+        <p class="text-gray-700 mb-2"><strong>Adapter:</strong> Convert interface of class into another interface clients expect</p>
+        <p class="text-gray-700 mb-2"><strong>Decorator:</strong> Add responsibilities to objects dynamically without modifying their code</p>
+        <p class="text-gray-700 mb-3"><strong>Facade:</strong> Provide simplified interface to complex subsystem</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Behavioral Patterns (Object Interaction)</p>
+        <p class="text-gray-700 mb-2"><strong>Observer:</strong> Define one-to-many dependency; when one object changes state, dependents are notified automatically</p>
+        <p class="text-gray-700 mb-2"><strong>Strategy:</strong> Define family of algorithms; make them interchangeable; let algorithm vary independently from clients</p>
+        <p class="text-gray-700"><strong>Command:</strong> Encapsulate request as object, allowing parameterization and queuing of requests</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Software Testing — Comprehensive Guide</h2>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Testing Levels</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Unit Testing</p>
+        <p class="text-gray-700 mb-2"><strong>Scope:</strong> Test individual components (functions, methods, classes) in isolation</p>
+        <p class="text-gray-700 mb-2"><strong>Who:</strong> Developers</p>
+        <p class="text-gray-700 mb-2"><strong>Tools:</strong> JUnit (Java), pytest (Python), Jest (JavaScript), NUnit (.NET)</p>
+        <p class="text-gray-700 mb-3"><strong>Best Practice:</strong> Test-Driven Development (TDD) — write tests before code</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Integration Testing</p>
+        <p class="text-gray-700 mb-2"><strong>Scope:</strong> Test interactions and interfaces between integrated components or systems</p>
+        <p class="text-gray-700 mb-2"><strong>Approaches:</strong> Big Bang (test all at once), Top-Down, Bottom-Up, Sandwich</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Test database connection, API integration, module communication</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">System Testing</p>
+        <p class="text-gray-700 mb-2"><strong>Scope:</strong> Test complete, integrated system against requirements</p>
+        <p class="text-gray-700 mb-2"><strong>Types:</strong> Functional testing, performance testing, security testing, usability testing</p>
+        <p class="text-gray-700 mb-3"><strong>Environment:</strong> Test environment that mirrors production</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Acceptance Testing</p>
+        <p class="text-gray-700 mb-2"><strong>Scope:</strong> Validate system meets business requirements and is ready for deployment</p>
+        <p class="text-gray-700 mb-2"><strong>Types:</strong> User Acceptance Testing (UAT), Alpha/Beta testing</p>
+        <p class="text-gray-700"><strong>Who:</strong> End users, customers, business stakeholders</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Testing Types</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Functional Testing</p>
+        <p class="text-gray-700 mb-3">Verify software functions according to requirements. Test inputs, outputs, user actions.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Non-Functional Testing</p>
+        <p class="text-gray-700 mb-2"><strong>Performance Testing:</strong> Measure response time, throughput, resource usage under various loads</p>
+        <p class="text-gray-700 mb-2"><strong>Load Testing:</strong> Test behavior under expected load conditions</p>
+        <p class="text-gray-700 mb-2"><strong>Stress Testing:</strong> Test behavior beyond normal capacity to find breaking point</p>
+        <p class="text-gray-700 mb-2"><strong>Security Testing:</strong> Identify vulnerabilities; test authentication, authorization, data protection</p>
+        <p class="text-gray-700 mb-3"><strong>Usability Testing:</strong> Evaluate user experience, ease of use, interface design</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Regression Testing</p>
+        <p class="text-gray-700 mb-3">Re-run tests after code changes to ensure existing functionality still works. Automated regression tests are crucial for continuous integration.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Smoke Testing</p>
+        <p class="text-gray-700">Quick test of core functionality to verify build is stable enough for thorough testing. "Does it catch fire when turned on?"</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Test-Driven Development (TDD)</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3"><strong>Process:</strong> Red → Green → Refactor cycle</p>
+        
+        <ol class="text-gray-700 space-y-2">
+          <li><strong>1. Red:</strong> Write failing test for new functionality (test fails because code doesn't exist yet)</li>
+          <li><strong>2. Green:</strong> Write minimal code to make test pass (focus on functionality, not perfection)</li>
+          <li><strong>3. Refactor:</strong> Improve code quality while keeping tests passing (clean up, optimize, remove duplication)</li>
+          <li><strong>4. Repeat:</strong> Continue cycle for each new feature or requirement</li>
+        </ol>
+        
+        <p class="text-gray-700 mt-3"><strong>Benefits:</strong> Better code design, comprehensive test coverage, early bug detection, confidence in refactoring, living documentation</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Test Automation</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-2"><strong>When to Automate:</strong> Repetitive tests, regression tests, tests requiring multiple data sets, performance tests</p>
+        <p class="text-gray-700 mb-2"><strong>When Manual Testing Better:</strong> Exploratory testing, usability testing, ad-hoc testing, one-time tests</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Automation Tools</p>
+        <p class="text-gray-700 mb-2"><strong>Unit Testing:</strong> JUnit, pytest, Jest, Mocha, RSpec</p>
+        <p class="text-gray-700 mb-2"><strong>UI Testing:</strong> Selenium, Cypress, Playwright, Puppeteer</p>
+        <p class="text-gray-700 mb-2"><strong>API Testing:</strong> Postman, REST Assured, SoapUI</p>
+        <p class="text-gray-700"><strong>Performance Testing:</strong> JMeter, Gatling, Locust</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Version Control & Collaboration</h2>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Git Fundamentals</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3"><strong>Purpose:</strong> Track changes to code over time; collaborate with team; maintain history; experiment safely</p>
+        
+        <p class="text-gray-800 font-semibold mb-2">Essential Git Concepts</p>
+        <p class="text-gray-700 mb-2"><strong>Repository (Repo):</strong> Directory containing project files and Git version history</p>
+        <p class="text-gray-700 mb-2"><strong>Commit:</strong> Snapshot of changes; includes message describing what changed and why</p>
+        <p class="text-gray-700 mb-2"><strong>Branch:</strong> Independent line of development; allows parallel work without affecting main codebase</p>
+        <p class="text-gray-700 mb-2"><strong>Merge:</strong> Combine changes from different branches</p>
+        <p class="text-gray-700 mb-3"><strong>Pull Request (PR):</strong> Propose changes; request code review before merging</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Basic Git Workflow</p>
+        <div class="font-mono text-sm bg-gray-100 p-3 rounded mb-2">
+          <p class="text-gray-700">git init                    # Initialize repository</p>
+          <p class="text-gray-700">git clone [url]             # Copy remote repository</p>
+          <p class="text-gray-700">git add [file]              # Stage changes</p>
+          <p class="text-gray-700">git commit -m "message"     # Commit staged changes</p>
+          <p class="text-gray-700">git push origin [branch]    # Upload to remote</p>
+          <p class="text-gray-700">git pull                    # Download and merge changes</p>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Branching Strategies</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Git Flow</p>
+        <p class="text-gray-700 mb-2"><strong>main/master:</strong> Production-ready code; always stable</p>
+        <p class="text-gray-700 mb-2"><strong>develop:</strong> Integration branch for features; staging for next release</p>
+        <p class="text-gray-700 mb-2"><strong>feature/*:</strong> New feature development; branch from develop, merge back to develop</p>
+        <p class="text-gray-700 mb-2"><strong>release/*:</strong> Prepare release; minor bug fixes and version updates</p>
+        <p class="text-gray-700 mb-3"><strong>hotfix/*:</strong> Emergency production fixes; branch from main, merge to main and develop</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">GitHub Flow (Simplified)</p>
+        <p class="text-gray-700 mb-2">Single main branch (always deployable) + feature branches for all changes</p>
+        <p class="text-gray-700">Create branch → Commit changes → Open PR → Review → Merge → Deploy</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Code Review Best Practices</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">What to Review</p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Correctness: Does code work as intended?</li>
+          <li>• Design: Is approach sound? Does it fit architecture?</li>
+          <li>• Complexity: Is code unnecessarily complex?</li>
+          <li>• Tests: Are there adequate tests? Do they pass?</li>
+          <li>• Naming: Are variables, functions, classes clearly named?</li>
+          <li>• Comments: Are complex sections explained?</li>
+          <li>• Style: Does code follow style guide?</li>
+          <li>• Documentation: Is necessary documentation updated?</li>
+        </ul>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Review Etiquette</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Be respectful and constructive</li>
+          <li>• Focus on code, not person</li>
+          <li>• Ask questions rather than make demands</li>
+          <li>• Explain reasoning behind suggestions</li>
+          <li>• Acknowledge good code and improvements</li>
+          <li>• Keep reviews timely (within 24 hours)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Software Quality & Best Practices</h2>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Code Quality Metrics</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-2"><strong>Code Coverage:</strong> Percentage of code exercised by tests (aim for 80%+ for critical code)</p>
+        <p class="text-gray-700 mb-2"><strong>Cyclomatic Complexity:</strong> Measure of code complexity based on number of paths through code (lower is better)</p>
+        <p class="text-gray-700 mb-2"><strong>Code Duplication:</strong> Amount of duplicated code (violates DRY principle)</p>
+        <p class="text-gray-700 mb-2"><strong>Technical Debt:</strong> Cost of additional rework caused by choosing quick solution over better approach</p>
+        <p class="text-gray-700"><strong>Maintainability Index:</strong> Combined metric assessing how easy code is to maintain</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Clean Code Principles</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Meaningful Names</p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Use intention-revealing names: <code>getUserById()</code> not <code>get()</code></li>
+          <li>• Avoid abbreviations unless universally understood</li>
+          <li>• Use pronounceable, searchable names</li>
+          <li>• Classes are nouns; methods are verbs</li>
+        </ul>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Functions</p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Keep functions small (typically under 20 lines)</li>
+          <li>• Do one thing and do it well (Single Responsibility)</li>
+          <li>• Use descriptive names that indicate what function does</li>
+          <li>• Minimize number of parameters (ideally 0-2)</li>
+          <li>• No side effects (function should not modify external state unexpectedly)</li>
+        </ul>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Comments</p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Code should be self-documenting; use comments sparingly</li>
+          <li>• Explain why, not what (code shows what)</li>
+          <li>• Avoid redundant comments that just restate code</li>
+          <li>• Update comments when code changes</li>
+          <li>• Use TODO comments for future improvements</li>
+        </ul>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Error Handling</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Use exceptions rather than error codes</li>
+          <li>• Provide context with exceptions (meaningful error messages)</li>
+          <li>• Don't return null; use Optional, default values, or exceptions</li>
+          <li>• Fail fast: detect and report errors immediately</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Security Best Practices</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Common Vulnerabilities (OWASP Top 10)</p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Injection (SQL, NoSQL, OS commands): Use parameterized queries, input validation</li>
+          <li>• Broken Authentication: Implement MFA, secure session management, strong password policies</li>
+          <li>• Sensitive Data Exposure: Encrypt data at rest and in transit (HTTPS, TLS)</li>
+          <li>• XML External Entities (XXE): Disable external entity processing</li>
+          <li>• Broken Access Control: Implement proper authorization checks</li>
+          <li>• Security Misconfiguration: Use security headers, keep dependencies updated</li>
+          <li>• Cross-Site Scripting (XSS): Sanitize user input, encode output</li>
+          <li>• Insecure Deserialization: Validate and sanitize serialized data</li>
+          <li>• Using Components with Known Vulnerabilities: Regularly update dependencies</li>
+          <li>• Insufficient Logging & Monitoring: Log security events, monitor for anomalies</li>
+        </ul>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Security Principles</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Principle of Least Privilege: Grant minimum necessary permissions</li>
+          <li>• Defense in Depth: Multiple layers of security controls</li>
+          <li>• Secure by Default: Default configuration should be secure</li>
+          <li>• Never trust user input: Always validate and sanitize</li>
+          <li>• Keep secrets secret: Never commit passwords, API keys to version control</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Documentation</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Types of Documentation</p>
+        <p class="text-gray-700 mb-2"><strong>Code Documentation:</strong> Inline comments, docstrings, API documentation (JavaDoc, JSDoc, Sphinx)</p>
+        <p class="text-gray-700 mb-2"><strong>Technical Documentation:</strong> Architecture diagrams, design documents, database schemas</p>
+        <p class="text-gray-700 mb-2"><strong>User Documentation:</strong> User guides, tutorials, FAQ, release notes</p>
+        <p class="text-gray-700 mb-3"><strong>Process Documentation:</strong> Development workflows, coding standards, deployment procedures</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">README Best Practices</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Project description and purpose</li>
+          <li>• Installation and setup instructions</li>
+          <li>• Usage examples and code samples</li>
+          <li>• Configuration options</li>
+          <li>• Contributing guidelines</li>
+          <li>• License information</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Software Engineering Career & Professional Development</h2>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Essential Skills</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Technical Skills</p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Programming languages (at least one language deeply, several moderately)</li>
+          <li>• Data structures and algorithms</li>
+          <li>• Database design and SQL</li>
+          <li>• Version control (Git)</li>
+          <li>• Testing and debugging</li>
+          <li>• Web technologies (HTTP, REST APIs, HTML/CSS/JavaScript)</li>
+          <li>• Cloud platforms (AWS, Azure, Google Cloud)</li>
+          <li>• CI/CD and DevOps practices</li>
+        </ul>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Soft Skills</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Problem-solving and critical thinking</li>
+          <li>• Communication (technical writing, presentations)</li>
+          <li>• Collaboration and teamwork</li>
+          <li>• Time management and prioritization</li>
+          <li>• Continuous learning and adaptability</li>
+          <li>• Attention to detail</li>
+          <li>• Empathy and user-centric thinking</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Learning Resources</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-2"><strong>Books:</strong> "Clean Code" (Martin), "Design Patterns" (Gang of Four), "The Pragmatic Programmer" (Hunt & Thomas)</p>
+        <p class="text-gray-700 mb-2"><strong>Online Platforms:</strong> LeetCode, HackerRank, Codecademy, freeCodeCamp, Coursera, Udemy</p>
+        <p class="text-gray-700 mb-2"><strong>Documentation:</strong> Official docs for languages/frameworks you use</p>
+        <p class="text-gray-700"><strong>Communities:</strong> Stack Overflow, GitHub, Reddit, Discord servers, local meetups</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Professional Ethics</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">ACM/IEEE Code of Ethics</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Contribute to society and human well-being</li>
+          <li>• Avoid harm to others</li>
+          <li>• Be honest and trustworthy</li>
+          <li>• Respect privacy and confidentiality</li>
+          <li>• Honor intellectual property rights</li>
+          <li>• Give proper credit for intellectual contributions</li>
+          <li>• Respect diversity and inclusion</li>
+          <li>• Access computing resources only when authorized</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Software Engineering Checklist</h2>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Planning & Design</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>☐ Requirements clearly defined and documented</li>
+          <li>☐ Architecture and design reviewed and approved</li>
+          <li>☐ Technology stack selected and justified</li>
+          <li>☐ Design patterns identified and applied appropriately</li>
+          <li>☐ Database schema designed and normalized</li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Development</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>☐ Code follows style guide and naming conventions</li>
+          <li>☐ SOLID principles applied</li>
+          <li>☐ Functions are small and focused</li>
+          <li>☐ No code duplication (DRY principle)</li>
+          <li>☐ Error handling implemented properly</li>
+          <li>☐ Security best practices followed</li>
+          <li>☐ Code committed to version control with meaningful messages</li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Testing</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>☐ Unit tests written and passing</li>
+          <li>☐ Integration tests implemented</li>
+          <li>☐ Code coverage meets minimum threshold (80%+)</li>
+          <li>☐ Edge cases and error conditions tested</li>
+          <li>☐ Performance testing conducted</li>
+          <li>☐ Security testing performed</li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Code Review & Quality</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>☐ Code review completed by peer(s)</li>
+          <li>☐ All review comments addressed</li>
+          <li>☐ Static analysis tools run (linters, formatters)</li>
+          <li>☐ No compiler warnings</li>
+          <li>☐ Technical debt documented if created</li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Documentation & Deployment</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>☐ Code documentation updated (comments, docstrings)</li>
+          <li>☐ README updated with new features/changes</li>
+          <li>☐ API documentation generated</li>
+          <li>☐ Release notes prepared</li>
+          <li>☐ CI/CD pipeline configured and passing</li>
+          <li>☐ Deployment procedure documented</li>
+          <li>☐ Monitoring and logging configured</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="software-engineering-quiz.html" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to More Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

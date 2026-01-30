@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Physics Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-6">
+      <i data-lucide="zap" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Physics Quiz</h1>
+    <p class="text-xl text-gray-600">Test your knowledge of motion, energy, and the fundamental laws of nature</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Questions will be dynamically generated here -->
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="quizResults" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="physics-analysis.html" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+        <i data-lucide="book-open" class="w-5 h-5"></i>
+        Review Material
+      </a>
+      <button onclick="location.reload()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+        Retake Quiz
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="physics.html" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Back to Physics
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Question Bank - 40 questions total
+  const questionBank = [
+    {
+      question: "What is Newton's First Law of Motion?",
+      options: ["Force equals mass times acceleration", "An object at rest stays at rest unless acted upon by a force", "Every action has an equal and opposite reaction", "Energy cannot be created or destroyed", "Momentum is conserved"],
+      correct: 1,
+      explanation: "Newton's First Law, also called the law of inertia, states that an object at rest will remain at rest, and an object in motion will remain in motion at constant velocity, unless acted upon by an unbalanced external force. This law describes the tendency of objects to resist changes in their state of motion."
+    },
+    {
+      question: "What is the SI unit of force?",
+      options: ["Joule", "Newton", "Watt", "Pascal", "Kilogram"],
+      correct: 1,
+      explanation: "The Newton (N) is the SI unit of force, defined as the force required to accelerate a mass of one kilogram at a rate of one meter per second squared (1 N = 1 kg⋅m/s²). It's named after Isaac Newton for his work on classical mechanics."
+    },
+    {
+      question: "What is kinetic energy?",
+      options: ["Energy stored in position", "Energy of motion", "Energy from heat", "Energy from light", "Energy in chemical bonds"],
+      correct: 1,
+      explanation: "Kinetic energy is the energy an object possesses due to its motion. It's calculated using KE = ½mv², where m is mass and v is velocity. The faster an object moves or the more massive it is, the more kinetic energy it has."
+    },
+    {
+      question: "What does the principle of conservation of energy state?",
+      options: ["Energy increases over time", "Energy cannot be created or destroyed, only transformed", "Energy always decreases", "Energy is lost as heat", "Energy doubles with speed"],
+      correct: 1,
+      explanation: "The law of conservation of energy states that energy cannot be created or destroyed, only converted from one form to another. The total energy in a closed system remains constant. For example, potential energy can convert to kinetic energy, but the sum stays the same."
+    },
+    {
+      question: "What is acceleration?",
+      options: ["Speed at a given moment", "Change in velocity over time", "Distance traveled", "Force applied", "Mass times velocity"],
+      correct: 1,
+      explanation: "Acceleration is the rate of change of velocity with respect to time. It's a vector quantity measured in m/s². An object accelerates when it speeds up, slows down, or changes direction. Newton's Second Law relates acceleration to force and mass: F = ma."
+    },
+    {
+      question: "What is the speed of light in a vacuum?",
+      options: ["3 × 10⁶ m/s", "3 × 10⁸ m/s", "3 × 10¹⁰ m/s", "3 × 10⁴ m/s", "3 × 10¹² m/s"],
+      correct: 1,
+      explanation: "The speed of light in a vacuum is approximately 3 × 10⁸ meters per second (or about 300,000 km/s). This is one of the fundamental constants of nature, denoted by 'c', and is the maximum speed at which all energy, matter, and information in the universe can travel."
+    },
+    {
+      question: "What is work in physics?",
+      options: ["Force times mass", "Force times displacement in the direction of force", "Mass times acceleration", "Energy per unit time", "Change in momentum"],
+      correct: 1,
+      explanation: "Work is defined as the force applied to an object times the displacement of the object in the direction of the force: W = F⋅d⋅cos(θ). Work is measured in joules (J) and represents energy transfer. If force and displacement are perpendicular, no work is done."
+    },
+    {
+      question: "What is the relationship between wavelength and frequency for electromagnetic waves?",
+      options: ["They are equal", "Wavelength = speed of light / frequency", "Wavelength = frequency squared", "They are unrelated", "Wavelength = frequency times speed of light"],
+      correct: 1,
+      explanation: "For electromagnetic waves, the relationship is: wavelength (λ) = speed of light (c) / frequency (f), or λ = c/f. This means wavelength and frequency are inversely proportional - higher frequency means shorter wavelength, and vice versa."
+    },
+    {
+      question: "What is momentum?",
+      options: ["Mass times velocity", "Force times time", "Energy divided by mass", "Acceleration times mass", "Velocity squared"],
+      correct: 0,
+      explanation: "Momentum is the product of an object's mass and velocity: p = mv. It's a vector quantity measured in kg⋅m/s. Momentum is conserved in closed systems, meaning the total momentum before a collision equals the total momentum after, which is fundamental to analyzing collisions and explosions."
+    },
+    {
+      question: "What does Ohm's Law state?",
+      options: ["Voltage = Current × Resistance", "Power = Voltage × Current", "Charge = Current × Time", "Energy = Power × Time", "Force = Charge × Electric Field"],
+      correct: 0,
+      explanation: "Ohm's Law states that voltage (V) equals current (I) times resistance (R): V = IR. This fundamental relationship in electricity shows that for a constant resistance, voltage and current are directly proportional. It's essential for analyzing electrical circuits."
+    },
+    {
+      question: "What is gravitational potential energy?",
+      options: ["Energy from gravity pulling objects down", "Energy stored due to an object's height", "Energy from Earth's rotation", "Energy from gravitational waves", "Energy from planetary orbits"],
+      correct: 1,
+      explanation: "Gravitational potential energy is the energy an object possesses because of its position in a gravitational field, typically its height above a reference point. It's calculated as PE = mgh, where m is mass, g is gravitational acceleration (9.8 m/s² on Earth), and h is height."
+    },
+    {
+      question: "What is the Second Law of Thermodynamics?",
+      options: ["Energy is conserved", "Entropy of an isolated system always increases", "Heat flows from cold to hot", "All energy becomes kinetic", "Temperature is constant"],
+      correct: 1,
+      explanation: "The Second Law of Thermodynamics states that the total entropy (disorder) of an isolated system always increases over time. This law explains why processes are irreversible, why heat flows from hot to cold, and why perfect efficiency is impossible in heat engines."
+    },
+    {
+      question: "What is the difference between speed and velocity?",
+      options: ["Speed is faster than velocity", "Velocity is a vector (has direction), speed is a scalar", "They are the same", "Velocity is always positive", "Speed includes acceleration"],
+      correct: 1,
+      explanation: "Speed is a scalar quantity that only has magnitude (how fast something is moving), while velocity is a vector quantity that has both magnitude and direction (how fast and in what direction). An object moving in a circle at constant speed has changing velocity because its direction changes."
+    },
+    {
+      question: "What is electric current?",
+      options: ["Flow of voltage", "Flow of electric charge", "Resistance to electricity", "Electric potential difference", "Stored electric energy"],
+      correct: 1,
+      explanation: "Electric current is the flow of electric charge through a conductor, typically carried by moving electrons. It's measured in amperes (A), where 1 ampere equals 1 coulomb of charge passing through a point per second. Current flows from high to low potential (conventionally from positive to negative)."
+    },
+    {
+      question: "What is the Doppler Effect?",
+      options: ["Change in wave frequency due to relative motion", "Bending of light", "Reflection of sound waves", "Absorption of electromagnetic radiation", "Interference of waves"],
+      correct: 0,
+      explanation: "The Doppler Effect is the change in frequency or wavelength of a wave for an observer moving relative to the source. When a source moves toward an observer, the frequency increases (blue shift for light, higher pitch for sound). When moving away, frequency decreases (red shift, lower pitch)."
+    },
+    {
+      question: "What is power in physics?",
+      options: ["Force times distance", "Energy per unit time", "Mass times velocity", "Work times time", "Force per unit area"],
+      correct: 1,
+      explanation: "Power is the rate at which work is done or energy is transferred over time: P = W/t or P = E/t. It's measured in watts (W), where 1 watt equals 1 joule per second. Power indicates how quickly energy is being used or transferred."
+    },
+    {
+      question: "What is centripetal force?",
+      options: ["Force that pushes outward in circular motion", "Force directed toward the center of circular motion", "Force from gravity", "Force from friction", "Force from rotation"],
+      correct: 1,
+      explanation: "Centripetal force is the net force causing an object to move in a circular path, always directed toward the center of the circle. It's not a separate type of force but rather the result of forces like tension, gravity, or friction. The magnitude is F = mv²/r."
+    },
+    {
+      question: "What is the unit of electric charge?",
+      options: ["Ampere", "Coulomb", "Volt", "Ohm", "Watt"],
+      correct: 1,
+      explanation: "The coulomb (C) is the SI unit of electric charge. One coulomb is the amount of charge transported by a constant current of one ampere in one second. The charge of a single electron is approximately 1.6 × 10⁻¹⁹ coulombs."
+    },
+    {
+      question: "What is refraction?",
+      options: ["Bending of waves when passing between media", "Reflection of light", "Absorption of light", "Dispersion of colors", "Diffraction around obstacles"],
+      correct: 0,
+      explanation: "Refraction is the bending of a wave (like light or sound) when it passes from one medium into another with a different density or refractive index. This occurs because the wave's speed changes in different media. Refraction explains phenomena like lenses, rainbows, and why objects appear bent in water."
+    },
+    {
+      question: "What is the First Law of Thermodynamics?",
+      options: ["Entropy always increases", "Energy cannot be created or destroyed", "Heat flows from hot to cold", "Absolute zero cannot be reached", "All systems tend toward disorder"],
+      correct: 1,
+      explanation: "The First Law of Thermodynamics is the law of conservation of energy applied to thermodynamic systems. It states that energy cannot be created or destroyed, only transferred or converted from one form to another. For a system: ΔU = Q - W, where ΔU is change in internal energy, Q is heat added, and W is work done by the system."
+    },
+    {
+      question: "What is electromagnetic induction?",
+      options: ["Production of electric field by changing magnetic field", "Attraction between magnets", "Flow of electricity through wires", "Static electricity buildup", "Magnetic field from current"],
+      correct: 0,
+      explanation: "Electromagnetic induction is the production of an electric current or voltage in a conductor when it's exposed to a changing magnetic field. Discovered by Michael Faraday, this principle is fundamental to electric generators, transformers, and many electrical devices. Faraday's Law quantifies this effect."
+    },
+    {
+      question: "What is the principle of superposition for waves?",
+      options: ["Waves cancel each other out", "Waves always add constructively", "The net displacement is the sum of individual displacements", "Waves reflect off each other", "Waves change frequency when they meet"],
+      correct: 2,
+      explanation: "The principle of superposition states that when two or more waves overlap, the resultant displacement at any point is the vector sum of the displacements of the individual waves. This leads to constructive interference (waves add) or destructive interference (waves cancel), explaining phenomena like standing waves and diffraction patterns."
+    },
+    {
+      question: "What is Newton's Third Law of Motion?",
+      options: ["Force equals mass times acceleration", "Objects resist changes in motion", "For every action, there is an equal and opposite reaction", "Energy is conserved", "Momentum is conserved"],
+      correct: 2,
+      explanation: "Newton's Third Law states that for every action force, there is an equal and opposite reaction force. When object A exerts a force on object B, object B simultaneously exerts a force of equal magnitude but opposite direction on object A. These forces act on different objects and are called action-reaction pairs."
+    },
+    {
+      question: "What is the photoelectric effect?",
+      options: ["Light bending in glass", "Emission of electrons when light hits a surface", "Absorption of light by atoms", "Reflection of light from metals", "Light traveling through space"],
+      correct: 1,
+      explanation: "The photoelectric effect is the emission of electrons from a material when light of sufficient frequency shines on it. Einstein explained this by proposing that light consists of photons (particles) with energy E = hf, where h is Planck's constant and f is frequency. This was crucial evidence for quantum theory and earned Einstein the Nobel Prize."
+    },
+    {
+      question: "What is angular momentum?",
+      options: ["Linear momentum in a circle", "Rotational analog of linear momentum", "Torque times time", "Force times radius", "Mass times angular velocity"],
+      correct: 1,
+      explanation: "Angular momentum is the rotational analog of linear momentum, representing the quantity of rotation. For a point mass, L = r × p = mvr, where r is the radius and v is tangential velocity. Angular momentum is conserved in the absence of external torques, explaining phenomena like ice skaters spinning faster when pulling their arms in."
+    },
+    {
+      question: "What is capacitance?",
+      options: ["Resistance to current flow", "Ability to store electric charge", "Flow of electric current", "Magnetic field strength", "Electric potential energy"],
+      correct: 1,
+      explanation: "Capacitance is the ability of a system to store electric charge per unit voltage: C = Q/V, measured in farads (F). Capacitors consist of two conductors separated by an insulator and are used in electronic circuits for energy storage, filtering, and timing applications."
+    },
+    {
+      question: "What is simple harmonic motion?",
+      options: ["Motion at constant velocity", "Oscillatory motion with restoring force proportional to displacement", "Circular motion", "Random motion", "Accelerated motion"],
+      correct: 1,
+      explanation: "Simple harmonic motion (SHM) is periodic oscillatory motion where the restoring force is directly proportional to displacement and directed toward equilibrium: F = -kx. Examples include mass-spring systems and pendulums (for small angles). The motion is sinusoidal with constant period and frequency."
+    },
+    {
+      question: "What is the uncertainty principle in quantum mechanics?",
+      options: ["We can't measure anything precisely", "Position and momentum cannot both be known precisely", "Energy is uncertain", "Time is uncertain", "Waves and particles are uncertain"],
+      correct: 1,
+      explanation: "Heisenberg's Uncertainty Principle states that the more precisely we know a particle's position, the less precisely we can know its momentum, and vice versa: Δx⋅Δp ≥ ℏ/2. This is not due to measurement limitations but a fundamental property of quantum systems, reflecting wave-particle duality."
+    },
+    {
+      question: "What is the Bernoulli principle?",
+      options: ["Pressure increases with fluid speed", "As fluid speed increases, pressure decreases", "Fluids flow from low to high pressure", "Temperature affects fluid density", "Viscosity increases with speed"],
+      correct: 1,
+      explanation: "Bernoulli's principle states that for an ideal fluid, as the speed of the fluid increases, the pressure decreases (and vice versa), assuming constant total energy. This explains lift on airplane wings, how atomizers work, and why shower curtains are pulled inward. It's a consequence of energy conservation in fluid flow."
+    },
+    {
+      question: "What is torque?",
+      options: ["Rotational force", "Linear force", "Mass times velocity", "Work per unit time", "Energy of rotation"],
+      correct: 0,
+      explanation: "Torque is the rotational analog of force, causing objects to rotate. It's calculated as τ = r × F, where r is the position vector from the axis of rotation and F is the applied force. Torque equals the force times the perpendicular distance from the axis (lever arm). It's measured in newton-meters (N⋅m)."
+    },
+    {
+      question: "What is the difference between AC and DC current?",
+      options: ["AC is stronger than DC", "AC alternates direction periodically; DC flows in one direction", "DC is used for electronics only", "AC cannot be transformed", "They are the same"],
+      correct: 1,
+      explanation: "Alternating Current (AC) periodically reverses direction, typically in a sinusoidal pattern (like household electricity at 60 Hz in the US). Direct Current (DC) flows continuously in one direction (like from batteries). AC is easier to transform to different voltages, making it ideal for power distribution, while DC is used in electronics and batteries."
+    },
+    {
+      question: "What is a black hole?",
+      options: ["A dark star", "A region where gravity is so strong that nothing can escape", "An empty region of space", "A collapsed planet", "A dark matter cloud"],
+      correct: 1,
+      explanation: "A black hole is a region of spacetime where gravity is so intense that nothing, not even light, can escape from within its event horizon. They form when massive stars collapse at the end of their lives. The escape velocity exceeds the speed of light, making them 'black.' They're described by general relativity."
+    },
+    {
+      question: "What is interference in wave physics?",
+      options: ["Waves blocking each other", "Waves combining to form new patterns", "Wave reflection", "Wave absorption", "Wave dispersion"],
+      correct: 1,
+      explanation: "Interference is the phenomenon where two or more waves superpose to form a resultant wave. Constructive interference occurs when waves are in phase, amplifying the result. Destructive interference occurs when waves are out of phase, reducing amplitude. This creates patterns like those seen in double-slit experiments and noise-canceling headphones."
+    },
+    {
+      question: "What is specific heat capacity?",
+      options: ["Total heat in a substance", "Heat required to raise 1 kg by 1°C", "Heat conductivity", "Heat of fusion", "Heat radiation rate"],
+      correct: 1,
+      explanation: "Specific heat capacity is the amount of heat energy required to raise the temperature of 1 kilogram of a substance by 1 degree Celsius (or Kelvin). It's measured in J/(kg⋅K). Different materials have different specific heats - water has a high specific heat, meaning it takes a lot of energy to change its temperature."
+    },
+    {
+      question: "What is the Compton effect?",
+      options: ["Light absorption by atoms", "Scattering of photons by electrons, changing wavelength", "Emission of X-rays", "Photoelectric emission", "Light diffraction"],
+      correct: 1,
+      explanation: "The Compton effect is the scattering of photons by charged particles, typically electrons, resulting in a decrease in photon energy (increase in wavelength). This was important evidence that electromagnetic radiation has particle properties. The change in wavelength depends on the scattering angle, as predicted by quantum mechanics."
+    },
+    {
+      question: "What is resonance?",
+      options: ["Sound reflection", "Large amplitude oscillation when driven at natural frequency", "Wave interference", "Standing wave pattern", "Echo phenomenon"],
+      correct: 1,
+      explanation: "Resonance occurs when a system is driven at its natural frequency, resulting in large amplitude oscillations with minimal energy input. Examples include pushing a swing at the right frequency, musical instruments producing sound, and the Tacoma Narrows Bridge collapse. At resonance, energy transfer is most efficient."
+    },
+    {
+      question: "What is the Magnus effect?",
+      options: ["Deflection of spinning objects in fluid", "Magnetic field from rotating charges", "Centrifugal force on rotating objects", "Gyroscopic stability", "Rotational energy"],
+      correct: 0,
+      explanation: "The Magnus effect is the deflection of a spinning object moving through a fluid (like air). The spin creates different air pressures on opposite sides of the object, causing it to curve. This explains curveballs in baseball, topspin in tennis, and is used in Flettner rotors for ship propulsion."
+    },
+    {
+      question: "What is critical angle in optics?",
+      options: ["Angle of maximum refraction", "Angle beyond which total internal reflection occurs", "90-degree angle of incidence", "Angle of zero refraction", "Brewster's angle"],
+      correct: 1,
+      explanation: "The critical angle is the angle of incidence in the denser medium above which all light is totally internally reflected (none is refracted into the less dense medium). It occurs when light travels from a denser to less dense medium. This principle is fundamental to fiber optics and explains why diamonds sparkle."
+    },
+    {
+      question: "What is the Pauli Exclusion Principle?",
+      options: ["Electrons repel each other", "No two electrons can have identical quantum states", "Electrons orbit in shells", "Electrons have wave properties", "Energy levels are quantized"],
+      correct: 1,
+      explanation: "The Pauli Exclusion Principle states that no two fermions (like electrons) can occupy the same quantum state simultaneously within an atom. This means each orbital can hold at most two electrons with opposite spins. This principle explains atomic structure, chemical bonding, and the periodic table organization."
+    },
+    {
+      question: "What is Hall effect?",
+      options: ["Voltage difference across a conductor with current in a magnetic field", "Magnetic field from current", "Resistance in magnetic fields", "Electric field from moving charges", "Electromagnetic induction"],
+      correct: 0,
+      explanation: "The Hall effect is the production of a voltage difference (Hall voltage) across an electrical conductor when current flows through it while in a perpendicular magnetic field. This occurs because the magnetic field deflects moving charge carriers to one side. It's used to measure magnetic fields and determine charge carrier properties in materials."
+    }
+  ];
+
+  // Shuffle array function
+  function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  // Select 15 random questions
+  const selectedQuestions = shuffleArray(questionBank).slice(0, 15);
+  const correctAnswers = {};
+  const explanations = {};
+
+  // Generate quiz HTML
+  const quizContainer = document.getElementById('quizContainer');
+  selectedQuestions.forEach((q, index) => {
+    const questionNum = index + 1;
+    const questionId = `q${questionNum}`;
+    
+    // Store correct answer and explanation
+    correctAnswers[questionId] = q.correct;
+    explanations[questionId] = q.explanation;
+    
+    // Shuffle options with correct answer tracking
+    const optionsWithIndex = q.options.map((opt, idx) => ({ text: opt, originalIndex: idx }));
+    const shuffledOptions = shuffleArray(optionsWithIndex);
+    
+    // Find new position of correct answer
+    const newCorrectIndex = shuffledOptions.findIndex(opt => opt.originalIndex === q.correct);
+    correctAnswers[questionId] = newCorrectIndex;
+    
+    // Create question HTML
+    const questionHTML = `
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+        <h3 class="text-2xl font-bold mb-4 text-gray-800">Question ${questionNum}</h3>
+        <p class="text-lg text-gray-700 mb-6">${q.question}</p>
+        <div class="space-y-3">
+          ${shuffledOptions.map((opt, optIndex) => `
+            <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+              <input type="radio" name="${questionId}" value="${optIndex}" class="mt-1">
+              <span class="text-gray-700">${opt.text}</span>
+            </label>
+          `).join('')}
+        </div>
+        <div class="feedback mt-4 hidden"></div>
+      </div>
+    `;
+    
+    quizContainer.innerHTML += questionHTML;
+  });
+
+  lucide.createIcons();
+
+  // Submit button handler
+  document.getElementById('submitQuiz').addEventListener('click', () => {
+    let score = 0;
+    let answered = 0;
+    
+    const questions = document.querySelectorAll('.quiz-question');
+    
+    questions.forEach((question, index) => {
+      const questionId = `q${index + 1}`;
+      const selected = question.querySelector(`input[name="${questionId}"]:checked`);
+      const feedback = question.querySelector('.feedback');
+      
+      if (selected) {
+        answered++;
+        const selectedValue = parseInt(selected.value);
+        const isCorrect = selectedValue === correctAnswers[questionId];
+        
+        if (isCorrect) {
+          score++;
+          question.classList.remove('border-red-500', 'border-yellow-500');
+          question.classList.add('border-blue-500');
+          feedback.innerHTML = `
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <p class="font-semibold text-blue-800 mb-2">✓ Correct!</p>
+              <p class="text-blue-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        } else {
+          question.classList.remove('border-blue-500', 'border-yellow-500');
+          question.classList.add('border-red-500');
+          feedback.innerHTML = `
+            <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded">
+              <p class="font-semibold text-red-800 mb-2">✗ Incorrect</p>
+              <p class="text-red-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        }
+        
+        feedback.classList.remove('hidden');
+      } else {
+        question.classList.remove('border-blue-500', 'border-red-500');
+        question.classList.add('border-yellow-500');
+        feedback.innerHTML = `
+          <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+            <p class="font-semibold text-yellow-800">Question not answered</p>
+          </div>
+        `;
+        feedback.classList.remove('hidden');
+      }
+    });
+    
+    const percentage = answered > 0 ? Math.round((score / 15) * 100) : 0;
+    const resultDiv = document.getElementById('quizResults');
+    const scoreDisplay = document.getElementById('scoreDisplay');
+    
+    let gradeColor = 'text-red-600';
+    let message = 'Keep studying!';
+    
+    if (percentage >= 90) {
+      gradeColor = 'text-blue-600';
+      message = 'Excellent! You have mastered this material!';
+    } else if (percentage >= 80) {
+      gradeColor = 'text-blue-600';
+      message = 'Great job! You have a strong understanding!';
+    } else if (percentage >= 70) {
+      gradeColor = 'text-yellow-600';
+      message = 'Good work! Review the explanations to improve.';
+    } else if (percentage >= 60) {
+      gradeColor = 'text-orange-600';
+      message = 'Fair. Consider reviewing the material more thoroughly.';
+    }
+    
+    scoreDisplay.innerHTML = `
+      <div class="text-center">
+        <div class="text-6xl font-bold ${gradeColor} mb-4">${percentage}%</div>
+        <p class="text-2xl text-gray-700 mb-2">${score} out of 15 correct</p>
+        <p class="text-xl text-gray-600 mb-6">${message}</p>
+      </div>
+    `;
+    
+    resultDiv.classList.remove('hidden');
+    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

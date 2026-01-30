@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Research Methods — In-Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- Copied full Research Methods guide into analysis page -->
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-emerald-500 to-green-600 rounded-full mb-6">
+      <i data-lucide="flask-conical" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Research Methods: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">Research design, methodology, data collection, analysis techniques, ethics, and practical examples</p>
+  </div>
+
+  <div class="space-y-10">
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Overview & Scope</h2>
+      <p class="text-gray-700 leading-relaxed text-lg">This comprehensive guide covers the complete spectrum of research methods used in academic and professional research across all disciplines. It includes detailed explanations of research design frameworks (qualitative, quantitative, and mixed methods), data collection techniques (surveys, interviews, observations, experiments, document analysis), sampling strategies (probability and non-probability), data analysis approaches (statistical, thematic, content analysis), ethical considerations, reliability and validity measures, research paradigms, hypothesis testing, literature review strategies, and practical examples with real-world applications. This resource is designed to be a complete teaching tool for students, researchers, educators, and professionals conducting empirical studies in social sciences, natural sciences, education, healthcare, business, and humanities.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">What is Research?</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Research is a systematic investigation designed to discover new knowledge, validate existing theories, solve practical problems, or understand phenomena. It involves formulating research questions, collecting and analyzing data, and drawing evidence-based conclusions. Research can be basic (theoretical, advancing knowledge) or applied (practical, solving real-world problems).</p>
+      
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Characteristics of good research</h3>
+      <ul class="text-gray-700 space-y-2 mb-4">
+        <li><strong>Systematic:</strong> Follows organized, methodical procedures</li>
+        <li><strong>Empirical:</strong> Based on observable, verifiable evidence rather than opinion</li>
+        <li><strong>Objective:</strong> Minimizes bias; conclusions based on data, not researcher preferences</li>
+        <li><strong>Replicable:</strong> Other researchers can repeat the study and verify findings</li>
+        <li><strong>Valid and reliable:</strong> Measures what it intends to measure consistently</li>
+        <li><strong>Ethical:</strong> Respects participants' rights, dignity, and well-being</li>
+        <li><strong>Logical:</strong> Uses sound reasoning to connect questions, methods, and conclusions</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Types of research by purpose</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-3">
+        <p class="text-gray-800 mb-2"><strong>Exploratory research:</strong> Investigates new or poorly understood phenomena; generates hypotheses and insights for future research. Often qualitative. Example: "What factors influence student motivation in online learning environments?"</p>
+        <p class="text-gray-800 mb-2"><strong>Descriptive research:</strong> Describes characteristics of a population or phenomenon; what, when, where questions. Example: "What percentage of college students experience anxiety?"</p>
+        <p class="text-gray-800 mb-2"><strong>Explanatory research:</strong> Examines cause-and-effect relationships; why and how questions. Example: "Does sleep deprivation cause decreased academic performance?"</p>
+        <p class="text-gray-800"><strong>Evaluative research:</strong> Assesses effectiveness of programs, policies, or interventions. Example: "Is the new tutoring program improving student test scores?"</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">The Research Process — Complete Step-by-Step Guide</h2>
+
+      <h3 class="text-xl font-semibold mt-2 text-gray-800">Phase 1: Planning and Design</h3>
+      <ol class="list-decimal list-inside text-gray-700 space-y-3 mb-6">
+        <li><strong>Identify research problem:</strong> Observe gaps in literature, practical issues, or theoretical puzzles. Define a clear, focused research question or hypothesis. Example: "How does social media use affect adolescent sleep patterns?"</li>
+        <li><strong>Conduct literature review:</strong> Systematically search academic databases (Google Scholar, PubMed, JSTOR) for existing research. Identify what is known, what gaps exist, and what methods others have used. Take organized notes with full citations.</li>
+        <li><strong>Refine research questions:</strong> Based on literature review, sharpen your research questions to be specific, measurable, achievable, relevant, and time-bound (SMART). Develop hypotheses if using quantitative methods.</li>
+        <li><strong>Choose theoretical framework:</strong> Select theories or models that guide your research. Example: For sleep study, you might use media displacement theory or cognitive stimulation theory.</li>
+        <li><strong>Select methodology:</strong> Choose qualitative (understanding meanings/experiences), quantitative (measuring relationships/effects), or mixed methods based on research questions and epistemological stance.</li>
+        <li><strong>Design study:</strong> Specify research design (experimental, survey, case study, etc.), sampling strategy, sample size, data collection instruments, and analysis plan.</li>
+        <li><strong>Consider ethics:</strong> Plan informed consent procedures, assess risks/benefits, ensure confidentiality, and prepare IRB/ethics committee application.</li>
+        <li><strong>Develop timeline and budget:</strong> Create realistic schedule for each phase; estimate costs for materials, participant compensation, software, travel, etc.</li>
+      </ol>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Phase 2: Data Collection</h3>
+      <ol class="list-decimal list-inside text-gray-700 space-y-3 mb-6">
+        <li><strong>Obtain ethical approval:</strong> Submit proposal to IRB or ethics committee; obtain approval before recruiting participants.</li>
+        <li><strong>Recruit participants:</strong> Use appropriate recruitment methods (random sampling, purposive sampling, snowball sampling). Ensure diverse, representative sample when needed.</li>
+        <li><strong>Obtain informed consent:</strong> Explain study purpose, procedures, risks, benefits, and right to withdraw. Obtain signed consent forms.</li>
+        <li><strong>Pilot test instruments:</strong> Test surveys, interview protocols, or experimental procedures with small sample to identify issues; revise as needed.</li>
+        <li><strong>Collect data systematically:</strong> Follow standardized procedures to ensure consistency. Keep detailed records of data collection process, including dates, conditions, and any deviations from protocol.</li>
+        <li><strong>Monitor data quality:</strong> Check for missing data, inconsistencies, or outliers during collection; address issues promptly.</li>
+        <li><strong>Store data securely:</strong> Use encrypted digital storage, password protection, and backup systems. Keep paper records in locked cabinets.</li>
+      </ol>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Phase 3: Data Analysis</h3>
+      <ol class="list-decimal list-inside text-gray-700 space-y-3 mb-6">
+        <li><strong>Prepare data:</strong> Clean data by checking for errors, handling missing values, and organizing in appropriate format (spreadsheet, database, qualitative software).</li>
+        <li><strong>Choose analytical techniques:</strong> Select methods aligned with research questions and data type. Quantitative: descriptive statistics, t-tests, ANOVA, regression, etc. Qualitative: thematic analysis, content analysis, grounded theory, etc.</li>
+        <li><strong>Conduct analysis:</strong> Apply statistical tests or coding procedures. Use software (SPSS, R, Python, NVivo, ATLAS.ti) as appropriate. Document all analytical decisions.</li>
+        <li><strong>Interpret results:</strong> Examine patterns, relationships, and themes. Consider alternative explanations. Assess statistical and practical significance.</li>
+        <li><strong>Check assumptions:</strong> Verify that data meets assumptions of statistical tests (normality, homogeneity of variance, independence). Use appropriate corrections if assumptions violated.</li>
+      </ol>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Phase 4: Reporting and Dissemination</h3>
+      <ol class="list-decimal list-inside text-gray-700 space-y-3 mb-6">
+        <li><strong>Organize findings:</strong> Create clear tables, figures, and charts to present results. Write results section describing findings without interpretation.</li>
+        <li><strong>Write discussion:</strong> Interpret findings in context of literature review and theoretical framework. Explain implications for theory and practice. Acknowledge limitations honestly.</li>
+        <li><strong>Draw conclusions:</strong> Summarize main findings and their significance. Suggest directions for future research.</li>
+        <li><strong>Write complete report:</strong> Follow standard format (abstract, introduction, literature review, methods, results, discussion, references) using appropriate style guide (APA, MLA, Chicago, etc.).</li>
+        <li><strong>Revise and edit:</strong> Review for clarity, coherence, grammar, and formatting. Have peers or mentors review draft.</li>
+        <li><strong>Disseminate findings:</strong> Submit to peer-reviewed journals, present at conferences, share with stakeholders, or publish in accessible formats.</li>
+      </ol>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Example: Complete research process</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-3">
+        <p class="text-gray-800 font-semibold mb-2">Research Question: Does mindfulness meditation reduce test anxiety in college students?</p>
+        <p class="text-gray-800 mb-1"><strong>Design:</strong> Randomized controlled trial (experimental)</p>
+        <p class="text-gray-800 mb-1"><strong>Participants:</strong> 100 college students randomly assigned to meditation group (n=50) or control group (n=50)</p>
+        <p class="text-gray-800 mb-1"><strong>Intervention:</strong> Meditation group receives 8-week mindfulness program; control group receives no intervention</p>
+        <p class="text-gray-800 mb-1"><strong>Measurement:</strong> Test Anxiety Inventory administered pre- and post-intervention</p>
+        <p class="text-gray-800 mb-1"><strong>Analysis:</strong> Mixed ANOVA comparing groups across time</p>
+        <p class="text-gray-800"><strong>Expected outcome:</strong> Meditation group shows significantly greater reduction in test anxiety compared to control group</p>
+      </div>
+    </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Experimental Research Designs</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 mb-3"><strong>True Experimental Design</strong></p>
+        <p class="text-gray-700 mb-2"><strong>Key features:</strong> Random assignment to groups, manipulation of independent variable, control group comparison</p>
+        <p class="text-gray-700 mb-2"><strong>Strength:</strong> Establishes cause-and-effect relationships; highest internal validity</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Randomly assign students to receive either computer-based tutoring (experimental) or traditional tutoring (control), then compare test scores</p>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Quasi-Experimental Design</strong></p>
+        <p class="text-gray-700 mb-2"><strong>Key features:</strong> No random assignment but includes comparison groups; uses existing groups or non-random assignment</p>
+        <p class="text-gray-700 mb-2"><strong>Strength:</strong> More practical and ethical than true experiments in many real-world settings</p>
+        <p class="text-gray-700 mb-2"><strong>Weakness:</strong> Lower internal validity due to potential confounding variables</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Compare test scores between two existing classrooms, one using new curriculum and one using traditional curriculum</p>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Pre-Experimental Design</strong></p>
+        <p class="text-gray-700 mb-2"><strong>Key features:</strong> Minimal control; often single group pre-test/post-test without control group</p>
+        <p class="text-gray-700 mb-2"><strong>Weakness:</strong> Cannot establish causation; many threats to validity</p>
+        <p class="text-gray-700"><strong>Example:</strong> Measure anxiety levels before and after meditation intervention in one group (no control group)</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Non-Experimental Designs</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 mb-3"><strong>Correlational Research</strong></p>
+        <p class="text-gray-700 mb-2">Examines relationships between variables without manipulation. Cannot establish causation (correlation ≠ causation).</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Studying relationship between hours of study and GPA; hours of sleep and academic performance</p>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Survey Research</strong></p>
+        <p class="text-gray-700 mb-2">Collects data from large samples using questionnaires or structured interviews. Can be descriptive or analytical.</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> National survey examining attitudes toward online learning among college students</p>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Causal-Comparative (Ex Post Facto)</strong></p>
+        <p class="text-gray-700 mb-2">Compares groups on outcome variable based on pre-existing characteristics. Looks for causes retrospectively.</p>
+        <p class="text-gray-700"><strong>Example:</strong> Comparing academic achievement between students who attended preschool vs. those who did not</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Longitudinal vs. Cross-Sectional Designs</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 mb-2"><strong>Longitudinal:</strong> Same participants measured multiple times over extended period. Tracks changes and development.</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Following cohort of children from age 5 to 18 to study language development</p>
+        
+        <p class="text-gray-800 mb-2"><strong>Cross-Sectional:</strong> Different participants measured at single point in time. Compares different age groups or conditions simultaneously.</p>
+        <p class="text-gray-700"><strong>Example:</strong> Comparing reading skills of 5-year-olds, 10-year-olds, and 15-year-olds at same time</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Qualitative Research Methods</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Qualitative research seeks to understand meanings, experiences, and social phenomena through non-numerical data. It emphasizes depth, context, and subjective interpretation.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">When to use qualitative methods</h3>
+      <ul class="text-gray-700 space-y-2 mb-4">
+        <li>Exploring new or poorly understood phenomena</li>
+        <li>Understanding lived experiences and meanings</li>
+        <li>Examining complex social processes and interactions</li>
+        <li>Generating theories or hypotheses for future research</li>
+        <li>Studying contexts where numbers cannot capture full picture</li>
+        <li>Giving voice to marginalized or underrepresented groups</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Major Qualitative Approaches</h3>
+      
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Phenomenology</p>
+        <p class="text-gray-700 mb-2"><strong>Purpose:</strong> Understand essence of lived experiences from participants' perspectives</p>
+        <p class="text-gray-700 mb-2"><strong>Methods:</strong> In-depth interviews, written descriptions, bracketing researcher assumptions</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> What is the experience of becoming a first-time parent? How do cancer survivors experience life after treatment?</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Grounded Theory</p>
+        <p class="text-gray-700 mb-2"><strong>Purpose:</strong> Generate new theory from data through systematic analysis</p>
+        <p class="text-gray-700 mb-2"><strong>Methods:</strong> Iterative data collection and analysis, constant comparison, theoretical sampling, coding</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Developing theory of how nurses manage emotional labor in intensive care units</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Ethnography</p>
+        <p class="text-gray-700 mb-2"><strong>Purpose:</strong> Understand culture, social groups, and shared patterns of behavior</p>
+        <p class="text-gray-700 mb-2"><strong>Methods:</strong> Prolonged fieldwork, participant observation, interviews, document analysis</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Studying classroom culture and teaching practices in high-performing urban school</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Case Study</p>
+        <p class="text-gray-700 mb-2"><strong>Purpose:</strong> In-depth investigation of single case or small number of cases in real-world context</p>
+        <p class="text-gray-700 mb-2"><strong>Methods:</strong> Multiple data sources (interviews, observations, documents), triangulation</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Examining implementation of new technology in one hospital, or studying successful community development project</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Narrative Research</p>
+        <p class="text-gray-700 mb-2"><strong>Purpose:</strong> Explore how individuals construct and make sense of their lives through stories</p>
+        <p class="text-gray-700 mb-2"><strong>Methods:</strong> Life history interviews, autobiographies, biographical analysis</p>
+        <p class="text-gray-700"><strong>Example:</strong> Understanding career transitions through teachers' life stories and professional narratives</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Qualitative Data Collection Techniques</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 mb-3"><strong>Interviews</strong></p>
+        <p class="text-gray-700 mb-2"><em>Structured:</em> Predetermined questions asked in same order; consistent but less flexible</p>
+        <p class="text-gray-700 mb-2"><em>Semi-structured:</em> Guide with key questions but allows probing and follow-up; most common in qualitative research</p>
+        <p class="text-gray-700 mb-3"><em>Unstructured:</em> Conversational, open-ended; follows participant's narrative</p>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Focus Groups</strong></p>
+        <p class="text-gray-700 mb-3">Group discussions (6-10 participants) facilitated by researcher. Explores shared experiences, group dynamics, and diverse perspectives. Useful for exploratory research and program evaluation.</p>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Observations</strong></p>
+        <p class="text-gray-700 mb-2"><em>Participant observation:</em> Researcher actively participates in setting while observing</p>
+        <p class="text-gray-700 mb-3"><em>Non-participant observation:</em> Researcher observes without direct involvement</p>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Document Analysis</strong></p>
+        <p class="text-gray-700">Systematic examination of written, visual, or digital materials (policies, meeting minutes, social media posts, photographs, videos) for patterns and themes.</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Mixed Methods Research</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Mixed methods research intentionally combines quantitative and qualitative approaches within single study to provide more comprehensive understanding than either method alone. It leverages strengths of both paradigms.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Mixed Methods Designs</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Convergent Parallel Design</p>
+        <p class="text-gray-700 mb-3">Collect quantitative and qualitative data simultaneously, analyze separately, then compare and integrate findings. Equal priority to both methods.</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Survey 500 teachers (quantitative) while conducting 20 interviews (qualitative) about school climate, then compare results</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Explanatory Sequential Design</p>
+        <p class="text-gray-700 mb-3">Start with quantitative phase, then use qualitative phase to explain or elaborate on quantitative results. Quantitative → Qualitative.</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Survey shows student engagement declining; follow-up interviews explore why this is happening</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Exploratory Sequential Design</p>
+        <p class="text-gray-700 mb-3">Start with qualitative phase to explore phenomenon, then use quantitative phase to test or generalize findings. Qualitative → Quantitative.</p>
+        <p class="text-gray-700"><strong>Example:</strong> Interview patients about barriers to medication adherence, then develop and test survey based on themes identified</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Why Use Mixed Methods?</h3>
+      <ul class="text-gray-700 space-y-2 mb-4">
+        <li><strong>Triangulation:</strong> Corroborate findings from different methods to increase confidence in results</li>
+        <li><strong>Complementarity:</strong> Use different methods to examine different facets of phenomenon</li>
+        <li><strong>Development:</strong> Use results from one method to inform development of other method</li>
+        <li><strong>Expansion:</strong> Extend breadth and depth of inquiry by using different methods for different components</li>
+        <li><strong>Explanation:</strong> Use one method to explain or elaborate on results from other method</li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Sampling Strategies — Complete Guide</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Sampling is the process of selecting participants from larger population. Sample should represent population of interest for findings to be generalizable (quantitative) or provide rich information (qualitative).</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Probability Sampling (Quantitative)</h3>
+      <p class="text-gray-700 mb-3">Every member of population has known, non-zero probability of selection. Enables statistical generalization to population.</p>
+      
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Simple Random Sampling</p>
+        <p class="text-gray-700 mb-3">Every individual has equal chance of selection. Use random number generator or lottery method.</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Randomly select 200 students from list of 2,000 university students</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Stratified Random Sampling</p>
+        <p class="text-gray-700 mb-3">Divide population into homogeneous subgroups (strata) based on key characteristics, then randomly sample from each stratum. Ensures representation of important subgroups.</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Sample 50 freshmen, 50 sophomores, 50 juniors, 50 seniors to ensure all grade levels represented</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Cluster Sampling</p>
+        <p class="text-gray-700 mb-3">Randomly select groups (clusters) rather than individuals, then study all members of selected clusters. More practical and cost-effective for geographically dispersed populations.</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Randomly select 10 schools from district, then survey all teachers in those 10 schools</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Systematic Sampling</p>
+        <p class="text-gray-700 mb-3">Select every kth individual from population list. Calculate sampling interval (k = population size ÷ desired sample size).</p>
+        <p class="text-gray-700"><strong>Example:</strong> From list of 1,000 patients, select every 10th patient to get sample of 100</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Non-Probability Sampling (Qualitative)</h3>
+      <p class="text-gray-700 mb-3">Participants selected based on specific criteria or researcher judgment. Cannot generalize statistically, but provides rich, in-depth information.</p>
+      
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Purposive (Purposeful) Sampling</p>
+        <p class="text-gray-700 mb-3">Deliberately select information-rich cases that meet specific criteria relevant to research question.</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Interview teachers with 10+ years experience implementing project-based learning</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Snowball Sampling</p>
+        <p class="text-gray-700 mb-3">Participants recruit other participants. Useful for hard-to-reach or hidden populations.</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Study of undocumented immigrants where initial participants refer friends who refer others</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Convenience Sampling</p>
+        <p class="text-gray-700 mb-3">Select readily available participants. Quick and inexpensive but high risk of bias.</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Survey students in your own classes or colleagues at your workplace</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Maximum Variation Sampling</p>
+        <p class="text-gray-700 mb-3">Deliberately include diverse cases to capture wide range of perspectives and experiences.</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Interview teachers from urban, suburban, and rural schools; public and private; different grade levels</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Theoretical Sampling</p>
+        <p class="text-gray-700">Used in grounded theory; select participants based on emerging concepts from ongoing analysis. Sampling continues until theoretical saturation (no new themes emerge).</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Sample Size Considerations</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Quantitative Research</p>
+        <p class="text-gray-700 mb-2">Larger samples generally better for statistical power and generalizability. Use power analysis to determine minimum sample size needed to detect effects.</p>
+        <p class="text-gray-700 mb-3"><strong>Rules of thumb:</strong> Minimum 30 per group for t-tests; 20-50 for correlational studies; 100+ for survey research; 15-20 per cell for factorial designs</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Qualitative Research</p>
+        <p class="text-gray-700 mb-2">Smaller samples allow for depth. Focus on information richness and data saturation rather than statistical power.</p>
+        <p class="text-gray-700"><strong>Typical ranges:</strong> 5-25 for phenomenology; 20-30 for grounded theory; 1-15 for case study; 6-10 participants per focus group</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Data Collection Instruments & Techniques</h2>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Surveys and Questionnaires</h3>
+      <p class="text-gray-700 mb-3">Structured instruments to collect standardized data from large samples efficiently. Can include closed-ended (quantitative) and open-ended (qualitative) questions.</p>
+      
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Question Types</p>
+        <p class="text-gray-700 mb-2"><strong>Likert scales:</strong> Measure agreement/disagreement (1=Strongly Disagree to 5=Strongly Agree)</p>
+        <p class="text-gray-700 mb-2"><strong>Multiple choice:</strong> Select from predefined options; include "other" option for unexpected responses</p>
+        <p class="text-gray-700 mb-2"><strong>Rating scales:</strong> Assess quality, frequency, or intensity (1-10, never to always)</p>
+        <p class="text-gray-700 mb-2"><strong>Ranking:</strong> Order items by preference or importance</p>
+        <p class="text-gray-700 mb-3"><strong>Open-ended:</strong> Allow detailed, unrestricted responses</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Best Practices</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>Use clear, concise language; avoid jargon</li>
+          <li>Avoid double-barreled questions (asking two things at once)</li>
+          <li>Avoid leading or biased questions</li>
+          <li>Use neutral wording that doesn't suggest desired answer</li>
+          <li>Pilot test with small group before full deployment</li>
+          <li>Keep surveys as short as possible to reduce fatigue</li>
+          <li>Consider cultural sensitivity and accessibility</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Interviews</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Interview Protocol Development</p>
+        <p class="text-gray-700 mb-2">Create guide with main questions and potential probes. Start with easy, non-threatening questions to build rapport.</p>
+        <p class="text-gray-700 mb-3">Use open-ended questions that encourage elaboration: "Tell me about...", "How did you experience...", "What does that mean to you?"</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Conducting Effective Interviews</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>Create comfortable, private environment</li>
+          <li>Build rapport and trust before diving into sensitive topics</li>
+          <li>Practice active listening; show genuine interest</li>
+          <li>Use probes to explore responses deeper ("Can you tell me more?", "What was that like?")</li>
+          <li>Allow silences; give participants time to think</li>
+          <li>Audio/video record with permission for accurate transcription</li>
+          <li>Take field notes on non-verbal cues and context</li>
+          <li>Typical duration: 45-90 minutes</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Observations</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Systematic Observation</p>
+        <p class="text-gray-700 mb-3">Use structured observation protocol defining what behaviors to record, when, and how. Create coding scheme for recording specific actions or events.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Field Notes</p>
+        <p class="text-gray-700 mb-2">Record descriptive notes (what happened) and reflective notes (interpretations, questions, emerging patterns) separately.</p>
+        <p class="text-gray-700 mb-3">Include contextual details: setting, time, participants, activities, interactions, exact quotes when possible.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Observer Effect</p>
+        <p class="text-gray-700">Be aware that presence of observer may influence participants' behavior. Spend time in setting before collecting data to allow participants to acclimate.</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Experiments</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Key Components</p>
+        <p class="text-gray-700 mb-2"><strong>Independent variable (IV):</strong> Variable manipulated by researcher (treatment, condition)</p>
+        <p class="text-gray-700 mb-2"><strong>Dependent variable (DV):</strong> Outcome variable measured to assess effect of IV</p>
+        <p class="text-gray-700 mb-2"><strong>Control variables:</strong> Factors held constant to isolate effect of IV</p>
+        <p class="text-gray-700 mb-3"><strong>Confounding variables:</strong> Extraneous factors that might influence DV; must be controlled</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Experimental Control</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>Random assignment to groups reduces selection bias</li>
+          <li>Use control group (no treatment) or comparison group (alternative treatment)</li>
+          <li>Standardize procedures across all participants</li>
+          <li>Blind participants to condition when possible (single-blind)</li>
+          <li>Blind researchers to participant assignment when possible (double-blind)</li>
+          <li>Use validated, reliable measurement instruments</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Document and Artifact Analysis</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-2">Systematic examination of existing materials: policies, curricula, student work, meeting minutes, emails, social media posts, photographs, videos, websites.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Analysis Process</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>Establish authenticity and credibility of documents</li>
+          <li>Consider context: who created it, when, for what purpose, for what audience</li>
+          <li>Code systematically for themes, patterns, or specific content</li>
+          <li>Look for what is present and what is absent</li>
+          <li>Triangulate with other data sources</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Quantitative Data Analysis — Statistical Methods</h2>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Descriptive Statistics</h3>
+      <p class="text-gray-700 mb-3">Summarize and describe basic features of dataset without making inferences beyond data.</p>
+      
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Measures of Central Tendency</p>
+        <p class="text-gray-700 mb-2"><strong>Mean:</strong> Average of all scores. Sum all values and divide by number of values. Sensitive to outliers.</p>
+        <p class="text-gray-700 mb-2"><strong>Median:</strong> Middle value when scores arranged in order. Better for skewed distributions.</p>
+        <p class="text-gray-700 mb-3"><strong>Mode:</strong> Most frequently occurring value. Can have multiple modes or no mode.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Measures of Variability</p>
+        <p class="text-gray-700 mb-2"><strong>Range:</strong> Difference between highest and lowest scores. Simple but influenced by outliers.</p>
+        <p class="text-gray-700 mb-2"><strong>Standard Deviation (SD):</strong> Average distance of scores from mean. Larger SD = more spread.</p>
+        <p class="text-gray-700 mb-3"><strong>Variance:</strong> Square of standard deviation. Used in many statistical tests.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Distribution Shape</p>
+        <p class="text-gray-700 mb-2"><strong>Normal distribution:</strong> Symmetrical, bell-shaped curve. Mean=median=mode. Many statistical tests assume normality.</p>
+        <p class="text-gray-700 mb-2"><strong>Skewness:</strong> Asymmetry in distribution. Positive skew = tail extends right; negative skew = tail extends left.</p>
+        <p class="text-gray-700"><strong>Kurtosis:</strong> Peakedness of distribution. High kurtosis = heavy tails and sharp peak.</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Inferential Statistics — Hypothesis Testing</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Basic Hypothesis Testing Logic</p>
+        <p class="text-gray-700 mb-2"><strong>Null hypothesis (H₀):</strong> No effect or no difference exists (e.g., "Treatment has no effect")</p>
+        <p class="text-gray-700 mb-2"><strong>Alternative hypothesis (H₁ or Hₐ):</strong> Effect or difference exists (e.g., "Treatment improves outcomes")</p>
+        <p class="text-gray-700 mb-2"><strong>p-value:</strong> Probability of obtaining results if null hypothesis is true. p < .05 typically indicates statistical significance.</p>
+        <p class="text-gray-700 mb-2"><strong>Type I error (α):</strong> Rejecting true null hypothesis (false positive). Set α level before analysis (usually .05).</p>
+        <p class="text-gray-700"><strong>Type II error (β):</strong> Failing to reject false null hypothesis (false negative). Related to statistical power.</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Common Statistical Tests</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">t-tests (Comparing Means)</p>
+        <p class="text-gray-700 mb-2"><strong>Independent samples t-test:</strong> Compare means between two independent groups (e.g., treatment vs. control).</p>
+        <p class="text-gray-700 mb-2"><strong>Paired samples t-test:</strong> Compare means for same group at two time points (e.g., pre-test vs. post-test).</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Do male and female students differ in math test scores? (independent t-test)</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">ANOVA (Analysis of Variance)</p>
+        <p class="text-gray-700 mb-2"><strong>One-way ANOVA:</strong> Compare means across three or more independent groups on one factor.</p>
+        <p class="text-gray-700 mb-2"><strong>Repeated measures ANOVA:</strong> Compare means across multiple time points for same participants.</p>
+        <p class="text-gray-700 mb-2"><strong>Factorial ANOVA:</strong> Examine effects of two or more independent variables and their interactions.</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Compare test scores across four teaching methods (one-way ANOVA); examine effects of teaching method AND class size (factorial ANOVA)</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Correlation</p>
+        <p class="text-gray-700 mb-2"><strong>Pearson's r:</strong> Measures linear relationship between two continuous variables (-1 to +1). Assumes normal distribution.</p>
+        <p class="text-gray-700 mb-2"><strong>Spearman's rho:</strong> Non-parametric alternative for ordinal data or non-normal distributions.</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Relationship between study hours and exam scores (Pearson's r = .65 indicates moderate positive relationship)</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Regression</p>
+        <p class="text-gray-700 mb-2"><strong>Simple linear regression:</strong> Predict outcome from one predictor variable.</p>
+        <p class="text-gray-700 mb-2"><strong>Multiple regression:</strong> Predict outcome from multiple predictors simultaneously; control for confounding variables.</p>
+        <p class="text-gray-700 mb-3"><strong>Example:</strong> Predicting GPA from study hours, attendance, and prior achievement using multiple regression</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Chi-Square Tests</p>
+        <p class="text-gray-700 mb-2"><strong>Chi-square test of independence:</strong> Examine relationship between two categorical variables.</p>
+        <p class="text-gray-700 mb-2"><strong>Chi-square goodness of fit:</strong> Test whether observed frequencies match expected frequencies.</p>
+        <p class="text-gray-700"><strong>Example:</strong> Is there relationship between gender and major choice? (chi-square test of independence)</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Effect Size & Practical Significance</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-2">Statistical significance (p < .05) indicates result is unlikely due to chance, but doesn't indicate magnitude or importance. Effect size measures practical significance.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Common Effect Size Measures</p>
+        <p class="text-gray-700 mb-2"><strong>Cohen's d:</strong> For t-tests. Small = .20, Medium = .50, Large = .80</p>
+        <p class="text-gray-700 mb-2"><strong>Eta-squared (η²) or Partial eta-squared:</strong> For ANOVA. Proportion of variance explained.</p>
+        <p class="text-gray-700 mb-2"><strong>R² (R-squared):</strong> For regression. Proportion of variance in outcome explained by predictors.</p>
+        <p class="text-gray-700"><strong>Phi (φ) or Cramér's V:</strong> For chi-square. Association strength between categorical variables.</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Statistical Software & Tools</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-2"><strong>SPSS:</strong> User-friendly point-and-click interface; widely used in social sciences; subscription required</p>
+        <p class="text-gray-700 mb-2"><strong>R:</strong> Free, open-source; powerful and flexible; steeper learning curve; excellent for advanced analyses and visualizations</p>
+        <p class="text-gray-700 mb-2"><strong>Python (pandas, scipy, statsmodels):</strong> Free; versatile programming language; growing in research community</p>
+        <p class="text-gray-700 mb-2"><strong>Excel:</strong> Basic descriptive statistics and charts; limited inferential statistics; widely accessible</p>
+        <p class="text-gray-700"><strong>JASP / jamovi:</strong> Free, user-friendly alternatives to SPSS with modern interfaces</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Qualitative Data Analysis — Complete Guide</h2>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Thematic Analysis</h3>
+      <p class="text-gray-700 mb-3">Most widely used qualitative analysis method. Identifies, analyzes, and reports patterns (themes) within data. Flexible and accessible.</p>
+      
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Six-Phase Process (Braun & Clarke)</p>
+        <p class="text-gray-700 mb-2"><strong>1. Familiarize with data:</strong> Transcribe interviews, read and re-read data, note initial ideas.</p>
+        <p class="text-gray-700 mb-2"><strong>2. Generate initial codes:</strong> Systematically identify interesting features; code entire dataset; use inductive (data-driven) or deductive (theory-driven) approach.</p>
+        <p class="text-gray-700 mb-2"><strong>3. Search for themes:</strong> Collate codes into potential themes; gather all coded extracts relevant to each theme.</p>
+        <p class="text-gray-700 mb-2"><strong>4. Review themes:</strong> Check themes work at level of coded extracts and entire dataset; create thematic map.</p>
+        <p class="text-gray-700 mb-2"><strong>5. Define and name themes:</strong> Refine each theme; generate clear definitions and names; identify essence of each theme.</p>
+        <p class="text-gray-700"><strong>6. Produce report:</strong> Select vivid, compelling extract examples; relate analysis back to research question and literature; write scholarly report.</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Coding Strategies</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Types of Codes</p>
+        <p class="text-gray-700 mb-2"><strong>Descriptive codes:</strong> Summarize topic of segment (e.g., "teacher frustration", "parent involvement")</p>
+        <p class="text-gray-700 mb-2"><strong>Interpretive codes:</strong> Capture underlying meaning or pattern (e.g., "resistance to change", "identity negotiation")</p>
+        <p class="text-gray-700 mb-3"><strong>Pattern codes:</strong> Higher-level codes that group descriptive codes into themes</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Coding Process</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>Code in multiple passes; first pass for surface content, subsequent passes for deeper meaning</li>
+          <li>Use constant comparison: compare new data to existing codes</li>
+          <li>Maintain code book documenting code names, definitions, and examples</li>
+          <li>Code inclusively; segments can have multiple codes</li>
+          <li>Review and refine codes iteratively</li>
+          <li>Check intercoder reliability if working with team</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Content Analysis</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3">Systematic, objective analysis of communication content. Can be quantitative (counting frequencies) or qualitative (analyzing meanings).</p>
+        
+        <p class="text-gray-800 font-semibold mb-2">Steps in Content Analysis</p>
+        <p class="text-gray-700 mb-2">1. Define research questions and select content to analyze</p>
+        <p class="text-gray-700 mb-2">2. Develop coding scheme (categories or themes to look for)</p>
+        <p class="text-gray-700 mb-2">3. Define unit of analysis (word, sentence, paragraph, entire document)</p>
+        <p class="text-gray-700 mb-2">4. Code content systematically using coding scheme</p>
+        <p class="text-gray-700 mb-2">5. Calculate frequencies or analyze patterns</p>
+        <p class="text-gray-700"><strong>Example:</strong> Analyzing news articles for representation of climate change; coding for frames (scientific, economic, political)</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Grounded Theory</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3">Systematic methodology for generating theory from data. Theory "grounded" in data rather than tested deductively.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2">Key Procedures</p>
+        <p class="text-gray-700 mb-2"><strong>Theoretical sampling:</strong> Select participants based on emerging concepts; continue until theoretical saturation (no new insights)</p>
+        <p class="text-gray-700 mb-2"><strong>Constant comparison:</strong> Continuously compare new data to existing codes and categories</p>
+        <p class="text-gray-700 mb-2"><strong>Coding levels:</strong> Open coding (initial ideas) → Axial coding (connecting categories) → Selective coding (integrating into theory)</p>
+        <p class="text-gray-700 mb-2"><strong>Memo writing:</strong> Document analytical thoughts, connections, and developing theory throughout process</p>
+        <p class="text-gray-700"><strong>Outcome:</strong> Generate substantive theory explaining social process or phenomenon</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Ensuring Quality in Qualitative Research</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Trustworthiness Criteria (Lincoln & Guba)</p>
+        <p class="text-gray-700 mb-2"><strong>Credibility:</strong> Confidence in truth of findings. Use prolonged engagement, triangulation, member checking, peer debriefing.</p>
+        <p class="text-gray-700 mb-2"><strong>Transferability:</strong> Applicability to other contexts. Provide thick description so readers can assess fit to their context.</p>
+        <p class="text-gray-700 mb-2"><strong>Dependability:</strong> Consistency of process. Maintain audit trail documenting all research decisions.</p>
+        <p class="text-gray-700 mb-3"><strong>Confirmability:</strong> Findings reflect participants' experiences, not researcher bias. Use reflexivity and document researcher positioning.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Triangulation</p>
+        <p class="text-gray-700 mb-2">Using multiple sources or methods to corroborate findings and increase credibility:</p>
+        <p class="text-gray-700 mb-2">• Data triangulation: Multiple data sources or participants</p>
+        <p class="text-gray-700 mb-2">• Method triangulation: Multiple data collection methods</p>
+        <p class="text-gray-700 mb-2">• Investigator triangulation: Multiple researchers analyze data</p>
+        <p class="text-gray-700">• Theory triangulation: Multiple theoretical perspectives</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Qualitative Software</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-2"><strong>NVivo:</strong> Comprehensive CAQDAS (Computer-Assisted Qualitative Data Analysis Software); code, organize, visualize data</p>
+        <p class="text-gray-700 mb-2"><strong>ATLAS.ti:</strong> Powerful coding and analysis; good for grounded theory</p>
+        <p class="text-gray-700 mb-2"><strong>MAXQDA:</strong> User-friendly; supports mixed methods</p>
+        <p class="text-gray-700 mb-2"><strong>Dedoose:</strong> Web-based; affordable; good for collaborative teams</p>
+        <p class="text-gray-700"><em>Note: Software assists organization but doesn't do analysis for you; researcher makes interpretive decisions.</em></p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Validity & Reliability — Essential Concepts</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Validity and reliability are fundamental criteria for evaluating research quality. Strong research demonstrates both accurate measurement (validity) and consistent measurement (reliability).</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Reliability (Consistency)</h3>
+      <p class="text-gray-700 mb-3">Reliability refers to consistency and stability of measurements. Reliable instruments produce similar results under consistent conditions.</p>
+      
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Types of Reliability</p>
+        <p class="text-gray-700 mb-2"><strong>Test-retest reliability:</strong> Same test administered to same people at two different times. High correlation indicates stability over time.</p>
+        <p class="text-gray-700 mb-2"><strong>Internal consistency:</strong> Extent to which items on scale measure same construct. Measured by Cronbach's alpha (α ≥ .70 generally acceptable; ≥ .80 good).</p>
+        <p class="text-gray-700 mb-2"><strong>Interrater reliability:</strong> Consistency between different observers or coders. Important for observations and qualitative coding. Measured by Cohen's kappa or intraclass correlation.</p>
+        <p class="text-gray-700"><strong>Parallel forms reliability:</strong> Correlation between two equivalent versions of same test administered to same people.</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Validity (Accuracy)</h3>
+      <p class="text-gray-700 mb-3">Validity refers to whether instrument measures what it claims to measure and whether conclusions are accurate and appropriate.</p>
+      
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Measurement Validity</p>
+        <p class="text-gray-700 mb-2"><strong>Content validity:</strong> Instrument comprehensively covers domain of interest. Assessed through expert review.</p>
+        <p class="text-gray-700 mb-2"><strong>Construct validity:</strong> Instrument measures theoretical construct it purports to measure. Includes convergent validity (correlates with related measures) and discriminant validity (doesn't correlate with unrelated measures).</p>
+        <p class="text-gray-700 mb-3"><strong>Criterion validity:</strong> Scores predict relevant outcome or correlate with established measure. Includes predictive validity (predicts future outcome) and concurrent validity (correlates with current measure).</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Internal Validity</p>
+        <p class="text-gray-700 mb-3">Extent to which study establishes causal relationship between IV and DV. Can we conclude that IV caused changes in DV, or are there alternative explanations?</p>
+        
+        <p class="text-gray-800 font-semibold mb-2">Threats to Internal Validity</p>
+        <p class="text-gray-700 mb-2"><strong>History:</strong> External events occurring during study that affect DV</p>
+        <p class="text-gray-700 mb-2"><strong>Maturation:</strong> Natural changes in participants over time (aging, gaining experience)</p>
+        <p class="text-gray-700 mb-2"><strong>Testing:</strong> Taking pre-test affects post-test performance</p>
+        <p class="text-gray-700 mb-2"><strong>Instrumentation:</strong> Changes in measurement tool or procedures during study</p>
+        <p class="text-gray-700 mb-2"><strong>Selection bias:</strong> Groups differ systematically at start due to non-random assignment</p>
+        <p class="text-gray-700 mb-2"><strong>Attrition/Mortality:</strong> Differential dropout between groups</p>
+        <p class="text-gray-700 mb-3"><strong>Regression to mean:</strong> Extreme scores tend to become less extreme on retesting</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">External Validity</p>
+        <p class="text-gray-700 mb-2">Extent to which findings generalize to other settings, populations, and times. Can results be applied beyond specific study context?</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Threats to External Validity</p>
+        <p class="text-gray-700 mb-2"><strong>Sample characteristics:</strong> Sample not representative of population</p>
+        <p class="text-gray-700 mb-2"><strong>Ecological validity:</strong> Artificial lab settings differ from real-world contexts</p>
+        <p class="text-gray-700"><strong>Temporal validity:</strong> Findings may not hold across different time periods</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Balancing Validity Trade-offs</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-2">Internal and external validity often trade off. Highly controlled lab experiments maximize internal validity but may sacrifice external validity (generalizability).</p>
+        <p class="text-gray-700">Field studies in natural settings maximize external validity but may have more threats to internal validity. Researchers must balance based on research goals.</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Research Ethics — Comprehensive Guide</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Ethical research protects participants' rights, dignity, and welfare. Researchers have moral and professional obligations to conduct studies responsibly and with integrity.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Core Ethical Principles (Belmont Report)</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Respect for Persons</p>
+        <p class="text-gray-700 mb-3">Individuals should be treated as autonomous agents. Those with diminished autonomy (children, cognitively impaired) deserve special protections. Requires informed consent.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Beneficence</p>
+        <p class="text-gray-700 mb-3">Maximize benefits and minimize harms. Researchers must protect participants from harm and maximize potential benefits of research.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Justice</p>
+        <p class="text-gray-700">Fair distribution of research burdens and benefits. Don't exploit vulnerable populations while benefits accrue to privileged groups.</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Informed Consent</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3">Participants must voluntarily agree to participate after receiving complete information about study. Informed consent is ongoing process, not one-time event.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2">Elements of Informed Consent</p>
+        <p class="text-gray-700 mb-2">• Purpose of research and expected duration of participation</p>
+        <p class="text-gray-700 mb-2">• Description of procedures, including what is experimental</p>
+        <p class="text-gray-700 mb-2">• Foreseeable risks, discomforts, or adverse effects</p>
+        <p class="text-gray-700 mb-2">• Potential benefits to participant and society</p>
+        <p class="text-gray-700 mb-2">• Alternative procedures or treatments, if any</p>
+        <p class="text-gray-700 mb-2">• Extent of confidentiality and any limits</p>
+        <p class="text-gray-700 mb-2">• Compensation or treatment available if injury occurs</p>
+        <p class="text-gray-700 mb-2">• Contact information for questions about research or rights</p>
+        <p class="text-gray-700 mb-3">• Statement that participation is voluntary and can withdraw anytime without penalty</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Special Considerations</p>
+        <p class="text-gray-700 mb-2"><strong>Children:</strong> Obtain parental permission AND child's assent (if developmentally appropriate)</p>
+        <p class="text-gray-700 mb-2"><strong>Cognitively impaired:</strong> May need legally authorized representative to provide consent</p>
+        <p class="text-gray-700"><strong>Language barriers:</strong> Provide consent forms in participant's language; use qualified interpreters</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Confidentiality & Privacy</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Confidentiality</p>
+        <p class="text-gray-700 mb-3">Researcher protects participant identity and keeps data private. Use codes instead of names; store data securely; report aggregate results.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Anonymity</p>
+        <p class="text-gray-700 mb-3">Researcher cannot link specific responses to specific participants. Stronger protection than confidentiality but not always feasible (e.g., interviews).</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Data Security Practices</p>
+        <p class="text-gray-700 mb-2">• Encrypt digital files containing identifying information</p>
+        <p class="text-gray-700 mb-2">• Password-protect files and use secure servers</p>
+        <p class="text-gray-700 mb-2">• Store paper records in locked cabinets</p>
+        <p class="text-gray-700 mb-2">• Limit access to data to research team members only</p>
+        <p class="text-gray-700 mb-2">• Use de-identified data for analysis when possible</p>
+        <p class="text-gray-700"><strong>• Plan for data retention and destruction (typically 3-7 years after study completion)</strong></p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Minimizing Risk & Harm</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Types of Risk</p>
+        <p class="text-gray-700 mb-2"><strong>Physical:</strong> Bodily harm, fatigue, discomfort</p>
+        <p class="text-gray-700 mb-2"><strong>Psychological:</strong> Stress, anxiety, emotional distress, trauma</p>
+        <p class="text-gray-700 mb-2"><strong>Social:</strong> Embarrassment, stigma, damage to relationships or reputation</p>
+        <p class="text-gray-700 mb-3"><strong>Economic:</strong> Loss of employment, financial costs</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Risk Assessment</p>
+        <p class="text-gray-700 mb-2">• Identify all potential risks, even if unlikely</p>
+        <p class="text-gray-700 mb-2">• Compare risks to those encountered in everyday life</p>
+        <p class="text-gray-700 mb-2">• Determine if risks are justified by potential benefits</p>
+        <p class="text-gray-700 mb-2">• Implement safeguards to minimize risks</p>
+        <p class="text-gray-700"><strong>• Develop plan for responding if harm occurs (referrals, support resources)</strong></p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Institutional Review Board (IRB)</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3">IRB is ethics committee that reviews research proposals to ensure participant protection. Required for research with human subjects at institutions receiving federal funding.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2">IRB Review Levels</p>
+        <p class="text-gray-700 mb-2"><strong>Exempt:</strong> Minimal risk research in certain categories (e.g., educational surveys, existing de-identified data)</p>
+        <p class="text-gray-700 mb-2"><strong>Expedited:</strong> Minimal risk research not qualifying for exemption; reviewed by one IRB member</p>
+        <p class="text-gray-700 mb-3"><strong>Full board review:</strong> Greater than minimal risk; requires review by full committee</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">IRB Submission Components</p>
+        <p class="text-gray-700 mb-2">• Complete research protocol describing study procedures</p>
+        <p class="text-gray-700 mb-2">• Informed consent documents</p>
+        <p class="text-gray-700 mb-2">• Recruitment materials</p>
+        <p class="text-gray-700 mb-2">• Data collection instruments</p>
+        <p class="text-gray-700"><strong>• Risk-benefit analysis and safeguards</strong></p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Deception & Debriefing</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-2"><strong>Deception:</strong> Withholding information or providing misleading information to participants. Only permissible when necessary for study validity and when risks are minimal.</p>
+        <p class="text-gray-700 mb-3"><strong>Debriefing:</strong> After participation, explain true purpose of study, answer questions, and address any concerns. Required when deception used; recommended for all studies.</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Research Integrity & Misconduct</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Forms of Research Misconduct</p>
+        <p class="text-gray-700 mb-2"><strong>Fabrication:</strong> Making up data or results</p>
+        <p class="text-gray-700 mb-2"><strong>Falsification:</strong> Manipulating data, materials, or processes; omitting or altering data</p>
+        <p class="text-gray-700 mb-2"><strong>Plagiarism:</strong> Using others' ideas, words, or data without proper attribution</p>
+        <p class="text-gray-700 mb-3"><strong>Other violations:</strong> Duplicate publication, authorship disputes, conflicts of interest</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Responsible Conduct</p>
+        <p class="text-gray-700 mb-2">• Maintain accurate, detailed research records</p>
+        <p class="text-gray-700 mb-2">• Report all results, including unexpected or negative findings</p>
+        <p class="text-gray-700 mb-2">• Properly attribute ideas and credit collaborators</p>
+        <p class="text-gray-700 mb-2">• Disclose conflicts of interest and funding sources</p>
+        <p class="text-gray-700"><strong>• Mentor junior researchers in ethical practices</strong></p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Conducting Literature Reviews</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">A literature review systematically surveys existing research on a topic. It synthesizes what is known, identifies gaps, and provides theoretical foundation for your study.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Purpose of Literature Review</h3>
+      <ul class="text-gray-700 space-y-2 mb-4">
+        <li>Establish what is already known about topic</li>
+        <li>Identify theoretical frameworks and key concepts</li>
+        <li>Discover methodological approaches used by others</li>
+        <li>Identify gaps, contradictions, or limitations in existing research</li>
+        <li>Justify significance of your research question</li>
+        <li>Position your work within scholarly conversation</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Literature Search Strategies</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Academic Databases</p>
+        <p class="text-gray-700 mb-2"><strong>Multidisciplinary:</strong> Google Scholar, Web of Science, Scopus</p>
+        <p class="text-gray-700 mb-2"><strong>Education:</strong> ERIC, Education Source</p>
+        <p class="text-gray-700 mb-2"><strong>Psychology:</strong> PsycINFO, PubMed</p>
+        <p class="text-gray-700 mb-2"><strong>Social Sciences:</strong> JSTOR, Social Science Database</p>
+        <p class="text-gray-700 mb-3"><strong>Health:</strong> PubMed, CINAHL, Cochrane Library</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Search Techniques</p>
+        <p class="text-gray-700 mb-2">• Use Boolean operators: AND (narrows), OR (expands), NOT (excludes)</p>
+        <p class="text-gray-700 mb-2">• Use quotation marks for exact phrases: "active learning"</p>
+        <p class="text-gray-700 mb-2">• Use wildcards/truncation: teach* finds teaching, teacher, teaches</p>
+        <p class="text-gray-700 mb-2">• Search subject headings/thesaurus terms for comprehensive results</p>
+        <p class="text-gray-700 mb-2">• Follow citation trails: check references of key articles; use "cited by" feature</p>
+        <p class="text-gray-700"><strong>• Set limits: publication year, peer-reviewed, language</strong></p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Organizing & Synthesizing Literature</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Reference Management</p>
+        <p class="text-gray-700 mb-3">Use software to organize sources: Zotero (free), Mendeley (free), EndNote, RefWorks. Store PDFs, take notes, generate citations automatically.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Synthesis Matrix</p>
+        <p class="text-gray-700 mb-3">Create table with studies as rows and themes/topics as columns. Facilitates comparison and identification of patterns across studies.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Organization Strategies</p>
+        <p class="text-gray-700 mb-2"><strong>Chronological:</strong> Trace development of ideas over time</p>
+        <p class="text-gray-700 mb-2"><strong>Thematic:</strong> Organize by major themes or topics (most common)</p>
+        <p class="text-gray-700 mb-2"><strong>Methodological:</strong> Group by research design or approach</p>
+        <p class="text-gray-700"><strong>Theoretical:</strong> Organize by different theoretical perspectives</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Writing the Literature Review</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-2"><strong>Introduction:</strong> Establish scope, define key terms, preview organization</p>
+        <p class="text-gray-700 mb-2"><strong>Body:</strong> Synthesize (not just summarize) research organized by themes; compare and contrast findings; identify patterns and contradictions</p>
+        <p class="text-gray-700 mb-2"><strong>Critique:</strong> Evaluate strengths and limitations of existing research; identify methodological or conceptual gaps</p>
+        <p class="text-gray-700 mb-3"><strong>Conclusion:</strong> Summarize state of knowledge; articulate how your study addresses gaps and contributes to field</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Writing Tips</p>
+        <p class="text-gray-700 mb-2">• Synthesize across studies rather than describing each study separately</p>
+        <p class="text-gray-700 mb-2">• Use transitions to show relationships between ideas</p>
+        <p class="text-gray-700 mb-2">• Critically evaluate; don't just accept all claims at face value</p>
+        <p class="text-gray-700"><strong>• Maintain focus on your research question</strong></p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Writing Research Reports & Articles</h2>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Standard Research Report Structure</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Abstract (150-250 words)</p>
+        <p class="text-gray-700 mb-3">Concise summary of entire study: purpose, methods, key findings, and implications. Written last but appears first.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Introduction</p>
+        <p class="text-gray-700 mb-2">• Establish context and importance of research problem</p>
+        <p class="text-gray-700 mb-2">• Brief literature review highlighting gaps</p>
+        <p class="text-gray-700 mb-2">• State research purpose, questions, or hypotheses</p>
+        <p class="text-gray-700 mb-3">• Preview significance and potential contributions</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Literature Review</p>
+        <p class="text-gray-700 mb-3">Comprehensive synthesis of relevant research (may be separate chapter in thesis/dissertation; integrated into introduction in journal articles).</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Method</p>
+        <p class="text-gray-700 mb-2"><strong>Participants:</strong> Who participated? Sample size, demographics, recruitment, inclusion/exclusion criteria</p>
+        <p class="text-gray-700 mb-2"><strong>Materials/Instruments:</strong> What tools/measures used? Include psychometric properties (reliability, validity)</p>
+        <p class="text-gray-700 mb-2"><strong>Procedure:</strong> Step-by-step description of what participants did; enough detail for replication</p>
+        <p class="text-gray-700 mb-3"><strong>Data Analysis:</strong> What analytical techniques applied?</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Results</p>
+        <p class="text-gray-700 mb-2">• Present findings objectively without interpretation</p>
+        <p class="text-gray-700 mb-2">• Report descriptive statistics first, then inferential statistics</p>
+        <p class="text-gray-700 mb-2">• Use tables and figures to present complex data efficiently</p>
+        <p class="text-gray-700 mb-2">• Report all planned analyses, including non-significant results</p>
+        <p class="text-gray-700 mb-3">• Include effect sizes and confidence intervals</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Discussion</p>
+        <p class="text-gray-700 mb-2">• Interpret findings in context of research questions and literature</p>
+        <p class="text-gray-700 mb-2">• Explain how results support or contradict previous research</p>
+        <p class="text-gray-700 mb-2">• Discuss theoretical and practical implications</p>
+        <p class="text-gray-700 mb-2">• Acknowledge limitations honestly and suggest how future research can address them</p>
+        <p class="text-gray-700 mb-3">• Conclude with take-home message about significance</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">References</p>
+        <p class="text-gray-700">Complete list of all cited sources formatted according to appropriate style guide (APA, MLA, Chicago, etc.).</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Tables & Figures</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">When to Use</p>
+        <p class="text-gray-700 mb-3">Use tables for exact values; use figures (charts, graphs) to show patterns and relationships. Each should be self-explanatory with clear title and notes.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Best Practices</p>
+        <p class="text-gray-700 mb-2">• Number tables and figures separately (Table 1, Figure 1)</p>
+        <p class="text-gray-700 mb-2">• Provide descriptive titles</p>
+        <p class="text-gray-700 mb-2">• Define abbreviations and symbols in notes</p>
+        <p class="text-gray-700 mb-2">• Don't duplicate information; use table OR text, not both</p>
+        <p class="text-gray-700"><strong>• Follow style guide formatting requirements precisely</strong></p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Academic Writing Style</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-2">• Use clear, concise language; avoid jargon when possible</p>
+        <p class="text-gray-700 mb-2">• Write in active voice when appropriate (especially for methods)</p>
+        <p class="text-gray-700 mb-2">• Use past tense for procedures and results; present tense for established knowledge</p>
+        <p class="text-gray-700 mb-2">• Be precise with language; avoid vague or ambiguous terms</p>
+        <p class="text-gray-700 mb-2">• Use inclusive, bias-free language respecting all groups</p>
+        <p class="text-gray-700 mb-2">• Maintain formal, objective tone; avoid colloquialisms</p>
+        <p class="text-gray-700"><strong>• Support claims with evidence; cite sources appropriately</strong></p>
+      </div>
+    </div>
+
+      <h3 class="text-xl font-semibold mt-2 text-gray-800">Common pitfalls & quick fixes</h3>
+      <ul class="text-gray-700 space-y-2 mb-4">
+        <li>Poorly defined research question — ensure it is specific, measurable, and answerable.</li>
+        <li>Inadequate sample size — conduct power analysis to determine minimum sample needed.</li>
+        <li>Confounding variables — use control groups and randomization to isolate effects.</li>
+        <li>Confirmation bias — actively seek disconfirming evidence and consider alternative explanations.</li>
+        <li>Over-generalizing findings — clearly state study limitations and scope of generalizability.</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-2 text-gray-800">Research checklist (quick)</h3>
+      <ul class="text-gray-700 space-y-2">
+        <li>☐ Clear, focused research question or hypothesis</li>
+        <li>☐ Comprehensive literature review completed</li>
+        <li>☐ Appropriate methodology selected and justified</li>
+        <li>☐ Ethical approval obtained (IRB or equivalent)</li>
+        <li>☐ Valid and reliable measurement instruments</li>
+        <li>☐ Adequate sample size and representative sampling</li>
+        <li>☐ Data collection procedures documented</li>
+        <li>☐ Appropriate statistical or analytical techniques applied</li>
+        <li>☐ Results clearly presented with tables/figures</li>
+        <li>☐ Limitations and implications discussed</li>
+        <li>☐ Proper citations and references included</li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Research Paradigms & Philosophical Foundations</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Research paradigms are worldviews or belief systems that guide how researchers approach their work. Understanding paradigms helps you make coherent methodological choices and justify your research design.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Positivism</h3>
+      <p class="text-gray-700 leading-relaxed mb-2"><strong>Core belief:</strong> Objective reality exists independently of human perception and can be measured and understood through scientific methods.</p>
+      <p class="text-gray-700 leading-relaxed mb-2"><strong>Methods:</strong> Emphasizes quantitative approaches, hypothesis testing, experimental designs, statistical analysis, and generalizability.</p>
+      <p class="text-gray-700 leading-relaxed mb-4"><strong>Example:</strong> Testing whether a new drug reduces blood pressure by comparing treatment and control groups using randomized controlled trials and statistical analysis.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Interpretivism (Constructivism)</h3>
+      <p class="text-gray-700 leading-relaxed mb-2"><strong>Core belief:</strong> Reality is socially constructed; multiple realities exist based on individuals' interpretations and experiences.</p>
+      <p class="text-gray-700 leading-relaxed mb-2"><strong>Methods:</strong> Emphasizes qualitative approaches, understanding meaning, context, and subjective experiences through interviews, observations, and textual analysis.</p>
+      <p class="text-gray-700 leading-relaxed mb-4"><strong>Example:</strong> Exploring how teachers construct their professional identities through in-depth interviews and analysis of their narratives.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Pragmatism</h3>
+      <p class="text-gray-700 leading-relaxed mb-2"><strong>Core belief:</strong> Focus on practical outcomes and "what works" to address research problems; truth is what is useful and has practical consequences.</p>
+      <p class="text-gray-700 leading-relaxed mb-2"><strong>Methods:</strong> Supports mixed methods research, combining quantitative and qualitative approaches to comprehensively answer research questions.</p>
+      <p class="text-gray-700 leading-relaxed mb-4"><strong>Example:</strong> Evaluating a community health program using both statistical outcome measures (quantitative) and participant experiences (qualitative).</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Critical Theory</h3>
+      <p class="text-gray-700 leading-relaxed mb-2"><strong>Core belief:</strong> Research should challenge power structures, expose inequalities, and promote social change; knowledge is shaped by social, political, and economic forces.</p>
+      <p class="text-gray-700 leading-relaxed mb-2"><strong>Methods:</strong> Often uses participatory action research, critical discourse analysis, and emancipatory research approaches.</p>
+      <p class="text-gray-700 leading-relaxed mb-4"><strong>Example:</strong> Examining how educational policies perpetuate social inequalities and working with marginalized communities to create equitable solutions.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Post-Positivism</h3>
+      <p class="text-gray-700 leading-relaxed mb-2"><strong>Core belief:</strong> While objective reality exists, it can only be imperfectly apprehended due to human limitations and biases.</p>
+      <p class="text-gray-700 leading-relaxed mb-2"><strong>Methods:</strong> Uses rigorous quantitative methods but acknowledges limitations; emphasizes multiple measurement strategies and triangulation.</p>
+      <p class="text-gray-700 leading-relaxed"><strong>Example:</strong> Using validated instruments, multiple data sources, and peer debriefing to study complex social phenomena while acknowledging researcher influence.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Quantitative Research Methods</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Quantitative research involves collecting and analyzing numerical data to identify patterns, test hypotheses, and make predictions. It emphasizes objectivity, measurement, and statistical analysis.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">When to use quantitative methods</h3>
+      <ul class="text-gray-700 space-y-2 mb-4">
+        <li>Testing specific hypotheses or theories</li>
+        <li>Measuring relationships between variables</li>
+        <li>Comparing groups or conditions</li>
+        <li>Generalizing findings to larger populations</li>
+        <li>Studying large samples efficiently</li>
+        <li>Establishing cause-and-effect relationships</li>
+      </ul>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Advanced Research Designs</h2>
+      <h3 class="text-xl font-semibold mt-2 text-gray-800">Experimental designs</h3>
+      <p class="text-gray-700 leading-relaxed mb-2"><strong>True experimental:</strong> Random assignment to control and experimental groups; manipulation of independent variable.</p>
+      <p class="text-gray-700 leading-relaxed mb-2"><strong>Quasi-experimental:</strong> No random assignment but includes comparison groups; useful when randomization is not feasible.</p>
+      <p class="text-gray-700 leading-relaxed mb-4"><strong>Pre-experimental:</strong> Minimal control; single group pre-test/post-test designs.</p>
+
+      <h3 class="text-xl font-semibold mt-2 text-gray-800">Non-experimental designs</h3>
+      <p class="text-gray-700 leading-relaxed mb-2"><strong>Correlational:</strong> Examines relationships between variables without manipulation.</p>
+      <p class="text-gray-700 leading-relaxed mb-2"><strong>Survey research:</strong> Descriptive or analytical studies using questionnaires or interviews.</p>
+      <p class="text-gray-700 leading-relaxed mb-2"><strong>Case study:</strong> In-depth investigation of single case or small number of cases.</p>
+      <p class="text-gray-700 leading-relaxed"><strong>Longitudinal:</strong> Data collection over extended time period to examine changes or trends.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Statistical Concepts & Tests</h2>
+      <h3 class="text-xl font-semibold mt-2 text-gray-800">Descriptive statistics</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">Summarize and describe data: mean (average), median (middle value), mode (most frequent), standard deviation (variability), range, frequency distributions.</p>
+
+      <h3 class="text-xl font-semibold mt-2 text-gray-800">Inferential statistics</h3>
+      <ul class="text-gray-700 space-y-2 mb-4">
+        <li><strong>t-test:</strong> Compare means between two groups (independent or paired samples).</li>
+        <li><strong>ANOVA:</strong> Compare means across three or more groups; identifies if at least one group differs significantly.</li>
+        <li><strong>Chi-square:</strong> Test relationships between categorical variables.</li>
+        <li><strong>Correlation:</strong> Measure strength and direction of relationship between continuous variables (Pearson's r, Spearman's rho).</li>
+        <li><strong>Regression:</strong> Predict outcome variable from one or more predictor variables; examine relationships and control for confounds.</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-2 text-gray-800">Statistical significance & effect size</h3>
+      <p class="text-gray-700 leading-relaxed mb-2"><strong>p-value:</strong> Probability of obtaining results if null hypothesis is true; typically p &lt; 0.05 indicates statistical significance.</p>
+      <p class="text-gray-700 leading-relaxed"><strong>Effect size:</strong> Magnitude of difference or relationship; Cohen's d, eta-squared, R-squared indicate practical significance beyond statistical significance.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Qualitative Analysis Techniques</h2>
+      <h3 class="text-xl font-semibold mt-2 text-gray-800">Thematic analysis</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">Identify, analyze, and report patterns (themes) within qualitative data. Steps: familiarize with data, generate initial codes, search for themes, review themes, define themes, produce report.</p>
+
+      <h3 class="text-xl font-semibold mt-2 text-gray-800">Content analysis</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">Systematic coding and categorizing of text data to identify patterns, frequencies, and relationships; can be quantitative or qualitative.</p>
+
+      <h3 class="text-xl font-semibold mt-2 text-gray-800">Grounded theory</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">Build theory from data through iterative process of data collection and analysis; uses theoretical sampling and constant comparison method.</p>
+
+      <h3 class="text-xl font-semibold mt-2 text-gray-800">Phenomenology</h3>
+      <p class="text-gray-700 leading-relaxed">Explore lived experiences and meanings individuals attach to phenomena; focus on understanding essence of experience.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Writing Research Proposals</h2>
+      <p class="text-gray-700 leading-relaxed mb-3">A research proposal outlines planned study before data collection begins. It typically includes:</p>
+      <ul class="text-gray-700 space-y-2">
+        <li><strong>Title:</strong> Concise, descriptive title indicating research focus</li>
+        <li><strong>Background:</strong> Context, significance, and rationale for study</li>
+        <li><strong>Research questions/hypotheses:</strong> Clear statement of what study aims to answer</li>
+        <li><strong>Literature review:</strong> Summary of relevant research and theoretical framework</li>
+        <li><strong>Methodology:</strong> Detailed description of research design, participants, instruments, procedures, analysis plan</li>
+        <li><strong>Timeline:</strong> Realistic schedule for completing research phases</li>
+        <li><strong>Budget:</strong> Estimated costs for materials, participant compensation, software, etc.</li>
+        <li><strong>Ethical considerations:</strong> IRB approval plan, informed consent procedures, data protection</li>
+        <li><strong>References:</strong> Complete citation list in appropriate format</li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Common Research Pitfalls & How to Avoid Them</h2>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Research Design Issues</p>
+        <p class="text-gray-700 mb-2"><strong>Problem:</strong> Poorly defined or overly broad research question</p>
+        <p class="text-gray-700 mb-3"><strong>Solution:</strong> Use SMART criteria (Specific, Measurable, Achievable, Relevant, Time-bound); narrow focus to answerable question</p>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>Problem:</strong> Inadequate sample size leading to low statistical power</p>
+        <p class="text-gray-700 mb-3"><strong>Solution:</strong> Conduct power analysis before data collection to determine minimum sample needed</p>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>Problem:</strong> Confounding variables not controlled</p>
+        <p class="text-gray-700 mb-3"><strong>Solution:</strong> Use randomization, matching, or statistical controls; identify potential confounds early</p>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>Problem:</strong> Mismatch between research question and methodology</p>
+        <p class="text-gray-700 mb-3"><strong>Solution:</strong> Ensure methodology aligns with research questions; exploratory questions need qualitative methods; causal questions need experimental designs</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Data Collection Problems</p>
+        <p class="text-gray-700 mb-2"><strong>Problem:</strong> Low response rates or high attrition</p>
+        <p class="text-gray-700 mb-3"><strong>Solution:</strong> Use multiple recruitment strategies; keep surveys short; provide incentives; send reminders</p>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>Problem:</strong> Measurement instruments with poor validity or reliability</p>
+        <p class="text-gray-700 mb-3"><strong>Solution:</strong> Use validated, established instruments when possible; pilot test new instruments</p>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>Problem:</strong> Interviewer or observer bias</p>
+        <p class="text-gray-700 mb-3"><strong>Solution:</strong> Train data collectors thoroughly; use structured protocols; check interrater reliability</p>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>Problem:</strong> Social desirability bias in self-reports</p>
+        <p class="text-gray-700 mb-3"><strong>Solution:</strong> Ensure anonymity/confidentiality; use indirect questioning; triangulate with other measures</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Analysis Errors</p>
+        <p class="text-gray-700 mb-2"><strong>Problem:</strong> Cherry-picking data or p-hacking</p>
+        <p class="text-gray-700 mb-3"><strong>Solution:</strong> Pre-register hypotheses; report all analyses; adjust significance level for multiple comparisons</p>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>Problem:</strong> Violating statistical assumptions</p>
+        <p class="text-gray-700 mb-3"><strong>Solution:</strong> Test assumptions; use non-parametric alternatives when assumptions violated</p>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>Problem:</strong> Confusing correlation with causation</p>
+        <p class="text-gray-700 mb-3"><strong>Solution:</strong> Use appropriate causal language; acknowledge limitations of correlational designs</p>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>Problem:</strong> Ignoring missing data</p>
+        <p class="text-gray-700 mb-3"><strong>Solution:</strong> Report missing data patterns; use appropriate imputation techniques</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-emerald-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Final Research Checklist</h2>
+      <p class="text-gray-700 mb-4">Use this comprehensive checklist before submitting your research:</p>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Planning & Ethics</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>☐ Clear, focused research question</li>
+          <li>☐ Comprehensive literature review completed</li>
+          <li>☐ Appropriate methodology selected and justified</li>
+          <li>☐ IRB approval obtained before data collection</li>
+          <li>☐ Informed consent procedures implemented</li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Data Collection & Analysis</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>☐ Valid and reliable measurement instruments used</li>
+          <li>☐ Adequate sample size achieved</li>
+          <li>☐ Data collection procedures documented</li>
+          <li>☐ Appropriate statistical/analytical techniques applied</li>
+          <li>☐ All analyses reported, including non-significant results</li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Writing & Reporting</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>☐ Results clearly presented with tables/figures</li>
+          <li>☐ Limitations acknowledged honestly</li>
+          <li>☐ Implications for theory and practice discussed</li>
+          <li>☐ Future research directions suggested</li>
+          <li>☐ Proper citations and references included</li>
+          <li>☐ Document proofread and peer-reviewed</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="research-methods-quiz.html" class="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to More Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

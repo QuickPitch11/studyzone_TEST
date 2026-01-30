@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="index.html" class="font-medium text-gray-700 hover:text-blue-600">Home</a>
+      <a href="signup.html" class="font-medium text-gray-700 hover:text-blue-600">Sign Up</a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="index.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Home</a>
+    <a href="signup.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Sign Up</a>
+  </div>
+</header>
+
+<main class="max-w-md mx-auto px-4 py-12">
+  <div class="text-center mb-8">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mb-6">
+      <i data-lucide="lock" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl font-bold mb-2 text-gray-800">Welcome Back</h1>
+    <p class="text-xl text-gray-600">Log in to access your learning dashboard</p>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg p-8">
+    <form id="loginForm" class="space-y-6">
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+        <input 
+          type="email" 
+          id="email" 
+          required
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="your.email@example.com"
+        >
+      </div>
+
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          required
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="Enter your password"
+        >
+      </div>
+
+      <div class="flex items-center justify-between">
+        <label class="flex items-center gap-2">
+          <input type="checkbox" id="rememberMe" class="rounded border-gray-300">
+          <span class="text-sm text-gray-600">Remember me</span>
+        </label>
+        <button type="button" id="forgotPasswordBtn" class="text-sm text-blue-600 hover:text-blue-700">Forgot password?</button>
+      </div>
+
+      <div id="errorMessage" class="hidden p-4 bg-red-100 border-l-4 border-red-500 rounded">
+        <p class="text-red-700 text-sm"></p>
+      </div>
+
+      <button 
+        type="submit" 
+        class="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition flex items-center justify-center gap-2"
+      >
+        <i data-lucide="log-in" class="w-5 h-5"></i>
+        Log In
+      </button>
+    </form>
+
+    <div class="mt-6 text-center">
+      <button 
+        id="guestBtn"
+        class="w-full px-6 py-3 bg-gray-100 text-gray-700 font-semibold rounded-lg hover:bg-gray-200 transition flex items-center justify-center gap-2 mb-4"
+      >
+        <i data-lucide="user-x" class="w-5 h-5"></i>
+        Continue as Guest
+      </button>
+    </div>
+
+    <div class="text-center">
+      <p class="text-gray-600">
+        Don't have an account? 
+        <a href="signup.html" class="text-blue-600 hover:text-blue-700 font-semibold">Sign up</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="mt-8 text-center text-sm text-gray-500">
+    <p>By logging in, you agree to our Terms of Service and Privacy Policy</p>
+  </div>
+</main>
+
+<!-- Forgot Password Modal -->
+<div id="forgotPasswordModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+  <div class="bg-white rounded-xl shadow-2xl max-w-md w-full p-8">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-bold text-gray-800">Reset Password</h2>
+      <button id="closeModalBtn" class="p-2 hover:bg-gray-100 rounded-lg transition">
+        <i data-lucide="x" class="w-6 h-6 text-gray-600"></i>
+      </button>
+    </div>
+    
+    <div id="emailStep" class="space-y-4">
+      <p class="text-gray-600">Enter your email address and we'll send you a link to reset your password.</p>
+      <div>
+        <label for="resetEmail" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+        <input 
+          type="email" 
+          id="resetEmail" 
+          required
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="your.email@example.com"
+        >
+      </div>
+      <div id="resetError" class="hidden p-4 bg-red-100 border-l-4 border-red-500 rounded">
+        <p class="text-red-700 text-sm"></p>
+      </div>
+      <div id="resetSuccess" class="hidden p-4 bg-green-100 border-l-4 border-green-500 rounded">
+        <p class="text-green-700 text-sm"></p>
+      </div>
+      <button 
+        id="sendResetBtn"
+        class="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition flex items-center justify-center gap-2"
+      >
+        <i data-lucide="mail" class="w-5 h-5"></i>
+        Send Reset Link
+      </button>
+    </div>
+    
+    <div id="resetStep" class="hidden space-y-4">
+      <p class="text-gray-600 mb-4">Enter your new password below.</p>
+      <div>
+        <label for="newPassword" class="block text-sm font-medium text-gray-700 mb-2">New Password</label>
+        <input 
+          type="password" 
+          id="newPassword" 
+          required
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="Enter new password"
+        >
+      </div>
+      <div>
+        <label for="confirmPassword" class="block text-sm font-medium text-gray-700 mb-2">Confirm Password</label>
+        <input 
+          type="password" 
+          id="confirmPassword" 
+          required
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="Confirm new password"
+        >
+      </div>
+      <div id="passwordError" class="hidden p-4 bg-red-100 border-l-4 border-red-500 rounded">
+        <p class="text-red-700 text-sm"></p>
+      </div>
+      <button 
+        id="updatePasswordBtn"
+        class="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition flex items-center justify-center gap-2"
+      >
+        <i data-lucide="check" class="w-5 h-5"></i>
+        Update Password
+      </button>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Login functionality
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const rememberMe = document.getElementById('rememberMe').checked;
+    const errorMessage = document.getElementById('errorMessage');
+    
+    // Get users from localStorage
+    const users = JSON.parse(localStorage.getItem('studyzone_users') || '[]');
+    
+    // Find user
+    const user = users.find(u => u.email === email);
+    
+    if (!user) {
+      showError('No account found with this email address');
+      return;
+    }
+    
+    if (user.password !== password) {
+      showError('Incorrect password');
+      return;
+    }
+    
+    // Successful login
+    const session = {
+      email: user.email,
+      name: user.name,
+      loginTime: new Date().toISOString(),
+      rememberMe: rememberMe
+    };
+    
+    localStorage.setItem('studyzone_session', JSON.stringify(session));
+    
+    // Redirect to dashboard or home
+    window.location.href = 'dashboard.html';
+  });
+  
+  function showError(message) {
+    const errorDiv = document.getElementById('errorMessage');
+    errorDiv.querySelector('p').textContent = message;
+    errorDiv.classList.remove('hidden');
+    
+    setTimeout(() => {
+      errorDiv.classList.add('hidden');
+    }, 5000);
+  }
+  
+  // Guest login functionality
+  document.getElementById('guestBtn').addEventListener('click', function() {
+    const guestSession = {
+      email: 'guest@studyzone.com',
+      name: 'Guest User',
+      isGuest: true,
+      loginTime: new Date().toISOString()
+    };
+    
+    localStorage.setItem('studyzone_session', JSON.stringify(guestSession));
+    window.location.href = 'index.html';
+  });
+
+  // Google Sign In - Initialize
+  function initGoogleSignIn() {
+    google.accounts.id.initialize({
+      client_id: 'YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com',
+      callback: handleGoogleSignIn
+    });
+  }
+
+  // Handle Google Sign In Response
+  function handleGoogleSignIn(response) {
+    // Decode JWT token to get user info
+    const userInfo = parseJwt(response.credential);
+    
+    const googleUser = {
+      email: userInfo.email,
+      name: userInfo.name,
+      picture: userInfo.picture,
+      provider: 'google'
+    };
+    
+    // Check if user exists
+    const users = JSON.parse(localStorage.getItem('studyzone_users') || '[]');
+    const existingUser = users.find(u => u.email === googleUser.email);
+    
+    if (!existingUser) {
+      // Create new user
+      users.push({
+        id: Date.now(),
+        name: googleUser.name,
+        email: googleUser.email,
+        picture: googleUser.picture,
+        provider: 'google',
+        grade: 'college',
+        createdAt: new Date().toISOString()
+      });
+      localStorage.setItem('studyzone_users', JSON.stringify(users));
+    }
+    
+    // Create session
+    const session = {
+      email: googleUser.email,
+      name: existingUser ? existingUser.name : googleUser.name,
+      picture: googleUser.picture,
+      loginTime: new Date().toISOString(),
+      provider: 'google'
+    };
+    
+    localStorage.setItem('studyzone_session', JSON.stringify(session));
+    window.location.href = 'dashboard.html';
+  }
+
+  // Parse JWT token
+  function parseJwt(token) {
+    const base64Url = token.split('.')[1];
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+      return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+    return JSON.parse(jsonPayload);
+  }
+
+  // Trigger Google Sign In
+  document.getElementById('googleSignInBtn').addEventListener('click', function() {
+    // Check if Google Sign In is properly configured
+    if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
+      try {
+        google.accounts.id.prompt();
+      } catch (error) {
+        console.log('Google Sign In not fully configured, using demo mode');
+        // Fallback to demo mode
+        demoGoogleSignIn();
+      }
+    } else {
+      // Use demo mode if Google library not loaded or configured
+      demoGoogleSignIn();
+    }
+  });
+
+  // Demo Google Sign In (fallback when OAuth not configured)
+  function demoGoogleSignIn() {
+    const email = prompt('Enter your email address:', 'user@gmail.com');
+    if (!email) return;
+    
+    // Check if user exists
+    const users = JSON.parse(localStorage.getItem('studyzone_users') || '[]');
+    const existingUser = users.find(u => u.email === email);
+    
+    if (!existingUser) {
+      alert('No account found with this email. Please sign up first.');
+      window.location.href = 'signup.html';
+      return;
+    }
+    
+    // Create session
+    const session = {
+      email: existingUser.email,
+      name: existingUser.name,
+      loginTime: new Date().toISOString(),
+      provider: existingUser.provider || 'google'
+    };
+    
+    localStorage.setItem('studyzone_session', JSON.stringify(session));
+    window.location.href = 'dashboard.html';
+  }
+
+  // Initialize Google Sign In when page loads
+  window.addEventListener('load', function() {
+    if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
+      try {
+        initGoogleSignIn();
+      } catch (error) {
+        console.log('Google Sign In initialization failed, demo mode available');
+      }
+    }
+  });
+
+  // Apple Sign In - Initialize
+  function initAppleSignIn() {
+    if (typeof AppleID !== 'undefined') {
+      AppleID.auth.init({
+        clientId: 'com.studyzone.web',
+        scope: 'name email',
+        redirectURI: window.location.origin + '/login.html',
+        usePopup: true
+      });
+    }
+  }
+
+  // Handle Apple Sign In Response
+  async function handleAppleSignIn(response) {
+    const { authorization, user } = response;
+    
+    // Extract user information from the response
+    const appleUser = {
+      email: user?.email || 'apple_user@privaterelay.appleid.com',
+      name: user?.name ? `${user.name.firstName} ${user.name.lastName}` : 'Apple User',
+      provider: 'apple',
+      appleId: authorization.id_token
+    };
+    
+    // Check if user exists
+    const users = JSON.parse(localStorage.getItem('studyzone_users') || '[]');
+    const existingUser = users.find(u => u.email === appleUser.email);
+    
+    if (!existingUser) {
+      // Create new user
+      users.push({
+        id: Date.now(),
+        name: appleUser.name,
+        email: appleUser.email,
+        provider: 'apple',
+        grade: 'college',
+        createdAt: new Date().toISOString()
+      });
+      localStorage.setItem('studyzone_users', JSON.stringify(users));
+    }
+    
+    // Create session
+    const session = {
+      email: appleUser.email,
+      name: existingUser ? existingUser.name : appleUser.name,
+      loginTime: new Date().toISOString(),
+      provider: 'apple'
+    };
+    
+    localStorage.setItem('studyzone_session', JSON.stringify(session));
+    window.location.href = 'dashboard.html';
+  }
+
+  // Trigger Apple Sign In
+  document.getElementById('appleSignInBtn').addEventListener('click', async function() {
+    try {
+      if (typeof AppleID !== 'undefined') {
+        const response = await AppleID.auth.signIn();
+        handleAppleSignIn(response);
+      } else {
+        console.error('Apple Sign In not loaded');
+      }
+    } catch (error) {
+      console.error('Apple Sign In error:', error);
+    }
+  });
+
+  // Initialize Apple Sign In when page loads
+  window.addEventListener('load', function() {
+    initAppleSignIn();
+  });
+  
+  // Forgot Password Modal Functionality
+  const forgotPasswordModal = document.getElementById('forgotPasswordModal');
+  const forgotPasswordBtn = document.getElementById('forgotPasswordBtn');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+  const sendResetBtn = document.getElementById('sendResetBtn');
+  const updatePasswordBtn = document.getElementById('updatePasswordBtn');
+  const emailStep = document.getElementById('emailStep');
+  const resetStep = document.getElementById('resetStep');
+  
+  let resetEmail = '';
+  
+  // Open modal
+  forgotPasswordBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    forgotPasswordModal.classList.remove('hidden');
+    emailStep.classList.remove('hidden');
+    resetStep.classList.add('hidden');
+    document.getElementById('resetEmail').value = '';
+    document.getElementById('resetError').classList.add('hidden');
+    document.getElementById('resetSuccess').classList.add('hidden');
+    lucide.createIcons();
+  });
+  
+  // Close modal
+  closeModalBtn.addEventListener('click', function() {
+    forgotPasswordModal.classList.add('hidden');
+  });
+  
+  // Close modal when clicking outside
+  forgotPasswordModal.addEventListener('click', function(e) {
+    if (e.target === forgotPasswordModal) {
+      forgotPasswordModal.classList.add('hidden');
+    }
+  });
+  
+  // Send reset link
+  sendResetBtn.addEventListener('click', function() {
+    const email = document.getElementById('resetEmail').value;
+    const resetError = document.getElementById('resetError');
+    const resetSuccess = document.getElementById('resetSuccess');
+    
+    if (!email) {
+      resetError.querySelector('p').textContent = 'Please enter your email address';
+      resetError.classList.remove('hidden');
+      resetSuccess.classList.add('hidden');
+      return;
+    }
+    
+    // Check if email exists in users
+    const users = JSON.parse(localStorage.getItem('studyzone_users') || '[]');
+    const user = users.find(u => u.email === email);
+    
+    if (!user) {
+      resetError.querySelector('p').textContent = 'No account found with this email address';
+      resetError.classList.remove('hidden');
+      resetSuccess.classList.add('hidden');
+      return;
+    }
+    
+    // Store email for password reset
+    resetEmail = email;
+    
+    // Simulate sending email (in production, this would be a server-side email service)
+    resetSuccess.querySelector('p').textContent = 'Reset link sent! Check your email for instructions.';
+    resetSuccess.classList.remove('hidden');
+    resetError.classList.add('hidden');
+    
+    // Create a reset token and store it
+    const resetToken = {
+      email: email,
+      token: Math.random().toString(36).substr(2, 9),
+      expires: new Date(Date.now() + 3600000).toISOString() // 1 hour
+    };
+    localStorage.setItem('studyzone_reset_token', JSON.stringify(resetToken));
+    
+    // For demo purposes, automatically show password reset step after 2 seconds
+    setTimeout(() => {
+      emailStep.classList.add('hidden');
+      resetStep.classList.remove('hidden');
+      lucide.createIcons();
+    }, 2000);
+  });
+  
+  // Update password
+  updatePasswordBtn.addEventListener('click', function() {
+    const newPassword = document.getElementById('newPassword').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    const passwordError = document.getElementById('passwordError');
+    
+    if (!newPassword || !confirmPassword) {
+      passwordError.querySelector('p').textContent = 'Please fill in both password fields';
+      passwordError.classList.remove('hidden');
+      return;
+    }
+    
+    if (newPassword.length < 6) {
+      passwordError.querySelector('p').textContent = 'Password must be at least 6 characters long';
+      passwordError.classList.remove('hidden');
+      return;
+    }
+    
+    if (newPassword !== confirmPassword) {
+      passwordError.querySelector('p').textContent = 'Passwords do not match';
+      passwordError.classList.remove('hidden');
+      return;
+    }
+    
+    // Get reset token
+    const resetToken = JSON.parse(localStorage.getItem('studyzone_reset_token') || '{}');
+    
+    if (!resetToken.email) {
+      passwordError.querySelector('p').textContent = 'Invalid reset token';
+      passwordError.classList.remove('hidden');
+      return;
+    }
+    
+    // Check if token is expired
+    if (new Date(resetToken.expires) < new Date()) {
+      passwordError.querySelector('p').textContent = 'Reset link has expired. Please request a new one.';
+      passwordError.classList.remove('hidden');
+      return;
+    }
+    
+    // Update user password
+    const users = JSON.parse(localStorage.getItem('studyzone_users') || '[]');
+    const userIndex = users.findIndex(u => u.email === resetToken.email);
+    
+    if (userIndex !== -1) {
+      users[userIndex].password = newPassword;
+      localStorage.setItem('studyzone_users', JSON.stringify(users));
+      
+      // Clear reset token
+      localStorage.removeItem('studyzone_reset_token');
+      
+      // Show success message and close modal
+      alert('Password successfully updated! You can now log in with your new password.');
+      forgotPasswordModal.classList.add('hidden');
+      
+      // Clear form
+      document.getElementById('newPassword').value = '';
+      document.getElementById('confirmPassword').value = '';
+    } else {
+      passwordError.querySelector('p').textContent = 'User not found. Please try again.';
+      passwordError.classList.remove('hidden');
+    }
+  });
+  
+  // Check if already logged in
+  window.addEventListener('load', function() {
+    const session = localStorage.getItem('studyzone_session');
+    if (session) {
+      const sessionData = JSON.parse(session);
+      if (sessionData.isGuest) {
+        window.location.href = 'index.html';
+      } else {
+        window.location.href = 'dashboard.html';
+      }
+    }
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

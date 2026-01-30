@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Probability and Statistics - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-teal-500 rounded-full mb-6">
+      <i data-lucide="bar-chart-3" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Probability and Statistics: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">Comprehensive exploration of data analysis and chance</p>
+  </div>
+
+  <div class="space-y-10">
+    <!-- Introduction -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-green-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Introduction to Probability and Statistics</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Probability and statistics are two closely related but distinct branches of mathematics that deal with uncertainty, randomness, and data. Probability is the mathematical study of chance and uncertainty, quantifying how likely events are to occur. It provides the theoretical foundation for understanding random phenomena, from coin flips and dice rolls to complex systems in physics, biology, economics, and engineering. Statistics is the science of collecting, organizing, analyzing, interpreting, and presenting data to make informed decisions, draw conclusions, and understand patterns in the real world. While probability deals with theoretical models of randomness, statistics deals with actual data and empirical observations, using probability theory as its foundation.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The history of probability dates back to the 17th century, when mathematicians like Blaise Pascal and Pierre de Fermat solved problems related to gambling (the "problem of points"), laying the foundation for probability theory. Later, Jacob Bernoulli developed the law of large numbers, and Pierre-Simon Laplace formalized probability theory. Statistics emerged from the need to analyze data in fields like demography, astronomy, and agriculture. The 20th century saw major developments: Ronald Fisher developed experimental design and hypothesis testing, Karl Pearson developed correlation and regression, and Jerzy Neyman and Egon Pearson developed modern hypothesis testing theory. Today, probability and statistics are essential in virtually every field: science (experimental design, hypothesis testing, data analysis), medicine (clinical trials, epidemiology, medical research), business (market research, quality control, risk management, forecasting), engineering (reliability, quality control, signal processing), social sciences (surveys, polling, social research), government (census, policy analysis, economic indicators), and everyday life (weather forecasting, insurance, gambling, decision-making under uncertainty).
+      </p>
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Key Distinctions:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Probability:</strong> Theoretical, deals with models and predictions about what should happen in ideal conditions. Answers questions like "What is the probability of rolling a 6 on a fair die?" (theoretical: 1/6). Uses probability distributions, expected values, and theoretical calculations.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Statistics:</strong> Empirical, deals with actual data and observations about what did happen or what is happening. Answers questions like "Based on 1000 die rolls, what proportion came up 6?" (empirical: observed frequency). Uses sample data, descriptive statistics, and inferential methods to draw conclusions about populations.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Relationship:</strong> Statistics uses probability theory to make inferences. For example, we use probability distributions to understand sampling distributions, confidence intervals use probability to quantify uncertainty, and hypothesis tests use probability to determine significance. Probability provides the mathematical framework that statistics applies to real-world data.</span></li>
+      </ul>
+    </div>
+
+    <!-- Probability Fundamentals -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-green-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Probability: Fundamental Concepts</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Probability quantifies uncertainty using numbers between 0 and 1 (or 0% and 100%). A probability of 0 means an event is impossible (will never occur), a probability of 1 means an event is certain (will always occur), and probabilities between 0 and 1 represent degrees of likelihood. Understanding probability requires mastering fundamental concepts: experiments, outcomes, events, sample spaces, and the rules for calculating probabilities.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Basic Definitions:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Experiment (Trial):</strong> Any process that produces an outcome. Examples: flipping a coin, rolling a die, drawing a card from a deck, measuring the height of a person, testing a drug on a patient. Experiments can be deterministic (outcome is certain, like measuring length with a ruler) or random (outcome is uncertain, like flipping a coin). Probability deals with random experiments.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Outcome:</strong> A single possible result of an experiment. Examples: heads (coin flip), 4 (die roll), ace of spades (card draw), height = 170 cm (measurement). Each outcome is a single element of the sample space.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Sample Space (S):</strong> The set of all possible outcomes of an experiment. Denoted by S. Examples: Coin flip: S = {Heads, Tails} or {H, T}. Die roll: S = {1, 2, 3, 4, 5, 6}. Two coin flips: S = {HH, HT, TH, TT} (4 outcomes). Card draw: S = {52 cards}. The sample space can be finite (countable, like die rolls) or infinite (like measuring time, which can be any positive real number).</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Event:</strong> A subset of the sample space, a collection of one or more outcomes. Denoted by capital letters (A, B, C, etc.). Examples: Event A = "rolling an even number" = {2, 4, 6} (die roll). Event B = "getting heads" = {H} (coin flip). Event C = "rolling a number greater than 4" = {5, 6}. An event occurs if any of its outcomes occurs. Simple event: contains exactly one outcome (e.g., {H}). Compound event: contains more than one outcome (e.g., {2, 4, 6}).</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Probability of an Event:</strong> Denoted P(A), the probability that event A occurs. For equally likely outcomes, P(A) = (number of outcomes in A) / (total number of outcomes in S). This is the classical (theoretical) definition. Example: P(rolling an even number) = P({2, 4, 6}) = 3/6 = 1/2 = 0.5 = 50%. Properties: 0 ≤ P(A) ≤ 1 (probability is always between 0 and 1), P(S) = 1 (probability of sample space, something must happen, is 1), P(∅) = 0 (probability of empty set, impossible event, is 0).</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Probability Rules and Formulas:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Complement Rule:</strong> P(A') = 1 - P(A), where A' (A complement, "not A") is the event that A does not occur. The complement contains all outcomes in S that are not in A. Example: If P(rain) = 0.3, then P(no rain) = 1 - 0.3 = 0.7. This is useful when it's easier to calculate the probability of the complement.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Addition Rule (Union):</strong> For any two events A and B, P(A or B) = P(A ∪ B) = P(A) + P(B) - P(A and B) = P(A) + P(B) - P(A ∩ B). The term P(A and B) is subtracted because outcomes in both A and B are counted twice (once in P(A) and once in P(B)). For mutually exclusive (disjoint) events (events that cannot both occur, A ∩ B = ∅), P(A or B) = P(A) + P(B) because P(A and B) = 0. Example: P(rolling 2 or 4) = P(2) + P(4) = 1/6 + 1/6 = 1/3 (mutually exclusive). P(rolling even or greater than 3) = P(even) + P(>3) - P(even and >3) = 3/6 + 3/6 - 2/6 = 4/6 = 2/3 (not mutually exclusive, {4, 6} is in both).</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Multiplication Rule (Intersection):</strong> For any two events A and B, P(A and B) = P(A ∩ B) = P(A) × P(B|A) = P(B) × P(A|B), where P(B|A) is the conditional probability of B given A (probability of B occurring given that A has occurred). For independent events (events where the occurrence of one does not affect the probability of the other), P(A and B) = P(A) × P(B) because P(B|A) = P(B) and P(A|B) = P(A). Example (independent): P(rolling 2 and flipping heads) = P(2) × P(heads) = (1/6) × (1/2) = 1/12 (die and coin are independent). Example (dependent): P(drawing two aces without replacement) = P(first ace) × P(second ace | first ace) = (4/52) × (3/51) = 12/2652 = 1/221 (second draw depends on first).</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Conditional Probability:</strong> P(B|A) = P(A and B) / P(A), the probability of B occurring given that A has occurred. This "updates" the probability based on new information. Example: P(ace | face card) is not applicable (ace is not a face card), but P(ace | red card) = P(ace and red) / P(red) = (2/52) / (26/52) = 2/26 = 1/13 (2 red aces out of 26 red cards). Bayes' Theorem: P(A|B) = P(B|A) × P(A) / P(B), used to update probabilities based on evidence, fundamental in statistics, machine learning, medical diagnosis, and many applications.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Independent Events:</strong> Events A and B are independent if P(A and B) = P(A) × P(B), or equivalently, P(B|A) = P(B) and P(A|B) = P(A). The occurrence of one does not affect the probability of the other. Examples: Coin flips (each flip is independent), die rolls (each roll is independent), drawing with replacement (each draw is independent). Not independent: drawing without replacement (each draw affects the next), weather on consecutive days (often dependent), stock prices on consecutive days (often dependent).</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Mutually Exclusive (Disjoint) Events:</strong> Events that cannot both occur simultaneously (A ∩ B = ∅). If A occurs, B cannot occur, and vice versa. For mutually exclusive events, P(A or B) = P(A) + P(B). Examples: Rolling 2 and rolling 5 (cannot both occur on one roll), getting heads and getting tails (cannot both occur on one flip). Note: Mutually exclusive events are NOT independent (if A occurs, P(B|A) = 0 ≠ P(B), unless P(B) = 0). Independent events are usually NOT mutually exclusive (if independent and both have positive probability, they can both occur).</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Counting Principles (Combinatorics):</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Fundamental Counting Principle:</strong> If there are m ways to do one thing and n ways to do another, there are m × n ways to do both. Extends to more events: if there are m₁, m₂, ..., mₖ ways for k events, total ways = m₁ × m₂ × ... × mₖ. Example: 3 shirts and 4 pants = 3 × 4 = 12 outfits. License plate with 3 letters and 3 digits = 26³ × 10³ = 17,576,000 possibilities (if letters and digits can repeat).</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Permutations:</strong> Arrangements of objects where order matters. Number of permutations of n objects taken r at a time: P(n, r) = n! / (n - r)! = n × (n-1) × ... × (n-r+1), where n! (n factorial) = n × (n-1) × ... × 2 × 1. Example: Arrangements of 5 people in 3 chairs: P(5, 3) = 5! / (5-3)! = 5! / 2! = 5 × 4 × 3 = 60. Permutations of all n objects: P(n, n) = n! (arrangements of all objects). Example: Arrangements of letters A, B, C: 3! = 3 × 2 × 1 = 6 (ABC, ACB, BAC, BCA, CAB, CBA).</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Combinations:</strong> Selections of objects where order does NOT matter. Number of combinations of n objects taken r at a time: C(n, r) = n! / [r!(n - r)!] = P(n, r) / r! = n choose r, also written as (n choose r) or nCr. Example: Choosing 3 people from 5 for a committee: C(5, 3) = 5! / [3!(5-3)!] = 5! / (3! × 2!) = (5 × 4 × 3 × 2 × 1) / [(3 × 2 × 1)(2 × 1)] = 120 / 12 = 10. Note: C(n, r) = C(n, n-r) (choosing r is same as choosing n-r to leave out). C(n, 0) = 1 (one way to choose nothing), C(n, n) = 1 (one way to choose everything), C(n, 1) = n (n ways to choose one).</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Applications:</strong> Permutations: passwords, license plates, race rankings, arrangements. Combinations: committees, lottery numbers, card hands, sampling without order. Example: Probability of getting a royal flush (A, K, Q, J, 10 all same suit) in 5-card poker: Number of royal flushes = 4 (one per suit). Total 5-card hands = C(52, 5) = 2,598,960. P(royal flush) = 4 / 2,598,960 ≈ 0.000154% (very rare!).</span></li>
+      </ul>
+    </div>
+
+    <!-- Probability Distributions -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-green-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Probability Distributions</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        A probability distribution describes how probabilities are distributed over the possible values of a random variable. Random variables are variables whose values depend on outcomes of random experiments. There are discrete distributions (for countable outcomes, like number of heads in coin flips) and continuous distributions (for uncountable outcomes, like height or weight measurements). Understanding distributions is crucial for statistical inference, as they describe the behavior of data and enable predictions and decision-making.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Discrete Probability Distributions:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Discrete Uniform Distribution:</strong> All outcomes equally likely. Example: Fair die: P(1) = P(2) = ... = P(6) = 1/6. Fair coin: P(H) = P(T) = 1/2. Properties: Simple, symmetric, used as baseline for comparison.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Binomial Distribution:</strong> Models the number of successes in n independent trials, each with probability p of success. Parameters: n (number of trials), p (probability of success on each trial). Probability mass function: P(X = k) = C(n, k) × pᵏ × (1-p)ⁿ⁻ᵏ, where X is number of successes, k = 0, 1, 2, ..., n. Mean (expected value): μ = np. Variance: σ² = np(1-p). Standard deviation: σ = √[np(1-p)]. Example: Flipping a fair coin 10 times, probability of exactly 6 heads: P(X = 6) = C(10, 6) × (0.5)⁶ × (0.5)⁴ = 210 × (1/64) × (1/16) = 210/1024 ≈ 0.205. Applications: Quality control (defective items), medical trials (successful treatments), surveys (yes/no responses), any situation with fixed number of independent trials with constant success probability.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Poisson Distribution:</strong> Models the number of events occurring in a fixed interval of time or space, when events occur independently at a constant average rate λ (lambda). Probability mass function: P(X = k) = (λᵏ × e⁻λ) / k!, where e ≈ 2.71828, k = 0, 1, 2, ... Mean: μ = λ. Variance: σ² = λ. Standard deviation: σ = √λ. Example: If calls arrive at a call center at average rate of 5 per hour, probability of exactly 3 calls in an hour: P(X = 3) = (5³ × e⁻⁵) / 3! = (125 × 0.006738) / 6 ≈ 0.140. Applications: Number of phone calls, emails, accidents, defects, arrivals, occurrences of rare events over time or space.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Geometric Distribution:</strong> Models the number of trials until the first success in independent trials with probability p of success. Probability mass function: P(X = k) = (1-p)ᵏ⁻¹ × p, where X is number of trials until first success, k = 1, 2, 3, ... Mean: μ = 1/p. Variance: σ² = (1-p) / p². Example: Probability of first heads on 4th flip of fair coin: P(X = 4) = (0.5)³ × (0.5) = 1/16 = 0.0625. Applications: Number of attempts until success, waiting times, reliability (time until failure).</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Continuous Probability Distributions:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Continuous Uniform Distribution:</strong> All values in an interval [a, b] equally likely. Probability density function (PDF): f(x) = 1/(b-a) for a ≤ x ≤ b, f(x) = 0 otherwise. Mean: μ = (a+b)/2. Variance: σ² = (b-a)²/12. Example: Random number between 0 and 1 (a=0, b=1): f(x) = 1 for 0 ≤ x ≤ 1. Applications: Random number generation, modeling when no value is more likely than others in a range.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Normal Distribution (Gaussian Distribution):</strong> The most important continuous distribution, bell-shaped, symmetric, described by mean μ (center) and standard deviation σ (spread). Probability density function: f(x) = (1/(σ√(2π))) × e^(-(x-μ)²/(2σ²)). Properties: Bell-shaped curve, symmetric about mean, mean = median = mode, 68-95-99.7 rule (empirical rule): approximately 68% of data within 1σ of mean, 95% within 2σ, 99.7% within 3σ. Standard normal distribution: μ = 0, σ = 1, denoted Z ~ N(0, 1). Any normal distribution can be standardized: Z = (X - μ) / σ. Applications: Heights, weights, test scores, measurement errors, many natural phenomena (central limit theorem: sums/averages tend to be normal), fundamental in statistics (sampling distributions, confidence intervals, hypothesis tests). Example: IQ scores (μ = 100, σ = 15). Probability of IQ between 85 and 115: This is μ ± 1σ, so approximately 68% (using empirical rule).</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Exponential Distribution:</strong> Models time until an event occurs in a Poisson process (constant rate λ). Probability density function: f(x) = λe^(-λx) for x ≥ 0, f(x) = 0 for x < 0. Mean: μ = 1/λ. Variance: σ² = 1/λ². Standard deviation: σ = 1/λ. Memoryless property: P(X > s+t | X > s) = P(X > t) (remaining time doesn't depend on elapsed time). Applications: Time until failure, waiting times, inter-arrival times, radioactive decay, service times.</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Expected Value (Mean) and Variance:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Expected Value (Mean) E(X) or μ:</strong> The long-run average value of a random variable. For discrete: E(X) = Σ [x × P(X = x)] (sum over all possible values). For continuous: E(X) = ∫ x × f(x) dx (integral). Interpretation: If experiment is repeated many times, the average of outcomes approaches the expected value (law of large numbers). Example: Expected value of die roll: E(X) = 1×(1/6) + 2×(1/6) + 3×(1/6) + 4×(1/6) + 5×(1/6) + 6×(1/6) = 21/6 = 3.5. Properties: E(aX + b) = aE(X) + b (linearity), E(X + Y) = E(X) + E(Y) (additivity).</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Variance Var(X) or σ²:</strong> Measures spread or variability of a random variable. Var(X) = E[(X - μ)²] = E(X²) - [E(X)]². Standard deviation: σ = √Var(X). For discrete: Var(X) = Σ [(x - μ)² × P(X = x)]. For continuous: Var(X) = ∫ (x - μ)² × f(x) dx. Properties: Var(aX + b) = a²Var(X) (scaling), Var(X + Y) = Var(X) + Var(Y) if X and Y are independent. Example: Variance of die roll: E(X²) = 1²×(1/6) + 2²×(1/6) + ... + 6²×(1/6) = 91/6. Var(X) = 91/6 - (3.5)² = 91/6 - 12.25 = 35/12 ≈ 2.92. σ = √(35/12) ≈ 1.71.</span></li>
+      </ul>
+    </div>
+
+    <!-- Descriptive Statistics -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-green-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Descriptive Statistics</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Descriptive statistics summarize and describe the main features of a dataset using measures of central tendency (where data is centered), measures of dispersion (how spread out data is), and graphical representations. Unlike inferential statistics, descriptive statistics do not make inferences about populations; they simply describe the data at hand. Descriptive statistics are the first step in any data analysis, providing a foundation for understanding patterns, identifying outliers, and making informed decisions about further analysis.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Measures of Central Tendency:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Mean (Arithmetic Mean, Average):</strong> Sum of all values divided by number of values. Formula: x̄ = (Σxᵢ) / n, where x̄ (x-bar) is sample mean, Σxᵢ is sum of all values, n is sample size. Population mean: μ = (Σxᵢ) / N, where N is population size. Properties: Uses all data, sensitive to outliers (extreme values pull mean toward them), affected by every value, sum of deviations from mean equals zero: Σ(xᵢ - x̄) = 0. Example: Data: 5, 7, 8, 10, 15. Mean = (5 + 7 + 8 + 10 + 15) / 5 = 45 / 5 = 9. When to use: Symmetric data, no extreme outliers, interval/ratio data, want measure that uses all data.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Median:</strong> Middle value when data is ordered (or average of two middle values if even number of values). To find: (1) Order data from smallest to largest, (2) If n is odd, median is middle value (position (n+1)/2), (3) If n is even, median is average of two middle values (positions n/2 and n/2 + 1). Properties: Not affected by outliers (robust), divides data into two equal halves (50% above, 50% below), uses only middle value(s), not all data. Example: Data: 5, 7, 8, 10, 15. Ordered: 5, 7, 8, 10, 15. n = 5 (odd), median = 8 (middle value). Data: 5, 7, 8, 10, 15, 20. Ordered: 5, 7, 8, 10, 15, 20. n = 6 (even), median = (8 + 10) / 2 = 9. When to use: Skewed data, presence of outliers, ordinal data, want robust measure.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Mode:</strong> Most frequently occurring value(s). A dataset can have one mode (unimodal), two modes (bimodal), multiple modes (multimodal), or no mode (all values occur once). Properties: Not affected by outliers, can be used with any level of measurement (nominal, ordinal, interval, ratio), may not exist or may not be unique. Example: Data: 5, 7, 7, 8, 10, 10, 10, 15. Mode = 10 (occurs 3 times, most frequent). When to use: Nominal data (categories), want to know most common value, data with clear peaks.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Relationship:</strong> For symmetric, unimodal data: mean ≈ median ≈ mode. For right-skewed data (tail to right): mean > median > mode (outliers pull mean right). For left-skewed data (tail to left): mean < median < mode (outliers pull mean left). The mean is pulled in the direction of the tail (skewness).</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Measures of Dispersion (Variability):</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Range:</strong> Difference between maximum and minimum values. Range = max - min. Simple but sensitive to outliers. Example: Data: 5, 7, 8, 10, 15. Range = 15 - 5 = 10.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Interquartile Range (IQR):</strong> Range of middle 50% of data. IQR = Q₃ - Q₁, where Q₁ (first quartile, 25th percentile) is median of lower half, Q₃ (third quartile, 75th percentile) is median of upper half. Q₂ (second quartile) is the median (50th percentile). IQR is robust to outliers. Example: Data: 5, 7, 8, 10, 15, 20, 25. Q₁ = 7, Q₂ (median) = 10, Q₃ = 20. IQR = 20 - 7 = 13. Outliers: Values less than Q₁ - 1.5×IQR or greater than Q₃ + 1.5×IQR are considered outliers.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Variance:</strong> Average squared deviation from mean. Sample variance: s² = Σ(xᵢ - x̄)² / (n - 1) (using n-1 for sample, Bessel's correction for unbiased estimate). Population variance: σ² = Σ(xᵢ - μ)² / N. Units are squared (e.g., cm² if data is in cm), making interpretation difficult. Larger variance = more spread out data.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Standard Deviation:</strong> Square root of variance. Sample: s = √s². Population: σ = √σ². Same units as data (e.g., cm if data is in cm), easier to interpret than variance. Measures typical distance from mean. Properties: s ≥ 0 (always non-negative), s = 0 only if all values are equal (no variability), larger s = more spread out data. Example: Data: 5, 7, 8, 10, 15. Mean = 9. Deviations: -4, -2, -1, 1, 6. Squared deviations: 16, 4, 1, 1, 36. Sum = 58. s² = 58 / (5-1) = 58/4 = 14.5. s = √14.5 ≈ 3.81. Interpretation: Typical values are about 3.81 units away from the mean of 9.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Coefficient of Variation (CV):</strong> Relative measure of variability, CV = (s / x̄) × 100% or CV = σ / μ. Useful for comparing variability across datasets with different means or units. Example: Dataset 1: mean = 10, s = 2, CV = 20%. Dataset 2: mean = 100, s = 15, CV = 15%. Dataset 2 has larger absolute variability (s = 15 vs 2) but smaller relative variability (15% vs 20%).</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Data Visualization:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Histogram:</strong> Bar chart showing frequency distribution of continuous data. X-axis: intervals (bins) of values, Y-axis: frequency (count) or relative frequency (proportion). Shows shape of distribution (symmetric, skewed, bimodal, etc.), central tendency, spread, outliers. Useful for: Understanding distribution shape, identifying patterns, detecting outliers.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Box Plot (Box-and-Whisker Plot):</strong> Shows five-number summary: minimum, Q₁, median (Q₂), Q₃, maximum. Box spans IQR (Q₁ to Q₃), line inside box is median, whiskers extend to min/max (or 1.5×IQR for outliers). Outliers shown as points. Useful for: Comparing distributions, identifying outliers, showing quartiles, showing skewness.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Scatter Plot:</strong> Plots pairs of values (x, y) as points. Shows relationship between two variables. Patterns: positive correlation (upward trend), negative correlation (downward trend), no correlation (no trend), linear relationship, nonlinear relationship. Useful for: Identifying relationships, detecting outliers, assessing correlation strength.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Bar Chart:</strong> Bars represent frequencies or values for categorical data. Height of bar represents count or value. Useful for: Comparing categories, showing frequencies, nominal/ordinal data.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Pie Chart:</strong> Circular chart divided into sectors proportional to frequencies or percentages. Useful for: Showing proportions, parts of a whole, categorical data with few categories.</span></li>
+      </ul>
+    </div>
+
+    <!-- Inferential Statistics -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-green-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Inferential Statistics</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Inferential statistics uses sample data to make inferences (estimates, predictions, conclusions) about populations. Since it's often impossible or impractical to study entire populations, we study samples and use probability theory to generalize to populations. Key concepts include sampling, sampling distributions, confidence intervals, and hypothesis testing. Inferential statistics allows us to make evidence-based decisions, test theories, and quantify uncertainty in our conclusions.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Sampling and Sampling Distributions:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Population vs. Sample:</strong> Population: entire group of interest (all individuals, objects, or measurements). Parameter: numerical characteristic of population (e.g., population mean μ, population proportion p). Sample: subset of population selected for study. Statistic: numerical characteristic of sample (e.g., sample mean x̄, sample proportion p̂). We use statistics to estimate parameters. Example: Population: all students at a university (N = 20,000). Parameter: average GPA (μ, unknown). Sample: 200 randomly selected students (n = 200). Statistic: average GPA of sample (x̄ = 3.2, known). We use x̄ = 3.2 to estimate μ.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Sampling Methods:</strong> Simple random sampling: every member has equal chance of selection, most basic method. Stratified sampling: divide population into strata (groups), sample from each stratum, ensures representation. Cluster sampling: divide population into clusters, randomly select clusters, sample all members in selected clusters. Systematic sampling: select every kth member (e.g., every 10th person). Convenience sampling: select easily accessible members (not random, may be biased). Random sampling reduces bias and allows statistical inference.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Sampling Distribution:</strong> Distribution of a statistic (e.g., sample mean) over all possible samples of the same size. Central Limit Theorem (CLT): For large sample sizes (typically n ≥ 30), the sampling distribution of the sample mean is approximately normal, regardless of the population distribution, with mean μ (same as population mean) and standard error σ/√n (standard deviation of sampling distribution, decreases as n increases). This is one of the most important theorems in statistics, enabling inference about population means. Example: Population with μ = 50, σ = 10. Sample size n = 100. Sampling distribution of x̄: approximately normal, mean = 50, standard error = 10/√100 = 1. So x̄ ~ N(50, 1²).</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Confidence Intervals:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Definition:</strong> Range of values that likely contains the true population parameter with a specified level of confidence (e.g., 95% confidence interval). Interpretation: If we repeated the sampling process many times, 95% of intervals would contain the true parameter. For a single interval, we say we are 95% confident it contains the parameter (not that the parameter has a 95% chance of being in the interval—the parameter is fixed, the interval is random).</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Confidence Interval for Mean (Large Sample, σ Known):</strong> x̄ ± z(α/2) × (σ/√n), where z(α/2) is critical value from standard normal distribution. For 95% confidence: z(0.025) = 1.96. For 90%: z(0.05) = 1.645. For 99%: z(0.005) = 2.576. Margin of error: E = z(α/2) × (σ/√n). Wider intervals = more confidence but less precision. Narrower intervals = less confidence but more precision.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Confidence Interval for Mean (σ Unknown, Use t-Distribution):</strong> x̄ ± t(α/2, n-1) × (s/√n), where t(α/2, n-1) is critical value from t-distribution with n-1 degrees of freedom. t-distribution is similar to normal but has heavier tails (more spread), accounts for uncertainty in estimating σ with s. As n increases, t-distribution approaches normal distribution. Example: Sample: n = 25, x̄ = 50, s = 10. 95% CI: 50 ± t(0.025, 24) × (10/√25) = 50 ± 2.064 × 2 = 50 ± 4.128 = (45.872, 54.128).</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Confidence Interval for Proportion:</strong> p̂ ± z(α/2) × √[p̂(1-p̂)/n], where p̂ is sample proportion. Requires: np̂ ≥ 10 and n(1-p̂) ≥ 10 (large sample). Example: Survey of 500 people, 300 support policy. p̂ = 300/500 = 0.6. 95% CI: 0.6 ± 1.96 × √[0.6(0.4)/500] = 0.6 ± 1.96 × 0.0219 = 0.6 ± 0.043 = (0.557, 0.643). We are 95% confident the true proportion is between 55.7% and 64.3%.</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Hypothesis Testing:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Null Hypothesis (H₀):</strong> Statement of no effect, no difference, or status quo. Usually what we want to test against. Example: H₀: μ = 50 (population mean is 50), H₀: p = 0.5 (population proportion is 0.5), H₀: μ₁ = μ₂ (two population means are equal).</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Alternative Hypothesis (H₁ or Hₐ):</strong> Statement of effect, difference, or what we want to prove. Can be one-tailed (directional: μ > 50, μ < 50) or two-tailed (non-directional: μ ≠ 50). Example: H₁: μ > 50 (population mean is greater than 50, one-tailed), H₁: μ ≠ 50 (population mean is not 50, two-tailed).</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Test Statistic:</strong> Calculated from sample data, measures how far sample statistic is from null hypothesis value, in standard error units. For mean (σ known): z = (x̄ - μ₀) / (σ/√n). For mean (σ unknown): t = (x̄ - μ₀) / (s/√n). For proportion: z = (p̂ - p₀) / √[p₀(1-p₀)/n]. Larger absolute value of test statistic = stronger evidence against H₀.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>P-value:</strong> Probability of observing a test statistic as extreme as (or more extreme than) the observed value, assuming H₀ is true. Small p-value (typically < 0.05) = strong evidence against H₀, reject H₀. Large p-value (typically ≥ 0.05) = weak evidence against H₀, fail to reject H₀. Common significance levels: α = 0.05 (5%), α = 0.01 (1%), α = 0.10 (10%). If p-value < α, reject H₀. If p-value ≥ α, fail to reject H₀.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Type I and Type II Errors:</strong> Type I error (α): Rejecting H₀ when it is true (false positive). Probability = α (significance level). Type II error (β): Failing to reject H₀ when it is false (false negative). Power = 1 - β (probability of correctly rejecting false H₀). Reducing α increases β (trade-off). Increasing sample size reduces both errors.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Steps in Hypothesis Testing:</strong> (1) State H₀ and H₁, (2) Choose significance level α, (3) Calculate test statistic, (4) Find p-value (or compare to critical value), (5) Make decision (reject H₀ if p < α, fail to reject if p ≥ α), (6) State conclusion in context.</span></li>
+      </ul>
+    </div>
+
+    <!-- Correlation and Regression -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-green-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Correlation and Regression</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Correlation measures the strength and direction of a linear relationship between two variables. Regression models the relationship between variables, allowing prediction of one variable from another. These techniques are fundamental for understanding relationships in data, making predictions, and identifying patterns.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Correlation:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Pearson Correlation Coefficient (r):</strong> Measures linear relationship between two quantitative variables. Range: -1 ≤ r ≤ 1. r = 1: perfect positive linear relationship (points on upward line), r = -1: perfect negative linear relationship (points on downward line), r = 0: no linear relationship (no pattern or nonlinear pattern). r > 0: positive correlation (as x increases, y tends to increase), r < 0: negative correlation (as x increases, y tends to decrease). Strength: |r| close to 1 = strong, |r| close to 0 = weak. Common interpretations: |r| > 0.7: strong, 0.3 < |r| < 0.7: moderate, |r| < 0.3: weak. Formula: r = Σ[(xᵢ - x̄)(yᵢ - ȳ)] / [√Σ(xᵢ - x̄)² × √Σ(yᵢ - ȳ)²]. Important: Correlation does NOT imply causation! Two variables can be correlated without one causing the other (confounding variables, coincidence).</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Correlation vs. Causation:</strong> Correlation: statistical relationship (variables vary together). Causation: one variable directly causes changes in another. Just because two variables are correlated does not mean one causes the other. Examples: Ice cream sales and drowning deaths are correlated (both increase in summer), but ice cream doesn't cause drowning (confounding variable: temperature/season). Shoe size and reading ability are correlated in children (both increase with age), but shoe size doesn't cause reading ability (confounding variable: age). To establish causation, need: controlled experiments, temporal order (cause before effect), elimination of confounding variables, biological/mechanistic plausibility.</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Linear Regression:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Simple Linear Regression:</strong> Models relationship between two variables using a straight line. Equation: ŷ = a + bx, where ŷ is predicted y-value, x is predictor variable, a is y-intercept, b is slope. Least squares method: finds line that minimizes sum of squared vertical distances (residuals) between observed points and line. Slope: b = r × (sᵧ / sₓ), where r is correlation, sᵧ and sₓ are standard deviations. Y-intercept: a = ȳ - b × x̄. Coefficient of determination (R²): proportion of variance in y explained by x, R² = r² (for simple regression). R² ranges from 0 to 1, higher = better fit. Example: If r = 0.8, then R² = 0.64, meaning 64% of variance in y is explained by x.</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Residuals:</strong> Differences between observed y-values and predicted ŷ-values: residual = y - ŷ. Good model: residuals are randomly scattered around zero, no patterns. Patterns in residuals suggest model inadequacy (nonlinear relationship, heteroscedasticity, outliers).</span></li>
+        <li class="flex items-start gap-3"><span class="text-green-600 font-bold">•</span><span><strong>Applications:</strong> Prediction (predicting y from x), understanding relationships, identifying trends, forecasting. Example: Predicting height from age, predicting sales from advertising spending, predicting test scores from study hours.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="probability-statistics-quiz.html" class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to More Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

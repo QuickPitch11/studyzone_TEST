@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Medical Terminology - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full mb-6">
+      <i data-lucide="file-text" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Medical Terminology: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">Comprehensive guide to healthcare language</p>
+  </div>
+
+  <div class="space-y-10">
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Word Building System</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Medical terminology is a specialized language based primarily on Greek and Latin roots, prefixes, and suffixes. This systematic approach allows healthcare professionals to communicate precisely about anatomy, physiology, diseases, procedures, and treatments. Understanding word construction enables you to decode unfamiliar terms and build new ones. Most medical terms follow a predictable pattern: prefix (optional) + root word + suffix. Combining vowels (usually "o" or "i") connect word parts when needed.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Root Words (Stems) - Core Meanings:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Cardi/o:</strong> Heart. Examples: cardiology (study of heart), cardiac (pertaining to heart), cardiologist (heart specialist), cardiomegaly (enlarged heart), electrocardiogram (ECG, heart electrical recording), pericardium (membrane around heart).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Derm/o, Dermat/o:</strong> Skin. Examples: dermatology (study of skin), dermatitis (skin inflammation), dermatologist (skin specialist), epidermis (outer skin layer), hypodermic (under skin), dermatome (skin area supplied by single nerve).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Gastr/o:</strong> Stomach. Examples: gastritis (stomach inflammation), gastroenterology (study of stomach and intestines), gastric (pertaining to stomach), gastrectomy (stomach removal), gastroscopy (stomach examination), gastroesophageal (stomach and esophagus).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Hepat/o:</strong> Liver. Examples: hepatitis (liver inflammation), hepatology (study of liver), hepatic (pertaining to liver), hepatomegaly (enlarged liver), hepatocyte (liver cell), hepatectomy (liver removal).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Nephr/o, Ren/o:</strong> Kidney. Examples: nephritis (kidney inflammation), nephrology (study of kidneys), nephron (kidney functional unit), nephrectomy (kidney removal), renal (pertaining to kidney), renin (kidney hormone).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Oste/o:</strong> Bone. Examples: osteoporosis (porous bones), osteology (study of bones), osteocyte (bone cell), osteotomy (bone incision), osteoarthritis (bone and joint inflammation), osteoblast (bone-building cell).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Pulmon/o, Pneum/o, Pneumon/o:</strong> Lung. Examples: pulmonary (pertaining to lungs), pulmonology (study of lungs), pneumonia (lung inflammation), pneumothorax (air in chest cavity), pneumonectomy (lung removal), respiratory (breathing).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Neur/o:</strong> Nerve. Examples: neurology (study of nerves), neuron (nerve cell), neuropathy (nerve disease), neuralgia (nerve pain), neurosurgeon (nerve surgeon), neurological (pertaining to nerves).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>My/o:</strong> Muscle. Examples: myology (study of muscles), myopathy (muscle disease), myalgia (muscle pain), myocardium (heart muscle), myositis (muscle inflammation), myectomy (muscle removal).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Arthr/o:</strong> Joint. Examples: arthritis (joint inflammation), arthroscopy (joint examination), arthroplasty (joint repair), arthralgia (joint pain), arthropathy (joint disease), arthrocentesis (joint fluid removal).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Enter/o:</strong> Intestine. Examples: enteritis (intestine inflammation), gastroenterology (stomach and intestine study), enterostomy (intestine opening), enteropathy (intestine disease), enteral (pertaining to intestine).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Col/o, Colon/o:</strong> Colon. Examples: colitis (colon inflammation), colonoscopy (colon examination), colectomy (colon removal), colorectal (colon and rectum), colostomy (colon opening).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Hemat/o, Hem/o:</strong> Blood. Examples: hematology (study of blood), hematoma (blood collection), hemorrhage (blood loss), hemoglobin (blood protein), hemophilia (bleeding disorder), hematopoiesis (blood cell formation).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Angi/o, Vas/o:</strong> Vessel. Examples: angiology (study of vessels), angiography (vessel imaging), vasodilation (vessel widening), vasoconstriction (vessel narrowing), angioplasty (vessel repair).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Crani/o:</strong> Skull. Examples: craniotomy (skull incision), cranium (skull), cranial (pertaining to skull), craniectomy (skull removal), intracranial (within skull).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Thorac/o, Pector/o:</strong> Chest. Examples: thoracic (pertaining to chest), thoracotomy (chest incision), thorax (chest), pectoral (pertaining to chest), thoracoscopy (chest examination).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Abdomin/o, Lapar/o:</strong> Abdomen. Examples: abdominal (pertaining to abdomen), laparotomy (abdomen incision), laparoscopy (abdomen examination), abdominoplasty (abdomen repair).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Urethr/o:</strong> Urethra. Examples: urethritis (urethra inflammation), urethral (pertaining to urethra), urethroplasty (urethra repair), urethroscopy (urethra examination).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Cyst/o:</strong> Bladder, cyst. Examples: cystitis (bladder inflammation), cystoscopy (bladder examination), cystectomy (bladder removal), cystolith (bladder stone).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Combining Forms and Vowels:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Combining Vowel:</strong> Usually "o" (sometimes "i" or "e") connects word parts. Used when suffix begins with consonant (gastr/o + -scopy = gastroscopy). Omitted when suffix begins with vowel (gastr + -itis = gastritis). Not used between two word roots (gastroenterology: gastr/o + enter/o + -ology).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Word Analysis:</strong> Break terms into components: prefix + root + suffix. Example: "hypertension" = hyper- (excessive) + tens (pressure) + -ion (condition) = excessive blood pressure. "Gastroenteritis" = gastr/o (stomach) + enter/o (intestine) + -itis (inflammation) = inflammation of stomach and intestines.</span></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Common Prefixes</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Prefixes are word parts added to the beginning of root words to modify their meaning. They typically indicate location, direction, quantity, size, or time. Understanding prefixes is crucial for interpreting medical terms and understanding relationships between conditions.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Quantity and Size Prefixes:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Hyper-:</strong> Excessive, above normal, increased. Examples: hypertension (high blood pressure), hyperglycemia (high blood sugar), hyperthyroidism (overactive thyroid), hyperthermia (elevated body temperature), hyperactive (excessively active), hyperventilation (rapid breathing).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Hypo-:</strong> Deficient, below normal, decreased. Examples: hypotension (low blood pressure), hypoglycemia (low blood sugar), hypothyroidism (underactive thyroid), hypothermia (low body temperature), hypovolemia (low blood volume), hypoxia (low oxygen).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Poly-:</strong> Many, much, excessive. Examples: polyuria (excessive urination), polydipsia (excessive thirst), polyphagia (excessive eating), polyarthritis (multiple joint inflammation), polycythemia (excess red blood cells).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Oligo-:</strong> Few, scanty, little. Examples: oliguria (scanty urination), oligomenorrhea (infrequent menstruation), oligospermia (low sperm count), oligodendrocyte (few-branched nerve cell).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Mono-:</strong> One, single. Examples: monocyte (single-nucleus white blood cell), mononucleosis (single-nucleus condition), monoplegia (paralysis of one limb), monotherapy (single treatment).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Multi-:</strong> Many, multiple. Examples: multinodular (multiple nodules), multiorgan (multiple organs), multipara (multiple births), multivitamin (multiple vitamins).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Mega-, Megalo-:</strong> Large, enlarged. Examples: megacolon (enlarged colon), megalocardia (enlarged heart), megalocyte (large cell), megakaryocyte (large nucleus cell).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Micro-:</strong> Small. Examples: microorganism (small organism), microcyte (small cell), microsurgery (small-scale surgery), microscope (instrument for viewing small objects).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Time and Position Prefixes:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Pre-:</strong> Before, in front of. Examples: prenatal (before birth), preoperative (before surgery), premature (before maturity), premenstrual (before menstruation), precancerous (before cancer), prediabetes (before diabetes).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Post-:</strong> After, behind. Examples: postoperative (after surgery), postpartum (after childbirth), postmortem (after death), postprandial (after meals), posttraumatic (after trauma), postmenopausal (after menopause).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Peri-:</strong> Around, surrounding. Examples: pericardium (around heart), peritoneum (around abdomen), perianal (around anus), periorbital (around eye), perinatal (around birth).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Circum-:</strong> Around. Examples: circumcision (cutting around), circumference (distance around), circumoral (around mouth), circumrenal (around kidney).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Location and Direction Prefixes:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Sub-:</strong> Under, below, beneath. Examples: subcutaneous (under skin), sublingual (under tongue), subclavian (under clavicle), subdural (under dura mater), submandibular (under mandible), subcostal (under ribs).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Supra-:</strong> Above, over, superior. Examples: suprarenal (above kidney/adrenal), suprapubic (above pubis), supraclavicular (above clavicle), suprascapular (above scapula).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Infra-:</strong> Below, beneath, inferior. Examples: infraorbital (below orbit), infrapatellar (below patella), infraclavicular (below clavicle), infrascapular (below scapula).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Intra-:</strong> Within, inside. Examples: intravenous (within vein), intramuscular (within muscle), intracranial (within skull), intrauterine (within uterus), intradermal (within skin), intraarticular (within joint).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Inter-:</strong> Between, among. Examples: intercostal (between ribs), intervertebral (between vertebrae), intercellular (between cells), intermuscular (between muscles), interdigital (between digits/fingers).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Trans-:</strong> Across, through, beyond. Examples: transfusion (transfer across), transplant (move across), transdermal (through skin), transurethral (through urethra), transabdominal (across abdomen), transesophageal (through esophagus).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Epi-:</strong> Upon, on, over, above. Examples: epidermis (upon skin), epigastric (above stomach), epicardium (upon heart), epinephrine (upon kidney/adrenal), epiphysis (upon bone).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Endo-:</strong> Within, inside, inner. Examples: endocrine (internal secretion), endocardium (inner heart lining), endometrium (inner uterus lining), endoscopy (internal examination), endosteum (inner bone lining).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Ecto-, Exo-:</strong> Outside, external, outer. Examples: ectopic (outside normal location), exocrine (external secretion), exoskeleton (external skeleton), exophthalmos (protruding eyes).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Para-:</strong> Beside, near, alongside, abnormal. Examples: parathyroid (beside thyroid), paranasal (beside nose), paracervical (beside cervix), paralysis (abnormal function), paranoia (abnormal thinking).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Retro-:</strong> Behind, backward, back. Examples: retroperitoneal (behind peritoneum), retrograde (backward), retrosternal (behind sternum), retroversion (backward turning).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Condition and Quality Prefixes:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>A-, An-:</strong> Without, absence of, not. Examples: aphasia (without speech), anemia (without blood/hemoglobin), anuria (without urination), anorexia (without appetite), analgesia (without pain), aseptic (without infection).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Dys-:</strong> Bad, difficult, painful, abnormal. Examples: dyspnea (difficult breathing), dysphagia (difficult swallowing), dysuria (painful urination), dysfunction (abnormal function), dystrophy (abnormal development), dysrhythmia (abnormal rhythm).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Eu-:</strong> Good, normal, well, easy. Examples: eupnea (normal breathing), euthyroid (normal thyroid), euphoria (good feeling), euglycemia (normal blood sugar).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Mal-:</strong> Bad, poor, abnormal. Examples: malabsorption (poor absorption), malnutrition (poor nutrition), malformation (abnormal formation), malalignment (poor alignment).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Brady-:</strong> Slow. Examples: bradycardia (slow heart rate), bradypnea (slow breathing), bradykinesia (slow movement), bradyarrhythmia (slow irregular rhythm).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Tachy-:</strong> Fast, rapid. Examples: tachycardia (fast heart rate), tachypnea (rapid breathing), tachyarrhythmia (fast irregular rhythm), tachyphagia (rapid eating).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Pseudo-:</strong> False, fake. Examples: pseudocyst (false cyst), pseudoparalysis (false paralysis), pseudomembrane (false membrane), pseudoscience (false science).</span></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Common Suffixes</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Suffixes are word parts added to the end of root words to modify meaning or indicate condition, procedure, or specialty. They often determine whether a term is a noun, adjective, or describes a process. Suffixes can indicate diseases, procedures, conditions, or convert words to different grammatical forms.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Disease and Condition Suffixes:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-itis:</strong> Inflammation. Examples: arthritis (joint inflammation), gastritis (stomach inflammation), hepatitis (liver inflammation), bronchitis (bronchial inflammation), appendicitis (appendix inflammation), dermatitis (skin inflammation), tonsillitis (tonsil inflammation), neuritis (nerve inflammation).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-osis:</strong> Condition, usually abnormal, process. Examples: osteoporosis (porous bone condition), thrombosis (blood clot condition), cyanosis (blue condition), neurosis (nerve condition), fibrosis (fibrous tissue condition), stenosis (narrowing condition), necrosis (death condition).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-pathy:</strong> Disease, suffering, feeling. Examples: neuropathy (nerve disease), cardiomyopathy (heart muscle disease), myopathy (muscle disease), retinopathy (retina disease), nephropathy (kidney disease), encephalopathy (brain disease), arthropathy (joint disease).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-algia, -dynia:</strong> Pain. Examples: neuralgia (nerve pain), myalgia (muscle pain), arthralgia (joint pain), cephalgia (head pain/headache), otalgia (ear pain), gastrodynia (stomach pain).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-malacia:</strong> Softening. Examples: osteomalacia (bone softening), chondromalacia (cartilage softening), encephalomalacia (brain softening), keratomalacia (cornea softening).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-sclerosis:</strong> Hardening. Examples: atherosclerosis (artery hardening), arteriosclerosis (artery hardening), multiple sclerosis (multiple hardenings), nephrosclerosis (kidney hardening).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-megaly:</strong> Enlargement. Examples: cardiomegaly (heart enlargement), hepatomegaly (liver enlargement), splenomegaly (spleen enlargement), acromegaly (extremity enlargement).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-emia:</strong> Blood condition. Examples: anemia (without/low blood), leukemia (white blood), hypoglycemia (low blood sugar), hyperglycemia (high blood sugar), uremia (urine in blood), bacteremia (bacteria in blood), septicemia (infection in blood).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-uria:</strong> Urine condition. Examples: polyuria (excessive urination), oliguria (scanty urination), anuria (no urination), hematuria (blood in urine), proteinuria (protein in urine), glycosuria (sugar in urine), pyuria (pus in urine).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-penia:</strong> Deficiency, decrease. Examples: leukopenia (low white blood cells), thrombocytopenia (low platelets), neutropenia (low neutrophils), erythropenia (low red blood cells), pancytopenia (low all blood cells).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-phagia:</strong> Eating, swallowing. Examples: dysphagia (difficult swallowing), polyphagia (excessive eating), aphagia (inability to swallow), odynophagia (painful swallowing).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-phobia:</strong> Fear. Examples: claustrophobia (fear of enclosed spaces), agoraphobia (fear of open spaces), hydrophobia (fear of water/rabies), hemophobia (fear of blood).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Surgical Procedure Suffixes:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-ectomy:</strong> Surgical removal, excision. Examples: appendectomy (appendix removal), tonsillectomy (tonsil removal), hysterectomy (uterus removal), cholecystectomy (gallbladder removal), mastectomy (breast removal), nephrectomy (kidney removal), gastrectomy (stomach removal), colectomy (colon removal).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-otomy:</strong> Surgical incision, cutting into. Examples: tracheotomy (windpipe incision), laparotomy (abdomen incision), craniotomy (skull incision), thoracotomy (chest incision), arthrotomy (joint incision), phlebotomy (vein incision/blood draw).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-ostomy:</strong> Surgical creation of opening. Examples: colostomy (colon opening), ileostomy (ileum opening), tracheostomy (trachea opening), gastrostomy (stomach opening), cystostomy (bladder opening), nephrostomy (kidney opening).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-plasty:</strong> Surgical repair, reconstruction. Examples: rhinoplasty (nose repair), angioplasty (vessel repair), arthroplasty (joint repair), mammoplasty (breast repair), otoplasty (ear repair), blepharoplasty (eyelid repair).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-rrhaphy:</strong> Suture, repair. Examples: herniorrhaphy (hernia repair), tenorrhaphy (tendon repair), myorrhaphy (muscle repair), neurorrhaphy (nerve repair).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-pexy:</strong> Surgical fixation, suspension. Examples: nephropexy (kidney fixation), hysteropexy (uterus fixation), orchiopexy (testis fixation), gastropexy (stomach fixation).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-desis:</strong> Binding, fusion. Examples: arthrodesis (joint fusion), spondylodesis (vertebra fusion), syndesmosis (ligament binding).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-centesis:</strong> Surgical puncture to remove fluid. Examples: arthrocentesis (joint fluid removal), paracentesis (abdominal fluid removal), thoracentesis (chest fluid removal), amniocentesis (amniotic fluid removal), pericardiocentesis (heart sac fluid removal).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Diagnostic and Examination Suffixes:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-scopy:</strong> Visual examination, viewing. Examples: endoscopy (internal examination), gastroscopy (stomach examination), colonoscopy (colon examination), laparoscopy (abdomen examination), arthroscopy (joint examination), cystoscopy (bladder examination), bronchoscopy (bronchial examination).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-graphy:</strong> Process of recording, writing. Examples: radiography (X-ray recording), mammography (breast imaging), angiography (vessel imaging), electrocardiography (heart electrical recording), encephalography (brain recording).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-gram:</strong> Record, recording. Examples: electrocardiogram (ECG, heart electrical record), mammogram (breast X-ray record), angiogram (vessel X-ray record), sonogram (ultrasound record), encephalogram (brain electrical record).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-graph:</strong> Instrument for recording. Examples: electrocardiograph (ECG machine), sphygmomanograph (blood pressure recorder), thermograph (temperature recorder).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Specialty and Study Suffixes:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-ology:</strong> Study of, science of. Examples: cardiology (study of heart), dermatology (study of skin), neurology (study of nerves), pathology (study of disease), psychology (study of mind), oncology (study of tumors), urology (study of urinary system), gastroenterology (study of stomach and intestines).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-ist:</strong> Specialist, one who practices. Examples: cardiologist (heart specialist), dermatologist (skin specialist), neurologist (nerve specialist), pathologist (disease specialist), psychologist (mind specialist), oncologist (cancer specialist).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-ian, -ician:</strong> Specialist. Examples: physician (medical specialist), pediatrician (child specialist), technician (technical specialist), clinician (clinical specialist).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Descriptive and Adjective Suffixes:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-ic, -ac:</strong> Pertaining to. Examples: cardiac (pertaining to heart), gastric (pertaining to stomach), hepatic (pertaining to liver), renal (pertaining to kidney), neural (pertaining to nerve), pulmonary (pertaining to lung), thoracic (pertaining to chest).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-al, -eal, -ial:</strong> Pertaining to. Examples: abdominal (pertaining to abdomen), intestinal (pertaining to intestine), arterial (pertaining to artery), venal (pertaining to vein), cranial (pertaining to skull), spinal (pertaining to spine).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-ous, -ious:</strong> Pertaining to, full of. Examples: nervous (pertaining to nerves), mucous (pertaining to mucus), serous (pertaining to serum), infectious (pertaining to infection), contagious (pertaining to contact).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-oid:</strong> Resembling, like. Examples: rheumatoid (resembling rheumatism), fibroid (resembling fiber), sigmoid (resembling S), thyroid (resembling shield), lipoid (resembling fat).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-form:</strong> Resembling, shaped like. Examples: uniform (one shape), multiform (many shapes), cruciform (cross-shaped), fusiform (spindle-shaped).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>-ia, -y:</strong> Condition, state. Examples: pneumonia (lung condition), anemia (blood condition), dysuria (urination condition), ataxia (coordination condition), dystrophy (development condition).</span></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Body Systems Terminology</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Medical terminology is organized by body systems, each with specific root words, prefixes, and suffixes. Understanding system-specific terminology is essential for accurate communication in healthcare settings. Terms often describe anatomical structures, physiological functions, pathological conditions, diagnostic procedures, and treatments within each system.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Cardiovascular System (Circulatory):</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Cardiomegaly:</strong> Enlarged heart (cardi/o + -megaly). Often indicates heart failure, hypertension, or valvular disease.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Bradycardia:</strong> Slow heart rate, typically <60 bpm (brady- + cardi/o + -ia). Can be normal in athletes or indicate heart block, medication effects, or hypothyroidism.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Tachycardia:</strong> Fast heart rate, typically >100 bpm (tachy- + cardi/o + -ia). May indicate stress, fever, arrhythmias, or heart disease.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Myocardial Infarction (MI):</strong> Heart attack, death of heart muscle due to blocked coronary artery (myocardi/o + -al, infarct + -ion). Critical emergency requiring immediate treatment.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Arrhythmia:</strong> Abnormal heart rhythm (a- + rhythm + -ia). Includes atrial fibrillation, ventricular tachycardia, bradyarrhythmias.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Hypertension:</strong> High blood pressure (hyper- + tens + -ion). Primary (essential) or secondary (caused by another condition).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Hypotension:</strong> Low blood pressure (hypo- + tens + -ion). May cause dizziness, fainting, shock.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Atherosclerosis:</strong> Hardening/narrowing of arteries due to plaque (athero- + scler/o + -osis). Leading cause of heart disease and stroke.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Angina Pectoris:</strong> Chest pain due to reduced blood flow to heart (angina = pain, pectoris = chest). Often occurs with exertion.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Cardiac Catheterization:</strong> Procedure to examine heart and blood vessels (cardi/o + -ac, catheter + -ization). Used for diagnosis and treatment.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Coronary Artery Bypass Graft (CABG):</strong> Surgical procedure to bypass blocked coronary arteries (coronary = crown-like, artery, bypass, graft).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Angioplasty:</strong> Vessel repair, typically balloon dilation of narrowed artery (angi/o + -plasty). Often includes stent placement.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Thrombosis:</strong> Blood clot formation (thromb/o + -osis). Deep vein thrombosis (DVT), coronary thrombosis.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Embolism:</strong> Blockage of vessel by traveling clot or foreign material (embol + -ism). Pulmonary embolism (PE) is life-threatening.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Respiratory System:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Pneumonia:</strong> Lung inflammation, usually infectious (pneumon/o + -ia). Can be bacterial, viral, or fungal. Community-acquired or hospital-acquired.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Bronchitis:</strong> Bronchial tube inflammation (bronch/o + -itis). Acute (short-term, often viral) or chronic (long-term, often from smoking).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Dyspnea:</strong> Difficulty breathing, shortness of breath (dys- + -pnea). Common symptom of respiratory, cardiac, or other conditions.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Eupnea:</strong> Normal breathing (eu- + -pnea). Baseline respiratory rate 12-20 breaths/min in adults.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Apnea:</strong> Absence of breathing (a- + -pnea). Sleep apnea (repeated episodes during sleep), respiratory arrest.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Tachypnea:</strong> Rapid breathing (tachy- + -pnea). >20 breaths/min, may indicate fever, anxiety, or respiratory distress.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Bradypnea:</strong> Slow breathing (brady- + -pnea). <12 breaths/min, may indicate drug overdose, brain injury, or metabolic issues.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Asthma:</strong> Chronic inflammatory airway disease causing reversible bronchospasm. Characterized by wheezing, dyspnea, chest tightness.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Chronic Obstructive Pulmonary Disease (COPD):</strong> Progressive lung disease including emphysema and chronic bronchitis. Usually caused by smoking.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Emphysema:</strong> Destruction of alveoli, causing air trapping (emphysema = inflation). Type of COPD, leads to barrel chest, dyspnea.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Pneumothorax:</strong> Air in pleural space, collapsed lung (pneum/o + thorax). Spontaneous or traumatic, requires chest tube.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Pleural Effusion:</strong> Fluid accumulation in pleural space (pleur/o + -al, effusion). May be transudate or exudate, causes dyspnea.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Tracheostomy:</strong> Surgical opening in trachea (trache/o + -ostomy). Provides airway, used for long-term ventilation or airway obstruction.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Bronchoscopy:</strong> Visual examination of bronchi (bronch/o + -scopy). Used for diagnosis, biopsy, or removal of foreign bodies.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Pulmonary Embolism (PE):</strong> Blockage of pulmonary artery by clot (pulmon/o + -ary, embol + -ism). Life-threatening, causes sudden dyspnea, chest pain.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Digestive System (Gastrointestinal):</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Gastritis:</strong> Stomach inflammation (gastr/o + -itis). Acute or chronic, caused by H. pylori, NSAIDs, alcohol, stress.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Gastroenteritis:</strong> Stomach and intestine inflammation (gastr/o + enter/o + -itis). "Stomach flu," causes nausea, vomiting, diarrhea.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Hepatitis:</strong> Liver inflammation (hepat/o + -itis). Types: A (viral, food/water), B (blood/sexual), C (blood), alcoholic, autoimmune.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Cholecystectomy:</strong> Gallbladder removal (cholecyst/o + -ectomy). Common for gallstones (cholelithiasis), can be laparoscopic or open.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Cholelithiasis:</strong> Gallstones (chole- + lith + -iasis). Can cause biliary colic, cholecystitis, or be asymptomatic.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Colitis:</strong> Colon inflammation (col/o + -itis). Types: ulcerative colitis (UC), Crohn's disease, infectious, ischemic.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Appendicitis:</strong> Appendix inflammation (appendic/o + -itis). Surgical emergency, requires appendectomy to prevent rupture.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Gastroesophageal Reflux Disease (GERD):</strong> Chronic acid reflux (gastr/o + esophag/o + -eal, reflux). Causes heartburn, can lead to Barrett's esophagus.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Peptic Ulcer Disease (PUD):</strong> Ulcers in stomach or duodenum (pept/o + -ic, ulcer). Caused by H. pylori or NSAIDs.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Diverticulitis:</strong> Inflammation of diverticula (pouches) in colon (diverticul/o + -itis). Causes abdominal pain, fever, can lead to perforation.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Ileus:</strong> Intestinal obstruction or paralysis (ile/o + -us). Paralytic ileus (functional) or mechanical obstruction.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Colonoscopy:</strong> Visual examination of colon (colon/o + -scopy). Screening for polyps and cancer, diagnostic for bleeding or symptoms.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Endoscopy:</strong> Internal examination, typically upper GI (end/o + -scopy). Gastroscopy examines esophagus, stomach, duodenum.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Laparoscopy:</strong> Abdominal examination through small incisions (lapar/o + -scopy). Minimally invasive surgery, faster recovery.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Hernia:</strong> Protrusion of organ through wall. Types: inguinal, hiatal, umbilical, incisional. May require herniorrhaphy (repair).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Nervous System:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Neuralgia:</strong> Nerve pain (neur/o + -algia). Trigeminal neuralgia, postherpetic neuralgia (after shingles).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Neuropathy:</strong> Nerve disease (neur/o + -pathy). Peripheral neuropathy (diabetic, alcoholic), autonomic neuropathy.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Encephalitis:</strong> Brain inflammation (encephal/o + -itis). Viral (herpes, West Nile) or bacterial, causes fever, headache, confusion.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Meningitis:</strong> Meninges (brain/spinal cord covering) inflammation (mening/o + -itis). Bacterial (life-threatening) or viral, causes stiff neck, fever.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Stroke (Cerebrovascular Accident, CVA):</strong> Brain damage from interrupted blood flow. Ischemic (clot) or hemorrhagic (bleeding).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Transient Ischemic Attack (TIA):</strong> Temporary stroke symptoms (transient, isch/o + -emia, attack). "Mini-stroke," warning sign of future stroke.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Epilepsy:</strong> Recurrent seizures (epilepsy = seizure). Various types: generalized, partial, absence seizures.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Paralysis:</strong> Loss of muscle function (para- + -lysis). Hemiplegia (one side), paraplegia (lower body), quadriplegia (all limbs).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Paresis:</strong> Partial paralysis, weakness (paresis = letting go). Hemiparesis (one-side weakness), monoparesis (one-limb weakness).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Dementia:</strong> Progressive cognitive decline (de- + ment + -ia). Alzheimer's disease, vascular dementia, Lewy body dementia.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Multiple Sclerosis (MS):</strong> Autoimmune demyelinating disease (multiple, scler/o + -osis). Causes neurological symptoms, relapses and remissions.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Parkinson's Disease:</strong> Progressive movement disorder. Characterized by tremor, rigidity, bradykinesia (slow movement), postural instability.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Electroencephalogram (EEG):</strong> Brain electrical activity recording (electr/o + encephal/o + -gram). Used for epilepsy diagnosis, brain death determination.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Lumbar Puncture (LP):</strong> Spinal tap, CSF collection from lumbar spine (lumb/o + -ar, puncture). Diagnoses meningitis, measures CSF pressure.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Musculoskeletal System:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Arthritis:</strong> Joint inflammation (arthr/o + -itis). Osteoarthritis (wear-and-tear), rheumatoid arthritis (autoimmune), gout (crystal deposition).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Osteoporosis:</strong> Porous bones, decreased bone density (oste/o + por/o + -osis). Risk of fractures, common in postmenopausal women.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Osteoarthritis (OA):</strong> Degenerative joint disease (oste/o + arthr/o + -itis). "Wear-and-tear" arthritis, most common type.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Rheumatoid Arthritis (RA):</strong> Autoimmune joint disease (rheumat/o + -oid, arthr/o + -itis). Symmetric joint involvement, systemic disease.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Myalgia:</strong> Muscle pain (my/o + -algia). Common in viral infections, fibromyalgia, overuse injuries.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Myositis:</strong> Muscle inflammation (my/o + -itis). Polymyositis (multiple muscles), dermatomyositis (muscle and skin).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Fracture:</strong> Broken bone. Types: closed (simple), open (compound), comminuted (shattered), greenstick (incomplete, children).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Dislocation:</strong> Joint displacement (dis- + locat + -ion). Shoulder, hip, finger dislocations require reduction (realignment).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Sprain:</strong> Ligament injury (stretch or tear). Ankle, knee, wrist sprains common in sports.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Strain:</strong> Muscle or tendon injury (stretch or tear). Back strain, hamstring strain.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Arthroscopy:</strong> Joint examination (arthr/o + -scopy). Minimally invasive, used for diagnosis and treatment (meniscus repair, ACL reconstruction).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Arthroplasty:</strong> Joint replacement (arthr/o + -plasty). Total hip replacement (THR), total knee replacement (TKR).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Osteomyelitis:</strong> Bone infection (oste/o + myel/o + -itis). Usually bacterial, requires antibiotics, may need surgical debridement.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Urinary System:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Nephritis:</strong> Kidney inflammation (nephr/o + -itis). Glomerulonephritis (glomeruli), pyelonephritis (kidney and renal pelvis, usually bacterial).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Cystitis:</strong> Bladder inflammation (cyst/o + -itis). Usually bacterial (UTI), causes dysuria, frequency, urgency.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Urethritis:</strong> Urethra inflammation (urethr/o + -itis). Can be infectious (gonorrhea, chlamydia) or non-infectious.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Nephrolithiasis:</strong> Kidney stones (nephr/o + lith + -iasis). Renal calculi, can cause severe pain (renal colic), hematuria.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Urolithiasis:</strong> Stones in urinary tract (ur/o + lith + -iasis). Includes kidney, ureter, bladder stones.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Renal Failure:</strong> Kidney function loss (ren/o + -al, failure). Acute (sudden) or chronic (progressive), may require dialysis or transplant.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Hematuria:</strong> Blood in urine (hemat/o + -uria). Gross (visible) or microscopic, can indicate infection, stones, cancer, trauma.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Proteinuria:</strong> Protein in urine (protein + -uria). Indicates kidney damage, nephrotic syndrome, or other conditions.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Dysuria:</strong> Painful urination (dys- + -uria). Common in UTIs, urethritis, bladder infections.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Polyuria:</strong> Excessive urination (poly- + -uria). Diabetes, diuretics, kidney disease.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Oliguria:</strong> Scanty urination (olig/o + -uria). <400ml/day, indicates kidney dysfunction, dehydration, obstruction.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Anuria:</strong> No urination (an- + -uria). <100ml/day, severe kidney failure, obstruction, critical condition.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Incontinence:</strong> Loss of bladder control (in- + continence). Stress, urge, overflow, functional incontinence.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Dialysis:</strong> Artificial kidney function (dia- + -lysis). Hemodialysis (blood) or peritoneal dialysis (abdomen), for renal failure.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Cystoscopy:</strong> Bladder examination (cyst/o + -scopy). Diagnoses tumors, stones, infections, biopsies tissue.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Integumentary System (Skin):</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Dermatitis:</strong> Skin inflammation (derm/o + -itis). Contact (irritant/allergic), atopic (eczema), seborrheic.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Eczema (Atopic Dermatitis):</strong> Chronic inflammatory skin condition. Itchy, red, scaly patches, common in children.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Psoriasis:</strong> Chronic autoimmune skin disease. Red, scaly plaques, often on elbows, knees, scalp.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Cellulitis:</strong> Deep skin and subcutaneous tissue infection (cellul/o + -itis). Bacterial, causes redness, warmth, swelling, pain.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Melanoma:</strong> Malignant skin cancer from melanocytes (melan/o + -oma). Most dangerous skin cancer, requires early detection.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Basal Cell Carcinoma (BCC):</strong> Most common skin cancer (bas/o + -al, cell, carcin/o + -oma). Rarely metastasizes, locally invasive.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Squamous Cell Carcinoma (SCC):</strong> Second most common skin cancer (squam/o + -ous, cell, carcin/o + -oma). Can metastasize if advanced.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Ulcer:</strong> Open sore, tissue loss. Pressure ulcers (bedsores), venous ulcers, diabetic foot ulcers.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Abscess:</strong> Localized pus collection. Skin abscess, requires incision and drainage (I&D).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Biopsy:</strong> Tissue sample removal for examination (bio- + -opsy). Punch biopsy, excisional biopsy, needle biopsy.</span></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Directional and Positional Terms</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Anatomical directional terms describe the position and relationship of body structures. These terms are standardized and always refer to the anatomical position (standing upright, facing forward, arms at sides, palms forward). Understanding these terms is essential for accurate communication about body location, surgical procedures, and diagnostic findings.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Vertical Direction Terms:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Superior (Cranial, Cephalic):</strong> Above, toward head, upper. Examples: The heart is superior to the stomach. The cranial cavity contains the brain. Cephalic refers to head region.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Inferior (Caudal):</strong> Below, toward feet, lower. Examples: The stomach is inferior to the heart. The caudal region is toward the tail (coccyx).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Proximal:</strong> Nearer to point of attachment or origin. Examples: The elbow is proximal to the wrist. The proximal end of the femur attaches to the hip.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Distal:</strong> Farther from point of attachment or origin. Examples: The wrist is distal to the elbow. The distal end of the femur is at the knee.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Front-Back Direction Terms:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Anterior (Ventral):</strong> Front, toward front of body. Examples: The sternum is anterior to the heart. Ventral refers to belly side. Anterior view shows front of body.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Posterior (Dorsal):</strong> Back, toward back of body. Examples: The spine is posterior to the heart. Dorsal refers to back side. Posterior view shows back of body.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Side-to-Side Direction Terms:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Medial:</strong> Toward midline of body, inner. Examples: The heart is medial to the lungs. The medial side of the knee faces the other knee.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Lateral:</strong> Away from midline, outer. Examples: The arms are lateral to the trunk. The lateral side of the knee faces outward.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Ipsilateral:</strong> Same side of body. Examples: The right arm and right leg are ipsilateral. Ipsilateral hemiplegia affects same side.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Contralateral:</strong> Opposite side of body. Examples: Right arm and left leg are contralateral. Contralateral hemiplegia affects opposite side.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Depth Terms:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Superficial:</strong> Near surface, external. Examples: The skin is superficial to muscles. Superficial veins are near skin surface.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Deep:</strong> Far from surface, internal. Examples: Deep veins are within muscles. Deep structures are protected by superficial layers.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Body Planes:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Sagittal Plane:</strong> Vertical plane dividing body into left and right. Midsagittal (median) divides equally. Parasagittal is off-center.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Frontal (Coronal) Plane:</strong> Vertical plane dividing body into anterior and posterior (front and back).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Transverse (Horizontal, Axial) Plane:</strong> Horizontal plane dividing body into superior and inferior (upper and lower). Cross-sectional view.</span></li>
+      </ul>
+    </div>
+    
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Medical Abbreviations and Acronyms</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Medical abbreviations and acronyms are used extensively in healthcare documentation to save time and space. However, they can lead to errors if misunderstood. Always verify abbreviations in context, and be aware that some abbreviations have multiple meanings. Many institutions maintain "do not use" lists for dangerous abbreviations.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Common Medical Abbreviations:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Vital Signs:</strong> BP (blood pressure), HR (heart rate), RR (respiratory rate), T (temperature), O₂ sat (oxygen saturation), BMI (body mass index).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Routes of Administration:</strong> PO (by mouth, per os), IV (intravenous), IM (intramuscular), SC/SQ (subcutaneous), ID (intradermal), PR (per rectum), SL (sublingual), IN (intranasal), TOP (topical).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Frequency:</strong> QD (once daily), BID (twice daily), TID (three times daily), QID (four times daily), QHS (at bedtime), PRN (as needed), STAT (immediately), AC (before meals), PC (after meals).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Diagnostic Tests:</strong> CBC (complete blood count), CMP (comprehensive metabolic panel), UA (urinalysis), CXR (chest X-ray), CT (computed tomography), MRI (magnetic resonance imaging), ECG/EKG (electrocardiogram), EEG (electroencephalogram).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Conditions:</strong> MI (myocardial infarction/heart attack), CVA (cerebrovascular accident/stroke), COPD (chronic obstructive pulmonary disease), CHF (congestive heart failure), DM (diabetes mellitus), HTN (hypertension), UTI (urinary tract infection), DVT (deep vein thrombosis), PE (pulmonary embolism).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Procedures:</strong> CABG (coronary artery bypass graft), TURP (transurethral resection of prostate), TAH (total abdominal hysterectomy), ORIF (open reduction internal fixation), I&D (incision and drainage).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Units:</strong> mg (milligram), g (gram), kg (kilogram), mL (milliliter), L (liter), mEq (milliequivalent), IU (international unit), % (percent).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Patient Status:</strong> NPO (nothing by mouth, nil per os), AMA (against medical advice), DNR (do not resuscitate), DNI (do not intubate), SOB (shortness of breath), DOE (dyspnea on exertion).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Dangerous Abbreviations (Often Prohibited):</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>U or u:</strong> Can be misread as "0" (zero) or "4" (four). Use "units" instead.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>IU:</strong> Can be misread as "IV" (intravenous) or "10." Use "international units" or spell out.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>QD, QOD:</strong> Can be misread. Use "daily" or "every other day" instead.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Trailing Zero:</strong> 5.0 mg can be misread as 50 mg. Use 5 mg instead.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Missing Leading Zero:</strong> .5 mg can be misread as 5 mg. Use 0.5 mg instead.</span></li>
+      </ul>
+    </div>
+    
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Medical Specialties and Practitioners</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Medical specialties focus on specific body systems, age groups, or types of conditions. Each specialty has its own terminology and abbreviations. Understanding specialty terms helps in communication and documentation within healthcare teams.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Medical Specialties:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Cardiology:</strong> Heart and cardiovascular system (cardi/o + -ology). Cardiologist treats heart disease, hypertension, arrhythmias, performs cardiac catheterization.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Pulmonology:</strong> Respiratory system (pulmon/o + -ology). Pulmonologist treats asthma, COPD, pneumonia, lung cancer, performs bronchoscopy.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Gastroenterology:</strong> Digestive system (gastr/o + enter/o + -ology). Gastroenterologist treats GERD, ulcers, IBD, liver disease, performs endoscopy, colonoscopy.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Nephrology:</strong> Kidneys and urinary system (nephr/o + -ology). Nephrologist treats kidney disease, renal failure, hypertension, manages dialysis.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Neurology:</strong> Nervous system (neur/o + -ology). Neurologist treats stroke, epilepsy, MS, Parkinson's, dementia, performs EEG, interprets brain imaging.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Dermatology:</strong> Skin (derm/o + -ology). Dermatologist treats skin cancer, eczema, psoriasis, performs biopsies, Mohs surgery.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Orthopedics:</strong> Musculoskeletal system (orth/o + ped/o + -ics). Orthopedic surgeon treats fractures, joint replacement, sports injuries, performs arthroscopy.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Urology:</strong> Urinary system and male reproductive system (ur/o + -ology). Urologist treats kidney stones, prostate disease, incontinence, performs cystoscopy.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Oncology:</strong> Cancer (onc/o + -ology). Medical oncologist (chemotherapy), surgical oncologist (surgery), radiation oncologist (radiation therapy).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Endocrinology:</strong> Hormones and endocrine system (endocrin/o + -ology). Endocrinologist treats diabetes, thyroid disease, adrenal disorders, metabolic conditions.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Rheumatology:</strong> Joints, connective tissue, autoimmune diseases (rheumat/o + -ology). Rheumatologist treats arthritis, lupus, fibromyalgia, autoimmune conditions.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Hematology:</strong> Blood and blood-forming tissues (hemat/o + -ology). Hematologist treats anemia, bleeding disorders, blood cancers, clotting disorders.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Pathology:</strong> Disease diagnosis through tissue/fluid analysis (path/o + -ology). Pathologist examines biopsies, autopsies, interprets lab results.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Radiology:</strong> Medical imaging (radi/o + -ology). Radiologist interprets X-rays, CT, MRI, ultrasound, performs interventional procedures.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Anesthesiology:</strong> Anesthesia and pain management (an- + esthesi/o + -ology). Anesthesiologist administers anesthesia, manages pain, critical care.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Emergency Medicine:</strong> Acute care, emergencies. Emergency physician treats trauma, acute illness, performs life-saving procedures.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Internal Medicine:</strong> Adult medicine, primary care. Internist manages chronic conditions, coordinates care, preventive medicine.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Pediatrics:</strong> Children's medicine (ped/o + -iatrics). Pediatrician treats infants, children, adolescents, developmental issues.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Geriatrics:</strong> Elderly medicine (ger/o + -iatrics). Geriatrician manages age-related conditions, polypharmacy, functional decline.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Obstetrics/Gynecology (OB/GYN):</strong> Women's reproductive health. Obstetrician (pregnancy, childbirth), Gynecologist (reproductive system, diseases).</span></li>
+      </ul>
+    </div>
+    
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Diagnostic and Laboratory Terminology</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Diagnostic terminology describes tests, procedures, and findings used to identify diseases and conditions. Laboratory terms describe blood, urine, and other body fluid analyses. Understanding these terms is essential for interpreting test results and understanding diagnostic processes.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Common Diagnostic Procedures:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Biopsy:</strong> Tissue sample removal for microscopic examination (bio- + -opsy). Types: needle biopsy, excisional biopsy, punch biopsy, core biopsy. Used to diagnose cancer, infections, inflammatory conditions.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Endoscopy:</strong> Internal examination using flexible scope (end/o + -scopy). Upper endoscopy (EGD: esophagogastroduodenoscopy), colonoscopy, bronchoscopy, cystoscopy. Allows visualization, biopsy, and some treatments.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Imaging Studies:</strong> Radiography (X-ray), computed tomography (CT scan), magnetic resonance imaging (MRI), ultrasound (sonography), nuclear medicine scans (PET, bone scan). Each provides different information about body structures.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Electrocardiogram (ECG/EKG):</strong> Heart electrical activity recording (electr/o + cardi/o + -gram). Diagnoses arrhythmias, heart attacks, heart block, chamber enlargement.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Electroencephalogram (EEG):</strong> Brain electrical activity recording (electr/o + encephal/o + -gram). Diagnoses epilepsy, brain death, sleep disorders, encephalopathies.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Lumbar Puncture (LP, Spinal Tap):</strong> CSF collection from lumbar spine (lumb/o + -ar, puncture). Diagnoses meningitis, measures CSF pressure, detects bleeding, analyzes CSF composition.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Arterial Blood Gas (ABG):</strong> Blood sample from artery. Measures pH, oxygen, carbon dioxide, bicarbonate. Assesses acid-base balance, respiratory function.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Laboratory Tests and Values:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Complete Blood Count (CBC):</strong> Measures red blood cells (RBC), white blood cells (WBC), platelets, hemoglobin (Hgb), hematocrit (Hct). Diagnoses anemia, infection, bleeding disorders.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Comprehensive Metabolic Panel (CMP):</strong> Measures glucose, electrolytes (Na, K, Cl, CO₂), kidney function (BUN, creatinine), liver function (AST, ALT, bilirubin, albumin). Assesses metabolic status, organ function.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Lipid Panel:</strong> Measures cholesterol (total, LDL, HDL), triglycerides. Assesses cardiovascular risk, guides treatment for hyperlipidemia.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Urinalysis (UA):</strong> Examines urine for appearance, pH, specific gravity, protein, glucose, ketones, blood, white blood cells, bacteria, casts, crystals. Diagnoses UTIs, kidney disease, diabetes.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Culture and Sensitivity (C&S):</strong> Grows microorganisms from samples (blood, urine, sputum, wound) and tests antibiotic effectiveness. Guides antibiotic selection.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Tumor Markers:</strong> Blood tests for substances produced by cancers. Examples: PSA (prostate), CA-125 (ovarian), CEA (colorectal), AFP (liver). Used for screening, monitoring treatment, detecting recurrence.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Coagulation Studies:</strong> PT (prothrombin time), INR (international normalized ratio), PTT (partial thromboplastin time), platelet count. Assesses bleeding risk, monitors anticoagulation therapy.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Pathological Findings Terminology:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Benign:</strong> Non-cancerous, not malignant. Benign tumors do not invade or metastasize, but may cause problems by size or location.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Malignant:</strong> Cancerous, invasive, can metastasize. Malignant tumors invade surrounding tissue and spread to distant sites.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Metastasis:</strong> Spread of cancer to distant sites (meta- + stasis). Metastatic disease indicates advanced cancer, requires systemic treatment.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Acute:</strong> Sudden onset, short duration. Acute conditions develop quickly and resolve or become chronic.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Chronic:</strong> Long duration, persistent. Chronic conditions last months to years, may require ongoing management.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Idiopathic:</strong> Unknown cause (idi/o + path/o + -ic). Many conditions are idiopathic despite extensive investigation.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Iatrogenic:</strong> Caused by medical treatment (iatr/o + gen/o + -ic). Iatrogenic infections, complications from procedures or medications.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Etiology:</strong> Cause of disease (eti/o + -ology). Understanding etiology guides treatment and prevention.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Pathogenesis:</strong> Development of disease (path/o + gen/o + -esis). Describes how disease develops from cause to manifestation.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Prognosis:</strong> Predicted outcome of disease (pro- + gnosis). Good prognosis (favorable), poor prognosis (unfavorable), guarded prognosis (uncertain).</span></li>
+      </ul>
+    </div>
+    
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Clinical Applications and Word Analysis</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Medical terminology is applied in clinical settings for documentation, communication, and patient care. Understanding how to analyze and construct medical terms is essential for healthcare professionals. Word analysis involves breaking terms into components and understanding how they combine to create meaning.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Word Analysis Technique:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Step 1 - Identify Suffix:</strong> Start from the end. Suffix often indicates procedure, condition, or specialty. Example: "gastritis" → suffix is "-itis" (inflammation).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Step 2 - Identify Root:</strong> Core meaning, usually in middle. Example: "gastritis" → root is "gastr" (stomach).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Step 3 - Identify Prefix:</strong> Beginning of word, modifies meaning. Example: "hypertension" → prefix is "hyper-" (excessive).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Step 4 - Combine Meanings:</strong> Read from suffix backward: condition/procedure + root + prefix. Example: "gastritis" = inflammation of stomach. "Hypertension" = excessive pressure condition.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Complex Terms:</strong> Multiple roots require careful analysis. Example: "gastroenteritis" = gastr/o (stomach) + enter/o (intestine) + -itis (inflammation) = inflammation of stomach and intestines.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Common Term Examples - Analysis:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Cardiomyopathy:</strong> Cardi/o (heart) + my/o (muscle) + -pathy (disease) = heart muscle disease. Types: dilated, hypertrophic, restrictive.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Hepatomegaly:</strong> Hepat/o (liver) + -megaly (enlargement) = enlarged liver. Causes: hepatitis, heart failure, cancer, fatty liver.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Nephrolithiasis:</strong> Nephr/o (kidney) + lith (stone) + -iasis (condition) = kidney stones. Can cause renal colic (severe pain), hematuria.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Osteoarthritis:</strong> Oste/o (bone) + arthr/o (joint) + -itis (inflammation) = bone and joint inflammation. Degenerative joint disease.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Pneumothorax:</strong> Pneum/o (air/lung) + thorax (chest) = air in chest cavity. Causes collapsed lung, requires chest tube.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Cholecystectomy:</strong> Cholecyst/o (gallbladder) + -ectomy (removal) = gallbladder removal. Common for gallstones (cholelithiasis).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Appendectomy:</strong> Appendic/o (appendix) + -ectomy (removal) = appendix removal. Emergency surgery for appendicitis.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Hysterectomy:</strong> Hyster/o (uterus) + -ectomy (removal) = uterus removal. Total (uterus and cervix) or partial (uterus only).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Mastectomy:</strong> Mast/o (breast) + -ectomy (removal) = breast removal. Partial, total, or radical (includes lymph nodes).</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Colonoscopy:</strong> Colon/o (colon) + -scopy (examination) = colon examination. Screening for polyps and cancer, diagnostic for symptoms.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Angioplasty:</strong> Angi/o (vessel) + -plasty (repair) = vessel repair. Balloon dilation of narrowed artery, often with stent placement.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Arthroscopy:</strong> Arthr/o (joint) + -scopy (examination) = joint examination. Minimally invasive, used for diagnosis and treatment.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Documentation and Communication:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>SOAP Notes:</strong> Structured documentation format. S (Subjective: patient's description), O (Objective: measurable findings), A (Assessment: diagnosis), P (Plan: treatment). Standard format for medical records.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Chief Complaint (CC):</strong> Primary reason for visit in patient's words. Example: "CC: chest pain for 2 hours."</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>History of Present Illness (HPI):</strong> Detailed description of current problem. Includes onset, location, quality, severity, timing, context, modifying factors, associated symptoms.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Past Medical History (PMH):</strong> Previous illnesses, surgeries, conditions. Chronic diseases, hospitalizations, surgeries listed.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Review of Systems (ROS):</strong> Systematic review of body systems. General, cardiovascular, respiratory, gastrointestinal, genitourinary, musculoskeletal, neurological, etc.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Differential Diagnosis:</strong> List of possible diagnoses (differ + -ent, diagnos + -is). Narrowed based on history, physical exam, test results.</span></li>
+        <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">•</span><span><strong>Clinical Decision Making:</strong> Using medical terminology to describe findings, formulate diagnoses, and plan treatment. Precise terminology reduces errors and improves communication.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="medical-terminology-quiz.html" class="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

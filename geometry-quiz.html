@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Geometry Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-6">
+      <i data-lucide="triangle" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Geometry Quiz</h1>
+    <p class="text-xl text-gray-600">Test your knowledge of shapes, angles, and spatial reasoning</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Questions will be dynamically generated here -->
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-orange-600 text-white text-lg font-semibold rounded-lg hover:bg-orange-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="quizResults" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-orange-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="geometry-analysis.html" class="px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition flex items-center gap-2">
+        <i data-lucide="book-open" class="w-5 h-5"></i>
+        Review Material
+      </a>
+      <button onclick="location.reload()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+        Retake Quiz
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="geometry.html" class="px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Back to Geometry
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Question Bank - 40 questions total
+  const questionBank = [
+    {
+      question: "Two angles that sum to 90° are called:",
+      options: ["Supplementary", "Complementary", "Vertical", "Adjacent", "Congruent"],
+      correct: 1,
+      explanation: "Complementary angles are two angles whose measures add up to 90 degrees. For example, 30° and 60° are complementary."
+    },
+    {
+      question: "Two angles that sum to 180° are called:",
+      options: ["Complementary", "Supplementary", "Vertical", "Right", "Acute"],
+      correct: 1,
+      explanation: "Supplementary angles are two angles whose measures add up to 180 degrees. For example, 120° and 60° are supplementary."
+    },
+    {
+      question: "If one angle is 35°, what is its complement?",
+      options: ["45°", "55°", "65°", "145°", "155°"],
+      correct: 1,
+      explanation: "Complementary angles sum to 90°. So the complement is 90° - 35° = 55°."
+    },
+    {
+      question: "If one angle is 70°, what is its supplement?",
+      options: ["20°", "90°", "110°", "120°", "290°"],
+      correct: 2,
+      explanation: "Supplementary angles sum to 180°. So the supplement is 180° - 70° = 110°."
+    },
+    {
+      question: "What is the sum of interior angles in a triangle?",
+      options: ["90°", "120°", "180°", "270°", "360°"],
+      correct: 2,
+      explanation: "The sum of all interior angles in any triangle always equals 180 degrees, regardless of the triangle's shape or size."
+    },
+    {
+      question: "In a right triangle, if one acute angle is 35°, what is the other acute angle?",
+      options: ["35°", "45°", "55°", "65°", "90°"],
+      correct: 2,
+      explanation: "In a triangle, angles sum to 180°. With one right angle (90°) and one 35° angle: 180° - 90° - 35° = 55°."
+    },
+    {
+      question: "A triangle with all three sides equal is called:",
+      options: ["Scalene", "Isosceles", "Equilateral", "Right", "Obtuse"],
+      correct: 2,
+      explanation: "An equilateral triangle has all three sides of equal length and all three angles equal to 60°."
+    },
+    {
+      question: "In a right triangle with legs of 3 and 4, what is the hypotenuse?",
+      options: ["5", "6", "7", "12", "25"],
+      correct: 0,
+      explanation: "Using the Pythagorean theorem: a² + b² = c². So 3² + 4² = 9 + 16 = 25, and c = √25 = 5."
+    },
+    {
+      question: "If a right triangle has legs of 5 and 12, what is the hypotenuse?",
+      options: ["7", "13", "17", "60", "169"],
+      correct: 1,
+      explanation: "Using the Pythagorean theorem: 5² + 12² = 25 + 144 = 169, and c = √169 = 13."
+    },
+    {
+      question: "What is the circumference of a circle with radius 10? (Use π ≈ 3.14)",
+      options: ["31.4", "62.8", "314", "100", "20"],
+      correct: 1,
+      explanation: "Circumference = 2πr = 2 × 3.14 × 10 = 62.8."
+    },
+    {
+      question: "What is the area of a circle with radius 6? (Use π ≈ 3.14)",
+      options: ["18.84", "37.68", "113.04", "12", "36"],
+      correct: 2,
+      explanation: "Area = πr² = 3.14 × 6² = 3.14 × 36 = 113.04."
+    },
+    {
+      question: "What is the diameter of a circle with radius 8?",
+      options: ["4", "8", "16", "24", "64"],
+      correct: 2,
+      explanation: "The diameter is twice the radius: d = 2r = 2 × 8 = 16."
+    },
+    {
+      question: "What is the sum of interior angles in a quadrilateral?",
+      options: ["180°", "270°", "360°", "450°", "540°"],
+      correct: 2,
+      explanation: "The sum of interior angles in any quadrilateral (4-sided polygon) is 360 degrees."
+    },
+    {
+      question: "How many sides does a pentagon have?",
+      options: ["4", "5", "6", "7", "8"],
+      correct: 1,
+      explanation: "A pentagon is a polygon with 5 sides and 5 angles."
+    },
+    {
+      question: "What is the sum of interior angles in a pentagon?",
+      options: ["360°", "450°", "540°", "630°", "720°"],
+      correct: 2,
+      explanation: "Use the formula (n-2) × 180° where n is the number of sides: (5-2) × 180° = 3 × 180° = 540°."
+    },
+    {
+      question: "Each interior angle of a regular hexagon measures:",
+      options: ["60°", "90°", "108°", "120°", "135°"],
+      correct: 3,
+      explanation: "A hexagon has 6 sides. Sum of angles = (6-2) × 180° = 720°. Each angle in regular hexagon = 720° ÷ 6 = 120°."
+    },
+    {
+      question: "What is the area of a rectangle with length 12 and width 7?",
+      options: ["19", "38", "84", "168", "70"],
+      correct: 2,
+      explanation: "Area of rectangle = length × width = 12 × 7 = 84."
+    },
+    {
+      question: "What is the area of a square with side length 9?",
+      options: ["18", "36", "81", "72", "90"],
+      correct: 2,
+      explanation: "Area of square = side² = 9² = 81."
+    },
+    {
+      question: "What is the area of a triangle with base 10 and height 8?",
+      options: ["18", "40", "80", "20", "30"],
+      correct: 1,
+      explanation: "Area of triangle = (base × height) ÷ 2 = (10 × 8) ÷ 2 = 80 ÷ 2 = 40."
+    },
+    {
+      question: "What is the area of a trapezoid with bases 8 and 12, and height 5?",
+      options: ["40", "50", "60", "100", "120"],
+      correct: 1,
+      explanation: "Area of trapezoid = ((base₁ + base₂) × height) ÷ 2 = ((8 + 12) × 5) ÷ 2 = (20 × 5) ÷ 2 = 50."
+    },
+    {
+      question: "What is the volume of a rectangular prism with dimensions 4 × 5 × 6?",
+      options: ["15", "30", "60", "120", "240"],
+      correct: 3,
+      explanation: "Volume of rectangular prism = length × width × height = 4 × 5 × 6 = 120."
+    },
+    {
+      question: "What is the volume of a cube with side length 5?",
+      options: ["15", "25", "75", "125", "625"],
+      correct: 3,
+      explanation: "Volume of cube = side³ = 5³ = 125."
+    },
+    {
+      question: "What is the volume of a cylinder with radius 3 and height 10? (Use π ≈ 3.14)",
+      options: ["94.2", "188.4", "282.6", "376.8", "471"],
+      correct: 2,
+      explanation: "Volume of cylinder = πr²h = 3.14 × 3² × 10 = 3.14 × 9 × 10 = 282.6."
+    },
+    {
+      question: "What is the volume of a sphere with radius 3? (Use π ≈ 3.14)",
+      options: ["28.26", "37.68", "113.04", "282.6", "376.8"],
+      correct: 2,
+      explanation: "Volume of sphere = (4/3)πr³ = (4/3) × 3.14 × 3³ = (4/3) × 3.14 × 27 ≈ 113.04."
+    },
+    {
+      question: "What is the volume of a cone with radius 4 and height 9? (Use π ≈ 3.14)",
+      options: ["37.68", "75.36", "113.04", "150.72", "452.16"],
+      correct: 3,
+      explanation: "Volume of cone = (1/3)πr²h = (1/3) × 3.14 × 4² × 9 = (1/3) × 3.14 × 16 × 9 ≈ 150.72."
+    },
+    {
+      question: "Two triangles with the same size and shape are:",
+      options: ["Similar", "Congruent", "Equal", "Parallel", "Perpendicular"],
+      correct: 1,
+      explanation: "Congruent figures have the same size and shape. All corresponding sides and angles are equal."
+    },
+    {
+      question: "Two triangles with the same shape but different sizes are:",
+      options: ["Congruent", "Similar", "Equal", "Identical", "Parallel"],
+      correct: 1,
+      explanation: "Similar figures have the same shape but may differ in size. Corresponding angles are equal, and corresponding sides are proportional."
+    },
+    {
+      question: "Find the distance between points (0, 0) and (3, 4):",
+      options: ["3", "4", "5", "7", "12"],
+      correct: 2,
+      explanation: "Use the distance formula: d = √[(x₂-x₁)² + (y₂-y₁)²] = √[(3-0)² + (4-0)²] = √[9 + 16] = √25 = 5."
+    },
+    {
+      question: "Find the distance between points (1, 2) and (4, 6):",
+      options: ["3", "4", "5", "6", "7"],
+      correct: 2,
+      explanation: "Distance = √[(4-1)² + (6-2)²] = √[3² + 4²] = √[9 + 16] = √25 = 5."
+    },
+    {
+      question: "Find the midpoint between (2, 4) and (8, 10):",
+      options: ["(5, 7)", "(6, 8)", "(4, 6)", "(10, 14)", "(3, 5)"],
+      correct: 0,
+      explanation: "Midpoint = ((x₁+x₂)/2, (y₁+y₂)/2) = ((2+8)/2, (4+10)/2) = (10/2, 14/2) = (5, 7)."
+    },
+    {
+      question: "A translation is a transformation that:",
+      options: ["Flips a figure", "Turns a figure", "Slides a figure", "Enlarges a figure", "Reflects a figure"],
+      correct: 2,
+      explanation: "A translation slides a figure from one position to another without changing its orientation, size, or shape."
+    },
+    {
+      question: "A reflection is a transformation that:",
+      options: ["Slides a figure", "Turns a figure", "Flips a figure over a line", "Enlarges a figure", "Rotates a figure"],
+      correct: 2,
+      explanation: "A reflection flips a figure over a line (the line of reflection), creating a mirror image."
+    },
+    {
+      question: "A rotation is a transformation that:",
+      options: ["Slides a figure", "Flips a figure", "Turns a figure around a point", "Enlarges a figure", "Translates a figure"],
+      correct: 2,
+      explanation: "A rotation turns a figure around a fixed point (center of rotation) by a certain angle."
+    },
+    {
+      question: "When two parallel lines are cut by a transversal, corresponding angles are:",
+      options: ["Supplementary", "Complementary", "Congruent", "Perpendicular", "Adjacent"],
+      correct: 2,
+      explanation: "When parallel lines are cut by a transversal, corresponding angles (in the same relative position) are congruent (equal)."
+    },
+    {
+      question: "When two parallel lines are cut by a transversal, alternate interior angles are:",
+      options: ["Supplementary", "Complementary", "Congruent", "Different", "Right angles"],
+      correct: 2,
+      explanation: "When parallel lines are cut by a transversal, alternate interior angles (on opposite sides of the transversal, between the parallel lines) are congruent."
+    },
+    {
+      question: "What is the perimeter of a rectangle with length 15 and width 8?",
+      options: ["23", "46", "120", "30", "60"],
+      correct: 1,
+      explanation: "Perimeter of rectangle = 2(length + width) = 2(15 + 8) = 2(23) = 46."
+    },
+    {
+      question: "An angle measuring 125° is classified as:",
+      options: ["Acute", "Right", "Obtuse", "Straight", "Reflex"],
+      correct: 2,
+      explanation: "An obtuse angle measures more than 90° but less than 180°. Since 125° is in this range, it's obtuse."
+    },
+    {
+      question: "An angle measuring exactly 90° is called:",
+      options: ["Acute", "Right", "Obtuse", "Straight", "Reflex"],
+      correct: 1,
+      explanation: "A right angle measures exactly 90 degrees, forming a square corner."
+    },
+    {
+      question: "What is the sum of exterior angles of any polygon?",
+      options: ["180°", "270°", "360°", "540°", "Varies by polygon"],
+      correct: 2,
+      explanation: "The sum of exterior angles of any polygon (one at each vertex) is always 360 degrees, regardless of the number of sides."
+    },
+    {
+      question: "How many degrees does a circle contain?",
+      options: ["180°", "270°", "360°", "540°", "720°"],
+      correct: 2,
+      explanation: "A complete circle contains 360 degrees. This is fundamental to measuring angles and arcs."
+    }
+  ];
+
+  // Shuffle array function
+  function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  // Select 15 random questions
+  const selectedQuestions = shuffleArray(questionBank).slice(0, 15);
+  const correctAnswers = {};
+  const explanations = {};
+
+  // Generate quiz HTML
+  const quizContainer = document.getElementById('quizContainer');
+  selectedQuestions.forEach((q, index) => {
+    const questionNum = index + 1;
+    const questionId = `q${questionNum}`;
+    
+    // Store correct answer and explanation
+    correctAnswers[questionId] = q.correct;
+    explanations[questionId] = q.explanation;
+    
+    // Shuffle options with correct answer tracking
+    const optionsWithIndex = q.options.map((opt, idx) => ({ text: opt, originalIndex: idx }));
+    const shuffledOptions = shuffleArray(optionsWithIndex);
+    
+    // Find new position of correct answer
+    const newCorrectIndex = shuffledOptions.findIndex(opt => opt.originalIndex === q.correct);
+    correctAnswers[questionId] = newCorrectIndex;
+    
+    // Create question HTML
+    const questionHTML = `
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-orange-500 quiz-question">
+        <h3 class="text-2xl font-bold mb-4 text-gray-800">Question ${questionNum}</h3>
+        <p class="text-lg text-gray-700 mb-6">${q.question}</p>
+        <div class="space-y-3">
+          ${shuffledOptions.map((opt, optIndex) => `
+            <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+              <input type="radio" name="${questionId}" value="${optIndex}" class="mt-1">
+              <span class="text-gray-700">${opt.text}</span>
+            </label>
+          `).join('')}
+        </div>
+        <div class="feedback mt-4 hidden"></div>
+      </div>
+    `;
+    
+    quizContainer.innerHTML += questionHTML;
+  });
+
+  lucide.createIcons();
+
+  // Submit button handler
+  document.getElementById('submitQuiz').addEventListener('click', () => {
+    let score = 0;
+    let answered = 0;
+    
+    const questions = document.querySelectorAll('.quiz-question');
+    
+    questions.forEach((question, index) => {
+      const questionId = `q${index + 1}`;
+      const selected = question.querySelector(`input[name="${questionId}"]:checked`);
+      const feedback = question.querySelector('.feedback');
+      
+      if (selected) {
+        answered++;
+        const selectedValue = parseInt(selected.value);
+        const isCorrect = selectedValue === correctAnswers[questionId];
+        
+        if (isCorrect) {
+          score++;
+          question.classList.remove('border-red-500', 'border-amber-500');
+          question.classList.add('border-orange-500');
+          feedback.innerHTML = `
+            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <p class="font-semibold text-green-800 mb-2">✓ Correct!</p>
+              <p class="text-green-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        } else {
+          question.classList.remove('border-orange-500', 'border-amber-500');
+          question.classList.add('border-red-500');
+          feedback.innerHTML = `
+            <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded">
+              <p class="font-semibold text-red-800 mb-2">✗ Incorrect</p>
+              <p class="text-red-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        }
+        
+        feedback.classList.remove('hidden');
+      } else {
+        question.classList.remove('border-orange-500', 'border-red-500');
+        question.classList.add('border-amber-500');
+        feedback.innerHTML = `
+          <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+            <p class="font-semibold text-yellow-800">Question not answered</p>
+          </div>
+        `;
+        feedback.classList.remove('hidden');
+      }
+    });
+
+    // Calculate percentage
+    const percentage = answered > 0 ? Math.round((score / 15) * 100) : 0;
+    
+    // Display score
+    let resultColor = percentage >= 70 ? 'text-green-600' : percentage >= 50 ? 'text-yellow-600' : 'text-red-600';
+    let resultMessage = percentage >= 70 ? 'Excellent work!' : percentage >= 50 ? 'Good effort!' : 'Keep practicing!';
+    
+    document.getElementById('scoreDisplay').innerHTML = `
+      <div class="text-6xl font-bold ${resultColor} mb-4">${score}/15</div>
+      <div class="text-2xl font-semibold text-gray-700">${percentage}%</div>
+      <div class="text-xl text-gray-600 mt-2">${resultMessage}</div>
+    `;
+    
+    document.getElementById('quizResults').classList.remove('hidden');
+    document.getElementById('quizResults').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

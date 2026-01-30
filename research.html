@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Research - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8">
+      <a href="research.html" class="font-medium text-blue-600">Research</a>
+      <a href="account.html" class="font-medium text-gray-700 hover:text-blue-600">My Account</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <a href="index.html" class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition md:hidden">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back</span>
+    </a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-6xl mx-auto px-4 py-12">
+  <!-- Return to Homepage Button -->
+  <div class="mb-6">
+    <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+      <i data-lucide="home" class="w-5 h-5"></i>
+      <span>Return to Homepage</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-6">
+      <i data-lucide="microscope" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Research & Resources</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Access cutting-edge research tools and learning resources to enhance your scientific studies.
+    </p>
+  </div>
+
+  <!-- Learning Resources Section -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Learning Resources</h2>
+    <div class="max-w-4xl mx-auto flex flex-wrap justify-center items-center gap-6">
+      <a href="https://quizlet.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-lg transition">
+        <i data-lucide="external-link" class="w-5 h-5"></i>
+        Quizlet
+      </a>
+      <a href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-lg transition">
+        <i data-lucide="external-link" class="w-5 h-5"></i>
+        Khan Academy
+      </a>
+      <a href="https://www.grammarly.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-lg transition">
+        <i data-lucide="external-link" class="w-5 h-5"></i>
+        Grammarly
+      </a>
+      <a href="https://freeuniversitytools.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-lg transition">
+        <i data-lucide="external-link" class="w-5 h-5"></i>
+        Free University Tools
+      </a>
+    </div>
+  </section>
+
+  <!-- Disclaimer Section -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold text-center mb-4">Disclaimer</h2>
+    <div class="max-w-3xl mx-auto text-center text-gray-600">
+      <p>
+        The resources and links provided below are for educational purposes only. StudyZone is not affiliated with or endorsed by any of the external sites listed. Please use all tools and materials responsibly and verify information with official sources when necessary.
+      </p>
+    </div>
+  </section>
+
+  <!-- Research Tools Section -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Research Tools</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+            <i data-lucide="database" class="w-6 h-6 text-blue-600"></i>
+          </div>
+          <div class="relative group">
+            <button class="text-xl font-bold focus:outline-none flex items-center gap-2">
+              Research Databases
+              <svg class="w-4 h-4 text-blue-600 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="absolute left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity z-10">
+              <a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800 rounded-t-lg">Google Scholar</a>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 text-blue-600 hover:bg-blue-50 hover:text-blue-800 rounded-b-lg">PubMed</a>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600">
+          Access peer-reviewed journals, scientific papers, and research databases to support your studies. Choose a database above.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500">
+        <a href="https://quizlet.com/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 mb-4 group">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+            <i data-lucide="file-text" class="w-6 h-6 text-green-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-green-700 group-hover:underline">Study Guides</h3>
+        </a>
+        <p class="text-gray-600">
+          Comprehensive study guides and reference materials for all major science subjects. Powered by Quizlet.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-purple-500">
+        <a href="https://www.desmos.com/scientific" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 mb-4 group">
+          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+            <i data-lucide="calculator" class="w-6 h-6 text-purple-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-purple-700 group-hover:underline">Scientific Calculators</h3>
+        </a>
+        <p class="text-gray-600">
+          Advanced calculators and tools for chemistry, physics, and mathematical computations. Powered by Desmos.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-orange-500">
+        <a href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 mb-4 group">
+          <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+            <i data-lucide="video" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-orange-700 group-hover:underline">Video Lectures</h3>
+        </a>
+        <p class="text-gray-600">
+          Educational video content from leading scientists and educators in various fields. Powered by Khan Academy.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-indigo-500">
+        <a href="https://openstax.org/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 mb-4 group">
+          <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
+            <i data-lucide="book" class="w-6 h-6 text-indigo-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-indigo-700 group-hover:underline">E-Books & Textbooks</h3>
+        </a>
+        <p class="text-gray-600">
+          Digital textbooks and e-books covering all major scientific disciplines. Powered by OpenStax.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-red-500">
+        <a href="https://discord.gg/FCkzDs2vGm" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 mb-4 group">
+          <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+            <i data-lucide="users" class="w-6 h-6 text-red-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-red-700 group-hover:underline">Study Groups</h3>
+        </a>
+        <p class="text-gray-600">
+          Connect with peers and form study groups to collaborate on research and learning. Join our Discord community.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Methodology Section -->
+  <section class="bg-white rounded-xl shadow-lg p-8 md:p-12">
+    <h2 class="text-3xl font-bold text-center mb-8">Research Methodology</h2>
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div>
+        <h3 class="text-xl font-bold mb-4 text-gray-800">Scientific Method</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Learn the fundamental principles of the scientific method: observation, hypothesis formation, experimentation, data analysis, and conclusion drawing.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4 text-gray-800">Data Analysis</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Master statistical analysis, data interpretation, and visualization techniques essential for scientific research and evidence-based conclusions.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // Wait for DOM and script to load
+  document.addEventListener('DOMContentLoaded', function() {
+    lucide.createIcons();
+    
+    // Render resources on this page
+    const resourcesGrid = document.getElementById("resourcesGrid");
+    if (resourcesGrid) {
+      renderResources();
+    }
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

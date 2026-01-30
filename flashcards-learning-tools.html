@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flashcards Learning Tools - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <!-- Back Button -->
+  <div class="mb-6">
+    <a href="college-learning-tools.html" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back to Learning Tools</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="flex justify-center mb-4">
+      <div class="p-4 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-full">
+        <i data-lucide="layers" class="w-16 h-16 text-white"></i>
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Flashcards Learning Tools</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Master any subject with spaced repetition, digital flashcards, and effective memorization techniques
+    </p>
+  </div>
+
+  <!-- Spaced Repetition Systems -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="brain" class="w-7 h-7 text-blue-600"></i>
+        Spaced Repetition Systems
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://apps.ankiweb.net/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Anki ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Powerful spaced repetition flashcard system</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Advanced SRS algorithm</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Cross-platform sync</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Extensive add-ons library</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.remnote.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">RemNote ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Note-taking with built-in spaced repetition</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Seamless notes to flashcards</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Knowledge graph</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>PDF annotation</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.supermemo.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">SuperMemo ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Original spaced repetition software</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Scientific algorithm</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Incremental reading</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Advanced features</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://mochi.cards/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Mochi ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Modern spaced repetition flashcard app</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Markdown support</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Beautiful interface</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Templates and tags</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Online Flashcard Platforms -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl shadow-lg p-8 border-l-4 border-indigo-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="globe" class="w-7 h-7 text-indigo-600"></i>
+        Online Flashcard Platforms
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://quizlet.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Quizlet ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Popular flashcard platform with millions of sets</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Huge card library</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Multiple study modes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Mobile apps</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.brainscape.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Brainscape ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Confidence-based repetition system</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Adaptive learning</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Expert-made content</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Progress tracking</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.cram.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Cram ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free flashcard maker and study tool</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Easy card creation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Study games</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Mobile learning</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.studyblue.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">StudyBlue ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Collaborative study platform</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Share study materials</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Class-specific content</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Practice tests</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flashcard Creation Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl shadow-lg p-8 border-l-4 border-green-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="pen-tool" class="w-7 h-7 text-green-600"></i>
+        Flashcard Creation Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.canva.com/flashcards/" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">Canva Flashcards ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Design beautiful custom flashcards</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Professional templates</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Visual design tools</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Printable formats</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.flashcardmachine.com/" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">Flashcard Machine ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Simple online flashcard creator</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Quick card creation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Print or study online</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Share with classmates</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.goconqr.com/" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">GoConqr ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Study tool with flashcard maker</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Multiple study tools</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Mind maps integration</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Study groups</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.examtime.com/" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">ExamTime ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Complete study platform with flashcards</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Interactive flashcards</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Study planner</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Performance analytics</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Flashcard Apps -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-orange-50 to-amber-50 rounded-xl shadow-lg p-8 border-l-4 border-orange-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="smartphone" class="w-7 h-7 text-orange-600"></i>
+        Mobile Flashcard Apps
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.chegg.com/flashcards" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Chegg Prep ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Mobile-first flashcard learning</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>iOS and Android apps</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Offline study mode</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Expert Q&A</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.studysmarter.de/en/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">StudySmarter ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AI-powered study app with flashcards</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Smart learning algorithm</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Auto-generated cards</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Study statistics</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.memrise.com/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Memrise ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Gamified language and memory learning</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Gamification elements</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Video clips</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Community content</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.tinycards.com/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Tinycards ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Fun flashcard app by Duolingo</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Beautiful animations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Bite-sized learning</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Easy to use</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subject-Specific Flashcard Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl shadow-lg p-8 border-l-4 border-purple-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="book-open" class="w-7 h-7 text-purple-600"></i>
+        Subject-Specific Flashcard Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.cramfighter.com/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">CramFighter ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Medical exam study scheduler with flashcards</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>USMLE/COMLEX prep</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Study planning</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Anki integration</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.scholarrx.com/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">ScholarRx ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Pharmacy school flashcards and study tools</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Pharmacy-focused</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Drug information cards</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>NAPLEX prep</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.babbel.com/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Babbel ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Language learning with flashcard elements</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>14 languages</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Vocabulary practice</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Speech recognition</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.kenhub.com/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Kenhub ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Anatomy flashcards and learning platform</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Anatomy illustrations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Quiz questions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Video tutorials</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Study Techniques & Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-red-50 to-rose-50 rounded-xl shadow-lg p-8 border-l-4 border-red-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="lightbulb" class="w-7 h-7 text-red-600"></i>
+        Study Techniques & Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.supermemo.com/en/archives1990-2015/articles/20rules" target="_blank" class="text-red-600 hover:text-red-700 hover:underline">20 Rules of Formulating Knowledge ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Guide to creating effective flashcards</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Evidence-based principles</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Card formatting tips</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Memory optimization</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/watch?v=eVajQPuRmk8" target="_blank" class="text-red-600 hover:text-red-700 hover:underline">Anki Tutorial (YouTube) ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive guide to using Anki effectively</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Setup walkthrough</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Best practices</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Advanced features</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.coursera.org/learn/learning-how-to-learn" target="_blank" class="text-red-600 hover:text-red-700 hover:underline">Learning How to Learn ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Coursera course on effective learning techniques</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Science of memory</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Study strategies</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Free certificate</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.reddit.com/r/Anki/" target="_blank" class="text-red-600 hover:text-red-700 hover:underline">r/Anki Community ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Reddit community for flashcard learners</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Active community</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Shared decks</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Tips and advice</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links to Related Pages -->
+  <section class="mb-12">
+    <div class="bg-white rounded-xl shadow-lg p-8">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="link" class="w-7 h-7 text-blue-600"></i>
+        Related Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-3 gap-4">
+        <a href="college-learning-tools.html" class="flex items-center gap-3 p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg border-l-4 border-blue-500 hover:shadow-md transition">
+          <i data-lucide="library" class="w-6 h-6 text-blue-600"></i>
+          <div>
+            <h3 class="font-semibold text-gray-800">All Learning Tools</h3>
+            <p class="text-sm text-gray-600">Browse other study resources</p>
+          </div>
+        </a>
+
+        <a href="subjects.html" class="flex items-center gap-3 p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg border-l-4 border-indigo-500 hover:shadow-md transition">
+          <i data-lucide="book" class="w-6 h-6 text-indigo-600"></i>
+          <div>
+            <h3 class="font-semibold text-gray-800">All Subjects</h3>
+            <p class="text-sm text-gray-600">Explore study topics</p>
+          </div>
+        </a>
+
+        <a href="college.html" class="flex items-center gap-3 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border-l-4 border-green-500 hover:shadow-md transition">
+          <i data-lucide="graduation-cap" class="w-6 h-6 text-green-600"></i>
+          <div>
+            <h3 class="font-semibold text-gray-800">College Hub</h3>
+            <p class="text-sm text-gray-600">Return to college page</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-white border-t mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <div class="text-center text-gray-600">
+      <p>&copy; 2026 StudyZone. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="script.js"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+</body>
+</html>

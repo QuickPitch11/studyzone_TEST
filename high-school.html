@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>High School - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <!-- Return to Homepage Button -->
+  <div class="mb-6">
+    <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+      <i data-lucide="home" class="w-5 h-5"></i>
+      <span>Return to Homepage</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">High School Subjects</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Master high school subjects with our comprehensive study materials, quizzes, and in-depth analysis.
+    </p>
+    <div class="mt-6">
+      <a href="high-school-learning-tools.html" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-indigo-700 transition shadow-lg">
+        <i data-lucide="wrench" class="w-5 h-5"></i>
+        <span>Learning Tools</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Math Category -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Math</h2>
+    <div id="mathGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 items-stretch"></div>
+  </section>
+
+  <!-- English Category -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-center mb-12">English</h2>
+    <div id="englishGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 items-stretch"></div>
+  </section>
+
+  <!-- Computers Category -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Computers</h2>
+    <div id="computersGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 items-stretch"></div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Math subjects data
+  const mathSubjects = [
+    {
+      name: "Algebra",
+      icon: "function-square",
+      color: "from-red-500 to-pink-500",
+      description: "Study of mathematical symbols and rules",
+      page: "algebra.html",
+      analysisPage: "algebra-analysis.html"
+    },
+    {
+      name: "Geometry",
+      icon: "shapes",
+      color: "from-blue-500 to-indigo-500",
+      description: "Study of shapes, sizes, and properties of space",
+      page: "geometry.html",
+      analysisPage: "geometry-analysis.html"
+    },
+    {
+      name: "Probability and Statistics",
+      icon: "bar-chart-3",
+      color: "from-green-500 to-teal-500",
+      description: "Study of data analysis and chance",
+      page: "probability-statistics.html",
+      analysisPage: "probability-statistics-analysis.html"
+    },
+    {
+      name: "Arithmetic Math",
+      icon: "calculator",
+      color: "from-purple-500 to-violet-500",
+      description: "Study of basic number operations",
+      page: "arithmetic-math.html"
+    },
+    {
+      name: "Basic Math",
+      icon: "hash",
+      color: "from-orange-500 to-amber-500",
+      description: "Fundamental mathematical concepts and operations",
+      page: "basic-math.html"
+    },
+    {
+      name: "AP Calculus AB",
+      icon: "function-square",
+      color: "from-indigo-500 to-sky-500",
+      description: "College-level calculus I covering limits, derivatives, and integrals",
+      page: "ap-calculus-ab.html",
+      analysisPage: "ap-calculus-ab.html"
+    },
+    {
+      name: "AP Calculus BC",
+      icon: "function-square",
+      color: "from-violet-500 to-purple-600",
+      description: "Advanced calculus II with series, parametric, and polar functions",
+      page: "ap-calculus-bc.html",
+      analysisPage: "ap-calculus-bc.html"
+    }
+  ];
+
+  // Render math subjects
+  const mathGrid = document.getElementById("mathGrid");
+  if (mathGrid) {
+    mathGrid.innerHTML = "";
+    
+    mathSubjects.forEach((subject, index) => {
+      mathGrid.innerHTML += `
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition overflow-hidden flex flex-col h-full">
+          <div class="h-32 bg-gradient-to-r ${subject.color} flex items-center justify-center relative overflow-hidden flex-shrink-0">
+            <i data-lucide="${subject.icon}" class="w-8 h-8 text-white"></i>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-xl font-bold mb-2">${subject.name}</h3>
+            <p class="text-gray-600 mb-4 flex-grow">${subject.description}</p>
+            <div class="flex flex-col gap-2 mt-auto">
+              <a href="${subject.analysisPage ? subject.analysisPage : subject.page}" class="w-full bg-gray-600 text-white py-2 rounded-lg hover:bg-gray-700 transition inline-flex items-center justify-center">
+                In-Depth
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+    
+    lucide.createIcons();
+  }
+
+  // English subjects data
+  const englishSubjects = [
+    {
+      name: "APA Essays",
+      icon: "file-text",
+      color: "from-blue-500 to-cyan-500",
+      description: "American Psychological Association essay format",
+      page: "apa-essays.html",
+      analysisPage: "apa-essays-analysis.html"
+    },
+    {
+      name: "MLA Essays",
+      icon: "file-text",
+      color: "from-indigo-500 to-purple-500",
+      description: "Modern Language Association essay format",
+      page: "mla-essays.html",
+      analysisPage: "mla-essays-analysis.html"
+    },
+    {
+      name: "AMA Essays",
+      icon: "file-text",
+      color: "from-teal-500 to-emerald-500",
+      description: "American Medical Association essay format",
+      page: "ama-essays.html",
+      analysisPage: "ama-essays-analysis.html"
+    },
+    {
+      name: "Rhetorical Appeals",
+      icon: "message-square",
+      color: "from-pink-500 to-rose-500",
+      description: "Ethos, pathos, and logos in argumentation",
+      page: "rhetorical-appeals.html",
+      analysisPage: "rhetorical-appeals-analysis.html"
+    },
+    {
+      name: "Argumentative Essays",
+      icon: "scale",
+      color: "from-orange-500 to-red-500",
+      description: "Essays that present and defend arguments",
+      page: "argumentative-essays.html",
+      analysisPage: "argumentative-essays-analysis.html"
+    },
+    {
+      name: "Research Methods",
+      icon: "flask-conical",
+      color: "from-emerald-500 to-green-600",
+      description: "Research design, methodology, and analysis techniques",
+      page: "research-methods.html",
+      analysisPage: "research-methods-analysis.html"
+    },
+    {
+      name: "Public Speaking",
+      icon: "mic",
+      color: "from-purple-500 to-violet-500",
+      description: "Effective presentation and speech delivery techniques",
+      page: "public-speaking.html",
+      analysisPage: "public-speaking-analysis.html"
+    }
+  ];
+
+  // Render English subjects
+  const englishGrid = document.getElementById("englishGrid");
+  if (englishGrid) {
+    englishGrid.innerHTML = "";
+    
+    englishSubjects.forEach((subject, index) => {
+      englishGrid.innerHTML += `
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition overflow-hidden flex flex-col h-full">
+          <div class="h-32 bg-gradient-to-r ${subject.color} flex items-center justify-center relative overflow-hidden flex-shrink-0">
+            <i data-lucide="${subject.icon}" class="w-8 h-8 text-white"></i>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-xl font-bold mb-2">${subject.name}</h3>
+            <p class="text-gray-600 mb-4 flex-grow">${subject.description}</p>
+            <div class="flex flex-col gap-2 mt-auto">
+              <a href="${subject.analysisPage ? subject.analysisPage : subject.page}" class="w-full bg-gray-600 text-white py-2 rounded-lg hover:bg-gray-700 transition inline-flex items-center justify-center">
+                In-Depth
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+    
+    lucide.createIcons();
+  }
+
+  // Computers subjects data
+  const computersSubjects = [
+    {
+      name: "Typing",
+      icon: "keyboard",
+      color: "from-purple-500 to-pink-500",
+      description: "Touch typing skills, speed, and accuracy techniques",
+      page: "typing.html",
+      analysisPage: "typing-analysis.html"
+    },
+    {
+      name: "Artificial Intelligence",
+      icon: "brain-circuit",
+      color: "from-purple-500 to-pink-500",
+      description: "Machine learning, neural networks, and AI applications",
+      page: "artificial-intelligence.html",
+      analysisPage: "artificial-intelligence-analysis.html"
+    }
+  ];
+
+  // Render Computers subjects
+  const computersGrid = document.getElementById("computersGrid");
+  if (computersGrid) {
+    computersGrid.innerHTML = "";
+    
+    computersSubjects.forEach((subject, index) => {
+      computersGrid.innerHTML += `
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition overflow-hidden flex flex-col h-full">
+          <div class="h-32 bg-gradient-to-r ${subject.color} flex items-center justify-center relative overflow-hidden flex-shrink-0">
+            <i data-lucide="${subject.icon}" class="w-8 h-8 text-white"></i>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-xl font-bold mb-2">${subject.name}</h3>
+            <p class="text-gray-600 mb-4 flex-grow">${subject.description}</p>
+            <div class="flex flex-col gap-2 mt-auto">
+              <a href="${subject.analysisPage ? subject.analysisPage : subject.page}" class="w-full bg-gray-600 text-white py-2 rounded-lg hover:bg-gray-700 transition inline-flex items-center justify-center">
+                In-Depth
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+    
+    // Dark Mode Toggle
+    const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+    const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+
+    function updateDarkModeIcon() {
+      const isDark = document.body.classList.contains('dark-mode');
+      darkModeIcons.forEach(icon => {
+        icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+      });
+      lucide.createIcons();
+    }
+
+    lucide.createIcons();
+    updateDarkModeIcon();
+
+    darkModeToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+        localStorage.setItem('theme', theme);
+        updateDarkModeIcon();
+      });
+    });
+  }</script>
+
+</body>
+</html>

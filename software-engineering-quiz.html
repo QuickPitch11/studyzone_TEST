@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Software Engineering Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-6">
+      <i data-lucide="clipboard-check" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Software Engineering Quiz</h1>
+    <p class="text-xl text-gray-600">Test your knowledge of software development principles and practices</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Questions will be dynamically generated here -->
+  </div>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q1" value="a" class="mt-1">
+          <span class="text-gray-700">Software Development Life Cycle</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q1" value="b" class="mt-1">
+          <span class="text-gray-700">System Design Life Cycle</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q1" value="c" class="mt-1">
+          <span class="text-gray-700">Software Deployment Learning Center</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q1" value="d" class="mt-1">
+          <span class="text-gray-700">System Documentation Life Cycle</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 2</h3>
+      <p class="text-lg text-gray-700 mb-6">Which software development methodology uses short iterations called "sprints"?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="a" class="mt-1">
+          <span class="text-gray-700">Waterfall</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="b" class="mt-1">
+          <span class="text-gray-700">Agile/Scrum</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="c" class="mt-1">
+          <span class="text-gray-700">V-Model</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="d" class="mt-1">
+          <span class="text-gray-700">Spiral</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 3</h3>
+      <p class="text-lg text-gray-700 mb-6">What is version control?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="a" class="mt-1">
+          <span class="text-gray-700">A system for tracking changes to code over time</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="b" class="mt-1">
+          <span class="text-gray-700">A way to number software releases</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="c" class="mt-1">
+          <span class="text-gray-700">A testing methodology</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="d" class="mt-1">
+          <span class="text-gray-700">A deployment strategy</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 4</h3>
+      <p class="text-lg text-gray-700 mb-6">What does "DRY" stand for in software engineering?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="a" class="mt-1">
+          <span class="text-gray-700">Don't Repeat Yourself</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="b" class="mt-1">
+          <span class="text-gray-700">Dynamic Resource Yielding</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="c" class="mt-1">
+          <span class="text-gray-700">Data Redundancy Yield</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="d" class="mt-1">
+          <span class="text-gray-700">Do Review Yearly</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 5</h3>
+      <p class="text-lg text-gray-700 mb-6">What is unit testing?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="a" class="mt-1">
+          <span class="text-gray-700">Testing individual components or functions in isolation</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="b" class="mt-1">
+          <span class="text-gray-700">Testing the entire application at once</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="c" class="mt-1">
+          <span class="text-gray-700">Testing with real users</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="d" class="mt-1">
+          <span class="text-gray-700">Testing performance under load</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 6</h3>
+      <p class="text-lg text-gray-700 mb-6">What is the purpose of code reviews?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="a" class="mt-1">
+          <span class="text-gray-700">To improve code quality, find bugs, and share knowledge</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="b" class="mt-1">
+          <span class="text-gray-700">To criticize developers</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="c" class="mt-1">
+          <span class="text-gray-700">To slow down development</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="d" class="mt-1">
+          <span class="text-gray-700">To create documentation</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 7</h3>
+      <p class="text-lg text-gray-700 mb-6">What is Continuous Integration (CI)?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="a" class="mt-1">
+          <span class="text-gray-700">Automatically merging and testing code changes frequently</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="b" class="mt-1">
+          <span class="text-gray-700">Integrating third-party libraries</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="c" class="mt-1">
+          <span class="text-gray-700">A type of database integration</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="d" class="mt-1">
+          <span class="text-gray-700">Manual code deployment</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 8</h3>
+      <p class="text-lg text-gray-700 mb-6">What is refactoring?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="a" class="mt-1">
+          <span class="text-gray-700">Restructuring existing code without changing its external behavior</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="b" class="mt-1">
+          <span class="text-gray-700">Adding new features to code</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="c" class="mt-1">
+          <span class="text-gray-700">Deleting old code</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="d" class="mt-1">
+          <span class="text-gray-700">Writing documentation</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 9</h3>
+      <p class="text-lg text-gray-700 mb-6">What is an API?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="a" class="mt-1">
+          <span class="text-gray-700">Application Programming Interface - a set of rules for software communication</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="b" class="mt-1">
+          <span class="text-gray-700">A type of database</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="c" class="mt-1">
+          <span class="text-gray-700">A programming language</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="d" class="mt-1">
+          <span class="text-gray-700">A user interface design</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 10</h3>
+      <p class="text-lg text-gray-700 mb-6">What is the difference between a bug and a feature?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="a" class="mt-1">
+          <span class="text-gray-700">A bug is an error or flaw; a feature is intended functionality</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="b" class="mt-1">
+          <span class="text-gray-700">They are the same thing</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="c" class="mt-1">
+          <span class="text-gray-700">Bugs are intentional; features are mistakes</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="d" class="mt-1">
+          <span class="text-gray-700">There is no difference</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="results" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div class="text-center">
+      <a href="software-engineering-analysis.html" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition mr-4">
+        Review Material
+      </a>
+      <button onclick="location.reload()" class="inline-block px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition">
+        Retake Quiz
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="software-engineering.html" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Back to Software Engineering
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Question Bank - 40 questions total
+  const questionBank = [
+    {
+      question: "What does SDLC stand for?",
+      options: ["Software Development Life Cycle", "System Design Life Cycle", "Software Deployment Learning Center", "System Documentation Life Cycle", "Software Design Language Compiler"],
+      correct: 0,
+      explanation: "SDLC stands for Software Development Life Cycle. It's a structured process used by software development teams to design, develop, test, and deploy high-quality software. The SDLC defines stages like planning, analysis, design, implementation, testing, deployment, and maintenance."
+    },
+    {
+      question: "Which software development methodology uses short iterations called 'sprints'?",
+      options: ["Waterfall", "Agile/Scrum", "V-Model", "Spiral", "RAD (Rapid Application Development)"],
+      correct: 1,
+      explanation: "Agile/Scrum methodology uses short iterations called 'sprints,' typically lasting 1-4 weeks. Each sprint involves planning, development, testing, and review, allowing teams to adapt quickly to changes and deliver working software incrementally."
+    },
+    {
+      question: "What is version control?",
+      options: ["A system for tracking changes to code over time", "A way to number software releases", "A testing methodology", "A deployment strategy", "A database management tool"],
+      correct: 0,
+      explanation: "Version control is a system for tracking changes to code over time. Tools like Git allow developers to collaborate, track history, revert to previous versions, and manage different branches of development. It's essential for team collaboration and code management."
+    },
+    {
+      question: "What does 'DRY' stand for in software engineering?",
+      options: ["Don't Repeat Yourself", "Dynamic Resource Yielding", "Data Redundancy Yield", "Do Review Yearly", "Design Reusable Yields"],
+      correct: 0,
+      explanation: "DRY stands for 'Don't Repeat Yourself,' a fundamental principle in software engineering that promotes code reusability and maintainability. It means avoiding duplication by abstracting common functionality into reusable components or functions."
+    },
+    {
+      question: "What is unit testing?",
+      options: ["Testing individual components in isolation", "Testing the entire system", "Testing user interfaces only", "Performance testing", "Security testing"],
+      correct: 0,
+      explanation: "Unit testing involves testing individual components, functions, or methods in isolation to ensure they work correctly. These automated tests verify that each 'unit' of code performs as expected, making it easier to catch bugs early and maintain code quality."
+    },
+    {
+      question: "What is the primary purpose of code reviews?",
+      options: ["Improving code quality and sharing knowledge", "Slowing down development", "Assigning blame for bugs", "Completing documentation", "Meeting compliance requirements only"],
+      correct: 0,
+      explanation: "Code reviews serve multiple purposes: improving code quality by catching bugs and design issues, ensuring adherence to coding standards, sharing knowledge among team members, and maintaining consistency across the codebase. They're a collaborative process that benefits the entire team."
+    },
+    {
+      question: "What is Continuous Integration (CI)?",
+      options: ["Automatically merging and testing code changes frequently", "Integrating third-party libraries", "A type of database integration", "Manual code deployment", "Customer integration meetings"],
+      correct: 0,
+      explanation: "Continuous Integration (CI) is a practice where developers frequently merge code changes into a shared repository, and automated builds and tests run with each change. This helps detect integration issues early and ensures the codebase remains stable."
+    },
+    {
+      question: "What is refactoring?",
+      options: ["Restructuring existing code without changing its external behavior", "Adding new features to code", "Deleting old code", "Writing documentation", "Fixing bugs"],
+      correct: 0,
+      explanation: "Refactoring is the process of restructuring existing code to improve its internal structure, readability, and maintainability without changing its external behavior or functionality. It helps reduce technical debt and makes code easier to understand and modify."
+    },
+    {
+      question: "What is an API?",
+      options: ["Application Programming Interface - a set of rules for software communication", "A type of database", "A programming language", "A user interface design", "An automated programming instruction"],
+      correct: 0,
+      explanation: "API stands for Application Programming Interface. It's a set of rules, protocols, and tools that define how software components should interact. APIs allow different applications to communicate with each other, enabling integration and data exchange."
+    },
+    {
+      question: "What is the difference between a bug and a feature?",
+      options: ["A bug is an error or flaw; a feature is intended functionality", "They are the same thing", "Bugs are intentional; features are mistakes", "There is no difference", "Bugs are documented; features are not"],
+      correct: 0,
+      explanation: "A bug is an unintended error, flaw, or defect in the software that causes it to behave incorrectly or unexpectedly. A feature is intended functionality that the software is designed to provide. The key difference is intentionality - bugs are mistakes, features are planned capabilities."
+    },
+    {
+      question: "What does the 'S' in SOLID principles stand for?",
+      options: ["Single Responsibility Principle", "System Reliability Principle", "Software Scalability Principle", "Source Repository Principle", "Simplified Refactoring Principle"],
+      correct: 0,
+      explanation: "The 'S' in SOLID stands for Single Responsibility Principle, which states that a class should have only one reason to change - it should have only one job or responsibility. This promotes modularity and makes code easier to maintain and test."
+    },
+    {
+      question: "What is the primary purpose of integration testing?",
+      options: ["Testing how different modules/components work together", "Testing individual functions", "Testing user interfaces", "Testing performance under load", "Testing security vulnerabilities"],
+      correct: 0,
+      explanation: "Integration testing verifies that different modules, components, or services work correctly together. It tests the interfaces and interactions between integrated units, catching issues that unit tests might miss, such as data format mismatches or communication problems."
+    },
+    {
+      question: "What is technical debt?",
+      options: ["The implied cost of future rework caused by choosing quick solutions now", "Money owed to contractors", "The cost of software licenses", "Documentation requirements", "Testing obligations"],
+      correct: 0,
+      explanation: "Technical debt refers to the implied cost of additional rework caused by choosing an easy or quick solution now instead of a better approach that would take longer. Like financial debt, it accumulates 'interest' - the longer you wait to address it, the more expensive it becomes to fix."
+    },
+    {
+      question: "What is the Waterfall model?",
+      options: ["A sequential software development process with distinct phases", "An agile methodology", "A database design pattern", "A testing framework", "A deployment strategy"],
+      correct: 0,
+      explanation: "The Waterfall model is a sequential software development process where progress flows downward through phases: Requirements, Design, Implementation, Testing, Deployment, and Maintenance. Each phase must be completed before the next begins, with little room for changes once a phase is finished."
+    },
+    {
+      question: "What is Test-Driven Development (TDD)?",
+      options: ["Writing tests before writing the actual code", "Testing after development is complete", "Testing only critical features", "Automated testing only", "Manual testing methodology"],
+      correct: 0,
+      explanation: "TDD is a development approach where you write automated tests before writing the code to make them pass. The cycle is: Red (write a failing test), Green (write minimal code to pass), Refactor (improve the code). This ensures code is testable and meets requirements from the start."
+    },
+    {
+      question: "What is the purpose of a design pattern?",
+      options: ["Reusable solution to commonly occurring problems", "A specific coding style", "A database schema", "A project management tool", "A testing framework"],
+      correct: 0,
+      explanation: "Design patterns are reusable solutions to commonly occurring problems in software design. They represent best practices evolved over time and provide templates for solving problems that can be used in many different situations. Examples include Singleton, Factory, Observer, and MVC patterns."
+    },
+    {
+      question: "What is the difference between black-box and white-box testing?",
+      options: ["Black-box tests functionality without knowing internal code; white-box tests internal structure", "They are the same", "Black-box is automated; white-box is manual", "Black-box is for databases; white-box is for UIs", "Black-box is faster than white-box"],
+      correct: 0,
+      explanation: "Black-box testing examines functionality without knowledge of internal implementation - testers only know inputs and expected outputs. White-box testing tests internal structures, code paths, and logic with full knowledge of the implementation. Both approaches are complementary."
+    },
+    {
+      question: "What is Continuous Deployment (CD)?",
+      options: ["Automatically deploying every code change that passes tests to production", "Manually deploying once per month", "Deploying only major releases", "Testing in production", "Customer demonstrations"],
+      correct: 0,
+      explanation: "Continuous Deployment is a practice where every code change that passes all stages of the production pipeline is automatically released to production without human intervention. This requires comprehensive automated testing and monitoring to ensure quality and quick rollback capabilities."
+    },
+    {
+      question: "What is the purpose of a sprint retrospective in Scrum?",
+      options: ["Team reflects on what went well and what to improve", "Planning the next sprint's work", "Demonstrating completed work to stakeholders", "Estimating user stories", "Daily status updates"],
+      correct: 0,
+      explanation: "A sprint retrospective is a meeting at the end of each sprint where the team reflects on their process, discussing what went well, what didn't, and what they can improve in the next sprint. It's focused on continuous process improvement and team dynamics, not the product itself."
+    },
+    {
+      question: "What does 'KISS' principle mean?",
+      options: ["Keep It Simple, Stupid - favor simplicity over complexity", "Knowledge Integration and System Synchronization", "Key Infrastructure Security Standard", "Kernel Instruction Set Specification", "Keep Iterating System Sprints"],
+      correct: 0,
+      explanation: "KISS stands for 'Keep It Simple, Stupid' and advocates for simplicity in design and implementation. Complex solutions are harder to understand, maintain, and debug. The principle encourages developers to choose the simplest solution that solves the problem effectively."
+    },
+    {
+      question: "What is pair programming?",
+      options: ["Two developers working together at one workstation", "Two separate developers working on different features", "A type of testing methodology", "A project management technique", "A code review process"],
+      correct: 0,
+      explanation: "Pair programming is an agile development technique where two programmers work together at one workstation. One (the driver) writes code while the other (the navigator/observer) reviews each line, thinks strategically, and spots mistakes. They switch roles frequently. This improves code quality and knowledge sharing."
+    },
+    {
+      question: "What is the difference between functional and non-functional requirements?",
+      options: ["Functional defines what the system does; non-functional defines how well it does it", "They mean the same thing", "Functional is for users; non-functional is for developers", "Functional requirements are optional", "Non-functional requirements are always performance-related"],
+      correct: 0,
+      explanation: "Functional requirements specify what the system should do (features, capabilities, functions). Non-functional requirements specify how well the system should perform (performance, security, reliability, usability, scalability). Both are essential for complete requirements specification."
+    },
+    {
+      question: "What is regression testing?",
+      options: ["Re-running tests to ensure new changes haven't broken existing functionality", "Testing only new features", "Testing performance degradation", "Testing backward compatibility only", "Testing user regression scenarios"],
+      correct: 0,
+      explanation: "Regression testing involves re-running previously passed tests after code changes to ensure that new modifications haven't introduced bugs into existing functionality. It's typically automated and run frequently to catch unintended side effects of changes."
+    },
+    {
+      question: "What is a microservices architecture?",
+      options: ["Application built as collection of small, independent services", "A monolithic application", "A database architecture", "A front-end framework", "A testing methodology"],
+      correct: 0,
+      explanation: "Microservices architecture structures an application as a collection of small, loosely coupled, independently deployable services. Each service runs its own process, communicates via APIs, and can be developed, deployed, and scaled independently. This contrasts with monolithic architecture where everything is tightly integrated."
+    },
+    {
+      question: "What is the purpose of a .gitignore file?",
+      options: ["Specifying which files Git should not track", "Listing all project files", "Configuring Git settings", "Documenting ignored bugs", "Tracking deleted files"],
+      correct: 0,
+      explanation: "A .gitignore file specifies which files and directories Git should intentionally ignore and not track. This typically includes build outputs, dependencies, IDE files, logs, and sensitive information like API keys. It keeps the repository clean and prevents accidentally committing files that shouldn't be versioned."
+    },
+    {
+      question: "What is encapsulation in object-oriented programming?",
+      options: ["Bundling data and methods while hiding internal implementation", "Creating multiple instances of a class", "Inheriting from parent classes", "Defining interfaces", "Using abstract classes"],
+      correct: 0,
+      explanation: "Encapsulation is bundling data (attributes) and methods that operate on that data within a single unit (class) while hiding the internal implementation details. It's achieved through access modifiers (private, protected, public), allowing controlled access to the object's state and promoting data integrity."
+    },
+    {
+      question: "What is the difference between Git merge and Git rebase?",
+      options: ["Merge creates a merge commit; rebase rewrites history by moving commits", "They do exactly the same thing", "Merge is faster than rebase", "Rebase only works on master branch", "Merge deletes branches; rebase keeps them"],
+      correct: 0,
+      explanation: "Git merge combines branches by creating a new merge commit that has two parent commits, preserving the complete history. Git rebase moves or combines commits by rewriting the commit history, creating a linear history. Merge is safer for shared branches; rebase creates cleaner history but should not be used on public branches."
+    },
+    {
+      question: "What is the Observer design pattern?",
+      options: ["One-to-many dependency where changes in one object notify all dependents", "Monitoring system performance", "A testing pattern", "A database pattern", "A deployment strategy"],
+      correct: 0,
+      explanation: "The Observer pattern defines a one-to-many dependency between objects so that when one object (subject) changes state, all its dependents (observers) are notified and updated automatically. It's commonly used in event handling systems, MVC architectures, and reactive programming."
+    },
+    {
+      question: "What is Big O notation used for?",
+      options: ["Describing algorithm time/space complexity as input size grows", "Measuring code quality", "Counting lines of code", "Estimating project timelines", "Tracking bugs"],
+      correct: 0,
+      explanation: "Big O notation describes the upper bound of algorithm complexity - how time or space requirements grow as input size increases. O(1) is constant, O(n) is linear, O(n²) is quadratic, etc. It helps developers analyze and compare algorithm efficiency, especially for large datasets."
+    },
+    {
+      question: "What is the Singleton design pattern?",
+      options: ["Ensures a class has only one instance with global access point", "Creates multiple instances of a class", "A pattern for database connections only", "A testing pattern", "A deployment pattern"],
+      correct: 0,
+      explanation: "The Singleton pattern ensures a class has only one instance throughout the application and provides a global point of access to it. It's useful for managing shared resources like configuration objects, logging, database connections, or thread pools. However, it can make code harder to test and should be used carefully."
+    },
+    {
+      question: "What is the purpose of dependency injection?",
+      options: ["Providing dependencies from outside rather than creating them internally", "Installing npm packages", "Creating class dependencies", "Removing unused code", "Optimizing performance"],
+      correct: 0,
+      explanation: "Dependency Injection is a technique where an object receives its dependencies from external sources rather than creating them itself. This promotes loose coupling, makes code more testable (you can inject mocks), and follows the Dependency Inversion Principle. It's a key principle in modern frameworks."
+    },
+    {
+      question: "What is the difference between stateful and stateless applications?",
+      options: ["Stateful stores session data; stateless doesn't remember previous interactions", "They are the same", "Stateful is faster than stateless", "Stateless applications can't scale", "Stateful only works with databases"],
+      correct: 0,
+      explanation: "Stateful applications store session data and remember previous interactions - the server maintains client state between requests. Stateless applications don't store session information - each request is independent and contains all necessary information. Stateless designs scale better and are more resilient but may require client-side state management."
+    },
+    {
+      question: "What is the MVC (Model-View-Controller) pattern?",
+      options: ["Separates application into three interconnected components for concerns separation", "A database design pattern", "A testing framework", "A deployment strategy", "A version control pattern"],
+      correct: 0,
+      explanation: "MVC separates an application into three interconnected components: Model (data and business logic), View (user interface/presentation), and Controller (handles input and updates Model/View). This separation of concerns makes code more organized, testable, and maintainable. It's widely used in web frameworks."
+    },
+    {
+      question: "What is a race condition?",
+      options: ["When multiple processes/threads access shared data simultaneously causing unpredictable results", "When code runs too fast", "A performance optimization technique", "A type of infinite loop", "A deployment issue"],
+      correct: 0,
+      explanation: "A race condition occurs when multiple processes or threads access and manipulate shared data concurrently, and the outcome depends on the sequence or timing of execution. This can lead to unpredictable, incorrect behavior. Solutions include locks, semaphores, mutexes, or atomic operations to ensure thread safety."
+    },
+    {
+      question: "What is the purpose of a build tool (like Maven, Gradle, or Webpack)?",
+      options: ["Automates compilation, testing, packaging, and deployment processes", "Only compiles code", "Creates documentation", "Manages databases", "Designs user interfaces"],
+      correct: 0,
+      explanation: "Build tools automate the software build process including compiling source code, resolving dependencies, running tests, packaging binaries, and preparing for deployment. They ensure consistent, repeatable builds across different environments and save time by automating repetitive tasks. Examples include Maven, Gradle, npm, and Webpack."
+    },
+    {
+      question: "What is the difference between authentication and authorization?",
+      options: ["Authentication verifies identity; authorization determines what they can access", "They mean the same thing", "Authentication is for users; authorization is for systems", "Authorization happens before authentication", "Authentication is optional; authorization is required"],
+      correct: 0,
+      explanation: "Authentication verifies who you are (identity verification through credentials like username/password, biometrics, or tokens). Authorization determines what you're allowed to do (access control based on permissions and roles). Authentication always comes first - you can't determine permissions without knowing who the user is."
+    },
+    {
+      question: "What is containerization (like Docker)?",
+      options: ["Packaging application with its dependencies into isolated, portable containers", "A type of database", "A front-end framework", "A testing methodology", "A version control system"],
+      correct: 0,
+      explanation: "Containerization packages an application and all its dependencies (libraries, binaries, configuration files) into a container that can run consistently across different computing environments. Containers are lightweight, isolated, and portable. Docker is the most popular containerization platform, enabling consistent deployment from development to production."
+    },
+    {
+      question: "What is the CAP theorem in distributed systems?",
+      options: ["You can only guarantee two of: Consistency, Availability, Partition tolerance", "All three are always achievable", "It applies only to databases", "It's a security principle", "It's about code quality"],
+      correct: 0,
+      explanation: "The CAP theorem states that in a distributed system, you can only simultaneously provide two of three guarantees: Consistency (all nodes see the same data), Availability (every request gets a response), and Partition tolerance (system continues despite network failures). This forces architectural tradeoffs in distributed system design."
+    },
+    {
+      question: "What is the purpose of a sprint in Agile/Scrum?",
+      options: ["A time-boxed iteration to complete a set of work items", "A fast coding session", "A type of test", "A deployment window", "A bug fix cycle"],
+      correct: 0,
+      explanation: "A sprint is a time-boxed iteration (typically 1-4 weeks) in Scrum where a team works to complete a chosen set of product backlog items. Each sprint includes planning, daily standups, development work, sprint review (demo), and retrospective. The goal is to produce a potentially shippable product increment by the end."
+    },
+    {
+      question: "What is SQL injection and how is it prevented?",
+      options: ["A security vulnerability where malicious SQL is inserted; prevent with parameterized queries", "A database optimization technique", "A way to speed up queries", "A debugging method", "A performance issue"],
+      correct: 0,
+      explanation: "SQL injection is a security vulnerability where attackers insert malicious SQL code into application inputs, potentially exposing, modifying, or deleting database data. Prevention includes: using parameterized queries/prepared statements, input validation and sanitization, least privilege database access, and avoiding dynamic SQL construction with user input."
+    }
+  ];
+
+  // Shuffle array function
+  function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  // Select 15 random questions
+  const selectedQuestions = shuffleArray(questionBank).slice(0, 15);
+  const correctAnswers = {};
+  const explanations = {};
+
+  // Generate quiz HTML
+  const quizContainer = document.getElementById('quizContainer');
+  selectedQuestions.forEach((q, index) => {
+    const questionNum = index + 1;
+    const questionId = `q${questionNum}`;
+    
+    // Store correct answer and explanation
+    correctAnswers[questionId] = q.correct;
+    explanations[questionId] = q.explanation;
+    
+    // Shuffle options with correct answer tracking
+    const optionsWithIndex = q.options.map((opt, idx) => ({ text: opt, originalIndex: idx }));
+    const shuffledOptions = shuffleArray(optionsWithIndex);
+    
+    // Find new position of correct answer
+    const newCorrectIndex = shuffledOptions.findIndex(opt => opt.originalIndex === q.correct);
+    correctAnswers[questionId] = newCorrectIndex;
+    
+    // Create question HTML
+    const questionHTML = `
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+        <h3 class="text-2xl font-bold mb-4 text-gray-800">Question ${questionNum}</h3>
+        <p class="text-lg text-gray-700 mb-6">${q.question}</p>
+        <div class="space-y-3">
+          ${shuffledOptions.map((opt, optIndex) => `
+            <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+              <input type="radio" name="${questionId}" value="${optIndex}" class="mt-1">
+              <span class="text-gray-700">${opt.text}</span>
+            </label>
+          `).join('')}
+        </div>
+        <div class="feedback mt-4 hidden"></div>
+      </div>
+    `;
+    
+    quizContainer.innerHTML += questionHTML;
+  });
+
+  lucide.createIcons();
+
+  document.getElementById('submitQuiz').addEventListener('click', function() {
+    let score = 0;
+    let totalQuestions = Object.keys(correctAnswers).length;
+    let answerReviewHTML = '';
+
+    // Check each answer
+    for (let question in correctAnswers) {
+      const selected = document.querySelector(`input[name="${question}"]:checked`);
+      const questionDiv = document.querySelector(`input[name="${question}"]`).closest('.quiz-question');
+      const feedbackDiv = questionDiv.querySelector('.feedback');
+      
+      if (selected) {
+        if (selected.value === correctAnswers[question]) {
+          score++;
+          feedbackDiv.innerHTML = `<div class="p-4 bg-green-100 border-l-4 border-green-500 rounded"><p class="font-semibold text-green-800">✓ Correct!</p><p class="text-green-700 mt-2">${explanations[question]}</p></div>`;
+        } else {
+          feedbackDiv.innerHTML = `<div class="p-4 bg-red-100 border-l-4 border-red-500 rounded"><p class="font-semibold text-red-800">✗ Incorrect</p><p class="text-red-700 mt-2">${explanations[question]}</p></div>`;
+        }
+        feedbackDiv.classList.remove('hidden');
+      } else {
+        feedbackDiv.innerHTML = `<div class="p-4 bg-yellow-100 border-l-4 border-yellow-500 rounded"><p class="font-semibold text-yellow-800">⚠ Not answered</p><p class="text-yellow-700 mt-2">${explanations[question]}</p></div>`;
+        feedbackDiv.classList.remove('hidden');
+      }
+    }
+
+    // Calculate percentage
+    let percentage = Math.round((score / totalQuestions) * 100);
+
+  // Submit button handler
+  document.getElementById('submitQuiz').addEventListener('click', () => {
+    let score = 0;
+    let answered = 0;
+    
+    const questions = document.querySelectorAll('.quiz-question');
+    
+    questions.forEach((question, index) => {
+      const questionId = `q${index + 1}`;
+      const selected = question.querySelector(`input[name="${questionId}"]:checked`);
+      const feedback = question.querySelector('.feedback');
+      
+      if (selected) {
+        answered++;
+        const selectedValue = parseInt(selected.value);
+        const isCorrect = selectedValue === correctAnswers[questionId];
+        
+        if (isCorrect) {
+          score++;
+          question.classList.remove('border-red-500', 'border-yellow-500');
+          question.classList.add('border-green-500');
+          feedback.innerHTML = `
+            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <p class="font-semibold text-green-800 mb-2">✓ Correct!</p>
+              <p class="text-green-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        } else {
+          question.classList.remove('border-blue-500', 'border-yellow-500');
+          question.classList.add('border-red-500');
+          feedback.innerHTML = `
+            <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded">
+              <p class="font-semibold text-red-800 mb-2">✗ Incorrect</p>
+              <p class="text-red-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        }
+        
+        feedback.classList.remove('hidden');
+      } else {
+        question.classList.remove('border-blue-500', 'border-red-500', 'border-green-500');
+        question.classList.add('border-yellow-500');
+        feedback.innerHTML = `
+          <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+            <p class="font-semibold text-yellow-800">Question not answered</p>
+          </div>
+        `;
+        feedback.classList.remove('hidden');
+      }
+    });
+    
+    const percentage = answered > 0 ? Math.round((score / 15) * 100) : 0;
+    const resultDiv = document.getElementById('quizResults');
+    const scoreDisplay = document.getElementById('scoreDisplay');
+    
+    let gradeColor = 'text-red-600';
+    let message = 'Keep studying!';
+    
+    if (percentage >= 90) {
+      gradeColor = 'text-green-600';
+      message = 'Excellent! You have mastered this material!';
+    } else if (percentage >= 80) {
+      gradeColor = 'text-blue-600';
+      message = 'Great job! You have a strong understanding!';
+    } else if (percentage >= 70) {
+      gradeColor = 'text-yellow-600';
+      message = 'Good work! Review the explanations to improve.';
+    } else if (percentage >= 60) {
+      gradeColor = 'text-orange-600';
+      message = 'Fair. Consider reviewing the material more thoroughly.';
+    }
+    
+    scoreDisplay.innerHTML = `
+      <div class="text-center">
+        <div class="text-6xl font-bold ${gradeColor} mb-4">${percentage}%</div>
+        <p class="text-2xl text-gray-700 mb-2">${score} out of 15 correct</p>
+        <p class="text-xl text-gray-600 mb-6">${message}</p>
+      </div>
+    `;
+    
+    resultDiv.classList.remove('hidden');
+    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+
+</body>
+</html>

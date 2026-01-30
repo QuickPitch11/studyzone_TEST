@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Public Speaking - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full mb-6">
+      <i data-lucide="mic" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Public Speaking: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">A comprehensive exploration of rhetoric, delivery, persuasion, and the art of effective oral communication</p>
+  </div>
+
+  <div class="space-y-10">
+    <!-- Introduction -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Introduction</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Public speaking—the act of delivering prepared or extemporaneous oral messages to audiences—is one of humanity's oldest and most influential communication forms. From ancient orators in Athens and Rome to modern TED speakers and political leaders, effective public speaking shapes opinions, inspires action, educates, and builds communities.</p>
+      <p class="text-gray-700 leading-relaxed text-lg">This analysis examines the theoretical foundations of rhetoric and communication, speech structure and organization, delivery techniques (verbal and nonverbal), audience analysis, persuasion strategies, anxiety management, ethical considerations, and evidence-based practices for developing mastery in public speaking.</p>
+    </div>
+
+    <!-- Historical Context & Classical Rhetoric -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Historical Context &amp; Classical Rhetoric</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Ancient Origins</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Ancient Greece (5th–4th century BCE):</strong> Sophists taught persuasive speaking; Aristotle systematized rhetoric in "Rhetoric," defining three modes of persuasion: ethos (credibility), pathos (emotion), logos (logic).</li>
+        <li><strong>Rome (1st century BCE–1st century CE):</strong> Cicero and Quintilian refined oratory into structured curricula. Cicero's "De Oratore" emphasized invention, arrangement, style, memory, and delivery—the five canons of rhetoric.</li>
+        <li><strong>Medieval & Renaissance:</strong> Rhetoric taught in trivium (grammar, logic, rhetoric). Humanist scholars revived classical texts.</li>
+        <li><strong>Modern Era:</strong> Elocution movement (18th–19th centuries) focused on delivery; 20th century saw shift to audience-centered communication and conversational style.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">The Five Canons of Rhetoric</h3>
+      <ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Invention (Inventio):</strong> Finding and developing arguments, evidence, and appeals.</li>
+        <li><strong>Arrangement (Dispositio):</strong> Organizing content into effective structure (introduction, body, conclusion).</li>
+        <li><strong>Style (Elocutio):</strong> Choosing language, tone, figures of speech for clarity and impact.</li>
+        <li><strong>Memory (Memoria):</strong> Internalizing speech content for fluent delivery (less emphasized in modern teleprompter era).</li>
+        <li><strong>Delivery (Pronuntiatio/Actio):</strong> Vocal and physical presentation—gestures, eye contact, voice modulation.</li>
+      </ol>
+    </div>
+
+    <!-- Communication Theory & Models -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Communication Theory &amp; Models</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Transactional Model of Communication</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Communication is simultaneous, reciprocal exchange. Speaker encodes message → transmits via channel (voice, visual aids) → audience decodes based on context, experiences, cultural frames. Feedback (verbal/nonverbal) informs speaker in real-time. Noise (physical, psychological, semantic) can distort message.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Aristotle's Rhetorical Triangle</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Speaker (Ethos):</strong> Credibility, trustworthiness, authority.</li>
+        <li><strong>Audience (Pathos):</strong> Emotional connection, values, needs.</li>
+        <li><strong>Message (Logos):</strong> Logical structure, evidence, reasoning.</li>
+      </ul>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Effective speeches balance all three; neglecting one weakens persuasive impact.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Types of Speeches</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Informative:</strong> Educate audience on topic (lectures, reports, demonstrations).</li>
+        <li><strong>Persuasive:</strong> Change beliefs, attitudes, or behaviors (sales pitches, political speeches, advocacy).</li>
+        <li><strong>Ceremonial/Epideictic:</strong> Commemorate, celebrate, or honor (eulogies, toasts, awards).</li>
+        <li><strong>Entertaining:</strong> Amuse or inspire through storytelling, humor (after-dinner speeches, motivational talks).</li>
+      </ul>
+    </div>
+
+    <!-- Speech Structure & Organization -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Speech Structure &amp; Organization</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Classic Three-Part Structure</h3>
+      <div class="space-y-4 mb-4">
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <p class="text-gray-700 font-semibold text-lg mb-2">1. Introduction (10–15% of speech)</p>
+          <ul class="space-y-1 text-gray-700 text-base ml-4">
+            <li>• <strong>Attention-Getter:</strong> Hook audience (startling fact, question, story, quote).</li>
+            <li>• <strong>Establish Credibility:</strong> Why you're qualified to speak on topic.</li>
+            <li>• <strong>Relevance:</strong> Connect topic to audience's interests/needs.</li>
+            <li>• <strong>Thesis Statement:</strong> Clear central message or purpose.</li>
+            <li>• <strong>Preview:</strong> Roadmap of main points.</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <p class="text-gray-700 font-semibold text-lg mb-2">2. Body (70–80% of speech)</p>
+          <ul class="space-y-1 text-gray-700 text-base ml-4">
+            <li>• <strong>Main Points:</strong> 2–5 key ideas (more leads to cognitive overload).</li>
+            <li>• <strong>Supporting Material:</strong> Evidence (statistics, examples, expert testimony, analogies).</li>
+            <li>• <strong>Transitions:</strong> Signpost movement between points ("Next," "Furthermore," "In contrast").</li>
+            <li>• <strong>Internal Summaries:</strong> Reinforce understanding before moving on.</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <p class="text-gray-700 font-semibold text-lg mb-2">3. Conclusion (10–15% of speech)</p>
+          <ul class="space-y-1 text-gray-700 text-base ml-4">
+            <li>• <strong>Signal Ending:</strong> "In conclusion," "To summarize."</li>
+            <li>• <strong>Review Main Points:</strong> Brief recap reinforces memory.</li>
+            <li>• <strong>Restate Thesis:</strong> Return to central message.</li>
+            <li>• <strong>Closing Device:</strong> Call to action, memorable quote, return to opening story (circular closure).</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Organizational Patterns</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Chronological:</strong> Time sequence (historical events, processes).</li>
+        <li><strong>Spatial:</strong> Physical arrangement (describing locations, architecture).</li>
+        <li><strong>Topical:</strong> Divide by categories or themes (most common).</li>
+        <li><strong>Problem-Solution:</strong> Present issue, then propose remedy.</li>
+        <li><strong>Cause-Effect:</strong> Show relationships between events/phenomena.</li>
+        <li><strong>Monroe's Motivated Sequence:</strong> Attention → Need → Satisfaction → Visualization → Action (highly persuasive).</li>
+      </ul>
+    </div>
+
+    <!-- Audience Analysis -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Audience Analysis</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Demographic Analysis</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Consider age, gender, education, occupation, cultural background, socioeconomic status. Avoid stereotyping, but adapt language, examples, and references to audience's experiences.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Psychographic Analysis</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Values, beliefs, attitudes, interests. What motivates them? What are their pain points? Use surveys, interviews, or observation to gather insights.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Situational Analysis</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Occasion:</strong> Formal vs. informal; celebratory vs. somber.</li>
+        <li><strong>Time:</strong> Early morning audiences less energetic; post-lunch "graveyard slot."</li>
+        <li><strong>Size:</strong> Intimacy possible with small groups; large audiences require projection and broader gestures.</li>
+        <li><strong>Environment:</strong> Room layout, acoustics, lighting, temperature affect comfort and attention.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Prior Knowledge & Expectations</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Gauge audience familiarity with topic. Novices need background; experts want depth and novelty. Violating expectations (too basic or too advanced) causes disengagement.</p>
+    </div>
+
+    <!-- Delivery Techniques: Verbal -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Delivery Techniques: Verbal</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Voice Modulation</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Volume:</strong> Loud enough for back row; vary for emphasis (whisper for intimacy, crescendo for climax).</li>
+        <li><strong>Pitch:</strong> Avoid monotone; natural inflection conveys meaning and emotion. Downward pitch signals authority; upward suggests uncertainty.</li>
+        <li><strong>Rate:</strong> 120–150 words/min typical; slow for complex ideas, faster for lists or excitement. Pauses create emphasis and allow processing.</li>
+        <li><strong>Tone:</strong> Emotional color—warm, authoritative, enthusiastic. Match tone to message and occasion.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Articulation & Pronunciation</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Enunciate clearly—avoid mumbling, slurring, or dropping consonants. Practice difficult words; verify pronunciations. Regional accents acceptable but ensure intelligibility.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Pausing & Pacing</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Strategic pauses signal transitions, allow audience to absorb, and create anticipation. Silence is powerful—don't fear it. Avoid filler words (um, uh, like, you know) that undermine credibility.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Language & Style</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Clarity:</strong> Simple, direct language. Avoid jargon unless audience is specialized.</li>
+        <li><strong>Vividness:</strong> Concrete, sensory language over abstractions. "Icy wind" vs. "cold weather."</li>
+        <li><strong>Repetition:</strong> Reinforce key points through strategic repetition (anaphora: "I have a dream...").</li>
+        <li><strong>Rhetorical Devices:</strong> Metaphor, simile, alliteration, tricolon (rule of three), antithesis (contrasts).</li>
+      </ul>
+    </div>
+
+    <!-- Delivery Techniques: Nonverbal -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Delivery Techniques: Nonverbal</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Eye Contact</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Establishes connection, conveys confidence, gauges audience reaction. Hold gaze 3–5 seconds per person/section; scan entire room. Avoid staring at notes, ceiling, or single individual.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Facial Expressions</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Congruent with message—smile when appropriate, show concern for serious topics. Authenticity matters; forced expressions detected and damage trust.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Gestures</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Purposeful:</strong> Illustrate points (size, direction, enumeration). Avoid random, repetitive gestures (pocket jingling, hair touching).</li>
+        <li><strong>Open:</strong> Palms up, arms open convey honesty; crossed arms signal defensiveness.</li>
+        <li><strong>Scaled to Venue:</strong> Larger gestures for big audiences; subtle for small groups.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Posture & Movement</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Stand tall, shoulders back, weight balanced. Move purposefully—walk to new section of stage for transitions. Avoid pacing, swaying, or rooted "planted" stance. Use stage space to create intimacy or emphasize.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Appearance & Dress</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Dress slightly more formal than audience (shows respect). Grooming and attire influence first impressions and ethos. Avoid distracting accessories or overly casual attire in formal contexts.</p>
+    </div>
+
+    <!-- Managing Speech Anxiety -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Managing Speech Anxiety</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Understanding Communication Apprehension</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Fear of public speaking (glossophobia) is extremely common—surveys rank it above death for many. Physiological responses: increased heart rate, sweating, trembling, dry mouth. Root causes: fear of judgment, perfectionism, past negative experiences, lack of preparation.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Cognitive Restructuring</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Challenge irrational beliefs ("I'll forget everything," "Everyone will laugh"). Replace with rational thoughts ("I've prepared; minor mistakes are normal"). Visualization: imagine successful delivery, positive audience reactions.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Systematic Desensitization</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Gradual exposure reduces anxiety. Start small (practice alone, then friends, then small groups) and build to larger audiences. Each success builds confidence.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Physical Strategies</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Deep Breathing:</strong> Diaphragmatic breathing activates parasympathetic nervous system, reduces cortisol.</li>
+        <li><strong>Progressive Muscle Relaxation:</strong> Tense and release muscle groups to reduce physical tension.</li>
+        <li><strong>Exercise:</strong> Pre-speech workout burns off excess adrenaline.</li>
+        <li><strong>Avoid Stimulants:</strong> Caffeine and sugar exacerbate jitters.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Preparation & Practice</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Thorough preparation is the best anxiety reducer. Rehearse aloud multiple times; practice in the actual venue if possible. Familiarity breeds confidence. Over-preparation allows flexibility if unexpected happens.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Reframe Nervousness as Excitement</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Physiological arousal is the same for anxiety and excitement. Research shows saying "I'm excited" improves performance more than "I'm calm." Channel energy into enthusiasm.</p>
+    </div>
+
+    <!-- Persuasion & Influence -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Persuasion &amp; Influence</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Ethos (Credibility)</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Competence:</strong> Demonstrate expertise through credentials, research, experience.</li>
+        <li><strong>Trustworthiness:</strong> Honesty, transparency, acknowledging counterarguments.</li>
+        <li><strong>Goodwill:</strong> Show you care about audience's best interests, not just self-interest.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Pathos (Emotional Appeal)</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Stories, vivid imagery, metaphors engage emotions. Appeal to values (justice, freedom, family, security). Fear appeals effective if paired with clear solutions. Hope and inspiration motivate action.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Logos (Logical Appeal)</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Evidence:</strong> Statistics, expert testimony, case studies, analogies.</li>
+        <li><strong>Reasoning:</strong> Deductive (general to specific), inductive (specific to general), causal, analogical.</li>
+        <li><strong>Avoid Fallacies:</strong> Ad hominem, straw man, false dilemma, slippery slope, hasty generalization.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Cialdini's Principles of Influence</h3>
+      <ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Reciprocity:</strong> People return favors. Offer value first.</li>
+        <li><strong>Scarcity:</strong> Limited availability increases desire.</li>
+        <li><strong>Authority:</strong> People defer to experts and legitimate power.</li>
+        <li><strong>Consistency:</strong> People align actions with prior commitments.</li>
+        <li><strong>Liking:</strong> We say yes to those we like. Build rapport.</li>
+        <li><strong>Social Proof:</strong> People follow what others do. Use testimonials, trends.</li>
+        <li><strong>Unity:</strong> Shared identity ("we," "us") fosters cooperation.</li>
+      </ol>
+    </div>
+
+    <!-- Visual Aids & Technology -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Visual Aids &amp; Technology</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Purpose of Visual Aids</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Enhance comprehension, retention, and engagement. Particularly effective for data visualization, processes, spatial relationships. Dual coding theory: verbal + visual information processed via separate channels, improving memory.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Design Principles</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Simplicity:</strong> One idea per slide. Minimal text (6×6 rule: max 6 bullets, 6 words each—better yet, use visuals).</li>
+        <li><strong>Contrast:</strong> High contrast (dark text on light background) aids readability.</li>
+        <li><strong>Consistency:</strong> Unified color scheme, fonts, layout across slides.</li>
+        <li><strong>Visuals Over Text:</strong> Images, charts, diagrams communicate faster than bullet points.</li>
+        <li><strong>Legibility:</strong> Font size ≥24pt; sans-serif fonts (Arial, Helvetica) clearer than serif.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Types of Visuals</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Slides (PowerPoint, Keynote, Google Slides):</strong> Most common; risk of overuse.</li>
+        <li><strong>Props/Physical Objects:</strong> Tangible, memorable (Steve Jobs pulling MacBook Air from envelope).</li>
+        <li><strong>Flip Charts/Whiteboards:</strong> Spontaneous, interactive, good for small groups.</li>
+        <li><strong>Video Clips:</strong> Powerful but keep short (&lt;2 min) to maintain control of presentation.</li>
+        <li><strong>Handouts:</strong> Detailed info for later review. Distribute after speech to avoid distraction.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Common Mistakes</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li>Reading slides verbatim—audience can read faster than you speak.</li>
+        <li>Overloading with text, data, or animations.</li>
+        <li>Turning back to screen, breaking eye contact with audience.</li>
+        <li>Technical failures without backup plan (bring USB, PDF backup, printed notes).</li>
+      </ul>
+    </div>
+
+    <!-- Ethical Considerations -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Ethical Considerations</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Truthfulness & Accuracy</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Verify facts, cite sources, avoid distortion or selective presentation. Misrepresentation damages credibility and harms audience decision-making. Acknowledge limitations and uncertainties.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Respect for Audience</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Avoid manipulation, coercion, or exploitation of emotions/biases. Present counterarguments fairly. Respect diverse perspectives; avoid stereotypes, offensive language, or exclusionary rhetoric.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Plagiarism</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Acknowledge sources of ideas, quotes, data. Even oral presentations require attribution. Ethical speakers give credit and allow audiences to evaluate source credibility.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Responsible Advocacy</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Persuasion is ethical when transparent about intent, respects autonomy, and promotes informed choice. Advocacy becomes unethical when it deceives, suppresses dissent, or exploits vulnerable populations.</p>
+    </div>
+
+    <!-- Practice & Preparation Strategies -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Practice &amp; Preparation Strategies</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Rehearsal Methods</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Mental Rehearsal:</strong> Visualize successful delivery, walk through speech mentally.</li>
+        <li><strong>Verbal Rehearsal:</strong> Practice aloud—essential for timing, pacing, vocal quality.</li>
+        <li><strong>Full Dress Rehearsal:</strong> Simulate actual conditions—stand, use visuals, wear presentation attire.</li>
+        <li><strong>Record Yourself:</strong> Video reveals nervous habits, unclear articulation, poor posture.</li>
+        <li><strong>Practice with Audience:</strong> Friends/colleagues provide feedback and simulate Q&A.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Extemporaneous Delivery</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Most effective mode: prepared and practiced but delivered from brief notes (not memorized or read). Combines structure with natural conversational tone. Allows adaptation to audience feedback. Use note cards with key points, transitions, quotes.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Other Delivery Modes</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Manuscript:</strong> Read from full text. Ensures precision (legal, ceremonial) but risks monotone, lack of eye contact. Requires extensive practice to sound natural.</li>
+        <li><strong>Memorized:</strong> Entire speech committed to memory. Risk of forgetting; sounds rehearsed. Best for short speeches or critical sections.</li>
+        <li><strong>Impromptu:</strong> Spontaneous, no preparation. Brief, informal. Use mini-structure: point, reason, example, restate.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Timing</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Respect time limits. Running over frustrates audience and event organizers. Practice with timer; build in buffer for audience reactions (laughter, applause). Plan what to cut if running long.</p>
+    </div>
+
+    <!-- Handling Q&A and Difficult Situations -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Handling Q&amp;A and Difficult Situations</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Q&A Best Practices</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Anticipate Questions:</strong> Prepare for likely and hostile questions.</li>
+        <li><strong>Listen Fully:</strong> Don't interrupt; clarify if unclear.</li>
+        <li><strong>Repeat/Paraphrase:</strong> Ensures everyone heard; gives you time to think.</li>
+        <li><strong>Be Concise:</strong> Answer directly; avoid rambling.</li>
+        <li><strong>Admit Uncertainty:</strong> "I don't know, but I'll find out" is better than bluffing.</li>
+        <li><strong>Redirect Irrelevant:</strong> "Interesting, but outside today's scope."</li>
+        <li><strong>Stay Composed:</strong> Hostile questions: stay calm, address substance not tone.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Handling Mistakes</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Minor slips: ignore and continue. Major errors (wrong fact): acknowledge and correct immediately. Authenticity and humility build trust. Humor can defuse awkward moments if appropriate.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Technical Failures</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Microphone dies, slides won't load, projector fails. Stay calm, have contingency (printed backup, speak louder, continue without slides). Audience empathizes with grace under pressure.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Distractions & Interruptions</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Phones ringing, latecomers, side conversations. Pause briefly to let disturbance pass. Politely address persistent disruptions. Maintain focus and professionalism.</p>
+    </div>
+
+    <!-- Common Pitfalls & Mistakes -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Common Pitfalls &amp; Mistakes</h2>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li><strong>Insufficient Preparation:</strong> Winging it shows; audience notices and disengages.</li>
+        <li><strong>Ignoring Audience:</strong> Speaking to slides, notes, or only friendly faces alienates others.</li>
+        <li><strong>Information Overload:</strong> Too many points, too much detail. Simplify and prioritize.</li>
+        <li><strong>Weak Opening:</strong> Starting with apologies ("I'm not prepared") or boring preamble loses attention immediately.</li>
+        <li><strong>Lack of Structure:</strong> Rambling without clear organization confuses and frustrates.</li>
+        <li><strong>Monotone Delivery:</strong> Flat voice, no variation kills engagement no matter how good content.</li>
+        <li><strong>Reading Slides:</strong> Insults audience intelligence; slides should complement, not duplicate speech.</li>
+        <li><strong>Poor Time Management:</strong> Running over or ending abruptly undermines professionalism.</li>
+        <li><strong>Defensive Response to Questions:</strong> Hostility or dismissiveness damages credibility.</li>
+        <li><strong>Neglecting Conclusion:</strong> Trailing off weakly instead of strong, memorable close.</li>
+      </ul>
+    </div>
+
+    <!-- Advanced Techniques -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Advanced Techniques</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Storytelling</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Stories are memorable, emotionally engaging, and illustrate abstract concepts concretely. Use narrative arc: setup, conflict, resolution. Personal anecdotes build authenticity; others' stories demonstrate broader relevance. Hero's journey structure resonates universally.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Humor</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Humor builds rapport, reduces tension, makes content memorable. Self-deprecating humor humanizes; observational humor connects. Avoid offensive, divisive, or inside jokes. Test humor in practice; timing is critical.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Interactive Elements</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Polls, questions, activities, demonstrations increase engagement and retention. Audience participation transforms passive listening into active learning. Manage carefully to avoid losing control of timing.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Vocal Variety & Dynamics</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Master use of whisper (intimacy), crescendo (build excitement), staccato (urgency), drawn-out pacing (suspense). Strategic silence—dramatic pause before key point amplifies impact.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Adapting in Real-Time</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Read audience cues: confusion (clarify), boredom (change pace, add story), hostility (acknowledge concerns). Skilled speakers adjust content, examples, depth on the fly while maintaining core message.</p>
+    </div>
+
+    <!-- Research & Empirical Findings -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Research &amp; Empirical Findings</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Cognitive Load Theory</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Working memory has limited capacity (~7 items). Effective speeches chunk information, use repetition, provide organizational cues (signposts, summaries) to reduce cognitive load and enhance retention.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Primacy & Recency Effects</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Audiences remember beginnings and endings best. Place critical messages in introduction and conclusion. Middle content benefits from vivid examples and repetition.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Mehrabian's Communication Model</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Often oversimplified ("7% words, 38% tone, 55% body language") applies specifically to conveying feelings/attitudes when verbal and nonverbal conflict. Nonetheless, highlights importance of congruent delivery.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Elaboration Likelihood Model (ELM)</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Two routes to persuasion: Central route (systematic processing of arguments—motivated, able audience) and peripheral route (surface cues like speaker attractiveness, delivery style—less motivated/able). Tailor strategy to audience's motivation and ability.</p>
+    </div>
+
+    <!-- Applications & Real-World Context -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Applications &amp; Real-World Context</h2>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li><strong>Business & Leadership:</strong> Pitches, presentations, team motivation, shareholder meetings, crisis communication.</li>
+        <li><strong>Education:</strong> Teaching, lecturing, conference presentations, dissertation defenses.</li>
+        <li><strong>Politics & Advocacy:</strong> Campaign speeches, policy advocacy, public forums, grassroots organizing.</li>
+        <li><strong>Ceremonial Occasions:</strong> Weddings, funerals, graduations, award ceremonies.</li>
+        <li><strong>Media & Broadcasting:</strong> TED talks, podcasts, webinars, video content creation.</li>
+        <li><strong>Legal:</strong> Opening/closing statements, witness examination, jury persuasion.</li>
+        <li><strong>Activism & Social Movements:</strong> Rallies, protests, community organizing.</li>
+      </ul>
+    </div>
+
+    <!-- Practical Exercises & Drills -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Practical Exercises &amp; Drills</h2>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Impromptu Speaking Drill</p>
+        <p class="text-gray-700 text-base">Draw random topic, speak for 2 min: point, reason, example, restate. Builds quick thinking and structure.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Vocal Warm-Up</p>
+        <p class="text-gray-700 text-base">Tongue twisters ("Red leather, yellow leather"), humming, pitch slides. Loosens articulators and vocal cords.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Eye Contact Practice</p>
+        <p class="text-gray-700 text-base">Place sticky notes on walls; "speak" to each for 3–5 seconds. Simulates scanning audience.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Story Bank</p>
+        <p class="text-gray-700 text-base">Develop 5–10 personal stories illustrating different lessons/values. Adapt and deploy in various speeches.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Toastmasters or Speaking Clubs</p>
+        <p class="text-gray-700 text-base">Structured environment for regular practice, feedback, mentorship. Table Topics (impromptu), prepared speeches, evaluations.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Record & Critique</p>
+        <p class="text-gray-700 text-base">Video yourself; watch with rubric (content, organization, delivery, language). Track improvement over time.</p>
+      </div>
+    </div>
+
+    <!-- Further Reading & Resources -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Further Reading &amp; Resources</h2>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg">
+        <li><strong>Classic Texts:</strong> Aristotle's "Rhetoric," Cicero's "De Oratore," Quintilian's "Institutio Oratoria."</li>
+        <li><strong>Modern Guides:</strong> "Talk Like TED" (Carmine Gallo), "The Quick and Easy Way to Effective Speaking" (Dale Carnegie), "Resonate" (Nancy Duarte).</li>
+        <li><strong>Research:</strong> Communication journals (Communication Monographs, Quarterly Journal of Speech) for empirical studies.</li>
+        <li><strong>Online Platforms:</strong> TED.com for exemplary talks, YouTube for speech analysis, Coursera/LinkedIn Learning for courses.</li>
+        <li><strong>Organizations:</strong> Toastmasters International, National Communication Association, Professional Speakers Association.</li>
+        <li><strong>Speech Analysis:</strong> American Rhetoric (speeches database), Rhetoric 2.0 podcast, VoiceVibes (vocal analysis app).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Diagrams & Visualizations -->
+  <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500 mt-10">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">Diagrams &amp; Visualizations</h2>
+    
+    <div class="space-y-8">
+      <!-- Aristotle's Rhetorical Triangle -->
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Aristotle's Rhetorical Triangle</h3>
+        <svg viewBox="0 0 500 400" class="w-full rounded border bg-white" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rhetorical Triangle">
+          <!-- Triangle -->
+          <polygon points="250,80 100,320 400,320" fill="#ede9fe" stroke="#7c3aed" stroke-width="3" />
+          
+          <!-- Vertices circles -->
+          <circle cx="250" cy="80" r="60" fill="#a78bfa" stroke="#7c3aed" stroke-width="2" />
+          <circle cx="100" cy="320" r="60" fill="#c4b5fd" stroke="#7c3aed" stroke-width="2" />
+          <circle cx="400" cy="320" r="60" fill="#ddd6fe" stroke="#7c3aed" stroke-width="2" />
+          
+          <!-- Labels -->
+          <text x="250" y="75" font-size="16" font-weight="bold" fill="#1f2937" text-anchor="middle">Speaker</text>
+          <text x="250" y="95" font-size="14" fill="#1f2937" text-anchor="middle">Ethos</text>
+          
+          <text x="100" y="315" font-size="16" font-weight="bold" fill="#1f2937" text-anchor="middle">Audience</text>
+          <text x="100" y="335" font-size="14" fill="#1f2937" text-anchor="middle">Pathos</text>
+          
+          <text x="400" y="315" font-size="16" font-weight="bold" fill="#1f2937" text-anchor="middle">Message</text>
+          <text x="400" y="335" font-size="14" fill="#1f2937" text-anchor="middle">Logos</text>
+          
+          <!-- Center label -->
+          <text x="250" y="220" font-size="18" font-weight="bold" fill="#6d28d9" text-anchor="middle">Effective</text>
+          <text x="250" y="240" font-size="18" font-weight="bold" fill="#6d28d9" text-anchor="middle">Persuasion</text>
+        </svg>
+        <p class="text-gray-600 text-sm mt-3">Balance ethos (credibility), pathos (emotion), and logos (logic) for maximum persuasive impact.</p>
+      </div>
+
+      <!-- Speech Structure -->
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Classic Speech Structure</h3>
+        <svg viewBox="0 0 600 350" class="w-full rounded border bg-white" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Speech structure diagram">
+          <!-- Introduction -->
+          <rect x="50" y="30" width="500" height="80" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" rx="4" />
+          <text x="300" y="55" font-size="16" font-weight="bold" fill="#1e40af" text-anchor="middle">INTRODUCTION (10-15%)</text>
+          <text x="300" y="75" font-size="13" fill="#1e3a8a" text-anchor="middle">Attention Getter • Credibility • Relevance • Thesis • Preview</text>
+          <text x="300" y="95" font-size="12" fill="#3730a3" text-anchor="middle" font-style="italic">"Tell them what you'll tell them"</text>
+          
+          <!-- Body -->
+          <rect x="50" y="130" width="500" height="110" fill="#dcfce7" stroke="#16a34a" stroke-width="2" rx="4" />
+          <text x="300" y="155" font-size="16" font-weight="bold" fill="#15803d" text-anchor="middle">BODY (70-80%)</text>
+          <text x="300" y="175" font-size="13" fill="#166534" text-anchor="middle">Main Point 1 • Supporting Evidence • Transition</text>
+          <text x="300" y="195" font-size="13" fill="#166534" text-anchor="middle">Main Point 2 • Supporting Evidence • Transition</text>
+          <text x="300" y="215" font-size="13" fill="#166534" text-anchor="middle">Main Point 3 • Supporting Evidence</text>
+          <text x="300" y="230" font-size="12" fill="#14532d" text-anchor="middle" font-style="italic">"Tell them"</text>
+          
+          <!-- Conclusion -->
+          <rect x="50" y="260" width="500" height="80" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" rx="4" />
+          <text x="300" y="285" font-size="16" font-weight="bold" fill="#b45309" text-anchor="middle">CONCLUSION (10-15%)</text>
+          <text x="300" y="305" font-size="13" fill="#92400e" text-anchor="middle">Signal Ending • Review Points • Restate Thesis • Memorable Close</text>
+          <text x="300" y="325" font-size="12" fill="#78350f" text-anchor="middle" font-style="italic">"Tell them what you told them"</text>
+        </svg>
+        <p class="text-gray-600 text-sm mt-3">Three-part structure ensures clarity and retention. Introduction and conclusion are disproportionately memorable.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="public-speaking-quiz.html" class="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to More Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Psychology Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full mb-6">
+      <i data-lucide="brain" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Psychology Quiz</h1>
+    <p class="text-xl text-gray-600">Test your knowledge of mind, behavior, and mental processes</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Questions will be dynamically generated here -->
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-pink-600 text-white text-lg font-semibold rounded-lg hover:bg-pink-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="quizResults" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-pink-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="psychology-analysis.html" class="px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition flex items-center gap-2">
+        <i data-lucide="book-open" class="w-5 h-5"></i>
+        Review Material
+      </a>
+      <button onclick="location.reload()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+        Retake Quiz
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="psychology.html" class="px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Back to Psychology
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Question Bank - 40 questions total
+  const questionBank = [
+    {
+      question: "What is the primary focus of psychology?",
+      options: ["Study of the brain only", "Study of mind and behavior", "Study of mental illness", "Study of consciousness", "Study of social interactions"],
+      correct: 1,
+      explanation: "Psychology is the scientific study of mind and behavior. It encompasses all aspects of conscious and unconscious experience, thought, emotion, and behavior. While it includes neuroscience, clinical work, and social interactions, its scope is broader than any single aspect."
+    },
+    {
+      question: "What is classical conditioning?",
+      options: ["Learning through rewards", "Learning through associations between stimuli", "Learning by observation", "Learning through punishment", "Learning by trial and error"],
+      correct: 1,
+      explanation: "Classical conditioning, discovered by Ivan Pavlov, is learning through association between a neutral stimulus and an unconditioned stimulus. The neutral stimulus eventually produces the same response as the unconditioned stimulus. Pavlov's famous example: dogs learned to salivate at the sound of a bell that had been paired with food."
+    },
+    {
+      question: "What is operant conditioning?",
+      options: ["Learning through associations", "Learning through consequences (reinforcement and punishment)", "Learning by watching others", "Learning through classical music", "Instinctive learning"],
+      correct: 1,
+      explanation: "Operant conditioning, developed by B.F. Skinner, is learning where behavior is modified by its consequences. Reinforcement (positive or negative) increases behavior frequency, while punishment decreases it. For example, a rat learning to press a lever for food demonstrates operant conditioning."
+    },
+    {
+      question: "What is cognitive dissonance?",
+      options: ["Memory loss", "Mental discomfort from holding conflicting beliefs or attitudes", "A learning disability", "Split personality", "Attention deficit"],
+      correct: 1,
+      explanation: "Cognitive dissonance, proposed by Leon Festinger, is the psychological discomfort experienced when holding two or more contradictory beliefs, values, or attitudes simultaneously. People are motivated to reduce this dissonance by changing their beliefs, adding new beliefs, or reducing the importance of the conflicting beliefs."
+    },
+    {
+      question: "What are the stages of Piaget's theory of cognitive development (in order)?",
+      options: ["Concrete, Abstract, Formal, Operational", "Sensorimotor, Preoperational, Concrete Operational, Formal Operational", "Oral, Anal, Phallic, Latency, Genital", "Trust, Autonomy, Initiative, Industry", "Infancy, Childhood, Adolescence, Adulthood"],
+      correct: 1,
+      explanation: "Jean Piaget's four stages are: Sensorimotor (0-2 years: learning through senses and actions), Preoperational (2-7: symbolic thinking but egocentric), Concrete Operational (7-11: logical thinking about concrete objects), and Formal Operational (11+: abstract and hypothetical thinking). Each stage represents qualitative changes in thinking."
+    },
+    {
+      question: "What is the difference between short-term and long-term memory?",
+      options: ["No difference", "Short-term has limited capacity and duration; long-term has larger capacity and longer duration", "Short-term is visual; long-term is verbal", "Short-term is conscious; long-term is unconscious", "They are the same"],
+      correct: 1,
+      explanation: "Short-term (or working) memory has limited capacity (about 7±2 items) and brief duration (seconds to minutes without rehearsal). Long-term memory has virtually unlimited capacity and can last a lifetime. Information moves from short-term to long-term memory through encoding processes like rehearsal and elaboration."
+    },
+    {
+      question: "What is the 'fight or flight' response?",
+      options: ["A learning strategy", "A physiological stress response preparing the body for action", "A therapy technique", "A memory process", "A decision-making model"],
+      correct: 1,
+      explanation: "The fight-or-flight response is the body's automatic physiological reaction to perceived threat or stress, mediated by the sympathetic nervous system and adrenal glands. It involves increased heart rate, blood pressure, breathing rate, and energy mobilization, preparing the body to either confront or flee from danger."
+    },
+    {
+      question: "What is schemas in cognitive psychology?",
+      options: ["Memory techniques", "Mental frameworks for organizing and interpreting information", "Brain structures", "Types of neurons", "Learning disabilities"],
+      correct: 1,
+      explanation: "Schemas are cognitive frameworks or mental structures that help organize and interpret information. They're based on past experience and influence how we perceive, remember, and think about new information. For example, we have schemas for restaurants, classrooms, and social situations that guide our expectations and behavior."
+    },
+    {
+      question: "What is the difference between positive and negative reinforcement?",
+      options: ["Positive is good; negative is bad", "Positive adds something pleasant; negative removes something unpleasant", "Positive increases behavior; negative decreases it", "They are the same", "Positive is verbal; negative is physical"],
+      correct: 1,
+      explanation: "Both positive and negative reinforcement increase behavior. Positive reinforcement adds a pleasant stimulus (giving a treat for good behavior), while negative reinforcement removes an unpleasant stimulus (taking away chores for good grades). Both strengthen the target behavior, unlike punishment which decreases behavior."
+    },
+    {
+      question: "What is the bystander effect?",
+      options: ["People help more in groups", "People are less likely to help when others are present", "Witnesses remember events better", "Groups make better decisions", "People conform to group norms"],
+      correct: 1,
+      explanation: "The bystander effect is the phenomenon where individuals are less likely to offer help to a victim when other people are present. The more bystanders, the less likely any individual will help due to diffusion of responsibility, social influence, and evaluation apprehension. Famous case: Kitty Genovese murder."
+    },
+    {
+      question: "What is Maslow's Hierarchy of Needs (from bottom to top)?",
+      options: ["Love, Safety, Self-actualization, Esteem, Physiological", "Physiological, Safety, Love/Belonging, Esteem, Self-actualization", "Safety, Physiological, Esteem, Love, Self-actualization", "Self-actualization, Esteem, Love, Safety, Physiological", "Physiological, Love, Safety, Esteem, Self-actualization"],
+      correct: 1,
+      explanation: "Maslow's hierarchy is a five-tier pyramid of human needs: (1) Physiological (food, water, sleep), (2) Safety (security, stability), (3) Love/Belonging (relationships, connection), (4) Esteem (respect, achievement), (5) Self-actualization (realizing full potential). Lower needs must be met before higher ones can be pursued."
+    },
+    {
+      question: "What is the mere exposure effect?",
+      options: ["People dislike familiar things", "People prefer things they've been exposed to repeatedly", "Exposure to trauma causes PTSD", "First impressions are most important", "People remember first exposures best"],
+      correct: 1,
+      explanation: "The mere exposure effect is the phenomenon where people tend to develop a preference for things merely because they are familiar with them. Repeated exposure to a stimulus (even subliminal) increases liking for it. This applies to people, objects, sounds, and ideas, and helps explain many social and consumer preferences."
+    },
+    {
+      question: "What is confirmation bias?",
+      options: ["Confirming memories are accurate", "The tendency to search for and interpret information that confirms preexisting beliefs", "Confirming others' opinions", "Being overconfident", "Agreeing with authority"],
+      correct: 1,
+      explanation: "Confirmation bias is the tendency to search for, interpret, favor, and recall information in a way that confirms one's preexisting beliefs or hypotheses. People give more weight to evidence that supports their views and discount evidence that contradicts them. This bias affects decision-making, scientific reasoning, and everyday judgments."
+    },
+    {
+      question: "What is the difference between reliability and validity in psychological testing?",
+      options: ["They are the same", "Reliability is consistency; validity is accuracy (measuring what it's supposed to measure)", "Reliability is accuracy; validity is consistency", "Reliability is for surveys; validity is for experiments", "Neither matters in psychology"],
+      correct: 1,
+      explanation: "Reliability refers to the consistency of a measure - does it produce the same results under consistent conditions? Validity refers to whether a test measures what it claims to measure. A test can be reliable but not valid (consistently measuring the wrong thing), but can't be valid without being reliable."
+    },
+    {
+      question: "What is attachment theory primarily concerned with?",
+      options: ["Learning styles", "Emotional bonds between infants and caregivers", "Memory formation", "Language development", "Motor skills"],
+      correct: 1,
+      explanation: "Attachment theory, developed by John Bowlby and Mary Ainsworth, focuses on the emotional bonds between infants and their primary caregivers. Secure attachment develops when caregivers are responsive and available, while insecure attachments (anxious, avoidant, disorganized) result from inconsistent or neglectful care. Early attachment patterns influence relationships throughout life."
+    },
+    {
+      question: "What is the placebo effect?",
+      options: ["A medication side effect", "Improvement from an inactive treatment due to expectations", "A type of memory illusion", "Conformity to group pressure", "A learning phenomenon"],
+      correct: 1,
+      explanation: "The placebo effect occurs when a patient experiences real improvement in symptoms after receiving an inactive treatment (placebo) due to their belief in its effectiveness. This demonstrates the power of expectation and mind-body connection. It's why clinical trials use placebo controls to isolate actual drug effects from expectation effects."
+    },
+    {
+      question: "What is the difference between intrinsic and extrinsic motivation?",
+      options: ["Intrinsic is internal; extrinsic comes from external rewards", "Intrinsic is learned; extrinsic is innate", "Intrinsic is social; extrinsic is individual", "They are the same", "Intrinsic is unconscious; extrinsic is conscious"],
+      correct: 0,
+      explanation: "Intrinsic motivation comes from internal satisfaction and personal interest (doing something because it's enjoyable or meaningful). Extrinsic motivation comes from external rewards or pressures (doing something for money, grades, or praise). Research shows intrinsic motivation often leads to better performance and persistence than extrinsic motivation."
+    },
+    {
+      question: "What is neuroplasticity?",
+      options: ["Plastic surgery on the brain", "The brain's ability to reorganize and form new neural connections", "A type of brain damage", "Hardening of neurons", "A learning disability"],
+      correct: 1,
+      explanation: "Neuroplasticity (or brain plasticity) is the brain's ability to reorganize itself by forming new neural connections throughout life. The brain can change its structure and function in response to experience, learning, injury, or environmental demands. This underlies learning, memory, recovery from brain injury, and adaptation to new circumstances."
+    },
+    {
+      question: "What is the Hawthorne effect?",
+      options: ["People perform differently when they know they're being observed", "First impressions affect later judgments", "Groups make riskier decisions", "People conform to majority opinion", "Memories become distorted over time"],
+      correct: 0,
+      explanation: "The Hawthorne effect is the alteration of behavior by participants in a study due to their awareness of being observed. Originally discovered in workplace studies at the Hawthorne Works factory, it shows that people may work harder or behave differently simply because they know they're being studied, not due to the experimental manipulation itself."
+    },
+    {
+      question: "What are the 'Big Five' personality traits?",
+      options: ["Intelligence, Emotion, Social, Physical, Spiritual", "Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism", "Happy, Sad, Angry, Fearful, Surprised", "Id, Ego, Superego, Defense, Anxiety", "Trust, Love, Fear, Anger, Joy"],
+      correct: 1,
+      explanation: "The Big Five (or OCEAN model) are five broad dimensions of personality: Openness (to experience), Conscientiousness (organized, responsible), Extraversion (sociable, energetic), Agreeableness (cooperative, compassionate), and Neuroticism (emotional instability). These traits are relatively stable across the lifespan and across cultures."
+    },
+    {
+      question: "What is observational learning (social learning)?",
+      options: ["Learning by reading", "Learning by watching and imitating others", "Learning through rewards", "Learning through associations", "Learning by trial and error"],
+      correct: 1,
+      explanation: "Observational learning, studied by Albert Bandura, occurs when people learn by watching others' behavior and its consequences. The famous Bobo doll experiment showed children imitating aggressive behavior they observed. This type of learning doesn't require direct experience and involves attention, retention, reproduction, and motivation."
+    },
+    {
+      question: "What is the difference between sensation and perception?",
+      options: ["They are the same", "Sensation is detecting stimuli; perception is interpreting them", "Sensation is conscious; perception is unconscious", "Sensation is learned; perception is innate", "Sensation is in the brain; perception is in the senses"],
+      correct: 1,
+      explanation: "Sensation is the process of detecting physical stimuli through sensory receptors (eyes, ears, skin, etc.). Perception is the process of organizing and interpreting sensory information to give it meaning. For example, sensation detects light waves; perception recognizes them as a face. Perception involves top-down processing using knowledge and expectations."
+    },
+    {
+      question: "What is the primacy effect?",
+      options: ["First impressions are most important", "Information presented first is remembered better", "Primary colors are preferred", "Primal instincts dominate", "The first stage of development is crucial"],
+      correct: 1,
+      explanation: "The primacy effect is the tendency to better remember information presented at the beginning of a list or sequence. Combined with the recency effect (better memory for the end), it forms the serial position effect. The primacy effect occurs because early items receive more rehearsal and are transferred to long-term memory."
+    },
+    {
+      question: "What is the fundamental attribution error?",
+      options: ["Making calculation mistakes", "Overemphasizing personality and underestimating situation when explaining others' behavior", "Forgetting important information", "Misremembering who said something", "Confusing cause and effect"],
+      correct: 1,
+      explanation: "The fundamental attribution error (or correspondence bias) is the tendency to overemphasize personality-based explanations for others' behavior while underestimating situational factors. For example, assuming someone who cuts you off in traffic is rude (personality) rather than considering they might have an emergency (situation). We do the opposite for our own behavior."
+    },
+    {
+      question: "What is a self-fulfilling prophecy?",
+      options: ["Predicting your own future", "A belief or expectation that influences behavior in ways that make it come true", "Always being right", "Believing in yourself", "Setting personal goals"],
+      correct: 1,
+      explanation: "A self-fulfilling prophecy occurs when a belief or expectation, whether true or false, influences behavior in ways that cause the belief to come true. For example, if a teacher believes a student is smart, they may give more attention and encouragement, leading to better performance - confirming the initial belief (Rosenthal effect or Pygmalion effect)."
+    },
+    {
+      question: "What is the difference between Type A and Type B personality?",
+      options: ["Type A is positive; Type B is negative", "Type A is competitive and stressed; Type B is relaxed and easygoing", "Type A is introverted; Type B is extroverted", "Type A is creative; Type B is logical", "They are the same"],
+      correct: 1,
+      explanation: "Type A personality is characterized by competitiveness, urgency, hostility, and high stress levels, associated with increased risk of heart disease. Type B personality is more relaxed, patient, easygoing, and less stressed. While this typology has limitations, it highlights how personality patterns relate to health outcomes and stress responses."
+    },
+    {
+      question: "What is extinction in classical conditioning?",
+      options: ["The organism dies", "The conditioned response gradually disappears when the conditioned stimulus is repeatedly presented without the unconditioned stimulus", "Learning a new response", "Forgetting the original stimulus", "The response gets stronger"],
+      correct: 1,
+      explanation: "Extinction occurs when the conditioned stimulus is repeatedly presented without the unconditioned stimulus, causing the conditioned response to gradually weaken and disappear. For example, if Pavlov's bell rang many times without food, dogs would eventually stop salivating to the bell. However, spontaneous recovery can occur after a rest period."
+    },
+    {
+      question: "What is working memory?",
+      options: ["Memory while at work", "Active processing and temporary storage of information", "Long-term memory of procedures", "Memory for work-related tasks", "Permanent storage of information"],
+      correct: 1,
+      explanation: "Working memory is the cognitive system responsible for temporarily holding and manipulating information needed for complex tasks like reasoning, comprehension, and learning. It's an expansion of the concept of short-term memory, emphasizing active processing rather than just passive storage. Alan Baddeley's model includes phonological loop, visuospatial sketchpad, and central executive components."
+    },
+    {
+      question: "What is groupthink?",
+      options: ["Thinking in groups is better", "Desire for harmony in a decision-making group overrides realistic appraisal of alternatives", "Collective intelligence", "Brainstorming technique", "Group therapy method"],
+      correct: 1,
+      explanation: "Groupthink, identified by Irving Janis, occurs when a group's desire for consensus and cohesion overrides critical thinking and realistic evaluation of alternatives. It leads to poor decisions as dissent is suppressed, risks are ignored, and alternatives aren't considered. Famous examples include the Bay of Pigs invasion and Challenger disaster."
+    },
+    {
+      question: "What is the difference between implicit and explicit memory?",
+      options: ["Implicit is conscious; explicit is unconscious", "Explicit is conscious/intentional; implicit is unconscious/automatic", "They are the same", "Implicit is verbal; explicit is visual", "Implicit is short-term; explicit is long-term"],
+      correct: 1,
+      explanation: "Explicit memory (declarative) involves conscious, intentional recollection of facts and events (what you had for breakfast). Implicit memory (non-declarative) involves unconscious retention of skills, procedures, and conditioning (riding a bike, priming effects). Amnesia patients often retain implicit memories while losing explicit memories."
+    },
+    {
+      question: "What is the Flynn effect?",
+      options: ["IQ scores declining over time", "IQ scores have been rising over generations", "Intelligence is genetic", "Men are more intelligent than women", "Intelligence peaks in middle age"],
+      correct: 1,
+      explanation: "The Flynn effect, discovered by James Flynn, is the substantial and sustained increase in IQ test scores over generations in many parts of the world. Scores have risen about 3 points per decade throughout the 20th century. Proposed explanations include better nutrition, education, test-taking familiarity, and environmental complexity, though the exact cause is debated."
+    },
+    {
+      question: "What is cognitive behavioral therapy (CBT)?",
+      options: ["Brain surgery", "Therapy focusing on changing negative thought patterns and behaviors", "Medication treatment", "Dream analysis", "Group therapy"],
+      correct: 1,
+      explanation: "Cognitive Behavioral Therapy (CBT) is a structured, goal-oriented psychotherapy that focuses on identifying and changing negative thought patterns (cognitions) and maladaptive behaviors. It's based on the idea that thoughts, feelings, and behaviors are interconnected. CBT is evidence-based and effective for depression, anxiety, PTSD, and many other conditions."
+    },
+    {
+      question: "What is the availability heuristic?",
+      options: ["Using available resources", "Judging probability based on how easily examples come to mind", "Making things available to others", "Remembering available information", "Using shortcuts"],
+      correct: 1,
+      explanation: "The availability heuristic is a mental shortcut where people estimate the probability or frequency of an event based on how easily examples come to mind. For example, after hearing about plane crashes in the news, people overestimate the danger of flying because those vivid examples are readily available in memory, even though flying is statistically very safe."
+    },
+    {
+      question: "What is the Stanford Prison Experiment?",
+      options: ["Study of prison architecture", "Study showing how people conform to assigned social roles, even harmful ones", "Study of criminal behavior", "Prison reform initiative", "Study of punishment effectiveness"],
+      correct: 1,
+      explanation: "The Stanford Prison Experiment (1971) by Philip Zimbardo assigned college students to roles as guards or prisoners in a simulated prison. It was stopped after 6 days (planned for 14) because participants conformed so strongly to their roles that guards became abusive and prisoners showed extreme stress. It demonstrated the power of situational forces on behavior, though ethical concerns have led to criticism."
+    },
+    {
+      question: "What is learned helplessness?",
+      options: ["Learning to ask for help", "A condition where one learns they have no control over outcomes, leading to passivity", "Learning disability", "Asking others to do tasks", "Dependence on others"],
+      correct: 1,
+      explanation: "Learned helplessness, discovered by Martin Seligman, occurs when repeated exposure to uncontrollable negative events leads an organism to passively accept adverse situations, even when escape is possible. Dogs given inescapable shocks later failed to escape even when they could. This concept helps explain depression and is related to attributional style and locus of control."
+    },
+    {
+      question: "What is the difference between correlation and causation?",
+      options: ["They are the same", "Correlation indicates a relationship; causation means one variable causes another", "Correlation is stronger than causation", "Causation is easier to prove than correlation", "Correlation is for experiments; causation is for observations"],
+      correct: 1,
+      explanation: "Correlation means two variables are related or associated (as one changes, the other tends to change). Causation means one variable directly causes changes in another. Correlation does not imply causation - there may be a third variable, reverse causation, or coincidence. For example, ice cream sales correlate with drowning deaths (both increase in summer), but one doesn't cause the other."
+    },
+    {
+      question: "What is the role of the hippocampus?",
+      options: ["Emotion regulation", "Memory formation and spatial navigation", "Speech production", "Visual processing", "Motor control"],
+      correct: 1,
+      explanation: "The hippocampus is a brain structure critical for forming new explicit (declarative) memories and spatial navigation. Damage to the hippocampus (like in patient H.M.) causes anterograde amnesia - inability to form new long-term memories. It's also involved in consolidating short-term memories into long-term storage and is affected early in Alzheimer's disease."
+    },
+    {
+      question: "What is the cocktail party effect?",
+      options: ["Getting drunk at parties", "The ability to focus on a single conversation in a noisy environment", "Social facilitation", "Conformity at social events", "Group polarization"],
+      correct: 1,
+      explanation: "The cocktail party effect is the phenomenon of selective attention - the ability to focus on a single conversation or sound source while filtering out background noise in a crowded environment. However, our attention can be captured by personally relevant information (like hearing your name) from unattended sources, showing that we monitor multiple inputs simultaneously at some level."
+    },
+    {
+      question: "What is the difference between assimilation and accommodation in Piaget's theory?",
+      options: ["They are the same", "Assimilation fits new info into existing schemas; accommodation changes schemas for new info", "Assimilation is learning; accommodation is remembering", "Assimilation is conscious; accommodation is unconscious", "Assimilation is for children; accommodation is for adults"],
+      correct: 1,
+      explanation: "In Piaget's theory, assimilation is fitting new information into existing mental schemas (a child seeing a zebra and calling it a horse based on their horse schema). Accommodation is changing or creating new schemas to fit new information (learning that zebras are a different animal). Both processes work together in cognitive development to help us understand and adapt to the world."
+    },
+    {
+      question: "What is the Milgram obedience experiment?",
+      options: ["Study of memory", "Study showing people obey authority even when ordered to harm others", "Study of conformity", "Study of learning", "Study of moral development"],
+      correct: 1,
+      explanation: "Stanley Milgram's obedience experiment (1961) found that 65% of participants administered what they believed were dangerous electric shocks to another person when ordered by an authority figure. Participants continued despite hearing screams (which were actually recorded). The study demonstrated the powerful influence of authority on behavior and raised important questions about personal responsibility and the Holocaust."
+    }
+  ];
+
+  // Shuffle array function
+  function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  // Select 15 random questions
+  const selectedQuestions = shuffleArray(questionBank).slice(0, 15);
+  const correctAnswers = {};
+  const explanations = {};
+
+  // Generate quiz HTML
+  const quizContainer = document.getElementById('quizContainer');
+  selectedQuestions.forEach((q, index) => {
+    const questionNum = index + 1;
+    const questionId = `q${questionNum}`;
+    
+    // Store correct answer and explanation
+    correctAnswers[questionId] = q.correct;
+    explanations[questionId] = q.explanation;
+    
+    // Shuffle options with correct answer tracking
+    const optionsWithIndex = q.options.map((opt, idx) => ({ text: opt, originalIndex: idx }));
+    const shuffledOptions = shuffleArray(optionsWithIndex);
+    
+    // Find new position of correct answer
+    const newCorrectIndex = shuffledOptions.findIndex(opt => opt.originalIndex === q.correct);
+    correctAnswers[questionId] = newCorrectIndex;
+    
+    // Create question HTML
+    const questionHTML = `
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-pink-500 quiz-question">
+        <h3 class="text-2xl font-bold mb-4 text-gray-800">Question ${questionNum}</h3>
+        <p class="text-lg text-gray-700 mb-6">${q.question}</p>
+        <div class="space-y-3">
+          ${shuffledOptions.map((opt, optIndex) => `
+            <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+              <input type="radio" name="${questionId}" value="${optIndex}" class="mt-1">
+              <span class="text-gray-700">${opt.text}</span>
+            </label>
+          `).join('')}
+        </div>
+        <div class="feedback mt-4 hidden"></div>
+      </div>
+    `;
+    
+    quizContainer.innerHTML += questionHTML;
+  });
+
+  lucide.createIcons();
+
+  // Submit button handler
+  document.getElementById('submitQuiz').addEventListener('click', () => {
+    let score = 0;
+    let answered = 0;
+    
+    const questions = document.querySelectorAll('.quiz-question');
+    
+    questions.forEach((question, index) => {
+      const questionId = `q${index + 1}`;
+      const selected = question.querySelector(`input[name="${questionId}"]:checked`);
+      const feedback = question.querySelector('.feedback');
+      
+      if (selected) {
+        answered++;
+        const selectedValue = parseInt(selected.value);
+        const isCorrect = selectedValue === correctAnswers[questionId];
+        
+        if (isCorrect) {
+          score++;
+          question.classList.remove('border-red-500', 'border-yellow-500');
+          question.classList.add('border-pink-500');
+          feedback.innerHTML = `
+            <div class="bg-pink-50 border-l-4 border-pink-500 p-4 rounded">
+              <p class="font-semibold text-pink-800 mb-2">✓ Correct!</p>
+              <p class="text-pink-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        } else {
+          question.classList.remove('border-pink-500', 'border-yellow-500');
+          question.classList.add('border-red-500');
+          feedback.innerHTML = `
+            <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded">
+              <p class="font-semibold text-red-800 mb-2">✗ Incorrect</p>
+              <p class="text-red-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        }
+        
+        feedback.classList.remove('hidden');
+      } else {
+        question.classList.remove('border-pink-500', 'border-red-500');
+        question.classList.add('border-yellow-500');
+        feedback.innerHTML = `
+          <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+            <p class="font-semibold text-yellow-800">Question not answered</p>
+          </div>
+        `;
+        feedback.classList.remove('hidden');
+      }
+    });
+    
+    const percentage = answered > 0 ? Math.round((score / 15) * 100) : 0;
+    const resultDiv = document.getElementById('quizResults');
+    const scoreDisplay = document.getElementById('scoreDisplay');
+    
+    let gradeColor = 'text-red-600';
+    let message = 'Keep studying!';
+    
+    if (percentage >= 90) {
+      gradeColor = 'text-pink-600';
+      message = 'Excellent! You have mastered this material!';
+    } else if (percentage >= 80) {
+      gradeColor = 'text-blue-600';
+      message = 'Great job! You have a strong understanding!';
+    } else if (percentage >= 70) {
+      gradeColor = 'text-yellow-600';
+      message = 'Good work! Review the explanations to improve.';
+    } else if (percentage >= 60) {
+      gradeColor = 'text-orange-600';
+      message = 'Fair. Consider reviewing the material more thoroughly.';
+    }
+    
+    scoreDisplay.innerHTML = `
+      <div class="text-center">
+        <div class="text-6xl font-bold ${gradeColor} mb-4">${percentage}%</div>
+        <p class="text-2xl text-gray-700 mb-2">${score} out of 15 correct</p>
+        <p class="text-xl text-gray-600 mb-6">${message}</p>
+      </div>
+    `;
+    
+    resultDiv.classList.remove('hidden');
+    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

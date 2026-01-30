@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cybersecurity - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-rose-500 rounded-full mb-6">
+      <i data-lucide="shield" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Cybersecurity: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">Comprehensive exploration of network security and digital protection</p>
+  </div>
+
+  <div class="space-y-10">
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Introduction to Cybersecurity</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Cybersecurity is the practice of protecting digital systems, networks, programs, and data from unauthorized access, attacks, damage, or theft. In an increasingly interconnected world, cybersecurity has become critical to protecting personal information, business operations, national infrastructure, and global communications.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        The field encompasses a wide range of protective measures, from implementing firewalls and encryption to conducting penetration testing and security audits. Cybersecurity professionals work to identify vulnerabilities, prevent attacks, detect intrusions, and respond to security incidents when they occur.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        As cyber threats become more sophisticated—ranging from ransomware and phishing to advanced persistent threats (APTs) and zero-day exploits—the demand for skilled cybersecurity professionals continues to grow exponentially across all industries and government sectors.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Security Fundamentals: The CIA Triad</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        The foundation of information security rests on three core principles known as the CIA triad. These principles guide all security decisions, architecture design, and risk management strategies.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Core Principles:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Confidentiality:</strong> Ensuring information is accessible only to authorized parties. Implemented through encryption, access controls, authentication mechanisms, and data classification. Breaches include unauthorized data disclosure, eavesdropping, and information leakage. Examples: password protection, file encryption, VPNs for secure remote access.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Integrity:</strong> Maintaining accuracy and trustworthiness of data throughout its lifecycle. Protected through cryptographic hashing, digital signatures, version control systems, and input validation. Attacks include data tampering, man-in-the-middle modifications, and unauthorized alterations. Examples: checksums, digital certificates, blockchain technology.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Availability:</strong> Ensuring authorized users have reliable access to information and resources when needed. Achieved through system redundancy, fault tolerance, regular backups, and DDoS mitigation strategies. Threats include denial-of-service attacks, infrastructure failures, and ransomware. Examples: load balancing, disaster recovery plans, real-time system monitoring.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Additional Security Principles:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Defense in Depth:</strong> Layered security approach combining multiple defensive mechanisms at different levels. If one security layer fails, others provide continued protection. Layers include physical security, network perimeter defenses, host-based controls, application security measures, and data protection. No single security control is perfect; redundancy and diversity reduce overall risk.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Principle of Least Privilege:</strong> Users and systems should have only the minimum permissions necessary to perform their designated functions. This principle limits the blast radius of compromised accounts, reduces insider threat impact, and simplifies access auditing. Implemented through role-based access control (RBAC), just-in-time access provisioning, and privilege escalation controls.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Zero Trust Security Model:</strong> "Never trust, always verify." Assumes breach is inevitable and treats all users and devices as potentially compromised. Requires continuous authentication and authorization for every access request. Micro-segmentation limits lateral movement within networks. Represents modern approach replacing traditional perimeter-based "castle-and-moat" security models.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Cryptography & Encryption</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Cryptography is the science of securing information through mathematical algorithms that transform readable data (plaintext) into unreadable ciphertext. Modern cryptography enables secure communications, digital authentication, and data integrity verification across the internet and digital systems.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Encryption Methods:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Symmetric Encryption:</strong> Uses the same secret key for both encryption and decryption. Fast and efficient for encrypting large data volumes. Primary challenge: securely distributing the key between communicating parties. AES (Advanced Encryption Standard) with 128, 192, or 256-bit keys is the industry standard. Widely used in VPNs, file encryption, disk encryption, and secure communications. ChaCha20 cipher offers high performance on mobile and IoT devices.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Asymmetric Encryption (Public Key Cryptography):</strong> Uses mathematically related key pairs: a public key (distributed openly) and private key (kept secret). Public key encrypts, private key decrypts (or vice versa for digital signatures). Slower than symmetric encryption but eliminates key distribution problem. RSA algorithm based on difficulty of factoring large prime numbers (typically 2048, 3072, or 4096 bits). Elliptic Curve Cryptography (ECC) provides equivalent security with smaller key sizes, more efficient for resource-constrained devices.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Cryptographic Hashing:</strong> One-way mathematical functions producing fixed-size outputs (hash digests) from arbitrary inputs. Key properties: deterministic (same input always produces same output), fast computation, avalanche effect (small input change produces drastically different output), collision resistance (difficult to find two inputs with same hash), pre-image resistance (cannot reverse hash to find input). SHA-256 produces 256-bit hashes used in blockchain, digital signatures, and certificate verification. Password hashing functions (bcrypt, scrypt, Argon2) designed to be computationally expensive, resisting brute-force cracking attempts.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Public Key Infrastructure (PKI):</strong> Comprehensive framework for creating, managing, distributing, storing, and revoking digital certificates. Certificate Authorities (CAs) verify entity identities and digitally sign X.509 certificates binding public keys to owners. Used in HTTPS (SSL/TLS), email encryption (S/MIME), code signing, and VPN authentication. Certificate Revocation Lists (CRLs) and Online Certificate Status Protocol (OCSP) prevent use of compromised certificates.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Network Security</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Network security involves policies, practices, and technologies designed to protect the integrity, confidentiality, and availability of computer networks and data. It defends against unauthorized access, misuse, malfunction, modification, destruction, or improper disclosure.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Network Defense Technologies:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Firewalls:</strong> Network security devices that monitor and control incoming and outgoing network traffic based on predetermined security rules. Packet-filtering firewalls examine packet headers (Layer 3/4 of OSI model). Stateful inspection firewalls track connection states and context. Next-Generation Firewalls (NGFW) perform deep packet inspection, application-layer filtering, intrusion prevention, and can identify users and content. Act as barriers between trusted internal networks and untrusted external networks like the internet.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Intrusion Detection & Prevention Systems (IDS/IPS):</strong> IDS monitors network traffic for suspicious activity patterns and policy violations, generating alerts for security team review. IPS actively blocks detected threats in real-time. Detection methods include signature-based (matching known attack patterns from database), anomaly-based (identifying deviations from established baseline behavior), and hybrid approaches combining both. Popular open-source solutions include Snort and Suricata. Integrate with SIEM (Security Information and Event Management) systems for centralized logging and correlation analysis.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Virtual Private Networks (VPNs):</strong> Create encrypted tunnels over untrusted networks (like the internet) for secure remote access. IPSec VPNs operate at Layer 3 (Network), encrypting all traffic between endpoints. SSL/TLS VPNs operate at Layer 4-7 (Transport-Application), often accessible through web browsers without client software. Modern WireGuard protocol offers streamlined, high-performance VPN with simplified cryptography. Zero Trust Network Access (ZTNA) represents evolution beyond traditional VPNs, verifying every access request regardless of user location.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Network Segmentation:</strong> Dividing networks into isolated zones or segments with controlled communication paths between them. DMZ (Demilitarized Zone) hosts public-facing services isolated from internal network. VLANs (Virtual LANs) logically separate traffic at Layer 2. Micro-segmentation creates granular security zones around individual workloads or applications. Benefits include limiting lateral movement during breaches, containing malware spread, reducing attack surface, and enabling enforcement of granular security policies.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Wireless Security:</strong> WPA3 (Wi-Fi Protected Access 3) provides strongest current wireless encryption with individualized data encryption and protection against offline dictionary attacks. WPA2-Enterprise uses RADIUS authentication servers with 802.1X for user-based access control. Risks include rogue access points, evil twin attacks, deauthentication attacks, and packet sniffing of unencrypted traffic. Mitigations include strong encryption protocols, Network Access Control (NAC) solutions, wireless intrusion detection systems, certificate-based authentication, and regular security audits.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Application Security & OWASP Top 10</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Application security focuses on protecting software applications from threats throughout their development lifecycle. The Open Web Application Security Project (OWASP) maintains a list of the most critical web application security risks that developers and security professionals must address.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Critical Web Application Vulnerabilities:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Injection Attacks (SQL, Command, LDAP):</strong> Attacker inserts malicious code into queries or commands that get executed by the application. SQL injection allows unauthorized database access, data exfiltration, or deletion. Prevention requires parameterized queries (prepared statements), input validation, escaping special characters, and using ORMs (Object-Relational Mapping frameworks) that handle query construction safely.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Broken Authentication:</strong> Flaws in authentication and session management allow attackers to compromise passwords, keys, or session tokens. Common issues include weak password policies, credential stuffing attacks, session fixation, and insecure session handling. Mitigations include multi-factor authentication (MFA), secure session management with timeouts and regeneration, strong password hashing with salt (bcrypt, Argon2), rate limiting on login attempts, and monitoring for suspicious authentication patterns.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Sensitive Data Exposure:</strong> Applications failing to properly protect sensitive information like credit cards, health records, or personal data. Data transmitted without encryption (HTTP instead of HTTPS), weak or outdated cryptography, storing passwords in plaintext or using weak hashes. Solutions include TLS/SSL for data in transit, strong encryption (AES-256) for data at rest, proper key management, avoiding unnecessary data storage, and implementing data masking where appropriate.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Broken Access Control:</strong> Restrictions on what authenticated users can do are not properly enforced, allowing unauthorized viewing, modification, or deletion of data. Examples include directory traversal attacks, accessing other users' accounts, privilege escalation. Prevention requires enforce least privilege principles, deny access by default, server-side validation of permissions, logging access control failures, and implementing attribute-based or role-based access controls (ABAC/RBAC).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Cross-Site Scripting (XSS):</strong> Injection of malicious scripts into web pages viewed by other users. Reflected XSS delivers payload through URL parameter. Stored XSS saves malicious script in database. DOM-based XSS manipulates client-side code. Defense includes output encoding/escaping, Content Security Policy (CSP) headers, input sanitization, validating and sanitizing all user input, and using modern frameworks with built-in XSS protections.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Security Misconfiguration:</strong> Default accounts and passwords remaining active, unnecessary services running, verbose error messages revealing sensitive information, unpatched systems, insecure default settings. Prevention includes secure configuration baselines, minimal platform without unnecessary features, regular security updates and patches, removing default accounts, disabling directory listings, implementing hardening guides, and automated configuration management tools.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Threat Intelligence & Cyber Threats</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Threat intelligence involves gathering, analyzing, and applying information about current and emerging cybersecurity threats to proactively defend systems and networks. Understanding the threat landscape and attacker methodologies is essential for effective defense.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Threat Actor Categories:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Script Kiddies:</strong> Inexperienced attackers using existing tools and scripts without deep technical understanding. Limited capabilities but numerous. Motivated by curiosity, bragging rights, or causing disruption. Use readily available exploit frameworks and automated scanning tools. While individually unsophisticated, represent significant volume of attacks against internet-facing systems.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Organized Cybercriminals:</strong> Financially motivated groups operating professional criminal enterprises. Deploy ransomware, steal credentials for sale, conduct business email compromise (BEC), credit card fraud, and cryptocurrency theft. Increasingly sophisticated with customer support for victims, ransomware-as-a-service (RaaS) models, and specialization of roles (initial access brokers, malware developers, money launderers).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Hacktivists:</strong> Ideologically or politically motivated actors conducting cyberattacks to promote causes, protest policies, or make political statements. Tactics include DDoS attacks, website defacements, data leaks ("doxing"), and exposure of sensitive information. Groups like Anonymous have conducted high-profile operations. Less sophisticated than nation-states but can cause significant disruption and reputational damage.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Nation-State Actors (APTs - Advanced Persistent Threats):</strong> Government-sponsored groups with extensive resources, advanced capabilities, and long-term objectives. Conduct cyber espionage, intellectual property theft, critical infrastructure disruption, and influence operations. Examples include APT28/Fancy Bear (Russia), APT29/Cozy Bear (Russia), APT1/Comment Crew (China), Lazarus Group (North Korea). Characterized by custom malware, zero-day exploits, patient long-term persistence, sophisticated operational security, and significant financial and technical resources.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Insider Threats:</strong> Current or former employees, contractors, or business partners with legitimate access who intentionally or unintentionally cause harm. Intentional insiders may commit sabotage, steal intellectual property, or facilitate external attacks. Unintentional insiders make security mistakes like clicking phishing links or misconfiguring systems. Hardest threats to detect due to authorized access. Require combination of technical controls, monitoring, and security awareness training.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Common Attack Vectors:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Phishing & Social Engineering:</strong> Manipulating people to divulge confidential information or perform actions compromising security. Spear phishing targets specific individuals with personalized messages. Whaling targets executives. Vishing (voice phishing) uses phone calls. Smishing uses SMS text messages. Defenses include security awareness training, email filtering, multi-factor authentication, and simulated phishing exercises to test and educate users.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Ransomware:</strong> Malware that encrypts victim's files and demands payment for decryption key. Modern ransomware often includes data exfiltration (double extortion) threatening to publish stolen data. WannaCry, NotPetya, and REvil caused billions in damages. Prevention includes regular offline backups, patch management, email security, endpoint protection, network segmentation, and incident response planning. Some organizations maintain cryptocurrency wallets for potential ransom payments, though payment is controversial and doesn't guarantee data recovery.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Denial of Service (DoS/DDoS):</strong> Overwhelming target system, service, or network with traffic to make it unavailable to legitimate users. Distributed Denial of Service (DDoS) uses botnets of compromised computers. Amplification attacks exploit misconfigured services to magnify attack traffic. Application-layer attacks target specific application resources. Mitigations include rate limiting, traffic analysis and filtering, content delivery networks (CDNs), DDoS mitigation services, capacity planning, and incident response procedures.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Incident Response & Forensics</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Incident response is the organized approach to addressing and managing the aftermath of a security breach or cyberattack. The goal is to handle the situation in a way that limits damage, reduces recovery time and costs, and mitigates exploited vulnerabilities to prevent future incidents.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Incident Response Lifecycle:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>1. Preparation:</strong> Develop and maintain incident response plan and procedures. Establish Computer Security Incident Response Team (CSIRT) with defined roles and responsibilities. Deploy monitoring and detection tools (SIEM, IDS/IPS, EDR). Conduct training exercises and tabletop simulations. Maintain updated contact lists, communication procedures, and escalation paths. Prepare forensic tools and evidence collection kits.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>2. Detection & Analysis:</strong> Identify potential security incidents through SIEM alerts, IDS/IPS signatures, antivirus detections, anomaly detection, or user reports. Analyze severity, scope, and impact. Determine if genuine incident or false positive. Collect initial evidence including logs, network traffic captures, system images. Establish timeline of events. Document all findings for potential legal proceedings.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>3. Containment:</strong> Short-term containment limits immediate damage (isolating affected systems, blocking malicious IPs/domains, disabling compromised accounts). Long-term containment involves patching vulnerabilities and rebuilding systems. Balance containment actions with preserving forensic evidence. Implement temporary workarounds to maintain business operations. Prevent attacker from causing additional damage or spreading laterally.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>4. Eradication:</strong> Remove malware, malicious code, and unauthorized access. Close exploited vulnerabilities through patching or configuration changes. Eliminate all attacker presence and persistence mechanisms (backdoors, scheduled tasks, registry modifications). Ensure complete removal to prevent reinfection. May require reimaging affected systems from known-good backups or clean installations.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>5. Recovery:</strong> Restore systems to normal operations carefully and methodically. Verify system integrity before returning to production. Monitor closely for signs of reinfection or attacker return. Implement enhanced monitoring and additional security controls. Gradual restoration prioritizing critical systems. Verify backups are clean before restoration.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>6. Lessons Learned:</strong> Conduct post-incident review within two weeks of incident closure. Document complete timeline, actions taken, effectiveness of response, gaps identified, and recommendations. Update incident response procedures, detection capabilities, and security controls based on lessons learned. Share relevant information with broader security community (within legal and confidentiality constraints). Implement improvements to prevent similar incidents.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Digital Forensics:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Scientific collection, preservation, and analysis of digital evidence for investigation and potential legal proceedings. Maintains chain of custody documenting who handled evidence, when, and how to ensure admissibility in court. Process includes identification, preservation (forensic imaging), analysis (file recovery, timeline reconstruction, log correlation), and comprehensive documentation. Evidence sources include disk forensics (file systems, deleted files, metadata), memory forensics (running processes, network connections, encryption keys in RAM), network forensics (packet captures, flow data, proxy logs), and cloud forensics (SaaS logs, API audit trails, virtual machine snapshots).
+      </p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Compliance & Regulatory Frameworks</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Compliance frameworks and regulations establish requirements for how organizations must protect data and manage security risks. Adherence is often legally mandated with significant penalties for non-compliance.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Major Compliance Standards:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>GDPR (General Data Protection Regulation):</strong> European Union regulation governing data privacy and protection for individuals within EU/EEA. Requires explicit user consent for data processing, data minimization, right to erasure ("right to be forgotten"), data portability, and breach notification within 72 hours. Applies to any organization processing EU citizens' personal data regardless of company location. Non-compliance penalties up to €20 million or 4% of global annual revenue.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>HIPAA (Health Insurance Portability and Accountability Act):</strong> U.S. regulation protecting Protected Health Information (PHI). Requires administrative, physical, and technical safeguards. Covered entities include healthcare providers, health plans, and healthcare clearinghouses. Business associates handling PHI must also comply. Breach notification requirements for incidents affecting 500+ individuals. Violations can result in civil and criminal penalties.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>PCI-DSS (Payment Card Industry Data Security Standard):</strong> Requirements for organizations handling credit card information. Twelve requirements organized into six goals: secure network, protect cardholder data, vulnerability management, access control, monitoring, and information security policy. Applies to merchants, processors, acquirers, issuers, and service providers. Compliance validated through annual assessments. Non-compliance can result in fines and loss of ability to process card payments.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>SOC 2 (Service Organization Control 2):</strong> Framework for service providers managing customer data, developed by AICPA (American Institute of CPAs). Based on five Trust Service Criteria: security, availability, processing integrity, confidentiality, and privacy. Type I reports assess controls at specific point in time. Type II reports assess effectiveness over minimum 6-month period. Third-party auditors issue reports. Increasingly required by customers when selecting cloud vendors and service providers.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>ISO 27001:</strong> International standard for Information Security Management Systems (ISMS). Provides framework for establishing, implementing, maintaining, and continually improving information security. Risk-based approach requiring organizations to assess threats and implement appropriate controls. Certification demonstrates commitment to information security best practices. Recognized globally, often required for government contracts or international business.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Careers in Cybersecurity</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        The cybersecurity field offers diverse career paths with strong demand, competitive salaries, and opportunities for continuous learning. Roles range from technical positions to management and strategic planning.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Career Paths:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Security Analyst / SOC Analyst:</strong> Monitor security systems, investigate alerts from SIEM and IDS/IPS, perform threat analysis, respond to incidents, and document security events. Entry to mid-level positions typically in Security Operations Centers (SOCs). Requires understanding of networking, operating systems, and security tools. Common entry point into cybersecurity field.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Penetration Tester / Ethical Hacker:</strong> Conduct authorized security assessments to identify vulnerabilities before malicious actors can exploit them. Perform network, application, and physical penetration tests. Demonstrate exploitation techniques and recommend remediations. Requires deep technical knowledge and certifications like OSCP (Offensive Security Certified Professional), CEH (Certified Ethical Hacker), or GPEN (GIAC Penetration Tester).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Security Architect:</strong> Design and implement enterprise security infrastructure and policies. Evaluate and select security technologies. Ensure security requirements are integrated into system architecture from beginning. Balance security needs with business requirements and usability. Senior role requiring broad expertise across multiple security domains and understanding of business operations.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Incident Responder / Forensics Specialist:</strong> Lead response to security breaches and cyberattacks. Conduct forensic investigations to determine attack scope, impact, and attribution. Coordinate response efforts across teams. Develop and maintain incident response playbooks. High-pressure role requiring technical expertise, analytical skills, and ability to work under stress. Certifications include GCIH (Incident Handler), GCFA (Forensic Analyst).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Cloud Security Engineer:</strong> Secure cloud environments (AWS, Azure, Google Cloud Platform). Implement identity and access management (IAM) policies, configure security groups and network controls, ensure compliance with cloud security best practices. Monitor cloud workloads for threats. Increasingly critical role as organizations migrate to cloud infrastructure. Requires cloud platform certifications and security expertise.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Application Security Engineer:</strong> Integrate security throughout Software Development Lifecycle (SDLC). Perform security code reviews and architecture reviews. Conduct security testing using SAST (Static Application Security Testing) and DAST (Dynamic Application Security Testing) tools. Train developers on secure coding practices. Work closely with development teams to remediate vulnerabilities. Requires programming skills and understanding of OWASP Top 10.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Chief Information Security Officer (CISO):</strong> Executive-level position responsible for organization's entire cybersecurity strategy and program. Manage security budget, team, and initiatives. Communicate security risks to board and executives. Ensure regulatory compliance. Develop and enforce security policies. Requires combination of technical expertise, business acumen, leadership skills, and strategic thinking.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="cybersecurity-quiz.html" class="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

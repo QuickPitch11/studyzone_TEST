@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Geometry - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mb-6">
+      <i data-lucide="shapes" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Geometry: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">Comprehensive exploration of shapes, sizes, and properties of space</p>
+  </div>
+
+  <div class="space-y-10">
+    <!-- Introduction -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Introduction to Geometry</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Geometry is the branch of mathematics that studies shapes, sizes, positions, and properties of space. The word "geometry" comes from the Greek "γεωμετρία" (geometria), meaning "earth measurement," reflecting its origins in ancient surveying and land measurement. Geometry is one of the oldest branches of mathematics, dating back to ancient civilizations (Egyptian, Babylonian, Greek, Indian, Chinese) that used geometric principles for practical applications like architecture, astronomy, navigation, and construction. The ancient Greek mathematician Euclid (circa 300 BCE) wrote "Elements," one of the most influential works in mathematics, which systematized geometry into an axiomatic framework using definitions, axioms (postulates), and theorems. This Euclidean geometry, based on five postulates including the famous parallel postulate, dominated mathematical thought for over 2000 years until the 19th century when non-Euclidean geometries were developed (hyperbolic geometry by Lobachevsky and Bolyai, elliptic geometry by Riemann), revolutionizing mathematics and physics (especially Einstein's theory of general relativity).
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Geometry deals with fundamental spatial concepts: points (locations with no size or dimension), lines (straight paths extending infinitely), planes (flat surfaces extending infinitely), angles (formed by two rays sharing an endpoint), curves, surfaces, and solids. It explores their properties, relationships, measurements (length, area, volume, perimeter, surface area), transformations (translations, rotations, reflections, dilations), symmetries, and constructions. Geometry is essential in virtually every field: architecture and construction (designing buildings, structures, ensuring stability), engineering (civil, mechanical, aerospace: designing components, analyzing forces, spatial relationships), art and design (perspective, composition, visual balance), computer graphics and animation (3D modeling, rendering, transformations), physics (mechanics, optics, relativity, quantum mechanics), geography and cartography (maps, navigation, GPS), biology (molecular structures, protein folding, growth patterns), and everyday life (measuring spaces, planning layouts, understanding spatial relationships).
+      </p>
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Historical Development and Significance:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Ancient Origins:</strong> Egyptian geometry (circa 3000-2000 BCE) developed practical methods for land measurement, construction of pyramids (precise calculations of volumes, angles, alignments with stars), and architecture. Babylonian geometry (circa 2000 BCE) used geometric methods for astronomy, architecture (ziggurats), and problem-solving (clay tablets show sophisticated geometric knowledge). Indian geometry (circa 1000 BCE-500 CE) contributed to trigonometry, circle calculations (approximations of π), and geometric theorems (Brahmagupta's formula for cyclic quadrilaterals).</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Greek Geometry and Euclid:</strong> Thales of Miletus (circa 624-546 BCE) introduced deductive reasoning to geometry. Pythagoras (circa 570-495 BCE) and the Pythagorean school developed the famous Pythagorean theorem and explored geometric relationships. Euclid (circa 300 BCE) compiled "Elements," organizing geometry into an axiomatic system (5 postulates, 23 definitions, 465 theorems/propositions), establishing geometry as a deductive science based on logic. Archimedes (circa 287-212 BCE) calculated areas and volumes using methods anticipating calculus (method of exhaustion), computed π accurately, and applied geometry to physics (levers, buoyancy, centers of gravity).</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Modern Developments:</strong> René Descartes (1596-1650) combined algebra with geometry, creating analytic (coordinate) geometry, allowing geometric problems to be solved algebraically and algebraic problems to be visualized geometrically. Non-Euclidean geometries (19th century: hyperbolic by Lobachevsky/Bolyai, elliptic by Riemann) showed that Euclid's parallel postulate is not necessary, leading to Riemannian geometry (fundamental to general relativity). Topology (19th-20th centuries) studies properties preserved under continuous deformations (stretching, bending, but not tearing or gluing). Differential geometry (curves, surfaces in higher dimensions, manifolds) is essential in physics (general relativity, gauge theory) and modern mathematics. Fractal geometry (Mandelbrot, 20th century) studies self-similar structures found in nature (coastlines, clouds, trees, blood vessels).</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Applications:</strong> Geometry is essential in architecture (designing buildings, calculating loads, ensuring structural integrity, aesthetics), engineering (designing machines, analyzing forces, optimizing shapes, CAD/CAM systems), computer science (computer graphics, 3D modeling, rendering, image processing, computer vision, robotics, path planning), physics (mechanics: vectors, trajectories, forces; optics: reflections, refractions; relativity: spacetime curvature; quantum mechanics: symmetries), biology (molecular geometry, protein structures, cell shapes, growth patterns, phylogenetic trees), art and design (perspective, composition, visual balance, patterns, tessellations), geography (maps, projections, navigation, GPS: spherical geometry), astronomy (orbits, celestial mechanics, cosmology), and everyday life (measuring spaces, planning layouts, understanding spatial relationships, navigation).</span></li>
+      </ul>
+    </div>
+
+    <!-- Fundamental Concepts -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Fundamental Geometric Concepts</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Understanding geometry begins with fundamental building blocks: points, lines, planes, angles, and their relationships. These basic concepts form the foundation for all geometric reasoning and problem-solving. Each concept has precise definitions and properties that enable us to describe, measure, and analyze spatial relationships systematically.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Points, Lines, and Planes:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Point:</strong> A location in space with no size, length, width, or height (dimension 0). Represented by a dot and labeled with a capital letter (e.g., point A, point B). Points are undefined terms in geometry (accepted without formal definition, understood intuitively). Two points determine a unique line. Three non-collinear points determine a unique plane. A point is said to be "on" a line or plane if it lies exactly on that line or plane. The distance between two points A(x₁, y₁) and B(x₂, y₂) in a coordinate plane is given by the distance formula: d = √[(x₂ - x₁)² + (y₂ - y₁)²] (derived from the Pythagorean theorem). In 3D space, distance between A(x₁, y₁, z₁) and B(x₂, y₂, z₂) is: d = √[(x₂ - x₁)² + (y₂ - y₁)² + (z₂ - z₁)²].</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Line:</strong> A straight path that extends infinitely in both directions (dimension 1). Represented by a line with arrows on both ends and labeled with a lowercase letter (e.g., line l, line m) or by two points on the line (e.g., line AB or line ←→AB). A line has infinite length but no width or thickness. Through any two distinct points, there exists exactly one line (Postulate: Two points determine a line). If two lines intersect, they intersect at exactly one point. Parallel lines are lines in the same plane that never intersect (they have the same direction or slope). Perpendicular lines are lines that intersect at right angles (90°). Skew lines are lines that are not parallel and do not intersect (they are in different planes, occurs only in 3D space). A line segment is a portion of a line between two endpoints (has finite length, labeled AB or BA, where A and B are endpoints). A ray is a portion of a line that starts at a point and extends infinitely in one direction (has one endpoint, labeled AB→, where A is the endpoint and the ray extends through B).</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Plane:</strong> A flat surface that extends infinitely in all directions (dimension 2). Represented by a parallelogram and labeled with a capital script letter (e.g., plane P, plane M) or by three non-collinear points (e.g., plane ABC). A plane has infinite length and width but no thickness (has two dimensions). Through any three non-collinear points, there exists exactly one plane. If two points of a line lie in a plane, then the entire line lies in that plane. If two planes intersect, they intersect in exactly one line. Two planes are parallel if they never intersect. A plane divides space into two half-spaces. In coordinate geometry, a plane can be defined by an equation (e.g., ax + by + cz = d in 3D space, where (a, b, c) is the normal vector perpendicular to the plane).</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Collinear Points:</strong> Points that lie on the same line. Example: If points A, B, and C are collinear, they all lie on line l. If three points are not collinear, they determine a unique triangle. Non-collinear points determine a unique plane.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Coplanar Points:</strong> Points that lie in the same plane. All points on a line are coplanar. Three points are always coplanar (they determine a plane). Four or more points may or may not be coplanar. Non-coplanar points exist only in 3D space (not all in one plane).</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Angles: Comprehensive Study</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Definition and Naming:</strong> An angle is formed by two rays (or line segments) that share a common endpoint called the vertex. The rays are called the sides of the angle. An angle is named by three points (vertex in the middle, e.g., ∠ABC, where B is the vertex, BA and BC are the sides), by its vertex alone if no ambiguity (e.g., ∠B), or by a number (e.g., ∠1, ∠2). Angles are measured in degrees (°, where a full rotation = 360°) or radians (where a full rotation = 2π radians, 1 radian = 180°/π ≈ 57.3°). A protractor is used to measure angles. To measure an angle: place the vertex at the center of the protractor, align one side with the 0° mark, read where the other side intersects the protractor scale.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Types of Angles by Measure:</strong> Acute angle: less than 90° (between 0° and 90°, sharp, like the corner of a square cut diagonally). Right angle: exactly 90° (like the corner of a square, marked with a small square ⊥ at the vertex, formed by perpendicular lines). Obtuse angle: greater than 90° but less than 180° (between 90° and 180°, wider than a right angle). Straight angle: exactly 180° (a straight line, the two sides form a line, half of a full rotation). Reflex angle: greater than 180° but less than 360° (between 180° and 360°, more than a straight angle). Full angle (complete angle): exactly 360° (full rotation, back to starting position). Zero angle: 0° (no rotation, sides coincide).</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Angle Relationships:</strong> Complementary angles: two angles whose measures sum to 90° (e.g., 30° and 60°, 45° and 45°). If two angles are complementary, each is called the complement of the other. Supplementary angles: two angles whose measures sum to 180° (e.g., 120° and 60°, 90° and 90°). If two angles are supplementary, each is called the supplement of the other. Adjacent angles: angles that share a common side and vertex but do not overlap (they are next to each other). Vertical angles (opposite angles): angles formed by two intersecting lines, opposite each other, always equal in measure (e.g., if two lines intersect, ∠1 and ∠3 are vertical angles, ∠2 and ∠4 are vertical angles, and ∠1 = ∠3, ∠2 = ∠4). Linear pair: two adjacent angles whose non-common sides form a straight line (they are supplementary, sum to 180°).</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Angles Formed by Transversals:</strong> When a line (transversal) intersects two or more parallel lines, several angle relationships are created. Corresponding angles: angles in the same relative position (both above or both below the parallel lines, both on the left or both on the right), they are equal when lines are parallel (e.g., ∠1 and ∠5, ∠2 and ∠6, ∠3 and ∠7, ∠4 and ∠8, where ∠1 = ∠5, ∠2 = ∠6, etc.). Alternate interior angles: angles between the parallel lines on opposite sides of the transversal, they are equal when lines are parallel (e.g., ∠3 and ∠6, ∠4 and ∠5, where ∠3 = ∠6, ∠4 = ∠5). Alternate exterior angles: angles outside the parallel lines on opposite sides of the transversal, they are equal when lines are parallel (e.g., ∠1 and ∠8, ∠2 and ∠7, where ∠1 = ∠8, ∠2 = ∠7). Same-side interior angles (consecutive interior angles): angles between the parallel lines on the same side of the transversal, they are supplementary (sum to 180°) when lines are parallel (e.g., ∠3 and ∠5, ∠4 and ∠6, where ∠3 + ∠5 = 180°, ∠4 + ∠6 = 180°).</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Angle Bisector:</strong> A ray, line, or line segment that divides an angle into two equal parts (two congruent angles). The angle bisector is equidistant from the two sides of the angle. In a triangle, the three angle bisectors intersect at the incenter (center of the inscribed circle, equidistant from all three sides). Construction: to bisect ∠ABC, place compass at vertex B, draw an arc intersecting both sides, from each intersection point, draw arcs that intersect, the line from B through the intersection of the arcs is the angle bisector.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Angle Addition Postulate:</strong> If point B lies in the interior of ∠AOC, then m∠AOB + m∠BOC = m∠AOC (the measure of the whole angle equals the sum of the measures of its parts). Example: If ∠AOB = 30° and ∠BOC = 50°, and B is in the interior of ∠AOC, then m∠AOC = 30° + 50° = 80°.</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Distance, Midpoint, and Slope:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Distance Formula:</strong> The distance between two points A(x₁, y₁) and B(x₂, y₂) in the coordinate plane is: d = √[(x₂ - x₁)² + (y₂ - y₁)²]. This is derived from the Pythagorean theorem: the horizontal distance is |x₂ - x₁|, the vertical distance is |y₂ - y₁|, and the distance d is the hypotenuse of a right triangle with these as legs, so d² = (x₂ - x₁)² + (y₂ - y₁)², thus d = √[(x₂ - x₁)² + (y₂ - y₁)²]. Example: Distance between A(2, 3) and B(5, 7) is d = √[(5 - 2)² + (7 - 3)²] = √[3² + 4²] = √[9 + 16] = √25 = 5 units. In 3D space, distance between A(x₁, y₁, z₁) and B(x₂, y₂, z₂) is: d = √[(x₂ - x₁)² + (y₂ - y₁)² + (z₂ - z₁)²].</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Midpoint Formula:</strong> The midpoint M of a line segment with endpoints A(x₁, y₁) and B(x₂, y₂) is: M = ((x₁ + x₂)/2, (y₁ + y₂)/2). The midpoint is the point that divides the segment into two equal parts, equidistant from both endpoints. It is the average of the x-coordinates and the average of the y-coordinates. Example: Midpoint of A(2, 3) and B(8, 11) is M = ((2 + 8)/2, (3 + 11)/2) = (10/2, 14/2) = (5, 7). In 3D space, midpoint is: M = ((x₁ + x₂)/2, (y₁ + y₂)/2, (z₁ + z₂)/2).</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Slope Formula:</strong> The slope m of a line through points A(x₁, y₁) and B(x₂, y₂) is: m = (y₂ - y₁)/(x₂ - x₁) = rise/run (vertical change divided by horizontal change). Slope measures the steepness and direction of a line. Positive slope: line rises from left to right (increasing function). Negative slope: line falls from left to right (decreasing function). Zero slope: horizontal line (constant function, y = b). Undefined slope: vertical line (x = a, not a function). Parallel lines have equal slopes (m₁ = m₂). Perpendicular lines have slopes that are negative reciprocals (m₁ × m₂ = -1, or m₁ = -1/m₂). Example: Slope of line through A(2, 3) and B(6, 11) is m = (11 - 3)/(6 - 2) = 8/4 = 2 (rises 2 units for every 1 unit to the right).</span></li>
+      </ul>
+    </div>
+
+    <!-- Triangles -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Triangles: Complete Analysis</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Triangles are three-sided polygons, the simplest closed geometric figures, and fundamental to geometry. Every polygon can be divided into triangles, making them essential building blocks. Triangles have unique properties: the sum of interior angles is always 180°, they are rigid (unlike quadrilaterals, triangles maintain their shape when side lengths are fixed, which is why triangular trusses are used in construction), and they have numerous important relationships (Pythagorean theorem, similarity, congruence, area formulas, special properties of right, isosceles, and equilateral triangles). Triangles appear everywhere: architecture (roof trusses, bridges), engineering (structural support, triangulation in GPS, surveying), computer graphics (3D modeling: complex shapes are made of triangular polygons, rendering), navigation (triangulation: determining position using angles to known points), and nature (crystal structures, molecular geometry).
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Triangle Classification:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>By Sides:</strong> Equilateral triangle: all three sides equal (a = b = c), all three angles equal (each 60°), highly symmetric (3 lines of symmetry, 120° rotational symmetry), special properties (centroid, circumcenter, incenter, orthocenter all coincide). Isosceles triangle: exactly two sides equal (a = b ≠ c, or any two sides equal), base angles (angles opposite equal sides) are equal, has one line of symmetry (through vertex and midpoint of base, if base angles are equal), apex angle is different. Scalene triangle: all three sides different (a ≠ b ≠ c), all three angles different, no lines of symmetry.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>By Angles:</strong> Acute triangle: all three angles acute (< 90°, all angles between 0° and 90°), all angles less than 90°. Right triangle: exactly one right angle (90°), the side opposite the right angle is the hypotenuse (longest side), the other two sides are legs, satisfies Pythagorean theorem: a² + b² = c² (where c is hypotenuse), has many special properties. Obtuse triangle: exactly one obtuse angle (> 90° and < 180°), the side opposite the obtuse angle is the longest side, the other two angles are acute.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Combined Classifications:</strong> A triangle can be classified by both sides and angles (e.g., acute isosceles, right scalene, obtuse isosceles, equilateral triangles are always acute). Note: An equilateral triangle is a special case of an isosceles triangle (two sides equal, but actually all three equal), and an equilateral triangle must be acute (all angles 60°).</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Triangle Properties and Theorems:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Triangle Sum Theorem:</strong> The sum of the interior angles of a triangle is always 180° (m∠A + m∠B + m∠C = 180°). This is a fundamental property of Euclidean geometry. Proof: Draw a line parallel to one side through the opposite vertex, use alternate interior angles and linear pairs. Applications: If two angles are known, the third can be found: m∠C = 180° - m∠A - m∠B. If one angle is 90° (right triangle), the other two sum to 90° (complementary). If one angle is obtuse, the other two are both acute and sum to less than 90°.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Exterior Angle Theorem:</strong> The measure of an exterior angle of a triangle equals the sum of the measures of the two remote (non-adjacent) interior angles. If ∠1 is an exterior angle at vertex A, and ∠B and ∠C are the remote interior angles, then m∠1 = m∠B + m∠C. The exterior angle is supplementary to the adjacent interior angle: m∠1 + m∠A = 180°. Applications: If two interior angles are known, the exterior angle can be found without knowing the third interior angle. Example: If m∠B = 50° and m∠C = 60°, then the exterior angle at A is m∠1 = 50° + 60° = 110°.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Triangle Inequality Theorem:</strong> The sum of the lengths of any two sides of a triangle must be greater than the length of the third side. For triangle with sides a, b, c: a + b > c, a + c > b, and b + c > a. If any of these inequalities fails, the three segments cannot form a triangle. This ensures that the sides can actually "close" to form a triangle. Equivalently, each side must be less than the sum of the other two and greater than the absolute difference of the other two: |a - b| < c < a + b. Example: Can sides 3, 4, 8 form a triangle? Check: 3 + 4 = 7, which is NOT > 8, so NO, these cannot form a triangle. Can sides 5, 6, 10 form a triangle? Check: 5 + 6 = 11 > 10 ✓, 5 + 10 = 15 > 6 ✓, 6 + 10 = 16 > 5 ✓, so YES, these can form a triangle.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Pythagorean Theorem:</strong> In a right triangle, the square of the length of the hypotenuse (side opposite the right angle, longest side) equals the sum of the squares of the lengths of the other two sides (legs). If triangle is right with legs a and b and hypotenuse c, then a² + b² = c². This is one of the most famous and useful theorems in mathematics. Converse: If a² + b² = c² for sides of a triangle, then the triangle is right (with right angle opposite side c). Pythagorean triples: sets of three positive integers that satisfy a² + b² = c², such as (3, 4, 5): 3² + 4² = 9 + 16 = 25 = 5², (5, 12, 13): 5² + 12² = 25 + 144 = 169 = 13², (8, 15, 17), (7, 24, 25), etc. Applications: Finding unknown side lengths in right triangles, determining if a triangle is right, distance formula (coordinate geometry), many real-world applications (construction, navigation, engineering). Example: Right triangle with legs 6 and 8. Hypotenuse: c² = 6² + 8² = 36 + 64 = 100, so c = √100 = 10. Example: Triangle with sides 5, 12, 13. Check: 5² + 12² = 25 + 144 = 169 = 13², so this is a right triangle (right angle opposite side 13).</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Special Right Triangles:</strong> 30-60-90 triangle: In a right triangle with angles 30°, 60°, 90°, the side opposite 30° is half the hypotenuse, the side opposite 60° is (hypotenuse × √3)/2, and the hypotenuse is twice the side opposite 30°. If the short leg (opposite 30°) is s, then the hypotenuse is 2s, and the long leg (opposite 60°) is s√3. Ratios: sides are in ratio 1 : √3 : 2 (short leg : long leg : hypotenuse). Example: If short leg = 5, then hypotenuse = 10, long leg = 5√3. 45-45-90 triangle (isosceles right triangle): In a right triangle with angles 45°, 45°, 90°, the two legs are equal, and the hypotenuse is leg × √2. If each leg is s, then the hypotenuse is s√2. Ratios: sides are in ratio 1 : 1 : √2 (leg : leg : hypotenuse). Example: If leg = 7, then hypotenuse = 7√2. These triangles appear frequently in problems and are worth memorizing.</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Triangle Area Formulas:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Standard Formula:</strong> Area = (1/2) × base × height, or A = (1/2)bh, where b is any side (base) and h is the perpendicular height (altitude) from the opposite vertex to that side (or its extension). The height is the perpendicular distance from the vertex to the line containing the base. This formula works for all triangles. Example: Triangle with base 10 and height 6. Area = (1/2) × 10 × 6 = 30 square units. Important: The base and height must be perpendicular. If given a right triangle, the two legs can serve as base and height.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Heron's Formula:</strong> If all three sides are known, area = √[s(s - a)(s - b)(s - c)], where s = (a + b + c)/2 is the semi-perimeter (half the perimeter). This is useful when height is not known or difficult to calculate. Example: Triangle with sides 5, 6, 7. s = (5 + 6 + 7)/2 = 9. Area = √[9(9 - 5)(9 - 6)(9 - 7)] = √[9 × 4 × 3 × 2] = √216 = 6√6 ≈ 14.7 square units.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Using Trigonometry:</strong> If two sides and the included angle are known, area = (1/2) × a × b × sin(C), where a and b are the two sides and C is the angle between them. This uses the sine function. Example: Triangle with sides 8 and 10 and included angle 30°. Area = (1/2) × 8 × 10 × sin(30°) = 40 × (1/2) = 20 square units.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Coordinate Geometry Formula:</strong> If vertices are A(x₁, y₁), B(x₂, y₂), C(x₃, y₃), area = (1/2)|x₁(y₂ - y₃) + x₂(y₃ - y₁) + x₃(y₁ - y₂)|. This is derived from the determinant formula. The absolute value ensures positive area (area is always positive). Example: Triangle with vertices (0, 0), (4, 0), (0, 3). Area = (1/2)|0(0 - 3) + 4(3 - 0) + 0(0 - 0)| = (1/2)|0 + 12 + 0| = 6 square units (right triangle with legs 4 and 3).</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Triangle Centers:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Centroid:</strong> The point where the three medians (lines from vertices to midpoints of opposite sides) intersect. The centroid divides each median in a 2:1 ratio (closer to the vertex). It is the center of mass (balance point) of the triangle. In coordinate geometry, if vertices are (x₁, y₁), (x₂, y₂), (x₃, y₃), the centroid is at ((x₁ + x₂ + x₃)/3, (y₁ + y₂ + y₃)/3) - the average of the coordinates. The centroid is always inside the triangle.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Circumcenter:</strong> The point where the three perpendicular bisectors of the sides intersect. It is the center of the circumscribed circle (circumcircle) that passes through all three vertices. The circumcenter is equidistant from all three vertices. For an acute triangle, the circumcenter is inside. For a right triangle, the circumcenter is the midpoint of the hypotenuse. For an obtuse triangle, the circumcenter is outside. In an equilateral triangle, the circumcenter, centroid, incenter, and orthocenter all coincide.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Incenter:</strong> The point where the three angle bisectors intersect. It is the center of the inscribed circle (incircle) that is tangent to all three sides. The incenter is equidistant from all three sides. It is always inside the triangle. The radius of the incircle is r = Area/s, where s is the semi-perimeter.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Orthocenter:</strong> The point where the three altitudes (perpendicular lines from vertices to opposite sides) intersect. For an acute triangle, the orthocenter is inside. For a right triangle, the orthocenter is the vertex of the right angle. For an obtuse triangle, the orthocenter is outside. In an equilateral triangle, all four centers coincide.</span></li>
+      </ul>
+    </div>
+
+    <!-- Continue with more sections... -->
+    <!-- Due to length constraints, I'll add key remaining sections -->
+    
+    <!-- Circles -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Circles: Comprehensive Study</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        A circle is the set of all points in a plane that are equidistant from a fixed point called the center. The distance from the center to any point on the circle is the radius (r). Circles are fundamental geometric shapes with many important properties and applications in mathematics, physics, engineering, and nature (planetary orbits, wheels, gears, waves).
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Circle Definitions and Parts:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Radius (r):</strong> Distance from center to any point on the circle. All radii of the same circle are equal. The radius determines the size of the circle.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Diameter (d):</strong> A line segment passing through the center with endpoints on the circle. Length d = 2r (twice the radius). The diameter is the longest chord of a circle.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Chord:</strong> A line segment with both endpoints on the circle. A diameter is a special chord passing through the center. The perpendicular bisector of a chord passes through the center of the circle.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Arc:</strong> A portion of the circle. A minor arc is less than 180°, a major arc is greater than 180°, a semicircle is exactly 180°. Arc length: L = (θ/360°) × 2πr = (θ/180°) × πr, where θ is the central angle in degrees. In radians: L = rθ, where θ is in radians.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Central Angle:</strong> An angle whose vertex is at the center of the circle. The measure of a central angle equals the measure of its intercepted arc.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Inscribed Angle:</strong> An angle whose vertex is on the circle and sides are chords. The measure of an inscribed angle equals half the measure of its intercepted arc. An angle inscribed in a semicircle is a right angle (90°).</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Tangent:</strong> A line that touches the circle at exactly one point (point of tangency). The tangent is perpendicular to the radius at the point of tangency. From an external point, exactly two tangents can be drawn to a circle, and they are equal in length.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Secant:</strong> A line that intersects the circle at two points. A chord is the segment of a secant inside the circle.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Sector:</strong> Region bounded by two radii and an arc. Area of sector = (θ/360°) × πr² = (1/2)r²θ (in radians), where θ is the central angle.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Segment:</strong> Region bounded by a chord and its arc. Area of segment = area of sector - area of triangle formed by radii and chord.</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Circle Formulas:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Circumference (Perimeter):</strong> C = 2πr = πd, where π (pi) ≈ 3.14159... is the ratio of circumference to diameter for any circle. The circumference is the distance around the circle.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Area:</strong> A = πr² = π(d/2)² = πd²/4. The area is the space enclosed by the circle. Example: Circle with radius 5. Area = π(5)² = 25π ≈ 78.54 square units. Circumference = 2π(5) = 10π ≈ 31.42 units.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Equation of a Circle:</strong> In coordinate geometry, a circle with center (h, k) and radius r has equation: (x - h)² + (y - k)² = r². If center is at origin (0, 0), equation is: x² + y² = r². The general form is: x² + y² + Dx + Ey + F = 0, which can be converted to standard form by completing the square. Example: Circle with center (3, -2) and radius 4. Equation: (x - 3)² + (y + 2)² = 16.</span></li>
+      </ul>
+    </div>
+
+    <!-- Quadrilaterals -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Quadrilaterals and Polygons</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        A quadrilateral is a four-sided polygon. Quadrilaterals are classified based on side lengths, angles, and properties. Special quadrilaterals include parallelograms, rectangles, squares, rhombuses, trapezoids, and kites, each with unique properties.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Types of Quadrilaterals:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Parallelogram:</strong> Opposite sides parallel and equal in length, opposite angles equal, consecutive angles supplementary, diagonals bisect each other. Area = base × height. Examples: Rectangle, square, rhombus are all parallelograms.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Rectangle:</strong> Parallelogram with four right angles (90°), diagonals equal in length, diagonals bisect each other. Area = length × width = lw. Perimeter = 2(l + w).</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Square:</strong> Rectangle with all sides equal, all angles 90°, diagonals equal and perpendicular, diagonals bisect angles, highly symmetric (4 lines of symmetry, 90° rotational symmetry). Area = s² (side squared). Perimeter = 4s. Diagonal = s√2.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Rhombus:</strong> Parallelogram with all sides equal, opposite angles equal, diagonals perpendicular, diagonals bisect angles. Area = (1/2) × d₁ × d₂ (product of diagonals) = base × height.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Trapezoid:</strong> Exactly one pair of parallel sides (bases). Area = (1/2) × (base₁ + base₂) × height = (1/2)h(b₁ + b₂). Isosceles trapezoid: legs equal, base angles equal, diagonals equal.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Kite:</strong> Two pairs of adjacent sides equal, one pair of opposite angles equal, diagonals perpendicular, one diagonal bisects the other. Area = (1/2) × d₁ × d₂.</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Polygon Properties:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Interior Angle Sum:</strong> For an n-sided polygon (n-gon), sum of interior angles = (n - 2) × 180°. For regular polygon (all sides and angles equal), each interior angle = (n - 2) × 180°/n. Example: Pentagon (n = 5): sum = (5 - 2) × 180° = 540°, each interior angle (if regular) = 540°/5 = 108°.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Exterior Angle Sum:</strong> For any convex polygon, sum of exterior angles = 360° (one full rotation). For regular n-gon, each exterior angle = 360°/n. Example: Regular hexagon (n = 6): each exterior angle = 360°/6 = 60°, each interior angle = 180° - 60° = 120°.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Number of Diagonals:</strong> In an n-sided polygon, number of diagonals = n(n - 3)/2. Example: Hexagon (n = 6): diagonals = 6(6 - 3)/2 = 6 × 3/2 = 9.</span></li>
+      </ul>
+    </div>
+
+    <!-- Solid Geometry -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Solid Geometry: Three-Dimensional Shapes</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Solid geometry deals with three-dimensional shapes (solids) and their properties: volume (space enclosed) and surface area (total area of all faces). Common solids include prisms, pyramids, cylinders, cones, and spheres.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Common Solids and Formulas:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Rectangular Prism (Box):</strong> Volume V = length × width × height = lwh. Surface area SA = 2(lw + lh + wh) (sum of areas of 6 rectangular faces). Example: Box 5×3×4. V = 5 × 3 × 4 = 60 cubic units. SA = 2(5×3 + 5×4 + 3×4) = 2(15 + 20 + 12) = 2(47) = 94 square units.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Cube:</strong> Special rectangular prism with all edges equal (l = w = h = s). Volume V = s³. Surface area SA = 6s² (6 square faces). Example: Cube with edge 4. V = 4³ = 64 cubic units. SA = 6(4²) = 6(16) = 96 square units.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Cylinder:</strong> Volume V = πr²h (area of circular base × height). Lateral surface area (curved surface) = 2πrh (circumference × height). Total surface area SA = 2πr² + 2πrh = 2πr(r + h) (two circular bases + lateral surface). Example: Cylinder with r = 3, h = 5. V = π(3²)(5) = 45π ≈ 141.37 cubic units. SA = 2π(3)(3 + 5) = 2π(3)(8) = 48π ≈ 150.80 square units.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Sphere:</strong> Volume V = (4/3)πr³. Surface area SA = 4πr². Example: Sphere with r = 6. V = (4/3)π(6³) = (4/3)π(216) = 288π ≈ 904.78 cubic units. SA = 4π(6²) = 4π(36) = 144π ≈ 452.39 square units.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Cone:</strong> Volume V = (1/3)πr²h (one-third the volume of a cylinder with same base and height). Lateral surface area = πrl, where l = √(r² + h²) is the slant height. Total surface area SA = πr² + πrl = πr(r + l) (circular base + lateral surface). Example: Cone with r = 4, h = 3. Slant height l = √(4² + 3²) = √(16 + 9) = √25 = 5. V = (1/3)π(4²)(3) = (1/3)π(48) = 16π ≈ 50.27 cubic units. SA = π(4)(4 + 5) = π(4)(9) = 36π ≈ 113.10 square units.</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Pyramid:</strong> Volume V = (1/3)Bh, where B is the area of the base and h is the height (perpendicular distance from apex to base). Surface area = area of base + sum of areas of triangular faces. Example: Square pyramid with base side 6 and height 8. Base area B = 6² = 36. V = (1/3)(36)(8) = 96 cubic units.</span></li>
+      </ul>
+    </div>
+
+    <!-- Transformations -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Geometric Transformations</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Transformations change the position, size, or orientation of geometric figures while preserving certain properties. The four basic transformations are translations (slides), rotations (turns), reflections (flips), and dilations (size changes). Transformations are fundamental in computer graphics, animation, architecture, art, and understanding symmetry.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Types of Transformations:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Translation (Slide):</strong> Moves every point of a figure the same distance in the same direction. Size, shape, and orientation remain unchanged (rigid transformation, isometry). Notation: T(a, b) moves point (x, y) to (x + a, y + b). Example: Translate triangle 3 units right, 2 units up: T(3, 2) moves (x, y) to (x + 3, y + 2).</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Rotation (Turn):</strong> Turns a figure around a fixed point (center of rotation) by a given angle. Size and shape remain unchanged, but orientation changes (rigid transformation). Rotations can be clockwise or counterclockwise. Common rotations: 90° (quarter turn), 180° (half turn), 270° (three-quarter turn), 360° (full turn, back to original). Example: Rotate point (3, 4) 90° counterclockwise about origin: becomes (-4, 3).</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Reflection (Flip):</strong> Flips a figure across a line (line of reflection, mirror line). Size and shape remain unchanged, but orientation is reversed (rigid transformation). The line of reflection is the perpendicular bisector of segments connecting corresponding points. Common reflections: across x-axis (x, y) → (x, -y), across y-axis (x, y) → (-x, y), across line y = x (x, y) → (y, x), across origin (x, y) → (-x, -y).</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Dilation (Scaling):</strong> Enlarges or reduces a figure by a scale factor k about a center point. Shape remains the same (similar figures), but size changes (not a rigid transformation unless k = 1). If k > 1, enlargement; if 0 < k < 1, reduction; if k = 1, no change; if k < 0, also reflects. Scale factor = image length / original length. Example: Dilate triangle by scale factor 2 about origin: multiply all coordinates by 2, (x, y) → (2x, 2y).</span></li>
+      </ul>
+    </div>
+
+    <!-- Coordinate Geometry -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Coordinate Geometry (Analytic Geometry)</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Coordinate geometry combines algebra and geometry using coordinate systems (typically the Cartesian coordinate system with x and y axes). It allows geometric problems to be solved algebraically and algebraic problems to be visualized geometrically. Points are represented by ordered pairs (x, y), lines by equations, circles by equations, and geometric relationships can be expressed algebraically.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Key Concepts:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Coordinate System:</strong> Two perpendicular number lines (x-axis horizontal, y-axis vertical) intersecting at origin (0, 0). Points are located by ordered pairs (x, y): x-coordinate (abscissa) indicates horizontal position, y-coordinate (ordinate) indicates vertical position. Quadrants: I (x > 0, y > 0), II (x < 0, y > 0), III (x < 0, y < 0), IV (x > 0, y < 0).</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Equations of Lines:</strong> Slope-intercept form: y = mx + b (m = slope, b = y-intercept). Standard form: Ax + By = C. Point-slope form: y - y₁ = m(x - x₁). Two-point form: (y - y₁)/(x - x₁) = (y₂ - y₁)/(x₂ - x₁). Horizontal line: y = b (slope 0). Vertical line: x = a (undefined slope, not a function).</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Parallel and Perpendicular Lines:</strong> Parallel lines have equal slopes (m₁ = m₂). Perpendicular lines have slopes that are negative reciprocals (m₁ × m₂ = -1, or m₁ = -1/m₂). Horizontal lines (m = 0) are perpendicular to vertical lines (undefined slope).</span></li>
+        <li class="flex items-start gap-3"><span class="text-blue-600 font-bold">•</span><span><strong>Distance and Midpoint:</strong> Distance formula: d = √[(x₂ - x₁)² + (y₂ - y₁)²]. Midpoint formula: M = ((x₁ + x₂)/2, (y₁ + y₂)/2). These formulas are fundamental for solving geometric problems in coordinate geometry.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="geometry-quiz.html" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to More Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

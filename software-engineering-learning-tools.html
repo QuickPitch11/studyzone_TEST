@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Software Engineering Learning Tools - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <!-- Back Button -->
+  <div class="mb-6">
+    <a href="college-learning-tools.html" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back to Learning Tools</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="flex justify-center mb-4">
+      <div class="p-4 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full">
+        <i data-lucide="code" class="w-16 h-16 text-white"></i>
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Software Engineering Learning Tools</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Essential resources for learning programming, software development, and computer science fundamentals
+    </p>
+  </div>
+
+  <!-- Coding Practice & Learning Platforms -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="laptop" class="w-7 h-7 text-blue-600"></i>
+        Coding Practice & Learning Platforms
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://leetcode.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">LeetCode ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Coding interview practice and algorithm challenges</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>3000+ coding problems</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Company-specific questions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Contest competitions</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.hackerrank.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">HackerRank ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Programming challenges and skill certification</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Multiple programming domains</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Certification programs</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Interview preparation kits</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.codecademy.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Codecademy ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Interactive programming courses for beginners</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Hands-on learning</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Multiple languages</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Career paths</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.freecodecamp.org/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">freeCodeCamp ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free coding bootcamp with certifications</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>100% free courses</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Full-stack development</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Real project portfolio</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Development Tools & IDEs -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl shadow-lg p-8 border-l-4 border-indigo-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="wrench" class="w-7 h-7 text-indigo-600"></i>
+        Development Tools & IDEs
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://code.visualstudio.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Visual Studio Code ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Popular free code editor with extensive extensions</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Lightweight and fast</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Thousands of extensions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Built-in Git integration</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.jetbrains.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">JetBrains IDEs ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Professional IDEs for various programming languages</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>IntelliJ, PyCharm, WebStorm</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Intelligent code completion</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Free student licenses</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://replit.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Replit ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Online IDE for collaborative coding</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Browser-based coding</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Real-time collaboration</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>50+ programming languages</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://codesandbox.io/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">CodeSandbox ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Online code editor for web development</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Instant web app prototypes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Framework templates</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Live deployment</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Version Control & Collaboration -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl shadow-lg p-8 border-l-4 border-purple-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="git-branch" class="w-7 h-7 text-purple-600"></i>
+        Version Control & Collaboration
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://github.com/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">GitHub ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">World's largest code hosting platform</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Git version control</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Project collaboration</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Portfolio building</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://about.gitlab.com/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">GitLab ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">DevOps platform with built-in CI/CD</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Complete DevOps lifecycle</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Free private repositories</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Integrated CI/CD pipelines</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://git-scm.com/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Git Documentation ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Official Git version control documentation</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Comprehensive guides</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Command reference</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Best practices</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.atlassian.com/git/tutorials" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Atlassian Git Tutorials ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">In-depth Git learning resources</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Beginner to advanced</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Interactive tutorials</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Workflow strategies</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Documentation & Design Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-xl shadow-lg p-8 border-l-4 border-cyan-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="book-open-text" class="w-7 h-7 text-cyan-600"></i>
+        Documentation & Design Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://stackoverflow.com/" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">Stack Overflow ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Q&A platform for programming questions</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Millions of solutions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Community expertise</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Code snippets</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://developer.mozilla.org/" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">MDN Web Docs ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive web development documentation</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>HTML, CSS, JavaScript guides</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Web APIs reference</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Best practices</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.figma.com/" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">Figma ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Collaborative UI/UX design tool</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Interface design</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Prototyping</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Free for students</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://devdocs.io/" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">DevDocs ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Fast, organized documentation browser</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Multiple languages/frameworks</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Offline access</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Fast search</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testing & Debugging Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-teal-50 to-emerald-50 rounded-xl shadow-lg p-8 border-l-4 border-teal-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="bug" class="w-7 h-7 text-teal-600"></i>
+        Testing & Debugging Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.postman.com/" target="_blank" class="text-teal-600 hover:text-teal-700 hover:underline">Postman ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">API testing and development platform</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>API request testing</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Automated testing</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Team collaboration</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://jestjs.io/" target="_blank" class="text-teal-600 hover:text-teal-700 hover:underline">Jest ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">JavaScript testing framework</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Unit testing</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Code coverage</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Snapshot testing</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.selenium.dev/" target="_blank" class="text-teal-600 hover:text-teal-700 hover:underline">Selenium ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Browser automation and testing framework</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Automated web testing</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Multiple browsers</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Multiple languages</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://developers.google.com/web/tools/chrome-devtools" target="_blank" class="text-teal-600 hover:text-teal-700 hover:underline">Chrome DevTools ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Built-in browser developer tools</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Live debugging</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Performance profiling</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Network analysis</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career & Interview Preparation -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-violet-50 to-purple-50 rounded-xl shadow-lg p-8 border-l-4 border-violet-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="briefcase" class="w-7 h-7 text-violet-600"></i>
+        Career & Interview Preparation
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.educative.io/" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">Educative ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Interactive coding interview preparation</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Text-based courses</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>System design patterns</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Interview prep paths</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.pramp.com/" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">Pramp ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free peer-to-peer mock interviews</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Practice with peers</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Real-time coding</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>100% free</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.interviewing.io/" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">Interviewing.io ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Anonymous technical interview practice</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Real engineers as interviewers</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Detailed feedback</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Job opportunities</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.levels.fyi/" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">Levels.fyi ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Tech salary and career progression data</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Salary comparisons</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Company insights</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Career levels</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="software-engineering.html" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Software Engineering Basics
+    </a>
+    <a href="software-engineering-quiz.html" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Take Quiz
+    </a>
+    <a href="college-learning-tools.html" class="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      All Learning Tools
+    </a>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

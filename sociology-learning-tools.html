@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sociology Learning Tools - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <!-- Back Button -->
+  <div class="mb-6">
+    <a href="college-learning-tools.html" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-600 text-white rounded-lg hover:bg-slate-700 transition">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back to Learning Tools</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="flex justify-center mb-4">
+      <div class="p-4 bg-gradient-to-br from-slate-600 to-gray-600 rounded-full">
+        <i data-lucide="users" class="w-16 h-16 text-white"></i>
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Sociology Learning Tools</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Interactive resources for studying society, social behavior, and cultural phenomena
+    </p>
+  </div>
+
+  <!-- Interactive Sociology Simulations & Experiments -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-slate-50 to-gray-50 rounded-xl shadow-lg p-8 border-l-4 border-slate-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="test-tube" class="w-7 h-7 text-slate-600"></i>
+        Interactive Sociology Simulations & Experiments
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.sociology.org/" target="_blank" class="text-slate-600 hover:text-slate-700 hover:underline">Sociology.org ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Interactive sociology resources and educational materials</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Sociological theories explained</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Interactive case studies</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Research methodology guides</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.sociologyguide.com/" target="_blank" class="text-slate-600 hover:text-slate-700 hover:underline">Sociology Guide ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive guide to sociological concepts and theories</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Detailed topic explanations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Theorist profiles</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Study notes and summaries</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.thoughtco.com/sociology-4133710" target="_blank" class="text-slate-600 hover:text-slate-700 hover:underline">ThoughtCo Sociology ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Educational articles and explanations of sociology topics</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Concept breakdowns</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Social issues analysis</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Current events connections</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.sociologyindex.com/" target="_blank" class="text-slate-600 hover:text-slate-700 hover:underline">Sociology Index ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Searchable index of sociological terms and concepts</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Term definitions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Cross-referenced topics</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Research resources</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research & Data Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-gray-50 to-zinc-50 rounded-xl shadow-lg p-8 border-l-4 border-gray-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="bar-chart-3" class="w-7 h-7 text-gray-600"></i>
+        Research & Data Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.census.gov/" target="_blank" class="text-gray-600 hover:text-gray-700 hover:underline">U.S. Census Bureau ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Official demographic and social statistics database</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-gray-600">•</span>
+              <span>Population data</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gray-600">•</span>
+              <span>Social and economic statistics</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gray-600">•</span>
+              <span>Interactive data tools</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.pewresearch.org/" target="_blank" class="text-gray-600 hover:text-gray-700 hover:underline">Pew Research Center ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Public opinion polling and social trends research</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-gray-600">•</span>
+              <span>Social trends analysis</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gray-600">•</span>
+              <span>Survey data and reports</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gray-600">•</span>
+              <span>Demographic research</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.asanet.org/" target="_blank" class="text-gray-600 hover:text-gray-700 hover:underline">American Sociological Association ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Professional organization for sociologists with research resources</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-gray-600">•</span>
+              <span>Scholarly journals</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gray-600">•</span>
+              <span>Research publications</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gray-600">•</span>
+              <span>Teaching resources</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.icpsr.umich.edu/" target="_blank" class="text-gray-600 hover:text-gray-700 hover:underline">ICPSR ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Inter-university Consortium for Political and Social Research data archive</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-gray-600">•</span>
+              <span>Social science data sets</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gray-600">•</span>
+              <span>Survey archives</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gray-600">•</span>
+              <span>Research methods training</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video & Tutorial Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="video" class="w-7 h-7 text-blue-600"></i>
+        Video & Tutorial Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/user/crashcourse" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Crash Course Sociology ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Engaging 44-episode series covering major sociology topics</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Complete sociology overview</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Animated explanations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Social theory coverage</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.khanacademy.org/test-prep/mcat/society-and-culture" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Khan Academy Social Sciences ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free sociology lessons integrated with MCAT preparation</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Sociological theories</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Social structures</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Practice questions</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/c/TheSociologicalCinema" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">The Sociological Cinema ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Video lectures on sociology using film and media examples</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Pop culture analysis</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Sociological concepts</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Media literacy</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/c/SociologyLive" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Sociology Live ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Educational sociology videos for students and educators</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Topic-specific lessons</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Exam preparation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Contemporary issues</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice & Study Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl shadow-lg p-8 border-l-4 border-green-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="clipboard-check" class="w-7 h-7 text-green-600"></i>
+        Practice & Study Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://quizlet.com/subject/sociology/" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">Quizlet Sociology ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Millions of sociology flashcard sets and study materials</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Theory and concept cards</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Theorist profiles</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Multiple study modes</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://apps.ankiweb.net/" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">Anki ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Spaced repetition flashcard system with sociology decks</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Optimized review schedule</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Shared sociology decks</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Customizable cards</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.sparknotes.com/sociology/" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">SparkNotes Sociology ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free study guides and summaries for sociology topics</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Chapter summaries</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Study questions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Key terms review</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.proprofs.com/quiz-school/topic/sociology" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">ProProfs Sociology Quizzes ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free online sociology quizzes and practice tests</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Topic-specific quizzes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Instant feedback</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Performance tracking</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Online Textbooks & Reference Materials -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-purple-50 to-violet-50 rounded-xl shadow-lg p-8 border-l-4 border-purple-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="book-open-text" class="w-7 h-7 text-purple-600"></i>
+        Online Textbooks & Reference Materials
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://openstax.org/details/books/introduction-sociology-3e" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">OpenStax Sociology ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free peer-reviewed open-source sociology textbook</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Complete textbook access</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Downloadable PDF</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Instructor resources</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.cliffsnotes.com/study-guides/sociology" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">CliffsNotes Sociology ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Concise study guides for sociology concepts and theories</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Topic overviews</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Quick review guides</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Key takeaways</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.sociologyonline.co.uk/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Sociology Online ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive sociology study notes and resources</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Detailed study notes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Theory explanations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Practice materials</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.coursehero.com/subject/sociology/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Course Hero Sociology ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Study documents and notes from real sociology courses</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Course-specific materials</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Practice exams</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Student study guides</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Events & Applied Sociology -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl shadow-lg p-8 border-l-4 border-orange-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="newspaper" class="w-7 h-7 text-orange-600"></i>
+        Current Events & Applied Sociology
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://thesocietypages.org/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">The Society Pages ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Open-access social science project connecting research to public issues</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Current social issues</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Research-based articles</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Sociological podcasts</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://everydaysociologyblog.com/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Everyday Sociology Blog ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Sociology applied to daily life and current events</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Real-world applications</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Contemporary analysis</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Discussion prompts</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://contexts.org/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Contexts Magazine ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">ASA magazine making sociology accessible to broader audiences</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Public sociology articles</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Visual sociology</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Engaging narratives</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://socialproblemsproject.com/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Social Problems Project ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Analysis of contemporary social issues through sociological lens</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Issue-focused content</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Critical analysis</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Educational resources</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="sociology.html" class="px-6 py-3 bg-slate-600 text-white rounded-lg hover:bg-slate-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Sociology Basics
+    </a>
+    <a href="sociology-quiz.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Take Quiz
+    </a>
+    <a href="college-learning-tools.html" class="px-6 py-3 bg-zinc-600 text-white rounded-lg hover:bg-zinc-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      All Learning Tools
+    </a>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

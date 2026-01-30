@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Psychology - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= STUDY CONTENT ================= -->
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <!-- Subject Header -->
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full mb-6">
+      <i data-lucide="brain" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Psychology Basics</h1>
+    <p class="text-xl text-gray-600 mb-8">Study of mind and behavior</p>
+  </div>
+
+  <!-- Content Sections -->
+  <div class="space-y-8">
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-pink-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">What is Psychology?</h2>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        Psychology is the scientific study of the mind and behavior. It encompasses the investigation of mental processes, brain functions, and human behavior, seeking to understand how people think, feel, and act. Psychology applies scientific methods to study both normal and abnormal behavior, cognition, and emotional processes.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-pink-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Core Concepts</h2>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-pink-600 font-bold">•</span>
+          <span><strong>Cognition:</strong> Mental processes including perception, memory, thinking, and problem-solving</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-pink-600 font-bold">•</span>
+          <span><strong>Behavior:</strong> Observable actions and responses to stimuli</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-pink-600 font-bold">•</span>
+          <span><strong>Emotion:</strong> Complex psychological states involving feelings, physiological responses, and behavioral expressions</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-pink-600 font-bold">•</span>
+          <span><strong>Learning:</strong> Process of acquiring new knowledge, behaviors, or skills through experience</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-pink-600 font-bold">•</span>
+          <span><strong>Personality:</strong> Enduring patterns of thoughts, feelings, and behaviors that characterize an individual</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-pink-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Major Branches</h2>
+      <ol class="space-y-4 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-pink-600 font-bold">1.</span>
+          <span><strong>Clinical Psychology:</strong> Assessment and treatment of mental health disorders</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-pink-600 font-bold">2.</span>
+          <span><strong>Cognitive Psychology:</strong> Study of mental processes like memory, attention, and problem-solving</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-pink-600 font-bold">3.</span>
+          <span><strong>Developmental Psychology:</strong> Study of human growth and development across the lifespan</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-pink-600 font-bold">4.</span>
+          <span><strong>Social Psychology:</strong> Study of how individuals are influenced by social situations and groups</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-pink-600 font-bold">5.</span>
+          <span><strong>Biological Psychology:</strong> Study of the biological bases of behavior and mental processes</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-pink-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Applications</h2>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        Psychology is applied in various fields including mental health treatment, education, business, sports, and healthcare. Psychologists work in clinical settings, research institutions, schools, and organizations to help people understand and improve their mental health, enhance learning, optimize performance, and solve real-world problems. Understanding psychology is essential for healthcare professionals who work with patients' mental and emotional well-being.
+      </p>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="psychology-analysis.html" class="px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      In Depth Analysis
+    </a>
+    <a href="psychology-quiz.html" class="px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

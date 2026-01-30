@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Physics - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full mb-6">
+      <i data-lucide="atom" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Physics: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">Comprehensive exploration of matter, energy, and forces</p>
+  </div>
+
+  <div class="space-y-10">
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Classical Mechanics</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Classical mechanics describes the motion of macroscopic objects under the influence of forces. It includes kinematics (description of motion without considering causes) and dynamics (forces and their effects on motion). Newton's laws provide the foundation, while conservation principles (energy, momentum) offer powerful alternative approaches. Classical mechanics applies accurately to objects much larger than atoms moving at speeds much less than light.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Kinematics - Describing Motion:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Displacement vs. Distance:</strong> Displacement (Δx = x₂ - x₁) is vector quantity (direction and magnitude), distance is scalar (magnitude only). Displacement can be zero if object returns to starting point, while distance is always positive.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Velocity and Speed:</strong> Velocity (v = Δx/Δt, vector) describes rate of displacement change with direction. Average velocity = total displacement/total time. Instantaneous velocity = derivative of position with respect to time (v = dx/dt). Speed (scalar) = magnitude of velocity. Constant velocity: uniform motion in straight line. Changing velocity: acceleration present.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Acceleration:</strong> Rate of velocity change (a = Δv/Δt, vector). Average acceleration = change in velocity/time. Instantaneous acceleration = dv/dt = d²x/dt² (second derivative of position). Constant acceleration: uniformly accelerated motion. Equations: v = v₀ + at, x = x₀ + v₀t + ½at², v² = v₀² + 2a(x - x₀). Negative acceleration (deceleration) means velocity decreases in magnitude (or reverses direction).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Projectile Motion:</strong> Two-dimensional motion with constant horizontal velocity and constant vertical acceleration (gravity, g = 9.8 m/s² downward). Horizontal component: vₓ = v₀ₓ (constant), x = v₀ₓt. Vertical component: vᵧ = v₀ᵧ - gt, y = y₀ + v₀ᵧt - ½gt². Range: R = (v₀² sin 2θ)/g (maximum at θ = 45°). Trajectory: parabolic path. Time of flight: t = 2v₀ sin θ/g.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Circular Motion:</strong> Object moves in circular path at constant speed. Angular velocity (ω = dθ/dt, rad/s), linear velocity (v = rω, tangent to circle), period (T = 2π/ω = 2πr/v). Centripetal acceleration (a_c = v²/r = rω², directed toward center) required to maintain circular motion. Centripetal force (F_c = mv²/r = mrω²) provides centripetal acceleration. Centrifugal force is fictitious (apparent outward force in rotating reference frame).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Newton's Laws of Motion:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>First Law (Law of Inertia):</strong> An object at rest remains at rest, and an object in motion continues in motion at constant velocity (constant speed in straight line), unless acted upon by a net external force. Defines inertial reference frames (non-accelerating frames). Inertia: property of matter resisting changes in motion, quantified by mass. Objects maintain their state of motion due to inertia. Zero net force → zero acceleration → constant velocity (or rest).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Second Law (F = ma):</strong> Net force acting on object equals mass times acceleration (ΣF = ma, vector equation). Acceleration directly proportional to net force, inversely proportional to mass. Direction of acceleration same as direction of net force. For constant mass: larger force → larger acceleration, larger mass → smaller acceleration. Units: Newton (N) = kg·m/s². When multiple forces act: ΣF = F₁ + F₂ + ... (vector sum). In component form: ΣFₓ = maₓ, ΣFᵧ = maᵧ, ΣFᵧ = maᵧ.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Third Law (Action-Reaction):</strong> For every action (force), there is an equal and opposite reaction (force). Forces always occur in pairs: F_A on B = -F_B on A (equal magnitude, opposite direction, act on different objects). Action and reaction forces never cancel (act on different objects). Examples: person pushing wall (action: person on wall, reaction: wall on person), Earth pulling apple (action: Earth on apple, reaction: apple on Earth with equal force).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Forces in Nature:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Gravitational Force:</strong> F_g = G(m₁m₂)/r² (Newton's law of universal gravitation). G = 6.67 × 10⁻¹¹ N·m²/kg² (gravitational constant). Always attractive, acts at distance. Near Earth's surface: F_g = mg, where g = GM_E/r_E² ≈ 9.8 m/s². Weight (W = mg) is gravitational force. Mass (inertia) vs. weight (gravitational force). Weight varies with location, mass constant.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Normal Force:</strong> Contact force perpendicular to surface, exerted by surface on object. Prevents objects from passing through surfaces. Magnitude adjusts to prevent penetration (reaction to component of weight perpendicular to surface). On horizontal surface: N = mg. On inclined plane: N = mg cos θ (θ = angle of incline). Not action-reaction pair with weight (both act on same object).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Friction:</strong> Contact force opposing relative motion (or tendency for motion). Static friction: f_s ≤ μ_sN (prevents sliding, adjusts up to maximum μ_sN, μ_s = coefficient of static friction). Kinetic friction: f_k = μ_kN (opposes sliding motion, constant for given surfaces, μ_k = coefficient of kinetic friction, usually μ_k < μ_s). Friction force independent of contact area and velocity (for dry friction). Direction opposes motion or tendency for motion.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Tension:</strong> Force exerted by rope, string, cable, etc. Always pulls along rope away from object. Tension same magnitude throughout massless rope. For rope with mass: tension varies. Pulley: changes direction of force, ideal (massless, frictionless) pulley doesn't change magnitude.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Elastic Force (Hooke's Law):</strong> F = -kx (restoring force, opposes displacement). k = spring constant (stiffness, N/m), x = displacement from equilibrium. Negative sign: force opposite to displacement (restoring). Potential energy: U_spring = ½kx². Applies to springs, rubber bands, etc. within elastic limit (linear region).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Work, Energy, and Power:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Work:</strong> Energy transferred by force acting through displacement. W = F·d = Fd cos θ (scalar, dot product). Only component of force parallel to displacement does work. Work positive if force in direction of displacement, negative if opposite, zero if perpendicular. Unit: Joule (J) = N·m = kg·m²/s². Variable force: W = ∫F·dx. Work done by force equals area under force-displacement curve. Net work (by all forces) equals change in kinetic energy (work-energy theorem: W_net = ΔKE).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Kinetic Energy:</strong> Energy of motion. KE = ½mv² (scalar, always positive, depends on speed squared). Work-energy theorem: W_net = ΔKE = KE_f - KE_i = ½mv_f² - ½mv_i². Net work equals change in kinetic energy. If net work positive: object speeds up. If negative: slows down. If zero: speed constant (though velocity may change direction).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Potential Energy:</strong> Stored energy associated with position or configuration. Gravitational PE: U_g = mgh (height h relative to reference point, U = 0 chosen arbitrarily). Elastic PE: U_el = ½kx² (spring potential, x from equilibrium). Electric PE: U_elec = k(q₁q₂)/r (point charges). Potential energy: work done by conservative force equals negative change in potential energy (W_conservative = -ΔU). Conservative forces (gravity, spring): work independent of path, depends only on endpoints.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Conservation of Mechanical Energy:</strong> In isolated system with only conservative forces: E_mechanical = KE + PE = constant (E_f = E_i). Initial total energy equals final total energy. Energy can convert between kinetic and potential, but total conserved. If non-conservative forces (friction) present: W_nonconservative = ΔE_mechanical (mechanical energy not conserved, lost to heat, sound, etc.). Total energy (including thermal, chemical, etc.) still conserved.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Power:</strong> Rate of energy transfer or rate of doing work. P = W/t = (F·d)/t = F·v (average power). Instantaneous power: P = dW/dt = F·v. Unit: Watt (W) = J/s = kg·m²/s³. Horsepower (hp) = 746 W. Efficiency: η = (useful output)/(total input) × 100%. Power consumption: P = IV (electrical, watts).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Momentum and Collisions:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Linear Momentum:</strong> p = mv (vector, direction same as velocity). Momentum measures "quantity of motion." Impulse: J = F_avg × Δt = Δp (change in momentum). Impulse-momentum theorem: J = Δp = mv_f - mv_i. Large force over short time or small force over long time can produce same impulse. Unit: kg·m/s = N·s.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Conservation of Momentum:</strong> In isolated system (no external forces): total momentum conserved (p_total = constant). For two objects: m₁v₁ᵢ + m₂v₂ᵢ = m₁v₁f + m₂v₂f. Derived from Newton's third law (internal forces cancel). Applies to explosions, collisions, rocket propulsion. External forces change total momentum of system.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Collisions:</strong> Elastic collision: kinetic energy conserved (KE_i = KE_f), objects bounce apart. Inelastic collision: kinetic energy not conserved (lost to deformation, heat, sound). Perfectly inelastic: objects stick together (maximum kinetic energy loss). Coefficient of restitution: e = (v₂f - v₁f)/(v₁ᵢ - v₂ᵢ) (e = 1: elastic, e = 0: perfectly inelastic, 0 < e < 1: partially inelastic). One-dimensional elastic: velocities exchange if masses equal. Center of mass moves at constant velocity if no external forces.</span></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Thermodynamics</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Thermodynamics is the study of energy transfer and transformation in systems, particularly heat and work. It describes relationships between thermal energy, mechanical energy, and other forms of energy. The four laws of thermodynamics govern all thermal processes and are fundamental to understanding heat engines, refrigerators, chemical reactions, and phase changes. Statistical mechanics provides microscopic foundation for thermodynamic laws.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Temperature and Heat:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Temperature:</strong> Measure of average kinetic energy of particles in substance. Scales: Celsius (0°C = freezing, 100°C = boiling water), Fahrenheit (32°F = freezing, 212°F = boiling), Kelvin (absolute scale, 0 K = absolute zero, no motion). T(K) = T(°C) + 273.15. Absolute zero: -273.15°C (lowest possible temperature, particles at minimum energy). Temperature measures "hotness" or internal energy level.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Heat:</strong> Energy transferred due to temperature difference (not same as temperature). Heat flows from hot to cold spontaneously. Q = mcΔT (specific heat capacity, c, J/kg·K). Unit: Joule (J), calorie (cal, 4.184 J). Latent heat: energy for phase change (L_f = fusion/melting, L_v = vaporization). Q = mL (latent heat, no temperature change during phase change). Heat capacity: C = mc (J/K), amount of heat to raise temperature by 1 K.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Thermal Expansion:</strong> Most materials expand when heated. Linear expansion: ΔL = αL₀ΔT (α = coefficient of linear expansion, /K). Area expansion: ΔA = 2αA₀ΔT. Volume expansion: ΔV = βV₀ΔT (β = coefficient of volume expansion, β ≈ 3α for solids). Water anomaly: expands below 4°C (density maximum at 4°C). Applications: thermostats, expansion joints, bimetallic strips.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Heat Transfer:</strong> Conduction: through direct contact, Q/t = kAΔT/L (k = thermal conductivity, W/m·K). Convection: through fluid motion (natural: density differences, forced: external forcing). Radiation: electromagnetic waves (no medium required), Q/t = σεAT⁴ (Stefan-Boltzmann law, σ = 5.67 × 10⁻⁸ W/m²·K⁴, ε = emissivity). Blackbody: perfect absorber/emitter (ε = 1).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Laws of Thermodynamics:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Zeroth Law:</strong> If system A is in thermal equilibrium with system C, and system B is in thermal equilibrium with system C, then A and B are in thermal equilibrium with each other. Establishes temperature as fundamental property. Transitivity of thermal equilibrium. Enables temperature measurement (thermometer principle). Temperature same throughout system in thermal equilibrium.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>First Law (Energy Conservation):</strong> ΔU = Q - W (change in internal energy = heat added - work done by system). Energy cannot be created or destroyed, only transferred or transformed. Internal energy (U): total energy of system (kinetic + potential of particles). Sign convention: Q > 0 (heat added), Q < 0 (heat removed), W > 0 (work done by system), W < 0 (work done on system). For ideal gas: ΔU = (3/2)nRΔT (monatomic). Isobaric: W = PΔV. Isothermal: ΔU = 0, Q = W. Adiabatic: Q = 0, ΔU = -W. Isochoric: W = 0, ΔU = Q.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Second Law (Entropy):</strong> Entropy (S, disorder, randomness) of isolated system increases over time (ΔS ≥ 0). Heat flows spontaneously from hot to cold (not reverse). Processes are irreversible (entropy increases). Kelvin-Planck: no heat engine can convert all heat to work (some heat must be rejected to cold reservoir). Clausius: heat cannot flow from cold to hot without work input. Entropy: S = k ln Ω (Boltzmann, Ω = number of microstates). Heat engine efficiency: η = 1 - Q_c/Q_h = 1 - T_c/T_h (Carnot efficiency, maximum possible). Refrigerator: COP = Q_c/W. Heat pump: COP = Q_h/W.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Third Law:</strong> Entropy approaches zero as temperature approaches absolute zero (lim_{T→0} S = 0). Perfect crystal at 0 K has zero entropy. Cannot reach absolute zero (requires infinite steps). Provides reference point for entropy calculations. Implications: heat capacities approach zero at low temperatures.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Ideal Gas Law and Kinetic Theory:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Ideal Gas Law:</strong> PV = nRT (universal gas constant, R = 8.314 J/mol·K = 0.0821 L·atm/mol·K). Relates pressure (P), volume (V), number of moles (n), and temperature (T). Assumes: particles point masses, no intermolecular forces except collisions, perfectly elastic collisions, large number of particles. Applies well to low-density gases at high temperatures. Gas laws: Boyle's (P ∝ 1/V, constant T), Charles's (V ∝ T, constant P), Gay-Lussac's (P ∝ T, constant V), Avogadro's (V ∝ n, constant P, T). Combined: PV/T = constant.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Kinetic Theory:</strong> Microscopic model explaining gas behavior. Assumptions: large number of particles, random motion, elastic collisions, no forces except collisions, negligible volume. Pressure: P = (1/3)(N/V)mv²_rms (from collisions with walls, v_rms = root-mean-square speed). Internal energy: U = (3/2)nRT (monatomic), (5/2)nRT (diatomic at low T), (6/2)nRT (polyatomic). Average kinetic energy: KE_avg = (3/2)kT = ½mv²_rms (k = Boltzmann constant = 1.38 × 10⁻²³ J/K). Speed distribution: Maxwell-Boltzmann distribution (bell curve, most probable speed < average < rms).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Real Gases:</strong> Deviate from ideal gas law at high pressures and low temperatures. Van der Waals equation: (P + an²/V²)(V - nb) = nRT (a = attraction parameter, b = volume parameter, accounts for intermolecular forces and finite molecular size). Compressibility factor: Z = PV/(nRT) (Z = 1 for ideal, Z < 1: attraction dominant, Z > 1: repulsion dominant). Critical point: temperature and pressure above which gas cannot be liquefied.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Thermodynamic Processes and Cycles:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Process Types:</strong> Isothermal (constant T, ΔT = 0): PV = constant, ΔU = 0, Q = W. Adiabatic (Q = 0, no heat transfer): PV^γ = constant (γ = C_P/C_V, ratio of heat capacities), ΔU = -W. Isobaric (constant P): W = PΔV. Isochoric/isovolumetric (constant V, ΔV = 0): W = 0, ΔU = Q. Quasistatic: system always near equilibrium (reversible idealization).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Heat Engines:</strong> Convert heat to mechanical work. Working substance undergoes cyclic process. Components: hot reservoir (source, T_h), cold reservoir (sink, T_c), working substance. Efficiency: η = W/Q_h = 1 - Q_c/Q_h (0 < η < 1). Carnot engine (reversible, maximum efficiency): η_Carnot = 1 - T_c/T_h. Real engines have lower efficiency (irreversibilities, friction). Applications: steam engines, internal combustion engines, gas turbines.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Refrigerators and Heat Pumps:</strong> Refrigerator: transfers heat from cold to hot using work input (Q_c from cold, Q_h to hot, W = Q_h - Q_c). Coefficient of performance: COP = Q_c/W = T_c/(T_h - T_c) (Carnot). Heat pump: heats space by extracting heat from cold reservoir (COP = Q_h/W = T_h/(T_h - T_c), always > 1). Second law: work required to transfer heat from cold to hot.</span></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Electromagnetism</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Electromagnetism describes the relationship between electricity and magnetism. Electric charges create electric fields, and moving charges create magnetic fields. Changing magnetic fields induce electric fields, and changing electric fields induce magnetic fields. This unified electromagnetic force is one of the four fundamental forces of nature. Maxwell's equations completely describe classical electromagnetism and predict electromagnetic waves.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Electric Charge and Fields:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Electric Charge:</strong> Fundamental property of matter. Two types: positive (+) and negative (-). Like charges repel, opposite attract. Quantized: q = ne (n = integer, e = 1.60 × 10⁻¹⁹ C, elementary charge, charge of electron/proton). Conservation: total charge conserved in isolated systems. Unit: Coulomb (C). Charge on electron: -e, on proton: +e. Matter typically neutral (equal positive and negative).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Coulomb's Law:</strong> Force between two point charges: F = k(q₁q₂)/r² (k = 8.99 × 10⁹ N·m²/C² = 1/(4πε₀), ε₀ = permittivity of free space). Force along line joining charges: attractive if opposite, repulsive if same sign. Inverse square law (force decreases as 1/r²). Vector form: F₁₂ = k(q₁q₂)/r² × r̂₁₂. Superposition: net force on charge = vector sum of forces from all other charges.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Electric Field:</strong> E = F/q₀ (force per unit charge, vector field, N/C = V/m). Created by charges, acts on charges. Point charge: E = kq/r² (radial, away from +, toward -). Superposition: net field = vector sum. Field lines: start at +, end at -, density proportional to field strength. Uniform field: parallel lines, constant magnitude (between parallel plates: E = V/d).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Electric Potential Energy:</strong> U = k(q₁q₂)/r (work to assemble charges). Potential: V = U/q₀ = kq/r (scalar, J/C = Volt, V). Potential difference: ΔV = V_B - V_A = -∫E·dl (work per charge, ΔV = -Ed for uniform field). Equipotential surfaces: perpendicular to field lines, no work along them. Capacitor: U = ½CV² = ½Q²/C = ½QV. Energy stored in electric field: u = ½ε₀E² (energy density).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Electric Current and Circuits:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Current:</strong> I = dQ/dt = nqv_dA (rate of charge flow, A = Ampere = C/s). Drift velocity (v_d): slow net motion of charges (electrons move ~10⁻⁴ m/s, but signal propagates at ~c). Current density: J = nqv_d (A/m²). Direct current (DC): constant direction. Alternating current (AC): oscillating direction. Conventional current: direction of positive charge flow (opposite to electron flow).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Resistance and Ohm's Law:</strong> R = ρL/A (ρ = resistivity, Ω·m, depends on material and temperature). Resistance: R = V/I (Ohm, Ω). Ohm's law: V = IR (for ohmic materials, linear relationship). Resistivity increases with temperature: ρ = ρ₀[1 + α(T - T₀)] (α = temperature coefficient). Power dissipated: P = IV = I²R = V²/R. Non-ohmic: diodes, transistors (nonlinear V-I).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Circuits:</strong> Series: same current, R_total = R₁ + R₂ + ..., V_total = V₁ + V₂ + ... Parallel: same voltage, 1/R_total = 1/R₁ + 1/R₂ + ..., I_total = I₁ + I₂ + ... Kirchhoff's rules: junction rule (ΣI_in = ΣI_out, charge conservation), loop rule (ΣΔV = 0 around closed loop, energy conservation). RC circuit: charging (V = ε[1 - e^(-t/RC)], time constant τ = RC), discharging (V = V₀e^(-t/RC)).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Capacitance:</strong> C = Q/V (Farad, F = C/V). Parallel plate: C = ε₀A/d. With dielectric: C = κε₀A/d (κ = dielectric constant > 1, increases capacitance, reduces electric field). Energy stored: U = ½CV² = ½Q²/C = ½QV. Capacitors in series: 1/C_total = 1/C₁ + 1/C₂ + ... Capacitors in parallel: C_total = C₁ + C₂ + ...</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Magnetism:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Magnetic Fields:</strong> Created by moving charges (currents) and magnetic dipoles. B (tesla, T, or gauss, G, 1 T = 10⁴ G). Magnetic field lines: closed loops (no monopoles), from N to S externally. Earth's field: ~50 μT, protects from solar wind. Biot-Savart law: dB = (μ₀/4π)(Idl × r̂)/r² (magnetic field from current element). Ampere's law: ∮B·dl = μ₀I_encircled (for symmetric cases).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Force on Moving Charge:</strong> Lorentz force: F = q(E + v × B). Magnetic component: F = q(v × B) (perpendicular to velocity and field). Magnitude: F = qvB sin θ. Direction: right-hand rule (v → B → F). Work: magnetic force does no work (always perpendicular to velocity, changes direction not speed). Circular motion: r = mv/(qB), frequency f = qB/(2πm) (cyclotron frequency).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Force on Current-Carrying Wire:</strong> F = IL × B (L in direction of current). Magnitude: F = ILB sin θ. Applications: electric motors, galvanometers. Torque on loop: τ = NIAB sin θ (N = number of turns, A = area).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><strong>Magnetic Materials:</strong> Ferromagnetic (Fe, Ni, Co: strong attraction, domains align, permanent magnets, Curie temperature above which loses magnetism). Paramagnetic (weak attraction, domains align in field, Al, O₂). Diamagnetic (weak repulsion, all materials, very weak except superconductors). Hysteresis loop: B vs. H curve for ferromagnetic materials, area = energy loss per cycle.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Electromagnetic Induction:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Faraday's Law:</strong> EMF = -dΦ_B/dt (Φ_B = magnetic flux = BA cos θ). Changing magnetic flux through loop induces EMF (and current if circuit closed). Lenz's law: induced current opposes change causing it (minus sign). Flux change from: changing B, changing A, changing θ (rotation). Motional EMF: ε = Blv (conductor moving in field). Generators: convert mechanical to electrical energy (AC generator: rotating coil in field).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Inductance:</strong> Self-inductance: L = Φ_B/I (Henry, H = V·s/A). EMF opposes current change: ε = -L(dI/dt). Energy stored in inductor: U = ½LI². RL circuit: time constant τ = L/R. Mutual inductance: M = Φ₂₁/I₁ = Φ₁₂/I₂ (between two coils, basis of transformers).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>AC Circuits:</strong> Alternating voltage: V = V₀ sin(ωt) (ω = 2πf, angular frequency, f = frequency). AC current: I = I₀ sin(ωt - φ) (φ = phase angle). RMS (root-mean-square): V_rms = V₀/√2, I_rms = I₀/√2 (effective values). Impedance: Z = V₀/I₀ (total opposition, depends on frequency). For R: Z_R = R. For L: Z_L = X_L = ωL (inductive reactance, increases with frequency). For C: Z_C = X_C = 1/(ωC) (capacitive reactance, decreases with frequency).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Maxwell's Equations and Electromagnetic Waves:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Maxwell's Equations:</strong> Four equations completely describing electromagnetism: (1) Gauss's law (electric): ∮E·dA = Q_enc/ε₀ (electric flux proportional to enclosed charge). (2) Gauss's law (magnetic): ∮B·dA = 0 (no magnetic monopoles). (3) Faraday's law: ∮E·dl = -dΦ_B/dt (changing B induces E). (4) Ampere-Maxwell law: ∮B·dl = μ₀(I + ε₀dΦ_E/dt) (current and changing E create B, displacement current added). Unify electricity and magnetism.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Electromagnetic Waves:</strong> Self-propagating waves of oscillating electric and magnetic fields, perpendicular to each other and direction of propagation. Speed in vacuum: c = 1/√(ε₀μ₀) = 3.00 × 10⁸ m/s. Wave equation: c = λf = ω/k (wavelength × frequency = speed). Energy: u = (ε₀E² + B²/μ₀)/2. Intensity: I = P/A = u_avgc = (E₀B₀)/(2μ₀). Electromagnetic spectrum: radio, microwave, infrared, visible, ultraviolet, X-ray, gamma ray (increasing frequency/energy). Visible light: 400-700 nm.</span></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Waves and Oscillations</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Waves transfer energy without transferring matter. Oscillations are repetitive motion about equilibrium position. Simple harmonic motion (SHM) is fundamental oscillation pattern. Waves can be mechanical (require medium: sound, water) or electromagnetic (no medium: light, radio). Wave properties include amplitude, frequency, wavelength, speed, and phase.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Simple Harmonic Motion:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>SHM Characteristics:</strong> Restoring force proportional to displacement: F = -kx (Hooke's law). Motion: x(t) = A cos(ωt + φ) (A = amplitude, ω = angular frequency = 2πf = √(k/m), φ = phase constant). Velocity: v(t) = -Aω sin(ωt + φ). Acceleration: a(t) = -Aω² cos(ωt + φ) = -ω²x. Period: T = 2π√(m/k) (mass-spring), T = 2π√(L/g) (simple pendulum for small angles). Frequency: f = 1/T = ω/(2π). Energy: E = ½kA² = constant (oscillates between KE and PE).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Damped and Forced Oscillations:</strong> Damped: amplitude decreases due to friction/resistance. x(t) = Ae^(-bt/2m)cos(ω't + φ), ω' = √(k/m - b²/4m²). Underdamped: oscillates with decreasing amplitude. Critically damped: returns to equilibrium fastest without oscillation. Overdamped: slowly returns to equilibrium. Forced: external driving force, F = F₀ cos(ω_dt). Resonance: amplitude maximum when ω_d = ω₀ (natural frequency).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Wave Properties:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Wave Equation:</strong> y(x,t) = A sin(kx - ωt + φ) (traveling wave, k = 2π/λ = wave number, ω = 2πf = angular frequency). Wave speed: v = λf = ω/k. Mechanical waves: v = √(F/μ) (string), v = √(B/ρ) (sound in fluid, B = bulk modulus). Transverse: displacement perpendicular to propagation (light, string waves). Longitudinal: displacement parallel to propagation (sound, P-waves).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Wave Phenomena:</strong> Superposition: waves combine (constructive: same phase, destructive: opposite phase). Interference: pattern from overlapping waves. Standing waves: result of interference between traveling waves in opposite directions, nodes (zero amplitude) and antinodes (maximum amplitude). Beat frequency: f_beat = |f₁ - f₂| (when two frequencies close). Doppler effect: frequency shift due to relative motion (f' = f(v ± v_o)/(v ∓ v_s), v = wave speed, v_o = observer speed, v_s = source speed, + approaching, - receding).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Sound Waves:</strong> Longitudinal waves in medium (air, water, solids). Speed: v = √(γRT/M) (air, γ = adiabatic index, R = gas constant, T = temperature, M = molar mass), ~343 m/s in air at 20°C. Pitch: frequency perception (20 Hz - 20 kHz audible range). Loudness: amplitude/intensity (I = P/A, decibels: β = 10 log(I/I₀), I₀ = 10⁻¹² W/m² threshold). Quality/timbre: harmonic content. Musical instruments: standing waves in strings, tubes (open/closed ends, harmonics).</span></li>
+      </ul>
+    </div>
+    
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Optics</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Optics is the study of light and its interactions with matter. Geometric optics (ray model, valid when wavelength << object size) describes reflection, refraction, and image formation. Wave optics (physical optics) describes interference, diffraction, and polarization. Light is electromagnetic wave (or particle, photons, in quantum mechanics).
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Geometric Optics:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Reflection:</strong> Law of reflection: θᵢ = θᵣ (angle of incidence = angle of reflection, measured from normal). Specular: smooth surface (mirror), parallel rays remain parallel. Diffuse: rough surface, rays scatter. Plane mirror: virtual image, same size, same distance behind mirror, laterally inverted. Spherical mirrors: concave (converging, real or virtual images) and convex (diverging, virtual images). Mirror equation: 1/f = 1/p + 1/q (f = focal length = R/2, p = object distance, q = image distance). Magnification: m = -q/p (negative = inverted, |m| > 1 = enlarged).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Refraction:</strong> Snell's law: n₁ sin θ₁ = n₂ sin θ₂ (n = index of refraction = c/v, c = speed in vacuum, v = speed in medium). Light bends toward normal when entering denser medium (slower). Critical angle: θ_c = arcsin(n₂/n₁) (total internal reflection when θᵢ > θ_c, n₁ > n₂). Dispersion: index depends on wavelength (red < violet), causes chromatic aberration and rainbows. Prisms: separate white light into colors.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Lenses:</strong> Thin lens equation: 1/f = 1/p + 1/q (same as mirrors). Converging (convex) lens: f > 0, can form real (p > f) or virtual (p < f) images. Diverging (concave) lens: f < 0, always forms virtual, reduced images. Magnification: m = -q/p. Lensmaker's equation: 1/f = (n - 1)(1/R₁ - 1/R₂) (R = radii of curvature). Aberrations: spherical (blur), chromatic (color separation). Compound lenses: camera, microscope, telescope.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Wave Optics:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Interference:</strong> Superposition of waves. Constructive: ΔL = mλ (m = integer, path difference = integer wavelengths, bright fringes). Destructive: ΔL = (m + ½)λ (dark fringes). Young's double-slit: d sin θ = mλ (d = slit separation, θ = angle, bright fringes). Thin film interference: phase shift on reflection (180° if n₁ < n₂), colors from interference. Newton's rings: interference from air gap between surfaces.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Diffraction:</strong> Bending of waves around obstacles/through apertures. Single-slit: a sin θ = mλ (a = slit width, dark fringes, m ≠ 0). Diffraction grating: d sin θ = mλ (many slits, sharper maxima, separates wavelengths, spectroscopy). Circular aperture: θ = 1.22λ/D (first minimum, Rayleigh criterion, limits resolution). X-ray diffraction: determines crystal structure (Bragg's law: 2d sin θ = nλ).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Polarization:</strong> Electric field oscillation in specific direction. Unpolarized: random directions. Linear: single direction. Circular/elliptical: rotating. Polarizers: transmit component parallel to transmission axis, absorb perpendicular (Malus's law: I = I₀ cos² θ). Polarization by reflection: Brewster's angle (tan θ_B = n₂/n₁, reflected light polarized). Applications: sunglasses, LCD displays, 3D movies.</span></li>
+      </ul>
+    </div>
+    
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Fluids</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Fluids (liquids and gases) are substances that flow and conform to container shape. Fluid mechanics describes behavior of fluids at rest (fluid statics) and in motion (fluid dynamics). Density (ρ = m/V, kg/m³), pressure (P = F/A, Pa = N/m²), and viscosity characterize fluids.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Fluid Statics:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Pressure:</strong> P = F/A (scalar, Pascal, Pa = N/m² = kg/m·s²). Atmospheric pressure: P_atm = 1.013 × 10⁵ Pa = 101.3 kPa = 1 atm = 760 mmHg = 760 torr. Gauge pressure: P_gauge = P_absolute - P_atm. Pressure increases with depth: P = P₀ + ρgh (hydrostatic pressure, h = depth, g = gravity). Pressure same at same depth (independent of shape). Pascal's principle: pressure change transmitted undiminished throughout fluid (hydraulic systems: F₂ = F₁(A₂/A₁), force multiplication).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Buoyancy:</strong> Archimedes' principle: buoyant force equals weight of displaced fluid. F_b = ρ_fluid V_displaced g (upward force). Objects float if ρ_object < ρ_fluid (F_b > weight), sink if ρ_object > ρ_fluid (F_b < weight), neutrally buoyant if equal. Apparent weight: W_app = W - F_b. Hydrometers: measure fluid density. Submarines: control buoyancy with ballast tanks.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Fluid Dynamics:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Flow Types:</strong> Steady (laminar): fluid velocity constant at each point. Turbulent: chaotic, irregular flow. Streamline: path of fluid particle, density proportional to speed. Flow rate: Q = Av (volume per time, A = cross-sectional area, v = speed, m³/s). Continuity equation: A₁v₁ = A₂v₂ (for incompressible fluid, Q constant, narrow = faster).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Bernoulli's Equation:</strong> P + ½ρv² + ρgh = constant (for ideal, incompressible, non-viscous fluid in steady flow). Energy conservation: pressure + kinetic + potential = constant. High speed → low pressure (airplane wings: lift), low speed → high pressure. Applications: Venturi effect (constriction: higher speed, lower pressure), Pitot tubes, atomizers, carburetors. Torricelli's theorem: v = √(2gh) (speed of efflux from tank).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Viscosity and Turbulence:</strong> Viscosity (η): internal friction, resistance to flow. Poiseuille's law: Q = (πR⁴ΔP)/(8ηL) (flow rate through tube, R = radius, L = length, ΔP = pressure difference). Viscosity decreases with temperature (liquids), increases (gases). Reynolds number: Re = ρvD/η (D = characteristic length). Re < 2000: laminar, Re > 3000: turbulent. Turbulent flow: higher resistance, mixing, noise.</span></li>
+      </ul>
+    </div>
+    
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Modern Physics</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Modern physics includes quantum mechanics and relativity, which revolutionized understanding of atomic-scale and cosmic-scale phenomena in the 20th century. Classical physics (Newtonian mechanics, Maxwell's electromagnetism) applies to macroscopic objects at low speeds. Quantum mechanics describes behavior at atomic scales, while relativity describes behavior at high speeds and strong gravitational fields.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Quantum Mechanics:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Wave-Particle Duality:</strong> Matter exhibits both wave and particle properties. Light: particle (photons, E = hf, p = h/λ, explain photoelectric effect, Compton scattering) and wave (interference, diffraction). Electrons: particle (charge, mass) and wave (de Broglie wavelength: λ = h/p = h/(mv), explains atomic structure). de Broglie wavelength: macroscopic objects have negligible wavelength, quantum effects only at atomic scales. Double-slit experiment: electrons show interference pattern (wave), but detected as particles (particles).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Heisenberg Uncertainty Principle:</strong> Cannot simultaneously know exact position and momentum: ΔxΔp ≥ ℏ/2 (ℏ = h/2π = 1.05 × 10⁻³⁴ J·s). Uncertainty in position × uncertainty in momentum ≥ ℏ/2. More precisely know position → less precisely know momentum (and vice versa). Energy-time uncertainty: ΔEΔt ≥ ℏ/2. Fundamental limitation, not measurement error. Quantum mechanical, not classical. Implications: no fixed electron orbits (probability clouds), virtual particles, zero-point energy.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Quantum States and Quantization:</strong> Energy levels discrete (quantized), not continuous. Electron in atom: E_n = -13.6 eV/n² (hydrogen, n = principal quantum number = 1, 2, 3, ...). Quantum numbers: n (principal, energy), l (orbital angular momentum, 0 to n-1), m_l (magnetic, -l to +l), m_s (spin, ±½). Pauli exclusion principle: no two electrons can have identical quantum numbers (explains periodic table, electron configurations). Wave function (ψ): describes quantum state, |ψ|² = probability density. Schrödinger equation: Ĥψ = Eψ (determines allowed states, energy eigenvalues).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Photoelectric Effect:</strong> Electrons ejected from metal when light shines on it. Threshold frequency (f₀): minimum frequency to eject electrons (depends on material). Maximum kinetic energy: KE_max = hf - φ (φ = work function = binding energy). Photon energy: E = hf (h = Planck constant = 6.63 × 10⁻³⁴ J·s). Intensity affects number of electrons (not energy), frequency affects energy (not number). Classical wave theory cannot explain (requires quantum: light as photons). Einstein's explanation (1905) won Nobel Prize, confirmed quantum nature of light.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Atomic Models:</strong> Bohr model (1913): electrons in quantized orbits, angular momentum = nℏ, explains hydrogen spectrum (Balmer series: visible lines, Lyman: UV, Paschen: IR). Quantum mechanical model: electron probability clouds (orbitals), no fixed paths. s-orbitals (spherical), p-orbitals (dumbbell-shaped, 3 orientations), d-orbitals (4-lobed, 5 orientations), f-orbitals (complex, 7 orientations). Electron configuration: 1s² 2s² 2p⁶ ... (Aufbau principle: fill lowest energy, Hund's rule: maximize unpaired spins).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Relativity:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Special Relativity:</strong> Einstein (1905). Postulates: (1) laws of physics same in all inertial frames, (2) speed of light constant (c = 3.00 × 10⁸ m/s) in all frames (regardless of source/observer motion). Time dilation: Δt = Δt₀/√(1 - v²/c²) = γΔt₀ (moving clocks run slow, γ = Lorentz factor). Length contraction: L = L₀√(1 - v²/c²) = L₀/γ (moving objects contract in direction of motion). Relativistic momentum: p = γmv (increases without bound as v → c). Mass-energy equivalence: E = γmc², rest energy: E₀ = mc² (famous equation, mass and energy equivalent). Total energy: E² = (pc)² + (mc²)². At rest: E = mc². For light (m = 0): E = pc. Relativistic addition of velocities: u = (v₁ + v₂)/(1 + v₁v₂/c²) (never exceeds c).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>General Relativity:</strong> Einstein (1915), theory of gravity. Principle of equivalence: gravitational acceleration indistinguishable from acceleration in absence of gravity (elevator thought experiment). Gravity as geometry: mass and energy curve spacetime, objects follow straightest paths (geodesics) in curved spacetime. Massive objects (stars, planets) create spacetime curvature, causing "falling" (planets orbit, light bends). Predictions: light deflection near massive objects (confirmed 1919 eclipse), perihelion precession of Mercury, gravitational time dilation (clocks run slower in stronger gravitational fields), gravitational waves (ripples in spacetime, detected 2015 LIGO). Black holes: extreme curvature, event horizon (Schwarzschild radius: R_s = 2GM/c², nothing escapes, not even light). Cosmological implications: expanding universe, Big Bang, dark matter, dark energy.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="physics-quiz.html" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kinesiology - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= STUDY CONTENT ================= -->
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <!-- Subject Header -->
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-6">
+      <i data-lucide="users" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Kinesiology Basics</h1>
+    <p class="text-xl text-gray-600 mb-8">Study of human movement and performance</p>
+    <img src="https://github.com/AxolotlBagel82/StudyZone/blob/main/Kinesiology.jpeg?raw=true" alt="Kinesiology" class="max-w-2xl mx-auto rounded-xl shadow-lg">
+  </div>
+
+  <!-- Content Sections -->
+  <div class="space-y-8">
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">What is Kinesiology?</h2>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        Kinesiology is the scientific study of human movement, performance, and function. It combines principles from anatomy, physiology, biomechanics, and psychology to understand how the body moves and performs.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Key Concepts</h2>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Biomechanics:</strong> The study of forces acting on the body and the effects they produce</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Motor Control:</strong> How the nervous system coordinates movement</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Exercise Physiology:</strong> How the body responds and adapts to physical activity</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Movement Analysis:</strong> Observing and analyzing human movement patterns</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Major Areas of Study</h2>
+      <ol class="space-y-4 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">1.</span>
+          <span><strong>Anatomical Kinesiology:</strong> Structure and function of bones, muscles, and joints</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">2.</span>
+          <span><strong>Biomechanical Kinesiology:</strong> Forces, torques, and motion in human movement</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">3.</span>
+          <span><strong>Physiological Kinesiology:</strong> Energy systems and metabolic responses</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">4.</span>
+          <span><strong>Motor Learning:</strong> How movement skills are acquired and refined</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Applications</h2>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        Kinesiology is applied in physical therapy, athletic training, ergonomics, rehabilitation, sports performance, and exercise prescription. Professionals use kinesiology principles to improve movement efficiency, prevent injuries, and enhance performance.
+      </p>
+    </div>
+
+    <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl shadow-lg p-8 border-l-4 border-cyan-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="tool" class="w-7 h-7 text-cyan-600"></i>
+        Learning Tools
+      </h2>
+      
+      <!-- Interactive Learning Tools -->
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold mb-3 text-gray-800">Interactive 3D Anatomy & Movement</h3>
+        <ul class="space-y-2 text-gray-700 leading-relaxed">
+          <li class="flex items-start gap-3">
+            <span class="text-cyan-600 font-bold">•</span>
+            <span><strong>Visible Body:</strong> 3D anatomy and movement visualization with detailed muscle, bone, and joint models</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-cyan-600 font-bold">•</span>
+            <span><strong>Complete Anatomy:</strong> Advanced 3D models showing muscle attachments, origins, and movement patterns</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-cyan-600 font-bold">•</span>
+            <span><strong>Muscle & Motion:</strong> Animated biomechanics demonstrations showing exercise techniques and movement analysis</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-cyan-600 font-bold">•</span>
+            <span><strong>GetBodySmart:</strong> Interactive tutorials on anatomy, physiology, and movement mechanics</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-cyan-600 font-bold">•</span>
+            <span><strong>PhysioAdvisor:</strong> Movement analysis tools and rehabilitation exercise demonstrations</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Video & Animation Resources -->
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold mb-3 text-gray-800">Video & Animation Resources</h3>
+        <ul class="space-y-2 text-gray-700 leading-relaxed">
+          <li class="flex items-start gap-3">
+            <span class="text-cyan-600 font-bold">•</span>
+            <span><strong>Khan Academy Medical:</strong> Free comprehensive video lessons on anatomy and physiology</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-cyan-600 font-bold">•</span>
+            <span><strong>Kenhub:</strong> High-quality anatomy videos with integrated quizzes and detailed diagrams</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-cyan-600 font-bold">•</span>
+            <span><strong>TeachMeAnatomy:</strong> Illustrated anatomy lessons with clinical correlations</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-cyan-600 font-bold">•</span>
+            <span><strong>AnatomyZone:</strong> 3D anatomy tutorials with practice quizzes and assessments</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Practice & Assessment Tools -->
+      <div>
+        <h3 class="text-xl font-semibold mb-3 text-gray-800">Practice & Assessment</h3>
+        <ul class="space-y-2 text-gray-700 leading-relaxed">
+          <li class="flex items-start gap-3">
+            <span class="text-cyan-600 font-bold">•</span>
+            <span><strong>Quizlet:</strong> Flashcard sets for kinesiology terminology, muscle actions, and joint movements</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-cyan-600 font-bold">•</span>
+            <span><strong>Brainscape:</strong> Spaced repetition flashcards optimized for long-term retention</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-cyan-600 font-bold">•</span>
+            <span><strong>Goniometer Apps:</strong> Digital tools for measuring and practicing joint angle assessments</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="kinesiology-analysis.html" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      In Depth Analysis
+    </a>
+    <a href="kinesiology-quiz.html" class="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Research Methods - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= STUDY CONTENT ================= -->
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <!-- Subject Header -->
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full mb-6">
+      <i data-lucide="flask-conical" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Research Methods Basics</h1>
+    <p class="text-xl text-gray-600 mb-8">Systematic approaches to investigation and knowledge creation</p>
+  </div>
+
+  <!-- Content Sections -->
+  <div class="space-y-8">
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-teal-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">What are Research Methods?</h2>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        Research methods are systematic techniques and procedures used to collect, analyze, and interpret data to answer research questions or test hypotheses. They provide a structured framework for conducting scientific investigations and generating reliable, valid knowledge across disciplines.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-teal-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Key Concepts</h2>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-teal-600 font-bold">•</span>
+          <span><strong>Research Design:</strong> The overall plan and structure for conducting a study</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-teal-600 font-bold">•</span>
+          <span><strong>Data Collection:</strong> Gathering information through surveys, experiments, interviews, or observations</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-teal-600 font-bold">•</span>
+          <span><strong>Validity:</strong> The accuracy and truthfulness of research findings</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-teal-600 font-bold">•</span>
+          <span><strong>Reliability:</strong> The consistency and reproducibility of research results</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-teal-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Major Approaches</h2>
+      <ol class="space-y-4 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-teal-600 font-bold">1.</span>
+          <span><strong>Quantitative Research:</strong> Numerical data analysis using statistical methods to test hypotheses</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-teal-600 font-bold">2.</span>
+          <span><strong>Qualitative Research:</strong> In-depth exploration of meanings, experiences, and perspectives through non-numerical data</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-teal-600 font-bold">3.</span>
+          <span><strong>Mixed Methods:</strong> Combining quantitative and qualitative approaches for comprehensive understanding</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-teal-600 font-bold">4.</span>
+          <span><strong>Experimental Research:</strong> Manipulating variables to establish cause-and-effect relationships</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-teal-600 font-bold">5.</span>
+          <span><strong>Observational Research:</strong> Studying phenomena in natural settings without intervention</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-teal-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Research Process</h2>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        The research process typically follows these steps: formulating research questions, reviewing existing literature, selecting appropriate methodology, collecting and analyzing data, drawing conclusions, and reporting findings. Ethical considerations, including informed consent and data privacy, are essential throughout the process.
+      </p>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="research-methods-analysis.html" class="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      In Depth Analysis
+    </a>    <a href="research-methods-quiz.html" class="px-6 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

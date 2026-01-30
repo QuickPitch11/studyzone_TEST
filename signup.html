@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="index.html" class="font-medium text-gray-700 hover:text-blue-600">Home</a>
+      <a href="login.html" class="font-medium text-gray-700 hover:text-blue-600">Log In</a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="index.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Home</a>
+    <a href="login.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Log In</a>
+  </div>
+</header>
+
+<main class="max-w-md mx-auto px-4 py-12">
+  <div class="text-center mb-8">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mb-6">
+      <i data-lucide="user-plus" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl font-bold mb-2 text-gray-800">Create Account</h1>
+    <p class="text-xl text-gray-600">Start your learning journey today</p>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg p-8">
+    <form id="signupForm" class="space-y-6">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+        <input 
+          type="text" 
+          id="name" 
+          required
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+          placeholder="John Doe"
+        >
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+        <input 
+          type="email" 
+          id="email" 
+          required
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+          placeholder="your.email@example.com"
+        >
+      </div>
+
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          required
+          minlength="6"
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+          placeholder="At least 6 characters"
+        >
+        <p class="text-xs text-gray-500 mt-1">Must be at least 6 characters</p>
+      </div>
+
+      <div>
+        <label for="confirmPassword" class="block text-sm font-medium text-gray-700 mb-2">Confirm Password</label>
+        <input 
+          type="password" 
+          id="confirmPassword" 
+          required
+          minlength="6"
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+          placeholder="Re-enter your password"
+        >
+      </div>
+
+      <div>
+        <label for="grade" class="block text-sm font-medium text-gray-700 mb-2">Grade Level</label>
+        <select 
+          id="grade" 
+          required
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+        >
+          <option value="">Select your grade level</option>
+          <option value="high-school">High School</option>
+          <option value="college">College/University</option>
+          <option value="graduate">Graduate Student</option>
+          <option value="professional">Professional</option>
+        </select>
+      </div>
+
+      <div class="flex items-start gap-2">
+        <input type="checkbox" id="terms" required class="mt-1 rounded border-gray-300">
+        <label for="terms" class="text-sm text-gray-600">
+          I agree to the <a href="#" class="text-green-600 hover:text-green-700">Terms of Service</a> and 
+          <a href="#" class="text-green-600 hover:text-green-700">Privacy Policy</a>
+        </label>
+      </div>
+
+      <div id="errorMessage" class="hidden p-4 bg-red-100 border-l-4 border-red-500 rounded">
+        <p class="text-red-700 text-sm"></p>
+      </div>
+
+      <div id="successMessage" class="hidden p-4 bg-green-100 border-l-4 border-green-500 rounded">
+        <p class="text-green-700 text-sm"></p>
+      </div>
+
+      <button 
+        type="submit" 
+        class="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition flex items-center justify-center gap-2"
+      >
+        <i data-lucide="user-plus" class="w-5 h-5"></i>
+        Create Account
+      </button>
+    </form>
+
+    <div class="mt-6 text-center">
+      <button 
+        id="guestBtn"
+        class="w-full px-6 py-3 bg-gray-100 text-gray-700 font-semibold rounded-lg hover:bg-gray-200 transition flex items-center justify-center gap-2 mb-4"
+      >
+        <i data-lucide="user-x" class="w-5 h-5"></i>
+        Continue as Guest
+      </button>
+    </div>
+
+    <div class="text-center">
+      <p class="text-gray-600">
+        Already have an account? 
+        <a href="login.html" class="text-green-600 hover:text-green-700 font-semibold">Log in</a>
+      </p>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Signup functionality
+  document.getElementById('signupForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    const grade = document.getElementById('grade').value;
+    const terms = document.getElementById('terms').checked;
+    
+    // Validation
+    if (password !== confirmPassword) {
+      showError('Passwords do not match');
+      return;
+    }
+    
+    if (password.length < 6) {
+      showError('Password must be at least 6 characters');
+      return;
+    }
+    
+    if (!terms) {
+      showError('You must agree to the Terms of Service');
+      return;
+    }
+    
+    // Get existing users
+    const users = JSON.parse(localStorage.getItem('studyzone_users') || '[]');
+    
+    // Check if email already exists
+    if (users.some(u => u.email === email)) {
+      showError('An account with this email already exists');
+      return;
+    }
+    
+    // Create new user
+    const newUser = {
+      id: Date.now(),
+      name: name,
+      email: email,
+      password: password,
+      grade: grade,
+      createdAt: new Date().toISOString()
+    };
+    
+    users.push(newUser);
+    localStorage.setItem('studyzone_users', JSON.stringify(users));
+    
+    // Show success message
+    showSuccess('Account created successfully! Redirecting to login...');
+    
+    // Redirect to login after 2 seconds
+    setTimeout(() => {
+      window.location.href = 'login.html';
+    }, 2000);
+  });
+  
+  function showError(message) {
+    const errorDiv = document.getElementById('errorMessage');
+    const successDiv = document.getElementById('successMessage');
+    
+    successDiv.classList.add('hidden');
+    errorDiv.querySelector('p').textContent = message;
+    errorDiv.classList.remove('hidden');
+    
+    setTimeout(() => {
+      errorDiv.classList.add('hidden');
+    }, 5000);
+  }
+  
+  function showSuccess(message) {
+    const errorDiv = document.getElementById('errorMessage');
+    const successDiv = document.getElementById('successMessage');
+    
+    errorDiv.classList.add('hidden');
+    successDiv.querySelector('p').textContent = message;
+    successDiv.classList.remove('hidden');
+  }
+  
+  // Guest login functionality
+  document.getElementById('guestBtn').addEventListener('click', function() {
+    const guestSession = {
+      email: 'guest@studyzone.com',
+      name: 'Guest User',
+      isGuest: true,
+      loginTime: new Date().toISOString()
+    };
+    
+    localStorage.setItem('studyzone_session', JSON.stringify(guestSession));
+    window.location.href = 'index.html';
+  });
+
+  // Google Sign In - Initialize
+  function initGoogleSignIn() {
+    google.accounts.id.initialize({
+      client_id: 'YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com',
+      callback: handleGoogleSignIn
+    });
+  }
+
+  // Handle Google Sign In Response
+  function handleGoogleSignIn(response) {
+    // Decode JWT token to get user info
+    const userInfo = parseJwt(response.credential);
+    
+    const googleUser = {
+      id: Date.now(),
+      name: userInfo.name,
+      email: userInfo.email,
+      picture: userInfo.picture,
+      provider: 'google',
+      grade: 'college',
+      createdAt: new Date().toISOString()
+    };
+    
+    // Check if user already exists
+    const users = JSON.parse(localStorage.getItem('studyzone_users') || '[]');
+    const existingUser = users.find(u => u.email === googleUser.email);
+    
+    if (!existingUser) {
+      users.push(googleUser);
+      localStorage.setItem('studyzone_users', JSON.stringify(users));
+    }
+    
+    // Create session
+    const session = {
+      email: googleUser.email,
+      name: existingUser ? existingUser.name : googleUser.name,
+      picture: userInfo.picture,
+      loginTime: new Date().toISOString(),
+      provider: 'google'
+    };
+    
+    localStorage.setItem('studyzone_session', JSON.stringify(session));
+    showSuccess('Signing in with Google...');
+    
+    setTimeout(() => {
+      window.location.href = 'dashboard.html';
+    }, 1500);
+  }
+
+  // Parse JWT token
+  function parseJwt(token) {
+    const base64Url = token.split('.')[1];
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+      return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+    return JSON.parse(jsonPayload);
+  }
+
+  // Trigger Google Sign In
+  document.getElementById('googleSignInBtn').addEventListener('click', function() {
+    // Check if Google Sign In is properly configured
+    if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
+      try {
+        google.accounts.id.prompt();
+      } catch (error) {
+        console.log('Google Sign In not fully configured, using demo mode');
+        // Fallback to demo mode
+        demoGoogleSignIn();
+      }
+    } else {
+      // Use demo mode if Google library not loaded or configured
+      demoGoogleSignIn();
+    }
+  });
+
+  // Demo Google Sign In (fallback when OAuth not configured)
+  function demoGoogleSignIn() {
+    const email = prompt('Enter your email address:', 'user@gmail.com');
+    if (!email) return;
+    
+    const name = prompt('Enter your name:', 'Google User');
+    if (!name) return;
+    
+    const googleUser = {
+      id: Date.now(),
+      name: name,
+      email: email,
+      provider: 'google',
+      grade: 'college',
+      createdAt: new Date().toISOString()
+    };
+    
+    // Check if user already exists
+    const users = JSON.parse(localStorage.getItem('studyzone_users') || '[]');
+    const existingUser = users.find(u => u.email === googleUser.email);
+    
+    if (!existingUser) {
+      users.push(googleUser);
+      localStorage.setItem('studyzone_users', JSON.stringify(users));
+    }
+    
+    // Create session
+    const session = {
+      email: googleUser.email,
+      name: existingUser ? existingUser.name : googleUser.name,
+      loginTime: new Date().toISOString(),
+      provider: 'google'
+    };
+    
+    localStorage.setItem('studyzone_session', JSON.stringify(session));
+    showSuccess('Signing up with Google...');
+    
+    setTimeout(() => {
+      window.location.href = 'dashboard.html';
+    }, 1500);
+  }
+
+  // Initialize Google Sign In when page loads
+  window.addEventListener('load', function() {
+    if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
+      try {
+        initGoogleSignIn();
+      } catch (error) {
+        console.log('Google Sign In initialization failed, demo mode available');
+      }
+    }
+  });
+
+  // Apple Sign In - Initialize
+  function initAppleSignIn() {
+    if (typeof AppleID !== 'undefined') {
+      AppleID.auth.init({
+        clientId: 'com.studyzone.web',
+        scope: 'name email',
+        redirectURI: window.location.origin + '/signup.html',
+        usePopup: true
+      });
+    }
+  }
+
+  // Handle Apple Sign In Response
+  async function handleAppleSignIn(response) {
+    const { authorization, user } = response;
+    
+    // Extract user information from the response
+    const appleUser = {
+      id: Date.now(),
+      email: user?.email || 'apple_user@privaterelay.appleid.com',
+      name: user?.name ? `${user.name.firstName} ${user.name.lastName}` : 'Apple User',
+      provider: 'apple',
+      grade: 'college',
+      createdAt: new Date().toISOString(),
+      appleId: authorization.id_token
+    };
+    
+    // Check if user already exists
+    const users = JSON.parse(localStorage.getItem('studyzone_users') || '[]');
+    const existingUser = users.find(u => u.email === appleUser.email);
+    
+    if (!existingUser) {
+      users.push(appleUser);
+      localStorage.setItem('studyzone_users', JSON.stringify(users));
+    }
+    
+    // Create session
+    const session = {
+      email: appleUser.email,
+      name: existingUser ? existingUser.name : appleUser.name,
+      loginTime: new Date().toISOString(),
+      provider: 'apple'
+    };
+    
+    localStorage.setItem('studyzone_session', JSON.stringify(session));
+    showSuccess('Signing in with Apple...');
+    
+    setTimeout(() => {
+      window.location.href = 'dashboard.html';
+    }, 1500);
+  }
+
+  // Trigger Apple Sign In
+  document.getElementById('appleSignInBtn').addEventListener('click', async function() {
+    try {
+      if (typeof AppleID !== 'undefined') {
+        const response = await AppleID.auth.signIn();
+        handleAppleSignIn(response);
+      } else {
+        console.error('Apple Sign In not loaded');
+      }
+    } catch (error) {
+      console.error('Apple Sign In error:', error);
+    }
+  });
+
+  // Initialize Apple Sign In when page loads
+  window.addEventListener('load', function() {
+    initAppleSignIn();
+  });
+  
+  // Check if already logged in
+  window.addEventListener('load', function() {
+    const session = localStorage.getItem('studyzone_session');
+    if (session) {
+      const sessionData = JSON.parse(session);
+      if (sessionData.isGuest) {
+        window.location.href = 'index.html';
+      } else {
+        window.location.href = 'dashboard.html';
+      }
+    }
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

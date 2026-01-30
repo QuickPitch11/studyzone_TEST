@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Physics - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= STUDY CONTENT ================= -->
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <!-- Subject Header -->
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full mb-6">
+      <i data-lucide="atom" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Physics Basics</h1>
+    <p class="text-xl text-gray-600 mb-8">Study of matter, energy, and forces</p>
+  </div>
+
+  <!-- Content Sections -->
+  <div class="space-y-8">
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-indigo-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">What is Physics?</h2>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        Physics is the fundamental science that studies matter, energy, space, and time. It seeks to understand the natural laws that govern the universe, from subatomic particles to galaxies.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-indigo-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Core Concepts</h2>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-indigo-600 font-bold">•</span>
+          <span><strong>Mechanics:</strong> Motion, forces, and energy</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-indigo-600 font-bold">•</span>
+          <span><strong>Thermodynamics:</strong> Heat, temperature, and energy transfer</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-indigo-600 font-bold">•</span>
+          <span><strong>Electromagnetism:</strong> Electric and magnetic fields</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-indigo-600 font-bold">•</span>
+          <span><strong>Waves:</strong> Oscillations and wave phenomena</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-indigo-600 font-bold">•</span>
+          <span><strong>Quantum Mechanics:</strong> Behavior of particles at atomic scales</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-indigo-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Major Branches</h2>
+      <ol class="space-y-4 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-indigo-600 font-bold">1.</span>
+          <span><strong>Classical Mechanics:</strong> Newton's laws of motion and gravity</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-indigo-600 font-bold">2.</span>
+          <span><strong>Thermodynamics:</strong> Laws of energy and entropy</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-indigo-600 font-bold">3.</span>
+          <span><strong>Electromagnetism:</strong> Electric charges, currents, and fields</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-indigo-600 font-bold">4.</span>
+          <span><strong>Optics:</strong> Light and its interactions with matter</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-indigo-600 font-bold">5.</span>
+          <span><strong>Modern Physics:</strong> Relativity and quantum mechanics</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-indigo-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Fundamental Laws</h2>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        Newton's laws describe motion and forces. Conservation laws (energy, momentum, mass) state that these quantities remain constant in closed systems. The laws of thermodynamics govern energy flow. Einstein's E=mc² relates mass and energy. Quantum mechanics explains atomic and subatomic behavior.
+      </p>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="physics-analysis.html" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      In Depth Analysis
+    </a>
+    <a href="physics-quiz.html" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Psychology Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    </nav>
+
+    <button id="menuBtn" class="md:hidden p-2">
+      <i data-lucide="menu" class="w-6 h-6"></i>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full mb-6">
+      <i data-lucide="clipboard-check" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Psychology Quiz</h1>
+    <p class="text-xl text-gray-600">Test your knowledge of human behavior and mental processes</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Question 1 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-pink-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 1</h3>
+      <p class="text-lg text-gray-700 mb-6">Which psychologist is known as the father of psychoanalysis?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q1" value="a" class="mt-1">
+          <span class="text-gray-700">Carl Jung</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q1" value="b" class="mt-1">
+          <span class="text-gray-700">Sigmund Freud</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q1" value="c" class="mt-1">
+          <span class="text-gray-700">B.F. Skinner</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q1" value="d" class="mt-1">
+          <span class="text-gray-700">Ivan Pavlov</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-pink-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 2</h3>
+      <p class="text-lg text-gray-700 mb-6">What is classical conditioning?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="a" class="mt-1">
+          <span class="text-gray-700">Learning through rewards and punishments</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="b" class="mt-1">
+          <span class="text-gray-700">Learning through association of stimuli</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="c" class="mt-1">
+          <span class="text-gray-700">Learning through observation</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="d" class="mt-1">
+          <span class="text-gray-700">Learning through insight</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-pink-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 3</h3>
+      <p class="text-lg text-gray-700 mb-6">According to Maslow's hierarchy of needs, which needs must be met first?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="a" class="mt-1">
+          <span class="text-gray-700">Self-actualization needs</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="b" class="mt-1">
+          <span class="text-gray-700">Esteem needs</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="c" class="mt-1">
+          <span class="text-gray-700">Physiological needs</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="d" class="mt-1">
+          <span class="text-gray-700">Love and belonging needs</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-pink-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 4</h3>
+      <p class="text-lg text-gray-700 mb-6">What part of the brain is primarily responsible for memory formation?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="a" class="mt-1">
+          <span class="text-gray-700">Cerebellum</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="b" class="mt-1">
+          <span class="text-gray-700">Hippocampus</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="c" class="mt-1">
+          <span class="text-gray-700">Amygdala</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="d" class="mt-1">
+          <span class="text-gray-700">Thalamus</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-pink-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 5</h3>
+      <p class="text-lg text-gray-700 mb-6">What is cognitive dissonance?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="a" class="mt-1">
+          <span class="text-gray-700">The tendency to favor information that confirms existing beliefs</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="b" class="mt-1">
+          <span class="text-gray-700">Mental discomfort from holding contradictory beliefs or attitudes</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="c" class="mt-1">
+          <span class="text-gray-700">The inability to form new memories</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="d" class="mt-1">
+          <span class="text-gray-700">A mental disorder characterized by hallucinations</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-pink-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 6</h3>
+      <p class="text-lg text-gray-700 mb-6">What are the stages of sleep in order?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="a" class="mt-1">
+          <span class="text-gray-700">REM, Stage 1, Stage 2, Stage 3</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="b" class="mt-1">
+          <span class="text-gray-700">Stage 1, Stage 2, Stage 3, REM</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="c" class="mt-1">
+          <span class="text-gray-700">Stage 1, REM, Stage 2, Stage 3</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="d" class="mt-1">
+          <span class="text-gray-700">Stage 3, Stage 2, Stage 1, REM</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-pink-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 7</h3>
+      <p class="text-lg text-gray-700 mb-6">According to Erik Erikson, what is the primary psychosocial crisis during adolescence?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="a" class="mt-1">
+          <span class="text-gray-700">Trust vs. Mistrust</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="b" class="mt-1">
+          <span class="text-gray-700">Autonomy vs. Shame and Doubt</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="c" class="mt-1">
+          <span class="text-gray-700">Identity vs. Role Confusion</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="d" class="mt-1">
+          <span class="text-gray-700">Intimacy vs. Isolation</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-pink-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 8</h3>
+      <p class="text-lg text-gray-700 mb-6">What neurotransmitter is most associated with depression when levels are low?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="a" class="mt-1">
+          <span class="text-gray-700">Dopamine</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="b" class="mt-1">
+          <span class="text-gray-700">Serotonin</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="c" class="mt-1">
+          <span class="text-gray-700">Acetylcholine</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="d" class="mt-1">
+          <span class="text-gray-700">GABA</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-pink-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 9</h3>
+      <p class="text-lg text-gray-700 mb-6">What is the Stanford prison experiment famous for demonstrating?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="a" class="mt-1">
+          <span class="text-gray-700">The power of conformity</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="b" class="mt-1">
+          <span class="text-gray-700">The influence of situational forces on behavior</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="c" class="mt-1">
+          <span class="text-gray-700">The effects of sleep deprivation</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="d" class="mt-1">
+          <span class="text-gray-700">Classical conditioning principles</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-pink-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 10</h3>
+      <p class="text-lg text-gray-700 mb-6">What is the difference between negative reinforcement and punishment?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="a" class="mt-1">
+          <span class="text-gray-700">They are the same thing</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="b" class="mt-1">
+          <span class="text-gray-700">Negative reinforcement increases behavior by removing something unpleasant; punishment decreases behavior</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="c" class="mt-1">
+          <span class="text-gray-700">Negative reinforcement decreases behavior; punishment increases behavior</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="d" class="mt-1">
+          <span class="text-gray-700">Punishment is used on animals; negative reinforcement is used on humans</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-pink-600 text-white text-lg font-semibold rounded-lg hover:bg-pink-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="results" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-pink-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div id="answerReview" class="space-y-4"></div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="psychology.html" class="px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Back to Psychology
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Quiz Logic
+  const correctAnswers = {
+    q1: 'b',
+    q2: 'b',
+    q3: 'c',
+    q4: 'b',
+    q5: 'b',
+    q6: 'b',
+    q7: 'c',
+    q8: 'b',
+    q9: 'b',
+    q10: 'b'
+  };
+
+  const explanations = {
+    q1: 'Sigmund Freud (1856-1939) is known as the father of psychoanalysis. He developed theories about the unconscious mind, defense mechanisms, and psychosexual development.',
+    q2: 'Classical conditioning is learning through association of stimuli. Ivan Pavlov discovered this principle when he conditioned dogs to salivate at the sound of a bell by pairing it with food.',
+    q3: 'According to Maslow\'s hierarchy, physiological needs (food, water, shelter, sleep) must be met first before higher-level needs like safety, love, esteem, and self-actualization can be addressed.',
+    q4: 'The hippocampus is primarily responsible for forming new memories and converting short-term memories into long-term memories. Damage to the hippocampus can result in inability to form new memories.',
+    q5: 'Cognitive dissonance is the mental discomfort experienced when holding contradictory beliefs or attitudes. People are motivated to reduce this discomfort by changing beliefs, justifying behavior, or ignoring new information.',
+    q6: 'The sleep cycle progresses through Stage 1 (light sleep), Stage 2 (deeper sleep with sleep spindles), Stage 3 (deep/slow-wave sleep), and REM (rapid eye movement) sleep where most dreaming occurs.',
+    q7: 'According to Erik Erikson\'s psychosocial development theory, adolescents (ages 12-18) face the crisis of Identity vs. Role Confusion, where they explore who they are and what they believe.',
+    q8: 'Serotonin is most associated with depression when levels are low. Many antidepressant medications (SSRIs) work by increasing serotonin availability in the brain.',
+    q9: 'The Stanford prison experiment (1971) demonstrated how situational forces and assigned roles can dramatically influence behavior, showing how good people can engage in harmful actions under certain circumstances.',
+    q10: 'Negative reinforcement increases behavior by removing something unpleasant (e.g., taking aspirin removes headache pain), while punishment decreases behavior by adding something unpleasant or removing something pleasant.'
+  };
+
+  document.getElementById('submitQuiz').addEventListener('click', function() {
+    let score = 0;
+    let totalQuestions = Object.keys(correctAnswers).length;
+    let answerReviewHTML = '';
+
+    // Check each answer
+    for (let question in correctAnswers) {
+      const selected = document.querySelector(`input[name="${question}"]:checked`);
+      const questionDiv = document.querySelector(`input[name="${question}"]`).closest('.quiz-question');
+      const feedbackDiv = questionDiv.querySelector('.feedback');
+      
+      if (selected) {
+        if (selected.value === correctAnswers[question]) {
+          score++;
+          feedbackDiv.innerHTML = `<div class="p-4 bg-green-100 border-l-4 border-green-500 rounded"><p class="font-semibold text-green-800">✓ Correct!</p><p class="text-green-700 mt-2">${explanations[question]}</p></div>`;
+        } else {
+          feedbackDiv.innerHTML = `<div class="p-4 bg-red-100 border-l-4 border-red-500 rounded"><p class="font-semibold text-red-800">✗ Incorrect</p><p class="text-red-700 mt-2">${explanations[question]}</p></div>`;
+        }
+        feedbackDiv.classList.remove('hidden');
+      } else {
+        feedbackDiv.innerHTML = `<div class="p-4 bg-yellow-100 border-l-4 border-yellow-500 rounded"><p class="font-semibold text-yellow-800">⚠ Not answered</p><p class="text-yellow-700 mt-2">${explanations[question]}</p></div>`;
+        feedbackDiv.classList.remove('hidden');
+      }
+    }
+
+    // Calculate percentage
+    let percentage = Math.round((score / totalQuestions) * 100);
+    
+    // Display results
+    let resultColor = percentage >= 70 ? 'text-green-600' : percentage >= 50 ? 'text-yellow-600' : 'text-red-600';
+    let resultMessage = percentage >= 70 ? 'Great job!' : percentage >= 50 ? 'Good effort!' : 'Keep studying!';
+    
+    document.getElementById('scoreDisplay').innerHTML = `
+      <div class="text-6xl font-bold ${resultColor} mb-4">${score}/${totalQuestions}</div>
+      <div class="text-2xl font-semibold text-gray-700">${percentage}%</div>
+      <div class="text-xl text-gray-600 mt-2">${resultMessage}</div>
+    `;
+    
+    document.getElementById('results').classList.remove('hidden');
+    
+    // Scroll to results
+    document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Probability & Statistics Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-6">
+      <i data-lucide="bar-chart-2" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Probability & Statistics Quiz</h1>
+    <p class="text-xl text-gray-600">Test your knowledge of data analysis and probability concepts</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Questions will be dynamically generated here -->
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-purple-600 text-white text-lg font-semibold rounded-lg hover:bg-purple-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="quizResults" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-purple-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="probability-statistics-analysis.html" class="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition flex items-center gap-2">
+        <i data-lucide="book-open" class="w-5 h-5"></i>
+        Review Material
+      </a>
+      <button onclick="location.reload()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+        Retake Quiz
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="probability-statistics.html" class="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Back to Probability & Statistics
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Question Bank - 40 questions total
+  const questionBank = [
+    {
+      question: "What is the probability of flipping a coin and getting heads?",
+      options: ["1/4", "1/3", "1/2", "2/3", "3/4"],
+      correct: 2,
+      explanation: "A coin has two equally likely outcomes: heads or tails. The probability of heads is 1 favorable outcome out of 2 possible outcomes = 1/2 or 0.5 or 50%."
+    },
+    {
+      question: "What is the probability of rolling a 4 on a standard six-sided die?",
+      options: ["1/2", "1/3", "1/4", "1/6", "1/12"],
+      correct: 3,
+      explanation: "A standard die has 6 equally likely outcomes (1, 2, 3, 4, 5, 6). The probability of rolling a 4 is 1 favorable outcome out of 6 possible outcomes = 1/6."
+    },
+    {
+      question: "What is the probability of rolling an even number on a standard die?",
+      options: ["1/6", "1/3", "1/2", "2/3", "5/6"],
+      correct: 2,
+      explanation: "Even numbers on a die are 2, 4, and 6 (3 favorable outcomes). Total outcomes = 6. Probability = 3/6 = 1/2."
+    },
+    {
+      question: "You flip a coin twice. What is the probability of getting two heads?",
+      options: ["1/8", "1/4", "1/3", "1/2", "3/4"],
+      correct: 1,
+      explanation: "For independent events, multiply probabilities. P(H on flip 1) × P(H on flip 2) = 1/2 × 1/2 = 1/4."
+    },
+    {
+      question: "You roll a die and flip a coin. What is the probability of getting a 5 and heads?",
+      options: ["1/2", "1/6", "1/8", "1/12", "1/16"],
+      correct: 3,
+      explanation: "These are independent events. P(5 on die) × P(heads on coin) = 1/6 × 1/2 = 1/12."
+    },
+    {
+      question: "A bag has 3 red balls and 2 blue balls. What is the probability of drawing a red ball?",
+      options: ["1/5", "2/5", "3/5", "2/3", "3/4"],
+      correct: 2,
+      explanation: "Total balls = 3 + 2 = 5. Red balls = 3. Probability = 3/5."
+    },
+    {
+      question: "In a deck of 52 cards, what is the probability of drawing a heart?",
+      options: ["1/52", "1/13", "1/4", "1/2", "13/52"],
+      correct: 2,
+      explanation: "There are 13 hearts in a 52-card deck. Probability = 13/52 = 1/4."
+    },
+    {
+      question: "How many ways can you arrange 3 different books on a shelf?",
+      options: ["3", "6", "9", "12", "27"],
+      correct: 1,
+      explanation: "This is a permutation problem: 3! = 3 × 2 × 1 = 6 ways."
+    },
+    {
+      question: "How many ways can you choose 2 students from a group of 5?",
+      options: ["5", "10", "15", "20", "25"],
+      correct: 1,
+      explanation: "This is a combination problem: C(5,2) = 5!/(2!×3!) = (5×4)/(2×1) = 10 ways."
+    },
+    {
+      question: "Find the mean of: 10, 15, 20, 25, 30",
+      options: ["15", "18", "20", "22", "25"],
+      correct: 2,
+      explanation: "Mean (average) = sum ÷ count = (10+15+20+25+30) ÷ 5 = 100 ÷ 5 = 20."
+    },
+    {
+      question: "Find the median of: 5, 8, 12, 15, 20",
+      options: ["8", "10", "12", "15", "20"],
+      correct: 2,
+      explanation: "The median is the middle value when data is ordered. In this ordered set, 12 is in the middle position."
+    },
+    {
+      question: "Find the median of: 3, 7, 9, 12, 15, 18",
+      options: ["9", "10", "10.5", "11", "12"],
+      correct: 2,
+      explanation: "With an even number of values, the median is the average of the two middle values: (9 + 12) ÷ 2 = 10.5."
+    },
+    {
+      question: "Find the mode of: 4, 6, 6, 8, 9, 6, 10",
+      options: ["4", "6", "8", "9", "10"],
+      correct: 1,
+      explanation: "The mode is the most frequently occurring value. 6 appears three times, more than any other value."
+    },
+    {
+      question: "Find the range of: 12, 18, 24, 30, 36",
+      options: ["12", "18", "24", "30", "36"],
+      correct: 2,
+      explanation: "Range = maximum - minimum = 36 - 12 = 24."
+    },
+    {
+      question: "Which measure of central tendency is most affected by outliers?",
+      options: ["Mean", "Median", "Mode", "Range", "All equally"],
+      correct: 0,
+      explanation: "The mean is most affected by outliers because it uses all values in its calculation. An extremely high or low value significantly changes the mean, while median and mode are more resistant to outliers."
+    },
+    {
+      question: "A dataset has values: 2, 4, 6, 8, 100. Which measure best represents the center?",
+      options: ["Mean", "Median", "Mode", "Range", "Maximum"],
+      correct: 1,
+      explanation: "The median (6) best represents the center because the mean (24) is heavily skewed by the outlier (100). The median is resistant to extreme values."
+    },
+    {
+      question: "What type of graph is best for showing how data is distributed across categories?",
+      options: ["Line graph", "Pie chart", "Bar graph", "Scatter plot", "Box plot"],
+      correct: 2,
+      explanation: "A bar graph is ideal for comparing data across different categories, with each bar representing a category's value."
+    },
+    {
+      question: "What type of graph shows the relationship between two variables?",
+      options: ["Bar graph", "Pie chart", "Scatter plot", "Histogram", "Box plot"],
+      correct: 2,
+      explanation: "A scatter plot displays pairs of values as points to show the relationship or correlation between two variables."
+    },
+    {
+      question: "A histogram is used to display:",
+      options: ["Categorical data", "Frequency distribution of continuous data", "Relationship between variables", "Percentages of a whole", "Time series data"],
+      correct: 1,
+      explanation: "A histogram shows the frequency distribution of continuous numerical data by grouping values into bins or intervals."
+    },
+    {
+      question: "What does a box plot (box-and-whisker plot) show?",
+      options: ["Only the mean", "Only the median", "The five-number summary", "Correlation", "Percentages"],
+      correct: 2,
+      explanation: "A box plot displays the five-number summary: minimum, first quartile (Q1), median (Q2), third quartile (Q3), and maximum."
+    },
+    {
+      question: "Standard deviation measures:",
+      options: ["Central tendency", "Spread or variability", "Correlation", "Frequency", "Probability"],
+      correct: 1,
+      explanation: "Standard deviation measures how spread out the data values are from the mean. A larger standard deviation indicates more variability in the data."
+    },
+    {
+      question: "If data has high standard deviation, what does this indicate?",
+      options: ["Values are close to the mean", "Values are spread out from the mean", "There is no variability", "The mean is zero", "Data is normally distributed"],
+      correct: 1,
+      explanation: "High standard deviation indicates that data values are widely spread out from the mean, showing high variability or dispersion."
+    },
+    {
+      question: "In a normal distribution, approximately what percent of data falls within 1 standard deviation of the mean?",
+      options: ["50%", "68%", "95%", "99.7%", "100%"],
+      correct: 1,
+      explanation: "In a normal distribution, approximately 68% of data falls within one standard deviation (±1σ) of the mean. This is part of the 68-95-99.7 rule (empirical rule)."
+    },
+    {
+      question: "In a normal distribution, approximately what percent of data falls within 2 standard deviations of the mean?",
+      options: ["68%", "75%", "95%", "99%", "99.7%"],
+      correct: 2,
+      explanation: "In a normal distribution, approximately 95% of data falls within two standard deviations (±2σ) of the mean."
+    },
+    {
+      question: "A sample is:",
+      options: ["The entire group being studied", "A subset of the population", "Always larger than the population", "The same as the population", "A type of variable"],
+      correct: 1,
+      explanation: "A sample is a subset or portion of the population selected for study. It's used to make inferences about the entire population."
+    },
+    {
+      question: "A population is:",
+      options: ["A small group", "The entire group being studied", "A subset of the sample", "Always 100 individuals", "Only people, not objects"],
+      correct: 1,
+      explanation: "A population is the entire group of individuals or items that we want to study and draw conclusions about."
+    },
+    {
+      question: "Why do we use samples instead of studying entire populations?",
+      options: ["Samples are more accurate", "It's usually impractical or impossible to study entire populations", "Populations don't exist", "Samples are always wrong", "No reason"],
+      correct: 1,
+      explanation: "We use samples because studying entire populations is often too expensive, time-consuming, or impossible. Well-chosen samples can provide good estimates about populations."
+    },
+    {
+      question: "Experimental probability is based on:",
+      options: ["Theory only", "Actual experiments or observations", "Guessing", "Mathematical formulas only", "Population data"],
+      correct: 1,
+      explanation: "Experimental probability is based on actual experiments or observations. It's calculated as: (number of times event occurred) ÷ (total number of trials)."
+    },
+    {
+      question: "Theoretical probability is based on:",
+      options: ["Actual experiments only", "The expected outcomes in an ideal situation", "Past data only", "Guessing", "Sample size"],
+      correct: 1,
+      explanation: "Theoretical probability is based on the expected outcomes in an ideal situation, calculated as: (favorable outcomes) ÷ (total possible outcomes)."
+    },
+    {
+      question: "You flipped a coin 100 times and got 53 heads. What is the experimental probability of heads?",
+      options: ["1/2", "47/100", "50/100", "53/100", "100/53"],
+      correct: 3,
+      explanation: "Experimental probability = (times event occurred) ÷ (total trials) = 53 ÷ 100 = 53/100 or 0.53 or 53%."
+    },
+    {
+      question: "If P(A) = 0.3, what is P(not A)?",
+      options: ["0.3", "0.5", "0.7", "1.0", "1.3"],
+      correct: 2,
+      explanation: "The probability of an event not occurring is 1 minus the probability it does occur: P(not A) = 1 - P(A) = 1 - 0.3 = 0.7."
+    },
+    {
+      question: "Events A and B are independent. If P(A) = 0.4 and P(B) = 0.5, what is P(A and B)?",
+      options: ["0.2", "0.4", "0.5", "0.9", "1.0"],
+      correct: 0,
+      explanation: "For independent events, P(A and B) = P(A) × P(B) = 0.4 × 0.5 = 0.2."
+    },
+    {
+      question: "A bag has 4 red marbles and 6 blue marbles. You draw one marble, don't replace it, then draw another. Are these events independent?",
+      options: ["Yes, always", "No, they are dependent", "Sometimes", "Only if you get red", "Cannot determine"],
+      correct: 1,
+      explanation: "These are dependent events because the outcome of the first draw affects the probabilities for the second draw (without replacement changes the composition of the bag)."
+    },
+    {
+      question: "What does conditional probability P(A|B) represent?",
+      options: ["Probability of A or B", "Probability of A and B", "Probability of A given that B has occurred", "Probability of not A", "Probability of not B"],
+      correct: 2,
+      explanation: "P(A|B) represents the conditional probability of event A occurring given that event B has already occurred."
+    },
+    {
+      question: "In a class of 30 students, 18 play sports and 12 play music. 8 students play both. What is P(plays sports | plays music)?",
+      options: ["8/30", "8/18", "8/12", "18/30", "12/30"],
+      correct: 2,
+      explanation: "P(sports|music) = P(sports and music) ÷ P(music) = 8 ÷ 12 = 2/3. Of the 12 music students, 8 also play sports."
+    },
+    {
+      question: "Two dice are rolled. What is the probability of getting a sum of 7?",
+      options: ["1/12", "1/9", "1/6", "1/3", "1/2"],
+      correct: 2,
+      explanation: "Possible ways to get 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 ways. Total outcomes = 36. Probability = 6/36 = 1/6."
+    },
+    {
+      question: "What is the complement of rolling a number greater than 4 on a standard die?",
+      options: ["Rolling 5 or 6", "Rolling 4 or less", "Rolling an even number", "Rolling an odd number", "Rolling 1"],
+      correct: 1,
+      explanation: "Numbers greater than 4 are {5, 6}. The complement includes all other outcomes: {1, 2, 3, 4}, which is rolling 4 or less."
+    },
+    {
+      question: "In a survey, 60% of students like math and 40% like science. If these are independent, what percent like both?",
+      options: ["10%", "20%", "24%", "50%", "100%"],
+      correct: 2,
+      explanation: "For independent events: P(both) = P(math) × P(science) = 0.60 × 0.40 = 0.24 = 24%."
+    },
+    {
+      question: "What is the probability of drawing 2 aces in a row from a deck (with replacement)?",
+      options: ["1/169", "1/221", "2/52", "4/52", "1/13"],
+      correct: 0,
+      explanation: "With replacement, events are independent. P(ace) = 4/52 = 1/13. P(two aces) = 1/13 × 1/13 = 1/169."
+    },
+    {
+      question: "Which correlation coefficient indicates the strongest relationship?",
+      options: ["r = 0", "r = 0.5", "r = -0.95", "r = 0.7", "r = 0.3"],
+      correct: 2,
+      explanation: "Correlation coefficient ranges from -1 to +1. The closer to -1 or +1, the stronger the relationship. r = -0.95 shows the strongest relationship (strong negative correlation)."
+    }
+  ];
+
+  // Shuffle array function
+  function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  // Select 15 random questions
+  const selectedQuestions = shuffleArray(questionBank).slice(0, 15);
+  const correctAnswers = {};
+  const explanations = {};
+
+  // Generate quiz HTML
+  const quizContainer = document.getElementById('quizContainer');
+  selectedQuestions.forEach((q, index) => {
+    const questionNum = index + 1;
+    const questionId = `q${questionNum}`;
+    
+    // Store correct answer and explanation
+    correctAnswers[questionId] = q.correct;
+    explanations[questionId] = q.explanation;
+    
+    // Shuffle options with correct answer tracking
+    const optionsWithIndex = q.options.map((opt, idx) => ({ text: opt, originalIndex: idx }));
+    const shuffledOptions = shuffleArray(optionsWithIndex);
+    
+    // Find new position of correct answer
+    const newCorrectIndex = shuffledOptions.findIndex(opt => opt.originalIndex === q.correct);
+    correctAnswers[questionId] = newCorrectIndex;
+    
+    // Create question HTML
+    const questionHTML = `
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-purple-500 quiz-question">
+        <h3 class="text-2xl font-bold mb-4 text-gray-800">Question ${questionNum}</h3>
+        <p class="text-lg text-gray-700 mb-6">${q.question}</p>
+        <div class="space-y-3">
+          ${shuffledOptions.map((opt, optIndex) => `
+            <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+              <input type="radio" name="${questionId}" value="${optIndex}" class="mt-1">
+              <span class="text-gray-700">${opt.text}</span>
+            </label>
+          `).join('')}
+        </div>
+        <div class="feedback mt-4 hidden"></div>
+      </div>
+    `;
+    
+    quizContainer.innerHTML += questionHTML;
+  });
+
+  lucide.createIcons();
+
+  // Submit button handler
+  document.getElementById('submitQuiz').addEventListener('click', () => {
+    let score = 0;
+    let answered = 0;
+    
+    const questions = document.querySelectorAll('.quiz-question');
+    
+    questions.forEach((question, index) => {
+      const questionId = `q${index + 1}`;
+      const selected = question.querySelector(`input[name="${questionId}"]:checked`);
+      const feedback = question.querySelector('.feedback');
+      
+      if (selected) {
+        answered++;
+        const selectedValue = parseInt(selected.value);
+        const isCorrect = selectedValue === correctAnswers[questionId];
+        
+        if (isCorrect) {
+          score++;
+          question.classList.remove('border-red-500', 'border-pink-500');
+          question.classList.add('border-purple-500');
+          feedback.innerHTML = `
+            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <p class="font-semibold text-green-800 mb-2">✓ Correct!</p>
+              <p class="text-green-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        } else {
+          question.classList.remove('border-purple-500', 'border-pink-500');
+          question.classList.add('border-red-500');
+          feedback.innerHTML = `
+            <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded">
+              <p class="font-semibold text-red-800 mb-2">✗ Incorrect</p>
+              <p class="text-red-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        }
+        
+        feedback.classList.remove('hidden');
+      } else {
+        question.classList.remove('border-purple-500', 'border-red-500');
+        question.classList.add('border-pink-500');
+        feedback.innerHTML = `
+          <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+            <p class="font-semibold text-yellow-800">Question not answered</p>
+          </div>
+        `;
+        feedback.classList.remove('hidden');
+      }
+    });
+
+    // Calculate percentage
+    const percentage = answered > 0 ? Math.round((score / 15) * 100) : 0;
+    
+    // Display score
+    let resultColor = percentage >= 70 ? 'text-green-600' : percentage >= 50 ? 'text-yellow-600' : 'text-red-600';
+    let resultMessage = percentage >= 70 ? 'Excellent work!' : percentage >= 50 ? 'Good effort!' : 'Keep practicing!';
+    
+    document.getElementById('scoreDisplay').innerHTML = `
+      <div class="text-6xl font-bold ${resultColor} mb-4">${score}/15</div>
+      <div class="text-2xl font-semibold text-gray-700">${percentage}%</div>
+      <div class="text-xl text-gray-600 mt-2">${resultMessage}</div>
+    `;
+    
+    document.getElementById('quizResults').classList.remove('hidden');
+    document.getElementById('quizResults').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

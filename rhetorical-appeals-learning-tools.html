@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rhetorical Appeals Learning Tools - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <!-- Back Button -->
+  <div class="mb-6">
+    <a href="college-learning-tools.html" class="inline-flex items-center gap-2 px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back to Learning Tools</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="flex justify-center mb-4">
+      <div class="p-4 bg-gradient-to-br from-amber-600 to-orange-600 rounded-full">
+        <i data-lucide="megaphone" class="w-16 h-16 text-white"></i>
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Rhetorical Appeals Learning Tools</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Master ethos, pathos, and logos with comprehensive resources for rhetorical analysis and persuasive communication
+    </p>
+  </div>
+
+  <!-- Rhetorical Analysis Tools & Guides -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-xl shadow-lg p-8 border-l-4 border-amber-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="search" class="w-7 h-7 text-amber-600"></i>
+        Rhetorical Analysis Tools & Guides
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://owl.purdue.edu/owl/general_writing/academic_writing/rhetorical_situation/index.html" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">Purdue OWL Rhetorical Analysis ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive guide to rhetorical situation and analysis</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Rhetorical triangle explained</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Analysis strategies</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Writing rhetorical essays</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.literarydevices.net/rhetorical-analysis/" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">Literary Devices Rhetorical Analysis ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Detailed rhetorical analysis guide with examples</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Step-by-step analysis</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Literary examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Rhetorical devices catalog</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.thoughtco.com/what-is-a-rhetorical-analysis-1857283" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">ThoughtCo Rhetorical Analysis ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Introduction to rhetorical analysis with practical tips</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Beginner-friendly guide</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Analysis frameworks</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Sample analyses</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.virtualsalt.com/rhetoric.htm" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">Virtual Salt Rhetoric Guide ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Classic rhetoric and rhetorical analysis resource</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Classical rhetoric principles</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Modern applications</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Rhetorical terminology</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ethos, Pathos, Logos Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-orange-50 to-amber-50 rounded-xl shadow-lg p-8 border-l-4 border-orange-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="triangle" class="w-7 h-7 text-orange-600"></i>
+        Ethos, Pathos, Logos Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.khanacademy.org/humanities/ap-english-language-and-composition/xc96537f4de80e9e7:reading-introduction-and-rhetorical-analysis" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Khan Academy Rhetorical Analysis ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free lessons on ethos, pathos, and logos with practice</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Interactive lessons</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Practice exercises</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>AP English prep</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://examples.yourdictionary.com/examples-of-ethos-logos-and-pathos.html" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">YourDictionary Appeal Examples ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Extensive examples of ethos, pathos, and logos in use</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Real-world examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Advertising analysis</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Speech excerpts</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.literarydevices.net/ethos-pathos-logos/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Literary Devices Appeals Guide ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive guide to the three rhetorical appeals</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Definitions and explanations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Literary examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Usage guidelines</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://pathosethoslogos.com/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Pathos Ethos Logos.com ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Dedicated resource for understanding rhetorical appeals</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Appeal definitions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Contemporary examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Analysis techniques</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speech & Persuasion Archives -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-yellow-50 to-amber-50 rounded-xl shadow-lg p-8 border-l-4 border-yellow-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="mic" class="w-7 h-7 text-yellow-600"></i>
+        Speech & Persuasion Archives
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.americanrhetoric.com/" target="_blank" class="text-yellow-600 hover:text-yellow-700 hover:underline">American Rhetoric ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Extensive database of famous speeches with analysis</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Top 100 speeches</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Audio and transcripts</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Rhetorical analysis</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.ted.com/talks" target="_blank" class="text-yellow-600 hover:text-yellow-700 hover:underline">TED Talks ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Modern persuasive speeches on diverse topics</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Contemporary rhetoric</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Expert presenters</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Free transcripts</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://voicesofdemocracy.umd.edu/" target="_blank" class="text-yellow-600 hover:text-yellow-700 hover:underline">Voices of Democracy ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">U.S. political speeches with scholarly analysis</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Political rhetoric archive</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Expert commentary</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Educational resources</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.historyplace.com/speeches/previous.htm" target="_blank" class="text-yellow-600 hover:text-yellow-700 hover:underline">The History Place Speeches ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Historical speeches collection from various eras</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>World history speeches</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Chronological organization</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Historical context</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Tutorials & Lessons -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl shadow-lg p-8 border-l-4 border-rose-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="video" class="w-7 h-7 text-rose-600"></i>
+        Video Tutorials & Lessons
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/results?search_query=rhetorical+analysis+tutorial" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">YouTube Rhetorical Analysis Tutorials ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Video tutorials on rhetorical analysis techniques</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Step-by-step guides</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Example analyses</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>AP prep videos</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.coursera.org/learn/rhetoric" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">Coursera Rhetoric Courses ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">University-level rhetoric and persuasion courses</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Academic instruction</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Certificates available</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Self-paced learning</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.edx.org/learn/writing" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">edX Writing & Rhetoric ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free courses on rhetoric and persuasive writing</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Top university courses</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Free audit option</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Expert instructors</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/user/crashcourse" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">Crash Course Literature ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Engaging videos on literary and rhetorical analysis</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Entertaining format</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Educational content</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Free access</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice & Analysis Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-lime-50 to-green-50 rounded-xl shadow-lg p-8 border-l-4 border-lime-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="clipboard-check" class="w-7 h-7 text-lime-600"></i>
+        Practice & Analysis Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://quizlet.com/subject/rhetorical-analysis/" target="_blank" class="text-lime-600 hover:text-lime-700 hover:underline">Quizlet Rhetorical Analysis ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Flashcards and study sets for rhetorical concepts</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-lime-600">•</span>
+              <span>Digital flashcards</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-lime-600">•</span>
+              <span>Practice quizzes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-lime-600">•</span>
+              <span>Community-created sets</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.studymode.com/subjects/rhetorical-analysis-page1.html" target="_blank" class="text-lime-600 hover:text-lime-700 hover:underline">StudyMode Rhetorical Essays ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Sample rhetorical analysis essays and papers</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-lime-600">•</span>
+              <span>Essay examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-lime-600">•</span>
+              <span>Writing inspiration</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-lime-600">•</span>
+              <span>Analysis templates</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.rhetoricae.net/" target="_blank" class="text-lime-600 hover:text-lime-700 hover:underline">Silva Rhetoricae ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive rhetoric resource from BYU</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-lime-600">•</span>
+              <span>Rhetorical figures</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-lime-600">•</span>
+              <span>Analysis tools</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-lime-600">•</span>
+              <span>Historical context</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.proprofs.com/quiz-school/topic/rhetorical-analysis" target="_blank" class="text-lime-600 hover:text-lime-700 hover:underline">ProProfs Rhetoric Quizzes ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Interactive quizzes on rhetorical concepts</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-lime-600">•</span>
+              <span>Multiple choice quizzes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-lime-600">•</span>
+              <span>Instant feedback</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-lime-600">•</span>
+              <span>Topic variety</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Writing & Presentation Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl shadow-lg p-8 border-l-4 border-indigo-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="pen-line" class="w-7 h-7 text-indigo-600"></i>
+        Writing & Presentation Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://writingcenter.unc.edu/tips-and-tools/rhetoric/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">UNC Writing Center Rhetoric ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Expert guidance on rhetorical writing strategies</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Writing handouts</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Rhetorical strategies</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Academic writing tips</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.grammarly.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Grammarly ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AI writing assistant for rhetorical essays</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Grammar checking</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Tone detection</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Clarity suggestions</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.hemingwayapp.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Hemingway Editor ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Make your rhetorical writing bold and clear</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Readability analysis</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Sentence structure</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Free web version</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.canva.com/create/infographics/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Canva Visual Rhetoric ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Create visual presentations of rhetorical concepts</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Infographic templates</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Presentation design</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Free version available</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="rhetorical-appeals.html" class="px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Rhetorical Appeals Basics
+    </a>
+    <a href="rhetorical-appeals-quiz.html" class="px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Take Quiz
+    </a>
+    <a href="college-learning-tools.html" class="px-6 py-3 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      All Learning Tools
+    </a>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kinesiology - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-6">
+      <i data-lucide="users" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Kinesiology: Comprehensive In-Depth Analysis</h1>
+    <p class="text-xl text-gray-600">Complete exploration of human movement science</p>
+  </div>
+
+  <div class="space-y-10">
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Introduction to Kinesiology</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Kinesiology is an interdisciplinary field that integrates knowledge from anatomy, physiology, biomechanics, neuroscience, psychology, and sociology to comprehensively understand human movement. The term derives from the Greek words "kinesis" (movement) and "logos" (study), literally meaning "the study of movement."
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        This field examines how the body moves, why it moves in specific ways, what factors influence movement patterns, and how movement can be optimized for health, performance, rehabilitation, and prevention of injury. Kinesiologists apply scientific principles to analyze, improve, and restore human movement across the lifespan.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        The scope of kinesiology ranges from the molecular level (how proteins generate muscle contraction) to the whole-body level (how complex movement patterns are coordinated) to the societal level (how movement behavior affects public health). Professionals work in diverse settings including clinical rehabilitation, athletic performance, ergonomics, public health, research, education, and fitness industries.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Biomechanics: The Physics of Human Movement</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Biomechanics applies principles of physics and engineering to understand biological systems. It analyzes forces, torques, motion, energy, and power in human movement, providing quantitative measurements of movement performance.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Force Analysis:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Force Definition:</strong> A push or pull that causes acceleration (F = ma). Forces have magnitude (size) and direction (vector quantity).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Muscle Forces:</strong> Generated by muscle contractions, creating tension that pulls on bones through tendons. Force depends on cross-sectional area, muscle length, contraction velocity, and neural activation.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Gravitational Force:</strong> Always acts downward, proportional to mass (F = mg). Affects all movements, especially vertical movements like jumping and falling.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Ground Reaction Force (GRF):</strong> Force exerted by the ground on the body (equal and opposite to force exerted by body on ground). Critical for understanding walking, running, and jumping mechanics.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Friction Forces:</strong> Resistive forces between surfaces in contact. Static friction prevents slipping; kinetic friction opposes sliding motion.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>External Loads:</strong> Forces from weights, resistance bands, or other external objects that challenge the body during exercise or work.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Torque and Rotational Motion:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Torque (Moment):</strong> Rotational force causing angular motion. Calculated as τ = F × d, where F is force and d is moment arm (perpendicular distance from force to axis). Units: Newton-meters (N·m).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Moment Arm:</strong> Perpendicular distance from force vector to axis of rotation. Longer moment arms create greater torque for the same force. Critical for understanding muscle leverage.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Joint Torques:</strong> Net torque around a joint determines angular acceleration. Sum of all muscle torques minus resistive torques determines movement direction and speed.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Torque-Angle Relationship:</strong> Muscle torque varies with joint angle due to changing moment arms and muscle length. Peak torque typically occurs at mid-range joint angles.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Lever Systems in the Human Body:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        The body functions as a complex system of levers, with bones acting as levers, joints as fulcrums, and muscles providing force. Three classes of levers exist, each with different mechanical advantages.
+      </p>
+      <ol class="space-y-4 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">1.</span>
+          <div>
+            <strong>First-Class Levers:</strong> Fulcrum between effort and resistance (E-F-R). Can have mechanical advantage greater or less than 1. Example: Neck extension (atlanto-occipital joint) where muscles lift the head against gravity.
+            <div class="bg-gray-50 p-3 rounded mt-2 font-mono text-sm">Examples: Head nodding, triceps extension</div>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">2.</span>
+          <div>
+            <strong>Second-Class Levers:</strong> Resistance between fulcrum and effort (F-R-E). Always have mechanical advantage > 1 (favor force). Example: Ankle plantarflexion in standing, where calf muscles (effort) lift body weight (resistance) over ball of foot (fulcrum).
+            <div class="bg-gray-50 p-3 rounded mt-2 font-mono text-sm">Mechanical advantage: E/R = effort distance / resistance distance</div>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">3.</span>
+          <div>
+            <strong>Third-Class Levers:</strong> Effort between fulcrum and resistance (F-E-R). Most common in body. Mechanical advantage < 1 (favor speed and range of motion). Example: Biceps brachii flexing elbow, where elbow joint is fulcrum, biceps insertion is effort, and hand/weight is resistance.
+            <div class="bg-gray-50 p-3 rounded mt-2 font-mono text-sm">Most joints are third-class levers: elbow, knee, hip flexion, shoulder flexion</div>
+          </div>
+        </li>
+      </ol>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Kinematics: Description of Motion</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Kinematics describes motion without considering the forces causing it. It includes position, displacement, velocity, acceleration, and time relationships.
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Position:</strong> Location in space relative to a reference point. Can be described using coordinates (x, y, z) or joint angles.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Displacement:</strong> Change in position (vector quantity with magnitude and direction). Different from distance, which is total path length (scalar).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Velocity:</strong> Rate of change of position (v = Δs/Δt). Includes linear velocity (m/s) and angular velocity (degrees/s or rad/s). Velocity has magnitude (speed) and direction.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Acceleration:</strong> Rate of change of velocity (a = Δv/Δt). Can be positive (speeding up), negative (slowing down), or zero (constant velocity). Includes linear and angular acceleration.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Linear vs. Angular Motion:</strong> Linear motion involves translation (movement from one point to another). Angular motion involves rotation around an axis. Most human movements combine both.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Kinetics: Forces Causing Motion</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Kinetics analyzes the forces that cause or result from motion. It connects forces to motion through Newton's laws.
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Newton's First Law (Inertia):</strong> Objects at rest stay at rest, objects in motion stay in motion unless acted upon by a net force. Explains why movement continues or stops.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Newton's Second Law:</strong> F = ma. Net force equals mass times acceleration. Explains how forces produce movement or changes in movement.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Newton's Third Law:</strong> For every action, there's an equal and opposite reaction. Explains GRF and how we push against surfaces to move.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Joint Reaction Forces:</strong> Forces acting at joints, equal and opposite to muscle and ligament forces. Important for understanding joint loading and injury risk.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Energy and Work:</strong> Work = Force × Distance. Kinetic energy (KE = ½mv²) is energy of motion. Potential energy (PE = mgh) is stored energy. Total energy is conserved in closed systems.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Motor Control and Neural Coordination</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Motor control examines how the nervous system coordinates movement through complex interactions between the brain, spinal cord, and peripheral nervous system. Understanding motor control is essential for rehabilitation and performance optimization.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Neural Hierarchy of Motor Control:</h3>
+      <ol class="space-y-4 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">1.</span>
+          <div>
+            <strong>Higher Brain Centers (Cerebral Cortex, Basal Ganglia, Cerebellum):</strong>
+            <ul class="mt-2 space-y-2 ml-6">
+              <li><strong>Primary Motor Cortex:</strong> Initiates voluntary movements, controls muscle groups on opposite side of body (contralateral control). Somatotopic organization (motor homunculus).</li>
+              <li><strong>Premotor Cortex:</strong> Plans movements, selects appropriate motor programs based on context and goals.</li>
+              <li><strong>Supplementary Motor Area:</strong> Involved in planning and sequencing complex movements, especially bimanual coordination.</li>
+              <li><strong>Basal Ganglia:</strong> Modulates movement, suppresses unwanted movements, facilitates desired movements. Involved in automaticity and habit formation.</li>
+              <li><strong>Cerebellum:</strong> Coordinates movement, maintains balance, corrects errors, and ensures smooth, accurate movements through comparison of intended vs. actual movement.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">2.</span>
+          <div>
+            <strong>Brainstem:</strong> Contains reticular formation and vestibular nuclei. Controls posture, balance, and basic movement patterns. Integrates sensory information for motor output.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">3.</span>
+          <div>
+            <strong>Spinal Cord:</strong> Contains central pattern generators (CPGs), reflex arcs, and motor neurons. Can generate basic movement patterns (like walking) without continuous brain input, though brain provides modulation and control.
+          </div>
+        </li>
+      </ol>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Motor Units and Muscle Activation:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Motor Unit:</strong> A single motor neuron and all muscle fibers it innervates. Functional unit of muscle contraction. Sizes vary: small units (fine control, e.g., eye muscles) have few fibers; large units (power, e.g., quadriceps) have many fibers.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Size Principle:</strong> Motor units are recruited in order of size (smallest first). Low-threshold motor units (slow-twitch, fatigue-resistant) activate first; high-threshold units (fast-twitch, powerful, fatigable) activate only with high force demands.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Rate Coding:</strong> Force increases not only by recruiting more motor units (recruitment) but also by increasing firing rate (frequency) of active units. At maximum force, both mechanisms are used.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Synchronization:</strong> Motor units may fire synchronously to produce smooth, coordinated force output, though some asynchrony is normal and beneficial for reducing tremor.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Feedback Control:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Feedback uses sensory information to monitor and correct ongoing movements in real-time.
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Proprioception:</strong> Sense of body position and movement from muscle spindles, Golgi tendon organs, and joint receptors. Provides feedback about joint angles, muscle length, tension, and movement velocity.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Muscle Spindles:</strong> Detect muscle length and rate of length change. Stretch reflex: rapid muscle contraction in response to unexpected stretch, protecting muscles from overstretching.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Golgi Tendon Organs (GTOs):</strong> Detect muscle tension. When tension is too high, GTOs inhibit motor neurons (inverse myotatic reflex), protecting muscles from excessive force.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Vestibular System:</strong> Detects head position and acceleration, critical for balance and spatial orientation. Provides feedback for postural adjustments.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Vision:</strong> Provides external reference for movement accuracy and environmental navigation. Closed-loop control uses visual feedback to guide reaching and manipulation.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Reflexes:</strong> Automatic responses to stimuli. Spinal reflexes (e.g., stretch reflex) are fast and don't require brain involvement. Higher-level reflexes involve brainstem and cerebellum.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Feedforward Control:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Feedforward uses prior experience to anticipate movement requirements and activate muscles before movement begins, allowing smooth, efficient actions.
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Anticipatory Postural Adjustments (APAs):</strong> Muscle activation patterns that occur before voluntary movement to stabilize posture. Example: Abdominal and back muscles activate before arm movement to prevent trunk displacement.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Motor Programs:</strong> Pre-structured patterns of muscle activation stored in the nervous system. Allow rapid, coordinated movements without constant sensory feedback.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Open-Loop Control:</strong> Movements executed without continuous feedback (e.g., throwing a ball). Fast but less accurate than closed-loop control.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Central Pattern Generators (CPGs):</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Neural networks in the spinal cord that can produce rhythmic movements (like walking, running, swimming) without continuous input from the brain. CPGs are modulated by sensory feedback and higher brain centers but can function autonomously.
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Locomotion CPGs:</strong> Generate alternating patterns of leg muscle activation for walking and running. Can be activated even in spinalized animals, demonstrating their autonomy.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Flexor-Extensor Alternation:</strong> CPGs coordinate alternating activation of flexor and extensor muscle groups, creating rhythmic movement patterns.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Modulation:</strong> Brain and sensory feedback modulate CPG activity, adjusting rhythm, amplitude, and phase to match environmental demands and movement goals.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Motor Learning: Skill Acquisition and Refinement</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Motor learning examines how movement skills are acquired, refined, and retained through practice and experience. Understanding motor learning principles is essential for effective teaching, training, and rehabilitation.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Stages of Motor Learning:</h3>
+      <ol class="space-y-4 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">1.</span>
+          <div>
+            <strong>Cognitive Stage:</strong> Initial learning phase where learners understand what to do and think consciously about each movement component.
+            <ul class="mt-2 space-y-2 ml-6 text-base">
+              <li>• High variability, frequent errors, inconsistent performance</li>
+              <li>• Requires attention and concentration</li>
+              <li>• Learns from extrinsic feedback (coach, video)</li>
+              <li>• Develops cognitive representation of the skill</li>
+              <li>• Example: Learning to ride a bike, focusing on each step</li>
+            </ul>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">2.</span>
+          <div>
+            <strong>Associative Stage:</strong> Refinement phase where movement becomes more consistent and efficient through practice.
+            <ul class="mt-2 space-y-2 ml-6 text-base">
+              <li>• Reduced errors, improved consistency, smoother movements</li>
+              <li>• Develops motor programs for the skill</li>
+              <li>• Can detect and correct some errors independently</li>
+              <li>• Less conscious attention required</li>
+              <li>• Example: Riding bike smoothly, adjusting to terrain</li>
+            </ul>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">3.</span>
+          <div>
+            <strong>Autonomous Stage:</strong> Advanced phase where skill becomes automatic and requires minimal conscious attention.
+            <ul class="mt-2 space-y-2 ml-6 text-base">
+              <li>• Highly consistent, efficient, automatic performance</li>
+              <li>• Minimal attention required, can multitask</li>
+              <li>• Expert-level performance, refined movement patterns</li>
+              <li>• Can adapt to changing conditions automatically</li>
+              <li>• Example: Expert cyclist, no conscious thought needed</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Practice Conditions and Learning:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Massed Practice:</strong> Concentrated practice with little rest between trials. Efficient for time but may lead to fatigue and decreased performance during practice (though learning may still occur).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Distributed Practice:</strong> Practice spread over time with rest periods. Better for long-term retention, reduces fatigue, allows consolidation. Generally superior for learning.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Practice Variability:</strong> Varying practice conditions improves skill transfer and retention. Blocked practice (repeating same task) improves performance during practice but variable practice improves learning and transfer.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Contextual Interference:</strong> High interference (random practice order) impedes performance during practice but enhances learning and transfer compared to low interference (blocked practice).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Part vs. Whole Practice:</strong> Complex skills may be learned as parts (breaking down) or whole (all at once). Part practice helpful for serial tasks with independent components; whole practice better for continuous, integrated movements.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Feedback in Motor Learning:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Intrinsic Feedback:</strong> Sensory information from the movement itself (vision, proprioception, touch). Essential for developing internal error detection and correction.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Extrinsic Feedback (Augmented):</strong> Additional feedback from external sources (coach, video, biofeedback devices). Can enhance learning but may create dependency if too frequent.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Knowledge of Results (KR):</strong> Information about outcome (e.g., "You hit the target"). Helps learners understand if goal was achieved.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Knowledge of Performance (KP):</strong> Information about movement pattern (e.g., "Your arm was too high"). Helps learners understand how to improve technique.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Feedback Frequency:</strong> 100% feedback improves performance during practice but reduces learning. Reduced feedback frequency (faded feedback) enhances learning and retention. Summary feedback (after several trials) often superior to feedback after every trial.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Timing of Feedback:</strong> Immediate feedback helps during practice, but delayed feedback (allowing intrinsic feedback first) promotes better learning and error detection development.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Transfer of Learning:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Transfer occurs when learning one skill influences learning or performance of another skill. Can be positive (helps), negative (hinders), or zero (no effect).
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Near Transfer:</strong> Transfer between similar skills (e.g., different tennis serves). More likely when skills share similar movement patterns or goals.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Far Transfer:</strong> Transfer between dissimilar skills (e.g., tennis to golf). Less common, requires abstract principles or cognitive strategies that apply across contexts.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Bilateral Transfer:</strong> Learning with one limb transfers to the opposite limb. Asymmetric transfer typically occurs from dominant to non-dominant limb.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Exercise Physiology: Body Responses to Activity</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Exercise physiology examines how the body responds and adapts to physical activity, exercise, and training. Understanding these responses is essential for optimizing performance, designing effective training programs, and promoting health.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Energy Systems and Metabolism:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        All movement requires energy in the form of ATP (adenosine triphosphate). The body uses three energy systems to regenerate ATP, each with different capacities and rates.
+      </p>
+      
+      <ol class="space-y-4 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">1.</span>
+          <div>
+            <strong>ATP-PCr System (Phosphagen System):</strong>
+            <ul class="mt-2 space-y-2 ml-6 text-base">
+              <li>• Duration: 0-10 seconds of maximal effort</li>
+              <li>• Rate: Highest power output, very fast ATP regeneration</li>
+              <li>• Capacity: Very limited (only small amounts of PCr stored)</li>
+              <li>• Process: PCr (phosphocreatine) donates phosphate to ADP, instantly regenerating ATP: PCr + ADP → ATP + Cr</li>
+              <li>• No oxygen required (anaerobic)</li>
+              <li>• Recovery: PCr replenishes in 2-5 minutes</li>
+              <li>• Primary for: Maximal power activities (sprinting, jumping, weightlifting, explosive movements)</li>
+            </ul>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">2.</span>
+          <div>
+            <strong>Glycolytic System (Anaerobic Glycolysis):</strong>
+            <ul class="mt-2 space-y-2 ml-6 text-base">
+              <li>• Duration: 10 seconds - 2 minutes of high-intensity activity</li>
+              <li>• Rate: High power output, fast ATP regeneration</li>
+              <li>• Capacity: Moderate (limited by glycogen stores and lactate accumulation)</li>
+              <li>• Process: Glucose (from glycogen or blood) broken down to pyruvate, producing ATP without oxygen. Pyruvate converted to lactate when oxygen is limited.</li>
+              <li>• Anaerobic process (no oxygen required initially)</li>
+              <li>• Byproduct: Lactic acid/lactate causes fatigue and muscle burning sensation</li>
+              <li>• Lactate threshold: Point where lactate production exceeds clearance rate</li>
+              <li>• Primary for: High-intensity activities (400m run, intense intervals, resistance training)</li>
+            </ul>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">3.</span>
+          <div>
+            <strong>Oxidative System (Aerobic Metabolism):</strong>
+            <ul class="mt-2 space-y-2 ml-6 text-base">
+              <li>• Duration: 2+ minutes, can sustain for hours</li>
+              <li>• Rate: Lower power output, slower but sustained ATP regeneration</li>
+              <li>• Capacity: Highest (nearly unlimited with adequate fuel and oxygen)</li>
+              <li>• Process: Uses oxygen to break down carbohydrates, fats, and proteins through multiple pathways:</li>
+              <li class="ml-6">- Glycolysis (with oxygen) → Pyruvate → Acetyl CoA → Krebs Cycle → Electron Transport Chain</li>
+              <li class="ml-6">- Beta-oxidation (fat breakdown) → Acetyl CoA → Krebs Cycle → Electron Transport Chain</li>
+              <li class="ml-6">- Protein breakdown → amino acids → various intermediates</li>
+              <li>• Requires oxygen delivery (cardiovascular and respiratory systems)</li>
+              <li>• Byproducts: CO₂ and H₂O (easily eliminated)</li>
+              <li>• Primary for: Endurance activities (running, cycling, swimming, sustained activities)</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Energy System Interaction:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        All three systems work simultaneously, but their relative contribution depends on exercise intensity and duration. At rest, oxidative system provides nearly 100% of energy. As intensity increases, ATP-PCr and glycolytic contributions increase. During prolonged moderate exercise, oxidative system dominates.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Cardiovascular Adaptations to Exercise:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Cardiac Output (Q):</strong> Volume of blood pumped by heart per minute. Q = Heart Rate (HR) × Stroke Volume (SV). At rest: ~5 L/min. During maximal exercise: Can increase to 20-30 L/min in trained individuals.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Heart Rate Response:</strong> Increases linearly with exercise intensity (up to maximum HR ≈ 220 - age). Trained individuals have lower resting HR and faster HR recovery.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Stroke Volume:</strong> Volume of blood ejected per heartbeat. Increases with exercise intensity (plateaus at moderate intensities). Training increases maximal stroke volume through cardiac hypertrophy and improved contractility.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Blood Flow Redistribution:</strong> During exercise, blood flow increases to working muscles (up to 85% of cardiac output) while decreasing to non-essential areas (digestive system, kidneys) via vasoconstriction.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Blood Pressure:</strong> Systolic BP increases with intensity (reflecting increased cardiac output). Diastolic BP typically remains stable or decreases slightly (due to vasodilation in active muscles).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Long-Term Adaptations:</strong> Regular exercise leads to cardiac hypertrophy (stronger, more efficient heart), increased blood volume, improved vascular function, and enhanced oxygen delivery capacity.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Respiratory Adaptations:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Ventilation (VE):</strong> Volume of air moved in/out of lungs per minute. VE = Tidal Volume (TV) × Breathing Rate. Increases dramatically with exercise to meet oxygen demands and remove CO₂.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Oxygen Consumption (VO₂):</strong> Rate of oxygen uptake by body. VO₂max (maximal oxygen consumption) is the best single indicator of aerobic fitness. Trained individuals have higher VO₂max.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Oxygen Extraction:</strong> Amount of oxygen extracted from blood by muscles. Increases with training through improved capillary density and mitochondrial function.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Ventilatory Threshold:</strong> Point where ventilation increases disproportionately to oxygen consumption, typically occurring at ~50-75% of VO₂max. Indicates shift to greater anaerobic metabolism.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Muscular Adaptations to Training:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Hypertrophy:</strong> Increase in muscle fiber size (cross-sectional area) due to resistance training. Results from increased protein synthesis and myofibrillar volume.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Hyperplasia:</strong> Increase in muscle fiber number (controversial, may occur in some conditions but hypertrophy is primary adaptation).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Mitochondrial Adaptations:</strong> Endurance training increases mitochondrial density and number, enhancing aerobic capacity and fat oxidation.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Capillary Density:</strong> Increased number of capillaries surrounding muscle fibers improves oxygen and nutrient delivery, waste removal, and blood flow.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Fiber Type Adaptations:</strong> Training can shift fiber type characteristics. Endurance training increases oxidative capacity; strength training increases contractile capacity. True fiber type conversion is limited but possible with extreme training.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Neuromuscular Adaptations:</strong> Early strength gains (first 4-8 weeks) are primarily neural (improved motor unit recruitment, firing rate, synchronization, coordination) rather than structural.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Movement Analysis and Assessment</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Movement analysis involves systematic observation and measurement of human movement to understand normal patterns, identify dysfunction, and evaluate intervention effectiveness.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Qualitative Movement Analysis:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Visual Observation:</strong> Systematic observation of movement patterns, posture, gait, and functional tasks. Requires trained eye and understanding of normal movement.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Movement Screening:</strong> Standardized assessments (e.g., Functional Movement Screen) to identify movement limitations and asymmetries that may predispose to injury.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Postural Assessment:</strong> Analysis of static posture to identify deviations (forward head, rounded shoulders, excessive lordosis, kyphosis) that may affect movement.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Gait Analysis:</strong> Observation of walking patterns, identifying abnormalities in stance phase, swing phase, step length, cadence, and joint movements.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Quantitative Movement Analysis:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Motion Capture Systems:</strong> 3D analysis using cameras and reflective markers to quantify joint angles, velocities, accelerations, and movement patterns with high precision.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Force Plates:</strong> Measure ground reaction forces during activities, providing information about loading patterns, balance, and force production/absorption.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Electromyography (EMG):</strong> Records electrical activity of muscles, indicating timing, amplitude, and pattern of muscle activation during movement.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Inertial Measurement Units (IMUs):</strong> Wearable sensors (accelerometers, gyroscopes) that measure movement and orientation, useful for field-based assessment.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Video Analysis:</strong> Frame-by-frame analysis of video recordings, using software to measure angles, distances, and timing.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Professional Applications of Kinesiology</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Clinical Kinesiology and Rehabilitation:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Physical Therapy:</strong> Restore movement and function after injury, surgery, or disease. Uses movement analysis, therapeutic exercise, manual therapy, and biomechanical principles to address impairments.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Occupational Therapy:</strong> Help individuals perform daily activities and occupations. Uses kinesiology principles to improve function, adapt activities, and design assistive devices.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Athletic Training:</strong> Prevent, assess, and manage injuries in athletes. Uses movement screening, biomechanical analysis, and corrective exercises to optimize performance and reduce injury risk.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Movement Correction:</strong> Identify and correct faulty movement patterns that contribute to pain, dysfunction, or suboptimal performance. Often involves addressing muscle imbalances, mobility restrictions, and motor control deficits.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Sports Performance:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Biomechanical Analysis:</strong> Analyze technique to optimize performance. Video analysis, force plate data, and motion capture identify inefficiencies and opportunities for improvement.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Strength and Conditioning:</strong> Design training programs based on movement analysis, energy system demands, and sport-specific requirements. Applies exercise physiology principles.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Skill Acquisition:</strong> Apply motor learning principles to optimize skill development. Structures practice, provides appropriate feedback, and facilitates transfer.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Ergonomics and Occupational Health:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Workplace Design:</strong> Design workspaces, tools, and tasks to fit human capabilities and limitations, reducing injury risk and improving productivity.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Injury Prevention:</strong> Identify ergonomic risk factors (repetitive motions, awkward postures, excessive forces) and implement interventions to reduce workplace injuries.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Human Factors:</strong> Consider biomechanical, physiological, and psychological factors in design to optimize human performance and safety.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Public Health and Exercise Science:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Exercise Prescription:</strong> Develop individualized exercise programs for health promotion, disease prevention, and chronic disease management based on exercise physiology principles.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Health Promotion:</strong> Promote physical activity and movement behavior change to improve population health outcomes.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Adapted Physical Activity:</strong> Modify activities and environments to enable participation for individuals with disabilities, applying kinesiology principles to promote inclusion and health.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Research Methods in Kinesiology</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Kinesiology research employs various methods to investigate movement, performance, and health outcomes.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Laboratory Methods:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Motion Analysis Systems:</strong> 3D motion capture using multiple cameras and markers. Provides precise measurement of joint angles, velocities, accelerations, and movement patterns. Can be combined with force plates and EMG for comprehensive analysis.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Force Platforms:</strong> Measure ground reaction forces, center of pressure, and loading patterns. Essential for gait analysis, balance assessment, and understanding force production during activities.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Electromyography (EMG):</strong> Surface or fine-wire EMG records muscle electrical activity. Provides information about muscle activation timing, amplitude, and patterns. Integrated EMG represents total muscle activity.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Metabolic Analysis:</strong> Measures oxygen consumption (VO₂), carbon dioxide production (VCO₂), and energy expenditure. Used to assess aerobic fitness, exercise intensity, and metabolic responses.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Isokinetic Dynamometry:</strong> Measures muscle strength at constant velocity. Provides objective strength measurements and identifies strength imbalances.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Force Transducers:</strong> Measure forces in various contexts, such as hand grip strength, isometric contractions, or forces applied to objects.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Field-Based Assessment:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Wearable Sensors:</strong> Accelerometers, gyroscopes, and magnetometers provide portable movement assessment. Useful for monitoring daily activity, sports performance, and long-term movement patterns.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>GPS and Activity Monitors:</strong> Track movement patterns, distances, speeds, and activity levels in real-world settings.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Portable Metabolic Systems:</strong> Mobile systems that allow metabolic assessment during field activities, providing real-world exercise physiology data.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+
+    <a href="kinesiology-quiz.html" class="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

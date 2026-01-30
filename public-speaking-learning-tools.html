@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Public Speaking Learning Tools - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <!-- Back Button -->
+  <div class="mb-6">
+    <a href="college-learning-tools.html" class="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back to Learning Tools</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="flex justify-center mb-4">
+      <div class="p-4 bg-gradient-to-br from-red-600 to-rose-600 rounded-full">
+        <i data-lucide="mic" class="w-16 h-16 text-white"></i>
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Public Speaking Learning Tools</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Master the art of public speaking with comprehensive resources for speech writing, delivery, and presentation skills
+    </p>
+  </div>
+
+  <!-- Speech Writing & Organization Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-red-50 to-rose-50 rounded-xl shadow-lg p-8 border-l-4 border-red-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="pen-line" class="w-7 h-7 text-red-600"></i>
+        Speech Writing & Organization Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.grammarly.com/" target="_blank" class="text-red-600 hover:text-red-700 hover:underline">Grammarly ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AI writing assistant for polished speeches</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Grammar and clarity checks</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Tone detection</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Readability improvements</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.hemingwayapp.com/" target="_blank" class="text-red-600 hover:text-red-700 hover:underline">Hemingway Editor ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Make your speeches bold and clear</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Readability scoring</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Sentence simplification</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Free web version</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.notion.so/" target="_blank" class="text-red-600 hover:text-red-700 hover:underline">Notion ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Organize speech outlines and research</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Flexible note-taking</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Speech templates</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Collaboration features</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.mindmeister.com/" target="_blank" class="text-red-600 hover:text-red-700 hover:underline">MindMeister ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Mind mapping for speech brainstorming</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Visual organization</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Idea generation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Outline creation</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Presentation Design Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl shadow-lg p-8 border-l-4 border-rose-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="presentation" class="w-7 h-7 text-rose-600"></i>
+        Presentation Design Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.canva.com/create/presentations/" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">Canva Presentations ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Create stunning presentation slides easily</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Professional templates</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Drag-and-drop design</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Free version available</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.prezi.com/" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">Prezi ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Dynamic, non-linear presentation platform</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Zooming interface</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Engaging visuals</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Modern presentations</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.beautiful.ai/" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">Beautiful.ai ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AI-powered presentation design</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Smart templates</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Auto-formatting</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Professional layouts</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://slidebean.com/" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">Slidebean ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AI-driven presentation maker</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Automatic design</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Focus on content</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Business templates</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Practice & Recording Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl shadow-lg p-8 border-l-4 border-orange-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="video" class="w-7 h-7 text-orange-600"></i>
+        Video Practice & Recording Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.loom.com/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Loom ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Record and review your practice speeches</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Screen + webcam recording</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Instant sharing</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Free version available</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.yoodli.ai/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Yoodli ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AI speech coach for public speaking practice</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Real-time feedback</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Filler word detection</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Pacing analysis</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.orai.com/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Orai ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Public speaking practice app with AI feedback</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Speech analysis</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Progress tracking</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Personalized lessons</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.zoom.us/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Zoom ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Practice virtual presentations and record</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Virtual presentation practice</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Recording features</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Screen sharing</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Online Courses & Training Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-xl shadow-lg p-8 border-l-4 border-amber-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="graduation-cap" class="w-7 h-7 text-amber-600"></i>
+        Online Courses & Training Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.toastmasters.org/" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">Toastmasters International ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">World's premier public speaking organization</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Local clubs worldwide</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Structured learning path</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Practice opportunities</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.coursera.org/courses?query=public%20speaking" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">Coursera Public Speaking ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">University courses on public speaking</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Expert instruction</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Certificates available</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Flexible learning</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.udemy.com/topic/public-speaking/" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">Udemy Public Speaking Courses ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Affordable courses on presentation skills</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Wide variety of courses</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Lifetime access</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Practical techniques</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.ted.com/playlists/226/before_public_speaking" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">TED: Before Public Speaking ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">TED Talks about effective public speaking</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Expert insights</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Inspiring examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Free access</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speech Examples & Inspiration -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="lightbulb" class="w-7 h-7 text-blue-600"></i>
+        Speech Examples & Inspiration
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.americanrhetoric.com/top100speechesall.html" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">American Rhetoric Top 100 Speeches ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Greatest speeches in American history</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Audio and transcripts</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Historical context</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Rhetorical analysis</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.ted.com/talks" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">TED Talks ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Modern inspiring presentations on diverse topics</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>World-class speakers</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Innovative ideas</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Free transcripts</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/user/TEDxTalks" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">TEDx Talks ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Community-organized TED events worldwide</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Diverse perspectives</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Local speakers</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Thousands of talks</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.speeches.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Speeches.com ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Database of famous speeches and transcripts</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Searchable archive</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Multiple categories</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Full transcripts</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Confidence & Anxiety Management -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-xl shadow-lg p-8 border-l-4 border-teal-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="heart" class="w-7 h-7 text-teal-600"></i>
+        Confidence & Anxiety Management
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.headspace.com/" target="_blank" class="text-teal-600 hover:text-teal-700 hover:underline">Headspace ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Meditation app for managing speaking anxiety</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Stress management</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Guided meditations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Performance anxiety help</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.calm.com/" target="_blank" class="text-teal-600 hover:text-teal-700 hover:underline">Calm ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Mental wellness app for relaxation before speaking</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Breathing exercises</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Relaxation techniques</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Sleep support</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://virtualspeech.com/" target="_blank" class="text-teal-600 hover:text-teal-700 hover:underline">VirtualSpeech ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">VR and online courses for public speaking practice</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Virtual reality practice</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Realistic scenarios</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Overcome stage fright</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.psychologytoday.com/us/basics/public-speaking" target="_blank" class="text-teal-600 hover:text-teal-700 hover:underline">Psychology Today Public Speaking ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Articles on overcoming speaking anxiety</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Expert advice</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Anxiety tips</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Research-based strategies</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="public-speaking.html" class="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Public Speaking Basics
+    </a>
+    <a href="public-speaking-quiz.html" class="px-6 py-3 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Take Quiz
+    </a>
+    <a href="college-learning-tools.html" class="px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      All Learning Tools
+    </a>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

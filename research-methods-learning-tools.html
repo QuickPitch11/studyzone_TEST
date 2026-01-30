@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Research Methods Learning Tools - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <!-- Back Button -->
+  <div class="mb-6">
+    <a href="college-learning-tools.html" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-600 text-white rounded-lg hover:bg-slate-700 transition">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back to Learning Tools</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="flex justify-center mb-4">
+      <div class="p-4 bg-gradient-to-br from-slate-600 to-indigo-600 rounded-full">
+        <i data-lucide="search" class="w-16 h-16 text-white"></i>
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Research Methods Learning Tools</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Comprehensive resources for research design, data analysis, and academic methodology
+    </p>
+  </div>
+
+  <!-- Research Design & Planning Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl shadow-lg p-8 border-l-4 border-slate-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="compass" class="w-7 h-7 text-slate-600"></i>
+        Research Design & Planning Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.randomizer.org/" target="_blank" class="text-slate-600 hover:text-slate-700 hover:underline">Research Randomizer ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free tool for creating random assignments and samples</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Random number generation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Randomization for experiments</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Sample selection tools</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.lucidchart.com/" target="_blank" class="text-slate-600 hover:text-slate-700 hover:underline">Lucidchart ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Visual workspace for research design diagrams</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Flowcharts and diagrams</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Conceptual frameworks</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Collaboration features</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.mindmeister.com/" target="_blank" class="text-slate-600 hover:text-slate-700 hover:underline">MindMeister ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Online mind mapping for research planning</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Brainstorming tools</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Research organization</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Team collaboration</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.notion.so/" target="_blank" class="text-slate-600 hover:text-slate-700 hover:underline">Notion ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">All-in-one workspace for research project management</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Note-taking and databases</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Project tracking</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-slate-600">•</span>
+              <span>Custom templates</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Survey & Data Collection Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="clipboard-list" class="w-7 h-7 text-blue-600"></i>
+        Survey & Data Collection Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.qualtrics.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Qualtrics ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Professional survey and research platform</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Advanced survey design</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Data analysis tools</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Academic licenses available</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.surveymonkey.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">SurveyMonkey ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Popular online survey creation and analysis tool</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Easy survey builder</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Real-time results</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Data export options</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.google.com/forms/about/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Google Forms ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free survey tool with Google Sheets integration</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Simple interface</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Automatic data collection</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Completely free</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.typeform.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Typeform ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Interactive forms and surveys with engaging design</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Beautiful interface</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Conversational surveys</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Higher response rates</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistical Analysis Software -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl shadow-lg p-8 border-l-4 border-indigo-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="chart-bar" class="w-7 h-7 text-indigo-600"></i>
+        Statistical Analysis Software
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.ibm.com/products/spss-statistics" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">SPSS Statistics ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Industry-standard statistical analysis software</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Advanced statistics</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Data visualization</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Student versions available</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.r-project.org/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">R Statistical Software ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free programming language for statistical computing</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Open-source and free</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Extensive packages</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Powerful graphics</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.stata.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Stata ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Statistical software for data science and research</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Comprehensive statistics</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Data management</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Publication-quality graphs</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://jasp-stats.org/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">JASP ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free and user-friendly statistical analysis software</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Easy-to-use interface</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Bayesian statistics</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Open-source</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Literature Review & Reference Management -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-cyan-50 to-teal-50 rounded-xl shadow-lg p-8 border-l-4 border-cyan-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="library" class="w-7 h-7 text-cyan-600"></i>
+        Literature Review & Reference Management
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.zotero.org/" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">Zotero ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free reference management software</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Organize research sources</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Citation generation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Browser integration</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.mendeley.com/" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">Mendeley ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Reference manager and academic social network</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>PDF annotation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Collaboration tools</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Citation plugin</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://scholar.google.com/" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">Google Scholar ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Search engine for scholarly literature</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Academic articles</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Citation tracking</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Free access</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.covidence.org/" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">Covidence ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Systematic review management platform</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Literature screening</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Data extraction</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Quality assessment</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Methodology Guides & Tutorials -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-emerald-50 to-green-50 rounded-xl shadow-lg p-8 border-l-4 border-emerald-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="book-open-text" class="w-7 h-7 text-emerald-600"></i>
+        Research Methodology Guides & Tutorials
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://researchmethodology.net/" target="_blank" class="text-emerald-600 hover:text-emerald-700 hover:underline">Research Methodology ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive guides on research methods</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Methodology tutorials</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Research design guides</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Data analysis tips</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.statisticssolutions.com/" target="_blank" class="text-emerald-600 hover:text-emerald-700 hover:underline">Statistics Solutions ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Dissertation and research consulting with free resources</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Statistical guides</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Methodology advice</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Free webinars</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.coursera.org/courses?query=research%20methods" target="_blank" class="text-emerald-600 hover:text-emerald-700 hover:underline">Coursera Research Methods ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Online courses on research methodology</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>University courses</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Certificates available</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Self-paced learning</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/results?search_query=research+methodology+tutorial" target="_blank" class="text-emerald-600 hover:text-emerald-700 hover:underline">YouTube Research Methods ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free video tutorials on research methodology</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Step-by-step tutorials</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Visual learning</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Diverse topics</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academic Writing & Ethics Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-violet-50 to-purple-50 rounded-xl shadow-lg p-8 border-l-4 border-violet-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="graduation-cap" class="w-7 h-7 text-violet-600"></i>
+        Academic Writing & Ethics Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://owl.purdue.edu/owl/research_and_citation/resources.html" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">Purdue OWL Research Resources ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive research and citation guides</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Research writing guides</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Citation styles</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Academic integrity</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.apa.org/ethics/code" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">APA Ethics Code ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Ethical principles for research with human subjects</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Research ethics</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Professional standards</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Ethical guidelines</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.scribbr.com/" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">Scribbr ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Academic writing, editing, and plagiarism checking</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Writing guides</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Plagiarism checker</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Citation generators</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://writingcenter.unc.edu/" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">UNC Writing Center ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Research writing tips and handouts</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Writing handouts</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Research paper guides</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Free resources</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="research-methods.html" class="px-6 py-3 bg-slate-600 text-white rounded-lg hover:bg-slate-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Research Methods Basics
+    </a>
+    <a href="research-methods-quiz.html" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Take Quiz
+    </a>
+    <a href="college-learning-tools.html" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      All Learning Tools
+    </a>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>
