@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Biology Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    </nav>
+
+    <button id="menuBtn" class="md:hidden p-2">
+      <i data-lucide="menu" class="w-6 h-6"></i>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mb-6">
+      <i data-lucide="clipboard-check" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Biology Quiz</h1>
+    <p class="text-xl text-gray-600">Test your knowledge of life sciences and biological processes</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Questions will be dynamically generated here -->
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-green-600 text-white text-lg font-semibold rounded-lg hover:bg-green-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="quizResults" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="biology-analysis.html" class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition flex items-center gap-2">
+        <i data-lucide="book-open" class="w-5 h-5"></i>
+        Review Material
+      </a>
+      <button onclick="location.reload()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+        Retake Quiz
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="biology.html" class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Back to Biology
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Question Bank - 40 questions total
+  const questionBank = [
+    {
+      question: "What is the basic unit of life?",
+      options: ["Atom", "Cell", "Molecule", "Tissue", "Organ"],
+      correct: 1,
+      explanation: "The cell is the basic structural and functional unit of all living organisms. All life forms, from single-celled bacteria to complex multicellular organisms like humans, are composed of one or more cells. Cells contain the necessary components to carry out life processes."
+    },
+    {
+      question: "What is the process by which plants make their own food?",
+      options: ["Respiration", "Photosynthesis", "Digestion", "Fermentation", "Transpiration"],
+      correct: 1,
+      explanation: "Photosynthesis is the process by which green plants use sunlight, carbon dioxide, and water to produce glucose (food) and oxygen. This occurs primarily in the chloroplasts of plant cells and is essential for life on Earth as it produces oxygen and forms the base of most food chains."
+    },
+    {
+      question: "DNA stands for:",
+      options: ["Deoxyribonucleic Acid", "Dinitrogen Acid", "Dual Nuclear Acid", "Deoxynitric Acid", "Dinucleotide Amino acid"],
+      correct: 0,
+      explanation: "DNA (Deoxyribonucleic Acid) is the molecule that carries genetic information in all living organisms. It consists of two strands forming a double helix structure and contains the instructions needed for an organism to develop, survive, and reproduce."
+    },
+    {
+      question: "Which organelle is known as the 'powerhouse of the cell'?",
+      options: ["Nucleus", "Ribosome", "Mitochondria", "Golgi apparatus", "Endoplasmic reticulum"],
+      correct: 2,
+      explanation: "Mitochondria are called the powerhouse of the cell because they generate most of the cell's supply of ATP (adenosine triphosphate), which is used as a source of chemical energy. Through cellular respiration, mitochondria convert nutrients into energy the cell can use."
+    },
+    {
+      question: "What type of organism can make its own food?",
+      options: ["Heterotroph", "Autotroph", "Decomposer", "Consumer", "Parasite"],
+      correct: 1,
+      explanation: "Autotrophs are organisms that can produce their own food from inorganic substances. Plants, algae, and some bacteria are autotrophs that use photosynthesis or chemosynthesis to create energy-rich organic compounds from simple inorganic materials."
+    },
+    {
+      question: "The process of cell division in somatic cells is called:",
+      options: ["Meiosis", "Mitosis", "Binary fission", "Budding", "Fragmentation"],
+      correct: 1,
+      explanation: "Mitosis is the process of cell division that produces two genetically identical daughter cells from a single parent cell. It's used for growth, repair, and asexual reproduction in multicellular organisms. Somatic cells (body cells) divide through mitosis."
+    },
+    {
+      question: "What is evolution?",
+      options: ["The growth of an organism over its lifetime", "Change in the inherited characteristics of populations over time", "The process of cell division", "The movement of organisms to new environments", "Individual adaptation to environment"],
+      correct: 1,
+      explanation: "Evolution is the change in the inherited characteristics of biological populations over successive generations. It occurs through mechanisms like natural selection, genetic drift, and mutation, leading to the diversity of life we see today."
+    },
+    {
+      question: "In an ecosystem, organisms that produce their own food are called:",
+      options: ["Consumers", "Decomposers", "Producers", "Predators", "Herbivores"],
+      correct: 2,
+      explanation: "Producers (also called autotrophs) are organisms that can produce their own food through photosynthesis or chemosynthesis. They form the base of food chains and ecosystems, converting solar energy or chemical energy into organic compounds that other organisms can use."
+    },
+    {
+      question: "Which molecule carries genetic information from DNA to ribosomes?",
+      options: ["tRNA", "mRNA", "rRNA", "DNA polymerase", "Proteins"],
+      correct: 1,
+      explanation: "Messenger RNA (mRNA) carries genetic information from DNA in the nucleus to ribosomes in the cytoplasm, where proteins are synthesized. This process is called transcription (DNA to mRNA) followed by translation (mRNA to protein)."
+    },
+    {
+      question: "What is the function of ribosomes?",
+      options: ["Energy production", "Protein synthesis", "Lipid synthesis", "DNA replication", "Cell division"],
+      correct: 1,
+      explanation: "Ribosomes are cellular organelles responsible for protein synthesis. They read the genetic code carried by mRNA and assemble amino acids in the correct sequence to form proteins, which are essential for virtually all cellular functions."
+    },
+    {
+      question: "Which blood type is considered the universal donor?",
+      options: ["A+", "B+", "AB+", "O-", "O+"],
+      correct: 3,
+      explanation: "Type O- (O negative) blood is considered the universal donor because it lacks A, B, and Rh antigens, meaning it can be safely transfused to recipients of any blood type without triggering an immune response. This makes it extremely valuable in emergency situations."
+    },
+    {
+      question: "The genetic makeup of an organism is called its:",
+      options: ["Phenotype", "Genotype", "Karyotype", "Allele", "Chromosome"],
+      correct: 1,
+      explanation: "An organism's genotype is its complete genetic makeup - the specific set of genes it carries. This is distinct from the phenotype, which is the observable characteristics resulting from the interaction of genotype with the environment."
+    },
+    {
+      question: "What is the role of chlorophyll in photosynthesis?",
+      options: ["Stores water", "Absorbs light energy", "Releases oxygen", "Produces glucose", "Absorbs carbon dioxide"],
+      correct: 1,
+      explanation: "Chlorophyll is a green pigment in plants that absorbs light energy (primarily red and blue wavelengths) from the sun. This absorbed energy is then used to drive the photosynthetic process, converting carbon dioxide and water into glucose and oxygen."
+    },
+    {
+      question: "Osmosis is the movement of:",
+      options: ["Water across a semipermeable membrane", "Glucose into cells", "Proteins through channels", "DNA during replication", "Ions against concentration gradient"],
+      correct: 0,
+      explanation: "Osmosis is the passive movement of water molecules across a semipermeable membrane from an area of lower solute concentration to an area of higher solute concentration. This process is crucial for maintaining cell homeostasis and fluid balance in organisms."
+    },
+    {
+      question: "Which of the following is NOT a characteristic of living things?",
+      options: ["Growth", "Reproduction", "Crystallization", "Metabolism", "Response to stimuli"],
+      correct: 2,
+      explanation: "Crystallization is a physical/chemical process that occurs in non-living systems. The characteristics of living things include organization, metabolism, growth, adaptation, response to stimuli, reproduction, and homeostasis. Crystals grow but don't exhibit the other characteristics of life."
+    },
+    {
+      question: "What are the building blocks of proteins?",
+      options: ["Nucleotides", "Amino acids", "Fatty acids", "Monosaccharides", "Phospholipids"],
+      correct: 1,
+      explanation: "Proteins are made up of amino acids linked together by peptide bonds. There are 20 different amino acids that can be combined in various sequences to create the diverse array of proteins needed for life. Each amino acid has an amino group, carboxyl group, and unique side chain."
+    },
+    {
+      question: "The Hardy-Weinberg principle describes:",
+      options: ["Protein synthesis", "Genetic equilibrium in populations", "Cell division", "Energy transfer", "Enzyme kinetics"],
+      correct: 1,
+      explanation: "The Hardy-Weinberg principle states that allele and genotype frequencies in a population will remain constant from generation to generation in the absence of other evolutionary influences (mutation, gene flow, genetic drift, natural selection, non-random mating). It provides a baseline for studying evolution."
+    },
+    {
+      question: "What is the primary function of the Golgi apparatus?",
+      options: ["Energy production", "DNA storage", "Protein packaging and modification", "Lipid synthesis", "Cell division"],
+      correct: 2,
+      explanation: "The Golgi apparatus (or Golgi complex) is responsible for modifying, sorting, and packaging proteins and lipids for transport to their final destinations. It acts like a cellular post office, processing molecules from the endoplasmic reticulum and directing them to appropriate locations."
+    },
+    {
+      question: "Enzymes are primarily composed of:",
+      options: ["Carbohydrates", "Lipids", "Proteins", "Nucleic acids", "Minerals"],
+      correct: 2,
+      explanation: "Enzymes are biological catalysts that are primarily proteins (though some RNA molecules called ribozymes also have catalytic activity). They speed up chemical reactions by lowering activation energy without being consumed in the process. Each enzyme has a specific three-dimensional structure that determines its function."
+    },
+    {
+      question: "What is the function of the Krebs cycle?",
+      options: ["Protein synthesis", "DNA replication", "Energy production through oxidation of acetyl-CoA", "Lipid synthesis", "Cell signaling"],
+      correct: 2,
+      explanation: "The Krebs cycle (citric acid cycle) is a series of chemical reactions in cellular respiration that oxidizes acetyl-CoA to produce ATP, NADH, and FADH2. These energy-rich molecules are then used in the electron transport chain to generate large amounts of ATP. It occurs in the mitochondrial matrix."
+    },
+    {
+      question: "What determines the specificity of an antibody?",
+      options: ["Its size", "Its variable region", "Its constant region", "Its charge", "Its location"],
+      correct: 1,
+      explanation: "The variable region of an antibody determines its specificity. This region has a unique amino acid sequence that creates a specific three-dimensional shape complementary to a particular antigen (epitope). The vast diversity of variable regions allows the immune system to recognize millions of different antigens."
+    },
+    {
+      question: "Which process increases genetic variation in sexually reproducing organisms?",
+      options: ["Mitosis", "Binary fission", "Meiosis and crossing over", "Budding", "Cloning"],
+      correct: 2,
+      explanation: "Meiosis and crossing over (genetic recombination) increase genetic variation. During meiosis, homologous chromosomes exchange genetic material through crossing over, and independent assortment shuffles chromosomes into gametes. This creates genetically unique offspring, which is crucial for evolution and adaptation."
+    },
+    {
+      question: "What is the difference between prokaryotic and eukaryotic cells?",
+      options: ["Size only", "Presence of cell wall", "Presence of membrane-bound nucleus", "Presence of ribosomes", "Ability to reproduce"],
+      correct: 2,
+      explanation: "The fundamental difference is that eukaryotic cells have a membrane-bound nucleus and other membrane-bound organelles (like mitochondria, ER, Golgi), while prokaryotic cells lack these structures. Prokaryotes (bacteria and archaea) have their DNA in a nucleoid region, not enclosed by a membrane."
+    },
+    {
+      question: "What is homeostasis?",
+      options: ["Cell division", "Maintaining stable internal conditions", "Energy production", "Genetic variation", "Evolution"],
+      correct: 1,
+      explanation: "Homeostasis is the ability of an organism or cell to maintain stable internal conditions despite changes in the external environment. This includes regulating temperature, pH, glucose levels, water balance, and other physiological variables. It's essential for survival and proper functioning."
+    },
+    {
+      question: "Which cellular structure regulates what enters and exits the cell?",
+      options: ["Cell wall", "Cytoplasm", "Plasma membrane", "Nucleus", "Ribosome"],
+      correct: 2,
+      explanation: "The plasma membrane (cell membrane) is a selectively permeable barrier that regulates what enters and exits the cell. Composed of a phospholipid bilayer with embedded proteins, it controls the passage of ions, nutrients, wastes, and signaling molecules, maintaining cellular homeostasis."
+    },
+    {
+      question: "Natural selection acts on:",
+      options: ["Genotype only", "Phenotype", "DNA sequences", "Chromosomes", "Mutations alone"],
+      correct: 1,
+      explanation: "Natural selection acts on phenotypes - the observable characteristics of organisms. While genotypes determine potential traits, it's the expressed phenotype interacting with the environment that determines survival and reproductive success. Favorable phenotypes become more common over generations."
+    },
+    {
+      question: "What is the role of tRNA in protein synthesis?",
+      options: ["Carries genetic code", "Brings amino acids to ribosomes", "Catalyzes peptide bonds", "Unwinds DNA", "Packages proteins"],
+      correct: 1,
+      explanation: "Transfer RNA (tRNA) brings amino acids to the ribosome during translation. Each tRNA has an anticodon that pairs with a specific mRNA codon and carries the corresponding amino acid. This ensures amino acids are added in the correct sequence to form proteins."
+    },
+    {
+      question: "What is the primary difference between DNA and RNA?",
+      options: ["DNA is double-stranded; RNA has uracil instead of thymine", "DNA is smaller than RNA", "RNA contains more genetic information", "DNA is found only in prokaryotes", "RNA cannot mutate"],
+      correct: 0,
+      explanation: "Key differences include: DNA is typically double-stranded while RNA is single-stranded; DNA contains thymine while RNA contains uracil; DNA has deoxyribose sugar while RNA has ribose sugar. DNA stores genetic information long-term, while RNA primarily functions in protein synthesis and regulation."
+    },
+    {
+      question: "What is an ecosystem?",
+      options: ["A single species population", "All living organisms in an area", "All living organisms and their physical environment interacting", "Only producers in an area", "The climate of a region"],
+      correct: 2,
+      explanation: "An ecosystem includes all living organisms (biotic factors) in a particular area interacting with each other and with the non-living components (abiotic factors like water, soil, climate). Energy flows through ecosystems while nutrients cycle, creating complex interconnected relationships."
+    },
+    {
+      question: "What is the function of the endoplasmic reticulum?",
+      options: ["DNA storage", "Energy production", "Protein and lipid synthesis", "Cell division", "Waste removal"],
+      correct: 2,
+      explanation: "The endoplasmic reticulum (ER) is a network of membranes involved in protein and lipid synthesis. Rough ER (with ribosomes) synthesizes and modifies proteins, while smooth ER synthesizes lipids, metabolizes carbohydrates, detoxifies drugs, and stores calcium ions."
+    },
+    {
+      question: "What are vestigial structures?",
+      options: ["Newly evolved features", "Structures with no apparent function inherited from ancestors", "Essential survival structures", "Structures unique to one species", "Structures that appeared spontaneously"],
+      correct: 1,
+      explanation: "Vestigial structures are anatomical features that have lost most or all of their original function through evolution but are still present. Examples include the human appendix, wisdom teeth, and tailbone. They provide evidence for evolution and common ancestry."
+    },
+    {
+      question: "What is the role of stomata in plants?",
+      options: ["Water storage", "Gas exchange and transpiration", "Photosynthesis", "Nutrient absorption", "Reproduction"],
+      correct: 1,
+      explanation: "Stomata are small pores on plant leaves and stems that regulate gas exchange - allowing CO2 to enter for photosynthesis and oxygen to exit. They also control water loss through transpiration. Guard cells surrounding each stoma can open or close the pore based on environmental conditions."
+    },
+    {
+      question: "What is a mutation?",
+      options: ["Normal cell division", "A change in DNA sequence", "Protein synthesis", "Energy production", "Cell death"],
+      correct: 1,
+      explanation: "A mutation is a change in the DNA sequence of an organism's genome. Mutations can be caused by errors during DNA replication, exposure to mutagens (radiation, chemicals), or viral insertion. They can be beneficial, harmful, or neutral, and are the ultimate source of genetic variation."
+    },
+    {
+      question: "What is the difference between aerobic and anaerobic respiration?",
+      options: ["Location in cell", "Aerobic requires oxygen; anaerobic does not", "Products produced", "Aerobic is faster", "Type of organism"],
+      correct: 1,
+      explanation: "Aerobic respiration requires oxygen and produces significantly more ATP (about 36-38 molecules per glucose), along with CO2 and water. Anaerobic respiration (fermentation) occurs without oxygen and produces less ATP (2 molecules per glucose), along with lactic acid or ethanol. Aerobic is much more efficient."
+    },
+    {
+      question: "What is a food web?",
+      options: ["A single food chain", "Complex network showing all feeding relationships in an ecosystem", "Only predator-prey relationships", "Plant distribution pattern", "Energy pyramid"],
+      correct: 1,
+      explanation: "A food web is a complex network of interconnected food chains showing all the feeding relationships within an ecosystem. Unlike a simple linear food chain, food webs show that most organisms eat and are eaten by multiple other species, creating a realistic picture of energy flow and ecological interactions."
+    },
+    {
+      question: "What is the purpose of meiosis?",
+      options: ["Growth and repair", "Producing genetically identical cells", "Producing gametes with half the chromosome number", "Protein synthesis", "Energy production"],
+      correct: 2,
+      explanation: "Meiosis is a type of cell division that produces four gametes (sex cells: sperm or eggs) each with half the chromosome number of the parent cell. This reduction is essential for sexual reproduction - when gametes fuse during fertilization, the normal chromosome number is restored. Meiosis also increases genetic diversity through crossing over and independent assortment."
+    },
+    {
+      question: "What is the lock-and-key model describing?",
+      options: ["DNA replication", "Enzyme-substrate specificity", "Cell membrane structure", "Photosynthesis", "Muscle contraction"],
+      correct: 1,
+      explanation: "The lock-and-key model describes enzyme-substrate specificity. Like a key fitting into a specific lock, each enzyme has an active site with a specific shape that complements its substrate. Only substrates with the correct shape can bind to the enzyme's active site, explaining why enzymes are substrate-specific."
+    },
+    {
+      question: "What is symbiosis?",
+      options: ["Competition between species", "Close long-term interaction between different species", "Predator-prey relationship only", "Same species cooperation", "Asexual reproduction"],
+      correct: 1,
+      explanation: "Symbiosis is a close, long-term interaction between two different species. There are three main types: mutualism (both benefit), commensalism (one benefits, other unaffected), and parasitism (one benefits, other harmed). Examples include nitrogen-fixing bacteria in plant roots and cleaner fish with larger fish."
+    },
+    {
+      question: "What is the central dogma of molecular biology?",
+      options: ["Evolution theory", "DNA → RNA → Protein", "Cell theory", "Energy flow", "Homeostasis principle"],
+      correct: 1,
+      explanation: "The central dogma describes the flow of genetic information: DNA → RNA → Protein. DNA is transcribed into RNA (specifically mRNA), which is then translated into proteins. This fundamental principle explains how genetic information is expressed and how traits are determined at the molecular level."
+    },
+    {
+      question: "What is carrying capacity in ecology?",
+      options: ["Amount an animal can carry", "Maximum population size an environment can sustain", "Energy in ecosystem", "Number of species", "Biomass of producers"],
+      correct: 1,
+      explanation: "Carrying capacity is the maximum population size of a species that an environment can sustain indefinitely given the available resources (food, water, shelter, space). Populations tend to fluctuate around carrying capacity. When populations exceed it, resources become depleted, leading to decline through increased death rates or reduced birth rates."
+    }
+  ];
+
+  // Shuffle array function
+  function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  // Select 15 random questions
+  const selectedQuestions = shuffleArray(questionBank).slice(0, 15);
+  const correctAnswers = {};
+  const explanations = {};
+
+  // Generate quiz HTML
+  const quizContainer = document.getElementById('quizContainer');
+  selectedQuestions.forEach((q, index) => {
+    const questionNum = index + 1;
+    const questionId = `q${questionNum}`;
+    
+    // Store correct answer and explanation
+    correctAnswers[questionId] = q.correct;
+    explanations[questionId] = q.explanation;
+    
+    // Shuffle options with correct answer tracking
+    const optionsWithIndex = q.options.map((opt, idx) => ({ text: opt, originalIndex: idx }));
+    const shuffledOptions = shuffleArray(optionsWithIndex);
+    
+    // Find new position of correct answer
+    const newCorrectIndex = shuffledOptions.findIndex(opt => opt.originalIndex === q.correct);
+    correctAnswers[questionId] = newCorrectIndex;
+    
+    // Create question HTML
+    const questionHTML = `
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500 quiz-question">
+        <h3 class="text-2xl font-bold mb-4 text-gray-800">Question ${questionNum}</h3>
+        <p class="text-lg text-gray-700 mb-6">${q.question}</p>
+        <div class="space-y-3">
+          ${shuffledOptions.map((opt, optIndex) => `
+            <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+              <input type="radio" name="${questionId}" value="${optIndex}" class="mt-1">
+              <span class="text-gray-700">${opt.text}</span>
+            </label>
+          `).join('')}
+        </div>
+        <div class="feedback mt-4 hidden"></div>
+      </div>
+    `;
+    
+    quizContainer.innerHTML += questionHTML;
+  });
+
+  lucide.createIcons();
+
+  // Submit button handler
+  document.getElementById('submitQuiz').addEventListener('click', () => {
+    let score = 0;
+    let answered = 0;
+    
+    const questions = document.querySelectorAll('.quiz-question');
+    
+    questions.forEach((question, index) => {
+      const questionId = `q${index + 1}`;
+      const selected = question.querySelector(`input[name="${questionId}"]:checked`);
+      const feedback = question.querySelector('.feedback');
+      
+      if (selected) {
+        answered++;
+        const selectedValue = parseInt(selected.value);
+        const isCorrect = selectedValue === correctAnswers[questionId];
+        
+        if (isCorrect) {
+          score++;
+          question.classList.remove('border-red-500', 'border-yellow-500');
+          question.classList.add('border-green-500');
+          feedback.innerHTML = `
+            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <p class="font-semibold text-green-800 mb-2">✓ Correct!</p>
+              <p class="text-green-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        } else {
+          question.classList.remove('border-green-500', 'border-yellow-500');
+          question.classList.add('border-red-500');
+          feedback.innerHTML = `
+            <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded">
+              <p class="font-semibold text-red-800 mb-2">✗ Incorrect</p>
+              <p class="text-red-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        }
+        
+        feedback.classList.remove('hidden');
+      } else {
+        question.classList.remove('border-green-500', 'border-red-500');
+        question.classList.add('border-yellow-500');
+        feedback.innerHTML = `
+          <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+            <p class="font-semibold text-yellow-800">Question not answered</p>
+          </div>
+        `;
+        feedback.classList.remove('hidden');
+      }
+    });
+    
+    const percentage = answered > 0 ? Math.round((score / 15) * 100) : 0;
+    const resultDiv = document.getElementById('quizResults');
+    const scoreDisplay = document.getElementById('scoreDisplay');
+    
+    let gradeColor = 'text-red-600';
+    let message = 'Keep studying!';
+    
+    if (percentage >= 90) {
+      gradeColor = 'text-green-600';
+      message = 'Excellent! You have mastered this material!';
+    } else if (percentage >= 80) {
+      gradeColor = 'text-blue-600';
+      message = 'Great job! You have a strong understanding!';
+    } else if (percentage >= 70) {
+      gradeColor = 'text-yellow-600';
+      message = 'Good work! Review the explanations to improve.';
+    } else if (percentage >= 60) {
+      gradeColor = 'text-orange-600';
+      message = 'Fair. Consider reviewing the material more thoroughly.';
+    }
+    
+    scoreDisplay.innerHTML = `
+      <div class="text-center">
+        <div class="text-6xl font-bold ${gradeColor} mb-4">${percentage}%</div>
+        <p class="text-2xl text-gray-700 mb-2">${score} out of 15 correct</p>
+        <p class="text-xl text-gray-600 mb-6">${message}</p>
+      </div>
+    `;
+    
+    resultDiv.classList.remove('hidden');
+    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+</script>
+
+</body>
+</html>
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 2</h3>
+      <p class="text-lg text-gray-700 mb-6">Which organelle is responsible for producing ATP (energy) in the cell?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="a" class="mt-1">
+          <span class="text-gray-700">Nucleus</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="b" class="mt-1">
+          <span class="text-gray-700">Ribosome</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="c" class="mt-1">
+          <span class="text-gray-700">Mitochondria</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="d" class="mt-1">
+          <span class="text-gray-700">Golgi apparatus</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 3</h3>
+      <p class="text-lg text-gray-700 mb-6">What process do plants use to convert sunlight into chemical energy?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="a" class="mt-1">
+          <span class="text-gray-700">Cellular respiration</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="b" class="mt-1">
+          <span class="text-gray-700">Photosynthesis</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="c" class="mt-1">
+          <span class="text-gray-700">Fermentation</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="d" class="mt-1">
+          <span class="text-gray-700">Transpiration</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 4</h3>
+      <p class="text-lg text-gray-700 mb-6">How many chromosomes do humans typically have in each somatic (body) cell?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="a" class="mt-1">
+          <span class="text-gray-700">23</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="b" class="mt-1">
+          <span class="text-gray-700">46</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="c" class="mt-1">
+          <span class="text-gray-700">92</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="d" class="mt-1">
+          <span class="text-gray-700">22</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 5</h3>
+      <p class="text-lg text-gray-700 mb-6">What is DNA?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="a" class="mt-1">
+          <span class="text-gray-700">A type of protein</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="b" class="mt-1">
+          <span class="text-gray-700">The molecule that carries genetic information</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="c" class="mt-1">
+          <span class="text-gray-700">A type of carbohydrate</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="d" class="mt-1">
+          <span class="text-gray-700">An energy storage molecule</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 6</h3>
+      <p class="text-lg text-gray-700 mb-6">Which of the following is NOT a characteristic of all living organisms?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="a" class="mt-1">
+          <span class="text-gray-700">Ability to reproduce</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="b" class="mt-1">
+          <span class="text-gray-700">Ability to move from place to place</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="c" class="mt-1">
+          <span class="text-gray-700">Ability to respond to stimuli</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="d" class="mt-1">
+          <span class="text-gray-700">Ability to maintain homeostasis</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 7</h3>
+      <p class="text-lg text-gray-700 mb-6">What is evolution?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="a" class="mt-1">
+          <span class="text-gray-700">The growth of an organism over its lifetime</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="b" class="mt-1">
+          <span class="text-gray-700">Change in the inherited characteristics of populations over time</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="c" class="mt-1">
+          <span class="text-gray-700">The process of cell division</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="d" class="mt-1">
+          <span class="text-gray-700">The movement of organisms to new environments</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 8</h3>
+      <p class="text-lg text-gray-700 mb-6">In an ecosystem, organisms that produce their own food are called:</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="a" class="mt-1">
+          <span class="text-gray-700">Consumers</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="b" class="mt-1">
+          <span class="text-gray-700">Decomposers</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="c" class="mt-1">
+          <span class="text-gray-700">Producers</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="d" class="mt-1">
+          <span class="text-gray-700">Predators</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 9</h3>
+      <p class="text-lg text-gray-700 mb-6">What is the function of ribosomes in a cell?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="a" class="mt-1">
+          <span class="text-gray-700">DNA replication</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="b" class="mt-1">
+          <span class="text-gray-700">Protein synthesis</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="c" class="mt-1">
+          <span class="text-gray-700">Energy production</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="d" class="mt-1">
+          <span class="text-gray-700">Waste removal</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 10</h3>
+      <p class="text-lg text-gray-700 mb-6">Which process involves the division of a cell's nucleus?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="a" class="mt-1">
+          <span class="text-gray-700">Cytokinesis</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="b" class="mt-1">
+          <span class="text-gray-700">Mitosis</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="c" class="mt-1">
+          <span class="text-gray-700">Osmosis</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="d" class="mt-1">
+          <span class="text-gray-700">Diffusion</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-green-600 text-white text-lg font-semibold rounded-lg hover:bg-green-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="results" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div id="answerReview" class="space-y-4"></div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="biology.html" class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Back to Biology
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Quiz Logic
+  const correctAnswers = {
+    q1: 'b',
+    q2: 'c',
+    q3: 'b',
+    q4: 'b',
+    q5: 'b',
+    q6: 'b',
+    q7: 'b',
+    q8: 'c',
+    q9: 'b',
+    q10: 'b'
+  };
+
+  const explanations = {
+    q1: 'The cell is the basic unit of life. All living organisms are made up of one or more cells, which are the smallest units that can carry out all the processes of life.',
+    q2: 'Mitochondria are the "powerhouses" of the cell, responsible for producing ATP through cellular respiration. They convert glucose and oxygen into usable energy.',
+    q3: 'Photosynthesis is the process by which plants, algae, and some bacteria convert light energy (usually from the sun) into chemical energy stored in glucose molecules.',
+    q4: 'Humans have 46 chromosomes in each somatic cell, arranged in 23 pairs. Sex cells (gametes) have 23 chromosomes, which is half the number.',
+    q5: 'DNA (deoxyribonucleic acid) is the molecule that carries genetic information in all living organisms. It contains instructions for building and maintaining an organism.',
+    q6: 'Not all living organisms can move from place to place. Plants, for example, are alive but remain stationary. However, all living things reproduce, respond to stimuli, and maintain homeostasis.',
+    q7: 'Evolution is the change in inherited characteristics of biological populations over successive generations. It occurs through mechanisms like natural selection and genetic drift.',
+    q8: 'Producers (also called autotrophs) are organisms that produce their own food through photosynthesis or chemosynthesis. Plants, algae, and some bacteria are producers.',
+    q9: 'Ribosomes are cellular structures responsible for protein synthesis. They read mRNA and assemble amino acids into proteins according to the genetic code.',
+    q10: 'Mitosis is the process of nuclear division that produces two identical daughter nuclei. Cytokinesis is the division of the cytoplasm that follows mitosis.'
+  };
+
+  document.getElementById('submitQuiz').addEventListener('click', function() {
+    let score = 0;
+    let totalQuestions = Object.keys(correctAnswers).length;
+    let answerReviewHTML = '';
+
+    // Check each answer
+    for (let question in correctAnswers) {
+      const selected = document.querySelector(`input[name="${question}"]:checked`);
+      const questionDiv = document.querySelector(`input[name="${question}"]`).closest('.quiz-question');
+      const feedbackDiv = questionDiv.querySelector('.feedback');
+      
+      if (selected) {
+        if (selected.value === correctAnswers[question]) {
+          score++;
+          feedbackDiv.innerHTML = `<div class="p-4 bg-green-100 border-l-4 border-green-500 rounded"><p class="font-semibold text-green-800">✓ Correct!</p><p class="text-green-700 mt-2">${explanations[question]}</p></div>`;
+        } else {
+          feedbackDiv.innerHTML = `<div class="p-4 bg-red-100 border-l-4 border-red-500 rounded"><p class="font-semibold text-red-800">✗ Incorrect</p><p class="text-red-700 mt-2">${explanations[question]}</p></div>`;
+        }
+        feedbackDiv.classList.remove('hidden');
+      } else {
+        feedbackDiv.innerHTML = `<div class="p-4 bg-yellow-100 border-l-4 border-yellow-500 rounded"><p class="font-semibold text-yellow-800">⚠ Not answered</p><p class="text-yellow-700 mt-2">${explanations[question]}</p></div>`;
+        feedbackDiv.classList.remove('hidden');
+      }
+    }
+
+    // Calculate percentage
+    let percentage = Math.round((score / totalQuestions) * 100);
+    
+    // Display results
+    let resultColor = percentage >= 70 ? 'text-green-600' : percentage >= 50 ? 'text-yellow-600' : 'text-red-600';
+    let resultMessage = percentage >= 70 ? 'Great job!' : percentage >= 50 ? 'Good effort!' : 'Keep studying!';
+    
+    document.getElementById('scoreDisplay').innerHTML = `
+      <div class="text-6xl font-bold ${resultColor} mb-4">${score}/${totalQuestions}</div>
+      <div class="text-2xl font-semibold text-gray-700">${percentage}%</div>
+      <div class="text-xl text-gray-600 mt-2">${resultMessage}</div>
+    `;
+    
+    document.getElementById('results').classList.remove('hidden');
+    
+    // Scroll to results
+    document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+</script>
+
+</body>
+</html>

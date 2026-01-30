@@ -1,0 +1,120 @@
+.nav-link {
+    font-weight: 500;
+    color: #374151;
+  }
+  
+  .nav-link:hover {
+    color: #2563eb;
+  }
+  
+  .section-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  /* Button hover scale effect */
+  button,
+  a.inline-flex,
+  a.flex,
+  a[class*="bg-"][class*="px-"],
+  a[class*="rounded-lg"] {
+    transition: all 0.2s ease-in-out;
+  }
+
+  button:hover,
+  a.inline-flex:hover,
+  a.flex:hover,
+  a[class*="bg-"][class*="px-"]:hover,
+  a[class*="rounded-lg"]:hover {
+    transform: scale(1.05);
+  }
+
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background: linear-gradient(to bottom right, #1e293b, #0f172a) !important;
+    color: #e2e8f0;
+  }
+
+  body.dark-mode header {
+    background: rgba(15, 23, 42, 0.8) !important;
+    border-color: #334155 !important;
+  }
+
+  body.dark-mode #mobileMenu {
+    background: #1e293b !important;
+  }
+
+  /* Only change text color for navigation links, not all links */
+  body.dark-mode .nav-link {
+    color: #e2e8f0 !important;
+  }
+
+  body.dark-mode h1,
+  body.dark-mode h2,
+  body.dark-mode h3,
+  body.dark-mode h4,
+  body.dark-mode h5,
+  body.dark-mode h6 {
+    color: #e2e8f0 !important;
+  }
+
+  body.dark-mode .text-gray-600,
+  body.dark-mode .text-gray-700,
+  body.dark-mode .text-gray-800 {
+    color: #cbd5e1 !important;
+  }
+
+  /* Dark mode card backgrounds - but preserve gradients */
+  body.dark-mode .bg-white.rounded-xl.shadow-lg {
+    background: #1e293b !important;
+  }
+
+  /* Explicitly preserve gradient backgrounds */
+  body.dark-mode [class*="bg-gradient"] {
+    background-color: transparent !important;
+  }
+
+  body.dark-mode .bg-white\/80 {
+    background: rgba(30, 41, 59, 0.8) !important;
+  }
+
+  body.dark-mode .border-gray-200,
+  body.dark-mode .border {
+    border-color: #334155 !important;
+  }
+
+  body.dark-mode .shadow-lg,
+  body.dark-mode .shadow-xl {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  body.dark-mode footer {
+    background: #0f172a !important;
+  }
+
+  /* Dark mode toggle button */
+  #darkModeToggle,
+  .dark-mode-toggle {
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    border: none;
+    background: transparent;
+  }
+
+  #darkModeToggle:hover,
+  .dark-mode-toggle:hover {
+    background: rgba(59, 130, 246, 0.1);
+  }
+
+  body.dark-mode #darkModeToggle:hover,
+  body.dark-mode .dark-mode-toggle:hover {
+    background: rgba(59, 130, 246, 0.2);
+  }
+
+  body.dark-mode .dark-mode-icon {
+    color: #e2e8f0 !important;
+  }

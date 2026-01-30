@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Typing - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mb-6">
+      <i data-lucide="keyboard" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Typing: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">A comprehensive exploration of touch typing, biomechanics, pedagogy, ergonomics, and performance optimization</p>
+  </div>
+
+  <div class="space-y-10">
+    <!-- Introduction -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Introduction</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Touch typing—the ability to type without looking at the keyboard—is a fundamental skill in the digital age. It merges cognitive processing, motor skill development, muscle memory, ergonomics, and deliberate practice. Mastery of touch typing increases productivity, reduces physical strain, and enables seamless translation of thought to text.</p>
+      <p class="text-gray-700 leading-relaxed text-lg">This analysis examines the neuroscience and biomechanics of typing, evidence-based learning strategies, ergonomic considerations, performance metrics, common obstacles, and connections to broader fields like human-computer interaction and occupational health.</p>
+    </div>
+
+    <!-- Historical Context -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Historical Context</h2>
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Evolution of Keyboards</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Typewriters (1870s):</strong> QWERTY layout invented by Christopher Latham Sholes to reduce mechanical jamming by separating common letter pairs.</li>
+        <li><strong>Alternative Layouts:</strong> Dvorak (1936) and Colemak (2006) designed for efficiency, reduced finger travel, and ergonomics, but QWERTY remains dominant due to network effects and legacy systems.</li>
+        <li><strong>Digital Era:</strong> Computers replaced typewriters, introducing electronic keyboards, membrane and mechanical switches, and programmable layouts.</li>
+        <li><strong>Modern Developments:</strong> Ergonomic split keyboards, ortholinear layouts, capacitive and optical switches, and customizable firmware (QMK).</li>
+      </ul>
+    </div>
+
+    <!-- Biomechanics & Motor Control -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Biomechanics &amp; Motor Control</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Muscle Memory &amp; Procedural Learning</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Typing is a procedural (implicit) motor skill stored in the basal ganglia and cerebellum. With deliberate practice, keystroke sequences become automatized, reducing cognitive load and enabling rapid, unconscious execution. Initial learning requires attention and working memory; with repetition, motor programs consolidate into long-term implicit memory.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Finger Movement Patterns</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Touch typing assigns each finger to specific keys (home row: ASDF JKL;). Fingers move in arcs from the home position, minimizing lateral wrist movement. Stronger fingers (index, middle) handle higher-frequency keys; weaker fingers (ring, pinky) cover less common characters and modifiers (Shift, Enter, Backspace).</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Kinematic Efficiency</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Efficient typing minimizes finger travel distance, hand repositioning, and awkward stretches. Studies show QWERTY requires more same-hand sequences (e.g., "you," "were") than alternatives like Dvorak, impacting speed and fatigue. Optimal layouts distribute load across both hands and alternate hands frequently to allow one hand to prepare while the other strikes.</p>
+    </div>
+
+    <!-- Cognitive Neuroscience of Typing -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Cognitive Neuroscience of Typing</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Neural Pathways</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Language comprehension (Wernicke's area) translates intended message into linguistic forms. Motor planning (premotor and supplementary motor cortex) sequences keystroke commands. Primary motor cortex (M1) sends signals via corticospinal tract to hand/finger muscles. Sensorimotor feedback (proprioception, tactile) from fingers feeds back to somatosensory cortex, enabling error detection and correction.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Chunking &amp; Working Memory</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Expert typists chunk letters into words and phrases, typing entire units as single motor programs rather than individual keystrokes. This reduces working memory load and enables predictive processing. Pre-activation of upcoming keystrokes (coarticulation in typing) allows parallel planning, speeding output.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Attention &amp; Automaticity</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Novices require focused attention on key locations; experts achieve automaticity, freeing cognitive resources for composition and content generation. Dual-task studies show skilled typists can maintain conversations or follow complex instructions while typing, evidence of procedural automatization.</p>
+    </div>
+
+    <!-- Touch Typing Method & Home Row -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Touch Typing Method &amp; Home Row</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Home Row Position</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 leading-relaxed text-lg mb-2"><strong>Left Hand:</strong> A (pinky), S (ring), D (middle), F (index)</p>
+        <p class="text-gray-700 leading-relaxed text-lg mb-2"><strong>Right Hand:</strong> J (index), K (middle), L (ring), ; (pinky)</p>
+        <p class="text-gray-700 leading-relaxed text-lg">Thumbs rest on spacebar. F and J keys have tactile bumps for spatial reference without visual confirmation.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Key Zones by Finger</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Left Pinky:</strong> Q, A, Z, Tab, Caps Lock, Shift (left)</li>
+        <li><strong>Left Ring:</strong> W, S, X</li>
+        <li><strong>Left Middle:</strong> E, D, C</li>
+        <li><strong>Left Index:</strong> R, T, F, G, V, B</li>
+        <li><strong>Right Index:</strong> Y, U, H, J, N, M</li>
+        <li><strong>Right Middle:</strong> I, K, ,</li>
+        <li><strong>Right Ring:</strong> O, L, .</li>
+        <li><strong>Right Pinky:</strong> P, ;, /, [, ], Enter, Shift (right), Backspace</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Proper Posture &amp; Hand Position</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Wrists remain neutral (not bent upward or downward), forearms parallel to floor, elbows at ~90–110°. Fingers curved naturally, striking keys with fingertips. Hands "float" above keyboard with minimal wrist contact to reduce strain.</p>
+    </div>
+
+    <!-- Learning Strategies & Pedagogy -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Learning Strategies &amp; Pedagogy</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Deliberate Practice Principles</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Start Slow, Prioritize Accuracy:</strong> Speed emerges from correct motor patterns. Typing incorrectly fast reinforces bad habits.</li>
+        <li><strong>Incremental Progression:</strong> Begin with home row only, add top row, then bottom row, then numbers and symbols.</li>
+        <li><strong>Spaced Repetition:</strong> Daily short sessions (15–30 min) outperform infrequent marathons. Consolidation occurs during sleep.</li>
+        <li><strong>Feedback &amp; Error Correction:</strong> Immediate correction of mistakes prevents reinforcement of incorrect finger mappings.</li>
+        <li><strong>Avoid Visual Dependence:</strong> Cover keyboard or blank keycaps to force reliance on tactile and proprioceptive cues.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Training Progression</h3>
+      <ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li>Home row drills (asdf jkl;) — establish reference frame.</li>
+        <li>Single-letter reaches from home row (e.g., F→R, J→U).</li>
+        <li>Common digraphs and trigraphs (th, er, ing, ion).</li>
+        <li>Full words and sentences — integrate into linguistic context.</li>
+        <li>Punctuation, capitalization (Shift usage), numbers, symbols.</li>
+        <li>Speed drills and typing tests to push fluency and benchmark progress.</li>
+      </ol>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Software & Tools</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>TypingClub, Keybr.com:</strong> Adaptive lessons, real-time feedback.</li>
+        <li><strong>Monkeytype, 10FastFingers:</strong> Speed tests with customizable word sets.</li>
+        <li><strong>Typing.com:</strong> Structured curriculum for schools and self-learners.</li>
+        <li><strong>Amphetype:</strong> Uses your own text corpus for personalized practice.</li>
+      </ul>
+    </div>
+
+    <!-- Performance Metrics -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Performance Metrics</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Words Per Minute (WPM)</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Standard metric: divide character count by 5 (average word length), then by time in minutes. Formula: WPM = (characters / 5) / minutes. Accounts for spaces and punctuation.</p>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 leading-relaxed text-lg mb-2"><strong>Benchmarks:</strong></p>
+        <ul class="space-y-1 text-gray-700 text-base ml-4">
+          <li>• Beginner: 20–30 WPM</li>
+          <li>• Intermediate: 40–60 WPM</li>
+          <li>• Advanced: 70–90 WPM</li>
+          <li>• Professional typist: 90–120 WPM</li>
+          <li>• Elite/competitive: 120+ WPM (top 1% exceed 150 WPM)</li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Accuracy Rate</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Accuracy = (correct keystrokes / total keystrokes) × 100. Target: ≥95% for productive work; ≥98% for professional standards. Low accuracy negates speed gains due to time spent correcting errors.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Adjusted WPM</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Some tests penalize errors: Adjusted WPM = Raw WPM − (errors × penalty factor). Encourages quality over raw speed.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Keystroke Dynamics</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Advanced analysis tracks dwell time (key press duration) and flight time (interval between keystrokes). Patterns are unique per individual and used in biometric authentication. Variability in timings can indicate cognitive load or fatigue.</p>
+    </div>
+
+    <!-- Ergonomics & Injury Prevention -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Ergonomics &amp; Injury Prevention</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Repetitive Strain Injury (RSI)</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Prolonged, repetitive typing can cause tendonitis, carpal tunnel syndrome, and other musculoskeletal disorders. Risk factors: poor posture, high force, awkward wrist angles, static positioning, insufficient breaks.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Ergonomic Recommendations</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Keyboard Height:</strong> Forearms parallel to floor, wrists neutral or slightly negative tilt.</li>
+        <li><strong>Chair &amp; Desk:</strong> Feet flat, thighs parallel to floor, monitor at eye level ~20–28 inches away.</li>
+        <li><strong>Keyboard Type:</strong> Mechanical switches reduce bottoming-out force; split/tented keyboards align wrists naturally.</li>
+        <li><strong>Wrist Rests:</strong> Use during pauses only—not while typing—to prevent hyperextension.</li>
+        <li><strong>Breaks:</strong> Follow 20-20-20 rule (every 20 min, look 20 ft away for 20 sec) or Pomodoro (25 min work, 5 min break).</li>
+        <li><strong>Stretching:</strong> Wrist flexor/extensor stretches, finger tendon glides, shoulder shrugs.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Alternative Keyboards</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Split Keyboards:</strong> Separate halves reduce ulnar deviation.</li>
+        <li><strong>Tented/Negative Tilt:</strong> Promote pronation-neutral hand position.</li>
+        <li><strong>Ortholinear:</strong> Grid layout reduces finger travel and lateral movement.</li>
+        <li><strong>Columnar Stagger:</strong> Keys aligned to finger lengths (e.g., Ergodox, Kinesis Advantage).</li>
+      </ul>
+    </div>
+
+    <!-- Common Pitfalls & Mistakes -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Common Pitfalls &amp; Mistakes</h2>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li><strong>Looking at Keyboard:</strong> Reinforces visual dependence, slows automatization. Use keyboard covers or blank keycaps.</li>
+        <li><strong>Incorrect Fingering:</strong> Using wrong fingers creates inefficient motor patterns hard to unlearn. Stick to proper finger assignments.</li>
+        <li><strong>Prioritizing Speed Over Accuracy:</strong> Errors disrupt flow and require corrections; accuracy must precede speed.</li>
+        <li><strong>Poor Posture:</strong> Hunching, wrist resting on desk, or awkward angles lead to fatigue and injury.</li>
+        <li><strong>Inconsistent Practice:</strong> Irregular sessions prevent motor consolidation; daily practice is essential.</li>
+        <li><strong>Neglecting Non-Letter Keys:</strong> Numbers, symbols, punctuation require deliberate practice; don't skip them.</li>
+        <li><strong>Tension in Hands:</strong> Gripping or tensing fingers wastes energy and slows recovery; stay relaxed.</li>
+      </ul>
+    </div>
+
+    <!-- Advanced Techniques & Optimization -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Advanced Techniques &amp; Optimization</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Typing Burst Optimization</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Expert typists exhibit "bursts" of rapid keystrokes within words, with brief pauses between words for cognitive planning. Optimizing within-word speed requires practice on common letter sequences (bigrams like "th," "he," "in"; trigrams like "the," "and," "ing").</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Rolling Combinations</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Sequences typed by adjacent fingers in natural rolling motion (e.g., "we," "as," "er" on QWERTY) are faster than alternating-hand or same-finger sequences. Identifying and drilling high-frequency rolls improves fluency.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Keyboard Shortcuts & Text Expansion</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Mastery of shortcuts (Ctrl+C/V, Ctrl+Z, navigation with Home/End/arrows) and text expanders (AutoHotkey, TextExpander, Espanso) amplifies productivity beyond raw typing speed.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Stenography & Chording</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Professional stenographers use phonetic chord keyboards (multiple keys pressed simultaneously) to reach 200–300 WPM. Learning curve is steep but enables real-time transcription (court reporting, live captioning). Open-source steno (Plover software) makes this accessible.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Custom Layouts & Layers</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Programmable keyboards (QMK firmware) allow custom layers (e.g., holding key transforms keyboard into numpad or navigation cluster), reducing hand movement. Personalized layouts optimize for individual usage patterns and language.</p>
+    </div>
+
+    <!-- Applications & Real-World Context -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Applications &amp; Real-World Context</h2>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li><strong>Professional Productivity:</strong> Writers, coders, data entry specialists, transcriptionists depend on high-speed, accurate typing.</li>
+        <li><strong>Education:</strong> Note-taking, essay composition, research; typing fluency supports academic success.</li>
+        <li><strong>Communication:</strong> Email, messaging, collaboration tools—effective typing enables clear, timely communication.</li>
+        <li><strong>Accessibility:</strong> For individuals with motor impairments, alternative input methods (voice, eye-tracking, adaptive keyboards) provide typing equivalence.</li>
+        <li><strong>Competitive Typing:</strong> Online competitions (TypeRacer, Nitro Type) and world records (current record ~300 WPM on specialized text).</li>
+        <li><strong>Biometric Authentication:</strong> Keystroke dynamics used as behavioral biometric for user verification.</li>
+      </ul>
+    </div>
+
+    <!-- Research & Empirical Findings -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Research &amp; Empirical Findings</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Learning Curves</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Studies show steep initial gains in first 20–40 hours of deliberate practice, then diminishing returns. Most learners plateau around 60–80 WPM without targeted advanced training. Breaking plateaus requires focusing on weak digraphs and deliberate slow-fast drills.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Transfer Between Layouts</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Switching from QWERTY to Dvorak/Colemak initially reduces speed ~50–70%, recovering to original proficiency in 2–4 months of daily practice. Interference between layouts is minimal if layouts are used in distinct contexts (e.g., QWERTY at work, Dvorak at home).</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Age & Motor Learning</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Children acquire typing skill faster due to neuroplasticity, but adults can achieve high proficiency with sustained practice. Older adults may require longer to automate but retain skills well once established.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Cognitive Benefits</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Typing fluency reduces cognitive bottleneck in composition, allowing writers to maintain flow and capture thoughts before they fade. Studies link typing proficiency to improved writing quality and productivity in students.</p>
+    </div>
+
+    <!-- Connections to Other Fields -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Connections to Other Fields</h2>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li><strong>Human-Computer Interaction (HCI):</strong> Keyboard design, input methods, usability testing.</li>
+        <li><strong>Motor Learning & Kinesiology:</strong> Skill acquisition, practice theory, biomechanics.</li>
+        <li><strong>Occupational Health:</strong> Ergonomics, RSI prevention, workplace wellness.</li>
+        <li><strong>Cognitive Psychology:</strong> Automaticity, chunking, procedural memory, attention.</li>
+        <li><strong>Linguistics & Natural Language Processing:</strong> Letter/word frequency analysis informs keyboard layout optimization.</li>
+        <li><strong>Assistive Technology:</strong> Adaptive keyboards, speech recognition, alternative input modalities for disabilities.</li>
+      </ul>
+    </div>
+
+    <!-- Practical Exercises & Drills -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Practical Exercises &amp; Drills</h2>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Home Row Drill</p>
+        <p class="text-gray-700 font-mono text-sm">asdf jkl; asdf jkl; asdf jkl;</p>
+        <p class="text-gray-700 font-mono text-sm">ff jj dd kk ss ll aa ;;</p>
+        <p class="text-gray-700 text-sm mt-2">Repeat until fluid, no hesitation, no looking.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Common Bigrams</p>
+        <p class="text-gray-700 font-mono text-sm">the and ing ion tion you that with have this</p>
+        <p class="text-gray-700 text-sm mt-2">Practice high-frequency combinations to build chunking.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Weak Finger Drill</p>
+        <p class="text-gray-700 font-mono text-sm">aqz pqz ; / [[ ]] ppp aaa zzz</p>
+        <p class="text-gray-700 text-sm mt-2">Target pinky fingers, which are often undertrained.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Speed Burst Drill</p>
+        <p class="text-gray-700 text-sm mb-2">1. Type a short, familiar word (e.g., "the") as fast as possible for 30 seconds.</p>
+        <p class="text-gray-700 text-sm">2. Gradually increase to longer words and phrases.</p>
+        <p class="text-gray-700 text-sm mt-2">Goal: push peak speed in controlled bursts, then sustain in sentences.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Accuracy Check</p>
+        <p class="text-gray-700 text-sm">Type a paragraph from a book at half your normal speed, aiming for 100% accuracy. Repeat daily to reinforce correct motor patterns.</p>
+      </div>
+    </div>
+
+    <!-- Further Reading & Resources -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Further Reading &amp; Resources</h2>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg">
+        <li><strong>Books:</strong> "The Typing of the Dead" (game-based learning); "Peak: Secrets from the New Science of Expertise" (Ericsson & Pool) for deliberate practice principles.</li>
+        <li><strong>Research Papers:</strong> Studies on keystroke dynamics, motor learning, ergonomic interventions (search PubMed, ACM Digital Library).</li>
+        <li><strong>Online Platforms:</strong> Keybr.com, TypingClub, Monkeytype, TypeRacer, 10FastFingers.</li>
+        <li><strong>Communities:</strong> r/MechanicalKeyboards, r/typing, keyboard.university, Typing Discord servers.</li>
+        <li><strong>Ergonomics:</strong> OSHA ergonomic guidelines, NIOSH lifting equation, Cornell ergonomics resources.</li>
+        <li><strong>Alternative Layouts:</strong> Colemak.com, Dvorak-keyboard.com, Workman layout, MTGAP.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Diagrams & Visualizations -->
+  <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500 mt-10">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">Diagrams &amp; Visualizations</h2>
+    
+    <div class="space-y-8">
+      <!-- QWERTY Keyboard Layout with Finger Assignments -->
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">QWERTY Layout — Finger Assignments</h3>
+        <svg viewBox="0 0 800 280" class="w-full rounded border bg-white" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="QWERTY keyboard with finger zones">
+          <!-- Define colors for each finger -->
+          <defs>
+            <style>
+              .pinky-l { fill: #fecaca; stroke: #dc2626; }
+              .ring-l { fill: #fed7aa; stroke: #ea580c; }
+              .middle-l { fill: #fef08a; stroke: #ca8a04; }
+              .index-l { fill: #bbf7d0; stroke: #16a34a; }
+              .index-r { fill: #bfdbfe; stroke: #2563eb; }
+              .middle-r { fill: #ddd6fe; stroke: #7c3aed; }
+              .ring-r { fill: #fbcfe8; stroke: #db2777; }
+              .pinky-r { fill: #fecaca; stroke: #dc2626; }
+              .key { stroke-width: 2; rx: 4; }
+              .key-text { font-family: monospace; font-size: 14px; font-weight: bold; text-anchor: middle; fill: #1f2937; }
+            </style>
+          </defs>
+
+          <!-- Number Row -->
+          <rect class="key pinky-l" x="10" y="10" width="40" height="40" />
+          <text class="key-text" x="30" y="35">1</text>
+
+          <rect class="key pinky-l" x="55" y="10" width="40" height="40" />
+          <text class="key-text" x="75" y="35">2</text>
+
+          <rect class="key middle-l" x="100" y="10" width="40" height="40" />
+          <text class="key-text" x="120" y="35">3</text>
+
+          <rect class="key index-l" x="145" y="10" width="40" height="40" />
+          <text class="key-text" x="165" y="35">4</text>
+
+          <rect class="key index-l" x="190" y="10" width="40" height="40" />
+          <text class="key-text" x="210" y="35">5</text>
+
+          <rect class="key index-r" x="235" y="10" width="40" height="40" />
+          <text class="key-text" x="255" y="35">6</text>
+
+          <rect class="key index-r" x="280" y="10" width="40" height="40" />
+          <text class="key-text" x="300" y="35">7</text>
+
+          <rect class="key middle-r" x="325" y="10" width="40" height="40" />
+          <text class="key-text" x="345" y="35">8</text>
+
+          <rect class="key ring-r" x="370" y="10" width="40" height="40" />
+          <text class="key-text" x="390" y="35">9</text>
+
+          <rect class="key pinky-r" x="415" y="10" width="40" height="40" />
+          <text class="key-text" x="435" y="35">0</text>
+
+          <!-- Top Row (QWERTY) -->
+          <rect class="key pinky-l" x="10" y="60" width="40" height="40" />
+          <text class="key-text" x="30" y="85">Q</text>
+
+          <rect class="key ring-l" x="55" y="60" width="40" height="40" />
+          <text class="key-text" x="75" y="85">W</text>
+
+          <rect class="key middle-l" x="100" y="60" width="40" height="40" />
+          <text class="key-text" x="120" y="85">E</text>
+
+          <rect class="key index-l" x="145" y="60" width="40" height="40" />
+          <text class="key-text" x="165" y="85">R</text>
+
+          <rect class="key index-l" x="190" y="60" width="40" height="40" />
+          <text class="key-text" x="210" y="85">T</text>
+
+          <rect class="key index-r" x="235" y="60" width="40" height="40" />
+          <text class="key-text" x="255" y="85">Y</text>
+
+          <rect class="key index-r" x="280" y="60" width="40" height="40" />
+          <text class="key-text" x="300" y="85">U</text>
+
+          <rect class="key middle-r" x="325" y="60" width="40" height="40" />
+          <text class="key-text" x="345" y="85">I</text>
+
+          <rect class="key ring-r" x="370" y="60" width="40" height="40" />
+          <text class="key-text" x="390" y="85">O</text>
+
+          <rect class="key pinky-r" x="415" y="60" width="40" height="40" />
+          <text class="key-text" x="435" y="85">P</text>
+
+          <!-- Home Row (ASDF JKL;) -->
+          <rect class="key pinky-l" x="10" y="110" width="40" height="40" style="fill: #fca5a5; stroke: #dc2626; stroke-width: 3;" />
+          <text class="key-text" x="30" y="135" style="font-weight: bold;">A</text>
+
+          <rect class="key ring-l" x="55" y="110" width="40" height="40" style="fill: #fdba74; stroke: #ea580c; stroke-width: 3;" />
+          <text class="key-text" x="75" y="135" style="font-weight: bold;">S</text>
+
+          <rect class="key middle-l" x="100" y="110" width="40" height="40" style="fill: #fde047; stroke: #ca8a04; stroke-width: 3;" />
+          <text class="key-text" x="120" y="135" style="font-weight: bold;">D</text>
+
+          <rect class="key index-l" x="145" y="110" width="40" height="40" style="fill: #86efac; stroke: #16a34a; stroke-width: 3;" />
+          <text class="key-text" x="165" y="135" style="font-weight: bold;">F</text>
+          <circle cx="165" cy="145" r="3" fill="#16a34a" />
+
+          <rect class="key index-l" x="190" y="110" width="40" height="40" style="fill: #bbf7d0; stroke: #16a34a; stroke-width: 2;" />
+          <text class="key-text" x="210" y="135">G</text>
+
+          <rect class="key index-r" x="235" y="110" width="40" height="40" style="fill: #bfdbfe; stroke: #2563eb; stroke-width: 2;" />
+          <text class="key-text" x="255" y="135">H</text>
+
+          <rect class="key index-r" x="280" y="110" width="40" height="40" style="fill: #93c5fd; stroke: #2563eb; stroke-width: 3;" />
+          <text class="key-text" x="300" y="135" style="font-weight: bold;">J</text>
+          <circle cx="300" cy="145" r="3" fill="#2563eb" />
+
+          <rect class="key middle-r" x="325" y="110" width="40" height="40" style="fill: #c4b5fd; stroke: #7c3aed; stroke-width: 3;" />
+          <text class="key-text" x="345" y="135" style="font-weight: bold;">K</text>
+
+          <rect class="key ring-r" x="370" y="110" width="40" height="40" style="fill: #f9a8d4; stroke: #db2777; stroke-width: 3;" />
+          <text class="key-text" x="390" y="135" style="font-weight: bold;">L</text>
+
+          <rect class="key pinky-r" x="415" y="110" width="40" height="40" style="fill: #fca5a5; stroke: #dc2626; stroke-width: 3;" />
+          <text class="key-text" x="435" y="135" style="font-weight: bold;">;</text>
+
+          <!-- Bottom Row (ZXCV) -->
+          <rect class="key pinky-l" x="10" y="160" width="40" height="40" />
+          <text class="key-text" x="30" y="185">Z</text>
+
+          <rect class="key ring-l" x="55" y="160" width="40" height="40" />
+          <text class="key-text" x="75" y="185">X</text>
+
+          <rect class="key middle-l" x="100" y="160" width="40" height="40" />
+          <text class="key-text" x="120" y="185">C</text>
+
+          <rect class="key index-l" x="145" y="160" width="40" height="40" />
+          <text class="key-text" x="165" y="185">V</text>
+
+          <rect class="key index-l" x="190" y="160" width="40" height="40" />
+          <text class="key-text" x="210" y="185">B</text>
+
+          <rect class="key index-r" x="235" y="160" width="40" height="40" />
+          <text class="key-text" x="255" y="185">N</text>
+
+          <rect class="key index-r" x="280" y="160" width="40" height="40" />
+          <text class="key-text" x="300" y="185">M</text>
+
+          <rect class="key middle-r" x="325" y="160" width="40" height="40" />
+          <text class="key-text" x="345" y="185">,</text>
+
+          <rect class="key ring-r" x="370" y="160" width="40" height="40" />
+          <text class="key-text" x="390" y="185">.</text>
+
+          <rect class="key pinky-r" x="415" y="160" width="40" height="40" />
+          <text class="key-text" x="435" y="185">/</text>
+
+          <!-- Spacebar -->
+          <rect class="key" x="120" y="210" width="230" height="40" fill="#e5e7eb" stroke="#6b7280" stroke-width="2" />
+          <text class="key-text" x="235" y="235">SPACE (Thumbs)</text>
+
+          <!-- Legend -->
+          <text x="500" y="30" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1f2937">Finger Zones:</text>
+          <rect x="500" y="45" width="30" height="20" class="pinky-l" />
+          <text x="535" y="60" font-family="sans-serif" font-size="13" fill="#374151">Left Pinky</text>
+
+          <rect x="500" y="70" width="30" height="20" class="ring-l" />
+          <text x="535" y="85" font-family="sans-serif" font-size="13" fill="#374151">Left Ring</text>
+
+          <rect x="500" y="95" width="30" height="20" class="middle-l" />
+          <text x="535" y="110" font-family="sans-serif" font-size="13" fill="#374151">Left Middle</text>
+
+          <rect x="500" y="120" width="30" height="20" class="index-l" />
+          <text x="535" y="135" font-family="sans-serif" font-size="13" fill="#374151">Left Index</text>
+
+          <rect x="500" y="145" width="30" height="20" class="index-r" />
+          <text x="535" y="160" font-family="sans-serif" font-size="13" fill="#374151">Right Index</text>
+
+          <rect x="500" y="170" width="30" height="20" class="middle-r" />
+          <text x="535" y="185" font-family="sans-serif" font-size="13" fill="#374151">Right Middle</text>
+
+          <rect x="500" y="195" width="30" height="20" class="ring-r" />
+          <text x="535" y="210" font-family="sans-serif" font-size="13" fill="#374151">Right Ring</text>
+
+          <rect x="500" y="220" width="30" height="20" class="pinky-r" />
+          <text x="535" y="235" font-family="sans-serif" font-size="13" fill="#374151">Right Pinky</text>
+        </svg>
+        <p class="text-gray-600 text-sm mt-3">Home row keys (A S D F / J K L ;) are highlighted with thicker borders. F and J have tactile bumps (dots).</p>
+      </div>
+
+      <!-- WPM Progress Chart -->
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Typical Learning Curve — WPM Over Time</h3>
+        <svg viewBox="0 0 600 300" class="w-full rounded border bg-white" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="typing speed learning curve">
+          <!-- Axes -->
+          <line x1="50" y1="250" x2="550" y2="250" stroke="#374151" stroke-width="2" />
+          <line x1="50" y1="250" x2="50" y2="30" stroke="#374151" stroke-width="2" />
+
+          <!-- Y-axis labels -->
+          <text x="20" y="255" font-size="12" fill="#6b7280">0</text>
+          <text x="15" y="205" font-size="12" fill="#6b7280">20</text>
+          <text x="15" y="155" font-size="12" fill="#6b7280">40</text>
+          <text x="15" y="105" font-size="12" fill="#6b7280">60</text>
+          <text x="15" y="55" font-size="12" fill="#6b7280">80</text>
+
+          <!-- X-axis labels -->
+          <text x="45" y="270" font-size="12" fill="#6b7280">0</text>
+          <text x="140" y="270" font-size="12" fill="#6b7280">10</text>
+          <text x="240" y="270" font-size="12" fill="#6b7280">20</text>
+          <text x="340" y="270" font-size="12" fill="#6b7280">30</text>
+          <text x="440" y="270" font-size="12" fill="#6b7280">40</text>
+          <text x="530" y="270" font-size="12" fill="#6b7280">50</text>
+
+          <!-- Axis titles -->
+          <text x="280" y="295" font-size="14" font-weight="bold" fill="#1f2937" text-anchor="middle">Practice Hours</text>
+          <text x="25" y="140" font-size="14" font-weight="bold" fill="#1f2937" text-anchor="middle" transform="rotate(-90 25 140)">WPM</text>
+
+          <!-- Learning curve path -->
+          <path d="M 50 250 Q 150 150, 250 100 T 550 60" stroke="#6366f1" stroke-width="3" fill="none" />
+
+          <!-- Data points -->
+          <circle cx="50" cy="250" r="4" fill="#6366f1" />
+          <circle cx="150" cy="180" r="4" fill="#6366f1" />
+          <circle cx="250" cy="120" r="4" fill="#6366f1" />
+          <circle cx="350" cy="85" r="4" fill="#6366f1" />
+          <circle cx="450" cy="68" r="4" fill="#6366f1" />
+          <circle cx="550" cy="60" r="4" fill="#6366f1" />
+
+          <!-- Annotations -->
+          <text x="160" y="175" font-size="11" fill="#4f46e5">Rapid gains</text>
+          <text x="360" y="75" font-size="11" fill="#4f46e5">Plateau zone</text>
+          <line x1="355" y1="78" x2="345" y2="85" stroke="#4f46e5" stroke-width="1" />
+        </svg>
+        <p class="text-gray-600 text-sm mt-3">Initial practice yields rapid WPM gains; progress slows as skill matures. Breaking plateaus requires targeted drills.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="typing-quiz.html" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to More Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

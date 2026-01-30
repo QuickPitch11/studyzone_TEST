@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Textbooks | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+    <a href="index.html" class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition md:hidden">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span class="hidden md:inline">Back to Home</span>
+    </a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mb-6">
+      <i data-lucide="book" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Textbooks</h1>
+    <p class="text-xl text-gray-600">Recommended textbooks and references for each subject area.</p>
+  </div>
+
+  <div class="space-y-8">
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-green-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Mathematics</h2>
+      <ul class="list-disc list-inside text-gray-700">
+        <li><a href="https://en.wikipedia.org/wiki/T._M._Apostol" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Apostol, T. M. — "Calculus" (Vol. 1 &amp; 2)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Michael_Spivak" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Spivak, M. — "Calculus" (rigorous foundations)</a></li>
+        <li><a href="https://www.cengage.com/c/calculus-early-transcendentals-8e-stewart/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Stewart, J. — "Calculus: Early Transcendentals" (applied focus)</a></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-green-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Biology & Life Sciences</h2>
+      <ul class="list-disc list-inside text-gray-700">
+        <li><a href="https://en.wikipedia.org/wiki/Neil_A._Campbell_(biologist)" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Campbell, N. A. — "Biology"</a></li>
+        <li><a href="https://www.garlandscience.com/product/isbn/9780815344322" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Alberts, B. — "Molecular Biology of the Cell"</a></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-green-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Chemistry</h2>
+      <ul class="list-disc list-inside text-gray-700">
+        <li><a href="https://global.oup.com/academic/product/physical-chemistry-9780198769866" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Atkins, P. — "Physical Chemistry"</a></li>
+        <li><a href="https://www.cengage.com/c/zumdahl-chemistry-10e/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Zumdahl, S. — "Chemistry"</a></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-green-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Physics</h2>
+      <ul class="list-disc list-inside text-gray-700">
+        <li><a href="https://cdn.discordapp.com/attachments/1396268748196937781/1461463654632263825/Fundamentals_of_Heat_and_Mass_Transfer_by_Theodore_L._Bergman_Adrienne_S._Lavine_Frank_P._Incropera_David_P._DeWitt_z-lib.org.pdf?ex=696d4897&is=696bf717&hm=cbd196b7562d8f4a73db67806a84972c032492116d7102b80e4009ac9bd16041&" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Bergman, T. L., Lavine, A. S., Incropera, F. P., DeWitt, D. P. — "Fundamentals of Heat and Mass Transfer"</a></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-green-500">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Psychology & Research</h2>
+      <ul class="list-disc list-inside text-gray-700">
+        <li><a href="https://en.wikipedia.org/wiki/David_G._Myers" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Myers, D. G. — "Psychology"</a></li>
+        <li><a href="https://apastyle.apa.org/products/publication-manual-7th-edition" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">APA — "Publication Manual of the American Psychological Association" (7th ed.)</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="index.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Home
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

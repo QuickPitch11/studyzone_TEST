@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Study Planner Learning Tools - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <!-- Back Button -->
+  <div class="mb-6">
+    <a href="college-learning-tools.html" class="inline-flex items-center gap-2 px-4 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back to Learning Tools</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="flex justify-center mb-4">
+      <div class="p-4 bg-gradient-to-br from-violet-600 to-purple-600 rounded-full">
+        <i data-lucide="calendar" class="w-16 h-16 text-white"></i>
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Study Planner Learning Tools</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Organize your academic life with planners, schedulers, and assignment trackers
+    </p>
+  </div>
+
+  <!-- Digital Study Planners -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-violet-50 to-purple-50 rounded-xl shadow-lg p-8 border-l-4 border-violet-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="calendar-check" class="w-7 h-7 text-violet-600"></i>
+        Digital Study Planners
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.notion.so/templates/student-planner" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">Notion Student Planner ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">All-in-one academic organization system</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Course management</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Assignment tracking</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Grade calculator</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.mystudylife.com/" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">My Study Life ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Cross-platform planner for students</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Class schedules</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Exam countdown</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Cloud sync</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.studysmarter.de/en/" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">StudySmarter ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AI-powered study planning app</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Smart study plans</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Progress analytics</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Flashcard integration</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.google.com/calendar" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">Google Calendar ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Schedule classes and study sessions</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Color-coded events</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Reminders</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Mobile access</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Task & Assignment Trackers -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="clipboard-check" class="w-7 h-7 text-blue-600"></i>
+        Task & Assignment Trackers
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://todoist.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Todoist ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Powerful task management system</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Project organization</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Priority levels</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Productivity tracking</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://trello.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Trello ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Visual board-based task organizer</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Kanban boards</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Drag-and-drop</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Collaboration tools</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://asana.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Asana ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Project and task management platform</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Multiple views</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Deadline tracking</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Team features</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.any.do/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Any.do ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Simple to-do list and task manager</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Daily planner</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Voice entry</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Calendar integration</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Semester & Course Planners -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl shadow-lg p-8 border-l-4 border-emerald-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="book-marked" class="w-7 h-7 text-emerald-600"></i>
+        Semester & Course Planners
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.coursedog.com/" target="_blank" class="text-emerald-600 hover:text-emerald-700 hover:underline">Coursicle ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">College course scheduling assistant</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Course tracking</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Availability alerts</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Schedule builder</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.myhomeworkapp.com/" target="_blank" class="text-emerald-600 hover:text-emerald-700 hover:underline">myHomework ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Student planner for homework and classes</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Assignment reminders</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Class schedules</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Widget support</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.powerplanner.net/" target="_blank" class="text-emerald-600 hover:text-emerald-700 hover:underline">Power Planner ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free planner designed for students</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>GPA calculator</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Grade tracking</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Live tiles</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.schooltraq.com/" target="_blank" class="text-emerald-600 hover:text-emerald-700 hover:underline">SchoolTraq ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Academic planner and grade tracker</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Course planning</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Grade analysis</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Calendar views</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Printable Planner Templates -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl shadow-lg p-8 border-l-4 border-amber-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="printer" class="w-7 h-7 text-amber-600"></i>
+        Printable Planner Templates
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.canva.com/templates/planners/student/" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">Canva Student Planners ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Customizable printable planner templates</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Design templates</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Easy customization</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>High-quality PDFs</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.vertex42.com/calendars/student-planner.html" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">Vertex42 Student Planner ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free Excel and PDF planner templates</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Weekly layouts</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Assignment trackers</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Completely free</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.101planners.com/student-planner-templates/" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">101 Planners ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Collection of printable student planners</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Multiple formats</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Academic year layouts</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Free downloads</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.teacherspayteachers.com/Browse/Search:student%20planner%20printable" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">Teachers Pay Teachers ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Educational planner resources</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Teacher-designed</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Variety of styles</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Free & paid options</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Habit & Goal Trackers -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-pink-50 to-rose-50 rounded-xl shadow-lg p-8 border-l-4 border-pink-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="target" class="w-7 h-7 text-pink-600"></i>
+        Habit & Goal Trackers
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://habitica.com/" target="_blank" class="text-pink-600 hover:text-pink-700 hover:underline">Habitica ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Gamified habit and productivity tracker</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>RPG-style rewards</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Social features</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Daily habits</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://streaksapp.com/" target="_blank" class="text-pink-600 hover:text-pink-700 hover:underline">Streaks ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Simple habit tracking for iOS</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>12 daily tasks</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Apple Watch support</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Health app integration</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.coach.me/" target="_blank" class="text-pink-600 hover:text-pink-700 hover:underline">Coach.me ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Habit tracking with coaching support</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Community support</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Expert coaching</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Progress tracking</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://loophabits.org/" target="_blank" class="text-pink-600 hover:text-pink-700 hover:underline">Loop Habit Tracker ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Open-source Android habit tracker</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>No ads or tracking</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Detailed statistics</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Completely free</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planning Methods & Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl shadow-lg p-8 border-l-4 border-indigo-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="book-open" class="w-7 h-7 text-indigo-600"></i>
+        Planning Methods & Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://todoist.com/productivity-methods/time-blocking" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Time Blocking Guide ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Complete guide to time blocking technique</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Method explanation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Implementation tips</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Template examples</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/watch?v=W9k_JT6vU-8" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Student Planner Setup ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">How to organize your academic planner</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Video walkthrough</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Setup strategies</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Organization tips</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.bulletjournal.com/pages/learn" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Bullet Journal Method ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Analog planning system for organization</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Official guide</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Student adaptations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Creative layouts</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.reddit.com/r/studytips/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">r/StudyTips ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Community for planning and study advice</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Planning discussions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Student experiences</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Tool recommendations</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links to Related Pages -->
+  <section class="mb-12">
+    <div class="bg-white rounded-xl shadow-lg p-8">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="link" class="w-7 h-7 text-blue-600"></i>
+        Related Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-3 gap-4">
+        <a href="college-learning-tools.html" class="flex items-center gap-3 p-4 bg-gradient-to-r from-violet-50 to-purple-50 rounded-lg border-l-4 border-violet-500 hover:shadow-md transition">
+          <i data-lucide="library" class="w-6 h-6 text-violet-600"></i>
+          <div>
+            <h3 class="font-semibold text-gray-800">All Learning Tools</h3>
+            <p class="text-sm text-gray-600">Browse other study resources</p>
+          </div>
+        </a>
+
+        <a href="study-timer-learning-tools.html" class="flex items-center gap-3 p-4 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-lg border-l-4 border-emerald-500 hover:shadow-md transition">
+          <i data-lucide="clock" class="w-6 h-6 text-emerald-600"></i>
+          <div>
+            <h3 class="font-semibold text-gray-800">Study Timers</h3>
+            <p class="text-sm text-gray-600">Pomodoro & focus tools</p>
+          </div>
+        </a>
+
+        <a href="note-taking-learning-tools.html" class="flex items-center gap-3 p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg border-l-4 border-indigo-500 hover:shadow-md transition">
+          <i data-lucide="notebook" class="w-6 h-6 text-indigo-600"></i>
+          <div>
+            <h3 class="font-semibold text-gray-800">Note Taking</h3>
+            <p class="text-sm text-gray-600">Digital & analog methods</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-white border-t mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <div class="text-center text-gray-600">
+      <p>&copy; 2026 StudyZone. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="script.js"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+</body>
+</html>
