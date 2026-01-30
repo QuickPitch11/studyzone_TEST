@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Anatomy & Physiology Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mb-6">
+      <i data-lucide="heart" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Anatomy & Physiology Quiz</h1>
+    <p class="text-xl text-gray-600">Test your knowledge of body systems, structures, and physiological processes</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Questions will be dynamically generated here -->
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-red-600 text-white text-lg font-semibold rounded-lg hover:bg-red-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="quizResults" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-red-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="anatomy-physiology-analysis.html" class="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition flex items-center gap-2">
+        <i data-lucide="book-open" class="w-5 h-5"></i>
+        Review Material
+      </a>
+      <button onclick="location.reload()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+        Retake Quiz
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="anatomy-physiology.html" class="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Back to Anatomy & Physiology
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Question Bank - 40 questions total
+  const questionBank = [
+    {
+      question: "What are the three main anatomical planes used to describe the body?",
+      options: ["Frontal, transverse, and oblique", "Sagittal, frontal (coronal), and transverse (horizontal)", "Anterior, posterior, and lateral", "Superior, inferior, and medial", "Proximal, distal, and intermediate"],
+      correct: 1,
+      explanation: "The three main anatomical planes are: (1) Sagittal plane - divides body into left and right portions; (2) Frontal/Coronal plane - divides body into anterior (front) and posterior (back) portions; (3) Transverse/Horizontal plane - divides body into superior (upper) and inferior (lower) portions. These planes are essential for describing anatomical structures and medical imaging."
+    },
+    {
+      question: "What does the term 'superior' mean in anatomical terminology?",
+      options: ["Closer to the feet", "Toward the head or upper part of a structure", "Toward the midline of the body", "Away from the body surface", "Closer to the point of attachment"],
+      correct: 1,
+      explanation: "Superior (or cranial) means toward the head or upper part of a structure. For example, the head is superior to the chest. The opposite term is inferior (or caudal), which means toward the feet or lower part. These directional terms are fundamental to describing anatomical positions and relationships."
+    },
+    {
+      question: "How many bones are in the adult human skeleton?",
+      options: ["186", "196", "206", "216", "226"],
+      correct: 2,
+      explanation: "The adult human skeleton contains 206 bones. Interestingly, infants are born with approximately 270 bones, but many fuse together during development. The skeleton is divided into the axial skeleton (80 bones: skull, vertebral column, ribs, sternum) and appendicular skeleton (126 bones: limbs, pectoral girdle, pelvic girdle)."
+    },
+    {
+      question: "What type of bone is the femur classified as?",
+      options: ["Short bone", "Flat bone", "Long bone", "Irregular bone", "Sesamoid bone"],
+      correct: 2,
+      explanation: "The femur (thighbone) is classified as a long bone. Long bones are characterized by being longer than they are wide, having a shaft (diaphysis) and two ends (epiphyses), and containing a medullary cavity filled with bone marrow. Other examples include the humerus, tibia, and radius. Long bones primarily function in support and movement."
+    },
+    {
+      question: "What are the four main types of tissues in the human body?",
+      options: ["Bone, cartilage, blood, and muscle", "Epithelial, connective, muscle, and nervous", "Skeletal, smooth, cardiac, and neural", "Dermis, epidermis, hypodermis, and fascia", "Epithelial, endothelial, mesothelial, and neural"],
+      correct: 1,
+      explanation: "The four main tissue types are: (1) Epithelial tissue - covers body surfaces and lines cavities; (2) Connective tissue - supports and binds other tissues (includes bone, blood, cartilage, adipose); (3) Muscle tissue - produces movement (skeletal, cardiac, smooth); (4) Nervous tissue - transmits electrical signals (neurons and supporting cells). All organs are composed of combinations of these four tissue types."
+    },
+    {
+      question: "What is the primary function of osteoblasts?",
+      options: ["Break down bone tissue", "Build new bone tissue", "Store calcium", "Produce red blood cells", "Form cartilage"],
+      correct: 1,
+      explanation: "Osteoblasts are bone-building cells that synthesize and secrete the organic matrix of bone (osteoid) and promote its mineralization with calcium and phosphate. They are essential for bone formation, growth, and repair. In contrast, osteoclasts break down bone tissue (bone resorption), and osteocytes are mature bone cells that maintain bone tissue."
+    },
+    {
+      question: "Which vertebrae are fused to form the sacrum?",
+      options: ["C1-C5", "T1-T5", "L1-L5", "S1-S5", "Coccygeal vertebrae"],
+      correct: 3,
+      explanation: "The sacrum is formed by the fusion of five sacral vertebrae (S1-S5). This fusion typically occurs during adolescence and early adulthood. The sacrum is a triangular bone located at the base of the spine, between the two hip bones (ilium), and forms the posterior wall of the pelvis. It articulates with L5 above and the coccyx below."
+    },
+    {
+      question: "What are the three types of muscle tissue?",
+      options: ["Voluntary, involuntary, and cardiac", "Skeletal, smooth, and cardiac", "Striated, non-striated, and mixed", "Fast-twitch, slow-twitch, and intermediate", "Flexor, extensor, and rotator"],
+      correct: 1,
+      explanation: "The three types of muscle tissue are: (1) Skeletal muscle - striated, voluntary, attached to bones for movement; (2) Smooth muscle - non-striated, involuntary, found in walls of hollow organs and blood vessels; (3) Cardiac muscle - striated, involuntary, found only in the heart. Each type has unique structural and functional characteristics suited to its specific role."
+    },
+    {
+      question: "What is the functional unit of skeletal muscle contraction?",
+      options: ["Myofibril", "Sarcomere", "Actin filament", "Myosin filament", "Motor unit"],
+      correct: 1,
+      explanation: "The sarcomere is the functional unit of muscle contraction. It's the segment between two Z-lines in a myofibril and contains overlapping thick (myosin) and thin (actin) filaments. During contraction, these filaments slide past each other (sliding filament theory), shortening the sarcomere and thus the entire muscle. Thousands of sarcomeres contracting simultaneously produce muscle movement."
+    },
+    {
+      question: "Which neurotransmitter is released at the neuromuscular junction to stimulate muscle contraction?",
+      options: ["Dopamine", "Serotonin", "Acetylcholine", "Norepinephrine", "GABA"],
+      correct: 2,
+      explanation: "Acetylcholine (ACh) is the neurotransmitter released by motor neurons at the neuromuscular junction. When an action potential reaches the axon terminal, ACh is released into the synaptic cleft, binds to receptors on the muscle fiber membrane (sarcolemma), triggers depolarization, and ultimately leads to muscle contraction. The enzyme acetylcholinesterase quickly breaks down ACh to terminate the signal."
+    },
+    {
+      question: "What is the primary muscle responsible for breathing?",
+      options: ["External intercostals", "Internal intercostals", "Diaphragm", "Rectus abdominis", "Scalene muscles"],
+      correct: 2,
+      explanation: "The diaphragm is the primary muscle of respiration, responsible for about 70-80% of breathing effort at rest. This dome-shaped muscle separates the thoracic and abdominal cavities. During inhalation, the diaphragm contracts and flattens, increasing thoracic volume and decreasing pressure, drawing air into the lungs. The intercostal muscles assist, especially during forced breathing."
+    },
+    {
+      question: "What is the structural and functional unit of the nervous system?",
+      options: ["Synapse", "Axon", "Neuron", "Glial cell", "Dendrite"],
+      correct: 2,
+      explanation: "The neuron is the structural and functional unit of the nervous system. Neurons are specialized cells that transmit electrical and chemical signals throughout the body. A typical neuron consists of a cell body (soma), dendrites (receive signals), and an axon (transmits signals). The human brain contains approximately 86 billion neurons that form complex networks enabling all nervous system functions."
+    },
+    {
+      question: "What are the two main divisions of the nervous system?",
+      options: ["Sympathetic and parasympathetic", "Somatic and autonomic", "Central and peripheral", "Sensory and motor", "Voluntary and involuntary"],
+      correct: 2,
+      explanation: "The nervous system is divided into: (1) Central Nervous System (CNS) - consisting of the brain and spinal cord, which processes information and coordinates responses; (2) Peripheral Nervous System (PNS) - consisting of all nerves outside the CNS that connect it to the rest of the body. The PNS is further subdivided into somatic (voluntary) and autonomic (involuntary) divisions."
+    },
+    {
+      question: "What protective membranes cover the brain and spinal cord?",
+      options: ["Pleura", "Peritoneum", "Meninges", "Pericardium", "Fascia"],
+      correct: 2,
+      explanation: "The meninges are three protective membrane layers covering the brain and spinal cord. From outermost to innermost: (1) Dura mater - tough, fibrous outer layer; (2) Arachnoid mater - middle layer resembling a spider web; (3) Pia mater - thin, delicate inner layer adhering to brain/spinal cord surface. Cerebrospinal fluid (CSF) flows in the subarachnoid space between arachnoid and pia mater, providing cushioning and nutrients."
+    },
+    {
+      question: "Which lobe of the brain is primarily responsible for processing visual information?",
+      options: ["Frontal lobe", "Parietal lobe", "Temporal lobe", "Occipital lobe", "Insular lobe"],
+      correct: 3,
+      explanation: "The occipital lobe, located at the back of the brain, is the primary visual processing center. It contains the visual cortex which receives and interprets visual information from the eyes via the optic nerves. Damage to the occipital lobe can result in various visual deficits including blindness, visual hallucinations, or inability to recognize objects (visual agnosia)."
+    },
+    {
+      question: "What is the function of the myelin sheath?",
+      options: ["Produce neurotransmitters", "Protect neuron cell bodies", "Increase the speed of nerve impulse transmission", "Store nutrients for neurons", "Connect neurons at synapses"],
+      correct: 2,
+      explanation: "The myelin sheath is a fatty insulating layer that wraps around axons, formed by Schwann cells (PNS) or oligodendrocytes (CNS). It increases the speed of electrical signal transmission through saltatory conduction, where action potentials 'jump' between gaps in myelin (nodes of Ranvier). Myelinated axons conduct impulses up to 100 times faster than unmyelinated ones. Myelin damage causes diseases like multiple sclerosis."
+    },
+    {
+      question: "How many chambers does the human heart have?",
+      options: ["Two", "Three", "Four", "Five", "Six"],
+      correct: 2,
+      explanation: "The human heart has four chambers: two atria (upper chambers) and two ventricles (lower chambers). The right atrium receives deoxygenated blood from the body, the right ventricle pumps it to the lungs, the left atrium receives oxygenated blood from the lungs, and the left ventricle pumps it to the body. This four-chamber design enables efficient separation of oxygen-rich and oxygen-poor blood."
+    },
+    {
+      question: "What is the normal resting heart rate for adults?",
+      options: ["40-60 bpm", "60-100 bpm", "100-140 bpm", "140-180 bpm", "180-220 bpm"],
+      correct: 1,
+      explanation: "The normal resting heart rate for adults is 60-100 beats per minute (bpm). Well-trained athletes may have resting rates of 40-60 bpm due to increased cardiac efficiency. Heart rate is influenced by age, fitness level, medications, stress, and hormones. Tachycardia (>100 bpm at rest) and bradycardia (<60 bpm in non-athletes) may indicate underlying conditions requiring medical evaluation."
+    },
+    {
+      question: "What is the largest artery in the human body?",
+      options: ["Pulmonary artery", "Carotid artery", "Femoral artery", "Aorta", "Coronary artery"],
+      correct: 3,
+      explanation: "The aorta is the largest artery in the body, approximately 2.5-3.5 cm in diameter. It emerges from the left ventricle, arches over the heart (aortic arch), descends through the thorax and abdomen, eventually bifurcating into the iliac arteries. The aorta distributes oxygenated blood to all body regions through its major branches and must withstand high pressure from ventricular contractions."
+    },
+    {
+      question: "What is the function of heart valves?",
+      options: ["Generate electrical impulses", "Produce blood cells", "Prevent backflow of blood", "Contract to pump blood", "Store blood between beats"],
+      correct: 2,
+      explanation: "Heart valves prevent backflow of blood, ensuring unidirectional flow through the heart. The four valves are: (1) Tricuspid - between right atrium and ventricle; (2) Pulmonary - between right ventricle and pulmonary artery; (3) Mitral (bicuspid) - between left atrium and ventricle; (4) Aortic - between left ventricle and aorta. Valve dysfunction (stenosis or regurgitation) impairs cardiac efficiency."
+    },
+    {
+      question: "What is cardiac output?",
+      options: ["The force of ventricular contraction", "The volume of blood ejected by the heart per minute", "The electrical activity of the heart", "The pressure in the aorta", "The heart rate multiplied by body weight"],
+      correct: 1,
+      explanation: "Cardiac output (CO) is the volume of blood pumped by each ventricle per minute, typically 4-8 liters/min at rest for adults. It's calculated as: CO = Heart Rate × Stroke Volume. Stroke volume is the amount of blood ejected per beat (~70 ml). Cardiac output increases during exercise (up to 25-30 L/min in athletes) to meet increased oxygen demands."
+    },
+    {
+      question: "What component of blood is responsible for clotting?",
+      options: ["Red blood cells", "White blood cells", "Platelets (thrombocytes)", "Plasma proteins", "Hemoglobin"],
+      correct: 2,
+      explanation: "Platelets (thrombocytes) are cell fragments responsible for blood clotting (hemostasis). When a blood vessel is injured, platelets adhere to the damaged site, activate, and aggregate to form a platelet plug. They also release chemical signals that trigger the coagulation cascade, forming fibrin strands that stabilize the clot. Normal platelet count is 150,000-400,000 per microliter of blood."
+    },
+    {
+      question: "What is the primary function of the respiratory system?",
+      options: ["Filter blood", "Produce hormones", "Exchange gases (oxygen and carbon dioxide)", "Digest food", "Regulate body temperature"],
+      correct: 2,
+      explanation: "The primary function of the respiratory system is gas exchange - bringing oxygen into the body and removing carbon dioxide. Air travels through the nose/mouth → pharynx → larynx → trachea → bronchi → bronchioles → alveoli, where oxygen diffuses into blood and CO₂ diffuses out. The system also helps regulate blood pH, produces sounds for speech, and filters/warms/humidifies inhaled air."
+    },
+    {
+      question: "How many lobes does the right lung have?",
+      options: ["One", "Two", "Three", "Four", "Five"],
+      correct: 2,
+      explanation: "The right lung has three lobes: superior, middle, and inferior, separated by the horizontal and oblique fissures. The left lung has only two lobes (superior and inferior, separated by the oblique fissure) because the heart occupies space on the left side of the thoracic cavity, creating the cardiac notch. The right lung is also slightly larger and shorter than the left."
+    },
+    {
+      question: "What is the alveolar-capillary membrane?",
+      options: ["The lining of the trachea", "The site of gas exchange between air and blood", "The muscle controlling breathing", "The barrier protecting lungs from infection", "The membrane surrounding each lung"],
+      correct: 1,
+      explanation: "The alveolar-capillary membrane (respiratory membrane) is where gas exchange occurs between air in the alveoli and blood in the pulmonary capillaries. This thin membrane (~0.5 micrometers) consists of alveolar epithelium, capillary endothelium, and their fused basement membranes. Its enormous surface area (~70 m²) and minimal thickness enable efficient diffusion of O₂ and CO₂."
+    },
+    {
+      question: "What is tidal volume?",
+      options: ["The total lung capacity", "The volume of air inspired or expired during normal breathing", "The maximum air that can be forcefully exhaled", "The air remaining in lungs after maximal exhalation", "The breathing rate per minute"],
+      correct: 1,
+      explanation: "Tidal volume (TV) is the volume of air inspired or expired during normal, quiet breathing, typically 500 ml in adults (about 6-8 ml/kg body weight). Total lung volumes and capacities include: Vital Capacity (maximum air exhaled after maximum inhalation, ~4500 ml), Residual Volume (air remaining after maximal exhalation, ~1200 ml), and Total Lung Capacity (VC + RV, ~5700 ml)."
+    },
+    {
+      question: "What controls the basic rhythm of breathing?",
+      options: ["Voluntary control only", "The medulla oblongata and pons", "The cerebral cortex", "The vagus nerve alone", "Chemoreceptors in muscles"],
+      correct: 1,
+      explanation: "The medulla oblongata and pons in the brainstem contain respiratory centers that control the basic rhythm of breathing. The medulla's ventral respiratory group generates the respiratory rhythm, while the pons pneumotaxic and apneustic centers modify it. This autonomic control can be temporarily overridden by voluntary (cortical) control. Chemoreceptors detecting CO₂, O₂, and pH provide feedback to adjust breathing rate and depth."
+    },
+    {
+      question: "What is the primary organ of the digestive system?",
+      options: ["Esophagus", "Stomach", "Small intestine", "Large intestine", "Liver"],
+      correct: 2,
+      explanation: "While all organs contribute, the small intestine is considered the primary digestive organ because most chemical digestion and nutrient absorption occurs there. It's approximately 6 meters long with three sections: duodenum (receives secretions from pancreas and liver), jejunum, and ileum. The vast surface area created by circular folds, villi, and microvilli (~200 m²) maximizes nutrient absorption."
+    },
+    {
+      question: "What is peristalsis?",
+      options: ["Chemical breakdown of food", "Absorption of nutrients", "Wave-like muscle contractions moving food through the digestive tract", "Production of digestive enzymes", "Filtering of blood in kidneys"],
+      correct: 2,
+      explanation: "Peristalsis is rhythmic, wave-like contractions of smooth muscle in the walls of hollow organs (especially the digestive tract) that propel contents forward. In the digestive system, circular and longitudinal muscle layers alternate contraction and relaxation, creating waves that move food from esophagus through stomach, intestines, and ultimately to rectum. This process is involuntary and controlled by the enteric nervous system."
+    },
+    {
+      question: "What is the functional unit of the kidney?",
+      options: ["Glomerulus", "Bowman's capsule", "Nephron", "Loop of Henle", "Collecting duct"],
+      correct: 2,
+      explanation: "The nephron is the functional unit of the kidney; each kidney contains about 1 million nephrons. Each nephron consists of a renal corpuscle (glomerulus + Bowman's capsule) where filtration occurs, and a renal tubule (proximal tubule, loop of Henle, distal tubule) where reabsorption and secretion occur. Nephrons filter blood, remove waste, regulate electrolytes and fluid balance, and produce urine."
+    },
+    {
+      question: "What hormone regulates blood calcium levels?",
+      options: ["Insulin", "Thyroid hormone", "Parathyroid hormone (PTH)", "Cortisol", "Aldosterone"],
+      correct: 2,
+      explanation: "Parathyroid hormone (PTH), secreted by the parathyroid glands, is the primary regulator of blood calcium levels. When blood calcium decreases, PTH increases calcium by: (1) stimulating osteoclasts to break down bone and release calcium; (2) increasing calcium reabsorption in kidneys; (3) activating vitamin D to increase intestinal calcium absorption. Calcitonin (from thyroid) opposes PTH, lowering blood calcium when elevated."
+    },
+    {
+      question: "What is the body's largest endocrine gland?",
+      options: ["Pituitary gland", "Thyroid gland", "Adrenal gland", "Pancreas", "Pineal gland"],
+      correct: 1,
+      explanation: "The thyroid gland is the largest endocrine gland, weighing about 20-30 grams and located in the neck anterior to the trachea. It produces thyroid hormones (T3 and T4) that regulate metabolism, growth, and development, and calcitonin which helps regulate calcium levels. Thyroid disorders (hypothyroidism, hyperthyroidism) are common and significantly affect metabolism and overall health."
+    },
+    {
+      question: "What is homeostasis?",
+      options: ["The process of cell division", "The body's ability to maintain stable internal conditions", "The movement of substances across membranes", "The breakdown of nutrients", "The production of hormones"],
+      correct: 1,
+      explanation: "Homeostasis is the body's ability to maintain stable internal conditions despite external changes. This includes regulating temperature (37°C), pH (7.35-7.45), blood pressure, glucose levels, electrolyte balance, and fluid levels. Homeostasis is maintained through negative feedback loops involving sensors (detect changes), control centers (process information), and effectors (produce responses). Disruption of homeostasis leads to disease."
+    },
+    {
+      question: "What is the primary female reproductive hormone?",
+      options: ["Testosterone", "Progesterone", "Estrogen", "FSH", "LH"],
+      correct: 2,
+      explanation: "Estrogen (primarily estradiol) is the primary female reproductive hormone, produced mainly by ovarian follicles. It promotes development of female secondary sexual characteristics, regulates the menstrual cycle, stimulates uterine lining growth, maintains bone density, and affects cardiovascular health. Estrogen works with progesterone (maintains pregnancy and regulates menstrual cycle) in reproductive function. Both are regulated by FSH and LH from the pituitary gland."
+    },
+    {
+      question: "Where does fertilization typically occur?",
+      options: ["Ovary", "Uterus", "Fallopian tube (oviduct)", "Cervix", "Vagina"],
+      correct: 2,
+      explanation: "Fertilization typically occurs in the ampulla (widest section) of the fallopian tube (oviduct). After ovulation, the egg is swept into the fallopian tube by fimbriae. If sperm are present (viable for ~3-5 days), fertilization occurs within 12-24 hours after ovulation. The fertilized egg (zygote) then travels to the uterus over 3-4 days while undergoing cell divisions, arriving as a blastocyst ready for implantation."
+    },
+    {
+      question: "What is the immune system's first line of defense?",
+      options: ["Antibodies", "T cells", "Physical and chemical barriers (skin, mucous membranes)", "B cells", "Lymph nodes"],
+      correct: 2,
+      explanation: "The first line of defense consists of physical and chemical barriers: (1) Skin - physical barrier with antimicrobial secretions; (2) Mucous membranes - line respiratory, digestive, urinary tracts, trapping pathogens; (3) Chemical barriers - stomach acid, enzymes in saliva/tears, normal microbiota. These innate defenses prevent pathogen entry. Second line includes phagocytes and inflammation; third line is adaptive immunity (antibodies, T/B cells)."
+    },
+    {
+      question: "What is the difference between innate and adaptive immunity?",
+      options: ["Speed of response only", "Innate is non-specific and immediate; adaptive is specific and develops over time", "Location in the body", "Type of pathogen targeted", "Innate uses antibodies; adaptive uses barriers"],
+      correct: 1,
+      explanation: "Innate immunity is non-specific, immediate (present from birth), and includes physical barriers, phagocytes, natural killer cells, complement proteins, and inflammation. It responds the same way to all pathogens. Adaptive (acquired) immunity is specific, develops over time (days-weeks), has memory, and includes B cells (antibodies) and T cells (cell-mediated). It targets specific pathogens and provides long-lasting protection through immunological memory."
+    },
+    {
+      question: "What are the five types of white blood cells (leukocytes)?",
+      options: ["Neutrophils, monocytes, basophils, eosinophils, lymphocytes", "Red cells, platelets, plasma cells, stem cells, memory cells", "T cells, B cells, NK cells, helper cells, killer cells", "Antibodies, antigens, complement, interferons, cytokines", "Granulocytes, agranulocytes, phagocytes, lymphocytes, macrophages"],
+      correct: 0,
+      explanation: "The five types of white blood cells are: (1) Neutrophils (60-70%) - phagocytize bacteria; (2) Lymphocytes (20-30%) - B cells produce antibodies, T cells destroy infected cells; (3) Monocytes (3-8%) - become macrophages, phagocytize large particles; (4) Eosinophils (1-4%) - combat parasites, involved in allergies; (5) Basophils (<1%) - release histamine in allergic reactions. Collectively, WBCs defend against infection and disease."
+    },
+    {
+      question: "What is an antigen?",
+      options: ["An antibody-producing cell", "A substance that triggers an immune response", "A type of white blood cell", "A defensive protein in blood", "A pathogen-destroying enzyme"],
+      correct: 1,
+      explanation: "An antigen is any substance (usually a protein or polysaccharide) that triggers an immune response. Antigens can be parts of pathogens (bacteria, viruses), toxins, foreign cells (transfused blood, transplanted organs), or allergens. The immune system recognizes antigens as 'non-self,' leading to antibody production and/or T-cell activation. Specific regions on antigens called epitopes bind to antibodies or T-cell receptors."
+    },
+    {
+      question: "What is the function of the lymphatic system?",
+      options: ["Produce hormones", "Transport oxygen", "Return fluid to blood, absorb fats, and provide immune function", "Filter blood in kidneys", "Regulate body temperature"],
+      correct: 2,
+      explanation: "The lymphatic system has three main functions: (1) Fluid balance - returns excess interstitial fluid (lymph) to bloodstream, maintaining blood volume and pressure; (2) Fat absorption - lacteals in small intestine absorb dietary fats and fat-soluble vitamins; (3) Immune function - lymph nodes filter lymph, remove pathogens, house lymphocytes that mount immune responses. The system includes lymphatic vessels, lymph nodes, spleen, thymus, and tonsils."
+    }
+  ];
+
+  // Shuffle array function
+  function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  // Select 15 random questions
+  const selectedQuestions = shuffleArray(questionBank).slice(0, 15);
+  const correctAnswers = {};
+  const explanations = {};
+
+  // Generate quiz HTML
+  const quizContainer = document.getElementById('quizContainer');
+  selectedQuestions.forEach((q, index) => {
+    const questionNum = index + 1;
+    const questionId = `q${questionNum}`;
+    
+    // Store correct answer and explanation
+    correctAnswers[questionId] = q.correct;
+    explanations[questionId] = q.explanation;
+    
+    // Shuffle options with correct answer tracking
+    const optionsWithIndex = q.options.map((opt, idx) => ({ text: opt, originalIndex: idx }));
+    const shuffledOptions = shuffleArray(optionsWithIndex);
+    
+    // Find new position of correct answer
+    const newCorrectIndex = shuffledOptions.findIndex(opt => opt.originalIndex === q.correct);
+    correctAnswers[questionId] = newCorrectIndex;
+    
+    // Create question HTML
+    const questionHTML = `
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-red-500 quiz-question">
+        <h3 class="text-2xl font-bold mb-4 text-gray-800">Question ${questionNum}</h3>
+        <p class="text-lg text-gray-700 mb-6">${q.question}</p>
+        <div class="space-y-3">
+          ${shuffledOptions.map((opt, optIndex) => `
+            <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+              <input type="radio" name="${questionId}" value="${optIndex}" class="mt-1">
+              <span class="text-gray-700">${opt.text}</span>
+            </label>
+          `).join('')}
+        </div>
+        <div class="feedback mt-4 hidden"></div>
+      </div>
+    `;
+    
+    quizContainer.innerHTML += questionHTML;
+  });
+
+  lucide.createIcons();
+
+  // Submit button handler
+  document.getElementById('submitQuiz').addEventListener('click', () => {
+    let score = 0;
+    let answered = 0;
+    
+    const questions = document.querySelectorAll('.quiz-question');
+    
+    questions.forEach((question, index) => {
+      const questionId = `q${index + 1}`;
+      const selected = question.querySelector(`input[name="${questionId}"]:checked`);
+      const feedback = question.querySelector('.feedback');
+      
+      if (selected) {
+        answered++;
+        const selectedValue = parseInt(selected.value);
+        const isCorrect = selectedValue === correctAnswers[questionId];
+        
+        if (isCorrect) {
+          score++;
+          question.classList.remove('border-red-500', 'border-yellow-500');
+          question.classList.add('border-green-500');
+          feedback.innerHTML = `
+            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <p class="font-semibold text-green-800 mb-2">✓ Correct!</p>
+              <p class="text-green-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        } else {
+          question.classList.remove('border-green-500', 'border-yellow-500');
+          question.classList.add('border-red-500');
+          feedback.innerHTML = `
+            <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded">
+              <p class="font-semibold text-red-800 mb-2">✗ Incorrect</p>
+              <p class="text-red-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        }
+        
+        feedback.classList.remove('hidden');
+      } else {
+        question.classList.remove('border-green-500', 'border-red-500');
+        question.classList.add('border-yellow-500');
+        feedback.innerHTML = `
+          <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+            <p class="font-semibold text-yellow-800">Question not answered</p>
+          </div>
+        `;
+        feedback.classList.remove('hidden');
+      }
+    });
+    
+    const percentage = answered > 0 ? Math.round((score / 15) * 100) : 0;
+    const resultDiv = document.getElementById('quizResults');
+    const scoreDisplay = document.getElementById('scoreDisplay');
+    
+    let gradeColor = 'text-red-600';
+    let message = 'Keep studying!';
+    
+    if (percentage >= 90) {
+      gradeColor = 'text-green-600';
+      message = 'Excellent! You have mastered this material!';
+    } else if (percentage >= 80) {
+      gradeColor = 'text-blue-600';
+      message = 'Great job! You have a strong understanding!';
+    } else if (percentage >= 70) {
+      gradeColor = 'text-yellow-600';
+      message = 'Good work! Review the explanations to improve.';
+    } else if (percentage >= 60) {
+      gradeColor = 'text-orange-600';
+      message = 'Fair. Consider reviewing the material more thoroughly.';
+    }
+    
+    scoreDisplay.innerHTML = `
+      <div class="text-center">
+        <div class="text-6xl font-bold ${gradeColor} mb-4">${percentage}%</div>
+        <p class="text-2xl text-gray-700 mb-2">${score} out of 15 correct</p>
+        <p class="text-xl text-gray-600 mb-6">${message}</p>
+      </div>
+    `;
+    
+    resultDiv.classList.remove('hidden');
+    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

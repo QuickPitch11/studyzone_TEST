@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AMA Essays Learning Tools - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <!-- Back Button -->
+  <div class="mb-6">
+    <a href="college-learning-tools.html" class="inline-flex items-center gap-2 px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back to Learning Tools</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="flex justify-center mb-4">
+      <div class="p-4 bg-gradient-to-br from-sky-600 to-blue-600 rounded-full">
+        <i data-lucide="stethoscope" class="w-16 h-16 text-white"></i>
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">AMA Essays Learning Tools</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Essential resources for mastering AMA format citations, references, and medical writing
+    </p>
+  </div>
+
+  <!-- Citation Generators & Formatting Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-sky-50 to-blue-50 rounded-xl shadow-lg p-8 border-l-4 border-sky-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="quote" class="w-7 h-7 text-sky-600"></i>
+        Citation Generators & Formatting Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.citationmachine.net/ama" target="_blank" class="text-sky-600 hover:text-sky-700 hover:underline">Citation Machine AMA ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free automatic AMA citation generator for medical sources</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-sky-600">•</span>
+              <span>In-text and reference citations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-sky-600">•</span>
+              <span>AMA 11th edition compliant</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-sky-600">•</span>
+              <span>Medical journal formatting</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.easybib.com/cite/ama" target="_blank" class="text-sky-600 hover:text-sky-700 hover:underline">EasyBib AMA ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Simple AMA citation tool with bibliography builder</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-sky-600">•</span>
+              <span>Quick citation generation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-sky-600">•</span>
+              <span>Reference list builder</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-sky-600">•</span>
+              <span>Grammar checking features</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.scribbr.com/ama-citation-generator/" target="_blank" class="text-sky-600 hover:text-sky-700 hover:underline">Scribbr AMA Citation Generator ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Accurate AMA citations with formatting guides</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-sky-600">•</span>
+              <span>100% accurate citations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-sky-600">•</span>
+              <span>Smart source suggestions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-sky-600">•</span>
+              <span>Export to Word/Google Docs</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.mybib.com/tools/ama-citation-generator" target="_blank" class="text-sky-600 hover:text-sky-700 hover:underline">MyBib AMA Generator ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free AMA citation generator with project organization</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-sky-600">•</span>
+              <span>Automatic PubMed citations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-sky-600">•</span>
+              <span>Organize multiple projects</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-sky-600">•</span>
+              <span>Copy and export features</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AMA Style Guides & Official Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="book-open-text" class="w-7 h-7 text-blue-600"></i>
+        AMA Style Guides & Official Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.amamanualofstyle.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">AMA Manual of Style (Official) ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Official AMA style manual website with authoritative guidance</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>AMA 11th edition guidelines</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Medical writing standards</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Style and usage tips</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://owl.purdue.edu/owl/research_and_citation/ama_style/ama_style_introduction.html" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Purdue OWL AMA Guide ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive AMA formatting and style guide</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Detailed formatting instructions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Sample papers and templates</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Citation examples</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.scribbr.com/category/ama-style/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Scribbr AMA Style Guide ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">In-depth articles on AMA formatting and citations</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Step-by-step tutorials</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Visual examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Free downloadable guides</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.bibme.org/ama" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">BibMe AMA Format Guide ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AMA formatting guide with citation tools</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Format cheat sheets</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Reference examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Integrated citation tools</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Medical Research Databases -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-cyan-50 to-teal-50 rounded-xl shadow-lg p-8 border-l-4 border-cyan-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="database" class="w-7 h-7 text-cyan-600"></i>
+        Medical Research Databases
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">PubMed ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free database of biomedical and life sciences literature</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>30+ million citations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>MEDLINE indexing</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Free full-text access to PMC</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.cochranelibrary.com/" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">Cochrane Library ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">High-quality systematic reviews and evidence-based medicine</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Systematic reviews</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Clinical trials database</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Evidence-based resources</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.ncbi.nlm.nih.gov/pmc/" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">PubMed Central (PMC) ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free full-text archive of biomedical literature</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Full-text articles</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Open access repository</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Downloadable PDFs</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.embase.com/" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">Embase ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Biomedical and pharmacological database</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Drug and disease information</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>European journal coverage</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Advanced search tools</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Medical Writing & Editing Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-violet-50 to-purple-50 rounded-xl shadow-lg p-8 border-l-4 border-violet-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="pen-tool" class="w-7 h-7 text-violet-600"></i>
+        Medical Writing & Editing Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.grammarly.com/" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">Grammarly ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AI-powered writing assistant for medical writing</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Grammar and clarity checks</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Medical terminology support</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Plagiarism detection</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.writefull.com/" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">Writefull ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AI writing tool trained on academic texts</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Academic phrase suggestions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Language feedback</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Paraphrasing tool</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.authoraid.info/" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">AuthorAID ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Resources for researchers in developing countries</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Research writing tutorials</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Mentoring network</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Free online courses</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.amwa.org/" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">AMWA (American Medical Writers Association) ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Professional organization for medical communicators</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Medical writing resources</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Training and certification</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Professional networking</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video & Tutorial Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-emerald-50 to-green-50 rounded-xl shadow-lg p-8 border-l-4 border-emerald-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="video" class="w-7 h-7 text-emerald-600"></i>
+        Video & Tutorial Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/user/AcademicEnglishHelp" target="_blank" class="text-emerald-600 hover:text-emerald-700 hover:underline">Academic English Help ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">YouTube channel with AMA formatting tutorials</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>AMA citation videos</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Reference formatting</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Medical writing tips</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.coursera.org/courses?query=medical%20writing" target="_blank" class="text-emerald-600 hover:text-emerald-700 hover:underline">Coursera Medical Writing ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Professional courses on medical and scientific writing</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>University-level courses</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Certificates available</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Self-paced learning</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.edx.org/learn/medical-writing" target="_blank" class="text-emerald-600 hover:text-emerald-700 hover:underline">edX Medical Writing Courses ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free online medical writing courses</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Academic medical writing</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Research publication skills</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Top university instructors</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3474301/" target="_blank" class="text-emerald-600 hover:text-emerald-700 hover:underline">NIH Writing Resources ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">National Institutes of Health writing guidance</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Scientific writing guidelines</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Grant writing tips</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600">•</span>
+              <span>Publication resources</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sample Papers & Reference Management -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-fuchsia-50 to-pink-50 rounded-xl shadow-lg p-8 border-l-4 border-fuchsia-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="file-check" class="w-7 h-7 text-fuchsia-600"></i>
+        Sample Papers & Reference Management
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.zotero.org/" target="_blank" class="text-fuchsia-600 hover:text-fuchsia-700 hover:underline">Zotero ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free reference management software with AMA support</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Automatic citation generation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>PDF organization</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Browser integration</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.mendeley.com/" target="_blank" class="text-fuchsia-600 hover:text-fuchsia-700 hover:underline">Mendeley ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Reference manager and academic social network</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Citation management</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>PDF annotation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Collaboration features</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://endnote.com/" target="_blank" class="text-fuchsia-600 hover:text-fuchsia-700 hover:underline">EndNote ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Professional reference management software</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Advanced citation tools</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Library organization</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Word processor integration</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.scribbr.com/ama-examples/" target="_blank" class="text-fuchsia-600 hover:text-fuchsia-700 hover:underline">Scribbr AMA Examples ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Extensive collection of AMA citation examples</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Citation format examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Reference list samples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Searchable database</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="ama-essays.html" class="px-6 py-3 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      AMA Essays Basics
+    </a>
+    <a href="ama-essays-quiz.html" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Take Quiz
+    </a>
+    <a href="college-learning-tools.html" class="px-6 py-3 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      All Learning Tools
+    </a>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

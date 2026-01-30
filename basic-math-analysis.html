@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Basic Math - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full mb-6">
+      <i data-lucide="hash" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Basic Math: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">Foundations, algorithms, representations, pedagogy, and worked examples</p>
+  </div>
+
+  <div class="space-y-10">
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Introduction</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Basic Math is the practical and conceptual groundwork of mathematics. It covers number sense, place-value understanding, the four arithmetic operations, fractions, decimals, percentages, basic measurement, and problem-solving strategies. This analysis presents precise descriptions of core ideas, algorithms, visual representations, common student difficulties, and worked examples for teaching and learning.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Number Sense & Place Value</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Number sense means fluency with numbers, understanding magnitude, comparisons, and flexible representations (e.g., decomposing 47 as 40 + 7). Place value is the representation of numbers as digits times powers of the base. Explicitly teaching place value models (base-ten blocks, place-value charts) prevents common errors in multi-digit operations.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Algorithms for the Four Operations</h2>
+      <h3 class="text-xl font-semibold text-gray-800 mt-2">Addition & Subtraction</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Column (place-value) algorithms use carries and borrows. Emphasize invariants: partial sums by place equal the total sum. Teach multiple strategies (column algorithm, left-to-right addition, mental decomposition) and when each is efficient.</p>
+
+      <h3 class="text-xl font-semibold text-gray-800 mt-2">Multiplication</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Standard long multiplication multiplies digits and shifts partial products. Use area models (grid/box method) to connect the algorithm to distributivity: (ab)(cd) = sum of digit-wise products times place-value weights.</p>
+
+      <h3 class="text-xl font-semibold text-gray-800 mt-2">Division</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Long division maintains the invariant a = bq + r. Teach chunking/division strategies (repeated subtraction, estimation of quotient digits) alongside the formal algorithm to build conceptual understanding.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Fractions, Decimals & Percentages</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Fractions represent parts of a whole; emphasize equivalence (a/b = (ka)/(kb)) and ordering via common denominators or benchmarks. Decimal notation is positional in base ten; connect decimals to fractions (0.25 = 25/100). Percentages are fractions with denominator 100 and are useful in real-world contexts (discounts, interest).</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Measurement & Units</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Measurement uses units and unit conversions. Teach dimensional analysis: multiply by conversion factors that equal 1 (e.g., 1 km / 1000 m) to change units. Emphasize estimation and significant figures in practical measurement contexts.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Problem Solving Strategies</h2>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li><strong>Understand the problem:</strong> restate, identify knowns/unknowns.</li>
+        <li><strong>Choose representation:</strong> equations, diagrams, tables, number lines.</li>
+        <li><strong>Decompose:</strong> break complex problems into simpler steps.</li>
+        <li><strong>Estimate and check:</strong> sanity-check answers and units.</li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Pedagogy & Common Misconceptions</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Sequence instruction: number sense → place value → operations with whole numbers → fractions/decimals → measurement and proportional reasoning. Common misconceptions include misaligned place-value during operations, misinterpreting fractions as two separate numbers, and confusion between numerator/denominator roles. Use manipulatives, visual models, and spaced mixed practice to build robust understanding.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Diagrams & Worked Examples</h2>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800">Number Line</h3>
+          <svg viewBox="0 0 600 120" class="w-full h-32 rounded border bg-white" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="number line">
+            <line x1="20" y1="60" x2="580" y2="60" stroke="#94a3b8" stroke-width="3" />
+            <g stroke="#475569" stroke-width="1">
+              <line x1="60" y1="50" x2="60" y2="70" />
+              <line x1="120" y1="50" x2="120" y2="70" />
+              <line x1="180" y1="50" x2="180" y2="70" />
+              <line x1="240" y1="50" x2="240" y2="70" />
+              <line x1="300" y1="50" x2="300" y2="70" />
+              <line x1="360" y1="50" x2="360" y2="70" />
+              <line x1="420" y1="50" x2="420" y2="70" />
+              <line x1="480" y1="50" x2="480" y2="70" />
+              <line x1="540" y1="50" x2="540" y2="70" />
+            </g>
+            <g font-family="system-ui, Arial" font-size="12" fill="#0f172a" text-anchor="middle">
+              <text x="60" y="90">-4</text>
+              <text x="120" y="90">-3</text>
+              <text x="180" y="90">-2</text>
+              <text x="240" y="90">-1</text>
+              <text x="300" y="90">0</text>
+              <text x="360" y="90">1</text>
+              <text x="420" y="90">2</text>
+              <text x="480" y="90">3</text>
+              <text x="540" y="90">4</text>
+            </g>
+          </svg>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800">Fraction Area Model (3/8)</h3>
+          <svg viewBox="0 0 200 120" class="w-full h-32 rounded border bg-white" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="fraction pizza">
+            <g transform="translate(100,60)">
+              <g fill="#e6eef8" stroke="#cbd5e1" stroke-width="1">
+                <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(0)" />
+                <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(45)" />
+                <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(90)" />
+                <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(135)" />
+                <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(180)" />
+                <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(225)" />
+                <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(270)" />
+                <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(315)" />
+              </g>
+              <g fill="#7c3aed" stroke="#6d28d9" stroke-width="1" opacity="0.95">
+                <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(0)" />
+                <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(45)" />
+                <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(90)" />
+              </g>
+              <circle r="82" fill="none" stroke="#0f172a" stroke-width="0.5" />
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>Worked example — Long Division</strong></p>
+        <p class="text-gray-700 font-mono text-sm">Divide 314 by 7: 7 goes into 31 four times (4×7=28), remainder 3 → bring down 4 → 34: 7 goes into 34 four times (4×7=28), remainder 6 → quotient 44 remainder 6 → 314 = 7×44 + 6.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>Worked example — Fraction addition</strong></p>
+        <p class="text-gray-700 font-mono text-sm">Compute 1/4 + 3/8. Convert to common denominator 8: 1/4 = 2/8 → 2/8 + 3/8 = 5/8.</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Further Reading & Resources</h2>
+      <p class="text-gray-700 leading-relaxed text-lg">Suggested introductory texts and online tools: number sense manipulatives, fraction visualizers, and interactive practice sites (Khan Academy, GeoGebra). Focus on resources that build conceptual understanding and give immediate feedback.</p>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="basic-math-quiz.html" class="px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

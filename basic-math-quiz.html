@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Basic Math Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-6">
+      <i data-lucide="hash" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Basic Math Quiz</h1>
+    <p class="text-xl text-gray-600">Test your foundational math skills and problem-solving abilities</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Questions will be dynamically generated here -->
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-cyan-600 text-white text-lg font-semibold rounded-lg hover:bg-cyan-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="quizResults" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-cyan-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="basic-math-analysis.html" class="px-6 py-3 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition flex items-center gap-2">
+        <i data-lucide="book-open" class="w-5 h-5"></i>
+        Review Material
+      </a>
+      <button onclick="location.reload()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+        Retake Quiz
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="basic-math.html" class="px-6 py-3 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Back to Basic Math
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Question Bank - 40 questions total
+  const questionBank = [
+    {
+      question: "Which of the following is an even number?",
+      options: ["17", "23", "34", "41", "55"],
+      correct: 2,
+      explanation: "An even number is divisible by 2 with no remainder. 34 ÷ 2 = 17, making 34 an even number. All even numbers end in 0, 2, 4, 6, or 8."
+    },
+    {
+      question: "Which of the following is a prime number?",
+      options: ["21", "27", "31", "35", "39"],
+      correct: 2,
+      explanation: "A prime number has exactly two factors: 1 and itself. 31 is only divisible by 1 and 31. The others are composite: 21=3×7, 27=3×9, 35=5×7, 39=3×13."
+    },
+    {
+      question: "What is the absolute value of -18?",
+      options: ["-18", "0", "18", "36", "-36"],
+      correct: 2,
+      explanation: "The absolute value represents the distance from zero, always positive. |-18| = 18."
+    },
+    {
+      question: "What is |25 - 40|?",
+      options: ["-15", "15", "65", "-65", "25"],
+      correct: 1,
+      explanation: "First calculate 25 - 40 = -15, then take the absolute value: |-15| = 15."
+    },
+    {
+      question: "What is 5²?",
+      options: ["10", "15", "20", "25", "30"],
+      correct: 3,
+      explanation: "5² means 5 × 5 = 25. The exponent 2 indicates squaring a number."
+    },
+    {
+      question: "What is 2⁴?",
+      options: ["4", "6", "8", "12", "16"],
+      correct: 4,
+      explanation: "2⁴ means 2 × 2 × 2 × 2 = 16."
+    },
+    {
+      question: "What is √64?",
+      options: ["6", "7", "8", "9", "10"],
+      correct: 2,
+      explanation: "The square root of 64 is the number that when multiplied by itself equals 64. 8 × 8 = 64, so √64 = 8."
+    },
+    {
+      question: "What is ∛27?",
+      options: ["2", "3", "4", "5", "9"],
+      correct: 1,
+      explanation: "The cube root of 27 is the number that when cubed (multiplied by itself three times) equals 27. 3 × 3 × 3 = 27, so ∛27 = 3."
+    },
+    {
+      question: "Express 4,500 in scientific notation:",
+      options: ["4.5 × 10²", "45 × 10²", "4.5 × 10³", "0.45 × 10⁴", "450 × 10¹"],
+      correct: 2,
+      explanation: "In scientific notation, write as a number between 1 and 10 multiplied by a power of 10. 4,500 = 4.5 × 1,000 = 4.5 × 10³."
+    },
+    {
+      question: "What is 3.2 × 10⁴ in standard form?",
+      options: ["320", "3,200", "32,000", "320,000", "3,200,000"],
+      correct: 2,
+      explanation: "Multiply 3.2 by 10,000 (10⁴): 3.2 × 10,000 = 32,000."
+    },
+    {
+      question: "Convert 500 centimeters to meters:",
+      options: ["0.5 m", "5 m", "50 m", "500 m", "5,000 m"],
+      correct: 1,
+      explanation: "There are 100 centimeters in 1 meter. Divide 500 by 100: 500 ÷ 100 = 5 meters."
+    },
+    {
+      question: "Convert 2.5 kilometers to meters:",
+      options: ["25 m", "250 m", "2,500 m", "25,000 m", "250,000 m"],
+      correct: 2,
+      explanation: "There are 1,000 meters in 1 kilometer. Multiply 2.5 by 1,000: 2.5 × 1,000 = 2,500 meters."
+    },
+    {
+      question: "What is 15% of 200?",
+      options: ["15", "20", "25", "30", "35"],
+      correct: 3,
+      explanation: "Convert 15% to decimal (0.15) and multiply: 200 × 0.15 = 30."
+    },
+    {
+      question: "What percent of 80 is 20?",
+      options: ["20%", "25%", "30%", "35%", "40%"],
+      correct: 1,
+      explanation: "Divide the part by the whole and multiply by 100: (20 ÷ 80) × 100 = 0.25 × 100 = 25%."
+    },
+    {
+      question: "A shirt originally costs $40 and is on sale for 30% off. What is the sale price?",
+      options: ["$12", "$24", "$28", "$30", "$32"],
+      correct: 2,
+      explanation: "Calculate discount: 30% of $40 = 0.30 × $40 = $12. Subtract from original: $40 - $12 = $28."
+    },
+    {
+      question: "Calculate simple interest on $500 at 4% annual rate for 3 years:",
+      options: ["$40", "$50", "$60", "$70", "$80"],
+      correct: 2,
+      explanation: "Simple Interest = Principal × Rate × Time = $500 × 0.04 × 3 = $60."
+    },
+    {
+      question: "What is the area of a rectangle with length 8 cm and width 5 cm?",
+      options: ["13 cm²", "26 cm²", "30 cm²", "40 cm²", "45 cm²"],
+      correct: 3,
+      explanation: "Area of rectangle = length × width = 8 × 5 = 40 cm²."
+    },
+    {
+      question: "What is the perimeter of a square with side length 7 meters?",
+      options: ["14 m", "21 m", "28 m", "35 m", "49 m"],
+      correct: 2,
+      explanation: "Perimeter of square = 4 × side length = 4 × 7 = 28 meters."
+    },
+    {
+      question: "What is the area of a triangle with base 10 cm and height 6 cm?",
+      options: ["16 cm²", "30 cm²", "60 cm²", "20 cm²", "40 cm²"],
+      correct: 1,
+      explanation: "Area of triangle = (base × height) ÷ 2 = (10 × 6) ÷ 2 = 60 ÷ 2 = 30 cm²."
+    },
+    {
+      question: "What is the circumference of a circle with radius 7 cm? (Use π ≈ 3.14)",
+      options: ["21.98 cm", "43.96 cm", "153.86 cm", "14 cm", "28 cm"],
+      correct: 1,
+      explanation: "Circumference = 2πr = 2 × 3.14 × 7 = 43.96 cm."
+    },
+    {
+      question: "Find the mean of these numbers: 12, 15, 18, 20, 25",
+      options: ["15", "17", "18", "20", "22"],
+      correct: 2,
+      explanation: "Mean (average) = sum ÷ count = (12+15+18+20+25) ÷ 5 = 90 ÷ 5 = 18."
+    },
+    {
+      question: "What is the median of: 5, 8, 12, 15, 20?",
+      options: ["8", "10", "12", "15", "20"],
+      correct: 2,
+      explanation: "The median is the middle value when numbers are arranged in order. In this ordered set, 12 is the middle value."
+    },
+    {
+      question: "What is the mode of: 3, 5, 5, 7, 8, 5, 9?",
+      options: ["3", "5", "7", "8", "9"],
+      correct: 1,
+      explanation: "The mode is the most frequently occurring value. 5 appears three times, more than any other number."
+    },
+    {
+      question: "What is the range of: 14, 18, 22, 30, 35?",
+      options: ["14", "18", "21", "25", "35"],
+      correct: 2,
+      explanation: "Range = maximum - minimum = 35 - 14 = 21."
+    },
+    {
+      question: "What is 3⁰?",
+      options: ["0", "1", "3", "6", "9"],
+      correct: 1,
+      explanation: "Any non-zero number raised to the power of 0 equals 1. Therefore, 3⁰ = 1."
+    },
+    {
+      question: "What is 5³?",
+      options: ["15", "25", "75", "125", "625"],
+      correct: 3,
+      explanation: "5³ means 5 × 5 × 5 = 125."
+    },
+    {
+      question: "Simplify: 2³ × 2²",
+      options: ["2⁵", "2⁶", "4⁵", "32", "Both A and D"],
+      correct: 4,
+      explanation: "When multiplying powers with the same base, add exponents: 2³ × 2² = 2⁵ = 32. Both expressions are correct."
+    },
+    {
+      question: "What is √100?",
+      options: ["5", "10", "20", "50", "100"],
+      correct: 1,
+      explanation: "The square root of 100 is 10 because 10 × 10 = 100."
+    },
+    {
+      question: "What is √144?",
+      options: ["10", "11", "12", "13", "14"],
+      correct: 2,
+      explanation: "The square root of 144 is 12 because 12 × 12 = 144."
+    },
+    {
+      question: "Which number is a perfect square: 48, 50, 64, or 72?",
+      options: ["48", "50", "64", "72", "None"],
+      correct: 2,
+      explanation: "64 is a perfect square because 8 × 8 = 64. The others are not perfect squares."
+    },
+    {
+      question: "Express 0.00035 in scientific notation:",
+      options: ["3.5 × 10⁻³", "3.5 × 10⁻⁴", "35 × 10⁻⁵", "0.35 × 10⁻³", "3.5 × 10⁻⁵"],
+      correct: 1,
+      explanation: "Move the decimal point 4 places right to get 3.5, so multiply by 10⁻⁴: 0.00035 = 3.5 × 10⁻⁴."
+    },
+    {
+      question: "What is 6.5 × 10⁻³ in standard form?",
+      options: ["0.00065", "0.0065", "0.065", "6.5", "65"],
+      correct: 1,
+      explanation: "Move the decimal point 3 places left: 6.5 × 10⁻³ = 0.0065."
+    },
+    {
+      question: "Convert 3 hours to minutes:",
+      options: ["30 minutes", "60 minutes", "120 minutes", "180 minutes", "240 minutes"],
+      correct: 3,
+      explanation: "There are 60 minutes in 1 hour. Multiply 3 × 60 = 180 minutes."
+    },
+    {
+      question: "Convert 5,000 milliliters to liters:",
+      options: ["0.5 L", "5 L", "50 L", "500 L", "5,000 L"],
+      correct: 1,
+      explanation: "There are 1,000 milliliters in 1 liter. Divide 5,000 by 1,000: 5,000 ÷ 1,000 = 5 liters."
+    },
+    {
+      question: "What number is 40% of 150?",
+      options: ["40", "50", "60", "70", "80"],
+      correct: 2,
+      explanation: "Convert 40% to decimal (0.40) and multiply: 150 × 0.40 = 60."
+    },
+    {
+      question: "If 75% of a number is 60, what is the number?",
+      options: ["45", "60", "75", "80", "90"],
+      correct: 3,
+      explanation: "Let the number be x. 0.75x = 60, so x = 60 ÷ 0.75 = 80."
+    },
+    {
+      question: "What is 125% as a decimal?",
+      options: ["0.125", "1.25", "12.5", "125", "1250"],
+      correct: 1,
+      explanation: "To convert a percent to decimal, divide by 100: 125% ÷ 100 = 1.25."
+    },
+    {
+      question: "Calculate: $1,000 invested at 5% simple interest for 2 years. What is the total amount?",
+      options: ["$1,050", "$1,100", "$1,150", "$1,200", "$1,250"],
+      correct: 1,
+      explanation: "Interest = $1,000 × 0.05 × 2 = $100. Total = Principal + Interest = $1,000 + $100 = $1,100."
+    },
+    {
+      question: "What is the area of a circle with radius 5 cm? (Use π ≈ 3.14)",
+      options: ["15.7 cm²", "31.4 cm²", "78.5 cm²", "157 cm²", "314 cm²"],
+      correct: 2,
+      explanation: "Area of circle = πr² = 3.14 × 5² = 3.14 × 25 = 78.5 cm²."
+    },
+    {
+      question: "Which property states that a + b = b + a?",
+      options: ["Associative", "Commutative", "Distributive", "Identity", "Inverse"],
+      correct: 1,
+      explanation: "The Commutative Property of Addition states that changing the order of addends does not change the sum: a + b = b + a."
+    }
+  ];
+
+  // Shuffle array function
+  function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  // Select 15 random questions
+  const selectedQuestions = shuffleArray(questionBank).slice(0, 15);
+  const correctAnswers = {};
+  const explanations = {};
+
+  // Generate quiz HTML
+  const quizContainer = document.getElementById('quizContainer');
+  selectedQuestions.forEach((q, index) => {
+    const questionNum = index + 1;
+    const questionId = `q${questionNum}`;
+    
+    // Store correct answer and explanation
+    correctAnswers[questionId] = q.correct;
+    explanations[questionId] = q.explanation;
+    
+    // Shuffle options with correct answer tracking
+    const optionsWithIndex = q.options.map((opt, idx) => ({ text: opt, originalIndex: idx }));
+    const shuffledOptions = shuffleArray(optionsWithIndex);
+    
+    // Find new position of correct answer
+    const newCorrectIndex = shuffledOptions.findIndex(opt => opt.originalIndex === q.correct);
+    correctAnswers[questionId] = newCorrectIndex;
+    
+    // Create question HTML
+    const questionHTML = `
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-cyan-500 quiz-question">
+        <h3 class="text-2xl font-bold mb-4 text-gray-800">Question ${questionNum}</h3>
+        <p class="text-lg text-gray-700 mb-6">${q.question}</p>
+        <div class="space-y-3">
+          ${shuffledOptions.map((opt, optIndex) => `
+            <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+              <input type="radio" name="${questionId}" value="${optIndex}" class="mt-1">
+              <span class="text-gray-700">${opt.text}</span>
+            </label>
+          `).join('')}
+        </div>
+        <div class="feedback mt-4 hidden"></div>
+      </div>
+    `;
+    
+    quizContainer.innerHTML += questionHTML;
+  });
+
+  lucide.createIcons();
+
+  // Submit button handler
+  document.getElementById('submitQuiz').addEventListener('click', () => {
+    let score = 0;
+    let answered = 0;
+    
+    const questions = document.querySelectorAll('.quiz-question');
+    
+    questions.forEach((question, index) => {
+      const questionId = `q${index + 1}`;
+      const selected = question.querySelector(`input[name="${questionId}"]:checked`);
+      const feedback = question.querySelector('.feedback');
+      
+      if (selected) {
+        answered++;
+        const selectedValue = parseInt(selected.value);
+        const isCorrect = selectedValue === correctAnswers[questionId];
+        
+        if (isCorrect) {
+          score++;
+          question.classList.remove('border-red-500', 'border-blue-500');
+          question.classList.add('border-cyan-500');
+          feedback.innerHTML = `
+            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <p class="font-semibold text-green-800 mb-2">✓ Correct!</p>
+              <p class="text-green-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        } else {
+          question.classList.remove('border-cyan-500', 'border-blue-500');
+          question.classList.add('border-red-500');
+          feedback.innerHTML = `
+            <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded">
+              <p class="font-semibold text-red-800 mb-2">✗ Incorrect</p>
+              <p class="text-red-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        }
+        
+        feedback.classList.remove('hidden');
+      } else {
+        question.classList.remove('border-cyan-500', 'border-red-500');
+        question.classList.add('border-blue-500');
+        feedback.innerHTML = `
+          <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+            <p class="font-semibold text-yellow-800">Question not answered</p>
+          </div>
+        `;
+        feedback.classList.remove('hidden');
+      }
+    });
+
+    // Calculate percentage
+    const percentage = answered > 0 ? Math.round((score / 15) * 100) : 0;
+    
+    // Display score
+    let resultColor = percentage >= 70 ? 'text-green-600' : percentage >= 50 ? 'text-yellow-600' : 'text-red-600';
+    let resultMessage = percentage >= 70 ? 'Excellent work!' : percentage >= 50 ? 'Good effort!' : 'Keep practicing!';
+    
+    document.getElementById('scoreDisplay').innerHTML = `
+      <div class="text-6xl font-bold ${resultColor} mb-4">${score}/15</div>
+      <div class="text-2xl font-semibold text-gray-700">${percentage}%</div>
+      <div class="text-xl text-gray-600 mt-2">${resultMessage}</div>
+    `;
+    
+    document.getElementById('quizResults').classList.remove('hidden');
+    document.getElementById('quizResults').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculus - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-indigo-500 to-sky-500 rounded-full mb-6">
+      <i data-lucide="function-square" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Calculus: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">Limits, derivatives, integrals, and applications</p>
+  </div>
+
+  <div class="space-y-10">
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Introduction</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Calculus studies how quantities change (differential calculus) and how quantities accumulate (integral calculus). Developed independently by Newton and Leibniz in the 17th century, calculus builds on limits, formalizes instantaneous change, and provides tools for modeling and solving real-world problems across science and engineering.</p>
+      <p class="text-gray-700 leading-relaxed text-lg">This in-depth analysis expands intuition with rigorous definitions, proofs sketches, a broad set of worked examples, numerical concerns, pedagogical notes, and pointers to advanced study.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Rigorous Foundations: Limits, Continuity, and ε–δ</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3"><strong>Limit (ε–δ):</strong> We say lim_{x→c} f(x) = L if for every ε &gt; 0 there exists δ &gt; 0 such that 0 &lt; |x - c| &lt; δ implies |f(x) - L| &lt; ε. This formalism allows precise proofs of limit laws and continuity.</p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3"><strong>Continuity:</strong> f is continuous at c if lim_{x→c} f(x) = f(c). Continuous functions on closed intervals are bounded and achieve extrema (Extreme Value Theorem); they also satisfy the Intermediate Value Theorem.</p>
+      <p class="text-gray-700 leading-relaxed text-lg">Practice: prove that polynomials are continuous using ε–δ or composition rules; use limit laws to combine simpler limits into complex ones.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Differentiation — Theory and Practice</h2>
+      <h3 class="text-2xl font-bold mb-3 text-gray-800">Definition</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">The derivative at x is f'(x) = lim_{h→0} (f(x+h)-f(x))/h when that limit exists. Existence implies local linear approximation: f(x+h) ≈ f(x) + f'(x)h for small h.</p>
+      <h3 class="text-2xl font-bold mb-3 text-gray-800">Rule Proof Sketches</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-2"><strong>Product rule:</strong> derive from limit definition: (fg)' = lim (f(x+h)g(x+h)-f(x)g(x))/h = f' g + f g'.</p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-2"><strong>Chain rule:</strong> If y=f(u) and u=g(x) then dy/dx = (df/du)(du/dx). Proof uses substitution and limit manipulation; it's essential for composition of functions.</p>
+      <h3 class="text-2xl font-bold mb-3 text-gray-800">Mean Value Theorem & Taylor's Theorem</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Mean Value Theorem: if f is continuous on [a,b] and differentiable on (a,b), there exists c in (a,b) with f'(c) = (f(b)-f(a))/(b-a). Taylor's theorem gives polynomial approximations with explicit remainder terms that quantify approximation error.</p>
+      <div class="bg-gray-50 p-4 rounded-lg mb-3">
+        <p class="text-gray-700 font-mono text-sm mb-1"><strong>Worked derivative example:</strong> f(x)=x^3 - 3x^2 + 2x. Compute f'(x)=3x^2 - 6x + 2, find critical points and classify using second derivative f''(x)=6x - 6.</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Integration — Definitions & Techniques</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">The Riemann integral defines ∫_a^b f as the limit of Riemann sums. Proper understanding requires partitions, upper/lower sums, and criteria when the limit exists. Improper integrals extend this to unbounded intervals or integrands with singularities; convergence tests (p-test, comparison) determine existence.</p>
+      <h3 class="text-2xl font-bold mb-3 text-gray-800">Techniques and Examples</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-3">
+        <li>Substitution (u-sub): change variables to invert the chain rule.</li>
+        <li>Integration by parts: ∫ u dv = uv - ∫ v du (useful when product of functions present).</li>
+        <li>Partial fractions: decompose rational functions into elementary fractions.</li>
+        <li>Improper integrals: analyze convergence via comparison or limit-based definitions.</li>
+      </ul>
+      <div class="bg-gray-50 p-4 rounded-lg mb-3">
+        <p class="text-gray-700 font-mono text-sm mb-1"><strong>Worked integral example (u-sub):</strong> ∫ x cos(x^2) dx. Let u = x^2, du = 2x dx → integral becomes 1/2 ∫ cos(u) du = 1/2 sin(u) + C = 1/2 sin(x^2) + C.</p>
+      </div>
+      <div class="bg-gray-50 p-4 rounded-lg mb-3">
+        <p class="text-gray-700 font-mono text-sm mb-1"><strong>Improper integral example:</strong> ∫_1^∞ 1/x^p dx converges iff p &gt; 1. Proof uses antiderivative and limit as upper bound → ∞.</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Sequences, Series, and Power Series</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Series ∑ a_n require convergence tests: comparison, ratio, root, integral, and alternating series tests. Power series ∑ c_n (x-a)^n have radius of convergence R found via the ratio/root test. Within R they converge uniformly on compact subsets and can be differentiated/integrated term-by-term.</p>
+      <div class="bg-gray-50 p-4 rounded-lg mb-3">
+        <p class="text-gray-700 font-mono text-sm mb-1"><strong>Taylor series example:</strong> e^x = ∑_{n=0}^∞ x^n/n!, radius R = ∞. Taylor polynomials approximate functions with remainder term given by Lagrange form.</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Multivariable & Vector Calculus (Expanded)</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Partial derivatives, gradients, directional derivatives, and the Jacobian matrix generalize single-variable derivatives. Critical point classification uses the Hessian matrix. Multiple integrals require iterated integration or coordinate transforms (polar, cylindrical, spherical) with Jacobian determinants.</p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Vector calculus introduces line integrals, work, flux, and fundamental theorems: Green's theorem (plane), Stokes' theorem (surface), and Divergence theorem (volume) — each relating integrals over boundaries to integrals of derivatives inside.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Differential Equations & Modeling (Expanded)</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Linear ODEs with constant coefficients, method of undetermined coefficients, variation of parameters, and systems (matrix exponentials) are core. Stability analysis (eigenvalues, phase portraits) classifies long-term behavior. PDEs (heat, wave, Laplace) introduce boundary-value problems and separation of variables.</p>
+      <p class="text-gray-700 leading-relaxed text-lg">Numerical solvers (Euler, RK methods, multistep methods) provide controlled error and stability properties; stiffness requires implicit methods (Backward Euler, implicit RK).</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Numerical Methods & Practical Issues</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Numerical differentiation is ill-conditioned (amplifies noise). For integration use adaptive quadrature, Simpson's rule, or Gaussian quadrature for high accuracy. Error analysis (truncation, roundoff) and algorithm stability determine suitability for real-world computation.</p>
+      <p class="text-gray-700 leading-relaxed text-lg">Implementations: use libraries (SciPy, NumPy) for robust routines; understand limitations on step size, floating-point precision, and algorithmic complexity.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Pedagogy, Exercises, and Teaching Tips</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Recommend sequence: limits & continuity → derivatives (rules, MVT) → applications (optimization, motion) → integrals & FTC → series → multivariable → ODEs. Blend conceptual tasks (graphical interpretation) with symbolic practice and computational experiments.</p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Use visual tools (slope fields, dynamic area accumulation), assign short proof tasks (ε–δ, MVT), and scaffold technique practice (u-sub, by parts) with immediate feedback.</p>
+      <h3 class="text-xl font-bold mt-3">Suggested Exercises</h3>
+      <ol class="list-decimal list-inside space-y-2 text-gray-700 leading-relaxed text-lg">
+        <li>Prove using ε–δ that lim_{x→2} 3x+1 = 7.</li>
+        <li>Differentiate and classify critical points for f(x)=x^4 - 4x^3 + 6x^2.</li>
+        <li>Evaluate ∫_0^∞ e^{-x} dx and discuss convergence.</li>
+        <li>Find Taylor polynomial of degree 3 for ln(1+x) about x=0 and estimate remainder for |x|&lt;0.5.</li>
+        <li>Solve dy/dx + 2y = e^{-x} with initial condition y(0)=1 (linear ODE).</li>
+      </ol>
+    </div>
+
+    <!-- Worked Examples -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Worked Examples — Detailed Solutions</h2>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>1) Derivative with Product &amp; Chain Rules</strong></p>
+        <p class="text-gray-700 text-sm">Let f(x) = x^2 · sin(x^3). Then f'(x) = 2x·sin(x^3) + x^2·cos(x^3)·(3x^2) by product and chain rules. Simplify:</p>
+        <p class="text-gray-700 font-mono text-sm">f'(x) = 2x sin(x^3) + 3x^4 cos(x^3).</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>2) Optimization (Critical Points &amp; Second Derivative Test)</strong></p>
+        <p class="text-gray-700 text-sm">Find extrema of g(x)=x^3 - 3x^2 + 2x. Compute g'(x)=3x^2 - 6x + 2. Solve 3x^2 - 6x + 2 = 0 → x = (6 ± √(36 - 24))/6 = (6 ± √12)/6 = 1 ± √3/3.</p>
+        <p class="text-gray-700 text-sm">Second derivative g''(x)=6x - 6. Evaluate at the critical points to classify: at x = 1 + √3/3, g'' > 0 (local min); at x = 1 - √3/3, g'' &lt; 0 (local max).</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>3) Improper Integral by Parts</strong></p>
+        <p class="text-gray-700 text-sm">Evaluate ∫_0^∞ x e^{-x} dx. Use integration by parts with u=x, dv=e^{-x}dx → du=dx, v=-e^{-x}.</p>
+        <p class="text-gray-700 text-sm">Then ∫_0^R x e^{-x} dx = [-x e^{-x}]_0^R + ∫_0^R e^{-x} dx = (1 - (R+1)e^{-R}). Taking R→∞ gives 1.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>4) Taylor Approximation (ln(1+x))</strong></p>
+        <p class="text-gray-700 text-sm">ln(1+x) = x - x^2/2 + x^3/3 + O(x^4). For x=0.2, third-degree approximation gives 0.2 - 0.02 + 0.002667 = 0.182667 (true ln(1.2) ≈ 0.182322), error ≈ 3.45e-4.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>5) Multivariable — Gradient &amp; Hessian</strong></p>
+        <p class="text-gray-700 text-sm">Let h(x,y)=x^2 + x y + y^2. Gradient ∇h = (2x + y, x + 2y). Solve ∇h=0 → x=y=0 (single critical point). Hessian H = [[2,1],[1,2]] with eigenvalues 3 and 1 (both &gt;0) so (0,0) is a local minimum.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>6) First-order Linear ODE (Integrating Factor)</strong></p>
+        <p class="text-gray-700 text-sm">Solve y' + 2y = e^{-x}, y(0)=1. Integrating factor μ(x)=e^{∫2 dx}=e^{2x}. Multiply: (e^{2x}y)' = e^{2x}e^{-x}=e^{x}. Integrate: e^{2x}y = ∫ e^{x} dx = e^{x} + C. So y = e^{-x} + C e^{-2x}. Use y(0)=1 → 1 = 1 + C → C=0. Thus y = e^{-x}.</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Further Reading & Resources</h2>
+      <p class="text-gray-700 leading-relaxed text-lg">Recommended texts: Spivak (rigorous single-variable), Apostol (analysis and calculus), Stewart (applied calculus), Evans (PDEs), Atkinson (numerical analysis). Online: MIT OCW, Khan Academy, Paul's Online Math Notes, and interactive tools (GeoGebra, Desmos, Jupyter notebooks).</p>
+    </div>
+  </div>
+
+  <!-- Diagrams & Code Examples -->
+  <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500 mt-10">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">Diagrams &amp; Code Examples</h2>
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+      <div class="space-y-4">
+        <h3 class="text-xl font-semibold text-gray-800">Tangent Line &amp; Local Linear Approximation</h3>
+        <svg viewBox="0 0 500 220" class="w-full h-40 rounded border bg-white" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="tangent line">
+          <!-- axes -->
+          <line x1="40" y1="180" x2="460" y2="180" stroke="#94a3b8" stroke-width="2" />
+          <line x1="250" y1="20" x2="250" y2="200" stroke="#94a3b8" stroke-width="2" />
+          <!-- curve y = 0.01*(x-250)^2 + 60 (parabola) -->
+          <path d="M40 180 Q 140 80 250 60 T 460 180" fill="none" stroke="#0ea5e9" stroke-width="2" />
+          <!-- tangent at x=250 (vertical center) -->
+          <line x1="120" y1="100" x2="380" y2="140" stroke="#7c3aed" stroke-width="2" stroke-dasharray="4 3" />
+          <circle cx="250" cy="60" r="3" fill="#7c3aed" />
+        </svg>
+        <p class="text-gray-600 text-sm">Tangent shows instantaneous slope; use visual to explain local linear approximation f(x+h) ≈ f(x)+f'(x)h.</p>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-xl font-semibold text-gray-800">Area Under Curve (Riemann Sum)</h3>
+        <svg viewBox="0 0 500 220" class="w-full h-40 rounded border bg-white" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="riemann sum">
+          <!-- axes -->
+          <line x1="40" y1="180" x2="460" y2="180" stroke="#94a3b8" stroke-width="2" />
+          <!-- curve -->
+          <path d="M40 160 C 120 100, 200 40, 300 60 C 360 72, 420 110, 460 140" fill="none" stroke="#06b6d4" stroke-width="2" />
+          <!-- example rectangles -->
+          <g fill="#bae6fd" stroke="#0ea5e9" stroke-width="0.5" opacity="0.9">
+            <rect x="80" y="120" width="30" height="60" />
+            <rect x="110" y="100" width="30" height="80" />
+            <rect x="140" y="90" width="30" height="90" />
+            <rect x="170" y="110" width="30" height="70" />
+          </g>
+        </svg>
+        <p class="text-gray-600 text-sm">Riemann rectangles approximate area; shrink width and take limit for the definite integral.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="calculus-highschool.html" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center gap-2">
+      <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+      High School
+    </a>
+    <a href="calculus-quiz.html" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to More Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

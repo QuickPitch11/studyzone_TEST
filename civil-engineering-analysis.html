@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Civil Engineering — In-Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-6">
+      <i data-lucide="building-2" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Civil Engineering: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">Comprehensive study of infrastructure design, construction, structural analysis, materials, and sustainable development</p>
+  </div>
+
+  <div class="space-y-10">
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Overview & Scope</h2>
+      <p class="text-gray-700 leading-relaxed text-lg">Civil engineering is one of the oldest engineering disciplines, focused on the design, construction, and maintenance of the physical and naturally built environment. This comprehensive guide covers the fundamental principles of civil engineering including structural analysis and design, geotechnical engineering, transportation engineering, water resources and hydraulics, environmental engineering, construction management, materials science, surveying and geomatics, sustainable infrastructure, and professional ethics. This resource serves as a complete educational tool for students, aspiring civil engineers, construction professionals, urban planners, and anyone involved in building and maintaining society's infrastructure.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">What is Civil Engineering?</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Civil engineering is the professional engineering discipline that deals with the design, construction, and maintenance of the built environment including infrastructure such as roads, bridges, canals, dams, airports, sewerage systems, pipelines, railways, and buildings. Civil engineers apply principles of physics, mathematics, chemistry, and materials science to create safe, sustainable, and economically feasible structures and systems.</p>
+      
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Core Principles of Civil Engineering</h3>
+      <ul class="text-gray-700 space-y-2 mb-4">
+        <li><strong>Structural Integrity:</strong> Ensuring structures can withstand applied loads and environmental forces safely</li>
+        <li><strong>Sustainability:</strong> Designing infrastructure that minimizes environmental impact and conserves resources</li>
+        <li><strong>Safety:</strong> Prioritizing public safety in all design and construction decisions</li>
+        <li><strong>Economy:</strong> Balancing cost-effectiveness with performance and longevity</li>
+        <li><strong>Functionality:</strong> Meeting the intended purpose and user requirements</li>
+        <li><strong>Durability:</strong> Designing for long service life with minimal maintenance</li>
+        <li><strong>Aesthetics:</strong> Creating visually pleasing structures that enhance the environment</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Major Subdisciplines</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-3">
+        <p class="text-gray-800 mb-2"><strong>Structural Engineering:</strong> Design of buildings, bridges, towers, and other load-bearing structures</p>
+        <p class="text-gray-800 mb-2"><strong>Geotechnical Engineering:</strong> Study of soil and rock mechanics, foundations, earth retention systems</p>
+        <p class="text-gray-800 mb-2"><strong>Transportation Engineering:</strong> Planning and design of highways, railways, airports, and transit systems</p>
+        <p class="text-gray-800 mb-2"><strong>Water Resources Engineering:</strong> Management of water supply, drainage, flood control, and hydraulic structures</p>
+        <p class="text-gray-800 mb-2"><strong>Environmental Engineering:</strong> Water and wastewater treatment, pollution control, waste management</p>
+        <p class="text-gray-800"><strong>Construction Engineering:</strong> Project management, construction methods, scheduling, and cost control</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Structural Engineering</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Structural engineering focuses on the design and analysis of structures to ensure they can safely support and resist loads. This subdiscipline is fundamental to all civil engineering projects.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Load Analysis and Types</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3"><strong>Dead Loads (D):</strong> Permanent, static loads from the weight of the structure itself</p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Self-weight of structural members (beams, columns, slabs)</li>
+          <li>• Fixed equipment and permanent partitions</li>
+          <li>• Roofing, flooring, and cladding materials</li>
+        </ul>
+        
+        <p class="text-gray-700 mb-3 mt-3"><strong>Live Loads (L):</strong> Variable, temporary loads from occupancy and use</p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Occupant loads (people, furniture, movable equipment)</li>
+          <li>• Snow loads on roofs</li>
+          <li>• Vehicle loads on parking structures</li>
+        </ul>
+        
+        <p class="text-gray-700 mb-3 mt-3"><strong>Environmental Loads:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• <strong>Wind Loads (W):</strong> Lateral forces from wind pressure and suction</li>
+          <li>• <strong>Seismic Loads (E):</strong> Forces from ground motion during earthquakes</li>
+          <li>• <strong>Snow Loads (S):</strong> Weight accumulation on roofs</li>
+          <li>• <strong>Hydrostatic and Soil Pressure:</strong> Lateral earth and water pressure</li>
+        </ul>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>Load Combinations:</strong> Structures must be designed for the most critical combination of loads</p>
+        <p class="text-gray-700 font-mono text-sm">Example: 1.2D + 1.6L + 0.5S (LRFD method)</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Structural Analysis Methods</h3>
+      <div class="bg-blue-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Statics and Equilibrium</p>
+        <p class="text-gray-700 mb-3">Fundamental principle: Sum of forces = 0, Sum of moments = 0</p>
+        <p class="text-gray-700 mb-1">ΣFx = 0 (horizontal equilibrium)</p>
+        <p class="text-gray-700 mb-1">ΣFy = 0 (vertical equilibrium)</p>
+        <p class="text-gray-700 mb-4">ΣM = 0 (moment equilibrium)</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Method of Joints</p>
+        <p class="text-gray-700 mb-3">Used for truss analysis; analyze forces at each joint assuming pin connections</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Method of Sections</p>
+        <p class="text-gray-700 mb-3">Cut through truss members and analyze internal forces using equilibrium equations</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Moment Distribution Method</p>
+        <p class="text-gray-700 mb-3">Iterative method for analyzing indeterminate beams and frames</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Finite Element Analysis (FEA)</p>
+        <p class="text-gray-700">Modern computational method dividing structures into small elements for complex analysis</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Stress and Strain</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Normal Stress (σ)</p>
+        <p class="text-gray-700 mb-1">σ = P/A (force per unit area perpendicular to surface)</p>
+        <p class="text-gray-700 mb-4 text-sm">Where P = axial force, A = cross-sectional area</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Shear Stress (τ)</p>
+        <p class="text-gray-700 mb-1">τ = V/A (force per unit area parallel to surface)</p>
+        <p class="text-gray-700 mb-4 text-sm">Where V = shear force</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Strain (ε)</p>
+        <p class="text-gray-700 mb-1">ε = ΔL/L₀ (deformation per unit length)</p>
+        <p class="text-gray-700 mb-4 text-sm">Where ΔL = change in length, L₀ = original length</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Hooke's Law (Elastic Region)</p>
+        <p class="text-gray-700 mb-1">σ = E × ε</p>
+        <p class="text-gray-700 text-sm">Where E = Young's Modulus (material stiffness)</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Structural Materials</h3>
+      <div class="bg-gray-50 p-4 rounded-lg">
+        <p class="text-gray-800 mb-3"><strong>Concrete:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-4">
+          <li>• High compressive strength (~20-60 MPa typical)</li>
+          <li>• Low tensile strength (requires reinforcement)</li>
+          <li>• Durable, fire-resistant, economical</li>
+          <li>• Reinforced concrete combines concrete (compression) with steel (tension)</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Steel:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-4">
+          <li>• High strength-to-weight ratio</li>
+          <li>• Excellent tensile and compressive strength</li>
+          <li>• Ductile behavior (important for seismic resistance)</li>
+          <li>• Requires corrosion protection and fire protection</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Timber:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-4">
+          <li>• Renewable, sustainable material</li>
+          <li>• Good strength-to-weight ratio</li>
+          <li>• Anisotropic properties (stronger along grain)</li>
+          <li>• Susceptible to moisture, fire, and biological decay</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Composite Materials:</strong></p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Fiber-reinforced polymers (FRP)</li>
+          <li>• Engineered wood products (glulam, CLT)</li>
+          <li>• High-performance concrete with additives</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Geotechnical Engineering</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Geotechnical engineering deals with the behavior of soil and rock and their interaction with structures. All structures must be supported by the ground, making this discipline essential.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Soil Properties and Classification</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Soil Composition</p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Solid particles (mineral grains)</li>
+          <li>• Water (pore water)</li>
+          <li>• Air (in voids between particles)</li>
+        </ul>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Grain Size Classification</p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• <strong>Gravel:</strong> > 4.75 mm diameter</li>
+          <li>• <strong>Sand:</strong> 0.075 - 4.75 mm (coarse, medium, fine)</li>
+          <li>• <strong>Silt:</strong> 0.002 - 0.075 mm</li>
+          <li>• <strong>Clay:</strong> < 0.002 mm (exhibits plasticity when wet)</li>
+        </ul>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Unified Soil Classification System (USCS)</p>
+        <p class="text-gray-700 mb-2">Uses grain size and plasticity to classify soils (e.g., SW = well-graded sand, CL = low plasticity clay)</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Soil Mechanics Fundamentals</h3>
+      <div class="bg-blue-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Effective Stress Principle (Terzaghi)</p>
+        <p class="text-gray-700 mb-1">σ' = σ - u</p>
+        <p class="text-gray-700 mb-4 text-sm">Where σ' = effective stress, σ = total stress, u = pore water pressure</p>
+        <p class="text-gray-700 mb-4">Effective stress controls soil strength and deformation, not total stress</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Shear Strength (Mohr-Coulomb)</p>
+        <p class="text-gray-700 mb-1">τ = c + σ' tan(φ)</p>
+        <p class="text-gray-700 text-sm">Where c = cohesion, φ = friction angle, σ' = effective normal stress</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-6">Consolidation</p>
+        <p class="text-gray-700">Time-dependent settlement as water is squeezed from saturated clay under loading</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Foundation Engineering</h3>
+      <div class="bg-gray-50 p-4 rounded-lg">
+        <p class="text-gray-800 mb-3"><strong>Shallow Foundations:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-4">
+          <li>• <strong>Spread Footings:</strong> Individual column footings, wall footings</li>
+          <li>• <strong>Mat/Raft Foundations:</strong> Large slab supporting entire structure</li>
+          <li>• Used when strong soil near surface; depth < width</li>
+          <li>• Bearing capacity determined by Terzaghi's equation</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Deep Foundations:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-4">
+          <li>• <strong>Piles:</strong> Driven or drilled shafts (timber, steel, concrete)</li>
+          <li>• <strong>Drilled Shafts:</strong> Large diameter bored piles (caissons)</li>
+          <li>• Used when surface soil weak; transfer loads to deeper strong strata</li>
+          <li>• Capacity from end bearing and/or skin friction</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Bearing Capacity Analysis:</strong></p>
+        <p class="text-gray-700 mb-1">qult = cNc + γDfNq + 0.5γBNγ (Terzaghi)</p>
+        <p class="text-gray-700 text-sm">Where Nc, Nq, Nγ are bearing capacity factors depending on φ</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Transportation Engineering</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Transportation engineering involves planning, design, construction, and operation of transportation systems including highways, railways, airports, and public transit.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Highway Geometric Design</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Design Speed</p>
+        <p class="text-gray-700 mb-4">Selected speed used to determine geometric features (85th percentile of desired speed)</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Horizontal Alignment</p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Tangents (straight sections)</li>
+          <li>• Circular curves connecting tangents</li>
+          <li>• Superelevation (banking) on curves to counteract centrifugal force</li>
+          <li>• Minimum radius based on design speed and coefficient of friction</li>
+        </ul>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Vertical Alignment</p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Grades (slope of roadway)</li>
+          <li>• Vertical curves (parabolic) connecting different grades</li>
+          <li>• Crest curves designed for sight distance</li>
+          <li>• Sag curves designed for headlight distance and comfort</li>
+        </ul>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Cross-Section Elements</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Lane width (typically 3.0-3.7 m)</li>
+          <li>• Shoulders for emergency stopping</li>
+          <li>• Median separation for divided highways</li>
+          <li>• Cross slope for drainage (1.5-2%)</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Pavement Design</h3>
+      <div class="bg-blue-50 p-4 rounded-lg">
+        <p class="text-gray-800 mb-3"><strong>Flexible Pavement (Asphalt):</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-4">
+          <li>• Surface course (asphalt concrete wearing surface)</li>
+          <li>• Base course (crushed stone, stabilized)</li>
+          <li>• Subbase (granular material)</li>
+          <li>• Subgrade (natural soil, compacted)</li>
+          <li>• Distributes load through layered system</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Rigid Pavement (Concrete):</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-4">
+          <li>• Portland cement concrete slab (20-30 cm thick)</li>
+          <li>• Subbase (optional granular or stabilized layer)</li>
+          <li>• Subgrade</li>
+          <li>• High flexural strength distributes loads over wide area</li>
+          <li>• Requires joints for thermal expansion/contraction</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Water Resources and Hydraulics</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Water resources engineering manages water for beneficial uses and protection from harmful effects including water supply, flood control, drainage, and irrigation.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Fluid Mechanics Fundamentals</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Continuity Equation (Conservation of Mass)</p>
+        <p class="text-gray-700 mb-1">Q = A₁V₁ = A₂V₂</p>
+        <p class="text-gray-700 mb-4 text-sm">Where Q = flow rate, A = cross-sectional area, V = velocity</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Bernoulli's Equation (Energy Conservation)</p>
+        <p class="text-gray-700 mb-1">P₁/γ + V₁²/2g + z₁ = P₂/γ + V₂²/2g + z₂ + hL</p>
+        <p class="text-gray-700 text-sm">Pressure head + velocity head + elevation head = constant (plus losses)</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-6">Manning's Equation (Open Channel Flow)</p>
+        <p class="text-gray-700 mb-1">V = (1/n) R^(2/3) S^(1/2)</p>
+        <p class="text-gray-700 text-sm">Where n = Manning's roughness coefficient, R = hydraulic radius, S = slope</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Hydrology</h3>
+      <div class="bg-blue-50 p-4 rounded-lg">
+        <p class="text-gray-800 font-semibold mb-2">Hydrologic Cycle</p>
+        <p class="text-gray-700 mb-4">Precipitation → Infiltration/Runoff → Evaporation/Transpiration → Precipitation</p>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Rainfall-Runoff Relationships</p>
+        <ul class="text-gray-700 space-y-1 mb-4">
+          <li>• Rational Method: Q = CiA (simple peak flow estimation)</li>
+          <li>• Unit Hydrograph Method (converts rainfall to runoff hydrograph)</li>
+          <li>• Infiltration losses (initial abstraction + continuing losses)</li>
+        </ul>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-3">Frequency Analysis</p>
+        <p class="text-gray-700">Design storms and floods based on return period (e.g., 100-year flood has 1% annual probability)</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Environmental Engineering</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Environmental engineering protects human health and the environment through water and wastewater treatment, air quality management, and solid waste management.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Water Treatment</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Conventional Treatment Process</p>
+        <ol class="text-gray-700 space-y-2">
+          <li>1. <strong>Screening:</strong> Remove large debris and solids</li>
+          <li>2. <strong>Coagulation/Flocculation:</strong> Add chemicals to aggregate small particles</li>
+          <li>3. <strong>Sedimentation:</strong> Allow flocs to settle by gravity</li>
+          <li>4. <strong>Filtration:</strong> Remove remaining suspended particles (sand filters)</li>
+          <li>5. <strong>Disinfection:</strong> Kill pathogens (chlorine, UV, ozone)</li>
+          <li>6. <strong>pH Adjustment:</strong> Prevent corrosion in distribution system</li>
+        </ol>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Wastewater Treatment</h3>
+      <div class="bg-blue-50 p-4 rounded-lg">
+        <p class="text-gray-800 mb-3"><strong>Primary Treatment:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-4">
+          <li>• Screening and grit removal</li>
+          <li>• Primary sedimentation (removes ~60% suspended solids)</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Secondary Treatment (Biological):</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-4">
+          <li>• Activated sludge process (aerobic bacteria consume organic matter)</li>
+          <li>• Trickling filters or rotating biological contactors</li>
+          <li>• Secondary clarification</li>
+          <li>• Removes ~90% BOD (biochemical oxygen demand)</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Tertiary Treatment (Advanced):</strong></p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Nutrient removal (nitrogen, phosphorus)</li>
+          <li>• Advanced filtration</li>
+          <li>• Disinfection before discharge</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Construction Management</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Construction management involves planning, coordinating, and controlling a project from inception to completion, ensuring it meets requirements for quality, time, and cost.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Project Delivery Methods</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 mb-3"><strong>Design-Bid-Build (Traditional):</strong></p>
+        <p class="text-gray-700 mb-4">Owner hires designer, then separately bids and hires contractor. Sequential process, clear separation of responsibilities.</p>
+        
+        <p class="text-gray-800 mb-3"><strong>Design-Build:</strong></p>
+        <p class="text-gray-700 mb-4">Single entity responsible for both design and construction. Faster delivery, single point of responsibility.</p>
+        
+        <p class="text-gray-800 mb-3"><strong>Construction Management at Risk (CMAR):</strong></p>
+        <p class="text-gray-700 mb-4">CM provides input during design, guarantees maximum price, manages construction. Collaborative approach.</p>
+        
+        <p class="text-gray-800 mb-3"><strong>Public-Private Partnership (P3):</strong></p>
+        <p class="text-gray-700">Private entity designs, builds, finances, operates, and maintains infrastructure for public sector.</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Scheduling Methods</h3>
+      <div class="bg-blue-50 p-4 rounded-lg">
+        <p class="text-gray-800 font-semibold mb-2">Critical Path Method (CPM)</p>
+        <ul class="text-gray-700 space-y-1 mb-4">
+          <li>• Network diagram showing task dependencies</li>
+          <li>• Identifies critical path (longest duration path, zero float)</li>
+          <li>• Activities on critical path cannot be delayed without delaying project</li>
+          <li>• Non-critical activities have float (scheduling flexibility)</li>
+        </ul>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Gantt Chart (Bar Chart)</p>
+        <p class="text-gray-700 mb-4">Visual timeline showing task durations and overlaps. Easy to understand but doesn't explicitly show dependencies.</p>
+        
+        <p class="text-gray-800 font-semibold mb-2">Resource Leveling</p>
+        <p class="text-gray-700">Adjust schedule to balance resource utilization, avoid peaks and valleys in labor/equipment demand</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Surveying and Geomatics</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Surveying determines positions and measurements of points, lines, and areas on the Earth's surface. Essential for all civil engineering projects from initial site investigation through construction.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Types of Surveys</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 mb-2"><strong>Topographic Survey:</strong> Determines elevation of points to create contour maps showing terrain</p>
+        <p class="text-gray-800 mb-2"><strong>Boundary Survey:</strong> Establishes property lines and legal boundaries</p>
+        <p class="text-gray-800 mb-2"><strong>Construction Survey:</strong> Lays out and controls positions for construction (staking)</p>
+        <p class="text-gray-800 mb-2"><strong>As-Built Survey:</strong> Documents final constructed locations and dimensions</p>
+        <p class="text-gray-800"><strong>Route Survey:</strong> For linear projects (highways, pipelines, railways)</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Modern Surveying Technology</h3>
+      <div class="bg-blue-50 p-4 rounded-lg">
+        <p class="text-gray-800 mb-3"><strong>Global Positioning System (GPS/GNSS):</strong></p>
+        <p class="text-gray-700 mb-4">Satellite-based positioning; RTK (Real-Time Kinematic) provides centimeter-level accuracy</p>
+        
+        <p class="text-gray-800 mb-3"><strong>Total Station:</strong></p>
+        <p class="text-gray-700 mb-4">Electronic theodolite integrated with distance measurement; measures angles and distances simultaneously</p>
+        
+        <p class="text-gray-800 mb-3"><strong>LiDAR (Light Detection and Ranging):</strong></p>
+        <p class="text-gray-700 mb-4">Laser scanning creates dense 3D point clouds; airborne or terrestrial</p>
+        
+        <p class="text-gray-800 mb-3"><strong>Photogrammetry and Drones:</strong></p>
+        <p class="text-gray-700">Creating measurements from photographs; UAVs enable rapid site documentation</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Sustainable and Resilient Infrastructure</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Modern civil engineering emphasizes sustainability, resilience, and minimizing environmental impact while meeting society's needs.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Sustainability Principles</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 font-semibold mb-2">Triple Bottom Line</p>
+        <ul class="text-gray-700 space-y-1 mb-4">
+          <li>• <strong>Environmental:</strong> Minimize resource consumption, emissions, waste</li>
+          <li>• <strong>Economic:</strong> Life-cycle cost analysis, long-term value</li>
+          <li>• <strong>Social:</strong> Community benefit, equity, quality of life</li>
+        </ul>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Green Building and Infrastructure</p>
+        <ul class="text-gray-700 space-y-1 mb-4">
+          <li>• LEED certification (Leadership in Energy and Environmental Design)</li>
+          <li>• Envision rating system for infrastructure sustainability</li>
+          <li>• Green roofs, permeable pavement, bioswales</li>
+          <li>• Renewable energy integration (solar, wind)</li>
+        </ul>
+        
+        <p class="text-gray-800 font-semibold mb-2 mt-4">Circular Economy</p>
+        <p class="text-gray-700">Reuse, recycle, and repurpose materials; minimize waste to landfills</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Climate Resilience</h3>
+      <div class="bg-blue-50 p-4 rounded-lg">
+        <p class="text-gray-700 mb-3">Designing infrastructure to withstand and adapt to climate change impacts:</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Sea level rise and coastal flooding</li>
+          <li>• Increased intensity of storms and precipitation</li>
+          <li>• Extended droughts and water scarcity</li>
+          <li>• Extreme heat events</li>
+          <li>• Design using future climate projections, not just historical data</li>
+          <li>• Nature-based solutions (wetland restoration, green infrastructure)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Professional Practice and Ethics</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Civil engineers have a professional and ethical responsibility to protect public health, safety, and welfare.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Licensure and Professional Engineering (PE)</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3">Professional licensure process (varies by jurisdiction):</p>
+        <ol class="text-gray-700 space-y-2 mb-4">
+          <li>1. Earn ABET-accredited engineering degree</li>
+          <li>2. Pass Fundamentals of Engineering (FE) exam → Engineer-in-Training (EIT)</li>
+          <li>3. Gain 4+ years of progressive engineering experience under PE supervision</li>
+          <li>4. Pass Principles and Practice of Engineering (PE) exam → Licensed PE</li>
+        </ol>
+        <p class="text-gray-700">Only licensed PEs can sign and seal engineering documents, take legal responsibility for designs</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Code of Ethics (Based on ASCE and NSPE)</h3>
+      <div class="bg-blue-50 p-4 rounded-lg">
+        <ul class="text-gray-700 space-y-2">
+          <li>• <strong>Hold paramount the safety, health, and welfare of the public</strong></li>
+          <li>• Perform services only in areas of competence</li>
+          <li>• Issue public statements only in objective and truthful manner</li>
+          <li>• Act as faithful agents or trustees for clients and employers</li>
+          <li>• Avoid conflicts of interest; disclose when they exist</li>
+          <li>• Build professional reputation on merit of services</li>
+          <li>• Continue professional development throughout career</li>
+          <li>• Treat all persons fairly without discrimination</li>
+          <li>• Credit contributions of others; do not plagiarize</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-blue-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Conclusion</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Civil engineering is a diverse and impactful profession that shapes the built environment and improves quality of life. From designing skyscrapers and bridges to managing water resources and protecting the environment, civil engineers solve complex challenges facing society.</p>
+      
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Success in civil engineering requires strong fundamentals in mathematics, physics, and materials science, combined with creativity, problem-solving skills, and attention to detail. Modern practice increasingly emphasizes sustainability, resilience, and the use of advanced technologies including BIM (Building Information Modeling), computational analysis, and smart infrastructure systems.</p>
+      
+      <p class="text-gray-700 leading-relaxed text-lg">As infrastructure ages and climate change presents new challenges, the demand for skilled civil engineers continues to grow. The profession offers diverse career paths in consulting firms, government agencies, construction companies, research institutions, and beyond. Civil engineers have the privilege and responsibility of creating infrastructure that will serve communities for generations, making it one of the most rewarding engineering disciplines.</p>
+    </div>
+
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="civil-engineering-quiz.html" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="college.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to College
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

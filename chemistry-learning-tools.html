@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chemistry Learning Tools - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <!-- Back Button -->
+  <div class="mb-6">
+    <a href="college-learning-tools.html" class="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back to Learning Tools</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="flex justify-center mb-4">
+      <div class="p-4 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-full">
+        <i data-lucide="flask-conical" class="w-16 h-16 text-white"></i>
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Chemistry Learning Tools</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Interactive resources and tools for studying chemical reactions, molecular structures, and periodic trends
+    </p>
+  </div>
+
+  <!-- Molecular Modeling & Visualization Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl shadow-lg p-8 border-l-4 border-purple-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="atom" class="w-7 h-7 text-purple-600"></i>
+        Molecular Modeling & Visualization Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.molview.org/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">MolView ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free online molecular viewer for drawing and visualizing chemical structures in 2D and 3D</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Draw molecular structures easily</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>3D molecular visualization</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Database search and properties</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.chemspider.com/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">ChemSpider ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Chemical structure database with millions of compounds and property predictions</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>100+ million chemical structures</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Property predictions and data</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Spectral data and references</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://avogadro.cc/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Avogadro ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Advanced molecular editor and visualization tool for computational chemistry</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Build and edit molecules</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Energy minimization</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Plugin support for calculations</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.chemcalc.org/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">ChemCalc ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Molecular mass calculator and isotope pattern simulator for chemical formulas</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Molecular weight calculator</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Isotope distribution patterns</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Elemental composition analysis</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equation Balancing & Stoichiometry Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="calculator" class="w-7 h-7 text-blue-600"></i>
+        Equation Balancing & Stoichiometry Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.webqc.org/balance.php" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">WebQC Chemical Equation Balancer ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Automatically balance chemical equations and calculate stoichiometry</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Automatic equation balancing</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Reaction stoichiometry calculator</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Limiting reagent identification</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.chemicalaid.com/tools/equationbalancer.php" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Chemical Aid ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Chemistry calculators for equations, molar mass, and solution preparation</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Multiple calculation tools</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Solution dilution calculator</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Gas law calculators</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.omnicalculator.com/chemistry" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Omni Calculator - Chemistry ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Collection of specialized chemistry calculators for various applications</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>50+ chemistry calculators</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>pH and concentration tools</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Thermodynamics calculators</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.wolframalpha.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">WolframAlpha Chemistry ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Computational knowledge engine for chemistry calculations and data</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Chemical property lookup</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Equation solving and balancing</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Unit conversions</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Periodic Table Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-indigo-50 to-violet-50 rounded-xl shadow-lg p-8 border-l-4 border-indigo-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="grid-3x3" class="w-7 h-7 text-indigo-600"></i>
+        Periodic Table Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://ptable.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Ptable - Interactive Periodic Table ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Dynamic periodic table with detailed element properties and visualizations</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Interactive element data</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Electron configurations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Isotope information</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.rsc.org/periodic-table" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Royal Society of Chemistry Periodic Table ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive periodic table with podcasts, videos, and element histories</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Element podcasts and videos</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Historical context</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Application examples</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.webelements.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">WebElements ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Scholarly periodic table with extensive data and chemical properties</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Detailed element properties</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Crystallographic data</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Compound databases</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.chemicool.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Chemicool ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Periodic table with element images, uses, and discovery information</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Element photos and uses</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Discovery timeline</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Quick reference data</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Virtual Lab Simulations -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl shadow-lg p-8 border-l-4 border-green-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="beaker" class="w-7 h-7 text-green-600"></i>
+        Virtual Lab Simulations
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.labster.com/" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">Labster Chemistry ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Immersive virtual chemistry lab simulations with realistic equipment</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Titration simulations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Spectroscopy experiments</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Organic chemistry labs</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://phet.colorado.edu/en/simulations/filter?subjects=chemistry" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">PhET Chemistry Simulations ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free interactive simulations for chemistry concepts from University of Colorado</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Acid-base solutions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>States of matter</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Chemical reactions explorer</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://chemcollective.org/vlab" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">ChemCollective Virtual Lab ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Virtual chemistry lab for creating and running realistic experiments</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Custom solution preparation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Stoichiometry experiments</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Thermochemistry simulations</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.chemix.org/" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">Chemix ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Online editor for drawing chemistry lab diagrams and equipment setups</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Lab equipment drawing tool</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Experimental setup diagrams</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Export to PDF or image</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video & Tutorial Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-orange-50 to-amber-50 rounded-xl shadow-lg p-8 border-l-4 border-orange-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="video" class="w-7 h-7 text-orange-600"></i>
+        Video & Tutorial Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.khanacademy.org/science/chemistry" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Khan Academy Chemistry ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free comprehensive chemistry video lessons from basics to advanced topics</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Complete chemistry curriculum</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Practice exercises</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>AP Chemistry prep</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/user/crashcourse" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Crash Course Chemistry ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Engaging video series covering major chemistry concepts with humor</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>46-episode chemistry series</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Fast-paced explanations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Visual demonstrations</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/user/professorpoliakoff" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">The Periodic Videos ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Video for every element on the periodic table plus chemistry experiments</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>118+ element videos</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Chemistry demonstrations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Expert explanations</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/user/TheOrganicChemistryTutor" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">The Organic Chemistry Tutor ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Detailed chemistry tutorials and problem-solving walkthroughs</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Step-by-step solutions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Organic and general chemistry</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Exam preparation videos</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice & Study Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-xl shadow-lg p-8 border-l-4 border-teal-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="clipboard-check" class="w-7 h-7 text-teal-600"></i>
+        Practice & Study Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://quizlet.com/subject/chemistry/" target="_blank" class="text-teal-600 hover:text-teal-700 hover:underline">Quizlet Chemistry ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Millions of chemistry flashcard sets for all topics and levels</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>User-created flashcards</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Multiple study modes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Practice tests and games</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://apps.ankiweb.net/" target="_blank" class="text-teal-600 hover:text-teal-700 hover:underline">Anki ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Spaced repetition flashcard system for long-term chemistry retention</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Intelligent review scheduling</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Chemistry deck libraries</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Cross-platform sync</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.chemguide.co.uk/" target="_blank" class="text-teal-600 hover:text-teal-700 hover:underline">Chemguide ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Clear explanations of chemistry concepts for A-level and beyond</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Topic-by-topic guides</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Clear explanations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Practice questions</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.masterorganicchemistry.com/" target="_blank" class="text-teal-600 hover:text-teal-700 hover:underline">Master Organic Chemistry ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive guides and study tools for organic chemistry</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Reaction mechanisms</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Study guides and cheat sheets</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Practice problems</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="chemistry.html" class="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Chemistry Basics
+    </a>
+    <a href="chemistry-quiz.html" class="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Take Quiz
+    </a>
+    <a href="college-learning-tools.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      All Learning Tools
+    </a>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Anatomy & Physiology - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-6">
+      <i data-lucide="eye" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Anatomy & Physiology: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">Comprehensive exploration of human body structure and function</p>
+  </div>
+
+  <div class="space-y-10">
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Integumentary System</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The integumentary system is the body's largest organ system, covering approximately 1.5-2 m² of surface area and weighing about 4-5 kg. It consists of the skin and its accessory structures (hair, nails, sweat glands, sebaceous glands). The skin is a complex, dynamic organ that interfaces with the external environment while maintaining internal homeostasis.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Layers of the Skin:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Epidermis (Stratum Corneum to Basale):</strong> The outermost layer, composed of stratified squamous epithelium. Contains keratinocytes (produce keratin), melanocytes (produce melanin), Langerhans cells (immune function), and Merkel cells (touch sensation). Undergoes constant renewal through cell division at the stratum basale, with cells migrating upward and undergoing keratinization. Complete cell turnover occurs every 25-30 days.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Dermis:</strong> The middle, vascularized layer containing connective tissue, blood vessels, nerves, hair follicles, and glands. Divided into papillary layer (superficial, loose connective tissue) and reticular layer (deeper, dense irregular connective tissue). Contains collagen and elastin fibers providing strength and elasticity.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Hypodermis (Subcutaneous Layer):</strong> Deepest layer, composed primarily of adipose tissue and loose connective tissue. Provides insulation, energy storage, and attachment to underlying structures. Thickness varies based on body location and individual factors.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Primary Functions:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Protection:</strong> Physical barrier preventing entry of pathogens, chemicals, and UV radiation. Acidic pH (4-6) creates antimicrobial barrier. Keratin provides mechanical protection. Melanin absorbs and scatters UV radiation, protecting DNA from damage.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Thermoregulation:</strong> Eccrine sweat glands produce sweat for evaporative cooling. Vasodilation increases blood flow to skin surface for heat loss. Vasoconstriction conserves heat by reducing superficial blood flow. Arrector pili muscles create "goosebumps" to trap insulating air layer.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Sensation:</strong> Contains various sensory receptors: Meissner's corpuscles (light touch), Pacinian corpuscles (pressure/vibration), Ruffini endings (stretch), free nerve endings (pain, temperature). Provides sensory information about the external environment.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Vitamin D Synthesis:</strong> When exposed to UVB radiation, 7-dehydrocholesterol in the skin is converted to cholecalciferol (vitamin D₃), which is then metabolized by the liver and kidneys to active form (calcitriol). Essential for calcium absorption and bone health.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Excretion:</strong> Sweat glands eliminate small amounts of water, salts, urea, and other waste products. Important for maintaining electrolyte balance.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Immunity:</strong> Langerhans cells (dendritic cells) capture antigens and migrate to lymph nodes to initiate immune responses. The skin-associated lymphoid tissue (SALT) provides first-line defense.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Accessory Structures:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Hair:</strong> Provides insulation, protection from UV radiation, and sensory function. Growth occurs in three phases: anagen (active growth), catagen (transitional), telogen (resting). Hair color determined by melanin type and quantity.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Nails:</strong> Protective keratinized structures on fingers and toes. Composed of hard keratin, growing from the nail matrix at the base. Functions include protection, manipulation of small objects, and scratching.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Sweat Glands:</strong> Eccrine glands (most numerous, produce watery sweat for cooling) and apocrine glands (located in axillary and pubic regions, produce thicker, odorous sweat beginning at puberty).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Sebaceous Glands:</strong> Produce sebum (oil) that lubricates hair and skin, prevents water loss, and has antimicrobial properties. Typically associated with hair follicles.</span></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Skeletal System</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The skeletal system consists of 206 bones in adults (270 at birth, many fuse during development), along with cartilage, ligaments, and tendons. It provides structural support, protection of vital organs, enables movement through muscle attachment, stores minerals (especially calcium and phosphorus), and produces blood cells through hematopoiesis in bone marrow.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Bone Classification:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Long Bones:</strong> Longer than wide (femur, humerus, radius, ulna, tibia, fibula). Consist of diaphysis (shaft) containing medullary cavity, and epiphyses (ends) covered with articular cartilage. Function as levers for movement.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Short Bones:</strong> Approximately equal length and width (carpals, tarsals). Provide stability and some movement.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Flat Bones:</strong> Thin, flattened shape (skull, ribs, sternum, scapula). Provide protection and large surface area for muscle attachment.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Irregular Bones:</strong> Complex shapes (vertebrae, facial bones, hip bones). Serve various functions including protection and support.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Sesamoid Bones:</strong> Small bones embedded in tendons (patella, pisiform). Protect tendons and increase mechanical advantage.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Bone Structure:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Compact (Cortical) Bone:</strong> Dense, solid outer layer forming 80% of skeleton. Organized into osteons (Haversian systems) containing concentric lamellae, central canal with blood vessels/nerves, and canaliculi connecting osteocytes. Provides strength and protection. Resists bending and torsion forces.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Spongy (Cancellous) Bone:</strong> Lightweight inner structure with trabeculae (honeycomb-like network). Contains red bone marrow for hematopoiesis. Provides shock absorption and reduces overall bone weight. Located primarily in epiphyses and vertebrae.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Bone Marrow:</strong> Red marrow (hematopoietic tissue, produces blood cells) in spongy bone. Yellow marrow (adipose tissue, energy storage) in medullary cavity of long bones. With age, red marrow converts to yellow marrow in long bones.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Periosteum:</strong> Dense irregular connective tissue covering outer bone surface. Contains osteoblasts and blood vessels. Essential for bone growth, repair, and nutrition. Attaches tendons and ligaments to bone.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Endosteum:</strong> Thin connective tissue lining medullary cavity and trabeculae. Contains osteoblasts and osteoclasts. Involved in bone remodeling and repair.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Bone Cells and Remodeling:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Osteoblasts:</strong> Bone-building cells that synthesize and secrete collagen and other bone matrix components. Become trapped in matrix and differentiate into osteocytes. Regulated by hormones (PTH, calcitonin, growth hormone, sex hormones).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Osteoclasts:</strong> Large, multinucleated cells that resorb (break down) bone tissue. Secrete acids and enzymes to dissolve mineral and organic matrix. Essential for bone remodeling, calcium homeostasis, and repair. Derived from monocytes/macrophages.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Osteocytes:</strong> Mature bone cells derived from osteoblasts. Located in lacunae, connected via canaliculi. Maintain bone matrix, sense mechanical stress, and regulate bone remodeling through signaling to osteoblasts and osteoclasts. Live for decades.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Bone Remodeling:</strong> Continuous process where osteoclasts resorb old/damaged bone and osteoblasts form new bone. Occurs throughout life, with 5-10% of bone mass remodeled annually. Maintains bone strength, repairs microdamage, and regulates calcium levels. Balance between resorption and formation determines bone density.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Axial vs. Appendicular Skeleton:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Axial Skeleton (80 bones):</strong> Central axis of body including skull (22 bones: 8 cranial, 14 facial), vertebral column (26 bones: 7 cervical, 12 thoracic, 5 lumbar, sacrum, coccyx), thoracic cage (ribs and sternum). Provides protection for brain, spinal cord, and thoracic organs. Supports and stabilizes body.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Appendicular Skeleton (126 bones):</strong> Limbs and their attachments including pectoral girdle (clavicles, scapulae), upper limbs (humerus, radius, ulna, carpals, metacarpals, phalanges), pelvic girdle (hip bones), lower limbs (femur, patella, tibia, fibula, tarsals, metatarsals, phalanges). Enables movement and manipulation.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Joint Types and Structure:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Synovial Joints (Diarthroses):</strong> Freely movable joints with synovial cavity. Include hinge (elbow, knee), ball-and-socket (shoulder, hip), pivot (atlantoaxial, radioulnar), saddle (thumb carpometacarpal), condyloid (wrist, metacarpophalangeal), and gliding (intercarpal, intertarsal). Features: articular cartilage, synovial membrane (produces synovial fluid), joint capsule, ligaments, bursae. Synovial fluid provides lubrication and nutrition.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Cartilaginous Joints (Amphiarthroses):</strong> Slightly movable joints with cartilage connection. Synchondroses (hyaline cartilage, e.g., epiphyseal plates, first rib-sternum) are temporary in growing bones. Symphyses (fibrocartilage, e.g., intervertebral discs, pubic symphysis) are permanent and provide shock absorption.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Fibrous Joints (Synarthroses):</strong> Immovable joints with fibrous connective tissue. Sutures (skull) fuse completely in adults. Syndesmoses (interosseous membranes between radius/ulna and tibia/fibula) allow slight movement. Gomphoses (tooth sockets) are peg-in-socket joints.</span></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Muscular System</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The muscular system consists of over 600 skeletal muscles (comprising 40-50% of body weight), plus cardiac and smooth muscle tissue. Muscles enable movement, maintain posture, stabilize joints, generate heat, assist in circulation, and facilitate respiration and digestion.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Types of Muscle Tissue:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Skeletal Muscle:</strong> Striated, voluntary, multinucleated cells. Attached to bones via tendons. Responsible for body movement, posture, facial expression. Controlled by somatic nervous system. Each muscle fiber is a single cell containing multiple nuclei. Fast-twitch (type II, glycolytic, fatigue quickly) and slow-twitch (type I, oxidative, fatigue-resistant) fibers. Can undergo hypertrophy (increase in size) and hyperplasia (increase in number, limited in adults).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Cardiac Muscle:</strong> Striated, involuntary, single-nucleated cells with intercalated discs. Found only in heart. Spontaneous rhythmic contraction (myogenic). Autorhythmic cells (SA node, AV node) generate action potentials. Gap junctions allow electrical coupling for synchronized contraction. Regulated by autonomic nervous system and hormones. Cannot regenerate after injury, leading to scar formation.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Smooth Muscle:</strong> Non-striated, involuntary, single-nucleated spindle-shaped cells. Found in walls of hollow organs (GI tract, blood vessels, uterus, bladder, airways). Controlled by autonomic nervous system, hormones, and local factors. Maintains tone (partial contraction). Can regenerate and undergo hypertrophy. Visceral smooth muscle (single-unit, electrically coupled) and multiunit smooth muscle (independent, precise control).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Skeletal Muscle Structure:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Gross Anatomy:</strong> Muscle → fascicle (bundle of fibers) → muscle fiber (cell) → myofibril → myofilaments. Epimysium (outer connective tissue sheath), perimysium (surrounds fascicles), endomysium (surrounds individual fibers). All connective tissue layers merge at muscle ends to form tendons.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Sarcomere:</strong> Basic contractile unit of striated muscle, extending from one Z-disc to next. Contains thick filaments (myosin) and thin filaments (actin, troponin, tropomyosin). I-band (light, contains only thin filaments), A-band (dark, contains thick filaments and overlapping thin filaments), H-zone (center of A-band, only thick filaments), M-line (center of sarcomere, anchors thick filaments).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Sarcoplasmic Reticulum (SR):</strong> Specialized smooth endoplasmic reticulum storing calcium ions. Terminal cisternae (expanded ends) flank T-tubules. Releases calcium upon stimulation. Calcium-ATPase pumps actively transport calcium back into SR for relaxation.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Transverse Tubules (T-tubules):</strong> Invaginations of sarcolemma extending into muscle fiber. Conduct action potentials deep into fiber, ensuring simultaneous calcium release throughout. Triad structure: T-tubule with terminal cisternae on either side.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Mechanism of Contraction - Sliding Filament Theory:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Excitation-Contraction Coupling:</strong> Action potential travels along sarcolemma and T-tubules → depolarization opens voltage-gated dihydropyridine receptors (DHP receptors) → triggers ryanodine receptors (RyR) on SR → calcium released from SR terminal cisternae → calcium concentration increases in sarcoplasm.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Calcium's Role:</strong> Calcium binds to troponin (TnC subunit), causing conformational change → tropomyosin moves away from myosin-binding sites on actin → exposes active sites for myosin cross-bridge formation.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Cross-Bridge Cycling:</strong> (1) Myosin head (energized by ATP hydrolysis) binds to actin, forming cross-bridge. (2) Power stroke: myosin head pivots, pulling thin filament toward M-line (sarcomere center). ADP and Pi released. (3) New ATP binds to myosin head, causing detachment from actin. (4) ATP hydrolyzed to ADP + Pi, myosin head "cocks" back to high-energy position. Cycle repeats as long as calcium and ATP present.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Result:</strong> Thin filaments slide past thick filaments toward center. Sarcomere shortens (I-band and H-zone shorten, A-band remains constant length). Muscle fiber shortens, generating force.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Muscle Contraction Types:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Isotonic Contraction:</strong> Muscle changes length while tension remains constant. Concentric (muscle shortens, e.g., lifting weight) and eccentric (muscle lengthens while generating force, e.g., lowering weight). Eccentric contractions produce more force but cause more muscle damage.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Isometric Contraction:</strong> Muscle generates tension without changing length (e.g., holding plank, maintaining posture). No external work done, but energy consumed. Important for joint stability.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Twitch:</strong> Single brief contraction in response to single action potential. Latent period (delay before contraction), contraction phase, relaxation phase. Duration varies by muscle type (fast-twitch: ~20-30ms, slow-twitch: ~100ms).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Tetanus:</strong> Sustained contraction from rapid, repeated stimuli. Wave summation occurs when stimuli arrive before complete relaxation. Incomplete tetanus (some relaxation between contractions) and complete tetanus (no relaxation, smooth sustained contraction).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Energy Sources and Fatigue:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>ATP Sources:</strong> Direct phosphorylation (creatine phosphate transfers phosphate to ADP, immediate but limited), anaerobic glycolysis (glucose → pyruvate → lactate, fast but inefficient, produces 2 ATP), aerobic respiration (glucose/fatty acids → CO₂ + H₂O, slow but efficient, produces 36 ATP from glucose). Muscle fibers store glycogen and creatine phosphate.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Muscle Fatigue:</strong> Reduced ability to generate force. Causes include depletion of ATP/CP, accumulation of metabolites (lactate, inorganic phosphate, H⁺), electrolyte imbalances (K⁺ loss), central nervous system factors, and glycogen depletion. Recovery requires rest, oxygen (repay oxygen debt), and restoration of energy stores.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Oxygen Debt (EPOC):</strong> Excess post-exercise oxygen consumption required to restore ATP/CP stores, convert lactate back to pyruvate/glucose, replenish myoglobin oxygen stores, and restore normal metabolic conditions. Duration depends on exercise intensity and duration.</span></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Nervous System</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The nervous system is the master control and communication system of the body, coordinating functions through rapid electrical and chemical signals. It consists of the central nervous system (CNS: brain and spinal cord) and peripheral nervous system (PNS: cranial nerves, spinal nerves, ganglia). The nervous system regulates voluntary movements, processes sensory information, maintains homeostasis, enables cognition and memory, and coordinates organ function.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Organization of Nervous System:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Central Nervous System (CNS):</strong> Brain (~100 billion neurons) and spinal cord. Integrates, processes, and coordinates sensory information and motor commands. Protected by bone (skull, vertebrae), meninges (dura mater, arachnoid mater, pia mater), and cerebrospinal fluid (CSF). Blood-brain barrier regulates substance entry.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Peripheral Nervous System (PNS):</strong> All nervous tissue outside CNS. Somatic nervous system (voluntary control of skeletal muscles, sensory from skin/muscles/joints) and autonomic nervous system (involuntary control of smooth/cardiac muscle and glands). Includes 12 pairs of cranial nerves and 31 pairs of spinal nerves.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Autonomic Nervous System (ANS):</strong> Sympathetic division (fight-or-flight, increases heart rate, dilates pupils, inhibits digestion, activates during stress) and parasympathetic division (rest-and-digest, conserves energy, promotes digestion, maintains homeostasis). Most organs receive dual innervation with opposing effects.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Nervous Tissue - Neurons and Neuroglia:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Neurons (Nerve Cells):</strong> Functional units that transmit electrical signals. Three types: sensory/afferent (carry information toward CNS), motor/efferent (carry commands away from CNS), interneurons (within CNS, process and integrate information, 99% of neurons). Most neurons cannot divide after birth (no mitosis in mature neurons), but can regenerate axons in PNS under certain conditions.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Neuroglia (Glial Cells):</strong> Supporting cells that outnumber neurons 10:1. CNS glia: astrocytes (maintain blood-brain barrier, regulate neurotransmitters, provide structural support), oligodendrocytes (form myelin sheaths), microglia (immune function, phagocytosis), ependymal cells (line ventricles, produce CSF). PNS glia: Schwann cells (form myelin sheaths, aid regeneration), satellite cells (support ganglia).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Neuron Structure:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Cell Body (Soma):</strong> Contains nucleus (large, euchromatic, prominent nucleolus) and organelles (Nissl bodies = rough ER, Golgi, mitochondria). Biosynthetic center where proteins, neurotransmitters, and organelles are produced. Neurofibrils and neurofilaments provide structural support.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Dendrites:</strong> Highly branched extensions (can have thousands) that receive signals from other neurons. Contain receptors for neurotransmitters. Graded potentials (local, decremental changes in membrane potential) generated here. Surface area determines number of synaptic inputs.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Axon:</strong> Single, long extension (up to 1 meter) that transmits action potentials away from cell body. Arises from axon hillock (trigger zone where action potentials initiate). Contains axoplasm (cytoplasm) and axolemma (plasma membrane). Branches into axon terminals (telodendria) ending in synaptic knobs/boutons. Contains microtubules for transport (anterograde: kinesin, retrograde: dynein).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Myelin Sheath:</strong> Fatty insulation wrapping axons, formed by oligodendrocytes (CNS) or Schwann cells (PNS). Increases conduction velocity (saltatory conduction: action potential jumps between nodes of Ranvier). Unmyelinated fibers conduct slowly via continuous conduction. Multiple sclerosis: autoimmune destruction of myelin in CNS.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Nerve Impulse - Action Potential:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Resting Membrane Potential:</strong> Approximately -70 mV (inside negative relative to outside). Maintained by Na⁺/K⁺ ATPase pump (3 Na⁺ out, 2 K⁺ in) and selective permeability (more K⁺ channels open at rest, K⁺ leaks out down concentration gradient). Created by unequal distribution of ions and selective membrane permeability.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Depolarization:</strong> Membrane potential becomes less negative (moves toward 0 mV and beyond). Caused by influx of Na⁺ through voltage-gated Na⁺ channels. If threshold (-55 mV) reached, voltage-gated Na⁺ channels open explosively (positive feedback).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Action Potential:</strong> All-or-nothing electrical impulse. Phases: (1) Depolarization: Na⁺ influx, membrane potential reaches +30 mV. (2) Repolarization: Na⁺ channels inactivate, K⁺ channels open, K⁺ efflux returns potential toward resting. (3) Hyperpolarization: Membrane potential overshoots resting potential (becomes more negative) before returning. Absolute refractory period (no new action potential possible) and relative refractory period (requires stronger stimulus).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Propagation:</strong> Action potential regenerates at each segment. In myelinated fibers, saltatory conduction jumps between nodes of Ranvier (gaps in myelin), increasing speed to 150 m/s vs. 1 m/s in unmyelinated. Frequency, not amplitude, encodes information intensity.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Synaptic Transmission:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Synapse Structure:</strong> Presynaptic terminal (axon terminal containing synaptic vesicles with neurotransmitters, mitochondria, voltage-gated Ca²⁺ channels), synaptic cleft (20-40 nm gap), postsynaptic membrane (dendrite or cell body with receptors for neurotransmitters).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Neurotransmitter Release:</strong> Action potential arrives at presynaptic terminal → depolarizes membrane → voltage-gated Ca²⁺ channels open → Ca²⁺ influx → triggers exocytosis of synaptic vesicles → neurotransmitters released into synaptic cleft → diffuse across cleft → bind to receptors on postsynaptic membrane.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Postsynaptic Response:</strong> Neurotransmitters bind to receptors (ligand-gated ion channels or G-protein-coupled receptors). Excitatory postsynaptic potential (EPSP): depolarization (Na⁺ influx), brings membrane closer to threshold. Inhibitory postsynaptic potential (IPSP): hyperpolarization (Cl⁻ influx or K⁺ efflux), moves membrane away from threshold.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Neurotransmitter Termination:</strong> Reuptake (neurotransmitter taken back into presynaptic terminal), enzymatic degradation (e.g., acetylcholinesterase breaks down acetylcholine), diffusion away from synapse. Prevents continuous stimulation.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Major Neurotransmitters:</strong> Acetylcholine (excitatory in CNS, neuromuscular junction; inhibitory in heart), glutamate (major excitatory in CNS), GABA (gamma-aminobutyric acid, major inhibitory in CNS), dopamine (motor control, reward, mood), serotonin (mood, sleep, appetite), norepinephrine (arousal, attention).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Central Nervous System - Brain Regions:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Cerebrum:</strong> Largest part (80% of brain mass). Two hemispheres connected by corpus callosum. Cerebral cortex (gray matter, 2-4 mm thick, contains ~14 billion neurons): frontal lobe (motor control, planning, judgment, personality), parietal lobe (somatosensory, spatial processing), temporal lobe (auditory, memory, language comprehension), occipital lobe (vision). Basal nuclei (ganglia): motor control, procedural learning. Limbic system: emotion, memory, motivation (amygdala, hippocampus, cingulate gyrus).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Diencephalon:</strong> Thalamus (relay station for sensory information to cortex, regulates consciousness/sleep), hypothalamus (homeostasis, autonomic control, hormone secretion, hunger/thirst, body temperature, circadian rhythms, links nervous and endocrine systems), epithalamus (pineal gland: secretes melatonin for circadian rhythms).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Brainstem:</strong> Midbrain (visual/auditory reflexes, motor control), pons (relay between cerebrum and cerebellum, respiratory centers), medulla oblongata (vital centers: cardiovascular, respiratory; autonomic reflexes, vomiting, coughing). Contains reticular formation (arousal, consciousness, sleep-wake cycle).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Cerebellum:</strong> "Little brain," coordinates voluntary movements, balance, posture, motor learning, timing. Compares intended movements with actual movements, making corrections. Damage causes ataxia (lack of coordination), tremors.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Spinal Cord:</strong> Extends from foramen magnum to L1-L2. White matter (myelinated tracts: ascending sensory, descending motor) surrounds gray matter (H-shaped, contains cell bodies, interneurons). Functions: conduction (pathway for nerve impulses), integration (spinal reflexes), locomotion (central pattern generators). Protected by vertebrae, meninges, and CSF.</span></li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Cardiovascular System</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The cardiovascular system consists of the heart (pump) and blood vessels (conduits) that transport blood throughout the body. It delivers oxygen and nutrients to tissues, removes waste products (CO₂, urea), transports hormones and immune cells, maintains fluid balance, and regulates body temperature. The system operates as a closed loop: pulmonary circulation (heart → lungs → heart) and systemic circulation (heart → body → heart).
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Heart Structure:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Chambers:</strong> Four chambers: two atria (upper, receive blood) and two ventricles (lower, pump blood). Right atrium receives deoxygenated blood from vena cavae, right ventricle pumps to lungs. Left atrium receives oxygenated blood from pulmonary veins, left ventricle pumps to body. Left ventricle wall is 3x thicker than right (pumps against higher systemic resistance).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Valves:</strong> Atrioventricular valves: tricuspid (right), bicuspid/mitral (left). Prevent backflow into atria during ventricular contraction. Semilunar valves: pulmonary (right ventricle → pulmonary artery), aortic (left ventricle → aorta). Prevent backflow into ventricles during relaxation. Valves open/close passively due to pressure gradients. Chordae tendineae and papillary muscles prevent valve inversion.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Heart Wall:</strong> Epicardium (outer visceral pericardium), myocardium (thick middle layer of cardiac muscle, contracts), endocardium (inner endothelial lining). Pericardium (fibrous outer, serous inner with pericardial fluid) protects and prevents overfilling.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Coronary Circulation:</strong> Right and left coronary arteries branch from aorta, supplying myocardium. Cardiac veins drain into coronary sinus → right atrium. High metabolic demand requires continuous perfusion. Coronary artery disease (atherosclerosis) can cause myocardial infarction.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Cardiac Cycle and Heart Function:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Cardiac Cycle:</strong> Complete heartbeat (approximately 0.8 seconds at rest). Ventricular systole (contraction, 0.3s): isovolumetric contraction (ventricles contract, valves closed, pressure rises), ventricular ejection (semilunar valves open, blood ejected). Ventricular diastole (relaxation, 0.5s): isovolumetric relaxation (ventricles relax, all valves closed), ventricular filling (AV valves open, passive filling, then atrial systole provides "atrial kick"). Atrial systole occurs during late diastole, contributing 20-30% of ventricular filling.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Cardiac Output (CO):</strong> Volume of blood pumped by each ventricle per minute. CO = Heart Rate (HR) × Stroke Volume (SV). At rest: ~70 bpm × ~70 ml = ~5 L/min. During exercise: can increase to 20-25 L/min. Ejection fraction (EF) = SV/End Diastolic Volume, normally 55-70%.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Stroke Volume:</strong> Volume of blood ejected per beat. Determined by preload (end-diastolic volume, venous return, Frank-Starling law: more stretch = more force), contractility (force of contraction, affected by sympathetic stimulation, Ca²⁺, hormones), and afterload (resistance ventricles must overcome, systemic/pulmonary vascular resistance).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Heart Rate Regulation:</strong> Intrinsic rate: SA node ~100 bpm, but parasympathetic (vagus nerve) dominates at rest, lowering to ~70 bpm. Sympathetic stimulation increases HR (positive chronotropy). Hormones: epinephrine/norepinephrine increase HR, thyroid hormone increases HR. Other factors: temperature (1°C increase → +10 bpm), age (decreases with age), exercise, emotions.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Electrical Conduction System:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Conduction Pathway:</strong> (1) SA node (sinoatrial node, pacemaker, located in right atrium, generates ~70 action potentials/min at rest). (2) Atrial excitation spreads through atria, causing atrial contraction. (3) AV node (atrioventricular node, delays impulse ~0.1s to allow atrial emptying). (4) Bundle of His (atrioventricular bundle, only electrical connection between atria and ventricles). (5) Right and left bundle branches. (6) Purkinje fibers (conduct rapidly through ventricles, causing synchronized ventricular contraction).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Cardiac Action Potential:</strong> Phase 0: Rapid depolarization (Na⁺ influx). Phase 1: Initial repolarization (K⁺ efflux). Phase 2: Plateau (Ca²⁺ influx, prolonged refractory period prevents tetanus). Phase 3: Repolarization (K⁺ efflux). Phase 4: Resting potential (Na⁺/K⁺ ATPase maintains gradient). SA node: spontaneous depolarization (pacemaker potential) due to slow Na⁺ influx and decreased K⁺ efflux.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Electrocardiogram (ECG/EKG):</strong> Records electrical activity of heart. P wave: atrial depolarization. QRS complex: ventricular depolarization (atrial repolarization hidden). T wave: ventricular repolarization. PR interval: AV conduction time. QT interval: ventricular depolarization and repolarization. Used to diagnose arrhythmias, conduction blocks, ischemia, infarction.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Blood Vessels:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Arteries:</strong> Carry blood away from heart under high pressure. Elastic arteries (large, aorta, pulmonary arteries, dampen pressure fluctuations, store energy during systole), muscular arteries (distribute blood, regulate flow via vasoconstriction/vasodilation). Structure: tunica intima (endothelium), tunica media (smooth muscle, elastin), tunica externa (connective tissue). Arterioles (smallest arteries) regulate resistance and blood flow to capillary beds.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Capillaries:</strong> Smallest vessels (5-10 μm diameter), site of exchange between blood and tissues. Single layer of endothelium, thin wall maximizes diffusion. Three types: continuous (tight junctions, most common, brain has blood-brain barrier), fenestrated (pores, kidney, small intestine), sinusoidal (large gaps, liver, bone marrow, spleen). Capillary bed flow regulated by precapillary sphincters (smooth muscle).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Veins:</strong> Carry blood toward heart under low pressure. Contain valves (prevent backflow, especially in limbs). Structure similar to arteries but thinner walls, larger lumens, less smooth muscle. Venules collect blood from capillaries. Blood volume: veins contain ~60% of total blood volume (capacitance vessels). Skeletal muscle pump and respiratory pump assist venous return. Venous pressure: ~2-8 mmHg vs. arterial ~120/80 mmHg.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Blood Pressure and Regulation:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Blood Pressure:</strong> Force exerted by blood against vessel walls. Systolic pressure (peak pressure during ventricular systole, ~120 mmHg). Diastolic pressure (minimum pressure during ventricular diastole, ~80 mmHg). Pulse pressure = systolic - diastolic (~40 mmHg). Mean arterial pressure (MAP) = diastolic + 1/3 pulse pressure (~93 mmHg). Hypertension: sustained BP > 140/90 mmHg.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Regulation:</strong> Cardiac output and total peripheral resistance determine MAP. Short-term regulation: baroreceptor reflex (carotid sinus, aortic arch detect pressure changes, reflex adjustments via ANS), chemoreceptor reflex (detect O₂, CO₂, pH), hormones (epinephrine, angiotensin II, ADH). Long-term regulation: renal regulation (kidneys adjust blood volume via renin-angiotensin-aldosterone system, ADH, atrial natriuretic peptide).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Blood Flow:</strong> Flow = ΔP / Resistance (Ohm's law). Resistance determined by vessel length, radius (most important: r⁴ relationship), and blood viscosity. Vasodilation (decreases resistance, increases flow) and vasoconstriction (increases resistance, decreases flow) regulate regional blood flow. Autoregulation (local control) maintains constant flow despite pressure changes.</span></li>
+      </ul>
+    </div>
+    
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Respiratory System</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The respiratory system facilitates gas exchange between the atmosphere and blood, maintaining oxygen (O₂) supply and carbon dioxide (CO₂) removal. It also regulates blood pH, enables vocalization, and provides defense against pathogens. Consists of conducting zone (air passageways, filters, humidifies, warms air) and respiratory zone (alveoli, actual gas exchange).
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Anatomy of Respiratory Tract:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Upper Respiratory Tract:</strong> Nose/nasal cavity (warms, humidifies, filters air; olfactory receptors), pharynx (nasopharynx, oropharynx, laryngopharynx), larynx (voice box, contains vocal cords, glottis, epiglottis prevents aspiration during swallowing).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Lower Respiratory Tract:</strong> Trachea (windpipe, C-shaped cartilage rings maintain patency), bronchi (primary → secondary → tertiary bronchi, cartilage plates), bronchioles (smooth muscle, no cartilage, terminal bronchioles end conducting zone), alveolar ducts and alveoli (respiratory zone, ~300 million alveoli, surface area ~70 m²).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Alveolar Structure:</strong> Type I alveolar cells (95%, thin squamous cells, gas exchange), Type II alveolar cells (5%, secrete surfactant to reduce surface tension, prevent alveolar collapse). Alveolar macrophages remove debris. Respiratory membrane: alveolar epithelium + fused basement membranes + capillary endothelium (total thickness ~0.5 μm for rapid diffusion).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Mechanics of Breathing:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Pulmonary Ventilation (Breathing):</strong> Inspiration: diaphragm contracts (flattens), external intercostals contract (elevate ribs) → thoracic volume increases → intrapulmonary pressure decreases (becomes < atmospheric) → air flows in. Expiration: passive at rest (elastic recoil of lungs and chest wall), diaphragm and intercostals relax → thoracic volume decreases → intrapulmonary pressure increases (> atmospheric) → air flows out. Forced expiration: internal intercostals and abdominal muscles contract.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Lung Volumes and Capacities:</strong> Tidal volume (TV, ~500 ml, volume inhaled/exhaled during normal breathing), Inspiratory reserve volume (IRV, ~3100 ml, additional air after normal inspiration), Expiratory reserve volume (ERV, ~1200 ml, additional air after normal expiration), Residual volume (RV, ~1200 ml, air remaining after maximal expiration, prevents alveolar collapse). Vital capacity (VC = TV + IRV + ERV, ~4800 ml, maximum air that can be exhaled after maximum inspiration). Total lung capacity (TLC = VC + RV, ~6000 ml).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Lung Compliance and Elasticity:</strong> Compliance (ease of lung expansion) depends on elasticity (elastic fibers) and surface tension (reduced by surfactant). Surfactant (phospholipid-protein complex) reduces surface tension in alveoli, preventing collapse (atelectasis). Premature infants may lack surfactant (respiratory distress syndrome). Elastic recoil aids passive expiration.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Gas Exchange and Transport:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Gas Exchange (Diffusion):</strong> Occurs at alveoli (external respiration: between alveoli and pulmonary capillaries) and tissues (internal respiration: between systemic capillaries and tissues). Follows concentration gradients: O₂ diffuses from high (alveoli: 104 mmHg, tissues: 40 mmHg) to low concentration. CO₂ diffuses from high (tissues: 46 mmHg, alveoli: 40 mmHg) to low. Diffusion enhanced by thin respiratory membrane, large surface area, high partial pressure gradients.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Oxygen Transport:</strong> 98.5% bound to hemoglobin (Hb) in red blood cells as oxyhemoglobin (HbO₂). 1.5% dissolved in plasma. Hemoglobin: 4 polypeptide chains (globins), each with heme group containing Fe²⁺ that binds O₂. Oxygen-hemoglobin dissociation curve: S-shaped, loading in lungs (high PO₂), unloading in tissues (low PO₂). Affinity affected by pH (Bohr effect: lower pH decreases affinity), temperature (higher decreases affinity), 2,3-DPG (increases unloading).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Carbon Dioxide Transport:</strong> 70% as bicarbonate (HCO₃⁻): CO₂ + H₂O → H₂CO₃ → H⁺ + HCO₃⁻ (catalyzed by carbonic anhydrase in RBCs). HCO₃⁻ exchanged for Cl⁻ (chloride shift). 23% bound to hemoglobin as carbaminohemoglobin. 7% dissolved in plasma. Reverse occurs in lungs: HCO₃⁻ → CO₂ (exhaled). Important for acid-base balance (CO₂ + H₂O ↔ H₂CO₃ ↔ H⁺ + HCO₃⁻).</span></li>
+      </ul>
+    </div>
+    
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Digestive System</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The digestive system processes food, extracts nutrients, and eliminates waste. It consists of the alimentary canal (GI tract: mouth → esophagus → stomach → small intestine → large intestine → anus) and accessory organs (teeth, tongue, salivary glands, liver, gallbladder, pancreas). Processes include ingestion, propulsion, mechanical digestion, chemical digestion, absorption, and defecation.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">GI Tract Layers and Motility:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Wall Structure:</strong> From lumen outward: mucosa (epithelium, lamina propria, muscularis mucosae; secretes mucus, enzymes, hormones; absorbs nutrients), submucosa (connective tissue, blood vessels, nerves, submucosal plexus), muscularis externa (circular and longitudinal smooth muscle layers, myenteric plexus between layers), serosa/adventitia (outer covering). Enteric nervous system (submucosal and myenteric plexuses) can function independently but modulated by ANS.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Motility:</strong> Peristalsis (propulsive waves, moves food forward), segmentation (mixing contractions in small intestine), mass movements (large intestine, propels feces). Regulated by pacemaker cells (interstitial cells of Cajal), enteric nervous system, ANS (parasympathetic stimulates, sympathetic inhibits), hormones, and local factors.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Organ Functions:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Mouth and Esophagus:</strong> Mouth: mechanical digestion (chewing), chemical digestion begins (salivary amylase breaks down starch), forms bolus. Saliva (from salivary glands) contains amylase, lysozyme, IgA, moistens food. Esophagus: muscular tube, peristalsis propels bolus to stomach. Lower esophageal sphincter prevents reflux.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Stomach:</strong> Stores food (~1.5 L capacity), mixes with gastric juice, continues mechanical and chemical digestion. Gastric juice: HCl (denatures proteins, activates pepsinogen, kills pathogens), pepsin (protein digestion), intrinsic factor (B₁₂ absorption), mucus (protects stomach wall). Gastrin hormone stimulates secretion. Chyme (semi-liquid mixture) released to duodenum gradually. Emptying time: 2-4 hours.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Small Intestine:</strong> Primary site of digestion and absorption (90%). Duodenum (receives bile and pancreatic juice), jejunum (most absorption), ileum (completes absorption, Peyer's patches for immunity). Circular folds, villi (finger-like projections), microvilli (brush border) increase surface area ~600x. Brush border enzymes complete digestion. Absorbs: carbohydrates (monosaccharides via Na⁺-glucose cotransport), proteins (amino acids, dipeptides), lipids (micelles → chylomicrons → lacteals), vitamins, minerals, water.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Large Intestine (Colon):</strong> Absorbs water (1-1.5 L/day) and electrolytes, forms and stores feces, houses bacteria (gut microbiome: ~100 trillion, produce vitamins K and B, ferment undigested fiber). Regions: cecum (with appendix), colon (ascending, transverse, descending, sigmoid), rectum, anal canal. Haustra (puckered appearance), teniae coli (longitudinal muscle bands). Mass movements 1-3 times/day. Transit time: 12-24 hours. Defecation reflex: distension of rectum triggers contraction and relaxation of internal (involuntary) and external (voluntary) anal sphincters.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Accessory Organs:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Liver:</strong> Largest internal organ. Functions: bile production (emulsifies fats), processes nutrients from portal vein, synthesizes plasma proteins (albumin, clotting factors), detoxification, stores glycogen and vitamins, removes old RBCs, produces urea from ammonia. Hepatocytes arranged in lobules. Blood supply: hepatic artery (oxygenated) and hepatic portal vein (nutrient-rich from GI tract). Bile canaliculi → bile ducts → common hepatic duct.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Gallbladder:</strong> Stores and concentrates bile. Releases bile via cystic duct → common bile duct → duodenum when stimulated by cholecystokinin (CCK) hormone. Bile: bile salts (emulsify fats), cholesterol, bilirubin (from hemoglobin breakdown), phospholipids.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Pancreas:</strong> Exocrine function: produces pancreatic juice (1-1.5 L/day) containing bicarbonate (neutralizes acidic chyme) and enzymes: trypsin/chymotrypsin/carboxypeptidase (proteins), pancreatic amylase (starch), lipase (fats), nucleases (DNA/RNA). Released into duodenum via pancreatic duct. Endocrine function: islets of Langerhans produce insulin (beta cells, lowers blood glucose) and glucagon (alpha cells, raises blood glucose).</span></li>
+      </ul>
+    </div>
+    
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Urinary System</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The urinary system filters blood, regulates fluid and electrolyte balance, maintains acid-base balance, eliminates waste products (urea, creatinine, uric acid), and produces hormones (erythropoietin, renin, active vitamin D). Consists of kidneys, ureters, urinary bladder, and urethra. Processes ~180 L of blood filtrate daily, producing ~1-2 L of urine.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Kidney Structure and Function:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Gross Anatomy:</strong> Bean-shaped organs, retroperitoneal, at T12-L3. Renal cortex (outer, contains nephrons), renal medulla (inner, contains pyramids), renal pelvis (collects urine, drains to ureter). Each kidney contains ~1 million nephrons (functional units).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Nephron Components:</strong> Renal corpuscle (glomerulus + Bowman's capsule): filters blood, produces filtrate. Proximal convoluted tubule (PCT): reabsorbs ~65% of filtrate (water, Na⁺, glucose, amino acids, HCO₃⁻). Loop of Henle: creates medullary osmotic gradient (descending: permeable to water, ascending: impermeable, reabsorbs Na⁺/Cl⁻). Distal convoluted tubule (DCT): fine-tunes reabsorption (Na⁺, Ca²⁺), secretes K⁺, H⁺. Collecting duct: final water and Na⁺ reabsorption, regulates urine concentration, secretes H⁺ and K⁺.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Filtration:</strong> Glomerular filtration rate (GFR): ~125 ml/min (180 L/day). Driven by glomerular hydrostatic pressure (forces filtration). Filtration barrier: fenestrated endothelium + basement membrane + podocytes (slit diaphragms). Prevents passage of cells and large proteins. Filtrate is essentially protein-free plasma.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Reabsorption:</strong> ~99% of filtrate reabsorbed (178.5 L/day). Mechanisms: passive (diffusion, osmosis, facilitated diffusion) and active (primary active transport: Na⁺/K⁺ ATPase; secondary active: cotransport, countertransport). Glucose reabsorption: Na⁺-glucose cotransporter in PCT, maximum reabsorption rate (transport maximum, ~375 mg/min), diabetes: glucosuria when exceeded. Water follows Na⁺ osmotically.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Secretion:</strong> Moves substances from blood → filtrate. H⁺ (acid-base balance), K⁺ (regulated by aldosterone), organic acids/bases (drugs, toxins). Contributes to elimination.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Urine Concentration and Regulation:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Countercurrent Mechanism:</strong> Loop of Henle creates medullary osmotic gradient (300 mOsm at cortex → 1200 mOsm at medulla). Countercurrent multiplier (ascending limb creates gradient), countercurrent exchanger (vasa recta maintains gradient). Enables production of concentrated urine (up to 1200 mOsm).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>ADH (Antidiuretic Hormone/Vasopressin):</strong> Released from posterior pituitary when osmolality increases or volume decreases. Increases water permeability of collecting duct (inserts aquaporins). Produces concentrated urine, conserves water. Alcohol inhibits ADH (diuresis).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Aldosterone:</strong> Released from adrenal cortex when Na⁺ decreases or K⁺ increases (via renin-angiotensin-aldosterone system, RAAS). Increases Na⁺ reabsorption (and water) and K⁺ secretion in DCT and collecting duct. Conserves Na⁺, regulates K⁺, increases blood volume/pressure.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Acid-Base Balance:</strong> Kidneys regulate pH by secreting H⁺ and reabsorbing HCO₃⁻. Bicarbonate buffer system: CO₂ + H₂O ↔ H₂CO₃ ↔ H⁺ + HCO₃⁻. Excrete fixed acids (sulfuric, phosphoric) in urine. Can adjust HCO₃⁻ reabsorption based on pH needs. Respiratory system provides rapid adjustment, kidneys provide long-term regulation.</span></li>
+      </ul>
+    </div>
+    
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Endocrine System</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The endocrine system regulates body functions through hormones (chemical messengers) secreted into the bloodstream. It works with the nervous system to maintain homeostasis, but effects are slower and longer-lasting. Includes endocrine glands (pituitary, thyroid, parathyroid, adrenal, pineal, thymus) and hormone-producing cells in other organs (pancreas, kidneys, heart, GI tract, gonads).
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Hormone Mechanisms:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Hormone Classes:</strong> Steroid hormones (derived from cholesterol, lipid-soluble, e.g., cortisol, estrogen, testosterone): diffuse into cells, bind intracellular receptors, affect gene transcription. Protein/peptide hormones (water-soluble, e.g., insulin, growth hormone): bind surface receptors, activate second messengers (cAMP, Ca²⁺, IP₃). Amino acid derivatives (e.g., thyroid hormones, epinephrine): mechanisms vary by type.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Regulation:</strong> Negative feedback (most common): hormone effect inhibits further secretion (e.g., high cortisol inhibits CRH/ACTH). Positive feedback: hormone effect stimulates further secretion (e.g., oxytocin during labor). Neural control: sympathetic stimulation releases epinephrine. Humoral control: blood levels of substances (e.g., glucose → insulin, Ca²⁺ → PTH).</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Major Endocrine Glands:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Pituitary Gland (Hypophysis):</strong> "Master gland," controlled by hypothalamus. Anterior pituitary: secretes GH (growth, metabolism), ACTH (stimulates adrenal cortex), TSH (thyroid stimulation), FSH/LH (gonad function), prolactin (milk production). Posterior pituitary: stores and releases oxytocin (uterine contraction, milk ejection) and ADH (water reabsorption).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Thyroid Gland:</strong> Produces T₄ (thyroxine) and T₃ (triiodothyronine): increase metabolic rate, growth, development, regulate body temperature. Calcitonin: lowers blood Ca²⁺ (inhibits osteoclasts). Requires iodine. Disorders: hypothyroidism (low metabolism, weight gain, fatigue), hyperthyroidism (high metabolism, weight loss, nervousness), goiter (enlargement, often due to iodine deficiency).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Adrenal Glands:</strong> Adrenal cortex: glucocorticoids (cortisol: stress response, anti-inflammatory, increases blood glucose), mineralocorticoids (aldosterone: Na⁺ retention, K⁺ excretion), androgens. Adrenal medulla: epinephrine/norepinephrine (fight-or-flight, increase HR, BP, blood glucose).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Pancreas (Islets):</strong> Beta cells: insulin (lowers blood glucose, promotes uptake/storage, secreted when glucose high). Alpha cells: glucagon (raises blood glucose, promotes glycogenolysis/gluconeogenesis, secreted when glucose low). Diabetes: Type 1 (autoimmune, no insulin), Type 2 (insulin resistance).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Parathyroid Glands:</strong> Produce parathyroid hormone (PTH): raises blood Ca²⁺ (stimulates osteoclasts, increases Ca²⁺ reabsorption in kidneys, activates vitamin D). Essential for calcium homeostasis. Hyperparathyroidism: high Ca²⁺, bone loss. Hypoparathyroidism: low Ca²⁺, tetany.</span></li>
+      </ul>
+    </div>
+    
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Reproductive System</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The reproductive system produces gametes (sperm in males, ova in females), enables fertilization, and supports development of offspring. Male system: testes, epididymis, vas deferens, accessory glands, penis. Female system: ovaries, uterine tubes, uterus, vagina, external genitalia. Hormones (testosterone, estrogen, progesterone) regulate function and secondary sex characteristics.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Male Reproductive System:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Testes:</strong> Produce sperm (spermatogenesis in seminiferous tubules, ~64-72 days) and testosterone (from Leydig cells). Sertoli cells support spermatogenesis, form blood-testis barrier, secrete inhibin. Scrotum maintains testes at lower temperature (2-3°C below body, required for spermatogenesis).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Sperm Pathway:</strong> Seminiferous tubules → rete testis → efferent ductules → epididymis (maturation, storage, ~20 days) → vas deferens → ejaculatory duct → urethra. Accessory glands: seminal vesicles (fructose, prostaglandins, 60% semen volume), prostate (citrate, enzymes, 30% volume), bulbourethral glands (mucus, lubrication). Semen: sperm + seminal fluid (~2-5 ml, 200-500 million sperm/ejaculate).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Hormonal Control:</strong> Hypothalamus releases GnRH → anterior pituitary releases FSH (spermatogenesis) and LH (testosterone production) → testosterone: spermatogenesis, secondary sex characteristics, libido. Negative feedback: testosterone and inhibin suppress GnRH/FSH/LH.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Female Reproductive System:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Ovaries:</strong> Produce ova (oogenesis: begins before birth, arrested at prophase I until puberty, completes during menstrual cycle) and hormones (estrogen, progesterone). Ovarian cycle: follicular phase (follicle development, estrogen secretion, ~14 days), ovulation (release of secondary oocyte), luteal phase (corpus luteum forms, secretes progesterone, ~14 days).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Uterine/Menstrual Cycle:</strong> Menstrual phase (days 1-5, shedding of endometrium), proliferative phase (days 6-14, estrogen stimulates endometrial growth, ovulation at day 14), secretory phase (days 15-28, progesterone prepares endometrium for implantation). If no fertilization: corpus luteum degenerates, progesterone drops, menstruation begins (~28-day cycle).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Fertilization and Pregnancy:</strong> Fertilization typically in uterine tube. Zygote undergoes cleavage, forms blastocyst, implants in endometrium (~day 6-7). Placenta develops (exchanges nutrients/waste, produces hormones: hCG maintains corpus luteum, later produces estrogen/progesterone). Uterus expands, cervix softens, breasts prepare for lactation. Parturition (labor): oxytocin stimulates uterine contractions, positive feedback until delivery.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Hormonal Control:</strong> Hypothalamic-pituitary-ovarian axis. FSH stimulates follicle development, LH triggers ovulation and corpus luteum formation. Estrogen: secondary sex characteristics, endometrial growth, positive feedback for LH surge. Progesterone: maintains endometrium, inhibits uterine contractions, prepares breasts.</span></li>
+      </ul>
+    </div>
+    
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Lymphatic and Immune System</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The lymphatic system returns interstitial fluid to blood, transports dietary lipids, and houses immune cells. The immune system protects against pathogens, removes damaged cells, and prevents cancer. Includes lymphatic vessels, lymph nodes, spleen, thymus, tonsils, and lymphoid tissue. Functions in both innate (non-specific, immediate) and adaptive (specific, memory) immunity.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Lymphatic System:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Lymphatic Vessels:</strong> Collect excess interstitial fluid (3 L/day) as lymph, return to blood via thoracic duct (left side, most of body) and right lymphatic duct. One-way flow: lymphatic capillaries (endothelial cells with overlapping flaps, one-way valves) → collecting vessels → lymph nodes → trunks → ducts → subclavian veins. Contraction of smooth muscle and skeletal muscle pump assist flow.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Lymphoid Organs:</strong> Lymph nodes (~600): filter lymph, contain lymphocytes and macrophages, activate immune responses. Spleen: filters blood, removes old RBCs, stores platelets, houses lymphocytes. Thymus: T-cell maturation (decreases with age). Tonsils and Peyer's patches: lymphoid tissue guarding entry points.</span></li>
+      </ul>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Immune System:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Innate Immunity (Non-Specific):</strong> First and second lines of defense. Barriers: skin (physical, chemical), mucous membranes, secretions (lysozyme, stomach acid). Cells: neutrophils (phagocytosis, most abundant WBC), macrophages (phagocytosis, antigen presentation), natural killer cells (kill virus-infected/cancer cells), eosinophils (parasites, allergies). Inflammation: vasodilation, increased permeability, phagocyte recruitment, tissue repair. Fever: enhances immune function, inhibits pathogen growth.</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Adaptive Immunity (Specific):</strong> Third line of defense, has memory. Humoral immunity: B-cells produce antibodies (immunoglobulins: IgM, IgG, IgA, IgE, IgD). Antibodies bind antigens, neutralize, opsonize (enhance phagocytosis), activate complement, cause agglutination/precipitation. Cell-mediated immunity: T-cells (cytotoxic T-cells kill infected/cancer cells, helper T-cells activate other immune cells, regulatory T-cells suppress).</span></li>
+        <li class="flex items-start gap-3"><span class="text-orange-600 font-bold">•</span><span><strong>Immune Response:</strong> Antigen recognition: B-cells recognize via surface receptors, T-cells via MHC (major histocompatibility complex) presentation. Activation: helper T-cells activate B-cells and cytotoxic T-cells. Proliferation: clonal selection, memory cells form. Effector phase: antibodies produced/secreted, cytotoxic T-cells kill targets. Memory: subsequent exposure produces faster, stronger response (basis of vaccination).</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+
+    <a href="anatomy-physiology-quiz.html" class="px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

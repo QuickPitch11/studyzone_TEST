@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculus Learning Tools - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <!-- Back Button -->
+  <div class="mb-6">
+    <a href="college-learning-tools.html" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back to Learning Tools</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="flex justify-center mb-4">
+      <div class="p-4 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full">
+        <i data-lucide="function-square" class="w-16 h-16 text-white"></i>
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Calculus Learning Tools</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Interactive resources for mastering derivatives, integrals, limits, and advanced calculus concepts
+    </p>
+  </div>
+
+  <!-- Interactive Calculus Visualizations & Graphing Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="area-chart" class="w-7 h-7 text-blue-600"></i>
+        Interactive Calculus Visualizations & Graphing Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.desmos.com/calculator" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Desmos Graphing Calculator ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Advanced online graphing calculator for visualizing calculus concepts</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Derivative and integral visualization</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Parametric and polar graphing</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Interactive sliders and animations</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.geogebra.org/calculator" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">GeoGebra Calculus ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free dynamic mathematics software with calculus capabilities</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>3D graphing and visualization</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Symbolic computation tools</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Interactive calculus activities</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.calculusapplets.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Calculus Applets ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Interactive Java applets for exploring calculus concepts visually</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Riemann sum visualizations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Limit demonstrations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Tangent line animations</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.math3d.org/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Math3D ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">3D graphing calculator for multivariable calculus visualization</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Surface and vector field plotting</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Parametric curves in 3D</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Interactive 3D manipulation</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Derivative & Integral Calculators -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-indigo-50 to-violet-50 rounded-xl shadow-lg p-8 border-l-4 border-indigo-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="calculator" class="w-7 h-7 text-indigo-600"></i>
+        Derivative & Integral Calculators
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.wolframalpha.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">WolframAlpha ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Computational knowledge engine with step-by-step calculus solutions</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Detailed solution steps</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Derivatives and integrals</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Series and limits</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.symbolab.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Symbolab ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Step-by-step calculator for derivatives, integrals, and more</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Detailed explanations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Practice problem generator</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Graphing capabilities</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.derivative-calculator.net/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Derivative Calculator ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Specialized calculator for computing derivatives with steps</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Chain rule applications</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Implicit differentiation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Higher-order derivatives</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.integral-calculator.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Integral Calculator ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive integration calculator with detailed solutions</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Integration techniques explained</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Definite and indefinite integrals</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Substitution methods</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video & Tutorial Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-xl shadow-lg p-8 border-l-4 border-cyan-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="video" class="w-7 h-7 text-cyan-600"></i>
+        Video & Tutorial Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.khanacademy.org/math/calculus-1" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">Khan Academy Calculus ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive free calculus courses from basics to advanced topics</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Calculus 1, 2, and multivariable</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Practice exercises with hints</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Progress tracking</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/c/3blue1brown" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">3Blue1Brown (Essence of Calculus) ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Beautiful visual explanations of calculus fundamentals</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Intuitive visual approach</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Deep conceptual understanding</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Animation-based learning</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/user/professorleonard57" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">Professor Leonard ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Full-length calculus lecture videos covering complete courses</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>College-level lectures</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Detailed problem-solving</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Calculus 1, 2, and 3</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://ocw.mit.edu/courses/mathematics/" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">MIT OpenCourseWare Calculus ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free MIT calculus courses with video lectures and materials</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>University-level content</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Lecture notes and assignments</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Exams with solutions</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice & Problem-Solving Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl shadow-lg p-8 border-l-4 border-green-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="clipboard-check" class="w-7 h-7 text-green-600"></i>
+        Practice & Problem-Solving Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.webassign.net/" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">WebAssign ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Online homework and grading system for calculus courses</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Thousands of practice problems</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Instant feedback</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Randomized problem sets</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.mathway.com/Calculus" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">Mathway Calculus ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free math problem solver for calculus questions</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Instant solutions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Multiple calculus topics</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Step-by-step option</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.patrickjmt.com/" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">PatrickJMT ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Extensive library of calculus problem-solving videos</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Worked example problems</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Clear explanations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>All calculus levels</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.ilectureonline.com/lectures/subject/MATH/21" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">iLectureOnline Calculus ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free calculus lectures with practice problems</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Video problem solutions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Multiple calculus courses</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Organized by topic</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Online Textbooks & Reference Materials -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl shadow-lg p-8 border-l-4 border-purple-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="book-open-text" class="w-7 h-7 text-purple-600"></i>
+        Online Textbooks & Reference Materials
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.stewartcalculus.com/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Stewart Calculus Online ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Resources for the popular Stewart Calculus textbook</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Additional practice materials</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Interactive examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Video solutions</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://tutorial.math.lamar.edu/Classes/CalcI/CalcI.aspx" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Paul's Online Math Notes ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive free calculus notes and tutorials</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Complete course coverage</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Practice problems with solutions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Downloadable cheat sheets</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://openstax.org/details/books/calculus-volume-1" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">OpenStax Calculus ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free peer-reviewed open-source calculus textbooks</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Three volumes available</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>PDF and web versions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Instructor resources</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.cliffsnotes.com/study-guides/calculus" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">CliffsNotes Calculus ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Concise study guides for calculus topics</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Quick review materials</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Key concept summaries</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Practice questions</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advanced Calculus & Applications -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl shadow-lg p-8 border-l-4 border-amber-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="graduation-cap" class="w-7 h-7 text-amber-600"></i>
+        Advanced Calculus & Applications
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.wolframcloud.com/" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">Wolfram Cloud ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Cloud-based computational platform for advanced calculus</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Symbolic and numeric computation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Interactive notebooks</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Advanced visualizations</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.sagemath.org/" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">SageMath ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free open-source mathematics software for calculus</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Powerful symbolic computation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Python-based interface</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Online and desktop versions</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.mathsisfun.com/calculus/index.html" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">Math is Fun Calculus ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Easy-to-understand explanations of calculus concepts</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Simple explanations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Interactive examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Visual demonstrations</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.17calculus.com/" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">17Calculus ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Practice problems and learning resources for calculus students</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Extensive problem library</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Video solutions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Study tips and techniques</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="calculus.html" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Calculus Basics
+    </a>
+    <a href="calculus-quiz.html" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Take Quiz
+    </a>
+    <a href="college-learning-tools.html" class="px-6 py-3 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      All Learning Tools
+    </a>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Computer Science — Overview | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full mb-6">
+      <i data-lucide="monitor" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Computer Science</h1>
+    <p class="text-xl text-gray-600">Algorithms, data structures, and computational theory</p>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 mb-10">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">What is Computer Science?</h2>
+    <p class="text-gray-700 leading-relaxed text-lg mb-4">Computer Science is the study of computation, information processing, and the design of computer systems. It encompasses both the theoretical foundations of algorithms and data structures, as well as practical aspects of software and hardware design. From artificial intelligence to cybersecurity, computer science drives innovation across every sector of modern society.</p>
+    
+    <p class="text-gray-700 leading-relaxed text-lg mb-4">Computer scientists develop the algorithms, programming languages, and systems that power everything from smartphones to supercomputers. The field combines mathematical rigor with creative problem-solving, requiring both analytical thinking and practical engineering skills to build efficient, scalable, and reliable computing solutions.</p>
+
+    <p class="text-gray-700 leading-relaxed text-lg">The discipline spans numerous specializations including software engineering, artificial intelligence, machine learning, computer networks, databases, computer graphics, and theoretical computer science. Computer scientists play a crucial role in shaping the digital world, creating technologies that transform how we live, work, and communicate.</p>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 mb-10">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">Key Areas of Computer Science</h2>
+    
+    <div class="space-y-6">
+      <div class="border-l-4 border-orange-500 pl-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Algorithms & Data Structures</h3>
+        <p class="text-gray-700">Study of efficient problem-solving methods and ways to organize data. Includes sorting, searching, graph algorithms, trees, hash tables, and complexity analysis.</p>
+      </div>
+
+      <div class="border-l-4 border-amber-500 pl-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Artificial Intelligence & Machine Learning</h3>
+        <p class="text-gray-700">Development of intelligent systems that can learn from data, make decisions, and solve complex problems. Covers neural networks, deep learning, natural language processing, and computer vision.</p>
+      </div>
+
+      <div class="border-l-4 border-orange-500 pl-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Software Engineering</h3>
+        <p class="text-gray-700">Systematic approach to designing, developing, testing, and maintaining software systems. Focuses on software architecture, design patterns, version control, and agile methodologies.</p>
+      </div>
+
+      <div class="border-l-4 border-amber-500 pl-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Database Systems</h3>
+        <p class="text-gray-700">Design and management of systems for storing, retrieving, and manipulating data. Includes relational databases, SQL, NoSQL, data modeling, and query optimization.</p>
+      </div>
+
+      <div class="border-l-4 border-orange-500 pl-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Computer Networks & Security</h3>
+        <p class="text-gray-700">Study of how computers communicate and how to protect systems from threats. Covers network protocols, cryptography, cybersecurity, and distributed systems.</p>
+      </div>
+
+      <div class="border-l-4 border-amber-500 pl-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Theory of Computation</h3>
+        <p class="text-gray-700">Mathematical foundations of computing including automata theory, computability, complexity theory, and formal languages. Explores what can and cannot be computed.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 mb-10">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">What You'll Learn</h2>
+    
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-lg">
+        <div class="flex items-start gap-3">
+          <div class="flex-shrink-0">
+            <i data-lucide="check-circle" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-2">Programming Fundamentals</h3>
+            <p class="text-gray-700 text-sm">Master multiple programming languages, object-oriented design, functional programming, and software development best practices</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-lg">
+        <div class="flex items-start gap-3">
+          <div class="flex-shrink-0">
+            <i data-lucide="check-circle" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-2">Data Structures & Algorithms</h3>
+            <p class="text-gray-700 text-sm">Arrays, linked lists, stacks, queues, trees, graphs, sorting algorithms, searching techniques, and Big-O notation</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-lg">
+        <div class="flex items-start gap-3">
+          <div class="flex-shrink-0">
+            <i data-lucide="check-circle" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-2">Operating Systems</h3>
+            <p class="text-gray-700 text-sm">Process management, memory management, file systems, concurrency, multithreading, and system-level programming</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-lg">
+        <div class="flex items-start gap-3">
+          <div class="flex-shrink-0">
+            <i data-lucide="check-circle" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-2">Web Development</h3>
+            <p class="text-gray-700 text-sm">Front-end and back-end technologies, REST APIs, databases, cloud deployment, and modern web frameworks</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-lg">
+        <div class="flex items-start gap-3">
+          <div class="flex-shrink-0">
+            <i data-lucide="check-circle" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-2">Machine Learning & AI</h3>
+            <p class="text-gray-700 text-sm">Supervised and unsupervised learning, neural networks, deep learning frameworks, natural language processing, and computer vision</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-lg">
+        <div class="flex items-start gap-3">
+          <div class="flex-shrink-0">
+            <i data-lucide="check-circle" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-2">Cybersecurity</h3>
+            <p class="text-gray-700 text-sm">Cryptography, network security, ethical hacking, secure coding practices, and threat detection</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 mb-10">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">Why Study Computer Science?</h2>
+    
+    <div class="space-y-4">
+      <div class="flex gap-4 items-start">
+        <div class="flex-shrink-0 w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+          <i data-lucide="lightbulb" class="w-5 h-5 text-orange-600"></i>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800 mb-1">Shape the Future</h3>
+          <p class="text-gray-700">Build innovative technologies that solve real-world problems and transform industries worldwide</p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="flex-shrink-0 w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+          <i data-lucide="trending-up" class="w-5 h-5 text-orange-600"></i>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800 mb-1">High Demand & Excellent Salaries</h3>
+          <p class="text-gray-700">Explosive growth in tech sector creates abundant opportunities with competitive compensation packages</p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="flex-shrink-0 w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+          <i data-lucide="users" class="w-5 h-5 text-orange-600"></i>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800 mb-1">Versatile Career Options</h3>
+          <p class="text-gray-700">Work as a software engineer, data scientist, AI researcher, cybersecurity expert, or entrepreneur in virtually any industry</p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="flex-shrink-0 w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+          <i data-lucide="globe" class="w-5 h-5 text-orange-600"></i>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800 mb-1">Remote Work & Flexibility</h3>
+          <p class="text-gray-700">Enjoy location independence with remote work opportunities and flexible schedules common in tech roles</p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="flex-shrink-0 w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+          <i data-lucide="award" class="w-5 h-5 text-orange-600"></i>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800 mb-1">Continuous Innovation</h3>
+          <p class="text-gray-700">Constantly learn cutting-edge technologies and work on exciting projects at the forefront of innovation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <a href="computer-science-analysis.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all hover:scale-105">
+      <span>View In-Depth Analysis</span>
+      <i data-lucide="arrow-right" class="w-5 h-5"></i>
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

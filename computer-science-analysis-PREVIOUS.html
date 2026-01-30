@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Computer Science - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    </nav>
+
+    <button id="menuBtn" class="md:hidden p-2">
+      <i data-lucide="menu" class="w-6 h-6"></i>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full mb-6">
+      <i data-lucide="monitor" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Computer Science: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">Comprehensive exploration of algorithms, data structures, and computational theory</p>
+  </div>
+
+  <div class="space-y-10">
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Introduction to Computer Science</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Computer Science is the systematic study of computation, information processing, and algorithmic problem-solving. It combines mathematical rigor with engineering principles to design, develop, and analyze software systems, algorithms, and computational processes that power modern technology.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        The field encompasses theoretical foundations like algorithms and complexity theory, practical applications in software engineering and artificial intelligence, and hardware considerations in computer architecture and operating systems. Computer scientists work across industries—from tech giants to healthcare, finance, entertainment, and scientific research.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        From mobile apps and cloud computing to machine learning and quantum algorithms, computer science drives innovation in virtually every sector. Understanding computational thinking, data structures, programming paradigms, and system design principles enables professionals to build scalable, efficient, and reliable solutions to complex problems.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Algorithms & Complexity Analysis</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Algorithms are step-by-step procedures for solving computational problems. Analyzing their efficiency through time and space complexity helps determine scalability and performance characteristics.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Big O Notation:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>O(1) - Constant Time:</strong> Performance doesn't depend on input size. Examples: array access by index, hash table lookup (average case), stack push/pop operations. Operations execute in fixed time regardless of dataset size.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>O(log n) - Logarithmic Time:</strong> Reduces problem size by fraction each step. Examples: binary search in sorted arrays, balanced binary search tree operations (search, insert, delete), finding element in skip list. Extremely efficient for large datasets.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>O(n) - Linear Time:</strong> Processes each element once. Examples: linear search, finding minimum/maximum, calculating array sum, traversing linked list. Performance scales proportionally with input size.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>O(n log n) - Linearithmic Time:</strong> Efficient sorting algorithms. Examples: merge sort, quicksort (average case), heap sort. Optimal comparison-based sorting complexity. Common in divide-and-conquer algorithms.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>O(n²) - Quadratic Time:</strong> Nested iterations over input. Examples: bubble sort, insertion sort, selection sort, naive matrix multiplication. Acceptable for small datasets but impractical for large-scale data.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>O(2ⁿ) - Exponential Time:</strong> Growth doubles with each input element. Examples: recursive Fibonacci without memoization, brute-force subset generation, traveling salesman problem (brute force). Generally impractical except for small inputs.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Algorithm Design Paradigms:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Divide and Conquer:</strong> Break problem into smaller subproblems, solve recursively, combine solutions. Examples: merge sort (splits array, sorts halves, merges), quicksort (partition around pivot), binary search. Efficient when subproblems are independent.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Dynamic Programming:</strong> Solve overlapping subproblems once, store results for reuse. Examples: Fibonacci with memoization, longest common subsequence, knapsack problem, edit distance. Transforms exponential recursion to polynomial time.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Greedy Algorithms:</strong> Make locally optimal choices hoping for global optimum. Examples: Dijkstra's shortest path, Huffman encoding, activity selection, fractional knapsack. Fast but doesn't always guarantee optimal solution.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Backtracking:</strong> Explore all possibilities, abandoning paths that fail constraints. Examples: N-Queens problem, Sudoku solver, maze solving, constraint satisfaction problems. Systematically searches solution space.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Data Structures</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Data structures organize and store data efficiently to enable specific operations. Choosing appropriate structures impacts program performance, memory usage, and code maintainability.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Linear Data Structures:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Arrays:</strong> Fixed-size contiguous memory blocks. O(1) access by index, O(n) search (unsorted), O(n) insertion/deletion (requires shifting). Cache-friendly, simple, but inflexible size. Used for static collections, lookup tables.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Linked Lists:</strong> Nodes containing data and pointers to next (singly) or next/previous (doubly) nodes. O(1) insertion/deletion at known position, O(n) search and access. Dynamic size, efficient insertions, but higher memory overhead. Used in implementing stacks, queues, hash table collision handling.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Stacks:</strong> Last-In-First-Out (LIFO) structure. O(1) push/pop/peek. Used in function call management, expression evaluation, undo mechanisms, depth-first search, backtracking algorithms.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Queues:</strong> First-In-First-Out (FIFO) structure. O(1) enqueue/dequeue. Used in breadth-first search, task scheduling, print spooling, buffering. Priority queues order by priority instead of insertion time.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Tree Structures:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Binary Trees:</strong> Each node has at most two children. Traversals: inorder (left-root-right gives sorted order in BST), preorder (root-left-right), postorder (left-right-root). Used in expression trees, decision trees, hierarchical data representation.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Binary Search Trees (BST):</strong> Left subtree values < root < right subtree values. Average O(log n) search/insert/delete, worst O(n) when unbalanced. Enables ordered iteration, range queries. Foundation for more advanced balanced trees.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Balanced Trees (AVL, Red-Black):</strong> Self-balancing BSTs guarantee O(log n) height through rotations during insertions/deletions. AVL maintains strict balance (height difference ≤ 1), Red-Black relaxes constraints for faster insertions. Used in databases, language libraries (C++ std::map, Java TreeMap).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Heaps:</strong> Complete binary trees satisfying heap property (parent ≥ children in max-heap, parent ≤ children in min-heap). O(log n) insertion/deletion, O(1) find-min/max. Implemented as arrays. Used in priority queues, heap sort, Dijkstra's algorithm.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>B-Trees:</strong> Self-balancing search trees with variable number of children, optimized for disk I/O. All leaves at same level. Used in databases and file systems for indexing large datasets on secondary storage.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Hash-Based Structures:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Hash Tables:</strong> Map keys to values using hash function. Average O(1) insert/delete/search, worst O(n) with collisions. Collision resolution: chaining (linked lists at each bucket) or open addressing (probing). Used in dictionaries, caches, symbol tables, database indexing.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Hash Sets:</strong> Store unique elements using hashing. Fast membership testing O(1) average. Used for duplicate detection, maintaining unique collections, fast lookups without values.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Graphs:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Graph Representations:</strong> Adjacency matrix (2D array, O(1) edge lookup, O(V²) space), adjacency list (array of lists, O(V+E) space, efficient for sparse graphs). Choice depends on graph density and operations.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Graph Traversals:</strong> Breadth-First Search (BFS) explores level-by-level using queue, finds shortest path in unweighted graphs. Depth-First Search (DFS) explores deep using stack/recursion, detects cycles, finds connected components.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Shortest Path Algorithms:</strong> Dijkstra's algorithm for non-negative weighted graphs (O((V+E) log V) with priority queue). Bellman-Ford handles negative weights (O(VE)). A* uses heuristics for faster pathfinding in AI applications.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Minimum Spanning Tree:</strong> Kruskal's algorithm (sort edges, union-find), Prim's algorithm (grow tree from vertex). Used in network design, clustering, approximation algorithms.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Programming Paradigms & Software Design</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Programming paradigms represent different approaches to structuring and organizing code. Understanding multiple paradigms enables selecting the best approach for specific problems.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Object-Oriented Programming (OOP):</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Encapsulation:</strong> Bundling data and methods that operate on that data within classes. Hide internal implementation details through access modifiers (private, protected, public). Reduces coupling, improves maintainability, prevents unintended interference.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Inheritance:</strong> Classes acquire properties and behaviors from parent classes. Enables code reuse, establishes "is-a" relationships (Dog is-a Animal). Single inheritance (one parent) vs. multiple inheritance (multiple parents). Promotes hierarchical classification.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Polymorphism:</strong> Objects take multiple forms—same interface, different implementations. Method overloading (same name, different parameters) and overriding (subclass redefines parent method). Enables flexible, extensible code through abstraction.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Abstraction:</strong> Hide complex implementation details, expose only essential features. Abstract classes and interfaces define contracts without implementation. Separates "what" from "how", reduces complexity.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Functional Programming:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Pure Functions:</strong> Output depends only on inputs, no side effects. Same inputs always produce same outputs. Easier to test, reason about, and parallelize. Examples in JavaScript: map, filter, reduce.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Immutability:</strong> Data cannot be modified after creation. Changes create new data structures. Prevents bugs from unexpected mutations, enables time-travel debugging, simplifies concurrent programming.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Higher-Order Functions:</strong> Functions that take functions as parameters or return functions. Enable composition, abstraction over actions. Examples: callbacks, decorators, function factories.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Recursion:</strong> Functions calling themselves to solve smaller problem instances. Requires base case to prevent infinite recursion. Natural for tree/graph traversal, divide-and-conquer algorithms.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Design Patterns:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Singleton:</strong> Ensures class has only one instance with global access point. Used for configuration managers, database connections, logging services. Caution: can create hidden dependencies, complicate testing.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Factory:</strong> Creates objects without specifying exact class. Encapsulates object creation logic, enables flexibility in instantiation. Useful when creation process is complex or conditional.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Observer:</strong> Defines one-to-many dependency—when one object changes state, dependents are notified. Used in event handling, MVC pattern, reactive programming. Promotes loose coupling between objects.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Strategy:</strong> Defines family of algorithms, encapsulates each, makes them interchangeable. Client selects algorithm at runtime. Separates algorithm implementation from usage, enables easy testing and extension.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Decorator:</strong> Dynamically adds responsibilities to objects without modifying code. Wraps objects with additional behavior. Flexible alternative to subclassing for extending functionality.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Operating Systems & Computer Architecture</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Operating systems manage hardware resources and provide services to applications. Understanding OS principles and computer architecture helps optimize system performance and resource utilization.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Process Management:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Processes vs Threads:</strong> Process is independent program with own memory space. Thread is lightweight execution unit within process, sharing memory space. Threads enable concurrent execution with lower overhead. Context switching between processes is more expensive than between threads.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>CPU Scheduling:</strong> Algorithms determine which process runs next. Round Robin (time slices), Priority Scheduling (higher priority first), Multi-level Feedback Queue (combines approaches). Goals: maximize throughput, minimize response time, ensure fairness.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Synchronization:</strong> Coordinates concurrent access to shared resources. Mutex (mutual exclusion lock) allows one thread at a time. Semaphore counts available resources. Monitors encapsulate synchronization logic. Prevents race conditions, ensures data consistency.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Deadlock:</strong> Circular dependency where processes wait for each other indefinitely. Four conditions: mutual exclusion, hold and wait, no preemption, circular wait. Prevention breaks one condition. Detection finds cycles in resource allocation graph. Recovery involves terminating processes or preempting resources.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Memory Management:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Virtual Memory:</strong> Abstracts physical RAM through paging or segmentation. Enables programs larger than physical memory. Page tables map virtual to physical addresses. Translation Lookaside Buffer (TLB) caches recent translations for speed.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Paging:</strong> Divides memory into fixed-size pages. Demand paging loads pages only when accessed, reducing memory usage. Page replacement algorithms (LRU, FIFO, Clock) decide which pages to evict when memory full.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Cache Memory:</strong> Small, fast memory between CPU and RAM. Exploits locality principles: temporal (recently accessed data likely accessed again) and spatial (nearby data likely accessed together). Multi-level hierarchy (L1, L2, L3) balances speed and size.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Computer Architecture:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Von Neumann Architecture:</strong> CPU (control unit, ALU, registers) and memory store both instructions and data. Fetch-Decode-Execute cycle processes instructions sequentially. Bottleneck: single bus for instructions and data.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Instruction Pipelining:</strong> Overlaps execution stages (fetch, decode, execute, memory, writeback) for multiple instructions. Increases throughput by utilizing idle hardware. Hazards (data, control, structural) require stalling or forwarding.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>RISC vs CISC:</strong> RISC (Reduced Instruction Set Computer) uses simple instructions executing in one cycle, relies on compiler optimization. CISC (Complex Instruction Set Computer) has complex instructions doing more per instruction. Modern processors blend approaches.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Database Systems</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Databases organize, store, and retrieve large amounts of structured data efficiently. Understanding database principles is essential for building scalable data-driven applications.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Relational Databases:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>SQL Fundamentals:</strong> Structured Query Language for managing relational data. SELECT retrieves data with filtering (WHERE), sorting (ORDER BY), and aggregation (GROUP BY). INSERT adds records, UPDATE modifies existing data, DELETE removes records. JOINs combine related tables.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Normalization:</strong> Eliminates data redundancy and update anomalies. 1NF requires atomic values. 2NF eliminates partial dependencies. 3NF eliminates transitive dependencies. BCNF strengthens 3NF. Denormalization trades redundancy for query performance in read-heavy systems.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>ACID Properties:</strong> Atomicity (all operations succeed or none), Consistency (valid state transitions), Isolation (concurrent transactions don't interfere), Durability (committed changes persist). Ensures reliable transactions in banking, e-commerce, critical systems.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Indexing:</strong> B-tree indexes enable logarithmic-time lookups by maintaining sorted data structure. Hash indexes accelerate exact-match queries. Covering indexes include all query columns, avoiding table access. Trade-off: faster reads but slower writes and increased storage.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">NoSQL Databases:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Document Stores:</strong> Store semi-structured documents (JSON, BSON). Flexible schema, nested data. Examples: MongoDB, CouchDB. Used for content management, user profiles, catalogs with varying attributes.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Key-Value Stores:</strong> Simple hash table interface. Extremely fast, horizontally scalable. Examples: Redis, DynamoDB. Used for caching, session storage, real-time analytics.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Column-Family Stores:</strong> Optimize column-oriented access. Efficient for analytical queries over large datasets. Examples: Cassandra, HBase. Used in big data analytics, time-series data.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Graph Databases:</strong> Store nodes and relationships explicitly. Efficient graph traversals, complex relationship queries. Examples: Neo4j, Amazon Neptune. Used in social networks, recommendation engines, fraud detection.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Database Design & Optimization:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Query Optimization:</strong> Database engines choose execution plans based on statistics, indexes, join algorithms. EXPLAIN analyzes query plans. Optimization techniques: index selection, join reordering, predicate pushdown, query rewriting.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Transactions & Concurrency:</strong> Isolation levels balance consistency and performance: Read Uncommitted (dirty reads), Read Committed (prevents dirty reads), Repeatable Read (prevents non-repeatable reads), Serializable (full isolation). Locking and Multi-Version Concurrency Control (MVCC) manage concurrent access.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Scaling Strategies:</strong> Vertical scaling (bigger hardware), horizontal scaling (sharding data across servers), replication (copies for read scaling and fault tolerance), caching (Redis, Memcached). CAP theorem: choose two of Consistency, Availability, Partition tolerance.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Artificial Intelligence & Machine Learning</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Artificial Intelligence enables systems to perform tasks requiring human-like intelligence. Machine Learning, a subset of AI, allows systems to learn from data without explicit programming.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Machine Learning Fundamentals:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Supervised Learning:</strong> Learn from labeled training data to predict outputs for new inputs. Classification (discrete outputs): spam detection, image recognition, medical diagnosis. Regression (continuous outputs): price prediction, demand forecasting, risk assessment. Algorithms: linear regression, logistic regression, decision trees, random forests, support vector machines, neural networks.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Unsupervised Learning:</strong> Discover patterns in unlabeled data. Clustering: group similar items (customer segmentation, document organization). Dimensionality reduction: compress high-dimensional data while preserving structure (PCA, t-SNE for visualization). Anomaly detection: identify outliers (fraud detection, network intrusion).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Reinforcement Learning:</strong> Agent learns optimal behavior through trial and error, receiving rewards/penalties. Applications: game playing (AlphaGo, chess engines), robotics (navigation, manipulation), autonomous vehicles, resource allocation. Algorithms: Q-learning, Deep Q-Networks (DQN), Policy Gradient methods.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Deep Learning:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Neural Networks:</strong> Layers of interconnected neurons with weighted connections. Input layer receives data, hidden layers extract features, output layer produces predictions. Activation functions (ReLU, sigmoid, tanh) introduce nonlinearity. Backpropagation computes gradients for training via gradient descent.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Convolutional Neural Networks (CNNs):</strong> Specialized for grid-like data (images, video). Convolutional layers learn spatial patterns, pooling layers reduce dimensions. Applications: image classification, object detection, facial recognition, medical imaging, autonomous driving perception systems.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Recurrent Neural Networks (RNNs):</strong> Process sequential data with temporal dependencies. LSTM and GRU architectures handle long-term dependencies better than vanilla RNNs. Applications: language modeling, machine translation, speech recognition, time series forecasting, video analysis.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Transformers:</strong> Attention mechanism processes entire sequences in parallel. Self-attention weighs importance of different positions. Models: BERT (bidirectional understanding), GPT (generative pre-training), T5 (text-to-text). State-of-the-art on translation, summarization, question answering, code generation.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Model Training & Evaluation:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Training Process:</strong> Split data: training (fit model), validation (tune hyperparameters), test (evaluate performance). Loss functions measure prediction error. Optimization algorithms (SGD, Adam, RMSprop) update weights to minimize loss. Early stopping prevents overfitting.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Regularization:</strong> Prevents overfitting (model memorizes training data, fails on new data). L1 regularization encourages sparsity, L2 prevents large weights. Dropout randomly disables neurons during training. Data augmentation creates variations of training examples.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Evaluation Metrics:</strong> Classification: accuracy, precision, recall, F1-score, ROC-AUC. Regression: mean squared error (MSE), mean absolute error (MAE), R². Choose metrics matching business objectives and class imbalance considerations.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Software Engineering & Development Practices</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Software engineering applies systematic, disciplined approaches to developing, operating, and maintaining software systems. Best practices ensure code quality, team collaboration, and project success.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Version Control & Collaboration:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Git Fundamentals:</strong> Distributed version control tracks file changes over time. Commits create snapshots, branches enable parallel development, merges combine changes. Pull requests facilitate code review. Enables collaboration, experimentation, and recovery from mistakes.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Branching Strategies:</strong> Git Flow (master, develop, feature, release, hotfix branches), GitHub Flow (main branch, feature branches), trunk-based development. Choose based on team size, release frequency, deployment model.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Testing & Quality Assurance:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Unit Testing:</strong> Test individual functions/methods in isolation. Fast, focused, catch bugs early. Frameworks: JUnit (Java), pytest (Python), Jest (JavaScript). Aim for high code coverage but prioritize critical paths.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Integration Testing:</strong> Verify components work together correctly. Test database interactions, API calls, module interfaces. Slower than unit tests but catch integration issues.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>End-to-End Testing:</strong> Simulate user workflows through entire system. Validate complete features from user perspective. Tools: Selenium, Cypress, Playwright. Slowest but most realistic.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Test-Driven Development (TDD):</strong> Write tests before implementation. Red (failing test) → Green (pass test) → Refactor (improve code). Improves design, documentation, confidence.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">DevOps & Deployment:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Continuous Integration (CI):</strong> Automatically build and test code on every commit. Detect issues early, maintain working codebase. Tools: GitHub Actions, Jenkins, GitLab CI, CircleCI.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Continuous Deployment (CD):</strong> Automatically deploy passing builds to production. Enables rapid iteration, reduces deployment risk through automation. Blue-green deployments, canary releases minimize downtime.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Containerization:</strong> Docker packages applications with dependencies into portable containers. Kubernetes orchestrates container deployment, scaling, management. Ensures consistency across development, staging, production environments.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Monitoring & Logging:</strong> Track application performance, errors, usage. Tools: Prometheus, Grafana (metrics), ELK Stack (logs), Datadog (observability). Alerts notify teams of issues before users notice.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Agile Methodologies:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Scrum:</strong> Iterative development in sprints (1-4 weeks). Roles: Product Owner (priorities), Scrum Master (process), Development Team (implementation). Ceremonies: sprint planning, daily standups, sprint review, retrospective. Backlog prioritizes features.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Kanban:</strong> Visualize workflow on board (To Do, In Progress, Done). Limit work in progress (WIP), optimize flow. Continuous delivery without fixed sprints. Emphasizes bottleneck identification and process improvement.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Emerging Technologies & Research Areas</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Computer science continues evolving with groundbreaking research and emerging technologies that will shape the future of computing.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Current Research Frontiers:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Quantum Computing:</strong> Exploits quantum mechanics (superposition, entanglement) for exponential parallelism. Shor's algorithm factors integers exponentially faster, threatening current cryptography. Grover's algorithm accelerates search. Applications in optimization, drug discovery, materials science. Challenges: decoherence, error correction, scaling qubits.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Edge Computing:</strong> Processing data near source (IoT devices, smartphones) rather than cloud data centers. Reduces latency, bandwidth usage, improves privacy. Critical for autonomous vehicles, AR/VR, industrial IoT, real-time analytics.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Blockchain & Distributed Ledgers:</strong> Decentralized, immutable record-keeping. Consensus algorithms (Proof of Work, Proof of Stake) maintain agreement without central authority. Applications beyond cryptocurrency: supply chain tracking, digital identity, smart contracts, voting systems.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Explainable AI (XAI):</strong> Making AI decisions interpretable and transparent. Critical for regulated industries (healthcare, finance, legal). Techniques: attention visualization, LIME (local interpretable model-agnostic explanations), SHAP (Shapley values). Balances performance with accountability.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Computer Vision:</strong> Enabling machines to interpret visual data. Object detection, segmentation, pose estimation, 3D reconstruction. Applications: autonomous vehicles, medical imaging, facial recognition, augmented reality, quality control in manufacturing.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Natural Language Processing:</strong> Understanding and generating human language. Tasks: translation, summarization, sentiment analysis, question answering, dialogue systems. Large language models (GPT, BERT) achieve human-level performance on many benchmarks.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Careers in Computer Science</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Computer science offers diverse career paths across industries with strong growth projections and competitive compensation.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Career Paths:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Software Engineer:</strong> Design, develop, test, and maintain software applications. Specialize in frontend (user interfaces), backend (servers, databases, APIs), or full-stack development. Work at startups, tech giants, enterprises across all industries. Requires strong coding skills, problem-solving, collaboration.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Data Scientist:</strong> Extract insights from data using statistics, machine learning, visualization. Build predictive models, conduct experiments, inform business decisions. Combines programming (Python, R), math/statistics, domain expertise. High demand in tech, finance, healthcare, retail.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Machine Learning Engineer:</strong> Deploy ML models to production, optimize performance, build ML infrastructure. Bridge between data science and software engineering. Skills: deep learning frameworks (TensorFlow, PyTorch), distributed computing, MLOps. Critical for AI-driven products.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>DevOps Engineer:</strong> Automate deployment, monitoring, infrastructure management. Implement CI/CD pipelines, manage cloud resources (AWS, Azure, GCP), ensure reliability and scalability. Skills: containerization, orchestration, scripting, system administration.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Security Engineer:</strong> Protect systems from cyber threats. Conduct penetration testing, implement security controls, respond to incidents. Requires understanding of networks, cryptography, attack vectors. Growing demand as cybersecurity threats increase.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Research Scientist:</strong> Advance state-of-the-art in AI, computer vision, NLP, systems. Publish papers, develop novel algorithms, prototype new technologies. Typically requires PhD. Work at universities, research labs, industry R&D divisions (Google AI, Meta AI, OpenAI).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Systems Architect:</strong> Design high-level system structure, make technology decisions, ensure scalability and reliability. Requires deep technical expertise, business understanding, communication skills. Senior role guiding engineering teams.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-orange-600 font-bold">•</span>
+          <span><strong>Product Manager (Technical):</strong> Define product vision, prioritize features, coordinate engineering teams. Bridge between business, design, engineering. Computer science background helps understand technical constraints and opportunities.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="computer-science-quiz.html" class="px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+</script>
+
+</body>
+</html>

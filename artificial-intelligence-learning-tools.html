@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Artificial Intelligence Learning Tools - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-purple-50 to-fuchsia-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <!-- Back Button -->
+  <div class="mb-6">
+    <a href="college-learning-tools.html" class="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back to Learning Tools</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="flex justify-center mb-4">
+      <div class="p-4 bg-gradient-to-br from-purple-600 to-fuchsia-600 rounded-full">
+        <i data-lucide="brain" class="w-16 h-16 text-white"></i>
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Artificial Intelligence Learning Tools</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Essential resources for machine learning, deep learning, neural networks, and AI development
+    </p>
+  </div>
+
+  <!-- AI/ML Learning Platforms -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-purple-50 to-fuchsia-50 rounded-xl shadow-lg p-8 border-l-4 border-purple-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="graduation-cap" class="w-7 h-7 text-purple-600"></i>
+        AI/ML Learning Platforms
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.deeplearning.ai/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">DeepLearning.AI ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Andrew Ng's AI courses and specializations</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Expert instruction</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Hands-on projects</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Industry-recognized certs</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.fast.ai/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">fast.ai ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Practical deep learning for coders</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Top-down approach</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>100% free courses</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>PyTorch-based</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.coursera.org/specializations/machine-learning-introduction" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Coursera Machine Learning ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Stanford ML specialization by Andrew Ng</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Foundational concepts</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Real-world applications</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Certificate available</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://ai.google/education/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Google AI Education ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free AI and ML educational resources</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Beginner to advanced</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Interactive tutorials</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>TensorFlow integration</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Frameworks & Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-fuchsia-50 to-pink-50 rounded-xl shadow-lg p-8 border-l-4 border-fuchsia-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="wrench" class="w-7 h-7 text-fuchsia-600"></i>
+        AI Frameworks & Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.tensorflow.org/" target="_blank" class="text-fuchsia-600 hover:text-fuchsia-700 hover:underline">TensorFlow ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Google's open-source ML framework</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Production-ready</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Extensive documentation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Mobile deployment</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://pytorch.org/" target="_blank" class="text-fuchsia-600 hover:text-fuchsia-700 hover:underline">PyTorch ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Facebook's deep learning framework</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Dynamic computation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Research-friendly</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Strong community</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://scikit-learn.org/" target="_blank" class="text-fuchsia-600 hover:text-fuchsia-700 hover:underline">Scikit-learn ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Python machine learning library</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Classical ML algorithms</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Easy to use</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Well-documented</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://huggingface.co/" target="_blank" class="text-fuchsia-600 hover:text-fuchsia-700 hover:underline">Hugging Face ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">NLP models and transformers hub</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Pre-trained models</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Datasets library</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-fuchsia-600">•</span>
+              <span>Model deployment</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice & Competition Platforms -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-violet-50 to-purple-50 rounded-xl shadow-lg p-8 border-l-4 border-violet-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="trophy" class="w-7 h-7 text-violet-600"></i>
+        Practice & Competition Platforms
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.kaggle.com/" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">Kaggle ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Data science competitions and datasets</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Real-world competitions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Free datasets</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Jupyter notebooks</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://colab.research.google.com/" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">Google Colab ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free cloud-based Jupyter notebooks</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Free GPU access</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>No setup required</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Easy sharing</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.drivendata.org/" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">DrivenData ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Data science competitions for social good</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Impact-driven projects</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Real-world problems</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Prize money</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.aicrowd.com/" target="_blank" class="text-violet-600 hover:text-violet-700 hover:underline">AIcrowd ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AI challenges and research competitions</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Research-focused</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Diverse challenges</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-violet-600">•</span>
+              <span>Community collaboration</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Research & Papers -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-pink-50 to-rose-50 rounded-xl shadow-lg p-8 border-l-4 border-pink-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="file-text" class="w-7 h-7 text-pink-600"></i>
+        AI Research & Papers
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://arxiv.org/list/cs.AI/recent" target="_blank" class="text-pink-600 hover:text-pink-700 hover:underline">arXiv AI ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Latest AI research papers</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Cutting-edge research</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Free access</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Daily updates</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://paperswithcode.com/" target="_blank" class="text-pink-600 hover:text-pink-700 hover:underline">Papers With Code ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">ML papers with implementation code</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Code repositories</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Benchmarks</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Leaderboards</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://distill.pub/" target="_blank" class="text-pink-600 hover:text-pink-700 hover:underline">Distill ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Clear explanations of machine learning</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Interactive articles</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Visual explanations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>High-quality content</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.alignmentforum.org/" target="_blank" class="text-pink-600 hover:text-pink-700 hover:underline">AI Alignment Forum ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AI safety and alignment research</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Safety research</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Expert discussions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-pink-600">•</span>
+              <span>Technical content</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI News & Communities -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl shadow-lg p-8 border-l-4 border-indigo-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="users" class="w-7 h-7 text-indigo-600"></i>
+        AI News & Communities
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://towardsdatascience.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Towards Data Science ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Medium publication for AI/ML content</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Tutorials and guides</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Industry insights</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Community-driven</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.reddit.com/r/MachineLearning/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">r/MachineLearning ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Machine learning subreddit</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Research discussions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Paper announcements</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Active community</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.deeplearning.ai/the-batch/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">The Batch (DeepLearning.AI) ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Weekly AI newsletter</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Curated AI news</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Industry updates</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Free subscription</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://syncedreview.com/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Synced AI Technology & Industry Review ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AI news and research coverage</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Global AI news</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Research highlights</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Industry analysis</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Ethics & Safety Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-cyan-50 to-teal-50 rounded-xl shadow-lg p-8 border-l-4 border-cyan-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="shield-check" class="w-7 h-7 text-cyan-600"></i>
+        AI Ethics & Safety Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.partnershiponai.org/" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">Partnership on AI ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AI ethics and responsible development</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Best practices</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Research reports</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Industry collaboration</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.safe.ai/" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">Center for AI Safety ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AI safety research and education</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Safety guidelines</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Risk assessment</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Educational resources</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://ai.google/responsibility/responsible-ai-practices/" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">Google Responsible AI ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Responsible AI development practices</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Ethical guidelines</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Fairness tools</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Case studies</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://ethics.fast.ai/" target="_blank" class="text-cyan-600 hover:text-cyan-700 hover:underline">fast.ai Ethics Resources ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Practical data ethics course</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Free course</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Real-world examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-600">•</span>
+              <span>Practical guidance</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="artificial-intelligence.html" class="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      AI Basics
+    </a>
+    <a href="artificial-intelligence-quiz.html" class="px-6 py-3 bg-fuchsia-600 text-white rounded-lg hover:bg-fuchsia-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Take Quiz
+    </a>
+    <a href="college-learning-tools.html" class="px-6 py-3 bg-slate-600 text-white rounded-lg hover:bg-slate-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      All Learning Tools
+    </a>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

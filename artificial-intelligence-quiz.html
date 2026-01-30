@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Artificial Intelligence Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mb-6">
+      <i data-lucide="clipboard-check" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Artificial Intelligence Quiz</h1>
+    <p class="text-xl text-gray-600">Test your knowledge of machine learning, neural networks, and AI concepts</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Questions will be dynamically generated here -->
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-indigo-600 text-white text-lg font-semibold rounded-lg hover:bg-indigo-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="quizResults" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-indigo-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="artificial-intelligence-analysis.html" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center gap-2">
+        <i data-lucide="book-open" class="w-5 h-5"></i>
+        Review Material
+      </a>
+      <button onclick="location.reload()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+        Retake Quiz
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Question Bank - 40 questions total
+  const questionBank = [
+    {
+      question: "What is the primary goal of supervised learning in machine learning?",
+      options: ["To learn from unlabeled data", "To learn a mapping from inputs to outputs using labeled training data", "To maximize rewards through trial and error", "To reduce dimensionality of data", "To cluster similar data points"],
+      correct: 1,
+      explanation: "Supervised learning aims to learn a function that maps input features to output labels using labeled training data. The algorithm learns from examples where both inputs and correct outputs are provided, allowing it to make predictions on new, unseen data. This is different from unsupervised learning (which uses unlabeled data) and reinforcement learning (which uses rewards)."
+    },
+    {
+      question: "Which activation function is most commonly used in modern deep neural networks to avoid the vanishing gradient problem?",
+      options: ["Sigmoid", "Tanh", "ReLU (Rectified Linear Unit)", "Linear", "Step function"],
+      correct: 2,
+      explanation: "ReLU (Rectified Linear Unit) is the most popular activation function in deep learning because it helps mitigate the vanishing gradient problem. Unlike sigmoid and tanh functions, which saturate at extreme values, ReLU maintains a constant gradient for positive inputs, allowing for faster and more effective training of deep networks. The function is defined as f(x) = max(0, x)."
+    },
+    {
+      question: "What does overfitting mean in the context of machine learning models?",
+      options: ["The model performs poorly on both training and test data", "The model performs well on training data but poorly on new, unseen data", "The model takes too long to train", "The model uses too few features", "The model has too few parameters"],
+      correct: 1,
+      explanation: "Overfitting occurs when a model learns the training data too well, including its noise and outliers, resulting in poor generalization to new data. The model essentially memorizes the training set rather than learning the underlying patterns. This is indicated by high training accuracy but low test accuracy. Techniques like regularization, dropout, and cross-validation help prevent overfitting."
+    },
+    {
+      question: "In a convolutional neural network (CNN), what is the primary purpose of pooling layers?",
+      options: ["To increase the spatial dimensions of feature maps", "To reduce spatial dimensions and computational complexity", "To add non-linearity to the network", "To normalize the input data", "To perform backpropagation"],
+      correct: 1,
+      explanation: "Pooling layers (such as max pooling or average pooling) reduce the spatial dimensions of feature maps, decreasing computational requirements and helping to extract dominant features while making the representation more invariant to small translations. This dimension reduction also helps control overfitting by reducing the number of parameters in subsequent layers."
+    },
+    {
+      question: "What is the Turing Test designed to evaluate?",
+      options: ["The processing speed of a computer", "Whether a machine can exhibit intelligent behavior indistinguishable from a human", "The accuracy of a classification algorithm", "The energy efficiency of AI systems", "The security of AI models"],
+      correct: 1,
+      explanation: "The Turing Test, proposed by Alan Turing in 1950, is a test of a machine's ability to exhibit intelligent behavior equivalent to, or indistinguishable from, that of a human. In the test, a human evaluator converses with both a human and a machine through text, and if the evaluator cannot reliably distinguish the machine from the human, the machine is said to have passed the test."
+    },
+    {
+      question: "Which of the following best describes a recurrent neural network (RNN)?",
+      options: ["A network that processes data in a single forward pass", "A network with connections that form directed cycles, allowing it to process sequential data", "A network used exclusively for image classification", "A network without hidden layers", "A network that uses only linear activation functions"],
+      correct: 1,
+      explanation: "RNNs are neural networks with connections that form directed cycles, creating an internal state or 'memory' that allows them to process sequential data. This architecture makes RNNs particularly effective for tasks involving sequences such as time series prediction, natural language processing, and speech recognition, as they can maintain information about previous inputs in the sequence."
+    },
+    {
+      question: "What is the purpose of the backpropagation algorithm in neural networks?",
+      options: ["To make forward predictions", "To calculate gradients and update weights during training", "To select the best features for the model", "To normalize input data", "To evaluate model performance on test data"],
+      correct: 1,
+      explanation: "Backpropagation is the fundamental algorithm for training neural networks. It calculates the gradient of the loss function with respect to each weight by propagating errors backward through the network using the chain rule of calculus. These gradients are then used to update the weights via gradient descent or similar optimization algorithms, minimizing the loss function and improving model performance."
+    },
+    {
+      question: "In reinforcement learning, what does the term 'exploration vs exploitation' refer to?",
+      options: ["Choosing between training and testing the model", "The tradeoff between trying new actions and choosing known good actions", "Selecting features versus engineering features", "Using supervised versus unsupervised learning", "The balance between model complexity and simplicity"],
+      correct: 1,
+      explanation: "The exploration-exploitation dilemma is a fundamental challenge in reinforcement learning. Exploration involves trying new actions to discover their effects and potentially find better strategies, while exploitation involves choosing actions that are known to yield high rewards based on current knowledge. An effective RL agent must balance these two approaches to maximize long-term rewards."
+    },
+    {
+      question: "What is transfer learning in the context of deep learning?",
+      options: ["Moving data between different storage systems", "Using knowledge gained from one task to improve performance on a related task", "Converting models between different programming languages", "Distributing training across multiple GPUs", "Transferring weights randomly during initialization"],
+      correct: 1,
+      explanation: "Transfer learning involves taking a model trained on one task and repurposing it for a related task. For example, a CNN trained on ImageNet can be fine-tuned for medical image classification. This approach leverages previously learned features and patterns, significantly reducing training time and data requirements while often achieving better performance, especially when labeled data for the new task is limited."
+    },
+    {
+      question: "Which metric is most appropriate for evaluating a binary classification model on an imbalanced dataset?",
+      options: ["Accuracy", "F1 Score", "Mean Squared Error", "R-squared", "Perplexity"],
+      correct: 1,
+      explanation: "For imbalanced datasets, accuracy can be misleading because a model that always predicts the majority class will have high accuracy. The F1 Score, which is the harmonic mean of precision and recall, provides a better measure as it accounts for both false positives and false negatives. Other useful metrics for imbalanced data include precision-recall curves, ROC-AUC, and balanced accuracy."
+    },
+    {
+      question: "What is the vanishing gradient problem in deep neural networks?",
+      options: ["Gradients become too large during backpropagation", "Gradients become extremely small, preventing effective weight updates in early layers", "The model stops learning after a few epochs", "The loss function reaches zero too quickly", "Gradients are calculated incorrectly"],
+      correct: 1,
+      explanation: "The vanishing gradient problem occurs when gradients become extremely small as they are backpropagated through many layers, especially with activation functions like sigmoid or tanh. This causes weights in early layers to update very slowly or not at all, preventing the network from learning effectively. Solutions include using ReLU activations, batch normalization, residual connections, and careful weight initialization."
+    },
+    {
+      question: "What is the key difference between batch gradient descent and stochastic gradient descent (SGD)?",
+      options: ["Batch uses all training examples, SGD uses one example at a time", "Batch is faster than SGD", "SGD always converges to the global minimum", "Batch requires less memory than SGD", "There is no difference"],
+      correct: 0,
+      explanation: "Batch gradient descent computes the gradient using all training examples before updating weights, making it accurate but computationally expensive. Stochastic gradient descent updates weights after each individual training example, making it faster and able to escape local minima but with noisier updates. Mini-batch gradient descent is a compromise, using a subset of examples for each update."
+    },
+    {
+      question: "What is the purpose of dropout in neural networks?",
+      options: ["To increase training speed", "To prevent overfitting by randomly deactivating neurons during training", "To reduce the number of layers", "To improve gradient flow", "To initialize weights"],
+      correct: 1,
+      explanation: "Dropout is a regularization technique that randomly deactivates (sets to zero) a fraction of neurons during each training iteration. This prevents the network from becoming too dependent on specific neurons and forces it to learn more robust features. At test time, all neurons are active but their outputs are scaled. Dropout effectively trains an ensemble of different network architectures, improving generalization."
+    },
+    {
+      question: "In natural language processing, what does the term 'attention mechanism' refer to?",
+      options: ["A method to focus computational resources on important parts of the input", "A technique for spell checking", "A way to tokenize text", "A method for text translation", "A regularization technique"],
+      correct: 0,
+      explanation: "The attention mechanism allows a model to focus on different parts of the input when producing each part of the output, assigning different weights or 'attention' to different input elements. This is particularly useful in sequence-to-sequence tasks like machine translation, where different source words are relevant for predicting different target words. Attention mechanisms are the foundation of transformer models like BERT and GPT."
+    },
+    {
+      question: "What is a generative adversarial network (GAN)?",
+      options: ["A network that only classifies images", "A framework with two networks competing: a generator creating fake data and a discriminator distinguishing real from fake", "A type of recurrent neural network", "A method for data preprocessing", "A supervised learning algorithm"],
+      correct: 1,
+      explanation: "A GAN consists of two neural networks in competition: a generator that creates synthetic data trying to mimic real data, and a discriminator that attempts to distinguish real data from generated data. Through this adversarial process, the generator improves at creating realistic data while the discriminator improves at detection, resulting in high-quality synthetic data generation. GANs are used for image synthesis, style transfer, and data augmentation."
+    }
+  ];
+
+  // Shuffle and select 15 random questions
+  function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  const selectedQuestions = shuffleArray(questionBank).slice(0, 15);
+  const quizContainer = document.getElementById('quizContainer');
+
+  // Generate quiz questions
+  selectedQuestions.forEach((q, index) => {
+    const questionDiv = document.createElement('div');
+    questionDiv.className = 'bg-white rounded-xl shadow-lg p-6 border-l-4 border-indigo-500';
+    questionDiv.innerHTML = `
+      <h3 class="text-xl font-bold mb-4 text-gray-800">Question ${index + 1}</h3>
+      <p class="text-lg mb-4 text-gray-700">${q.question}</p>
+      <div class="space-y-3">
+        ${q.options.map((option, i) => `
+          <label class="flex items-start p-3 rounded-lg border-2 border-gray-200 cursor-pointer hover:bg-indigo-50 transition">
+            <input type="radio" name="q${index}" value="${i}" class="mt-1 mr-3">
+            <span class="text-gray-700">${option}</span>
+          </label>
+        `).join('')}
+      </div>
+      <div class="mt-4 p-4 bg-gray-50 rounded-lg hidden" id="explanation${index}">
+        <p class="text-sm font-semibold mb-2 text-gray-700">Explanation:</p>
+        <p class="text-sm text-gray-600">${q.explanation}</p>
+      </div>
+    `;
+    quizContainer.appendChild(questionDiv);
+  });
+
+  // Submit quiz
+  const submitBtn = document.getElementById('submitQuiz');
+  const resultDiv = document.getElementById('quizResults');
+  const scoreDisplay = document.getElementById('scoreDisplay');
+
+  submitBtn.addEventListener('click', () => {
+    let score = 0;
+    let answered = 0;
+    
+    selectedQuestions.forEach((q, index) => {
+      const selected = document.querySelector(`input[name="q${index}"]:checked`);
+      const explanationDiv = document.getElementById(`explanation${index}`);
+      
+      if (selected) {
+        answered++;
+        const answer = parseInt(selected.value);
+        
+        if (answer === q.correct) {
+          score++;
+          selected.parentElement.classList.add('!border-green-500', 'bg-green-50');
+        } else {
+          selected.parentElement.classList.add('!border-red-500', 'bg-red-50');
+          // Highlight correct answer
+          const labels = document.querySelectorAll(`input[name="q${index}"]`);
+          labels[q.correct].parentElement.classList.add('!border-green-500', 'bg-green-50');
+        }
+        
+        explanationDiv.classList.remove('hidden');
+      }
+    });
+    
+    if (answered < 15) {
+      alert('Please answer all questions before submitting.');
+      return;
+    }
+    
+    const percentage = Math.round((score / 15) * 100);
+    let gradeColor = 'text-red-600';
+    let message = 'Keep studying! Review the material and try again.';
+    
+    if (percentage >= 90) {
+      gradeColor = 'text-green-600';
+      message = 'Excellent! You have mastered this material!';
+    } else if (percentage >= 80) {
+      gradeColor = 'text-blue-600';
+      message = 'Great job! You have a strong understanding!';
+    } else if (percentage >= 70) {
+      gradeColor = 'text-yellow-600';
+      message = 'Good work! Review the explanations to improve.';
+    } else if (percentage >= 60) {
+      gradeColor = 'text-orange-600';
+      message = 'Fair. Consider reviewing the material more thoroughly.';
+    }
+    
+    scoreDisplay.innerHTML = `
+      <div class="text-center">
+        <div class="text-6xl font-bold ${gradeColor} mb-4">${percentage}%</div>
+        <p class="text-2xl text-gray-700 mb-2">${score} out of 15 correct</p>
+        <p class="text-xl text-gray-600 mb-6">${message}</p>
+      </div>
+    `;
+    
+    resultDiv.classList.remove('hidden');
+    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

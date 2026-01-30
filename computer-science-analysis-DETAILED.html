@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Computer Science - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    </nav>
+
+    <button id="menuBtn" class="md:hidden p-2">
+      <i data-lucide="menu" class="w-6 h-6"></i>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full mb-6">
+      <i data-lucide="monitor" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Computer Science: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">A comprehensive exploration of algorithms, data structures, software engineering, artificial intelligence, and computational theory</p>
+  </div>
+
+  <div class="space-y-10">
+    <!-- Introduction -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Introduction</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Computer Science is the systematic study of computation, algorithmic processes, and the design of computer systems. It merges mathematical rigor with creative problem-solving, cognitive abstraction, practical engineering, and theoretical analysis. Mastery of computer science enables efficient software development, data-driven decision making, and innovation across virtually all modern industries.</p>
+      <p class="text-gray-700 leading-relaxed text-lg">This analysis examines the theoretical foundations of algorithms and complexity, data structures and their performance characteristics, programming paradigms and software design principles, operating systems and computer architecture, database theory and practice, artificial intelligence and machine learning, and the connections to mathematics, logic, and engineering disciplines.</p>
+    </div>
+
+    <!-- Historical Context -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Historical Context</h2>
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Evolution of Computing</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Mechanical Era (1800s):</strong> Charles Babbage designed the Analytical Engine, the first concept of a programmable computer. Ada Lovelace wrote the first algorithm intended for machine processing.</li>
+        <li><strong>Electronic Computing (1940s):</strong> ENIAC, UNIVAC, and early vacuum tube computers performed ballistic calculations and census processing. Alan Turing formalized computation with the Turing Machine, establishing theoretical limits of computability.</li>
+        <li><strong>Transistors & High-Level Languages (1950s-60s):</strong> Transistors replaced vacuum tubes, enabling smaller, more reliable machines. FORTRAN, COBOL, and LISP emerged as first high-level programming languages, abstracting away machine code.</li>
+        <li><strong>Microprocessor Revolution (1970s):</strong> Intel 4004 and subsequent chips enabled personal computing. C language and Unix OS established portability and modularity principles still used today.</li>
+        <li><strong>Personal Computing & Internet (1980s-90s):</strong> IBM PC, Apple Macintosh democratized computing. Object-oriented programming (C++, Java) became dominant. The World Wide Web transformed computers into communication tools.</li>
+        <li><strong>Mobile, Cloud & AI Era (2000s-present):</strong> Smartphones, cloud computing, big data analytics, and deep learning neural networks. Open-source movement and distributed version control (Git) revolutionized software collaboration.</li>
+      </ul>
+    </div>
+
+    <!-- Theoretical Foundations -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Theoretical Foundations</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Theory of Computation</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">The theory of computation establishes what can and cannot be computed, and how efficiently. Turing Machines model computation as state transitions on an infinite tape, proving that certain problems (like the Halting Problem) are undecidable—no algorithm can solve them for all inputs.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Complexity Classes</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Computational complexity theory classifies problems by resource requirements (time, space). P contains problems solvable in polynomial time. NP contains problems whose solutions are verifiable in polynomial time. The P=NP question asks whether every problem whose solution can be quickly verified can also be quickly solved—one of the most important unsolved problems in computer science.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Formal Languages & Automata</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Automata theory studies abstract machines and the languages they recognize. Finite automata process regular languages (used in text search, lexical analysis). Pushdown automata handle context-free languages (used in parsing programming languages). Turing machines recognize recursively enumerable languages.</p>
+    </div>
+
+    <!-- Data Structures & Algorithm Analysis -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Data Structures &amp; Algorithm Analysis</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Asymptotic Analysis</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Big-O notation characterizes algorithm growth rates, ignoring constant factors and lower-order terms. It provides an upper bound on worst-case performance. Big-Θ (theta) provides a tight bound (both upper and lower). Big-Ω (omega) provides a lower bound. Understanding asymptotic behavior guides algorithm selection for large inputs.</p>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Common Time Complexities</p>
+        <p class="text-gray-700 font-mono text-sm mb-1">O(1) — Constant: Array access, hash table lookup (average case)</p>
+        <p class="text-gray-700 font-mono text-sm mb-1">O(log n) — Logarithmic: Binary search, balanced BST operations</p>
+        <p class="text-gray-700 font-mono text-sm mb-1">O(n) — Linear: Array traversal, linear search, finding min/max</p>
+        <p class="text-gray-700 font-mono text-sm mb-1">O(n log n) — Linearithmic: Merge sort, heap sort, optimal comparison sorts</p>
+        <p class="text-gray-700 font-mono text-sm mb-1">O(n²) — Quadratic: Bubble sort, selection sort, nested loops</p>
+        <p class="text-gray-700 font-mono text-sm mb-1">O(2ⁿ) — Exponential: Recursive Fibonacci, subset enumeration</p>
+        <p class="text-gray-700 font-mono text-sm">O(n!) — Factorial: Traveling salesman brute force, all permutations</p>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Fundamental Data Structures</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Arrays provide O(1) access but fixed size (or expensive resizing). Linked lists enable O(1) insertion/deletion but O(n) access. Hash tables offer O(1) average-case operations through key-to-index mapping. Trees (BST, AVL, Red-Black) maintain sorted data with O(log n) operations. Heaps efficiently maintain priority queues. Graphs model relationships and networks.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Algorithm Design Paradigms</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Divide and Conquer</p>
+        <p class="text-gray-700 text-sm mb-3">Break problem into smaller subproblems, solve recursively, combine solutions. Examples: merge sort, quick sort, binary search, Strassen matrix multiplication.</p>
+        
+        <p class="text-gray-700 font-semibold text-lg mb-2 mt-3">Dynamic Programming</p>
+        <p class="text-gray-700 text-sm mb-3">Solve overlapping subproblems once and store results (memoization or tabulation). Optimal substructure allows building solution from subproblem solutions. Examples: Fibonacci, longest common subsequence, edit distance, knapsack problem.</p>
+        
+        <p class="text-gray-700 font-semibold text-lg mb-2 mt-3">Greedy Algorithms</p>
+        <p class="text-gray-700 text-sm mb-3">Make locally optimal choice at each step, hoping for global optimum. Works for problems with greedy-choice property and optimal substructure. Examples: Dijkstra's shortest path, Prim's and Kruskal's MST, Huffman coding.</p>
+        
+        <p class="text-gray-700 font-semibold text-lg mb-2 mt-3">Backtracking</p>
+        <p class="text-gray-700 text-sm">Build solution incrementally, abandoning candidates ("backtracking") when they fail constraints. Examples: N-queens, Sudoku solver, constraint satisfaction problems.</p>
+      </div>
+    </div>
+
+    <!-- Programming Paradigms & Software Engineering -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Programming Paradigms &amp; Software Engineering</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Object-Oriented Programming</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">OOP organizes code around objects—instances of classes combining data and behavior. Encapsulation bundles related functionality and hides implementation. Inheritance establishes "is-a" relationships, enabling code reuse. Polymorphism allows different types to be used interchangeably through common interfaces. SOLID principles guide maintainable OOP design.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Functional Programming</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Functional programming treats computation as evaluation of mathematical functions, avoiding mutable state and side effects. Pure functions always return the same output for given input. First-class and higher-order functions enable powerful abstractions (map, filter, reduce). Immutability simplifies reasoning and enables safe parallelism. Languages: Haskell, Lisp, Erlang; features in JavaScript, Python, Java.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Software Design Patterns</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Creational Patterns</p>
+        <p class="text-gray-700 text-sm mb-2"><strong>Singleton:</strong> Ensure class has only one instance with global access point.</p>
+        <p class="text-gray-700 text-sm mb-2"><strong>Factory Method:</strong> Define interface for creating objects, let subclasses decide which class to instantiate.</p>
+        <p class="text-gray-700 text-sm mb-3"><strong>Builder:</strong> Construct complex objects step-by-step, separating construction from representation.</p>
+        
+        <p class="text-gray-700 font-semibold text-lg mb-2 mt-3">Structural Patterns</p>
+        <p class="text-gray-700 text-sm mb-2"><strong>Adapter:</strong> Convert interface of a class into another interface clients expect.</p>
+        <p class="text-gray-700 text-sm mb-2"><strong>Decorator:</strong> Attach additional responsibilities to object dynamically.</p>
+        <p class="text-gray-700 text-sm mb-3"><strong>Facade:</strong> Provide unified interface to set of interfaces in subsystem.</p>
+        
+        <p class="text-gray-700 font-semibold text-lg mb-2 mt-3">Behavioral Patterns</p>
+        <p class="text-gray-700 text-sm mb-2"><strong>Observer:</strong> Define one-to-many dependency so dependents are notified of state changes.</p>
+        <p class="text-gray-700 text-sm mb-2"><strong>Strategy:</strong> Define family of algorithms, encapsulate each, make them interchangeable.</p>
+        <p class="text-gray-700 text-sm"><strong>Command:</strong> Encapsulate request as object, enabling parameterization and queuing.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Software Development Lifecycle</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Requirements gathering, design, implementation, testing, deployment, and maintenance form the development cycle. Agile methodologies (Scrum, Kanban) emphasize iterative development, customer collaboration, and responding to change. Version control (Git) enables collaboration and tracks code history. Continuous Integration/Continuous Deployment (CI/CD) automates testing and deployment.</p>
+    </div>
+
+    <!-- Operating Systems & Computer Architecture -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Operating Systems &amp; Computer Architecture</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Process Management</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Operating systems multiplex hardware among processes through scheduling algorithms (Round Robin, Priority, Multi-level Feedback Queue). Processes transition between states: new, ready, running, waiting, terminated. Context switching saves and restores process state, enabling time-sharing. Threads share memory space within process, reducing context-switch overhead.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Memory Management</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Virtual memory abstracts physical RAM through paging or segmentation. Page tables map virtual to physical addresses. Translation Lookaside Buffer (TLB) caches recent translations for speed. Demand paging loads pages only when accessed. Page replacement algorithms (LRU, FIFO, Clock) decide which pages to evict when memory full. Thrashing occurs when system spends more time paging than executing.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Synchronization & Concurrency</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Critical Section Problem</p>
+        <p class="text-gray-700 text-sm mb-3">Multiple processes accessing shared data require mutual exclusion, progress (no indefinite postponement), and bounded waiting. Solutions include locks, semaphores, and monitors.</p>
+        
+        <p class="text-gray-700 font-semibold text-lg mb-2 mt-3">Deadlock</p>
+        <p class="text-gray-700 text-sm mb-2">Four conditions for deadlock: mutual exclusion, hold and wait, no preemption, circular wait. Prevention strategies break one condition. Avoidance (Banker's Algorithm) ensures safe states. Detection and recovery locate cycles in resource allocation graph.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Computer Architecture Fundamentals</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Von Neumann architecture separates CPU (control unit, ALU, registers) from memory. Instruction pipeline overlaps fetch, decode, execute, memory, writeback stages for throughput. Cache hierarchy (L1, L2, L3) exploits locality principles to reduce memory latency. RISC vs. CISC represent design philosophies balancing instruction simplicity and power.</p>
+    </div>
+
+    <!-- Database Systems -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Database Systems</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Relational Model & SQL</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Relational databases organize data in tables (relations) with rows (tuples) and columns (attributes). SQL provides declarative query language: SELECT retrieves data, JOIN combines tables, GROUP BY aggregates, subqueries enable nested logic. Query optimizers choose efficient execution plans considering indexes, statistics, and join algorithms.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Normalization</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Normalization eliminates redundancy and update anomalies. 1NF requires atomic values. 2NF eliminates partial dependencies (non-key attributes fully depend on entire key). 3NF eliminates transitive dependencies. BCNF strengthens 3NF. Denormalization sometimes trades space/anomalies for query performance.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Transaction Management (ACID)</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 text-sm mb-2"><strong>Atomicity:</strong> All operations complete or none (all-or-nothing). Implemented via logging and rollback.</p>
+        <p class="text-gray-700 text-sm mb-2"><strong>Consistency:</strong> Transaction transforms database from one valid state to another, preserving integrity constraints.</p>
+        <p class="text-gray-700 text-sm mb-2"><strong>Isolation:</strong> Concurrent transactions don't interfere. Isolation levels: Read Uncommitted, Read Committed, Repeatable Read, Serializable trade consistency for concurrency.</p>
+        <p class="text-gray-700 text-sm"><strong>Durability:</strong> Committed changes persist despite crashes. Achieved through write-ahead logging (WAL).</p>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Indexing & Query Optimization</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">B-tree indexes enable logarithmic-time search, insertion, deletion. Covering indexes include all query columns, avoiding table access. Hash indexes accelerate exact-match lookups. Query optimizers estimate costs using statistics, choose join order and algorithm (nested loop, hash join, merge join), and consider index usage vs. sequential scan.</p>
+    </div>
+
+    <!-- Artificial Intelligence & Machine Learning -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Artificial Intelligence &amp; Machine Learning</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Machine Learning Fundamentals</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Machine learning enables systems to learn from data without explicit programming. Supervised learning maps inputs to outputs using labeled data (classification, regression). Unsupervised learning discovers patterns in unlabeled data (clustering, dimensionality reduction). Reinforcement learning trains agents through reward signals (game playing, robotics).</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Neural Networks & Deep Learning</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Artificial neural networks model computation with interconnected nodes (neurons) organized in layers. Each connection has a weight learned during training. Activation functions (ReLU, sigmoid, tanh) introduce nonlinearity. Backpropagation computes gradients via chain rule, enabling weight updates through gradient descent. Deep networks with many hidden layers extract hierarchical features automatically.</p>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Convolutional Neural Networks (CNNs)</p>
+        <p class="text-gray-700 text-sm mb-3">Specialized for grid-like data (images). Convolutional layers learn spatial hierarchies, pooling layers reduce dimensionality while preserving features. Applications: image classification, object detection, facial recognition, medical imaging.</p>
+        
+        <p class="text-gray-700 font-semibold text-lg mb-2 mt-3">Recurrent Neural Networks (RNNs)</p>
+        <p class="text-gray-700 text-sm mb-3">Process sequential data with temporal dependencies. LSTM and GRU architectures handle long-term dependencies better than vanilla RNNs. Applications: language modeling, speech recognition, time series prediction, machine translation.</p>
+        
+        <p class="text-gray-700 font-semibold text-lg mb-2 mt-3">Transformers</p>
+        <p class="text-gray-700 text-sm">Attention mechanism processes entire sequences in parallel, outperforming RNNs on many NLP tasks. Self-attention weighs importance of different sequence positions. Models: BERT, GPT, T5 achieve state-of-the-art on translation, summarization, question answering.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Training & Evaluation</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Split data into training, validation, and test sets. Training set updates model parameters. Validation set tunes hyperparameters and prevents overfitting. Test set provides unbiased performance estimate. Cross-validation averages performance across multiple train/test splits. Regularization techniques (L1, L2, dropout) prevent overfitting. Metrics depend on task: accuracy, precision, recall, F1-score for classification; MSE, MAE for regression.</p>
+    </div>
+
+    <!-- Applications & Real-World Context -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Applications &amp; Real-World Context</h2>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li><strong>Software Development:</strong> Web applications, mobile apps, enterprise systems, embedded software—computer science principles enable scalable, maintainable code.</li>
+        <li><strong>Data Science & Analytics:</strong> Big data processing, predictive modeling, business intelligence—algorithms extract insights from massive datasets.</li>
+        <li><strong>Artificial Intelligence:</strong> Natural language processing, computer vision, recommendation systems, autonomous vehicles—ML models power intelligent applications.</li>
+        <li><strong>Cybersecurity:</strong> Cryptography, network security, intrusion detection—theoretical foundations protect systems from attacks.</li>
+        <li><strong>Scientific Computing:</strong> Climate modeling, genome sequencing, physics simulations—computational methods accelerate scientific discovery.</li>
+        <li><strong>Finance & Trading:</strong> Algorithmic trading, risk modeling, fraud detection—speed and accuracy of algorithms drive financial systems.</li>
+        <li><strong>Healthcare:</strong> Medical imaging analysis, drug discovery, personalized medicine—AI and data analysis improve patient outcomes.</li>
+        <li><strong>Entertainment:</strong> Video games, streaming services, recommendation engines—algorithms optimize user experience and content delivery.</li>
+      </ul>
+    </div>
+
+    <!-- Research & Current Trends -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Research &amp; Current Trends</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Quantum Computing</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Quantum computers exploit superposition and entanglement for exponential parallelism. Shor's algorithm factors integers exponentially faster than classical methods, threatening current cryptography. Grover's algorithm provides quadratic speedup for search. Quantum machine learning explores quantum advantages for optimization and sampling.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Large Language Models</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Transformer-based models with billions of parameters (GPT-4, PaLM, LLaMA) demonstrate emergent capabilities in language understanding, code generation, and reasoning. Training requires massive computational resources (thousands of GPUs). Fine-tuning adapts pre-trained models to specific tasks. Ethical concerns include bias, misinformation, and copyright.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Edge Computing & IoT</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Processing data near its source (edge devices) reduces latency and bandwidth usage. Internet of Things connects billions of sensors and actuators. Challenges include resource constraints, security, and heterogeneous systems. Applications: smart cities, industrial automation, wearable health monitors.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Blockchain & Distributed Systems</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Blockchain provides tamper-evident distributed ledger through cryptographic hashing and consensus mechanisms (Proof of Work, Proof of Stake). Smart contracts enable programmable agreements. Research explores scalability (sharding, layer-2 solutions), privacy (zero-knowledge proofs), and energy efficiency.</p>
+    </div>
+
+    <!-- Connections to Other Fields -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Connections to Other Fields</h2>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li><strong>Mathematics:</strong> Discrete math, linear algebra, calculus, probability, and statistics underpin algorithm analysis, machine learning, and theoretical CS.</li>
+        <li><strong>Logic & Philosophy:</strong> Formal logic informs programming languages, automated reasoning, and proof systems. Philosophical questions about AI consciousness and ethics.</li>
+        <li><strong>Electrical Engineering:</strong> Computer architecture, digital circuits, embedded systems bridge hardware and software.</li>
+        <li><strong>Cognitive Science:</strong> Understanding human cognition inspires AI design (neural networks, knowledge representation). HCI studies human-computer interaction.</li>
+        <li><strong>Linguistics:</strong> Natural language processing draws from syntax, semantics, and pragmatics. Formal language theory connects automata and grammars.</li>
+        <li><strong>Economics:</strong> Algorithmic game theory, mechanism design, and market algorithms apply CS to economic systems.</li>
+        <li><strong>Biology:</strong> Bioinformatics applies algorithms to genomics. Evolutionary computation mimics natural selection for optimization.</li>
+      </ul>
+    </div>
+
+    <!-- Practical Programming Exercises -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Practical Programming Exercises</h2>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Implement Classic Data Structures</p>
+        <p class="text-gray-700 text-sm mb-2">Build from scratch: dynamic array, linked list, stack, queue, binary search tree, hash table with chaining.</p>
+        <p class="text-gray-700 text-sm">Goal: Understand internal workings, performance trade-offs, and edge cases.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Sorting Algorithm Comparison</p>
+        <p class="text-gray-700 text-sm mb-2">Implement bubble sort, merge sort, quick sort, and heap sort. Measure runtime on random, sorted, and reverse-sorted arrays of varying sizes.</p>
+        <p class="text-gray-700 text-sm">Goal: Empirically verify Big-O complexity and understand constant factors.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Graph Algorithm Practice</p>
+        <p class="text-gray-700 text-sm mb-2">Implement DFS, BFS, Dijkstra's shortest path, and topological sort. Apply to problems: maze solving, social network analysis, task scheduling.</p>
+        <p class="text-gray-700 text-sm">Goal: Master graph traversal patterns and recognize when to apply each algorithm.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Dynamic Programming Challenges</p>
+        <p class="text-gray-700 text-sm mb-2">Solve: Fibonacci (memoized), longest common subsequence, 0/1 knapsack, edit distance, matrix chain multiplication.</p>
+        <p class="text-gray-700 text-sm">Goal: Recognize overlapping subproblems and optimal substructure. Practice both top-down and bottom-up approaches.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Build a Mini Project</p>
+        <p class="text-gray-700 text-sm mb-2">Create a text editor with undo/redo (stack), simple database with indexing (B-tree), or web crawler (BFS/DFS, URL queue).</p>
+        <p class="text-gray-700 text-sm">Goal: Apply multiple data structures and algorithms in integrated system.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Competitive Programming Practice</p>
+        <p class="text-gray-700 text-sm">Solve problems on LeetCode, HackerRank, Codeforces, or CodeChef. Start with Easy, progress to Medium, then Hard. Participate in weekly contests.</p>
+      </div>
+    </div>
+
+    <!-- Further Reading & Resources -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Further Reading &amp; Resources</h2>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg">
+        <li><strong>Textbooks:</strong> "Introduction to Algorithms" (CLRS), "The Algorithm Design Manual" (Skiena), "Structure and Interpretation of Computer Programs" (SICP), "Operating Systems: Three Easy Pieces".</li>
+        <li><strong>Online Courses:</strong> MIT OCW 6.006 (Introduction to Algorithms), Stanford CS229 (Machine Learning), Berkeley CS61A (Structure and Interpretation of Computer Programs).</li>
+        <li><strong>Practice Platforms:</strong> LeetCode, HackerRank, CodeSignal, Codeforces, AtCoder, Project Euler.</li>
+        <li><strong>Communities:</strong> Stack Overflow, Reddit r/computerscience, r/learnprogramming, r/algorithms, Computer Science Discord servers.</li>
+        <li><strong>Research Venues:</strong> ACM Digital Library, IEEE Xplore, arXiv CS section, NeurIPS, ICML, CVPR conferences.</li>
+        <li><strong>Documentation:</strong> Language docs (Python, Java, C++), framework guides (TensorFlow, PyTorch, React), API references.</li>
+        <li><strong>Tools:</strong> Git/GitHub, VS Code, Jupyter Notebooks, Docker, Linux command line, debuggers (gdb, pdb).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="college.html" class="px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to College Subjects
+    </a>
+    <a href="computer-science.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="monitor" class="w-5 h-5"></i>
+      Subject Overview
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Biology - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mb-6">
+      <i data-lucide="heart" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Biology: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">Comprehensive exploration of life sciences</p>
+  </div>
+
+  <div class="space-y-10">
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-green-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Introduction to Biology</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Biology is the scientific study of life and living organisms. It encompasses an extraordinarily broad range of topics, from the molecular mechanisms within cells to the complex interactions of ecosystems. The field seeks to understand the structure, function, growth, origin, evolution, distribution, and classification of all forms of life.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Biology integrates knowledge from chemistry, physics, mathematics, and other sciences to explain the phenomena of life. Modern biology is characterized by an interdisciplinary approach, combining molecular and cellular biology with genetics, ecology, evolution, and physiology to provide a comprehensive understanding of living systems.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        The study of biology has revolutionized our understanding of health, disease, biodiversity, and the environment, leading to advances in medicine, biotechnology, conservation, and agriculture that have transformed human society.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-green-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Cell Biology: The Foundation of Life</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        The cell is the fundamental unit of life. All living organisms are composed of cells, which carry out essential functions through complex molecular machinery. Cell biology examines the structure, function, and behavior of cells.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Cell Theory:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        The cell theory, a fundamental principle of biology, states: (1) All living organisms are composed of one or more cells, (2) The cell is the basic unit of life, and (3) All cells arise from pre-existing cells through cell division.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Cell Types:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Prokaryotic Cells:</strong> Simple cells lacking a nucleus and membrane-bound organelles (bacteria and archaea). DNA is located in the nucleoid region. Smaller and less complex than eukaryotic cells.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Eukaryotic Cells:</strong> Complex cells with a nucleus and membrane-bound organelles (plants, animals, fungi, protists). Larger and more structurally complex, allowing for greater functional specialization.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Cell Organelles and Structures:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Nucleus:</strong> The control center of the cell, containing DNA wrapped around histone proteins to form chromatin. Enclosed by a double membrane (nuclear envelope) with pores for RNA and protein transport. Contains the nucleolus, where ribosomal RNA is synthesized. Controls cellular activities through gene expression regulation.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Mitochondria:</strong> Powerhouses of the cell, producing ATP through cellular respiration (oxidative phosphorylation). Have their own DNA and ribosomes, suggesting an endosymbiotic origin. Number varies by cell type and energy demands. Double membrane structure with inner membrane folded into cristae, increasing surface area for ATP production.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Endoplasmic Reticulum (ER):</strong> Network of membrane-bound tubules and sacs. Rough ER has ribosomes attached, synthesizing proteins destined for secretion or membrane insertion. Smooth ER lacks ribosomes, synthesizing lipids, metabolizing carbohydrates, detoxifying drugs and poisons, and storing calcium ions (in muscle cells).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Golgi Apparatus:</strong> Stack of flattened membrane-bound sacs (cisternae). Modifies, sorts, packages, and distributes proteins and lipids from ER. Has distinct cis (receiving) and trans (shipping) faces. Adds molecular tags (like carbohydrates) to proteins, creating glycoproteins. Packages materials into vesicles for transport to destinations.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Ribosomes:</strong> Sites of protein synthesis, composed of ribosomal RNA (rRNA) and proteins. Can be free in cytoplasm (synthesizing proteins for cell use) or attached to rough ER (synthesizing proteins for secretion/membranes). Consist of large and small subunits that assemble during translation.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Lysosomes:</strong> Membrane-bound organelles containing hydrolytic enzymes that break down macromolecules, cellular debris, and foreign materials. Maintain acidic pH (pH ~4.5) for optimal enzyme activity. Function in intracellular digestion, apoptosis (programmed cell death), and defense against pathogens.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Peroxisomes:</strong> Membrane-bound organelles containing enzymes (catalase, peroxidases) that detoxify harmful substances like hydrogen peroxide, break down fatty acids, and participate in lipid metabolism. Produce hydrogen peroxide as a byproduct, which is then broken down by catalase.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Cytoskeleton:</strong> Network of protein filaments providing structural support, enabling cell movement, and facilitating intracellular transport. Consists of microtubules (thickest, involved in cell division and intracellular transport), intermediate filaments (structural support), and microfilaments (thinnest, involved in cell movement and shape).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Cell Membrane (Plasma Membrane):</strong> Phospholipid bilayer with embedded proteins, forming a selectively permeable barrier. Maintains cell integrity, regulates transport of materials (passive diffusion, facilitated diffusion, active transport), and facilitates cell communication. Contains cholesterol (in animal cells) for fluidity and stability.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Chloroplasts:</strong> Plant organelles containing chlorophyll, where photosynthesis occurs. Have their own DNA and ribosomes, suggesting endosymbiotic origin. Double membrane with internal thylakoid membranes organized into grana, where light-dependent reactions occur. Stroma contains enzymes for light-independent (Calvin cycle) reactions.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Vacuoles:</strong> Large membrane-bound storage compartments. In plant cells, central vacuole stores water, ions, nutrients, and waste products, maintaining turgor pressure. In animal cells, smaller vacuoles store materials temporarily.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Cell Division:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Cell division is essential for growth, development, tissue repair, and reproduction. Two main types occur in eukaryotes:
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Mitosis:</strong> Nuclear division producing two genetically identical daughter cells. Consists of phases: Prophase (chromosomes condense, nuclear envelope breaks down), Metaphase (chromosomes align at equator), Anaphase (chromatids separate), Telophase (nuclei reform, chromosomes decondense). Followed by cytokinesis (cytoplasmic division). Results in diploid cells (2n chromosomes).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Meiosis:</strong> Two divisions producing four genetically diverse gametes with half the chromosome number. Meiosis I: Homologous chromosomes pair and separate (reduces chromosome number). Meiosis II: Sister chromatids separate (similar to mitosis). Includes crossing over (genetic recombination) and independent assortment, creating genetic diversity. Results in haploid cells (n chromosomes).</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-green-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Molecular Biology: DNA, RNA, and Protein Synthesis</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Molecular biology examines biological processes at the molecular level, focusing on how DNA, RNA, and proteins interact to carry out cellular functions.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">DNA Structure and Function:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>DNA Double Helix:</strong> Discovered by Watson and Crick (1953). Consists of two antiparallel strands wound around each other. Each strand has a sugar-phosphate backbone with nitrogenous bases (A, T, G, C) extending inward. Bases pair via hydrogen bonds: A-T (2 bonds), G-C (3 bonds). The sequence of bases encodes genetic information.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Nucleotide Structure:</strong> Each nucleotide consists of a phosphate group, deoxyribose sugar, and nitrogenous base. Four bases: Adenine (A), Thymine (T), Guanine (G), Cytosine (C). The sequence of nucleotides forms the genetic code.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>DNA Replication:</strong> Semiconservative process where each strand serves as a template for a new complementary strand. Steps: Unwinding (helicase), Primer synthesis (primase), DNA synthesis (DNA polymerase adds nucleotides 5'→3'), Proofreading and repair (DNA polymerase corrects errors), Ligation (DNA ligase seals fragments). Results in two identical DNA molecules, each with one original and one new strand.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Chromosomes:</strong> DNA wrapped around histone proteins to form chromatin. Chromatin condenses into chromosomes during cell division. Humans have 46 chromosomes (23 pairs): 22 autosome pairs and 1 sex chromosome pair (XX in females, XY in males).</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">The Central Dogma: DNA → RNA → Protein</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        The central dogma describes the flow of genetic information: DNA is transcribed into RNA, which is translated into proteins.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Transcription: DNA to RNA</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>RNA Polymerase:</strong> Enzyme that synthesizes RNA from DNA template. Binds to promoter region to initiate transcription.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Process:</strong> Initiation (RNA polymerase binds promoter), Elongation (RNA synthesized 5'→3'), Termination (transcription ends, RNA released). RNA contains U (uracil) instead of T (thymine), pairing A-U instead of A-T.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>RNA Processing:</strong> Primary transcript (pre-mRNA) modified before leaving nucleus: 5' cap added, 3' poly-A tail added, introns removed (splicing), exons joined. Alternative splicing allows one gene to produce multiple protein variants.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Translation: RNA to Protein</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Genetic Code:</strong> Three-nucleotide codons specify amino acids. 64 possible codons: 61 code for amino acids, 3 are stop codons. Code is universal (same in nearly all organisms), redundant (multiple codons for same amino acid), and unambiguous (each codon specifies one amino acid).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Transfer RNA (tRNA):</strong> Molecules that carry amino acids to ribosomes. Each tRNA has an anticodon (complementary to mRNA codon) and binds specific amino acid. Wobble hypothesis explains how some tRNAs recognize multiple codons.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Ribosomal RNA (rRNA):</strong> Forms ribosome structure and catalyzes peptide bond formation. Ribosomes consist of large and small subunits, each containing rRNA and proteins.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Translation Process:</strong> Initiation (ribosome binds mRNA, first tRNA with amino acid binds start codon AUG), Elongation (amino acids added one by one, peptide bonds formed), Termination (stop codon reached, protein released, ribosome dissociates).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Protein Folding:</strong> Polypeptide chains fold into functional 3D structures. Primary structure (amino acid sequence), Secondary structure (alpha helices, beta sheets), Tertiary structure (overall 3D shape), Quaternary structure (multiple polypeptide chains). Chaperone proteins assist folding.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Gene Expression Regulation:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Gene expression is tightly controlled at multiple levels to ensure proteins are produced in correct amounts, at appropriate times, and in proper locations.
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Transcriptional Control:</strong> Most important level. Regulatory proteins (transcription factors) bind DNA sequences (promoters, enhancers, silencers) to activate or repress transcription. Epigenetic modifications (DNA methylation, histone modifications) also regulate gene expression without changing DNA sequence.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Post-Transcriptional Control:</strong> Alternative splicing, mRNA stability (controlled by microRNAs and other factors), and mRNA localization affect which proteins are produced and where.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Translational Control:</strong> Regulation of when and how often mRNA is translated. Initiation factors, regulatory proteins, and RNA interference (RNAi) control translation rates.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Post-Translational Control:</strong> Protein modifications (phosphorylation, glycosylation, ubiquitination), protein degradation (proteasomes), and protein localization regulate protein activity and lifespan.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-green-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Genetics and Inheritance</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Genetics examines how traits are inherited from parents to offspring and how genes interact to produce phenotypes (observable characteristics).
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Mendelian Genetics:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Mendel's Laws:</strong> Law of Segregation (alleles separate during gamete formation), Law of Independent Assortment (alleles for different traits assort independently), Law of Dominance (dominant alleles mask recessive alleles in heterozygous individuals).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Genotype vs. Phenotype:</strong> Genotype is the genetic makeup (e.g., AA, Aa, aa). Phenotype is the observable expression (e.g., tall, short). Dominant alleles (capital letters) are expressed in heterozygotes; recessive alleles (lowercase) only expressed in homozygotes.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Punnett Squares:</strong> Diagrams predicting offspring genotypes and phenotypes from parental genotypes. Used to calculate probabilities of inheritance patterns.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Complex Inheritance Patterns:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Incomplete Dominance:</strong> Heterozygotes show intermediate phenotype (e.g., red × white flowers → pink offspring).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Codominance:</strong> Both alleles expressed equally (e.g., AB blood type expressing both A and B antigens).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Multiple Alleles:</strong> More than two alleles exist for a gene (e.g., ABO blood types: Iᴬ, Iᴮ, i).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Polygenic Inheritance:</strong> Multiple genes contribute to one trait (e.g., height, skin color), producing continuous variation.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Epistasis:</strong> One gene masks or modifies expression of another gene (e.g., albinism gene masking other pigmentation genes).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Linked Genes:</strong> Genes located on same chromosome tend to be inherited together. Crossing over creates recombinant chromosomes, breaking linkage.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Sex-Linked Inheritance:</strong> Genes on X or Y chromosomes show different inheritance patterns. X-linked traits (e.g., color blindness, hemophilia) more common in males (who have one X chromosome).</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Mutations and Genetic Variation:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Point Mutations:</strong> Single base pair changes. Types: Silent (no amino acid change due to redundancy), Missense (amino acid change), Nonsense (creates stop codon, truncating protein), Frameshift (insertion/deletion shifts reading frame, dramatically altering protein).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Chromosomal Mutations:</strong> Changes in chromosome structure or number. Deletions, duplications, inversions, translocations affect gene expression. Aneuploidy (wrong chromosome number, e.g., Down syndrome: trisomy 21) and polyploidy (multiple chromosome sets) can have major effects.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Genetic Variation Sources:</strong> Mutation (ultimate source), sexual reproduction (recombination, independent assortment), gene flow (migration introduces new alleles).</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-green-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Evolution and Natural Selection</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Evolution is the process by which species change over time through natural selection, genetic drift, mutation, and gene flow. Natural selection occurs when heritable traits that increase survival and reproduction become more common in populations over generations.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Evidence for Evolution:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Fossil Record:</strong> Transitional forms show gradual changes over time. Stratigraphy reveals sequence of species appearance. Extinction events demonstrate species changes.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Comparative Anatomy:</strong> Homologous structures (similar structure, different function, indicating common ancestry, e.g., forelimbs of mammals), Analogous structures (similar function, different structure, indicating convergent evolution, e.g., wings of birds and insects), Vestigial structures (reduced or non-functional remnants of ancestral features, e.g., human tailbone).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Molecular Evidence:</strong> DNA and protein sequence comparisons reveal evolutionary relationships. More similar sequences indicate closer relatedness. Universal genetic code supports common ancestry.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Embryological Evidence:</strong> Similar embryonic development patterns suggest common ancestry. Early embryos of vertebrates are remarkably similar, diverging later in development.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Biogeography:</strong> Geographic distribution of species supports evolution. Related species found in nearby regions, islands show adaptive radiation from mainland ancestors.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Mechanisms of Evolution:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Natural Selection:</strong> Differential survival and reproduction based on heritable traits. Four conditions: Variation exists, variation is heritable, more offspring produced than survive, survival/reproduction differential based on traits. Types: Directional (shifts trait distribution), Stabilizing (favors intermediate phenotypes), Disruptive (favors extremes), Sexual selection (selection based on mate preferences).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Genetic Drift:</strong> Random changes in allele frequencies, especially in small populations. Causes: Bottleneck effect (population dramatically reduced, surviving population may have different allele frequencies), Founder effect (small group establishes new population with different allele frequencies). More significant in small populations, can lead to loss of genetic variation.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Mutation:</strong> Source of genetic variation, creating new alleles. Most mutations are neutral or harmful; rare beneficial mutations can spread through population via natural selection. Mutation rate varies by organism and gene.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Gene Flow:</strong> Movement of alleles between populations through migration. Introduces new alleles, reduces differences between populations. Can prevent speciation or cause rapid evolution if migrants carry beneficial alleles.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Non-Random Mating:</strong> Selection of mates based on phenotypes. Inbreeding (mating between relatives) increases homozygosity and expression of recessive traits. Assortative mating (mating with similar individuals) can maintain genetic differences.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Speciation:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Speciation is the process by which new species arise. Species are groups of organisms that can interbreed and produce fertile offspring (biological species concept).
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Allopatric Speciation:</strong> Geographic isolation leads to speciation. Populations separated by barriers (mountains, water, distance) diverge genetically. Reproductive isolation develops through genetic changes.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Sympatric Speciation:</strong> Speciation without geographic isolation. Can occur through polyploidy (especially in plants), habitat differentiation, or sexual selection. Less common than allopatric speciation.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Reproductive Isolation:</strong> Barriers preventing interbreeding. Prezygotic barriers (before fertilization): Habitat isolation, temporal isolation (different mating times), behavioral isolation (different courtship), mechanical isolation (incompatible anatomy), gametic isolation (gametes don't fuse). Postzygotic barriers (after fertilization): Reduced hybrid viability, reduced hybrid fertility, hybrid breakdown.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-green-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Ecology: Interactions in Nature</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Ecology studies interactions between organisms and their environment, from individual organisms to entire ecosystems and the biosphere. Understanding ecology is essential for conservation, environmental management, and understanding biodiversity.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Ecological Levels of Organization:</h3>
+      <ol class="space-y-4 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">1.</span>
+          <div>
+            <strong>Organismal Ecology:</strong> Individual adaptations to environment. Examines how organisms' physiology, morphology, and behavior enable survival in specific habitats. Includes adaptations to temperature, water availability, light, nutrients, and other abiotic factors.
+            <div class="bg-gray-50 p-3 rounded mt-2 text-base">Examples: Desert plants with thick cuticles, arctic animals with thick fur, deep-sea fish with bioluminescence</div>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">2.</span>
+          <div>
+            <strong>Population Ecology:</strong> Groups of same species in an area, studying growth, distribution, and dynamics. Examines birth rates, death rates, immigration, emigration, population growth models (exponential, logistic), carrying capacity, and population regulation.
+            <div class="bg-gray-50 p-3 rounded mt-2 text-base">Growth equation: dN/dt = rN (exponential) or dN/dt = rN(1-N/K) (logistic), where N = population size, r = growth rate, K = carrying capacity</div>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">3.</span>
+          <div>
+            <strong>Community Ecology:</strong> Multiple species interacting in an area, including competition, predation, symbiosis, herbivory, and parasitism. Examines species diversity, community structure, trophic levels, food webs, and succession (changes in community composition over time).
+            <div class="bg-gray-50 p-3 rounded mt-2 text-base">Interactions: Competition (resource limitation), Predation (predator-prey dynamics), Mutualism (both benefit), Commensalism (one benefits, other unaffected), Parasitism (one benefits, other harmed)</div>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">4.</span>
+          <div>
+            <strong>Ecosystem Ecology:</strong> Community plus abiotic factors (non-living components), studying energy flow and nutrient cycling. Examines primary productivity (rate of biomass production), energy pyramids (only ~10% energy transferred between trophic levels), biogeochemical cycles (carbon, nitrogen, phosphorus, water), and ecosystem services.
+            <div class="bg-gray-50 p-3 rounded mt-2 text-base">Trophic levels: Producers (autotrophs), Primary consumers (herbivores), Secondary consumers (carnivores), Tertiary consumers (top predators), Decomposers (detritivores)</div>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">5.</span>
+          <span><strong>Biosphere:</strong> Global sum of all ecosystems. Examines global patterns of biodiversity, climate zones, biomes (major ecosystems with characteristic climate and organisms), and human impacts on global systems.</span>
+        </li>
+      </ol>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Energy Flow and Nutrient Cycling:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Energy Flow:</strong> Unidirectional (enters as sunlight, exits as heat). Producers convert solar energy to chemical energy through photosynthesis. Energy flows through food chains: Producers → Primary consumers → Secondary consumers → Tertiary consumers. Only ~10% energy transferred between levels (10% rule), rest lost as heat/metabolism/waste. Limits food chain length (typically 4-5 levels).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Nutrient Cycling:</strong> Biogeochemical cycles recycle nutrients. Carbon cycle: Photosynthesis removes CO₂, respiration releases CO₂, decomposition returns carbon to soil. Nitrogen cycle: Nitrogen fixation (N₂ → NH₃ by bacteria), nitrification (NH₃ → NO₂⁻ → NO₃⁻), denitrification (NO₃⁻ → N₂). Phosphorus cycle: Weathering releases phosphate, absorbed by plants, cycles through food web, returned via decomposition.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Biodiversity and Conservation:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Biodiversity:</strong> Variety of life at all levels: genetic diversity (variation within species), species diversity (number and relative abundance of species), ecosystem diversity (variety of ecosystems). High biodiversity increases ecosystem stability, productivity, and resilience.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Threats to Biodiversity:</strong> Habitat destruction (deforestation, urbanization), climate change, pollution, overexploitation (hunting, fishing, poaching), invasive species (displace native species), disease. Human activities are primary cause of current biodiversity loss.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Conservation Strategies:</strong> Protected areas (national parks, reserves), habitat restoration, species reintroduction, captive breeding programs, sustainable resource use, international cooperation. Conservation biology applies ecological principles to preserve biodiversity.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-green-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Physiology and Homeostasis</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Physiology examines how organisms function, maintaining homeostasis through coordinated systems. Homeostasis is the maintenance of stable internal conditions despite external changes, essential for survival.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Homeostatic Mechanisms:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Negative Feedback:</strong> Primary mechanism maintaining homeostasis. Response opposes stimulus, returning system to set point. Example: Body temperature regulation (sweating when hot, shivering when cold), blood glucose regulation (insulin lowers glucose, glucagon raises glucose), blood pH regulation.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Positive Feedback:</strong> Response amplifies stimulus, moving system away from set point. Less common, used for processes needing rapid completion. Example: Blood clotting cascade, childbirth (oxytocin contractions), action potential generation (sodium channels opening).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Feedback Loop Components:</strong> Sensor (detects change), Control center (compares to set point), Effector (produces response). Nervous and endocrine systems coordinate these components.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Major Organ Systems:</h3>
+      <ol class="space-y-4 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">1.</span>
+          <div>
+            <strong>Nervous System:</strong> Rapid communication through electrical and chemical signals. Central nervous system (brain, spinal cord) processes information. Peripheral nervous system (nerves) transmits signals. Neurons transmit electrical signals (action potentials) and chemical signals (neurotransmitters) across synapses. Controls voluntary and involuntary functions, coordinates responses, integrates sensory information.
+            <div class="bg-gray-50 p-3 rounded mt-2 text-base">Major divisions: Somatic (voluntary control), Autonomic (involuntary: sympathetic "fight/flight", parasympathetic "rest/digest")</div>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">2.</span>
+          <div>
+            <strong>Endocrine System:</strong> Slower, longer-lasting regulation through hormones (chemical messengers). Glands secrete hormones into bloodstream, targeting specific cells with receptors. Coordinates growth, development, metabolism, reproduction, stress response. Examples: Insulin (glucose regulation), Growth hormone (growth), Thyroid hormones (metabolism), Adrenaline (stress response), Sex hormones (reproduction).
+            <div class="bg-gray-50 p-3 rounded mt-2 text-base">Major glands: Pituitary (master gland), Thyroid, Adrenal, Pancreas, Gonads (testes/ovaries)</div>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">3.</span>
+          <div>
+            <strong>Circulatory System:</strong> Transports nutrients, gases, waste products, hormones, and immune cells throughout body. Heart pumps blood through vessels (arteries, veins, capillaries). Blood components: Red blood cells (carry oxygen via hemoglobin), White blood cells (immune function), Platelets (clotting), Plasma (liquid component with proteins, nutrients, waste). Closed circulatory system in vertebrates.
+            <div class="bg-gray-50 p-3 rounded mt-2 text-base">Cardiac cycle: Systole (contraction), Diastole (relaxation). Blood flow: Heart → Arteries → Capillaries (exchange) → Veins → Heart</div>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">4.</span>
+          <div>
+            <strong>Respiratory System:</strong> Gas exchange (oxygen in, carbon dioxide out). Breathing (ventilation) moves air in/out of lungs. External respiration: Exchange between air and blood in alveoli (diffusion across thin membranes). Internal respiration: Exchange between blood and body tissues. Oxygen transported by hemoglobin in red blood cells; CO₂ transported as bicarbonate ions, dissolved gas, or bound to hemoglobin.
+            <div class="bg-gray-50 p-3 rounded mt-2 text-base">Process: Inspiration (diaphragm contracts, volume increases, pressure decreases, air enters) → Exchange → Expiration (diaphragm relaxes, volume decreases, pressure increases, air exits)</div>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">5.</span>
+          <div>
+            <strong>Digestive System:</strong> Breaks down food and absorbs nutrients. Mechanical digestion (chewing, churning) and chemical digestion (enzymes). Organs: Mouth (salivary amylase starts carbohydrate digestion), Stomach (pepsin digests proteins, HCl activates enzymes), Small intestine (most digestion and absorption: carbohydrates → glucose, proteins → amino acids, fats → fatty acids/glycerol), Large intestine (water absorption, waste formation). Accessory organs: Liver (bile production, detoxification), Pancreas (digestive enzymes, bicarbonate), Gallbladder (bile storage).
+            <div class="bg-gray-50 p-3 rounded mt-2 text-base">Nutrient absorption: Villi and microvilli increase surface area in small intestine. Active transport, facilitated diffusion, simple diffusion move nutrients into blood/lymph</div>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">6.</span>
+          <span><strong>Excretory System:</strong> Removes waste products and maintains water/salt balance. Kidneys filter blood, producing urine. Nephron functional unit: Glomerulus (filtration), Tubules (reabsorption of water/nutrients, secretion of wastes). Urine concentration regulated by hormones (ADH, aldosterone). Also includes lungs (CO₂ removal), skin (sweat), liver (urea production).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">7.</span>
+          <span><strong>Immune System:</strong> Defends against pathogens and disease. Innate immunity (non-specific: skin, mucus, macrophages, inflammation, fever) provides immediate defense. Adaptive immunity (specific: B cells produce antibodies, T cells kill infected cells, memory cells provide long-term protection) develops after exposure. Vaccination stimulates adaptive immunity without disease.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">8.</span>
+          <span><strong>Musculoskeletal System:</strong> Provides structure, movement, and protection. Skeletal system: Bones (structure, protection, mineral storage, blood cell production), Joints (allow movement), Ligaments (connect bones). Muscular system: Skeletal muscles (voluntary movement), Cardiac muscle (heart contraction), Smooth muscle (involuntary, organs/blood vessels). Muscle contraction: Actin and myosin filaments slide past each other (sliding filament model), requiring ATP and calcium.</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-green-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Metabolism and Energy Production</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Metabolism encompasses all chemical reactions in cells, including energy production (catabolism) and biosynthesis (anabolism). Understanding metabolism is essential for understanding how organisms obtain and use energy.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Cellular Respiration:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Process converting glucose and other fuels into ATP (adenosine triphosphate), the energy currency of cells. Occurs in multiple stages:
+      </p>
+      <ol class="space-y-4 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">1.</span>
+          <div>
+            <strong>Glycolysis:</strong> Occurs in cytoplasm. Glucose (6C) → 2 Pyruvate (3C each) + 2 ATP + 2 NADH. Anaerobic process (no oxygen required). Investment phase (uses 2 ATP) and payoff phase (produces 4 ATP, net 2 ATP).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">2.</span>
+          <div>
+            <strong>Pyruvate Oxidation:</strong> In mitochondria. Pyruvate → Acetyl CoA + CO₂ + NADH. Links glycolysis to Krebs cycle.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">3.</span>
+          <div>
+            <strong>Krebs Cycle (Citric Acid Cycle):</strong> In mitochondrial matrix. Acetyl CoA enters cycle, CO₂ released, produces ATP, NADH, FADH₂. For each glucose: 2 turns of cycle, produces 2 ATP, 6 NADH, 2 FADH₂.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">4.</span>
+          <div>
+            <strong>Electron Transport Chain (ETC) and Oxidative Phosphorylation:</strong> In inner mitochondrial membrane. NADH and FADH₂ donate electrons, electrons pass through protein complexes, energy pumps H⁺ across membrane creating gradient, H⁺ flows back through ATP synthase, ATP synthesized. Oxygen is final electron acceptor, forming H₂O. Produces ~28-34 ATP per glucose. Total: ~30-38 ATP per glucose.
+          </div>
+        </li>
+      </ol>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Photosynthesis:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Process converting light energy to chemical energy (glucose). Occurs in chloroplasts of plants, algae, and some bacteria. Overall equation: 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Light-Dependent Reactions:</strong> In thylakoid membranes. Light absorbed by chlorophyll, electrons excited, electrons flow through ETC, H⁺ pumped into thylakoid space, ATP and NADPH produced (chemiosmosis), H₂O split (photolysis), O₂ released. Photosystems I and II work together.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>Light-Independent Reactions (Calvin Cycle):</strong> In stroma. Uses ATP and NADPH from light reactions. Carbon fixation (CO₂ + RuBP → 3PG), Reduction (3PG → G3P using ATP and NADPH), Regeneration (RuBP regenerated using ATP). For each turn: 3 CO₂ → 1 G3P (3-carbon sugar). 6 turns produce 1 glucose. C₃ photosynthesis uses Calvin cycle directly.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-green-600 font-bold">•</span>
+          <span><strong>C₄ and CAM Photosynthesis:</strong> Adaptations reducing photorespiration. C₄ plants (corn, sugarcane) fix CO₂ into 4-carbon compounds, concentrating CO₂. CAM plants (cacti) open stomata at night, fixing CO₂, then use it during day. Both more efficient in hot, dry conditions.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="biology-quiz.html" class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Computer Science Learning Tools - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <!-- Back Button -->
+  <div class="mb-6">
+    <a href="college-learning-tools.html" class="inline-flex items-center gap-2 px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back to Learning Tools</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="flex justify-center mb-4">
+      <div class="p-4 bg-gradient-to-br from-orange-600 to-amber-600 rounded-full">
+        <i data-lucide="cpu" class="w-16 h-16 text-white"></i>
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Computer Science Learning Tools</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Essential resources for algorithms, data structures, computational theory, and computer science fundamentals
+    </p>
+  </div>
+
+  <!-- Programming Learning Platforms -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-orange-50 to-amber-50 rounded-xl shadow-lg p-8 border-l-4 border-orange-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="code" class="w-7 h-7 text-orange-600"></i>
+        Programming Learning Platforms
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.codecademy.com/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Codecademy ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Interactive coding courses for multiple languages</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Hands-on practice</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Python, Java, C++, JavaScript</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Career paths</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.udacity.com/courses/all?category=computer-science" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Udacity Computer Science ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Industry-focused computer science nanodegrees</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Project-based learning</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Industry partnerships</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Career services</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.edx.org/learn/computer-science" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">edX Computer Science ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">University-level CS courses from top institutions</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>MIT, Harvard, Berkeley courses</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Free audit option</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Verified certificates</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.freecodecamp.org/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">freeCodeCamp ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free coding curriculum with certifications</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>100% free</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Real project portfolio</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Full-stack curriculum</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Algorithm & Data Structure Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-xl shadow-lg p-8 border-l-4 border-amber-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="network" class="w-7 h-7 text-amber-600"></i>
+        Algorithm & Data Structure Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://visualgo.net/" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">VisuAlgo ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Visualizing data structures and algorithms</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Interactive animations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Step-by-step execution</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Free access</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.geeksforgeeks.org/" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">GeeksforGeeks ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive CS tutorials and practice problems</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Algorithm explanations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Practice problems</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Interview preparation</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://algoexpert.io/" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">AlgoExpert ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Curated algorithm interview questions</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>160+ coding questions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Video explanations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Multiple languages</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.bigocheatsheet.com/" target="_blank" class="text-amber-600 hover:text-amber-700 hover:underline">Big-O Cheat Sheet ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Algorithm complexity reference</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Time complexity charts</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Common data structures</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-600">•</span>
+              <span>Quick reference</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Computer Science Theory & Courses -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl shadow-lg p-8 border-l-4 border-yellow-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="graduation-cap" class="w-7 h-7 text-yellow-600"></i>
+        Computer Science Theory & Courses
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/" target="_blank" class="text-yellow-600 hover:text-yellow-700 hover:underline">MIT OpenCourseWare ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free MIT computer science course materials</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Complete course content</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Lecture notes and videos</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Assignments and exams</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.coursera.org/specializations/computer-fundamentals" target="_blank" class="text-yellow-600 hover:text-yellow-700 hover:underline">Coursera CS Fundamentals ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">University computer science specializations</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Top university courses</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Certificates available</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Flexible learning</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.khanacademy.org/computing/computer-science" target="_blank" class="text-yellow-600 hover:text-yellow-700 hover:underline">Khan Academy CS ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free computer science fundamentals</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Beginner-friendly</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Interactive exercises</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Self-paced learning</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/c/cs50" target="_blank" class="text-yellow-600 hover:text-yellow-700 hover:underline">CS50 (Harvard) ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Harvard's introduction to computer science</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Legendary intro course</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Free on YouTube/edX</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Problem sets included</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice & Competition Platforms -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl shadow-lg p-8 border-l-4 border-rose-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="trophy" class="w-7 h-7 text-rose-600"></i>
+        Practice & Competition Platforms
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://leetcode.com/" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">LeetCode ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Coding interview practice and competitions</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>3000+ problems</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Company-tagged questions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Weekly contests</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.hackerrank.com/" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">HackerRank ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Coding challenges across multiple domains</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Skill certifications</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Interview prep kits</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Multiple programming languages</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://codeforces.com/" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">Codeforces ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Competitive programming platform</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Regular competitions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Rating system</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Global community</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.topcoder.com/" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">TopCoder ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Competitive programming and crowdsourcing</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Algorithm competitions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Prize money</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Expert community</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Documentation & Reference Materials -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="book" class="w-7 h-7 text-blue-600"></i>
+        Documentation & Reference Materials
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://stackoverflow.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Stack Overflow ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Programming Q&A community</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Millions of solutions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Expert community</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>All programming languages</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.w3schools.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">W3Schools ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Web development tutorials and references</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Interactive examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Quick reference guides</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Beginner-friendly</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://devdocs.io/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">DevDocs ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">All-in-one API documentation browser</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Multiple languages/frameworks</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Offline access</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Fast search</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://github.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">GitHub ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Code hosting and collaboration platform</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Version control</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Open source projects</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Portfolio building</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academic Resources & Research -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-purple-50 to-violet-50 rounded-xl shadow-lg p-8 border-l-4 border-purple-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="library" class="w-7 h-7 text-purple-600"></i>
+        Academic Resources & Research
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://arxiv.org/list/cs/recent" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">arXiv Computer Science ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Preprint repository for CS research papers</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Latest research</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Free access</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Multiple CS subfields</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://scholar.google.com/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Google Scholar ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Academic search engine for scholarly literature</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Research papers</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Citation tracking</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Author profiles</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.acm.org/publications/digital-library" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">ACM Digital Library ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Computing literature from ACM publications</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Conference proceedings</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Journals and magazines</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Student access available</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.semanticscholar.org/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Semantic Scholar ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AI-powered research tool for scientific literature</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Smart paper recommendations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Citation network</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Free access</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="computer-science.html" class="px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Computer Science Basics
+    </a>
+    <a href="computer-science-quiz.html" class="px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Take Quiz
+    </a>
+    <a href="college-learning-tools.html" class="px-6 py-3 bg-slate-600 text-white rounded-lg hover:bg-slate-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      All Learning Tools
+    </a>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

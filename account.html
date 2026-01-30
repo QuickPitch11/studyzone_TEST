@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Account - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="subjects.html" class="font-medium text-gray-700 hover:text-blue-600">Subjects</a>
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="account.html" class="font-medium text-blue-600 border-b-2 border-blue-600">My Account</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="subjects.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Subjects</a>
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="account.html" class="block py-2 font-medium text-blue-600">My Account</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <!-- Guest User View -->
+  <div id="guestView" class="hidden">
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-gray-400 to-gray-500 rounded-full mb-6">
+        <i data-lucide="user-x" class="w-10 h-10 text-white"></i>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Browsing as Guest</h1>
+      <p class="text-xl text-gray-600">Create an account to track your progress and save your achievements</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Why Create an Account?</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="flex items-start gap-3">
+          <i data-lucide="check-circle" class="w-6 h-6 text-green-600 mt-1"></i>
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-1">Track Your Progress</h3>
+            <p class="text-gray-600">Monitor quiz scores and learning achievements</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <i data-lucide="check-circle" class="w-6 h-6 text-green-600 mt-1"></i>
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-1">Save Your Work</h3>
+            <p class="text-gray-600">Access your history across devices</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <i data-lucide="check-circle" class="w-6 h-6 text-green-600 mt-1"></i>
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-1">Personal Dashboard</h3>
+            <p class="text-gray-600">View stats, streaks, and achievements</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <i data-lucide="check-circle" class="w-6 h-6 text-green-600 mt-1"></i>
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-1">Customized Learning</h3>
+            <p class="text-gray-600">Get personalized recommendations</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 flex gap-4 justify-center">
+        <a href="signup.html" class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+          <i data-lucide="user-plus" class="w-5 h-5"></i>
+          Create Account
+        </a>
+        <a href="login.html" class="px-8 py-3 bg-gray-100 text-gray-700 font-semibold rounded-lg hover:bg-gray-200 transition flex items-center gap-2">
+          <i data-lucide="log-in" class="w-5 h-5"></i>
+          Log In
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logged-in User View -->
+  <div id="userView" class="hidden">
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mb-6">
+        <i data-lucide="user" class="w-10 h-10 text-white"></i>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">My Account</h1>
+      <p class="text-xl text-gray-600">Manage your profile and preferences</p>
+    </div>
+
+    <!-- Account Information -->
+    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-bold text-gray-800">Account Information</h2>
+        <button id="editBtn" class="px-4 py-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition flex items-center gap-2">
+          <i data-lucide="edit-2" class="w-4 h-4"></i>
+          Edit
+        </button>
+      </div>
+
+      <div class="space-y-4">
+        <div class="border-b pb-4">
+          <label class="text-sm text-gray-500">Full Name</label>
+          <p id="displayName" class="text-lg font-medium text-gray-800"></p>
+        </div>
+        <div class="border-b pb-4">
+          <label class="text-sm text-gray-500">Email Address</label>
+          <p id="displayEmail" class="text-lg font-medium text-gray-800"></p>
+        </div>
+        <div class="border-b pb-4">
+          <label class="text-sm text-gray-500">Grade Level</label>
+          <p id="displayGrade" class="text-lg font-medium text-gray-800"></p>
+        </div>
+        <div class="pb-4">
+          <label class="text-sm text-gray-500">Member Since</label>
+          <p id="displayMemberSince" class="text-lg font-medium text-gray-800"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Learning Statistics -->
+    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6">Learning Statistics</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="text-center p-6 bg-blue-50 rounded-lg">
+          <i data-lucide="clipboard-check" class="w-8 h-8 text-blue-600 mx-auto mb-2"></i>
+          <p class="text-3xl font-bold text-gray-800" id="statsQuizzes">0</p>
+          <p class="text-gray-600">Quizzes Taken</p>
+        </div>
+        <div class="text-center p-6 bg-green-50 rounded-lg">
+          <i data-lucide="trophy" class="w-8 h-8 text-green-600 mx-auto mb-2"></i>
+          <p class="text-3xl font-bold text-gray-800" id="statsAvgScore">0%</p>
+          <p class="text-gray-600">Average Score</p>
+        </div>
+        <div class="text-center p-6 bg-purple-50 rounded-lg">
+          <i data-lucide="flame" class="w-8 h-8 text-purple-600 mx-auto mb-2"></i>
+          <p class="text-3xl font-bold text-gray-800" id="statsStreak">0</p>
+          <p class="text-gray-600">Day Streak</p>
+        </div>
+      </div>
+      <div class="mt-6 text-center">
+        <a href="dashboard.html" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold">
+          View Full Dashboard
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6">Quick Actions</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <a href="dashboard.html" class="flex items-center gap-3 p-4 border rounded-lg hover:bg-gray-50 transition">
+          <i data-lucide="layout-dashboard" class="w-5 h-5 text-blue-600"></i>
+          <span class="font-medium text-gray-700">Go to Dashboard</span>
+        </a>
+        <a href="subjects.html" class="flex items-center gap-3 p-4 border rounded-lg hover:bg-gray-50 transition">
+          <i data-lucide="book-open" class="w-5 h-5 text-green-600"></i>
+          <span class="font-medium text-gray-700">Browse Subjects</span>
+        </a>
+        <button id="changePasswordBtn" class="flex items-center gap-3 p-4 border rounded-lg hover:bg-gray-50 transition text-left">
+          <i data-lucide="lock" class="w-5 h-5 text-purple-600"></i>
+          <span class="font-medium text-gray-700">Change Password</span>
+        </button>
+        <button id="logoutBtnAccount" class="flex items-center gap-3 p-4 border rounded-lg hover:bg-red-50 transition text-left">
+          <i data-lucide="log-out" class="w-5 h-5 text-red-600"></i>
+          <span class="font-medium text-red-600">Log Out</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- My Learning Plan -->
+    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-bold text-gray-800">My Learning Plan</h2>
+        <button id="managePlanBtn" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+          <i data-lucide="plus" class="w-4 h-4"></i>
+          Manage Subjects
+        </button>
+      </div>
+      <p class="text-gray-600 mb-6">Select subjects you're currently studying for quick access</p>
+      
+      <div id="learningPlanList" class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Plan subjects will be loaded here -->
+      </div>
+      
+      <div id="emptyPlanMessage" class="hidden text-center py-8">
+        <i data-lucide="inbox" class="w-12 h-12 mx-auto mb-3 text-gray-400"></i>
+        <p class="text-gray-500">No subjects added yet. Click "Manage Subjects" to add subjects to your plan.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Subject Selection Modal -->
+<div id="subjectModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+  <div class="bg-white rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+    <div class="p-6 border-b flex items-center justify-between">
+      <h2 class="text-2xl font-bold text-gray-800">Manage Learning Plan</h2>
+      <button id="closeModalBtn" class="p-2 hover:bg-gray-100 rounded-lg transition">
+        <i data-lucide="x" class="w-6 h-6 text-gray-600"></i>
+      </button>
+    </div>
+    
+    <div class="p-6 overflow-y-auto" style="max-height: calc(90vh - 140px);">
+      <p class="text-gray-600 mb-6">Select the subjects you want to add to your learning plan for quick access.</p>
+      
+      <div class="mb-6">
+        <h3 class="text-lg font-bold text-gray-800 mb-4">High School Subjects</h3>
+        <div class="grid md:grid-cols-2 gap-3" id="highSchoolSubjects">
+          <!-- High school subjects will be loaded here -->
+        </div>
+      </div>
+      
+      <div class="mb-6">
+        <h3 class="text-lg font-bold text-gray-800 mb-4">College Subjects</h3>
+        <div class="grid md:grid-cols-2 gap-3" id="collegeSubjects">
+          <!-- College subjects will be loaded here -->
+        </div>
+      </div>
+    </div>
+    
+    <div class="p-6 border-t flex justify-end gap-4">
+      <button id="cancelModalBtn" class="px-6 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition">Cancel</button>
+      <button id="savePlanBtn" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+        <i data-lucide="save" class="w-4 h-4"></i>
+        Save Plan
+      </button>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Check session and display appropriate view
+  window.addEventListener('load', function() {
+    const session = localStorage.getItem('studyzone_session');
+    
+    if (!session) {
+      // Not logged in - show guest view
+      document.getElementById('guestView').classList.remove('hidden');
+    } else {
+      const sessionData = JSON.parse(session);
+      
+      if (sessionData.isGuest) {
+        // Guest user - show guest view
+        document.getElementById('guestView').classList.remove('hidden');
+      } else {
+        // Logged in user - show user view
+        document.getElementById('userView').classList.remove('hidden');
+        loadUserData(sessionData);
+      }
+    }
+  });
+
+  function loadUserData(session) {
+    // Get user details
+    const users = JSON.parse(localStorage.getItem('studyzone_users') || '[]');
+    const user = users.find(u => u.email === session.email);
+    
+    if (!user) return;
+
+    // Display user information
+    document.getElementById('displayName').textContent = user.name;
+    document.getElementById('displayEmail').textContent = user.email;
+    document.getElementById('displayGrade').textContent = formatGrade(user.grade);
+    document.getElementById('displayMemberSince').textContent = formatDate(user.createdAt);
+
+    // Load statistics
+    const statsKey = 'studyzone_stats_' + session.email;
+    const stats = JSON.parse(localStorage.getItem(statsKey) || '{}');
+    
+    document.getElementById('statsQuizzes').textContent = stats.quizzesTaken || 0;
+    document.getElementById('statsAvgScore').textContent = (stats.avgScore || 0) + '%';
+    document.getElementById('statsStreak').textContent = stats.studyStreak || 0;
+  }
+
+  function formatGrade(grade) {
+    const gradeMap = {
+      'high-school': 'High School',
+      'college': 'College/University',
+      'graduate': 'Graduate Student',
+      'professional': 'Professional'
+    };
+    return gradeMap[grade] || grade;
+  }
+
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  }
+
+  // Logout functionality
+  document.getElementById('logoutBtnAccount')?.addEventListener('click', function() {
+    if (confirm('Are you sure you want to log out?')) {
+      localStorage.removeItem('studyzone_session');
+      window.location.href = 'index.html';
+    }
+  });
+
+  // Edit button (placeholder)
+  document.getElementById('editBtn')?.addEventListener('click', function() {
+    alert('Edit functionality coming soon! For now, you can update your information by contacting support.');
+  });
+
+  // Change password button (placeholder)
+  document.getElementById('changePasswordBtn')?.addEventListener('click', function() {
+    alert('Password change functionality coming soon! For now, please contact support to reset your password.');
+  });
+
+  // Available subjects
+  const availableSubjects = {
+    highSchool: [
+      { id: 'arithmetic-math', name: 'Arithmetic Math', icon: 'calculator', color: 'yellow' },
+      { id: 'basic-math', name: 'Basic Math', icon: 'hash', color: 'cyan' },
+      { id: 'algebra', name: 'Algebra', icon: 'function-square', color: 'green' },
+      { id: 'geometry', name: 'Geometry', icon: 'triangle', color: 'orange' },
+      { id: 'probability-statistics', name: 'Probability & Statistics', icon: 'bar-chart-2', color: 'purple' }
+    ],
+    college: [
+      { id: 'biology', name: 'Biology', icon: 'microscope', color: 'green' },
+      { id: 'chemistry', name: 'Chemistry', icon: 'flask', color: 'purple' },
+      { id: 'physics', name: 'Physics', icon: 'zap', color: 'blue' },
+      { id: 'calculus', name: 'Calculus', icon: 'function-square', color: 'indigo' },
+      { id: 'psychology', name: 'Psychology', icon: 'brain', color: 'pink' },
+      { id: 'anatomy-physiology', name: 'Anatomy & Physiology', icon: 'heart', color: 'red' },
+      { id: 'kinesiology', name: 'Kinesiology', icon: 'activity', color: 'orange' },
+      { id: 'medical-terminology', name: 'Medical Terminology', icon: 'file-text', color: 'teal' },
+      { id: 'nutrition', name: 'Nutrition', icon: 'apple', color: 'lime' },
+      { id: 'mla-essays', name: 'MLA Essays', icon: 'file-edit', color: 'purple' },
+      { id: 'apa-essays', name: 'APA Essays', icon: 'file-text', color: 'blue' },
+      { id: 'argumentative-essays', name: 'Argumentative Essays', icon: 'message-square', color: 'indigo' },
+      { id: 'public-speaking', name: 'Public Speaking', icon: 'mic', color: 'rose' },
+      { id: 'software-engineering', name: 'Software Engineering', icon: 'code', color: 'blue' }
+    ]
+  };
+
+  // Load learning plan
+  function loadLearningPlan() {
+    const session = JSON.parse(localStorage.getItem('studyzone_session'));
+    if (!session || session.isGuest) return;
+
+    const planKey = 'studyzone_plan_' + session.email;
+    const plan = JSON.parse(localStorage.getItem(planKey) || '[]');
+
+    const planList = document.getElementById('learningPlanList');
+    const emptyMessage = document.getElementById('emptyPlanMessage');
+
+    if (plan.length === 0) {
+      planList.innerHTML = '';
+      emptyMessage.classList.remove('hidden');
+      return;
+    }
+
+    emptyMessage.classList.add('hidden');
+    planList.innerHTML = '';
+
+    const allSubjects = [...availableSubjects.highSchool, ...availableSubjects.college];
+    
+    plan.forEach(subjectId => {
+      const subject = allSubjects.find(s => s.id === subjectId);
+      if (!subject) return;
+
+      const subjectCard = document.createElement('a');
+      subjectCard.href = subject.id + '.html';
+      subjectCard.className = `flex items-center gap-3 p-4 border border-${subject.color}-200 bg-${subject.color}-50 rounded-lg hover:shadow-md transition`;
+      subjectCard.innerHTML = `
+        <i data-lucide="${subject.icon}" class="w-5 h-5 text-${subject.color}-600"></i>
+        <span class="font-medium text-gray-700">${subject.name}</span>
+      `;
+      planList.appendChild(subjectCard);
+    });
+
+    lucide.createIcons();
+  }
+
+  // Modal management
+  const modal = document.getElementById('subjectModal');
+  const managePlanBtn = document.getElementById('managePlanBtn');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+  const cancelModalBtn = document.getElementById('cancelModalBtn');
+  const savePlanBtn = document.getElementById('savePlanBtn');
+
+  managePlanBtn?.addEventListener('click', function() {
+    modal.classList.remove('hidden');
+    loadSubjectsInModal();
+  });
+
+  closeModalBtn?.addEventListener('click', () => modal.classList.add('hidden'));
+  cancelModalBtn?.addEventListener('click', () => modal.classList.add('hidden'));
+
+  // Load subjects in modal
+  function loadSubjectsInModal() {
+    const session = JSON.parse(localStorage.getItem('studyzone_session'));
+    const planKey = 'studyzone_plan_' + session.email;
+    const currentPlan = JSON.parse(localStorage.getItem(planKey) || '[]');
+
+    const highSchoolContainer = document.getElementById('highSchoolSubjects');
+    const collegeContainer = document.getElementById('collegeSubjects');
+
+    highSchoolContainer.innerHTML = '';
+    collegeContainer.innerHTML = '';
+
+    availableSubjects.highSchool.forEach(subject => {
+      const isSelected = currentPlan.includes(subject.id);
+      highSchoolContainer.appendChild(createSubjectCheckbox(subject, isSelected));
+    });
+
+    availableSubjects.college.forEach(subject => {
+      const isSelected = currentPlan.includes(subject.id);
+      collegeContainer.appendChild(createSubjectCheckbox(subject, isSelected));
+    });
+
+    lucide.createIcons();
+  }
+
+  function createSubjectCheckbox(subject, isSelected) {
+    const label = document.createElement('label');
+    label.className = 'flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer transition';
+    label.innerHTML = `
+      <input type="checkbox" class="subject-checkbox" data-subject-id="${subject.id}" ${isSelected ? 'checked' : ''}>
+      <i data-lucide="${subject.icon}" class="w-4 h-4 text-${subject.color}-600"></i>
+      <span class="text-gray-700">${subject.name}</span>
+    `;
+    return label;
+  }
+
+  // Save plan
+  savePlanBtn?.addEventListener('click', function() {
+    const session = JSON.parse(localStorage.getItem('studyzone_session'));
+    const planKey = 'studyzone_plan_' + session.email;
+
+    const checkboxes = document.querySelectorAll('.subject-checkbox');
+    const selectedSubjects = Array.from(checkboxes)
+      .filter(cb => cb.checked)
+      .map(cb => cb.dataset.subjectId);
+
+    localStorage.setItem(planKey, JSON.stringify(selectedSubjects));
+    modal.classList.add('hidden');
+    loadLearningPlan();
+
+    // Show success message
+    alert('Learning plan updated successfully!');
+  });
+
+  // Load plan on page load for logged-in users
+  const initialSession = localStorage.getItem('studyzone_session');
+  if (initialSession) {
+    const sessionData = JSON.parse(initialSession);
+    if (!sessionData.isGuest) {
+      loadLearningPlan();
+    }
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

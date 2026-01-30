@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Algebra - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-pink-500 rounded-full mb-6">
+      <i data-lucide="function-square" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Algebra: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">Comprehensive exploration of algebraic concepts and principles</p>
+  </div>
+
+  <div class="space-y-10">
+    <!-- Introduction -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Introduction to Algebra</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Algebra is a fundamental branch of mathematics that extends arithmetic by introducing variables, symbols, and abstract concepts. The word "algebra" comes from the Arabic "al-jabr" (الجبر), meaning "reunion of broken parts," introduced by the Persian mathematician Muhammad ibn Musa al-Khwarizmi in his 9th-century book "Kitab al-Jabr wal-Muqabala" (The Compendious Book on Calculation by Completion and Balancing). This work laid the foundation for modern algebra and gave us the term "algorithm" (from al-Khwarizmi's name). Algebra revolutionized mathematics by moving from specific numerical calculations to generalized patterns and relationships, enabling us to solve equations, model real-world situations, understand mathematical structures, and develop abstract reasoning skills that are essential in higher mathematics, science, engineering, economics, and computer science.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Unlike arithmetic, which deals with specific numbers and concrete calculations (e.g., 3 + 5 = 8, 7 × 4 = 28), algebra uses letters (variables) and symbols to represent unknown or changing quantities. This abstraction enables us to solve problems where values are unknown (e.g., "If 3 times a number plus 7 equals 22, what is the number?" translates to 3x + 7 = 22, solving to x = 5), express general mathematical relationships that apply to many different situations (e.g., the distance formula d = rt works for any distance, rate, and time), model real-world phenomena (e.g., profit = revenue - cost, P = R - C), and discover patterns and structures that transcend specific numbers. This generalization allows mathematicians, scientists, and engineers to develop formulas, theorems, and models that have universal applications, making algebra one of the most powerful and widely applicable branches of mathematics.
+      </p>
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Historical Development and Significance:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span><span><strong>Ancient Origins:</strong> While al-Khwarizmi is credited with establishing algebra as a distinct field, algebraic concepts appeared earlier in Babylonian mathematics (circa 2000 BCE) with methods for solving quadratic equations, ancient Egyptian mathematics (circa 1800 BCE) with problems involving unknowns (though not using symbolic notation), and ancient Greek mathematics (circa 300 BCE) with geometric algebra, where geometric constructions represented algebraic relationships. Diophantus of Alexandria (circa 250 CE) wrote "Arithmetica," containing problems involving unknown quantities, and is sometimes called the "father of algebra."</span></li>
+        <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span><span><strong>Medieval and Renaissance Algebra:</strong> Al-Khwarizmi's work was translated into Latin in the 12th century, introducing algebra to Europe. Italian mathematicians in the Renaissance (16th century) developed methods for solving cubic and quartic equations (Cardano, Tartaglia, Ferrari). François Viète (1540-1603) introduced symbolic notation using letters for both known and unknown quantities, significantly advancing algebraic notation. René Descartes (1596-1650) combined algebra with geometry, creating analytic geometry (coordinate geometry), which allows geometric problems to be solved algebraically and algebraic problems to be visualized geometrically.</span></li>
+        <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span><span><strong>Modern Algebra:</strong> The development of abstract algebra in the 19th and 20th centuries (groups, rings, fields, vector spaces) extended algebra beyond just solving equations to studying mathematical structures. This abstraction has applications in cryptography, computer science, physics, chemistry, and many other fields. Linear algebra (vectors, matrices, linear transformations) is fundamental to modern mathematics, physics, engineering, data science, machine learning, and computer graphics.</span></li>
+        <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span><span><strong>Applications:</strong> Algebra is essential in virtually every scientific and technical field: physics (equations of motion, force, energy, quantum mechanics), chemistry (chemical equations, reaction rates, equilibrium), engineering (circuit analysis, structural analysis, control systems), economics (supply and demand, optimization, game theory), computer science (algorithms, data structures, cryptography, artificial intelligence), statistics (regression, correlation, hypothesis testing), medicine (drug dosages, population models, epidemiology), finance (interest calculations, investment analysis, risk assessment), and many more. The ability to think abstractly, solve problems systematically, and reason logically—skills developed through algebra—is valuable in everyday life and virtually every profession.</span></li>
+      </ul>
+    </div>
+
+    <!-- Fundamental Concepts -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Fundamental Concepts</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Variables and Constants</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Variables:</strong> Letters (typically x, y, z, a, b, c) representing unknown or changing values. For example, in the equation 2x + 5 = 13, x is the variable we're solving for.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Constants:</strong> Fixed numerical values (like 2, 5, 13 in the above example) that don't change within a given equation or expression.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Coefficients:</strong> Numbers multiplying variables. In 3x, the coefficient is 3. In -5y, the coefficient is -5.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Terms:</strong> Parts of an expression separated by + or - signs. In 2x + 5 - 3y, the terms are 2x, 5, and -3y.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Expressions vs. Equations</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Expressions:</strong> Mathematical phrases without equals signs (e.g., 3x + 7, 2a² - 5b). Expressions can be simplified or evaluated but not solved.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Equations:</strong> Mathematical statements asserting equality between two expressions (e.g., 3x + 7 = 22, 2a² - 5 = 13). Equations can be solved to find variable values.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Inequalities:</strong> Statements comparing expressions using <, >, ≤, or ≥ (e.g., 2x + 5 < 17). Solutions are often ranges of values rather than specific numbers.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Linear Algebra -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Linear Equations: Comprehensive Study</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Linear equations are equations where variables appear only to the first power (degree 1) with no products of variables (no squares, cubes, xy terms, etc.). They are called "linear" because their graphs are straight lines in the coordinate plane. Linear equations have the general form ax + by + c = 0 (two variables) or ax + b = c (one variable), where a, b, and c are constants and a ≠ 0. When graphed, linear equations produce straight lines, making them fundamental to coordinate geometry. Linear equations have at most one solution (one-variable) or infinitely many solutions forming a line (two-variable), and they are the simplest type of equations to solve and understand, serving as the foundation for more complex algebraic concepts.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">One-Variable Linear Equations: Standard Form ax + b = c</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The simplest linear equation format with one variable. To solve: use inverse operations to isolate the variable, maintaining equality by performing the same operation on both sides of the equation. The goal is to transform the equation to the form x = k, where k is the solution. Understanding inverse operations is crucial: addition and subtraction are inverses (undo each other), as are multiplication and division (undo each other). The order of operations (PEMDAS/BODMAS) guides which operations to undo first—undo addition/subtraction first, then multiplication/division, to isolate the variable.
+      </p>
+      <div class="bg-gray-50 p-4 rounded-lg mb-6">
+        <p class="text-gray-700 font-mono text-lg font-bold mb-2">Example 1: Simple Linear Equation</p>
+        <p class="text-gray-700 font-mono text-sm mb-1"><strong>Solve:</strong> 3x + 7 = 22</p>
+        <p class="text-gray-700 font-mono text-sm mt-2">Step 1: Subtract 7 from both sides (inverse of addition) → 3x + 7 - 7 = 22 - 7</p>
+        <p class="text-gray-700 font-mono text-sm">Step 2: Simplify → 3x = 15</p>
+        <p class="text-gray-700 font-mono text-sm">Step 3: Divide both sides by 3 (inverse of multiplication) → 3x/3 = 15/3</p>
+        <p class="text-gray-700 font-mono text-sm">Step 4: Simplify → x = 5</p>
+        <p class="text-gray-700 font-mono text-sm mt-2"><strong>Check:</strong> Substitute x = 5 into original equation: 3(5) + 7 = 15 + 7 = 22 ✓</p>
+      </div>
+      <div class="bg-gray-50 p-4 rounded-lg mb-6">
+        <p class="text-gray-700 font-mono text-lg font-bold mb-2">Example 2: Equation with Parentheses</p>
+        <p class="text-gray-700 font-mono text-sm mb-1"><strong>Solve:</strong> 2(3x - 4) + 5 = 15</p>
+        <p class="text-gray-700 font-mono text-sm mt-2">Step 1: Distribute → 2(3x) - 2(4) + 5 = 15 → 6x - 8 + 5 = 15</p>
+        <p class="text-gray-700 font-mono text-sm">Step 2: Combine like terms → 6x - 3 = 15</p>
+        <p class="text-gray-700 font-mono text-sm">Step 3: Add 3 to both sides → 6x = 18</p>
+        <p class="text-gray-700 font-mono text-sm">Step 4: Divide by 6 → x = 3</p>
+        <p class="text-gray-700 font-mono text-sm mt-2"><strong>Check:</strong> 2(3(3) - 4) + 5 = 2(9 - 4) + 5 = 2(5) + 5 = 10 + 5 = 15 ✓</p>
+      </div>
+      <div class="bg-gray-50 p-4 rounded-lg mb-6">
+        <p class="text-gray-700 font-mono text-lg font-bold mb-2">Example 3: Equation with Fractions</p>
+        <p class="text-gray-700 font-mono text-sm mb-1"><strong>Solve:</strong> (x + 3)/2 - 4 = 5</p>
+        <p class="text-gray-700 font-mono text-sm mt-2">Method 1: Add 4 first, then multiply</p>
+        <p class="text-gray-700 font-mono text-sm">Step 1: Add 4 to both sides → (x + 3)/2 = 9</p>
+        <p class="text-gray-700 font-mono text-sm">Step 2: Multiply both sides by 2 → x + 3 = 18</p>
+        <p class="text-gray-700 font-mono text-sm">Step 3: Subtract 3 → x = 15</p>
+        <p class="text-gray-700 font-mono text-sm mt-2">Method 2: Clear fractions by multiplying by LCD (Least Common Denominator) first</p>
+        <p class="text-gray-700 font-mono text-sm">Step 1: Multiply all terms by 2 → (x + 3) - 8 = 10</p>
+        <p class="text-gray-700 font-mono text-sm">Step 2: Simplify → x + 3 - 8 = 10 → x - 5 = 10</p>
+        <p class="text-gray-700 font-mono text-sm">Step 3: Add 5 → x = 15</p>
+        <p class="text-gray-700 font-mono text-sm mt-2"><strong>Check:</strong> (15 + 3)/2 - 4 = 18/2 - 4 = 9 - 4 = 5 ✓</p>
+      </div>
+      <div class="bg-gray-50 p-4 rounded-lg mb-6">
+        <p class="text-gray-700 font-mono text-lg font-bold mb-2">Example 4: Equation with Variables on Both Sides</p>
+        <p class="text-gray-700 font-mono text-sm mb-1"><strong>Solve:</strong> 3x + 7 = 2x - 5</p>
+        <p class="text-gray-700 font-mono text-sm mt-2">Step 1: Subtract 2x from both sides (collect variable terms on one side) → 3x - 2x + 7 = 2x - 2x - 5</p>
+        <p class="text-gray-700 font-mono text-sm">Step 2: Simplify → x + 7 = -5</p>
+        <p class="text-gray-700 font-mono text-sm">Step 3: Subtract 7 from both sides → x = -12</p>
+        <p class="text-gray-700 font-mono text-sm mt-2"><strong>Check:</strong> 3(-12) + 7 = 2(-12) - 5 → -36 + 7 = -24 - 5 → -29 = -29 ✓</p>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Solving Linear Equations - Systematic Approach and Key Steps:</h3>
+      <ol class="space-y-4 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">1.</span>
+          <div>
+            <strong>Simplify both sides:</strong> Remove parentheses using the distributive property (a(b + c) = ab + ac, a(b - c) = ab - ac, and similarly for negative coefficients: -a(b + c) = -ab - ac), combine like terms (terms with the same variable and exponent: 3x + 5x = 8x, but 3x + 5x² cannot be combined as they have different exponents), clear fractions by multiplying both sides by the least common denominator (LCD) of all fractions, clear decimals by multiplying both sides by an appropriate power of 10. This step reduces complexity and prevents errors in later steps. Be careful with signs: -2(x - 3) = -2x + 6 (distribute the negative), and when combining like terms, pay attention to signs: 5x - 3x = 2x, but 5x + (-3x) = 2x (adding a negative is subtracting).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">2.</span>
+          <div>
+            <strong>Collect variable terms:</strong> If variables appear on both sides, use addition or subtraction to move all variable terms to one side (typically the left side) and all constant terms to the other side (typically the right side). Choose the side that minimizes the number of steps or avoids negative coefficients if possible, though both approaches are valid. For example, if 3x + 5 = 2x - 7, subtract 2x from both sides to get x + 5 = -7 (variable on left), or subtract 3x from both sides to get 5 = -x - 7 (variable on right, but then multiply by -1: -5 = x + 7, then subtract 7: -12 = x, same result but more steps).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">3.</span>
+          <div>
+            <strong>Use inverse operations to isolate the variable:</strong> Use inverse operations systematically. Undo addition/subtraction first (move constants away from the variable term), then undo multiplication/division (isolate the variable). Inverse operations: addition ↔ subtraction (x + 5 = 12, subtract 5: x = 7; x - 3 = 8, add 3: x = 11), multiplication ↔ division (3x = 15, divide by 3: x = 5; x/4 = 7, multiply by 4: x = 28), and remember that dividing by a number is the same as multiplying by its reciprocal (x/3 = 7 is equivalent to x × (1/3) = 7, so multiply by 3: x = 21). For fractional coefficients, multiply by the reciprocal: (2/3)x = 8, multiply by 3/2: x = 8 × (3/2) = 12.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">4.</span>
+          <div>
+            <strong>Maintain equality (Properties of Equality):</strong> Whatever operation you perform on one side of the equation, you must perform the exact same operation on the other side. This is based on the properties of equality: Addition Property (if a = b, then a + c = b + c), Subtraction Property (if a = b, then a - c = b - c), Multiplication Property (if a = b, then ac = bc, for c ≠ 0), Division Property (if a = b, then a/c = b/c, for c ≠ 0). This is why we can solve equations—we create equivalent equations (equations with the same solution set) until we reach the form x = k, which explicitly shows the solution. Never divide by zero, and be careful with signs: multiplying or dividing both sides by a negative number is allowed and does not change the solution (unlike inequalities, where multiplying/dividing by a negative reverses the inequality sign).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">5.</span>
+          <div>
+            <strong>Check your answer:</strong> Substitute the solution back into the original equation to verify that it satisfies the equation (both sides are equal). This catches errors and confirms correctness. If the check fails, retrace your steps to find and correct the error. The check should be done with the original equation (before any simplification), not with an intermediate form. For example, if you solved 2x + 5 = 15 and got x = 5, check by substituting x = 5 into 2x + 5 = 15: 2(5) + 5 = 10 + 5 = 15 ✓, not into a simplified form like 2x = 10.
+          </div>
+        </li>
+      </ol>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Special Cases in Linear Equations:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Identity (Infinitely Many Solutions):</strong> When simplifying leads to a true statement like 5 = 5 or 0 = 0, the equation is an identity and has infinitely many solutions (every real number satisfies the equation). Example: 3x + 7 = 3x + 7 (subtract 3x + 7 from both sides: 0 = 0, true for all x), or 2x + 5 = 2(x + 3) - 1 → 2x + 5 = 2x + 6 - 1 → 2x + 5 = 2x + 5 → 0 = 0. The original expressions are equivalent, so any value of x works. Graphically, this represents the same line (if two-variable) or all real numbers on the number line (if one-variable).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Contradiction (No Solution):</strong> When simplifying leads to a false statement like 5 = 7 or 0 = 3, the equation is a contradiction and has no solution. Example: 3x + 7 = 3x + 10 (subtract 3x from both sides: 7 = 10, false, no value of x makes this true), or 2x + 5 = 2x + 8 → 5 = 8 (impossible). Graphically, this represents parallel lines that never intersect (if two-variable) or an empty solution set on the number line (if one-variable). The equation is inconsistent—no value satisfies it.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Unique Solution:</strong> Most linear equations have exactly one solution. After simplification, you get x = k (a specific number). This is the most common case. Example: 3x + 7 = 22 → x = 5 (unique solution). Graphically, this represents a single point (if two-variable, the intersection of lines) or a specific point on the number line (if one-variable).</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Two-Variable Linear Equations: Graphing and Forms</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Equations with two variables (e.g., y = 2x + 3, 3x + 2y = 6) have infinitely many solutions, each represented as an ordered pair (x, y) that satisfies the equation. When graphed on the coordinate plane, these solutions form a straight line, making them fundamental to coordinate geometry. Two-variable linear equations are used extensively to model relationships between two quantities (e.g., distance vs. time, cost vs. quantity, temperature vs. altitude), represent real-world situations graphically, solve systems of equations (finding points of intersection), and analyze rates of change and proportional relationships.
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>Slope-Intercept Form: y = mx + b</strong> This is the most common form for graphing and understanding linear functions. <strong>Slope (m):</strong> Rate of change, "rise over run" (vertical change divided by horizontal change), represents how steep the line is and in which direction. Positive slope (m > 0): line rises from left to right (increasing function), negative slope (m < 0): line falls from left to right (decreasing function), zero slope (m = 0): horizontal line (constant function, y = b), undefined slope: vertical line (x = k, not a function). Slope formula between two points (x₁, y₁) and (x₂, y₂): m = (y₂ - y₁)/(x₂ - x₁) = rise/run. Interpreting slope: if m = 2, the line rises 2 units for every 1 unit it runs horizontally (steep upward slope); if m = -1/3, the line falls 1 unit for every 3 units it runs horizontally (gentle downward slope); if m = 0.5 (or 1/2), the line rises 1 unit for every 2 units it runs (gentle upward slope). Slope has units: if x is time (hours) and y is distance (miles), then m has units miles/hour (speed). <strong>Y-intercept (b):</strong> The point where the line crosses the y-axis (when x = 0, y = b), represented as (0, b). This is the initial value or starting point in many applications. Example: y = 3x + 5 has slope m = 3 and y-intercept b = 5, so the line passes through (0, 5) and rises 3 units for every 1 unit it runs to the right.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>Standard Form: Ax + By = C</strong> A form where A, B, and C are integers (preferably with A ≥ 0 and no common factors). This form is useful for finding intercepts, working with systems of equations, and certain applications. To find x-intercept: set y = 0, solve for x: x = C/A (point (C/A, 0)). To find y-intercept: set x = 0, solve for y: y = C/B (point (0, C/B)). To convert to slope-intercept form: solve for y: By = -Ax + C, so y = (-A/B)x + C/B, where slope m = -A/B and y-intercept b = C/B. Example: 3x + 2y = 6. X-intercept: 3x = 6, so x = 2, point (2, 0). Y-intercept: 2y = 6, so y = 3, point (0, 3). Convert to slope-intercept: 2y = -3x + 6, so y = (-3/2)x + 3, slope m = -3/2, y-intercept b = 3.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>Point-Slope Form: y - y₁ = m(x - x₁)</strong> Useful when you know a point (x₁, y₁) on the line and the slope m. This form directly uses a known point and slope, making it convenient for certain problems. To use: substitute the known point and slope into the formula. Example: line passes through (2, 5) with slope 3. Equation: y - 5 = 3(x - 2). Expand: y - 5 = 3x - 6, so y = 3x - 1 (slope-intercept form). To find equation given two points: first find slope m = (y₂ - y₁)/(x₂ - x₁), then use either point with point-slope form. Example: points (1, 3) and (4, 9). Slope: m = (9 - 3)/(4 - 1) = 6/3 = 2. Using point (1, 3): y - 3 = 2(x - 1) → y - 3 = 2x - 2 → y = 2x + 1. Using point (4, 9): y - 9 = 2(x - 4) → y - 9 = 2x - 8 → y = 2x + 1 (same result).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>Intercept Form: x/a + y/b = 1</strong> Where a is the x-intercept and b is the y-intercept. This form makes intercepts immediately visible. Example: x/3 + y/5 = 1 has x-intercept 3 (point (3, 0)) and y-intercept 5 (point (0, 5)). To convert from standard form: if Ax + By = C, divide by C (if C ≠ 0): (A/C)x + (B/C)y = 1, so x/(C/A) + y/(C/B) = 1, where x-intercept is C/A and y-intercept is C/B. Example: 2x + 3y = 12. Divide by 12: (2/12)x + (3/12)y = 1, so (1/6)x + (1/4)y = 1, or x/6 + y/4 = 1. X-intercept: 6, y-intercept: 4.
+          </div>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Graphing Linear Equations:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>Method 1: Using Slope and Y-Intercept (Best for y = mx + b form):</strong> Plot the y-intercept (0, b) on the y-axis. From that point, use the slope m = rise/run to find another point: move "run" units horizontally, then "rise" units vertically (up if positive, down if negative). Draw a line through these two points. Example: y = (2/3)x - 1. Y-intercept: (0, -1). Slope: 2/3, so from (0, -1), move 3 units right (run), then 2 units up (rise) to (3, 1). Draw line through (0, -1) and (3, 1).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>Method 2: Using Intercepts (Best for Ax + By = C form):</strong> Find x-intercept (set y = 0, solve for x) and y-intercept (set x = 0, solve for y). Plot both intercepts. Draw a line through them. Example: 3x + 2y = 6. X-intercept: 3x = 6, so x = 2, point (2, 0). Y-intercept: 2y = 6, so y = 3, point (0, 3). Draw line through (2, 0) and (0, 3).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>Method 3: Making a Table of Values:</strong> Choose several x-values (typically 3-5, including negative, zero, and positive), substitute into equation to find corresponding y-values, plot the ordered pairs (x, y), draw a line through the points. This method works for any form but can be time-consuming. Example: y = 2x + 1. Table: x = -2, y = 2(-2) + 1 = -3, point (-2, -3); x = -1, y = 2(-1) + 1 = -1, point (-1, -1); x = 0, y = 2(0) + 1 = 1, point (0, 1); x = 1, y = 2(1) + 1 = 3, point (1, 3); x = 2, y = 2(2) + 1 = 5, point (2, 5). Plot points and draw line.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>Method 4: Using Point-Slope Form:</strong> If given a point and slope, plot the point, use slope to find additional points, draw line. Example: line through (2, 3) with slope -1/2. Plot (2, 3). From (2, 3), move 2 units right (run), 1 unit down (rise, negative slope) to (4, 2). Draw line through (2, 3) and (4, 2).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>Parallel and Perpendicular Lines:</strong> Parallel lines have the same slope (m₁ = m₂). Example: y = 2x + 3 and y = 2x - 5 are parallel (both have slope 2). Perpendicular lines have slopes that are negative reciprocals (m₁ × m₂ = -1, or m₁ = -1/m₂). Example: y = 2x + 3 has slope 2, so a perpendicular line has slope -1/2 (since 2 × (-1/2) = -1). Horizontal lines (y = b) have slope 0. Vertical lines (x = k) have undefined slope and are perpendicular to horizontal lines. Example: y = 5 is horizontal (slope 0), x = 3 is vertical (undefined slope), they are perpendicular.
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Systems of Equations -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Systems of Linear Equations</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        A system of equations consists of two or more equations with the same variables. Solutions are values that satisfy all equations simultaneously.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Solving Methods:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Substitution Method:</strong> Solve one equation for a variable, then substitute into the other equation. Example: If y = 2x + 3 and 3x + y = 10, substitute to get 3x + (2x + 3) = 10.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Elimination Method:</strong> Add or subtract equations to eliminate one variable. Multiply equations if necessary to create opposite coefficients.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Graphing Method:</strong> Graph both equations and find the intersection point, which represents the solution.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Types of Systems:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Consistent and Independent:</strong> One unique solution (lines intersect at one point).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Consistent and Dependent:</strong> Infinitely many solutions (lines are the same, coincident).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Inconsistent:</strong> No solution (parallel lines that never intersect).</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Quadratic Equations -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Quadratic Equations: Complete Analysis</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Quadratic equations are polynomial equations of degree 2, where the highest power of the variable is squared (x²). They have the general form ax² + bx + c = 0, where a, b, and c are constants and a ≠ 0 (if a = 0, it's linear, not quadratic). Quadratic equations are fundamental in mathematics because they appear in countless applications: projectile motion (height as a function of time), area problems (rectangles, circles), optimization problems (maximum profit, minimum cost), physics (kinematics, energy), engineering (signal processing, control systems), economics (supply and demand curves, profit maximization), and geometry (Pythagorean theorem applications, area formulas). When graphed, quadratic equations form parabolas (U-shaped curves), which have important properties: they have either a maximum or minimum point (vertex), they are symmetric about a vertical line (axis of symmetry), and they can intersect the x-axis at 0, 1, or 2 points (roots or solutions).
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Standard Form: ax² + bx + c = 0</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>a (leading coefficient):</strong> Coefficient of x², cannot be zero (otherwise it's linear, not quadratic). The sign of a determines the parabola's direction: if a > 0, the parabola opens upward (∪), creating a minimum point (vertex is the lowest point), if a < 0, the parabola opens downward (∩), creating a maximum point (vertex is the highest point). The absolute value of a (|a|) determines the parabola's "width" or steepness: larger |a| means a narrower, steeper parabola (vertical stretch), smaller |a| means a wider, flatter parabola (vertical compression). Example: y = 3x² is narrower than y = x² (both open up), y = -2x² is narrower than y = -x² (both open down), y = (1/2)x² is wider than y = x².
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>b (linear coefficient):</strong> Coefficient of x (the linear term). The value of b affects the horizontal position of the vertex and the axis of symmetry (x = -b/(2a)). When b = 0, the parabola is centered on the y-axis (axis of symmetry is x = 0), and the equation simplifies to ax² + c = 0. The sign of b (relative to a) affects whether the vertex is left or right of the y-axis: if a and b have opposite signs (a > 0, b < 0 or a < 0, b > 0), vertex is to the right, if a and b have the same sign (both positive or both negative), vertex is to the left. Example: y = x² + 3x has b = 3 (same sign as a = 1), vertex at x = -3/(2) = -1.5 (left of y-axis); y = x² - 4x has b = -4 (opposite sign), vertex at x = 4/2 = 2 (right of y-axis).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>c (constant term):</strong> The constant term, which represents the y-intercept of the parabola (the point where it crosses the y-axis, when x = 0, y = c, so point (0, c)). Changing c shifts the parabola vertically up or down without changing its shape or horizontal position. Example: y = x² + 5 has y-intercept (0, 5), y = x² - 3 has y-intercept (0, -3), y = x² has y-intercept (0, 0) at the origin.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>Vertex Form: y = a(x - h)² + k</strong> An alternative form that directly shows the vertex (h, k). This form makes graphing and understanding the parabola's position and shape much easier. The vertex is at (h, k), the axis of symmetry is x = h, and a determines the direction and width (same as in standard form). To convert from standard form to vertex form, complete the square. Example: y = 2(x - 3)² + 5 has vertex (3, 5), axis x = 3, opens up (a = 2 > 0), narrower than standard parabola. Converting: y = 2x² - 12x + 23. Complete square: y = 2(x² - 6x) + 23 = 2(x² - 6x + 9 - 9) + 23 = 2((x - 3)² - 9) + 23 = 2(x - 3)² - 18 + 23 = 2(x - 3)² + 5. Vertex: (3, 5).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>Factored Form: y = a(x - r₁)(x - r₂)</strong> Where r₁ and r₂ are the roots (x-intercepts, solutions, zeros) of the quadratic equation. This form directly shows the x-intercepts (points where the parabola crosses the x-axis). If the quadratic has two distinct real roots, the factored form is y = a(x - r₁)(x - r₂). If it has one repeated root (double root), the form is y = a(x - r)². If it has no real roots (complex roots), it cannot be factored over the real numbers (but can be factored over complex numbers). To convert from standard form to factored form, factor the quadratic (if factorable). Example: y = (x + 2)(x - 3) = x² - x - 6 has x-intercepts at x = -2 and x = 3 (set each factor to zero: x + 2 = 0 → x = -2, x - 3 = 0 → x = 3).
+          </div>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Solving Quadratic Equations - Comprehensive Methods:</h3>
+      <ol class="space-y-5 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">1.</span>
+          <div>
+            <strong>Factoring Method:</strong> Express the quadratic as a product of two binomials, then use the Zero Product Property (if ab = 0, then a = 0 or b = 0) to find solutions. This method works best when the quadratic is easily factorable. For ax² + bx + c = 0 where a = 1: Find two numbers that multiply to c and add to b. Example: x² + 5x + 6 = 0. Find numbers that multiply to 6 and add to 5: 2 and 3 (2 × 3 = 6, 2 + 3 = 5). Factor: (x + 2)(x + 3) = 0. By Zero Product Property: x + 2 = 0 or x + 3 = 0, so x = -2 or x = -3. Check: (-2)² + 5(-2) + 6 = 4 - 10 + 6 = 0 ✓, (-3)² + 5(-3) + 6 = 9 - 15 + 6 = 0 ✓.
+            <div class="bg-gray-50 p-3 rounded mt-2 font-mono text-sm mb-2">x² + 5x + 6 = (x + 2)(x + 3) = 0</div>
+            <p class="text-sm text-gray-700 mt-2">For ax² + bx + c = 0 where a ≠ 1: Use AC method (find numbers that multiply to ac and add to b), trial and error, or grouping method. Example: 2x² + 7x + 3 = 0. ac = 2(3) = 6. Find numbers that multiply to 6 and add to 7: 6 and 1. Rewrite: 2x² + 6x + x + 3 = 0. Group: (2x² + 6x) + (x + 3) = 2x(x + 3) + 1(x + 3) = (x + 3)(2x + 1) = 0. So x + 3 = 0 or 2x + 1 = 0, giving x = -3 or x = -1/2.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">2.</span>
+          <div>
+            <strong>Quadratic Formula:</strong> x = (-b ± √(b² - 4ac)) / 2a. This method works for ALL quadratic equations, regardless of whether they factor easily. It's derived by completing the square on the general quadratic equation ax² + bx + c = 0. The formula guarantees a solution (though it may be complex if the discriminant is negative). The ± symbol means "plus or minus," giving two solutions: x = (-b + √(b² - 4ac)) / 2a and x = (-b - √(b² - 4ac)) / 2a. Example: 2x² + 5x - 3 = 0. Here a = 2, b = 5, c = -3. Discriminant: b² - 4ac = 5² - 4(2)(-3) = 25 + 24 = 49. x = (-5 ± √49) / (2(2)) = (-5 ± 7) / 4. So x = (-5 + 7)/4 = 2/4 = 1/2 or x = (-5 - 7)/4 = -12/4 = -3.
+            <div class="bg-gray-50 p-3 rounded mt-2 font-mono text-sm mb-2">For ax² + bx + c = 0: x = (-b ± √(b² - 4ac)) / 2a</div>
+            <p class="text-sm text-gray-700 mt-2 font-bold">The Discriminant (Δ = b² - 4ac) determines the nature of solutions:</p>
+            <ul class="text-sm text-gray-700 mt-1 ml-4 list-disc space-y-1">
+              <li><strong>Positive (Δ > 0):</strong> Two distinct real solutions (parabola crosses x-axis at two points). Example: x² - 5x + 6 = 0 has Δ = 25 - 24 = 1 > 0, solutions x = 2 and x = 3.</li>
+              <li><strong>Zero (Δ = 0):</strong> One real solution (repeated root, double root, parabola touches x-axis at one point, vertex is on x-axis). In this case, x = -b/(2a) (the two solutions from the ± formula are the same). Example: x² - 4x + 4 = 0 has Δ = 16 - 16 = 0, solution x = 2 (repeated).</li>
+              <li><strong>Negative (Δ < 0):</strong> Two complex (non-real) solutions (parabola does not intersect x-axis). The solutions involve the imaginary unit i, where i² = -1. Example: x² + 2x + 5 = 0 has Δ = 4 - 20 = -16 < 0, solutions x = (-2 ± √(-16))/2 = (-2 ± 4i)/2 = -1 ± 2i (complex numbers).</li>
+            </ul>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">3.</span>
+          <div>
+            <strong>Completing the Square Method:</strong> Transform the equation into (x - h)² = k form, then solve by taking square roots. This method is useful for understanding the derivation of the quadratic formula, converting to vertex form, and solving when other methods are inconvenient. Steps: (1) If a ≠ 1, divide both sides by a to make leading coefficient 1. (2) Move constant term to right side: x² + bx = -c. (3) Add (b/2)² to both sides (completing the square): x² + bx + (b/2)² = -c + (b/2)². (4) Factor left side (perfect square trinomial): (x + b/2)² = -c + (b/2)². (5) Take square root of both sides: x + b/2 = ±√(-c + (b/2)²). (6) Solve for x: x = -b/2 ± √(-c + (b/2)²). Example: x² + 6x + 5 = 0. Move 5: x² + 6x = -5. Complete square: (6/2)² = 9, so x² + 6x + 9 = -5 + 9 = 4. Factor: (x + 3)² = 4. Take square root: x + 3 = ±2. So x = -3 ± 2, giving x = -1 or x = -5.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">4.</span>
+          <div>
+            <strong>Graphing Method:</strong> Graph y = ax² + bx + c and find x-intercepts (points where y = 0, where the parabola crosses the x-axis). This method provides a visual approach but is less precise than algebraic methods unless using technology (graphing calculator, software). The x-intercepts correspond to the solutions of ax² + bx + c = 0. If the parabola doesn't intersect the x-axis, there are no real solutions (complex solutions exist but can't be seen on a real graph). Advantages: visual understanding, approximate solutions, easy to see number of solutions. Disadvantages: less precise, requires graphing tools for accuracy, doesn't give exact solutions. Example: Graph y = x² - 5x + 6. The parabola crosses x-axis at x = 2 and x = 3 (can be verified: (2)² - 5(2) + 6 = 4 - 10 + 6 = 0, (3)² - 5(3) + 6 = 9 - 15 + 6 = 0).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">5.</span>
+          <div>
+            <strong>Square Root Method:</strong> For equations of the form ax² + c = 0 (missing the linear term, b = 0), isolate x² and take square roots. This is the simplest method for these special cases. Example: 3x² - 12 = 0. Add 12: 3x² = 12. Divide by 3: x² = 4. Take square root: x = ±√4 = ±2, so x = 2 or x = -2. For (x - h)² = k form: Take square root of both sides: x - h = ±√k, so x = h ± √k. Example: (x - 3)² = 16. Take square root: x - 3 = ±4, so x = 3 ± 4, giving x = 7 or x = -1.
+          </div>
+        </li>
+      </ol>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Properties of Quadratic Functions and Parabolas:</h3>
+      <ul class="space-y-4 text-gray-700 leading-relaxed text-lg mb-6">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>Vertex (Turning Point):</strong> The point (h, k) where the parabola reaches its maximum (if a < 0) or minimum (if a > 0) value. The vertex is the "turning point" of the parabola. In standard form ax² + bx + c, the x-coordinate of the vertex is x = -b/(2a). To find the y-coordinate, substitute this x-value into the equation: y = a(-b/(2a))² + b(-b/(2a)) + c, which simplifies to y = c - b²/(4a), or more commonly computed as: y = f(-b/(2a)) by substituting into the original equation. The vertex form y = a(x - h)² + k directly shows the vertex as (h, k). The vertex represents the optimal value in many applications: maximum profit, minimum cost, maximum height of a projectile, etc. Example: y = 2x² - 8x + 5. Vertex x-coordinate: x = -(-8)/(2(2)) = 8/4 = 2. Vertex y-coordinate: y = 2(2)² - 8(2) + 5 = 8 - 16 + 5 = -3. So vertex is (2, -3), and since a = 2 > 0, this is the minimum point (parabola opens up).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>Axis of Symmetry:</strong> The vertical line x = -b/(2a) (or x = h in vertex form) that divides the parabola into two mirror-image halves. The parabola is symmetric about this line: if a point (p, q) is on the parabola, then the point (2(-b/(2a)) - p, q) is also on the parabola (reflected across the axis). This symmetry is useful for finding additional points when graphing and understanding the parabola's structure. The axis of symmetry always passes through the vertex. Example: For y = x² - 4x + 3, axis of symmetry is x = -(-4)/(2(1)) = 4/2 = 2 (vertical line x = 2). The vertex is on this line at (2, -1), and points like (1, 0) and (3, 0) are symmetric about x = 2.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>Y-Intercept:</strong> The point where the parabola crosses the y-axis (when x = 0). In standard form y = ax² + bx + c, the y-intercept is simply (0, c) because when x = 0, y = a(0)² + b(0) + c = c. This is always easy to find and is a useful point for graphing. Example: y = 2x² - 5x + 3 has y-intercept (0, 3).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>X-Intercepts (Roots, Zeros, Solutions):</strong> The points where the parabola crosses the x-axis (when y = 0), which are the solutions to the quadratic equation ax² + bx + c = 0. The number of x-intercepts depends on the discriminant: 2 distinct intercepts if Δ > 0, 1 intercept (touching) if Δ = 0, 0 real intercepts if Δ < 0 (parabola doesn't cross x-axis, solutions are complex). The x-intercepts can be found by factoring, quadratic formula, or graphing. Example: y = x² - 5x + 6. Solve x² - 5x + 6 = 0: (x - 2)(x - 3) = 0, so x-intercepts are at x = 2 and x = 3, points (2, 0) and (3, 0).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>Parabola Direction and Shape:</strong> If a > 0, opens upward (∪), vertex is minimum point, range is [k, ∞) if vertex is (h, k). If a < 0, opens downward (∩), vertex is maximum point, range is (-∞, k]. The absolute value |a| determines width: larger |a| = narrower parabola, smaller |a| = wider parabola. Example: y = 4x² is very narrow and opens up, y = (1/4)x² is very wide and opens up, y = -3x² is narrow and opens down, y = -x² is standard width and opens down.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <div>
+            <strong>Domain and Range:</strong> For any quadratic function, the domain is all real numbers (-∞, ∞) because any x-value can be substituted into ax² + bx + c. The range depends on the vertex and direction: if a > 0 (opens up), range is [k, ∞) where k is the y-coordinate of the vertex (minimum value), if a < 0 (opens down), range is (-∞, k] where k is the y-coordinate of the vertex (maximum value). Example: y = x² - 4x + 3 has vertex (2, -1), opens up, so domain: (-∞, ∞), range: [-1, ∞). y = -x² + 2x + 3 has vertex (1, 4), opens down, so domain: (-∞, ∞), range: (-∞, 4].
+          </div>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Real-World Applications of Quadratic Equations:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Projectile Motion:</strong> Height h(t) = -16t² + v₀t + h₀ (feet) or h(t) = -4.9t² + v₀t + h₀ (meters), where t is time, v₀ is initial velocity, h₀ is initial height. The vertex gives maximum height and time to reach it. Solving h(t) = 0 gives time when object hits ground. Example: Ball thrown upward from 6 feet with initial velocity 64 ft/s: h(t) = -16t² + 64t + 6. Maximum height at t = -64/(2(-16)) = 2 seconds, h(2) = -16(4) + 64(2) + 6 = 70 feet.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Area Problems:</strong> Maximizing or minimizing area given constraints. Example: Find dimensions of rectangle with perimeter 40 that maximizes area. If width = w, length = 20 - w, area A = w(20 - w) = 20w - w² = -w² + 20w. Vertex at w = -20/(2(-1)) = 10, so square 10×10 maximizes area (100 square units).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Business Applications:</strong> Profit = Revenue - Cost. Revenue and cost are often quadratic functions of quantity, so profit is quadratic. Vertex gives optimal quantity for maximum profit. Example: If profit P(x) = -2x² + 100x - 500 (x is quantity), maximum profit at x = -100/(2(-2)) = 25 units, profit = -2(625) + 100(25) - 500 = 750.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Geometry Applications:</strong> Pythagorean theorem problems, area calculations, optimization of geometric shapes. Example: Right triangle with legs x and 12-x has hypotenuse h² = x² + (12-x)² = 2x² - 24x + 144. Minimizing h² (equivalent to minimizing h) at x = 24/(4) = 6, so isosceles right triangle (6, 6, 6√2) minimizes hypotenuse.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Polynomials -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Polynomials</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Polynomials are expressions consisting of variables and coefficients, involving only addition, subtraction, multiplication, and non-negative integer exponents.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Polynomial Structure:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Terms:</strong> Individual parts separated by + or - signs. Example: In 3x³ + 2x² - 5x + 1, there are four terms.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Degree:</strong> Highest exponent of the variable. In 3x³ + 2x² - 5x + 1, the degree is 3 (cubic polynomial).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Leading Coefficient:</strong> Coefficient of the term with highest degree. In the above, it's 3.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Standard Form:</strong> Terms arranged from highest to lowest degree: axⁿ + bxⁿ⁻¹ + ... + cx + d</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Polynomial Operations:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Addition/Subtraction:</strong> Combine like terms (terms with same variable and exponent). Example: (3x² + 5x - 2) + (2x² - 3x + 7) = 5x² + 2x + 5</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Multiplication:</strong> Use distributive property (FOIL for binomials). (x + 3)(x + 5) = x² + 5x + 3x + 15 = x² + 8x + 15</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Division:</strong> Use long division or synthetic division for dividing polynomials.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Factoring -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Factoring</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Factoring is the process of expressing a polynomial as a product of simpler polynomials or factors. It's the reverse of multiplication and essential for solving equations.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Factoring Methods:</h3>
+      <ol class="space-y-4 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">1.</span>
+          <div>
+            <strong>Greatest Common Factor (GCF):</strong> Factor out the largest common factor from all terms.
+            <div class="bg-gray-50 p-3 rounded mt-2 font-mono text-sm">6x² + 9x = 3x(2x + 3)</div>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">2.</span>
+          <div>
+            <strong>Difference of Squares:</strong> a² - b² = (a + b)(a - b)
+            <div class="bg-gray-50 p-3 rounded mt-2 font-mono text-sm">x² - 16 = (x + 4)(x - 4)</div>
+            <div class="bg-gray-50 p-3 rounded mt-2 font-mono text-sm">9x² - 25 = (3x + 5)(3x - 5)</div>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">3.</span>
+          <div>
+            <strong>Perfect Square Trinomials:</strong> a² + 2ab + b² = (a + b)² or a² - 2ab + b² = (a - b)²
+            <div class="bg-gray-50 p-3 rounded mt-2 font-mono text-sm">x² + 6x + 9 = (x + 3)²</div>
+            <div class="bg-gray-50 p-3 rounded mt-2 font-mono text-sm">x² - 10x + 25 = (x - 5)²</div>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">4.</span>
+          <div>
+            <strong>Trinomial Factoring (a = 1):</strong> Find two numbers that multiply to c and add to b.
+            <div class="bg-gray-50 p-3 rounded mt-2 font-mono text-sm">x² + 7x + 12 = (x + 3)(x + 4)</div>
+            <p class="text-sm text-gray-600 mt-2">Find: numbers that multiply to 12 and add to 7 → 3 and 4</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">5.</span>
+          <div>
+            <strong>Trinomial Factoring (a ≠ 1):</strong> Use AC method or trial and error.
+            <div class="bg-gray-50 p-3 rounded mt-2 font-mono text-sm">2x² + 7x + 3 = (2x + 1)(x + 3)</div>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">6.</span>
+          <div>
+            <strong>Grouping:</strong> Factor by grouping terms with common factors.
+            <div class="bg-gray-50 p-3 rounded mt-2 font-mono text-sm">x³ + 2x² + 3x + 6 = x²(x + 2) + 3(x + 2) = (x + 2)(x² + 3)</div>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">7.</span>
+          <div>
+            <strong>Sum/Difference of Cubes:</strong>
+            <div class="bg-gray-50 p-3 rounded mt-2 font-mono text-sm">a³ + b³ = (a + b)(a² - ab + b²)</div>
+            <div class="bg-gray-50 p-3 rounded mt-2 font-mono text-sm">a³ - b³ = (a - b)(a² + ab + b²)</div>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <!-- Rational Expressions -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Rational Expressions and Equations</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Rational expressions are fractions where the numerator and denominator are polynomials. They follow the same rules as numerical fractions.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Key Concepts:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Domain Restrictions:</strong> Values that make the denominator zero must be excluded. For (x + 2)/(x - 3), x ≠ 3.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Simplifying:</strong> Factor numerator and denominator, cancel common factors: (x² - 4)/(x + 2) = (x + 2)(x - 2)/(x + 2) = x - 2</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Operations:</strong> Addition/subtraction requires common denominators. Multiplication: multiply numerators and denominators. Division: multiply by the reciprocal.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Exponents and Radicals -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Exponents and Radicals</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Exponents represent repeated multiplication. Radicals (roots) are the inverse operation of exponents.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Exponent Rules:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Product Rule:</strong> aⁿ × aᵐ = aⁿ⁺ᵐ (same base, add exponents)</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Quotient Rule:</strong> aⁿ ÷ aᵐ = aⁿ⁻ᵐ (same base, subtract exponents)</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Power Rule:</strong> (aⁿ)ᵐ = aⁿᵐ (power of a power, multiply exponents)</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Product to Power:</strong> (ab)ⁿ = aⁿbⁿ</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Quotient to Power:</strong> (a/b)ⁿ = aⁿ/bⁿ</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Zero Exponent:</strong> a⁰ = 1 (for any a ≠ 0)</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Negative Exponent:</strong> a⁻ⁿ = 1/aⁿ (move to denominator, exponent becomes positive)</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Fractional Exponent:</strong> a^(1/n) = ⁿ√a (nth root of a)</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Radical Rules:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Product Rule:</strong> √(ab) = √a × √b</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Quotient Rule:</strong> √(a/b) = √a/√b</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Simplification:</strong> Simplify radicals by factoring out perfect squares: √50 = √(25 × 2) = 5√2</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Word Problems and Applications -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Word Problems and Real-World Applications</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Algebra is powerful for solving real-world problems by translating verbal descriptions into mathematical equations.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Problem-Solving Strategy:</h3>
+      <ol class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">1.</span>
+          <span><strong>Read and Understand:</strong> Identify what is given and what you're solving for.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">2.</span>
+          <span><strong>Define Variables:</strong> Assign letters to unknown quantities.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">3.</span>
+          <span><strong>Write Equations:</strong> Translate words into mathematical expressions and equations.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">4.</span>
+          <span><strong>Solve:</strong> Use algebraic techniques to find solutions.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">5.</span>
+          <span><strong>Check and Interpret:</strong> Verify the solution makes sense in the original context.</span>
+        </li>
+      </ol>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Common Problem Types:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Age Problems:</strong> Relating ages at different times. Example: "John is twice as old as Mary. In 5 years, the sum of their ages will be 50."</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Distance/Rate/Time:</strong> d = rt. "A car travels 240 miles. If speed increases by 20 mph, time decreases by 1 hour."</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Mixture Problems:</strong> Combining substances with different concentrations or values.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Work Problems:</strong> Calculating rates when multiple people/things work together.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Geometry Applications:</strong> Using algebra with formulas for area, perimeter, volume.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Functions -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Functions</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        A function is a relation where each input (x-value) corresponds to exactly one output (y-value). Functions are fundamental to algebra and higher mathematics.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Function Notation:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>f(x) = ...</strong> : Read as "f of x," represents the output when input is x. Example: f(x) = 2x + 3 means when x = 5, f(5) = 2(5) + 3 = 13</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Domain:</strong> Set of all possible input values (x-values) for which the function is defined.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Range:</strong> Set of all possible output values (y-values) the function can produce.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Vertical Line Test:</strong> A graph represents a function if no vertical line intersects it at more than one point.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Types of Functions:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Linear Functions:</strong> f(x) = mx + b, graphs as straight lines</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Quadratic Functions:</strong> f(x) = ax² + bx + c, graphs as parabolas</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Polynomial Functions:</strong> f(x) = aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₁x + a₀</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Rational Functions:</strong> f(x) = p(x)/q(x), where p and q are polynomials</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Radical Functions:</strong> f(x) = √x or f(x) = ⁿ√x</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Exponential Functions:</strong> f(x) = aˣ, where a is a constant base</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Inequalities -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Inequalities</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Inequalities express relationships where two expressions are not necessarily equal, using symbols: < (less than), > (greater than), ≤ (less than or equal), ≥ (greater than or equal).
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Solving Linear Inequalities:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Similar to solving equations, but with one crucial difference: when multiplying or dividing by a negative number, reverse the inequality sign.
+      </p>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-mono text-lg"><strong>Example:</strong> Solve -3x + 7 > 16</p>
+        <p class="text-gray-700 font-mono text-sm mt-2">Step 1: Subtract 7 → -3x > 9</p>
+        <p class="text-gray-700 font-mono text-sm">Step 2: Divide by -3 (FLIP SIGN!) → x < -3</p>
+        <p class="text-gray-700 font-mono text-sm">Solution: All numbers less than -3</p>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Compound Inequalities:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>AND Inequalities:</strong> -2 < x < 5 means x is greater than -2 AND less than 5 (both conditions must be true).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>OR Inequalities:</strong> x < -3 OR x > 7 means x satisfies either condition (at least one must be true).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Interval Notation:</strong> (-2, 5) represents -2 < x < 5. [ ] includes endpoints, ( ) excludes endpoints.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Advanced Topics -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-red-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Advanced Algebraic Concepts</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Complex Numbers:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Complex numbers extend the real number system by introducing the imaginary unit i, where i² = -1. A complex number has the form a + bi, where a is the real part and b is the imaginary part.
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Operations:</strong> Addition: (a + bi) + (c + di) = (a + c) + (b + d)i. Multiplication uses distributive property and i² = -1.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Conjugate:</strong> The conjugate of a + bi is a - bi. Multiplying a complex number by its conjugate gives a real number.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Logarithms:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Logarithms are the inverse operation of exponents. If bˣ = y, then log_b(y) = x. The logarithm base b of y equals x if b raised to the x power equals y.
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Product Rule:</strong> log_b(xy) = log_b(x) + log_b(y)</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Quotient Rule:</strong> log_b(x/y) = log_b(x) - log_b(y)</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Power Rule:</strong> log_b(xⁿ) = n × log_b(x)</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-600 font-bold">•</span>
+          <span><strong>Change of Base:</strong> log_b(x) = log_c(x) / log_c(b)</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="algebra-quiz.html" class="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to More Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

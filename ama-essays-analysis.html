@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AMA Essays - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full mb-6">
+      <i data-lucide="file-text" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">AMA Essays: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">A comprehensive guide to American Medical Association style—citation formatting, manuscript structure, ethical writing, and medical publication standards</p>
+  </div>
+
+  <div class="space-y-10">
+    <!-- Introduction -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Introduction</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">The American Medical Association (AMA) Manual of Style is the authoritative reference for medical and scientific publishing. First published in 1962, now in its 11th edition (2020), it provides comprehensive guidelines for manuscript preparation, citation formatting, ethical considerations, and scientific communication in medicine and related fields.</p>
+      <p class="text-gray-700 leading-relaxed text-lg">This analysis examines the core principles of AMA style, citation mechanics, manuscript structure, ethical guidelines, common errors, and connections to broader scientific writing practices. Mastery of AMA style is essential for medical students, researchers, clinicians, and health science professionals publishing in peer-reviewed journals.</p>
+    </div>
+
+    <!-- Historical Context & Purpose -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Historical Context &amp; Purpose</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Evolution of AMA Style</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>1962 - 1st Edition:</strong> Initial codification of JAMA (Journal of the American Medical Association) editorial standards.</li>
+        <li><strong>1970s-90s:</strong> Expanded to cover statistical reporting, ethical guidelines, conflict of interest disclosure.</li>
+        <li><strong>2000s:</strong> Digital publishing considerations, online citation formats, multimedia content.</li>
+        <li><strong>2020 - 11th Edition:</strong> Updated for inclusive language, data transparency, preprint servers, ORCID identifiers, sex and gender terminology.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Why AMA Style Matters</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Medical literature requires precision, clarity, reproducibility, and ethical integrity. AMA style ensures:</p>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4 ml-6">
+        <li><strong>Standardization:</strong> Consistent formatting across thousands of medical journals.</li>
+        <li><strong>Traceability:</strong> Accurate citations enable verification and further research.</li>
+        <li><strong>Transparency:</strong> Disclosure of funding, conflicts of interest, ethical approvals.</li>
+        <li><strong>Accessibility:</strong> Clear presentation of complex medical data for diverse audiences.</li>
+        <li><strong>Integrity:</strong> Guidelines prevent plagiarism, ghost authorship, data fabrication.</li>
+      </ul>
+    </div>
+
+    <!-- Core Principles of AMA Style -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Core Principles of AMA Style</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Citation Philosophy</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">AMA uses a superscript numerical citation system (citation-sequence or citation-name). Each source receives a number at first mention; subsequent citations use the same number. This differs from author-date systems (APA) and allows dense citation without disrupting text flow.</p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Key Characteristics</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Superscript Numbers:</strong> In-text citations appear as superscript (e.g., "Several studies<sup>1-3</sup> have shown...").</li>
+        <li><strong>Reference List Order:</strong> Numerical order by first appearance in text.</li>
+        <li><strong>Author Format:</strong> Last name followed by initials without periods (Smith JA, not Smith, J.A.).</li>
+        <li><strong>Abbreviations:</strong> Journal titles abbreviated per PubMed/Index Medicus standards.</li>
+        <li><strong>DOI Required:</strong> Digital Object Identifiers (DOI) preferred over URLs when available.</li>
+      </ul>
+    </div>
+
+    <!-- Citation Formatting: Detailed Rules -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Citation Formatting: Detailed Rules</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">In-Text Citations</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold mb-2">Single Source:</p>
+        <p class="text-gray-700 mb-2">Recent research<sup>1</sup> indicates improved outcomes with early intervention.</p>
+        
+        <p class="text-gray-700 font-semibold mb-2 mt-4">Multiple Sources (consecutive):</p>
+        <p class="text-gray-700 mb-2">Several meta-analyses<sup>4-7</sup> support this conclusion.</p>
+        
+        <p class="text-gray-700 font-semibold mb-2 mt-4">Multiple Sources (non-consecutive):</p>
+        <p class="text-gray-700 mb-2">These findings<sup>2,5,9</sup> align with current guidelines.</p>
+        
+        <p class="text-gray-700 font-semibold mb-2 mt-4">Author Named in Text:</p>
+        <p class="text-gray-700">Smith and colleagues<sup>3</sup> reported significant improvement in patient outcomes.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Journal Article (Standard Format)</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>Format:</strong></p>
+        <p class="text-gray-700 font-mono text-sm mb-4">Author(s). Article title. Journal Abbrev. Year;volume(issue):page range. doi:XX.XXXX/xxxxx</p>
+        
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>Example:</strong></p>
+        <p class="text-gray-700 font-mono text-sm">1. Johnson KE, Williams RT, Martinez DE. Effect of metformin on cardiovascular outcomes in type 2 diabetes. JAMA. 2023;329(8):645-654. doi:10.1001/jama.2023.1234</p>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Key Journal Citation Rules</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Author Names:</strong> List up to 6 authors (Last Name Initials); if >6, list first 3 followed by "et al."</li>
+        <li><strong>Article Title:</strong> Sentence case (only first word and proper nouns capitalized).</li>
+        <li><strong>Journal Title:</strong> Abbreviated per NLM catalog (JAMA, N Engl J Med, Lancet).</li>
+        <li><strong>Year:</strong> Publication year only (not month unless no volume/issue).</li>
+        <li><strong>Volume/Issue:</strong> Volume in regular font; issue in parentheses.</li>
+        <li><strong>Page Range:</strong> First and last page (645-654, not 645-54).</li>
+        <li><strong>DOI:</strong> Include when available; omit "https://doi.org/" prefix.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Book Citation</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>Format:</strong></p>
+        <p class="text-gray-700 font-mono text-sm mb-4">Author(s). Book Title. Edition (if not 1st). Publisher; Year.</p>
+        
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>Example:</strong></p>
+        <p class="text-gray-700 font-mono text-sm">2. Harrison TR, Fauci AS, Kasper DL, et al. Harrison's Principles of Internal Medicine. 21st ed. McGraw-Hill; 2022.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Book Chapter</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>Format:</strong></p>
+        <p class="text-gray-700 font-mono text-sm mb-4">Chapter Author(s). Chapter title. In: Book Editor(s), eds. Book Title. Edition. Publisher; Year:page range.</p>
+        
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>Example:</strong></p>
+        <p class="text-gray-700 font-mono text-sm">3. Thompson AE, Liu Y. Pharmacological management of hypertension. In: Chen MH, Davis KL, eds. Clinical Cardiology: A Companion to Braunwald's Heart Disease. 5th ed. Elsevier; 2023:112-145.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Website/Online Source</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>Format:</strong></p>
+        <p class="text-gray-700 font-mono text-sm mb-4">Author(s)/Organization. Title. Website name. Published date. Updated date. Accessed date. URL</p>
+        
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>Example:</strong></p>
+        <p class="text-gray-700 font-mono text-sm">4. Centers for Disease Control and Prevention. COVID-19 vaccination schedule. CDC website. Updated January 15, 2024. Accessed January 20, 2024. https://www.cdc.gov/vaccines/covid-19/schedule</p>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Preprint (arXiv, medRxiv, bioRxiv)</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>Example:</strong></p>
+        <p class="text-gray-700 font-mono text-sm">5. Chen L, Rodriguez M, Patel S. Efficacy of novel CRISPR therapy in sickle cell disease. Preprint posted online December 3, 2023. medRxiv. doi:10.1101/2023.12.03.23299456</p>
+      </div>
+    </div>
+
+    <!-- Manuscript Structure -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Manuscript Structure for Medical Papers</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">IMRaD Format</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Most medical research articles follow IMRaD structure: Introduction, Methods, Results, and Discussion.</p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Title Page</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Title:</strong> Concise, informative, descriptive (≤150 characters including spaces).</li>
+        <li><strong>Authors:</strong> Full names, degrees, affiliations, ORCID IDs.</li>
+        <li><strong>Corresponding Author:</strong> Contact information (email, phone).</li>
+        <li><strong>Word Count:</strong> Abstract and main text separately.</li>
+        <li><strong>Funding Sources:</strong> Grant numbers, sponsors.</li>
+        <li><strong>Conflicts of Interest:</strong> Financial disclosures, industry relationships.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Abstract</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Structured abstract (200-300 words) with subheadings:</p>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4 ml-6">
+        <li><strong>Objective/Background:</strong> Research question, rationale.</li>
+        <li><strong>Methods:</strong> Study design, participants, interventions, measures.</li>
+        <li><strong>Results:</strong> Primary findings with key statistics.</li>
+        <li><strong>Conclusions:</strong> Interpretation, clinical implications.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Introduction</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Brief background, literature review, knowledge gap, specific aims/hypotheses. Typically 2-4 paragraphs. Conclude with clear statement of study purpose.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Methods</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Detailed, reproducible description of study procedures:</p>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4 ml-6">
+        <li><strong>Study Design:</strong> Randomized controlled trial, cohort study, case-control, etc.</li>
+        <li><strong>Participants:</strong> Inclusion/exclusion criteria, recruitment, sample size calculation.</li>
+        <li><strong>Interventions/Exposures:</strong> Detailed protocols, dosing, timing.</li>
+        <li><strong>Outcomes:</strong> Primary and secondary endpoints, measurement tools.</li>
+        <li><strong>Statistical Analysis:</strong> Tests used, significance level, software.</li>
+        <li><strong>Ethics:</strong> IRB/ethics committee approval, informed consent, trial registration (ClinicalTrials.gov).</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Results</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Present findings in logical sequence without interpretation. Use tables/figures to display data efficiently. Report statistics with precision: mean (SD), median (IQR), 95% CI, P values.</p>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4 ml-6">
+        <li><strong>Participant Flow:</strong> Enrollment, allocation, follow-up, analysis (CONSORT diagram for trials).</li>
+        <li><strong>Baseline Characteristics:</strong> Demographics, clinical features (Table 1).</li>
+        <li><strong>Primary Outcomes:</strong> Main results with effect sizes, confidence intervals.</li>
+        <li><strong>Secondary Outcomes:</strong> Additional analyses, subgroups, adverse events.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Discussion</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Interpret findings in context of existing literature:</p>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4 ml-6">
+        <li><strong>Principal Findings:</strong> Summarize key results and their significance.</li>
+        <li><strong>Comparison to Literature:</strong> How do findings align/contrast with prior studies?</li>
+        <li><strong>Mechanisms/Explanations:</strong> Biological plausibility, theoretical frameworks.</li>
+        <li><strong>Strengths & Limitations:</strong> Study design advantages, potential biases, generalizability.</li>
+        <li><strong>Clinical Implications:</strong> Relevance to practice, policy recommendations.</li>
+        <li><strong>Future Research:</strong> Unanswered questions, next steps.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Conclusion</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Brief paragraph summarizing main findings and their importance. Avoid overstating results or claiming causality from observational data.</p>
+    </div>
+
+    <!-- Tables and Figures -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Tables and Figures</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Tables</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Numbering:</strong> Arabic numerals in order of text mention (Table 1, Table 2).</li>
+        <li><strong>Title:</strong> Descriptive, appears above table.</li>
+        <li><strong>Footnotes:</strong> Abbreviations, statistical symbols (*, †, ‡), P values explained below table.</li>
+        <li><strong>Formatting:</strong> Minimal horizontal lines; no vertical lines; align decimal points.</li>
+        <li><strong>Data Precision:</strong> Report appropriate significant figures (avoid false precision).</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Figures</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Types:</strong> Graphs, charts, photographs, illustrations, flowcharts.</li>
+        <li><strong>Quality:</strong> High resolution (300 dpi minimum for publication).</li>
+        <li><strong>Legend:</strong> Descriptive caption below figure; define all symbols, abbreviations, arrows.</li>
+        <li><strong>Color:</strong> Use colorblind-friendly palettes; ensure grayscale legibility.</li>
+        <li><strong>Permissions:</strong> Obtain copyright permission for republished figures; acknowledge source.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">When to Use Tables vs. Figures</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4 ml-6">
+        <li><strong>Tables:</strong> Precise values, multiple variables, complex comparisons.</li>
+        <li><strong>Figures:</strong> Trends, relationships, distributions, spatial/temporal patterns.</li>
+        <li><strong>Avoid Redundancy:</strong> Don't present same data in text, table, AND figure.</li>
+      </ul>
+    </div>
+
+    <!-- Ethical Considerations in Medical Writing -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Ethical Considerations in Medical Writing</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Authorship Criteria (ICMJE Guidelines)</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">All authors must meet ALL four criteria:</p>
+      <ol class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4 ml-6 list-decimal">
+        <li>Substantial contributions to conception/design, data acquisition, or analysis/interpretation.</li>
+        <li>Drafting the work or revising it critically for important intellectual content.</li>
+        <li>Final approval of the version to be published.</li>
+        <li>Agreement to be accountable for all aspects of the work.</li>
+      </ol>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4"><strong>Non-authors:</strong> Those who contributed but don't meet criteria (technical assistance, funding acquisition only) are acknowledged, not listed as authors.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Conflicts of Interest (COI)</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Disclose any financial, professional, or personal relationships that could influence research:</p>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4 ml-6">
+        <li><strong>Financial:</strong> Consulting fees, stock ownership, patents, speaker honoraria from industry.</li>
+        <li><strong>Professional:</strong> Employment, advisory roles, expert testimony.</li>
+        <li><strong>Personal:</strong> Family relationships with industry representatives.</li>
+        <li><strong>Institutional:</strong> University/hospital contracts with pharmaceutical companies.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Plagiarism & Self-Plagiarism</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Plagiarism:</strong> Using others' words/ideas without attribution.严格禁止. Use quotes, paraphrases, and citations.</li>
+        <li><strong>Self-Plagiarism:</strong> Republishing your own work without disclosure (duplicate publication). Acceptable if clearly indicated (e.g., translated versions, conference proceedings to full article).</li>
+        <li><strong>Text Recycling:</strong> Reusing Methods sections is sometimes acceptable if disclosed; Results/Discussion must be original.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Patient Privacy (HIPAA Compliance)</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>De-identification:</strong> Remove all 18 HIPAA identifiers (names, dates, MRNs, photos showing faces).</li>
+        <li><strong>Case Reports:</strong> Obtain written patient consent; alter non-essential details to protect identity.</li>
+        <li><strong>Images:</strong> Mask faces or obtain explicit permission; blur tattoos, scars if identifiable.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Data Integrity</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Fabrication:</strong> Making up data—严格禁止, grounds for retraction and career termination.</li>
+        <li><strong>Falsification:</strong> Manipulating data/images to misrepresent results—equally严重.</li>
+        <li><strong>Cherry-Picking:</strong> Selective reporting of favorable outcomes while hiding negative results—publication bias.</li>
+        <li><strong>Data Sharing:</strong> Increasingly required by journals; deposit data in repositories (ClinicalTrials.gov results, Dryad, Figshare).</li>
+      </ul>
+    </div>
+
+    <!-- Common Errors & How to Avoid Them -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Common Errors &amp; How to Avoid Them</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Citation Mistakes</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>❌ Wrong:</strong> Using periods in author initials (Smith, J.A.) <br><strong>✅ Correct:</strong> Smith JA</li>
+        <li><strong>❌ Wrong:</strong> Full journal names (Journal of the American Medical Association) <br><strong>✅ Correct:</strong> Abbreviated (JAMA)</li>
+        <li><strong>❌ Wrong:</strong> Title case in article titles (Effect Of Metformin On Outcomes) <br><strong>✅ Correct:</strong> Sentence case (Effect of metformin on outcomes)</li>
+        <li><strong>❌ Wrong:</strong> Missing DOI when available <br><strong>✅ Correct:</strong> Always include DOI for journal articles</li>
+        <li><strong>❌ Wrong:</strong> Listing all 15 authors <br><strong>✅ Correct:</strong> First 3 authors, then "et al." if >6 total</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Statistical Reporting Errors</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>P-Value Precision:</strong> Report as P = .03, not P < .05 (unless P < .001).</li>
+        <li><strong>Confidence Intervals:</strong> Always report with effect sizes (RR 1.8; 95% CI, 1.2-2.7).</li>
+        <li><strong>Statistical vs. Clinical Significance:</strong> P < .05 doesn't mean clinically meaningful.</li>
+        <li><strong>Multiple Comparisons:</strong> Adjust P values (Bonferroni, FDR) to avoid false positives.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Writing Style Issues</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Passive Voice Overuse:</strong> Medical writing traditionally passive, but modern preference for active voice when clear.</li>
+        <li><strong>Jargon:</strong> Define abbreviations at first use; avoid excessive acronyms.</li>
+        <li><strong>Wordiness:</strong> Be concise—"In order to" → "To"; "Due to the fact that" → "Because".</li>
+        <li><strong>Ambiguous Pronouns:</strong> "It was found that it improved outcomes" → specify subjects clearly.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Inclusive Language</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Sex vs. Gender:</strong> Sex = biological (male/female); Gender = identity (man/woman/nonbinary).</li>
+        <li><strong>Person-First Language:</strong> "Patients with diabetes" not "diabetics"; "Person with schizophrenia" not "schizophrenic".</li>
+        <li><strong>Race/Ethnicity:</strong> Capitalize (Black, White, Hispanic); explain relevance to research question.</li>
+        <li><strong>Disability:</strong> "Person with disability" not "disabled person"; avoid "suffers from" (judgmental).</li>
+      </ul>
+    </div>
+
+    <!-- Specialized Medical Writing Formats -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Specialized Medical Writing Formats</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Systematic Review & Meta-Analysis</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Comprehensive synthesis of all available evidence on a research question. Follow PRISMA guidelines:</p>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4 ml-6">
+        <li><strong>Protocol:</strong> Pre-register search strategy, inclusion criteria (PROSPERO).</li>
+        <li><strong>Search:</strong> Multiple databases (PubMed, Embase, Cochrane), grey literature.</li>
+        <li><strong>Screening:</strong> Two independent reviewers, conflicts resolved by third.</li>
+        <li><strong>Data Extraction:</strong> Standardized forms, risk of bias assessment.</li>
+        <li><strong>Meta-Analysis:</strong> Pool effect sizes, forest plots, heterogeneity testing (I²).</li>
+        <li><strong>GRADE:</strong> Rate quality of evidence (high, moderate, low, very low).</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Case Report</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Detailed description of unique patient presentation, diagnosis, or treatment:</p>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4 ml-6">
+        <li><strong>Introduction:</strong> Brief background on condition, why case is novel.</li>
+        <li><strong>Case Presentation:</strong> Patient demographics (de-identified), symptoms, timeline, physical exam, labs, imaging.</li>
+        <li><strong>Differential Diagnosis:</strong> Alternative explanations considered.</li>
+        <li><strong>Treatment & Outcomes:</strong> Interventions, response, follow-up.</li>
+        <li><strong>Discussion:</strong> Lessons learned, literature review, clinical pearls.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Clinical Practice Guideline</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Evidence-based recommendations for clinical decision-making:</p>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4 ml-6">
+        <li><strong>Scope:</strong> Define clinical questions (PICO format: Population, Intervention, Comparison, Outcome).</li>
+        <li><strong>Evidence Review:</strong> Systematic literature search, quality appraisal.</li>
+        <li><strong>Recommendations:</strong> Strength (strong/weak) and quality of evidence (high/low).</li>
+        <li><strong>Implementation:</strong> Practical guidance, patient decision aids, quality measures.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Letter to the Editor / Correspondence</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Purpose:</strong> Comment on published article, present brief original data, discuss emerging issues.</li>
+        <li><strong>Format:</strong> Short (typically 400-600 words), focused, referenced.</li>
+        <li><strong>Tone:</strong> Professional, constructive; avoid personal attacks.</li>
+      </ul>
+    </div>
+
+    <!-- Journal Submission Process -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Journal Submission Process</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Choosing a Journal</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Scope & Audience:</strong> Match journal's focus to your topic (general medicine vs. specialty).</li>
+        <li><strong>Impact Factor:</strong> Journal Citation Reports (JCR); higher IF = wider readership but more competitive.</li>
+        <li><strong>Open Access:</strong> Immediate free access vs. subscription; article processing charges (APCs).</li>
+        <li><strong>Predatory Journals:</strong> Avoid low-quality, pay-to-publish scams (check Beall's List, Think. Check. Submit.).</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Peer Review</h3>
+      <ol class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4 ml-6 list-decimal">
+        <li><strong>Initial Screening:</strong> Editor checks fit, quality, ethics; ~30-50% desk rejected.</li>
+        <li><strong>Reviewer Assignment:</strong> 2-3 experts in field (single-blind, double-blind, or open review).</li>
+        <li><strong>Review:</strong> Evaluate methods, validity, significance, writing; recommend accept/revise/reject.</li>
+        <li><strong>Decision:</strong> Accept (rare on first submission), Minor Revision, Major Revision, Reject.</li>
+        <li><strong>Revision:</strong> Address all reviewer comments; resubmit with point-by-point response letter.</li>
+        <li><strong>Publication:</strong> Copyediting, proofs, online ahead of print, final issue.</li>
+      </ol>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Responding to Reviewers</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Be Respectful:</strong> Thank reviewers for time and insights.</li>
+        <li><strong>Address Every Comment:</strong> Point-by-point response; explain changes or rebuttals.</li>
+        <li><strong>Revise Thoroughly:</strong> Don't just tweak wording—improve substance.</li>
+        <li><strong>Highlight Changes:</strong> Track changes or bold text in revised manuscript.</li>
+        <li><strong>Disagree Politely:</strong> If you disagree, provide evidence/rationale, not defensiveness.</li>
+      </ul>
+    </div>
+
+    <!-- Software & Tools -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Software &amp; Tools for AMA Writing</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Reference Managers</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Zotero:</strong> Free, open-source, browser integration, AMA citation style plugin.</li>
+        <li><strong>Mendeley:</strong> Free, PDF annotation, citation insertion (Word/LibreOffice).</li>
+        <li><strong>EndNote:</strong> Paid, institutional licenses common, robust library management.</li>
+        <li><strong>PubMed:</strong> Export citations directly to reference managers (MEDLINE format).</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Writing & Collaboration</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Microsoft Word:</strong> Standard for medical journals; track changes for co-authors.</li>
+        <li><strong>Google Docs:</strong> Real-time collaboration, version history, cloud-based.</li>
+        <li><strong>Overleaf (LaTeX):</strong> For complex equations, formatting; some journals accept LaTeX submissions.</li>
+        <li><strong>Grammarly / ProWritingAid:</strong> Grammar/style checking (medical writing add-ons available).</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Statistical Software</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>R / RStudio:</strong> Free, powerful, reproducible analyses, publication-quality plots.</li>
+        <li><strong>SPSS:</strong> User-friendly GUI, common in clinical research.</li>
+        <li><strong>Stata:</strong> Epidemiology focus, survival analysis, survey data.</li>
+        <li><strong>GraphPad Prism:</strong> Biostatistics, easy graphs for basic analyses.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Literature Search</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>PubMed / MEDLINE:</strong> Primary database for biomedical literature (free via NIH).</li>
+        <li><strong>Embase:</strong> More comprehensive than PubMed for pharmacology, European journals.</li>
+        <li><strong>Cochrane Library:</strong> Systematic reviews, clinical trials registry.</li>
+        <li><strong>Google Scholar:</strong> Broad coverage, citation tracking, full-text access via institutional logins.</li>
+      </ul>
+    </div>
+
+    <!-- Practical Exercises -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Practical Exercises</h2>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Exercise 1: Format This Journal Citation</p>
+        <p class="text-gray-700 mb-2"><strong>Given:</strong> Article by Sarah M. Johnson, David K. Lee, and Maria Rodriguez titled "Impact of telemedicine on rural healthcare access" published in The New England Journal of Medicine, volume 388, issue 12, pages 1098-1107, March 23, 2023, DOI 10.1056/NEJMoa2215678.</p>
+        <p class="text-gray-700 font-semibold mt-2">Your Answer:</p>
+        <p class="text-gray-700 font-mono text-sm">Johnson SM, Lee DK, Rodriguez M. Impact of telemedicine on rural healthcare access. N Engl J Med. 2023;388(12):1098-1107. doi:10.1056/NEJMoa2215678</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Exercise 2: In-Text Citation Practice</p>
+        <p class="text-gray-700 mb-2">Insert superscript citations: "Multiple studies have demonstrated the efficacy of statins in reducing cardiovascular events. [cite sources 5, 8, and 12] However, recent meta-analyses [cite sources 15-18] suggest benefits may be overstated in low-risk populations."</p>
+        <p class="text-gray-700 font-semibold mt-2">Answer:</p>
+        <p class="text-gray-700">Multiple studies<sup>5,8,12</sup> have demonstrated the efficacy of statins in reducing cardiovascular events. However, recent meta-analyses<sup>15-18</sup> suggest benefits may be overstated in low-risk populations.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Exercise 3: Identify the Errors</p>
+        <p class="text-gray-700 font-mono text-sm mb-2">Smith, J.A., Jones, B.C., Williams, D.E., et al. The Effect Of Early Intervention On Patient Outcomes. Journal of the American Medical Association. 2023; Vol. 329(8): pp. 645-654.</p>
+        <p class="text-gray-700 font-semibold mt-2">Errors:</p>
+        <ul class="text-gray-700 text-sm list-disc ml-6">
+          <li>Periods in initials (should be: Smith JA)</li>
+          <li>Title case in article title (should be: sentence case)</li>
+          <li>Full journal name (should be: JAMA)</li>
+          <li>Unnecessary "Vol." and "pp."</li>
+          <li>Periods after initials in author list</li>
+          <li>Missing DOI</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Further Resources -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Further Resources</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Primary References</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>AMA Manual of Style, 11th Edition (2020):</strong> Comprehensive 1,200+ page reference—print or online subscription.</li>
+        <li><strong>ICMJE Recommendations:</strong> International Committee of Medical Journal Editors guidelines (free online).</li>
+        <li><strong>CONSORT Statement:</strong> Standards for reporting randomized trials.</li>
+        <li><strong>PRISMA Guidelines:</strong> Standards for systematic reviews and meta-analyses.</li>
+        <li><strong>STROBE Statement:</strong> Standards for observational epidemiology studies.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Online Tools</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>NLM Catalog:</strong> Look up journal abbreviations (https://www.ncbi.nlm.nih.gov/nlmcatalog/journals).</li>
+        <li><strong>DOI Resolver:</strong> Convert DOIs to full citations (https://doi.org).</li>
+        <li><strong>ORCID:</strong> Register for persistent researcher identifier (https://orcid.org).</li>
+        <li><strong>Crossref Similarity Check:</strong> Plagiarism detection via iThenticate (journal submissions).</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Writing Guides</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>"Writing for Biomedical Publication"</strong> (University of Manchester)—free online course.</li>
+        <li><strong>"How to Write a Paper"</strong> (Hall GM, ed.)—practical guide for medical writers.</li>
+        <li><strong>"Scientific Writing and Communication"</strong> (Angelika Hofmann)—covers papers, grants, presentations.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Journals for Practice</h3>
+      <ul class="space-y-2 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>JAMA, NEJM, Lancet:</strong> Top-tier general medicine journals using AMA style.</li>
+        <li><strong>Specialty Journals:</strong> Check "Instructions for Authors" for AMA variations.</li>
+        <li><strong>Open Access Journals:</strong> PLOS Medicine, BMJ Open—free to read, APC to publish.</li>
+      </ul>
+    </div>
+
+    <!-- Connections to Other Citation Styles -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-teal-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Connections to Other Citation Styles</h2>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li><strong>APA Style:</strong> Author-date system (Smith, 2023); common in psychology, nursing, public health. More author emphasis in text.</li>
+        <li><strong>MLA Style:</strong> Author-page system (Smith 45); humanities focus, less common in medicine.</li>
+        <li><strong>Vancouver Style:</strong> Numerical like AMA; used by some medical journals (BMJ, Lancet variations).</li>
+        <li><strong>Chicago/Turabian:</strong> Footnotes or author-date; historical/qualitative research in medicine.</li>
+        <li><strong>CSE Style:</strong> Council of Science Editors; three systems (citation-sequence, name-year, citation-name) for broader sciences.</li>
+      </ul>
+      <p class="text-gray-700 leading-relaxed text-lg mt-4">Understanding AMA provides foundation for adapting to other medical/scientific styles. Core principles—accuracy, attribution, ethics—remain constant across all systems.</p>
+    </div>
+
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+    <a href="high-school.html" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition font-semibold text-center">
+      ← Back to High School Subjects
+    </a>
+    <a href="college.html" class="bg-teal-600 text-white px-8 py-3 rounded-lg hover:bg-teal-700 transition font-semibold text-center">
+      ← Back to College Subjects
+    </a>
+    <a href="apa-essays.html" class="bg-emerald-600 text-white px-8 py-3 rounded-lg hover:bg-emerald-700 transition font-semibold text-center">
+      Compare with APA Style →
+    </a>
+  </div>
+</main>
+
+<footer class="bg-white border-t mt-16 py-8">
+  <div class="max-w-7xl mx-auto px-4 text-center text-gray-600">
+    <p>&copy; 2024 StudyZone. Master medical writing with confidence.</p>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

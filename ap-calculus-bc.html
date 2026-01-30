@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AP Calculus BC - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-full mb-6">
+      <i data-lucide="trending-up" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">AP Calculus BC: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">Comprehensive exploration of advanced calculus including series, parametric, and polar equations</p>
+  </div>
+
+  <div class="space-y-10">
+    <!-- Introduction -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-sky-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Introduction to AP Calculus BC</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        AP Calculus BC is roughly equivalent to both first and second semester college calculus courses. It includes all topics covered in AP Calculus AB plus additional topics: parametric, polar, and vector functions; advanced integration techniques including integration by parts; sequences and series including Taylor and Maclaurin series; convergence tests; and polynomial approximations. The BC exam is significantly more challenging than AB, requiring deeper conceptual understanding and stronger problem-solving skills.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The AP Calculus BC exam has the same format as AB (multiple-choice and free-response sections), but the questions are more complex and cover more topics. Students who score 3 or higher typically receive credit for two semesters of college calculus. Additionally, the BC exam provides an AB subscore (based on AB-level questions), so students can receive credit for Calculus I even if they don't score high enough for full BC credit.
+      </p>
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">BC-Specific Topics (Beyond AB):</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Parametric Equations:</strong> Functions defined as x = f(t) and y = g(t), including derivatives, arc length, and area.</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Polar Coordinates:</strong> Functions in form r = f(θ), derivatives, area, and arc length in polar form.</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Vector-Valued Functions:</strong> Position, velocity, and acceleration vectors; motion in the plane.</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Advanced Integration:</strong> Integration by parts, partial fractions, improper integrals.</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Sequences and Series:</strong> Convergence, divergence, convergence tests, power series, Taylor/Maclaurin series.</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>L'Hôpital's Rule:</strong> Evaluating limits of indeterminate forms.</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Logistic Differential Equations:</strong> More advanced differential equation models.</span></li>
+      </ul>
+    </div>
+
+    <!-- Review of AB Topics -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-sky-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Review: AB Topics in BC Context</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        BC students must master all AB topics (limits, continuity, derivatives, integrals, FTC, applications) as these form the foundation for advanced topics. BC questions on these topics tend to be more conceptually challenging and may combine multiple concepts in a single problem. For complete coverage of AB topics, refer to the AP Calculus AB guide. Here we focus on BC-specific content.
+      </p>
+    </div>
+
+    <!-- BC Unit 1: Parametric Equations -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-sky-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">BC Unit 1: Parametric Equations</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Understanding Parametric Equations</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Parametric equations define x and y as separate functions of a parameter t: x = f(t), y = g(t). The parameter often represents time, and the pair (x(t), y(t)) traces a curve in the xy-plane as t varies. Parametric equations can describe curves that aren't functions (like circles and loops) and provide information about direction and speed of motion.
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Derivatives of Parametric Equations</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The derivative dy/dx for parametric equations is found using the chain rule: dy/dx = (dy/dt)/(dx/dt), provided dx/dt ≠ 0. This gives the slope of the tangent line to the parametric curve. The second derivative is d²y/dx² = d/dx(dy/dx) = [d/dt(dy/dx)]/(dx/dt).
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Horizontal tangent:</strong> dy/dt = 0 and dx/dt ≠ 0</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Vertical tangent:</strong> dx/dt = 0 and dy/dt ≠ 0</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Cusp or corner:</strong> Both dx/dt = 0 and dy/dt = 0</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Arc Length and Speed</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The arc length of a parametric curve from t = a to t = b is: L = ∫[a to b]√[(dx/dt)² + (dy/dt)²]dt. The integrand represents the speed (magnitude of velocity) at time t. For motion problems, if x(t) and y(t) represent position, then velocity is (dx/dt, dy/dt), speed is √[(dx/dt)² + (dy/dt)²], and acceleration is (d²x/dt², d²y/dt²).
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Area with Parametric Equations</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        To find the area under a parametric curve: If the curve is traversed left to right (dx/dt > 0), Area = ∫y(dx/dt)dt. If traversed right to left (dx/dt < 0), take the absolute value or reverse limits. Be careful with direction of traversal and whether the curve crosses itself.
+      </p>
+    </div>
+
+    <!-- BC Unit 2: Polar Coordinates -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-sky-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">BC Unit 2: Polar Coordinates and Equations</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Polar Coordinate System</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        In polar coordinates, a point is located by distance r from the origin and angle θ from the positive x-axis. Conversion formulas: x = r cos θ, y = r sin θ, r² = x² + y², tan θ = y/x. Common polar curves include circles (r = a), roses (r = a sin(nθ) or r = a cos(nθ)), cardioids (r = a(1 + cos θ)), limaçons, and lemniscates (r² = a² cos(2θ)).
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Derivatives in Polar Form</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        To find dy/dx for a polar curve r = f(θ): First convert to parametric form (x = r cos θ, y = r sin θ), then use dy/dx = (dy/dθ)/(dx/dθ) = [(dr/dθ)sin θ + r cos θ]/[(dr/dθ)cos θ - r sin θ]. Horizontal tangents occur when the numerator equals zero; vertical tangents when the denominator equals zero.
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Area in Polar Coordinates</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The area enclosed by a polar curve r = f(θ) from θ = α to θ = β is: A = (1/2)∫[α to β]r²dθ = (1/2)∫[α to β][f(θ)]²dθ. For the area between two polar curves r₁ and r₂ (where r₂ ≥ r₁): A = (1/2)∫[α to β](r₂² - r₁²)dθ. Be careful to identify correct bounds and which curve is "outer" vs "inner."
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Arc Length in Polar Form</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Arc length of a polar curve from θ = α to θ = β: L = ∫[α to β]√[r² + (dr/dθ)²]dθ. This formula comes from the parametric arc length formula with x = r cos θ and y = r sin θ.
+      </p>
+    </div>
+
+    <!-- BC Unit 3: Vector-Valued Functions -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-sky-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">BC Unit 3: Vector-Valued Functions and Motion</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Position, Velocity, and Acceleration Vectors</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        A vector-valued function r(t) = ⟨x(t), y(t)⟩ describes position in the plane. The velocity vector is v(t) = r'(t) = ⟨x'(t), y'(t)⟩ = ⟨dx/dt, dy/dt⟩, pointing in the direction of motion. The acceleration vector is a(t) = v'(t) = r''(t) = ⟨x''(t), y''(t)⟩ = ⟨d²x/dt², d²y/dt²⟩.
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Speed:</strong> ||v(t)|| = √[(dx/dt)² + (dy/dt)²]</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Distance traveled:</strong> ∫||v(t)||dt over the time interval</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Direction of motion:</strong> Given by the velocity vector v(t)</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Projectile Motion</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        For projectile motion with initial velocity v₀ at angle α, initial height h₀, and gravitational acceleration g = -9.8 m/s² (or -32 ft/s²): x(t) = (v₀ cos α)t, y(t) = h₀ + (v₀ sin α)t - (1/2)gt². Velocity: v(t) = ⟨v₀ cos α, v₀ sin α - gt⟩. Acceleration: a(t) = ⟨0, -g⟩ (constant downward).
+      </p>
+    </div>
+
+    <!-- BC Unit 4: Advanced Integration Techniques -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-sky-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">BC Unit 4: Advanced Integration Techniques</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Integration by Parts</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Integration by parts is derived from the product rule: ∫u dv = uv - ∫v du. Choose u and dv such that ∫v du is simpler than the original integral. The LIATE rule helps choose u: Logarithmic, Inverse trig, Algebraic, Trigonometric, Exponential (in order of priority). Common applications include ∫x eˣ dx, ∫x sin x dx, ∫ln x dx, and ∫arctan x dx.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        <strong>Strategy:</strong> Let u = (function higher in LIATE), dv = (remaining part)dx. Then du = u' dx, v = ∫dv. Sometimes integration by parts must be applied multiple times, or the original integral reappears, allowing you to solve algebraically.
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Partial Fraction Decomposition</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        For rational functions P(x)/Q(x) where degree of P < degree of Q, factor the denominator Q(x) and decompose into simpler fractions. Each linear factor (ax + b) contributes A/(ax + b). Each repeated linear factor (ax + b)ⁿ contributes A₁/(ax + b) + A₂/(ax + b)² + ... + Aₙ/(ax + b)ⁿ. Irreducible quadratic factors (ax² + bx + c) contribute (Ax + B)/(ax² + bx + c). Then integrate each term separately.
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Improper Integrals</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Improper integrals have infinite limits or integrands with infinite discontinuities. Evaluate as limits: ∫[a to ∞]f(x)dx = lim(b→∞)∫[a to b]f(x)dx. If the limit exists and is finite, the integral converges; otherwise, it diverges. Common examples: ∫[1 to ∞](1/xᵖ)dx converges if p > 1, diverges if p ≤ 1.
+      </p>
+    </div>
+
+    <!-- BC Unit 5: L'Hôpital's Rule -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-sky-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">BC Unit 5: L'Hôpital's Rule</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">When and How to Apply L'Hôpital's Rule</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        L'Hôpital's Rule states: If lim(x→a) f(x)/g(x) yields 0/0 or ∞/∞, then lim(x→a) f(x)/g(x) = lim(x→a) f'(x)/g'(x), provided the second limit exists. The rule can be applied repeatedly if the result is still indeterminate. It applies to limits as x → a, x → ∞, or x → -∞.
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Indeterminate forms 0/0 or ∞/∞:</strong> Apply L'Hôpital's Rule directly</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Form 0·∞:</strong> Rewrite as 0/0 or ∞/∞, then apply L'Hôpital's</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Form ∞ - ∞:</strong> Combine into a single fraction, then apply</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Forms 0⁰, 1^∞, ∞⁰:</strong> Take ln of both sides, evaluate limit using L'Hôpital's, then exponentiate</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Common Mistakes</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span>Using L'Hôpital's when the limit is not indeterminate (0/0 or ∞/∞)</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span>Applying the quotient rule instead of taking separate derivatives of numerator and denominator</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span>Forgetting to check if the new limit exists before concluding</span></li>
+      </ul>
+    </div>
+
+    <!-- BC Unit 6: Sequences and Series -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-sky-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">BC Unit 6: Sequences and Series</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Sequences</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        A sequence {aₙ} is a list of numbers in a specific order: a₁, a₂, a₃, .... A sequence converges to L if lim(n→∞) aₙ = L; otherwise it diverges. If the terms approach ∞ or -∞, we say it diverges to infinity. A sequence is monotonic if it's always increasing (aₙ₊₁ ≥ aₙ) or always decreasing (aₙ₊₁ ≤ aₙ). A bounded monotonic sequence always converges.
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Series and Convergence</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        An infinite series Σaₙ (from n=1 to ∞) is the sum a₁ + a₂ + a₃ + .... The nth partial sum is Sₙ = Σ(k=1 to n)aₖ. The series converges to S if lim(n→∞) Sₙ = S; otherwise it diverges. If lim(n→∞) aₙ ≠ 0, the series diverges (nth term test for divergence).
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Special Series</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Geometric Series:</strong> Σarⁿ converges to a/(1-r) if |r| < 1, diverges if |r| ≥ 1</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Telescoping Series:</strong> Terms cancel, leaving finite sum from first and last terms</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>P-Series:</strong> Σ(1/nᵖ) converges if p > 1, diverges if p ≤ 1</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Harmonic Series:</strong> Σ(1/n) diverges (special case of p-series with p=1)</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Convergence Tests</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Integral Test:</strong> If f is positive, continuous, decreasing, and aₙ = f(n), then Σaₙ and ∫f(x)dx both converge or both diverge</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Comparison Test:</strong> If 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges. If aₙ ≥ bₙ ≥ 0 and Σbₙ diverges, then Σaₙ diverges</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Limit Comparison Test:</strong> If lim(aₙ/bₙ) = c > 0, then Σaₙ and Σbₙ both converge or both diverge</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Ratio Test:</strong> Let L = lim|aₙ₊₁/aₙ|. If L < 1, series converges absolutely; if L > 1, diverges; if L = 1, inconclusive</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Alternating Series Test:</strong> If aₙ > 0, aₙ decreasing, and lim(aₙ) = 0, then Σ(-1)ⁿaₙ converges</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Absolute vs. Conditional Convergence</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        A series Σaₙ converges absolutely if Σ|aₙ| converges. If Σaₙ converges but Σ|aₙ| diverges, the series converges conditionally. Absolute convergence is stronger than conditional convergence. If a series converges absolutely, it converges. The converse is not necessarily true.
+      </p>
+    </div>
+
+    <!-- BC Unit 7: Power Series -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-sky-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">BC Unit 7: Power Series and Taylor Series</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Power Series</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        A power series centered at c is Σaₙ(x - c)ⁿ = a₀ + a₁(x - c) + a₂(x - c)² + .... For any power series, exactly one of the following is true: (1) It converges only at x = c, (2) It converges for all x, or (3) There exists R > 0 such that it converges absolutely for |x - c| < R and diverges for |x - c| > R. R is called the radius of convergence. The interval of convergence includes all x where the series converges (must check endpoints separately).
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Finding Radius and Interval of Convergence</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Use the Ratio Test: L = lim|aₙ₊₁(x-c)ⁿ⁺¹/[aₙ(x-c)ⁿ]| = |x-c|·lim|aₙ₊₁/aₙ|. For convergence, need L < 1, so |x - c| < R where R = 1/lim|aₙ₊₁/aₙ|. Then test endpoints x = c - R and x = c + R separately using other convergence tests.
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Taylor and Maclaurin Series</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The Taylor series for f(x) centered at x = c is: Σ[f⁽ⁿ⁾(c)/n!](x - c)ⁿ = f(c) + f'(c)(x - c) + [f''(c)/2!](x - c)² + [f'''(c)/3!](x - c)³ + .... When c = 0, it's called a Maclaurin series. The series represents f(x) on its interval of convergence if the remainder term approaches zero.
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Common Maclaurin Series (Must Memorize)</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span>eˣ = Σ(xⁿ/n!) = 1 + x + x²/2! + x³/3! + ... (converges for all x)</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span>sin x = Σ[(-1)ⁿx^(2n+1)/(2n+1)!] = x - x³/3! + x⁵/5! - ... (converges for all x)</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span>cos x = Σ[(-1)ⁿx^(2n)/(2n)!] = 1 - x²/2! + x⁴/4! - ... (converges for all x)</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span>1/(1-x) = Σxⁿ = 1 + x + x² + x³ + ... (converges for |x| < 1)</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span>ln(1+x) = Σ[(-1)ⁿ⁺¹xⁿ/n] = x - x²/2 + x³/3 - x⁴/4 + ... (converges for -1 < x ≤ 1)</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Operations with Power Series</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Term-by-term differentiation:</strong> d/dx[Σaₙxⁿ] = Σ(naₙxⁿ⁻¹) (same radius of convergence)</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Term-by-term integration:</strong> ∫[Σaₙxⁿ]dx = Σ[aₙxⁿ⁺¹/(n+1)] + C (same radius of convergence)</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Substitution:</strong> Replace x with another expression to create new series</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Lagrange Error Bound</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        When approximating f(x) using the nth-degree Taylor polynomial Pₙ(x), the error is bounded by: |Rₙ(x)| ≤ [M·|x - c|ⁿ⁺¹]/(n+1)!, where M is the maximum value of |f⁽ⁿ⁺¹⁾| on the interval between x and c. This allows you to determine how many terms are needed for a desired accuracy.
+      </p>
+    </div>
+
+    <!-- BC Unit 8: Advanced Differential Equations -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-sky-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">BC Unit 8: Logistic Growth and Advanced Differential Equations</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Logistic Differential Equation</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The logistic equation models population growth with a carrying capacity: dP/dt = kP(1 - P/M), where k > 0 is the growth rate and M is the carrying capacity. The solution is P(t) = M/(1 + Ae^(-kt)), where A is determined by the initial condition. Unlike exponential growth, logistic growth levels off at the carrying capacity.
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Inflection point:</strong> Occurs at P = M/2, where growth rate is maximum</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Horizontal asymptotes:</strong> P = 0 (unstable) and P = M (stable)</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Behavior:</strong> If 0 < P < M, population increases; if P > M, population decreases toward M</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Euler's Method</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Euler's method provides numerical approximations to solutions of differential equations. Given dy/dx = f(x,y) with initial condition y(x₀) = y₀, approximate y at x = x₀ + h using: y₁ = y₀ + h·f(x₀, y₀). Continue: yₙ₊₁ = yₙ + h·f(xₙ, yₙ), where h is the step size. Smaller step sizes generally give better approximations but require more calculations.
+      </p>
+    </div>
+
+    <!-- Exam Strategies for BC -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-sky-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">AP Calculus BC Exam Strategies</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">BC-Specific Exam Tips</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Memorize key series:</strong> Know the Maclaurin series for eˣ, sin x, cos x, 1/(1-x), and ln(1+x) cold. These appear frequently.</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Convergence tests:</strong> Practice choosing the most efficient test. Geometric and p-series are quickest to recognize. Ratio test works well for factorials and exponentials.</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Parametric and polar:</strong> Remember the formulas for dy/dx, arc length, and area. Draw diagrams to visualize curves.</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>Integration by parts:</strong> Practice LIATE rule. Be comfortable applying it multiple times.</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span><strong>L'Hôpital's Rule:</strong> Only use for indeterminate forms. Check your form before applying.</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Time Management</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span>BC covers more material than AB, so pace yourself carefully in both sections</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span>If stuck on a multiple-choice question, eliminate obviously wrong answers and move on</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span>On free response, attempt every part even if you can't complete previous parts</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span>Leave time to check units, sign errors, and whether answers make sense contextually</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Common BC-Specific Mistakes</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span>Confusing radius and interval of convergence (interval includes endpoint analysis)</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span>Forgetting the 1/2 factor in polar area formula</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span>Mixing up dy/dx = (dy/dt)/(dx/dt) for parametric with the quotient rule</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span>Not checking whether a series is alternating before applying alternating series test</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span>Forgetting to take derivatives separately (not quotient rule) when using L'Hôpital's</span></li>
+        <li class="flex items-start gap-3"><span class="text-sky-600 font-bold">•</span><span>Incorrect setup for integration by parts (wrong choice of u and dv)</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="#" class="px-6 py-3 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="calculus-highschool.html" class="px-6 py-3 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to High School Calculus
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to More Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

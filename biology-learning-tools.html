@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Biology Learning Tools - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <!-- Back Button -->
+  <div class="mb-6">
+    <a href="college-learning-tools.html" class="inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back to Learning Tools</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="flex justify-center mb-4">
+      <div class="p-4 bg-gradient-to-br from-green-600 to-emerald-600 rounded-full">
+        <i data-lucide="heart" class="w-16 h-16 text-white"></i>
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Biology Learning Tools</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Interactive resources and tools for studying living organisms and biological systems
+    </p>
+  </div>
+
+  <!-- Interactive 3D Biology Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl shadow-lg p-8 border-l-4 border-green-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="box" class="w-7 h-7 text-green-600"></i>
+        Interactive 3D Biology Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.visiblebody.com/" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">Visible Body ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">3D anatomy and physiology visualization with detailed cellular models, organ systems, and interactive dissection tools</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Complete human anatomy in 3D</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Muscle and bone animations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Interactive quizzes and flashcards</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://human.biodigital.com/" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">BioDigital Human ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Cloud-based 3D platform for visualizing anatomy, disease, and treatment options with customizable views</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Interactive 3D anatomy models</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Disease and condition visualizations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Virtual dissection capabilities</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.cellsalive.com/" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">Cells Alive! ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Interactive cell biology animations showing cellular processes, division, and microorganism behavior</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Cell cycle animations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Bacteria and virus models</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Interactive cellular diagrams</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/watch?v=wJyUtbn0O5Y" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">The Inner Life of the Cell ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Harvard's stunning molecular visualization of cellular processes and protein interactions</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Molecular-level animations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Cellular transport visualization</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Protein function demonstrations</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Virtual Lab & Simulation Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="flask-conical" class="w-7 h-7 text-blue-600"></i>
+        Virtual Lab & Simulation Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.labster.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Labster ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Immersive virtual lab simulations covering genetics, microbiology, biochemistry, and more</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>200+ virtual lab simulations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Realistic lab equipment and procedures</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Safety and technique practice</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://phet.colorado.edu/en/simulations/filter?subjects=biology" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">PhET Biology Simulations ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free interactive simulations from University of Colorado covering natural selection, gene expression, and more</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Natural selection simulator</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Gene expression models</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Neuron and membrane simulations</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.mheducation.com/highered/explore/biology-microbiology.html" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Biology Simulations (McGraw-Hill) ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Interactive simulations for ecology, evolution, and physiological processes</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Ecosystem dynamics simulations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Population genetics tools</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Hardy-Weinberg calculators</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.biologycorner.com/worksheets/frog_dissection.html" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Virtual Frog Dissection ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Step-by-step virtual dissection experience with detailed anatomy guides</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Guided dissection procedures</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Organ identification quizzes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Comparative anatomy tools</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Molecular Biology Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl shadow-lg p-8 border-l-4 border-purple-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="dna" class="w-7 h-7 text-purple-600"></i>
+        Molecular Biology & Genetics Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://blast.ncbi.nlm.nih.gov/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">NCBI BLAST ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Search and compare biological sequences against databases to find similarities</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>DNA and protein sequence alignment</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Gene identification tools</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Evolutionary relationship analysis</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.benchling.com/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Benchling ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Molecular biology software for DNA sequence design, cloning, and CRISPR experiments</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>DNA sequence editor</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Primer design tools</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>CRISPR guide RNA design</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.snapgene.com/snapgene-viewer/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">SnapGene Viewer ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free software for visualizing and sharing DNA sequence files and plasmid maps</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Plasmid map visualization</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Sequence annotation viewer</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Restriction enzyme analysis</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.rcsb.org/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Protein Data Bank (PDB) ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">3D structural data of proteins and nucleic acids with visualization tools</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>3D protein structure viewer</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Molecular docking simulations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Structure-function analysis</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video & Animation Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-orange-50 to-amber-50 rounded-xl shadow-lg p-8 border-l-4 border-orange-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="video" class="w-7 h-7 text-orange-600"></i>
+        Video & Animation Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.khanacademy.org/science/biology" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Khan Academy Biology ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive video library covering all biology topics from cells to ecology</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Complete biology curriculum</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Practice exercises and quizzes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>AP Biology test prep</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/playlist?list=PL3EED4C1D684D3ADF" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Crash Course Biology ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Engaging video series covering major biology concepts with humor and clarity</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>40+ episode video series</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Fast-paced review format</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Visual animations and diagrams</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.biointeractive.org/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">HHMI BioInteractive ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">High-quality animations and videos from Howard Hughes Medical Institute</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Research-based animations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Virtual labs and field studies</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Click & Learn interactive modules</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.amoebasisters.com/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Amoeba Sisters ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Friendly, illustrated videos breaking down complex biology topics</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Cartoon-style explanations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Study guides and handouts</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Concept review videos</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice & Assessment Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-xl shadow-lg p-8 border-l-4 border-teal-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="clipboard-check" class="w-7 h-7 text-teal-600"></i>
+        Practice & Assessment Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://quizlet.com/subject/biology/" target="_blank" class="text-teal-600 hover:text-teal-700 hover:underline">Quizlet Biology ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Millions of user-created flashcard sets covering all biology topics</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Digital flashcards with images</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Multiple study modes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Mobile app for on-the-go study</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://apps.ankiweb.net/" target="_blank" class="text-teal-600 hover:text-teal-700 hover:underline">Anki ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Spaced repetition flashcard system optimized for long-term retention</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Intelligent review scheduling</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Shared biology decks</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Customizable card templates</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.biologycorner.com/" target="_blank" class="text-teal-600 hover:text-teal-700 hover:underline">Biology Corner ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free worksheets, quizzes, and practice tests for all biology levels</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Printable worksheets</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Lab activities and protocols</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Study guides and review sheets</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.biologyjunction.com/" target="_blank" class="text-teal-600 hover:text-teal-700 hover:underline">Biology Junction ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Practice tests, study guides, and interactive review games</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Topic-specific practice tests</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>Interactive review games</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600">•</span>
+              <span>PowerPoint presentations</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reference & Research Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl shadow-lg p-8 border-l-4 border-indigo-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="book-open" class="w-7 h-7 text-indigo-600"></i>
+        Reference & Research Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">PubMed ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free search engine for biomedical and life sciences research papers</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>30+ million citations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Advanced search filters</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Full-text article links</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.nature.com/scitable/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Nature Education ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free educational resources on genetics, cell biology, and evolution</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Peer-reviewed articles</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Interactive learning modules</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Scitable knowledge library</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://biologydictionary.net/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Biology Dictionary ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive online dictionary of biological terms and concepts</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Detailed term definitions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Visual diagrams and examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Related concept links</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://eol.org/" target="_blank" class="text-indigo-600 hover:text-indigo-700 hover:underline">Encyclopedia of Life (EOL) ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Global database with information on all known species</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Species profiles and images</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Taxonomy and classification</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-indigo-600">•</span>
+              <span>Biodiversity data</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="biology.html" class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Biology Basics
+    </a>
+    <a href="biology-quiz.html" class="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Take Quiz
+    </a>
+    <a href="college-learning-tools.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      All Learning Tools
+    </a>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

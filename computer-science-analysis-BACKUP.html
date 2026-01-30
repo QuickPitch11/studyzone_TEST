@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Computer Science - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    </nav>
+
+    <button id="menuBtn" class="md:hidden p-2">
+      <i data-lucide="menu" class="w-6 h-6"></i>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full mb-6">
+      <i data-lucide="monitor" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Computer Science: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">A comprehensive exploration of algorithms, data structures, software engineering, artificial intelligence, and computational theory</p>
+  </div>
+
+  <div class="space-y-10">
+    <!-- Introduction -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Introduction</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Computer science is the systematic study of computation, information processing, and the design of computational systems. It encompasses theoretical foundations (algorithms, complexity theory, formal languages), practical implementation (software engineering, systems programming), and cutting-edge applications (artificial intelligence, machine learning, distributed systems). Computer science is both a mathematical discipline and an engineering practice, bridging abstract reasoning with tangible technology.</p>
+      <p class="text-gray-700 leading-relaxed text-lg">This analysis examines core data structures and algorithms, programming paradigms and design principles, operating systems and computer architecture, database theory and systems, artificial intelligence and machine learning, software engineering methodologies, computational complexity, and the interdisciplinary connections that make computer science central to modern innovation.</p>
+    </div>
+
+    <!-- Historical Context -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Historical Context</h2>
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Evolution of Computing</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Early Computing (1940s):</strong> ENIAC and early vacuum tube computers performed ballistic calculations. Alan Turing formalized the concept of computation with the Turing Machine.</li>
+        <li><strong>Transistors & Mainframes (1950s-60s):</strong> Transistors replaced vacuum tubes, enabling smaller, more reliable computers. FORTRAN and COBOL emerged as first high-level programming languages.</li>
+        <li><strong>Personal Computer Revolution (1970s-80s):</strong> Microprocessors enabled affordable home computers. C programming language and Unix operating system laid foundations for modern software.</li>
+        <li><strong>Internet Age (1990s-2000s):</strong> World Wide Web transformed computing into a communication medium. Object-oriented programming and open-source movement flourished.</li>
+        <li><strong>Mobile & Cloud Era (2010s-present):</strong> Smartphones, cloud computing, big data, and artificial intelligence dominate. Machine learning and neural networks achieve breakthrough performance.</li>
+      </ul>
+    </div>
+
+    <!-- Fundamental Concepts -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Fundamental Concepts</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Core Principles</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Abstraction:</strong> Hiding complex implementation details behind simple interfaces. Allows programmers to work at higher levels without worrying about low-level details.</li>
+        <li><strong>Decomposition:</strong> Breaking complex problems into smaller, manageable subproblems that can be solved independently and combined for a complete solution.</li>
+        <li><strong>Algorithmic Thinking:</strong> Developing step-by-step procedures to solve problems systematically and efficiently.</li>
+        <li><strong>Modularity:</strong> Organizing code into independent, reusable modules with well-defined interfaces.</li>
+        <li><strong>Efficiency:</strong> Optimizing resource usage (time, memory, energy) through careful algorithm and data structure selection.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Binary & Number Systems</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Computers represent all data in binary (base-2), using only 0s and 1s. A bit is the smallest unit of data. Eight bits form a byte. Understanding binary, hexadecimal (base-16), and two's complement notation is fundamental for low-level programming, bitwise operations, and computer architecture.</p>
+    </div>
+
+    <!-- Data Structures & Algorithms -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Data Structures &amp; Algorithms</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Fundamental Data Structures</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Data structures organize and store data to enable efficient access and modification. The choice of data structure profoundly impacts algorithm performance.</p>
+      
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Arrays & Lists</p>
+        <p class="text-gray-700 text-sm mb-2"><strong>Arrays:</strong> Contiguous memory, O(1) access by index, fixed or dynamic size. Excellent for sequential access and cache performance.</p>
+        <p class="text-gray-700 text-sm"><strong>Linked Lists:</strong> Nodes with data and next pointer. O(1) insertion/deletion at known position, O(n) search. Useful when frequent insertions/deletions needed.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Stacks & Queues</p>
+        <p class="text-gray-700 text-sm mb-2"><strong>Stack (LIFO):</strong> push(), pop(), peek(). Used in function calls, undo/redo, expression evaluation, DFS traversal.</p>
+        <p class="text-gray-700 text-sm"><strong>Queue (FIFO):</strong> enqueue(), dequeue(). Used in BFS, task scheduling, buffering, printer queues.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Trees</p>
+        <p class="text-gray-700 text-sm mb-2"><strong>Binary Search Tree:</strong> Left < node < right property enables O(log n) average search, but can degrade to O(n) if unbalanced.</p>
+        <p class="text-gray-700 text-sm mb-2"><strong>AVL Trees:</strong> Self-balancing BST with height difference ≤ 1 between subtrees. Guarantees O(log n) operations through rotations.</p>
+        <p class="text-gray-700 text-sm mb-2"><strong>Heaps:</strong> Complete binary tree with heap property (parent ≥ children in max-heap). O(log n) insert/delete, O(1) find-max. Powers priority queues.</p>
+        <p class="text-gray-700 text-sm"><strong>B-Trees:</strong> Multi-way search trees optimized for disk I/O. Used in databases and file systems for efficient storage and retrieval.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Hash Tables</p>
+        <p class="text-gray-700 text-sm mb-2">Map keys to values using hash function. O(1) average case for insert, delete, search. Handle collisions with chaining or open addressing.</p>
+        <p class="text-gray-700 text-sm">Load factor α = n/m affects performance. Resize and rehash when load factor exceeds threshold (~0.7).</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Graphs</p>
+        <p class="text-gray-700 text-sm mb-2"><strong>Representations:</strong> Adjacency matrix (O(V²) space, O(1) edge check) or adjacency list (O(V+E) space, O(degree) edge check).</p>
+        <p class="text-gray-700 text-sm">Used to model networks, relationships, dependencies. Essential for pathfinding, network flow, social network analysis.</p>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Algorithm Analysis</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Big-O notation describes upper bound on growth rate. Helps compare algorithms and predict scalability.</p>
+      
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Common Complexities</p>
+        <p class="text-gray-700 text-sm mb-1"><strong>O(1) — Constant:</strong> Array access, hash table lookup, push/pop stack</p>
+        <p class="text-gray-700 text-sm mb-1"><strong>O(log n) — Logarithmic:</strong> Binary search, balanced tree operations</p>
+        <p class="text-gray-700 text-sm mb-1"><strong>O(n) — Linear:</strong> Linear search, array traversal, finding min/max</p>
+        <p class="text-gray-700 text-sm mb-1"><strong>O(n log n) — Linearithmic:</strong> Merge sort, heap sort, optimal comparison sorts</p>
+        <p class="text-gray-700 text-sm mb-1"><strong>O(n²) — Quadratic:</strong> Bubble sort, selection sort, nested loops</p>
+        <p class="text-gray-700 text-sm mb-1"><strong>O(2ⁿ) — Exponential:</strong> Recursive Fibonacci, subset generation</p>
+        <p class="text-gray-700 text-sm"><strong>O(n!) — Factorial:</strong> Brute force TSP, generating all permutations</p>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Key Algorithms</h3>
+      
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Sorting</p>
+        <p class="text-gray-700 text-sm mb-2"><strong>Merge Sort:</strong> Divide-and-conquer, O(n log n) guaranteed, O(n) space, stable. Excellent for large datasets and linked lists.</p>
+        <p class="text-gray-700 text-sm mb-2"><strong>Quick Sort:</strong> O(n log n) average, O(n²) worst, in-place. Fast in practice due to cache efficiency. Use random pivot to avoid worst case.</p>
+        <p class="text-gray-700 text-sm"><strong>Heap Sort:</strong> O(n log n) guaranteed, O(1) space, not stable. Good when memory is limited.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Graph Traversal</p>
+        <p class="text-gray-700 text-sm mb-2"><strong>Depth-First Search (DFS):</strong> Explore deeply before backtracking. Uses stack (recursion). O(V+E) time. Applications: topological sort, cycle detection, maze solving.</p>
+        <p class="text-gray-700 text-sm"><strong>Breadth-First Search (BFS):</strong> Explore level by level. Uses queue. O(V+E) time. Finds shortest path in unweighted graphs. Applications: web crawling, peer discovery.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Shortest Path</p>
+        <p class="text-gray-700 text-sm mb-2"><strong>Dijkstra's Algorithm:</strong> Single-source shortest path for non-negative weights. O((V+E) log V) with priority queue. Greedy approach.</p>
+        <p class="text-gray-700 text-sm mb-2"><strong>Bellman-Ford:</strong> Handles negative weights, detects negative cycles. O(VE) time. More versatile but slower than Dijkstra.</p>
+        <p class="text-gray-700 text-sm"><strong>Floyd-Warshall:</strong> All-pairs shortest path. O(V³) time. Dynamic programming approach.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-semibold text-lg mb-2">Dynamic Programming</p>
+        <p class="text-gray-700 text-sm mb-2">Solve complex problems by breaking into overlapping subproblems. Store solutions to avoid recomputation (memoization or tabulation).</p>
+        <p class="text-gray-700 text-sm">Examples: Fibonacci, longest common subsequence, knapsack, edit distance, matrix chain multiplication.</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Programming Paradigms</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Different approaches to structuring and organizing code, each with unique strengths and use cases.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Object-Oriented Programming (OOP)</h3>
+      <div class="bg-orange-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 mb-3"><strong>Four Pillars of OOP:</strong></p>
+        
+        <p class="text-gray-700 mb-2"><strong>1. Encapsulation:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3 ml-4">
+          <li>• Bundling data and methods that operate on that data</li>
+          <li>• Information hiding through access modifiers (private, protected, public)</li>
+          <li>• Reduces coupling, increases modularity</li>
+        </ul>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>2. Abstraction:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3 ml-4">
+          <li>• Hiding implementation complexity behind simple interfaces</li>
+          <li>• Abstract classes and interfaces define contracts</li>
+          <li>• Focus on "what" rather than "how"</li>
+        </ul>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>3. Inheritance:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3 ml-4">
+          <li>• Creating new classes from existing ones (is-a relationship)</li>
+          <li>• Promotes code reuse and establishes hierarchies</li>
+          <li>• Subclass inherits properties and methods from superclass</li>
+          <li>• Single vs. multiple inheritance (language-dependent)</li>
+        </ul>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>4. Polymorphism:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3 ml-4">
+          <li>• Objects of different types responding to same method call</li>
+          <li>• Compile-time: method overloading</li>
+          <li>• Runtime: method overriding, interfaces</li>
+          <li>• Enables flexible, extensible code</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-2 mt-4"><strong>SOLID Principles:</strong></p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• <strong>S</strong>ingle Responsibility: Class should have one reason to change</li>
+          <li>• <strong>O</strong>pen/Closed: Open for extension, closed for modification</li>
+          <li>• <strong>L</strong>iskov Substitution: Subtypes must be substitutable for base types</li>
+          <li>• <strong>I</strong>nterface Segregation: Many specific interfaces better than one general</li>
+          <li>• <strong>D</strong>ependency Inversion: Depend on abstractions, not concretions</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Functional Programming</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 mb-3"><strong>Core Concepts:</strong></p>
+        
+        <ul class="text-gray-700 space-y-2 mb-3">
+          <li><strong>Pure Functions:</strong> Same input always produces same output, no side effects</li>
+          <li><strong>Immutability:</strong> Data cannot be modified after creation</li>
+          <li><strong>First-Class Functions:</strong> Functions as values (can be passed, returned, assigned)</li>
+          <li><strong>Higher-Order Functions:</strong> Functions that take/return other functions (map, filter, reduce)</li>
+          <li><strong>Recursion:</strong> Primary iteration mechanism instead of loops</li>
+          <li><strong>Lazy Evaluation:</strong> Defer computation until result needed</li>
+          <li><strong>Function Composition:</strong> Combining simple functions to build complex ones</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-2 mt-4"><strong>Benefits:</strong></p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Easier to reason about and test</li>
+          <li>• Better support for concurrent/parallel programming</li>
+          <li>• More declarative, expressive code</li>
+          <li>• Languages: Haskell, Lisp, Erlang; features in JavaScript, Python, Java 8+</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Other Paradigms</h3>
+      <div class="bg-orange-50 p-4 rounded-lg">
+        <p class="text-gray-700 mb-3"><strong>Procedural Programming:</strong> Sequential execution of procedures/functions (C, Pascal)</p>
+        <p class="text-gray-700 mb-3"><strong>Declarative Programming:</strong> Specify what to do, not how (SQL, HTML, Prolog)</p>
+        <p class="text-gray-700 mb-3"><strong>Event-Driven Programming:</strong> Flow determined by events (GUI applications, Node.js)</p>
+        <p class="text-gray-700"><strong>Concurrent Programming:</strong> Multiple computations executing simultaneously (Go, Erlang)</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Operating Systems</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Operating systems manage computer hardware and provide services for application programs.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Process Management</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 mb-3"><strong>Process States:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• <strong>New:</strong> Process being created</li>
+          <li>• <strong>Ready:</strong> Waiting to be assigned to processor</li>
+          <li>• <strong>Running:</strong> Instructions being executed</li>
+          <li>• <strong>Waiting:</strong> Waiting for I/O or event</li>
+          <li>• <strong>Terminated:</strong> Process finished execution</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Process Control Block (PCB):</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Process ID, state, program counter</li>
+          <li>• CPU registers, memory limits, open files</li>
+          <li>• Scheduling information, I/O status</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>CPU Scheduling Algorithms:</strong></p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• <strong>FCFS (First-Come-First-Serve):</strong> Simple but can cause convoy effect</li>
+          <li>• <strong>SJF (Shortest Job First):</strong> Minimizes average waiting time</li>
+          <li>• <strong>Round Robin:</strong> Time quantum, fair, good for time-sharing</li>
+          <li>• <strong>Priority Scheduling:</strong> Can lead to starvation (use aging)</li>
+          <li>• <strong>Multilevel Queue:</strong> Different queues for different priorities</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Memory Management</h3>
+      <div class="bg-orange-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 mb-3"><strong>Paging:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Divide physical memory into fixed-size frames</li>
+          <li>• Divide logical memory into same-size pages</li>
+          <li>• Page table maps logical pages to physical frames</li>
+          <li>• Eliminates external fragmentation, allows non-contiguous allocation</li>
+          <li>• TLB (Translation Lookaside Buffer) caches recent translations</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Virtual Memory:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Separation of logical and physical memory</li>
+          <li>• Allows execution of processes larger than physical memory</li>
+          <li>• Demand paging: load pages only when needed</li>
+          <li>• Page replacement algorithms: FIFO, LRU, Optimal, Clock</li>
+          <li>• Thrashing: excessive paging degrades performance</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Segmentation:</strong></p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Logical division of program (code, data, stack, heap)</li>
+          <li>• Variable-size segments</li>
+          <li>• Segment table with base address and limit</li>
+          <li>• Supports sharing and protection</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Concurrency & Synchronization</h3>
+      <div class="bg-gray-50 p-4 rounded-lg">
+        <p class="text-gray-800 mb-3"><strong>Critical Section Problem:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Mutual Exclusion: Only one process in critical section</li>
+          <li>• Progress: Decision to enter cannot be postponed indefinitely</li>
+          <li>• Bounded Waiting: Limit on times others enter before waiting process</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Synchronization Tools:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• <strong>Mutex Locks:</strong> Binary lock for mutual exclusion</li>
+          <li>• <strong>Semaphores:</strong> Integer variable with wait() and signal() operations</li>
+          <li>• <strong>Monitors:</strong> High-level synchronization construct with condition variables</li>
+          <li>• <strong>Spinlocks:</strong> Busy-wait locks for short critical sections</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Classic Problems:</strong></p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Producer-Consumer (Bounded Buffer)</li>
+          <li>• Readers-Writers Problem</li>
+          <li>• Dining Philosophers Problem</li>
+          <li>• Deadlock prevention, avoidance, detection, recovery</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Database Systems</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Databases store, organize, and manage large volumes of structured data efficiently.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Relational Databases</h3>
+      <div class="bg-orange-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 mb-3"><strong>Relational Model:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Data organized in tables (relations) with rows (tuples) and columns (attributes)</li>
+          <li>• Primary Key: Uniquely identifies each row</li>
+          <li>• Foreign Key: References primary key in another table (relationships)</li>
+          <li>• Constraints: NOT NULL, UNIQUE, CHECK, DEFAULT</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Normalization:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• <strong>1NF:</strong> Atomic values, no repeating groups</li>
+          <li>• <strong>2NF:</strong> 1NF + no partial dependencies on composite key</li>
+          <li>• <strong>3NF:</strong> 2NF + no transitive dependencies</li>
+          <li>• <strong>BCNF:</strong> Stricter version of 3NF</li>
+          <li>• Goal: Eliminate redundancy, prevent update anomalies</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>SQL (Structured Query Language):</strong></p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• <strong>DDL:</strong> CREATE, ALTER, DROP (structure)</li>
+          <li>• <strong>DML:</strong> SELECT, INSERT, UPDATE, DELETE (data manipulation)</li>
+          <li>• <strong>DCL:</strong> GRANT, REVOKE (permissions)</li>
+          <li>• <strong>TCL:</strong> COMMIT, ROLLBACK, SAVEPOINT (transactions)</li>
+          <li>• JOINs: INNER, LEFT, RIGHT, FULL OUTER, CROSS</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Transactions & ACID Properties</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3">A transaction is a logical unit of work that must be completed entirely or not at all.</p>
+        
+        <ul class="text-gray-700 space-y-2 mb-3">
+          <li><strong>Atomicity:</strong> All operations complete or none do (all-or-nothing)</li>
+          <li><strong>Consistency:</strong> Database moves from one valid state to another</li>
+          <li><strong>Isolation:</strong> Concurrent transactions don't interfere with each other</li>
+          <li><strong>Durability:</strong> Committed changes persist even after system failure</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-2 mt-4"><strong>Isolation Levels:</strong></p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Read Uncommitted: Can see uncommitted changes (dirty reads)</li>
+          <li>• Read Committed: Only see committed changes</li>
+          <li>• Repeatable Read: Same read twice returns same result</li>
+          <li>• Serializable: Highest isolation, as if transactions run serially</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Indexing</h3>
+      <div class="bg-orange-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3">Indexes speed up data retrieval at the cost of additional storage and slower writes.</p>
+        
+        <ul class="text-gray-700 space-y-2 mb-3">
+          <li><strong>B-Tree Index:</strong> Balanced tree structure, good for range queries, most common</li>
+          <li><strong>Hash Index:</strong> Fast exact-match lookups, poor for ranges</li>
+          <li><strong>Bitmap Index:</strong> Efficient for low-cardinality columns</li>
+          <li><strong>Full-Text Index:</strong> For text search capabilities</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-2 mt-4"><strong>Index Design Considerations:</strong></p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Create indexes on frequently queried columns</li>
+          <li>• Composite indexes for multi-column WHERE clauses</li>
+          <li>• Covering indexes include all query columns (avoid table access)</li>
+          <li>• Balance: indexes speed reads but slow writes and use space</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">NoSQL Databases</h3>
+      <div class="bg-gray-50 p-4 rounded-lg">
+        <p class="text-gray-800 mb-3"><strong>Types of NoSQL Databases:</strong></p>
+        
+        <p class="text-gray-700 mb-2"><strong>Document Stores (MongoDB, CouchDB):</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3 ml-4">
+          <li>• Store JSON/BSON documents</li>
+          <li>• Flexible schema, good for hierarchical data</li>
+        </ul>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>Key-Value Stores (Redis, DynamoDB):</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3 ml-4">
+          <li>• Simple key-value pairs</li>
+          <li>• Extremely fast, good for caching</li>
+        </ul>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>Column-Family (Cassandra, HBase):</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3 ml-4">
+          <li>• Data stored by column rather than row</li>
+          <li>• Excellent for analytical queries</li>
+        </ul>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>Graph Databases (Neo4j, Amazon Neptune):</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3 ml-4">
+          <li>• Nodes and edges represent entities and relationships</li>
+          <li>• Optimal for connected data (social networks, recommendation engines)</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-2 mt-4"><strong>CAP Theorem:</strong></p>
+        <p class="text-gray-700">Distributed systems can guarantee only 2 of 3: Consistency, Availability, Partition Tolerance</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Artificial Intelligence & Machine Learning</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">AI enables machines to perform tasks that typically require human intelligence. Machine learning is a subset of AI focused on learning from data.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Machine Learning Types</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 mb-3"><strong>Supervised Learning:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Learn from labeled training data (input-output pairs)</li>
+          <li>• <strong>Classification:</strong> Predict discrete categories (spam/not spam, image recognition)</li>
+          <li>• <strong>Regression:</strong> Predict continuous values (house prices, temperature)</li>
+          <li>• Algorithms: Linear/Logistic Regression, Decision Trees, Random Forest, SVM, Neural Networks</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Unsupervised Learning:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Find patterns in unlabeled data</li>
+          <li>• <strong>Clustering:</strong> Group similar data points (K-means, hierarchical, DBSCAN)</li>
+          <li>• <strong>Dimensionality Reduction:</strong> Reduce features while preserving information (PCA, t-SNE)</li>
+          <li>• <strong>Association:</strong> Find relationships between variables (market basket analysis)</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Reinforcement Learning:</strong></p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Agent learns through interaction with environment</li>
+          <li>• Receives rewards/penalties for actions</li>
+          <li>• Goal: Maximize cumulative reward</li>
+          <li>• Applications: Game playing (AlphaGo), robotics, autonomous vehicles</li>
+          <li>• Algorithms: Q-Learning, Deep Q-Networks (DQN), Policy Gradients</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Neural Networks & Deep Learning</h3>
+      <div class="bg-orange-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 mb-3"><strong>Neural Network Basics:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Inspired by biological neurons</li>
+          <li>• Layers: Input layer, hidden layers, output layer</li>
+          <li>• Each neuron computes weighted sum + bias, applies activation function</li>
+          <li>• Common activations: ReLU, Sigmoid, Tanh, Softmax</li>
+          <li>• Training: Backpropagation + Gradient Descent</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Deep Learning Architectures:</strong></p>
+        
+        <p class="text-gray-700 mb-2"><strong>Convolutional Neural Networks (CNNs):</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3 ml-4">
+          <li>• Specialized for grid-like data (images)</li>
+          <li>• Convolutional layers learn spatial hierarchies</li>
+          <li>• Pooling layers reduce dimensionality</li>
+          <li>• Applications: Image classification, object detection, face recognition</li>
+        </ul>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>Recurrent Neural Networks (RNNs):</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3 ml-4">
+          <li>• Process sequential data with memory</li>
+          <li>• LSTM (Long Short-Term Memory) and GRU handle long-term dependencies</li>
+          <li>• Applications: Language modeling, speech recognition, time series</li>
+        </ul>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>Transformers:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3 ml-4">
+          <li>• Attention mechanism processes entire sequence in parallel</li>
+          <li>• State-of-the-art for NLP (BERT, GPT, T5)</li>
+          <li>• Applications: Translation, text generation, question answering</li>
+        </ul>
+        
+        <p class="text-gray-700 mb-2 mt-3"><strong>Generative Models:</strong></p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• GANs (Generative Adversarial Networks): Generator vs. Discriminator</li>
+          <li>• VAEs (Variational Autoencoders): Learn latent representations</li>
+          <li>• Diffusion Models: Iterative denoising process</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Model Training & Evaluation</h3>
+      <div class="bg-gray-50 p-4 rounded-lg">
+        <p class="text-gray-800 mb-3"><strong>Training Process:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Split data: Training (60-80%), Validation (10-20%), Test (10-20%)</li>
+          <li>• Loss function measures prediction error</li>
+          <li>• Optimization algorithms: SGD, Adam, RMSprop</li>
+          <li>• Regularization prevents overfitting: L1/L2, Dropout, Early Stopping</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Evaluation Metrics:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• <strong>Classification:</strong> Accuracy, Precision, Recall, F1-Score, ROC-AUC</li>
+          <li>• <strong>Regression:</strong> MSE, RMSE, MAE, R²</li>
+          <li>• Confusion Matrix for detailed classification analysis</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-4"><strong>Common Challenges:</strong></p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Overfitting: Model memorizes training data, poor generalization</li>
+          <li>• Underfitting: Model too simple, can't capture patterns</li>
+          <li>• Class Imbalance: Use weighted loss, resampling, or SMOTE</li>
+          <li>• Hyperparameter Tuning: Grid search, random search, Bayesian optimization</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Software Engineering Practices</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">Best practices for building high-quality, maintainable software systems.</p>
+
+      <h3 class="text-xl font-semibold mt-4 text-gray-800">Version Control (Git)</h3>
+      <div class="bg-orange-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 mb-3">Git is a distributed version control system that tracks changes in source code.</p>
+        
+        <p class="text-gray-800 mb-2"><strong>Core Concepts:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• Repository (repo): Project directory with .git folder</li>
+          <li>• Commit: Snapshot of changes with message</li>
+          <li>• Branch: Independent line of development</li>
+          <li>• Merge: Combine changes from different branches</li>
+          <li>• Remote: Server-hosted repository (GitHub, GitLab)</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-2 mt-4"><strong>Common Workflows:</strong></p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• Feature Branch: Create branch for each feature, merge when complete</li>
+          <li>• Git Flow: Structured branching (main, develop, feature, release, hotfix)</li>
+          <li>• Pull Requests: Code review before merging</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Testing</h3>
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-800 mb-3"><strong>Types of Testing:</strong></p>
+        
+        <ul class="text-gray-700 space-y-2 mb-3">
+          <li><strong>Unit Testing:</strong> Test individual functions/methods in isolation</li>
+          <li><strong>Integration Testing:</strong> Test interaction between components</li>
+          <li><strong>End-to-End Testing:</strong> Test complete user flows</li>
+          <li><strong>Regression Testing:</strong> Ensure new changes don't break existing functionality</li>
+          <li><strong>Performance Testing:</strong> Measure speed, scalability, stability under load</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-2 mt-4"><strong>Test-Driven Development (TDD):</strong></p>
+        <ul class="text-gray-700 space-y-1">
+          <li>1. Write failing test</li>
+          <li>2. Write minimal code to pass test</li>
+          <li>3. Refactor code while keeping tests green</li>
+          <li>• Benefits: Better design, documentation, confidence in changes</li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-6 text-gray-800">Design Patterns</h3>
+      <div class="bg-orange-50 p-4 rounded-lg">
+        <p class="text-gray-800 mb-3"><strong>Creational Patterns:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• <strong>Singleton:</strong> Ensure class has only one instance</li>
+          <li>• <strong>Factory:</strong> Create objects without specifying exact class</li>
+          <li>• <strong>Builder:</strong> Construct complex objects step-by-step</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-3"><strong>Structural Patterns:</strong></p>
+        <ul class="text-gray-700 space-y-1 mb-3">
+          <li>• <strong>Adapter:</strong> Make incompatible interfaces work together</li>
+          <li>• <strong>Decorator:</strong> Add behavior to objects dynamically</li>
+          <li>• <strong>Facade:</strong> Provide simplified interface to complex subsystem</li>
+        </ul>
+        
+        <p class="text-gray-800 mb-3 mt-3"><strong>Behavioral Patterns:</strong></p>
+        <ul class="text-gray-700 space-y-1">
+          <li>• <strong>Observer:</strong> Notify dependents when state changes</li>
+          <li>• <strong>Strategy:</strong> Define family of algorithms, make them interchangeable</li>
+          <li>• <strong>Command:</strong> Encapsulate request as object</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-orange-500">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Career Paths & Applications</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-orange-50 p-6 rounded-lg">
+          <h3 class="font-semibold text-gray-800 mb-3">Software Developer/Engineer</h3>
+          <p class="text-gray-700 text-sm">Design, develop, test, and maintain software applications. Work on web, mobile, desktop, or embedded systems.</p>
+        </div>
+
+        <div class="bg-orange-50 p-6 rounded-lg">
+          <h3 class="font-semibold text-gray-800 mb-3">Data Scientist/Analyst</h3>
+          <p class="text-gray-700 text-sm">Extract insights from data using statistical analysis, machine learning, and visualization techniques.</p>
+        </div>
+
+        <div class="bg-orange-50 p-6 rounded-lg">
+          <h3 class="font-semibold text-gray-800 mb-3">Machine Learning Engineer</h3>
+          <p class="text-gray-700 text-sm">Build and deploy AI/ML models for production systems, focusing on scalability and performance.</p>
+        </div>
+
+        <div class="bg-orange-50 p-6 rounded-lg">
+          <h3 class="font-semibold text-gray-800 mb-3">DevOps Engineer</h3>
+          <p class="text-gray-700 text-sm">Automate deployment pipelines, manage infrastructure, ensure system reliability and scalability.</p>
+        </div>
+
+        <div class="bg-orange-50 p-6 rounded-lg">
+          <h3 class="font-semibold text-gray-800 mb-3">Security Engineer</h3>
+          <p class="text-gray-700 text-sm">Protect systems from cyber threats, perform penetration testing, implement security protocols.</p>
+        </div>
+
+        <div class="bg-orange-50 p-6 rounded-lg">
+          <h3 class="font-semibold text-gray-800 mb-3">Full Stack Developer</h3>
+          <p class="text-gray-700 text-sm">Work on both front-end (UI/UX) and back-end (server, database) of web applications.</p>
+        </div>
+
+        <div class="bg-orange-50 p-6 rounded-lg">
+          <h3 class="font-semibold text-gray-800 mb-3">Systems Architect</h3>
+          <p class="text-gray-700 text-sm">Design high-level structure of software systems, make key technical decisions about architecture.</p>
+        </div>
+
+        <div class="bg-orange-50 p-6 rounded-lg">
+          <h3 class="font-semibold text-gray-800 mb-3">Research Scientist</h3>
+          <p class="text-gray-700 text-sm">Advance theoretical computer science, publish papers, develop novel algorithms and techniques.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-gradient-to-r from-orange-500 to-amber-500 rounded-xl shadow-lg p-8 md:p-10 text-white">
+      <h2 class="text-3xl font-bold mb-4">Next Steps in Your Computer Science Journey</h2>
+      <div class="space-y-3">
+        <p class="flex items-start gap-3">
+          <i data-lucide="check-circle" class="w-6 h-6 flex-shrink-0 mt-1"></i>
+          <span>Master fundamental data structures and algorithms through consistent practice</span>
+        </p>
+        <p class="flex items-start gap-3">
+          <i data-lucide="check-circle" class="w-6 h-6 flex-shrink-0 mt-1"></i>
+          <span>Build projects to apply theoretical knowledge to real-world problems</span>
+        </p>
+        <p class="flex items-start gap-3">
+          <i data-lucide="check-circle" class="w-6 h-6 flex-shrink-0 mt-1"></i>
+          <span>Contribute to open-source projects to learn collaborative development</span>
+        </p>
+        <p class="flex items-start gap-3">
+          <i data-lucide="check-circle" class="w-6 h-6 flex-shrink-0 mt-1"></i>
+          <span>Stay current with emerging technologies and programming paradigms</span>
+        </p>
+        <p class="flex items-start gap-3">
+          <i data-lucide="check-circle" class="w-6 h-6 flex-shrink-0 mt-1"></i>
+          <span>Practice coding challenges on platforms like LeetCode, HackerRank, or Codeforces</span>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

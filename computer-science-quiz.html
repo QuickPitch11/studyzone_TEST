@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Computer Science Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full mb-6">
+      <i data-lucide="clipboard-check" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Computer Science Quiz</h1>
+    <p class="text-xl text-gray-600">Test your knowledge of algorithms, data structures, and computational theory</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Questions will be dynamically generated here -->
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-orange-600 text-white text-lg font-semibold rounded-lg hover:bg-orange-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="quizResults" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-orange-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="computer-science-analysis.html" class="px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition flex items-center gap-2">
+        <i data-lucide="book-open" class="w-5 h-5"></i>
+        Review Material
+      </a>
+      <button onclick="location.reload()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+        Retake Quiz
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="computer-science.html" class="px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition flex items-center gap-2">
+      <i data-lucide="monitor" class="w-5 h-5"></i>
+      Back to Computer Science
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Question Bank - 30 questions total
+  const questionBank = [
+    {
+      question: "What is the time complexity of binary search in a sorted array?",
+      options: ["O(n)", "O(log n)", "O(n²)", "O(1)", "O(n log n)"],
+      correct: 1,
+      explanation: "Binary search has O(log n) time complexity because it divides the search space in half with each iteration. This logarithmic behavior makes it extremely efficient for large sorted datasets compared to linear search O(n)."
+    },
+    {
+      question: "Which data structure follows the Last-In-First-Out (LIFO) principle?",
+      options: ["Queue", "Stack", "Linked List", "Tree", "Hash Table"],
+      correct: 1,
+      explanation: "A Stack follows the Last-In-First-Out (LIFO) principle, where the most recently added element is the first to be removed. Common operations are push (add to top) and pop (remove from top). Stacks are used in function call management, expression evaluation, and undo mechanisms."
+    },
+    {
+      question: "What is recursion in programming?",
+      options: ["A loop structure", "A function calling itself", "A sorting algorithm", "A data structure", "A conditional statement"],
+      correct: 1,
+      explanation: "Recursion is when a function calls itself to solve smaller instances of the same problem. It requires a base case to prevent infinite loops and is used in algorithms like tree traversal, factorial calculation, and divide-and-conquer strategies."
+    },
+    {
+      question: "Which sorting algorithm has the best average-case time complexity?",
+      options: ["Bubble Sort", "Insertion Sort", "Quick Sort", "Selection Sort", "Bogo Sort"],
+      correct: 2,
+      explanation: "Quick Sort has an average-case time complexity of O(n log n), making it one of the most efficient general-purpose sorting algorithms. It uses a divide-and-conquer strategy by selecting a pivot and partitioning elements around it."
+    },
+    {
+      question: "What does the acronym 'OOP' stand for?",
+      options: ["Object-Oriented Programming", "Operational Output Processing", "Optimized Object Procedure", "Organized Operation Protocol", "Overloaded Operation Pattern"],
+      correct: 0,
+      explanation: "OOP stands for Object-Oriented Programming, a paradigm based on objects containing data (attributes) and code (methods). Key principles include encapsulation, inheritance, polymorphism, and abstraction. Languages like Java, Python, and C++ support OOP."
+    },
+    {
+      question: "Which data structure is best for implementing a priority queue?",
+      options: ["Array", "Linked List", "Heap", "Stack", "Hash Table"],
+      correct: 2,
+      explanation: "A Heap (typically a binary heap) is the most efficient data structure for implementing a priority queue. It allows O(log n) insertion and O(log n) extraction of the minimum/maximum element while maintaining heap property. Used in Dijkstra's algorithm and task scheduling."
+    },
+    {
+      question: "What is the purpose of a hash function?",
+      options: ["Sort data", "Encrypt passwords", "Map data to fixed-size values", "Compress files", "Validate input"],
+      correct: 2,
+      explanation: "A hash function maps data of arbitrary size to fixed-size values (hash codes). It enables constant-time O(1) average lookup in hash tables. Good hash functions minimize collisions and distribute values uniformly. Used in hash tables, cryptography, and data integrity verification."
+    },
+    {
+      question: "What is Big O notation used for?",
+      options: ["Measuring memory size", "Describing algorithm efficiency", "Defining variable scope", "Naming conventions", "Error handling"],
+      correct: 1,
+      explanation: "Big O notation describes the upper bound of an algorithm's time or space complexity as input size grows. It characterizes scalability and performance. Common complexities: O(1) constant, O(log n) logarithmic, O(n) linear, O(n log n) linearithmic, O(n²) quadratic."
+    },
+    {
+      question: "Which of these is NOT a valid HTTP method?",
+      options: ["GET", "POST", "PUT", "FETCH", "DELETE"],
+      correct: 3,
+      explanation: "FETCH is not a valid HTTP method. Valid HTTP methods include GET (retrieve data), POST (submit data), PUT (update/replace), DELETE (remove), PATCH (partial update), HEAD, OPTIONS, and TRACE. FETCH is a JavaScript API for making HTTP requests."
+    },
+    {
+      question: "What is a linked list?",
+      options: ["An array with fixed size", "A collection of nodes with references to next node", "A sorting algorithm", "A tree structure", "A hash table"],
+      correct: 1,
+      explanation: "A linked list is a linear data structure where each node contains data and a reference (pointer) to the next node. Unlike arrays, linked lists allow efficient insertion/deletion at any position without shifting elements. Types include singly linked, doubly linked, and circular linked lists."
+    },
+    {
+      question: "What does SQL stand for?",
+      options: ["Simple Query Language", "Structured Question Logic", "Structured Query Language", "System Quality Language", "Sequential Query Logic"],
+      correct: 2,
+      explanation: "SQL stands for Structured Query Language, the standard language for managing and manipulating relational databases. It supports data querying (SELECT), insertion (INSERT), updating (UPDATE), deletion (DELETE), and schema definition (CREATE, ALTER, DROP)."
+    },
+    {
+      question: "Which tree traversal visits the root node first?",
+      options: ["Inorder", "Preorder", "Postorder", "Level-order", "Reverse-order"],
+      correct: 1,
+      explanation: "Preorder traversal visits nodes in Root-Left-Right order, processing the root before its children. Inorder is Left-Root-Right (gives sorted order in BST), Postorder is Left-Right-Root (used in expression evaluation and tree deletion). Level-order uses breadth-first approach."
+    },
+    {
+      question: "What is encapsulation in OOP?",
+      options: ["Hiding implementation details", "Creating multiple objects", "Sorting data", "Connecting databases", "Compiling code"],
+      correct: 0,
+      explanation: "Encapsulation is the OOP principle of bundling data and methods that operate on that data within a single unit (class) while hiding internal implementation details. It's achieved through access modifiers (private, protected, public) and provides data protection and abstraction."
+    },
+    {
+      question: "What is the difference between a compiler and an interpreter?",
+      options: ["No difference", "Compiler translates all at once, interpreter line-by-line", "Interpreter is faster", "Compiler executes code, interpreter doesn't", "They're the same thing"],
+      correct: 1,
+      explanation: "A compiler translates the entire source code to machine code before execution (e.g., C, C++), creating an executable file. An interpreter translates and executes code line-by-line (e.g., Python, JavaScript). Compiled programs run faster; interpreted programs are more portable and easier to debug."
+    },
+    {
+      question: "What is a binary tree?",
+      options: ["A tree with exactly 2 nodes", "A tree where each node has at most 2 children", "A tree with binary data", "A sorted array", "A linear structure"],
+      correct: 1,
+      explanation: "A binary tree is a hierarchical data structure where each node has at most two children (left and right). Special types include Binary Search Tree (BST) with ordered properties, Complete Binary Tree (all levels filled except possibly last), and Balanced Binary Tree (height-balanced)."
+    },
+    {
+      question: "What does API stand for?",
+      options: ["Automated Programming Interface", "Application Programming Interface", "Advanced Protocol Integration", "Application Process Interaction", "Automated Process Interface"],
+      correct: 1,
+      explanation: "API stands for Application Programming Interface, a set of rules and protocols for building and interacting with software applications. APIs define methods and data formats for communication between systems, enabling modularity and integration. Examples include REST APIs, GraphQL, and library APIs."
+    },
+    {
+      question: "Which algorithm is used to find the shortest path in a graph?",
+      options: ["Binary Search", "Bubble Sort", "Dijkstra's Algorithm", "Quick Sort", "Linear Search"],
+      correct: 2,
+      explanation: "Dijkstra's Algorithm finds the shortest path from a source node to all other nodes in a weighted graph with non-negative edges. It uses a priority queue and greedy approach, with time complexity O((V+E) log V). Other shortest path algorithms include Bellman-Ford (handles negative edges) and A* (uses heuristics)."
+    },
+    {
+      question: "What is polymorphism in OOP?",
+      options: ["Multiple data types", "Objects taking many forms", "Creating many objects", "Using multiple classes", "Storing multiple values"],
+      correct: 1,
+      explanation: "Polymorphism allows objects to take many forms - the same interface can represent different underlying forms (data types). It includes method overloading (same method name, different parameters) and method overriding (subclass redefines parent method). Enables flexible and reusable code."
+    },
+    {
+      question: "What is the purpose of version control systems like Git?",
+      options: ["Compile code", "Track changes and collaborate", "Run tests", "Deploy applications", "Encrypt files"],
+      correct: 1,
+      explanation: "Version control systems (VCS) like Git track changes to files over time, enabling collaboration, history tracking, branching, and merging. They allow multiple developers to work simultaneously, revert to previous versions, and maintain project history. Git is distributed, allowing local and remote repositories."
+    },
+    {
+      question: "What is a deadlock in operating systems?",
+      options: ["A slow program", "Processes waiting for each other indefinitely", "A security vulnerability", "A memory leak", "A compilation error"],
+      correct: 1,
+      explanation: "A deadlock occurs when two or more processes are blocked forever, each waiting for resources held by the other. Four conditions must exist: mutual exclusion, hold and wait, no preemption, and circular wait. Prevention strategies include resource ordering, timeouts, and deadlock detection algorithms."
+    },
+    {
+      question: "What is the difference between a process and a thread?",
+      options: ["No difference", "Processes share memory, threads don't", "Threads are lightweight, processes are heavyweight", "Processes run faster", "Threads can't run simultaneously"],
+      correct: 2,
+      explanation: "A process is an independent program execution with its own memory space. A thread is a lightweight execution unit within a process, sharing the process's memory space. Multiple threads in the same process share resources, making context switching faster but requiring synchronization to avoid race conditions."
+    },
+    {
+      question: "What is a regular expression (regex)?",
+      options: ["A math equation", "A pattern for matching text", "A sorting algorithm", "A data structure", "A programming language"],
+      correct: 1,
+      explanation: "Regular expressions are patterns used to match character combinations in strings. They provide powerful text search and manipulation capabilities using special characters (., *, +, ?, [], etc.). Used for validation, parsing, text extraction, and find-replace operations in many programming languages."
+    },
+    {
+      question: "What is the purpose of a cache in computing?",
+      options: ["Store permanent data", "Speed up data access", "Encrypt data", "Backup files", "Compile code"],
+      correct: 1,
+      explanation: "A cache is a high-speed storage layer that stores frequently accessed data for faster retrieval. It reduces latency by keeping copies of data closer to the processor. Cache exists at multiple levels: CPU cache (L1, L2, L3), disk cache, web cache, and application-level caching (Redis, Memcached)."
+    },
+    {
+      question: "What is inheritance in OOP?",
+      options: ["Copying code", "A class acquiring properties from parent class", "Creating multiple objects", "Hiding data", "Deleting objects"],
+      correct: 1,
+      explanation: "Inheritance is an OOP mechanism where a class (child/subclass) inherits properties and methods from another class (parent/superclass). It promotes code reuse and establishes is-a relationships. Supports single inheritance (one parent) and multiple inheritance (multiple parents in some languages like C++ and Python)."
+    },
+    {
+      question: "What is a database index?",
+      options: ["A table column", "A data structure for faster lookups", "A primary key", "A sorting algorithm", "A backup file"],
+      correct: 1,
+      explanation: "A database index is a data structure (typically B-tree or hash table) that improves query performance by providing fast lookups based on indexed columns. While indexes speed up SELECT queries, they slow down INSERT, UPDATE, and DELETE operations and consume additional storage."
+    },
+    {
+      question: "What does CRUD stand for in database operations?",
+      options: ["Create, Read, Update, Delete", "Copy, Remove, Upload, Download", "Connect, Retrieve, Use, Disconnect", "Compile, Run, Update, Deploy", "Cache, Render, Update, Display"],
+      correct: 0,
+      explanation: "CRUD stands for Create, Read, Update, Delete - the four basic operations for persistent storage. In SQL: INSERT (Create), SELECT (Read), UPDATE (Update), DELETE (Delete). In HTTP/REST: POST (Create), GET (Read), PUT/PATCH (Update), DELETE (Delete). These operations form the foundation of most database interactions."
+    },
+    {
+      question: "What is the purpose of a constructor in OOP?",
+      options: ["Destroy objects", "Sort data", "Initialize objects", "Compile code", "Connect databases"],
+      correct: 2,
+      explanation: "A constructor is a special method automatically called when creating a new object. It initializes the object's state by setting initial values for attributes. Constructors have the same name as the class and don't have a return type. They can be overloaded to accept different parameters."
+    },
+    {
+      question: "What is the time complexity of accessing an element in an array by index?",
+      options: ["O(n)", "O(log n)", "O(n²)", "O(1)", "O(n log n)"],
+      correct: 3,
+      explanation: "Accessing an array element by index is O(1) constant time because arrays store elements in contiguous memory locations. The address of any element can be calculated directly using: base_address + (index × element_size). This makes arrays extremely efficient for random access."
+    },
+    {
+      question: "What is a RESTful API?",
+      options: ["A database system", "An architectural style for web services", "A programming language", "A sorting algorithm", "A data structure"],
+      correct: 1,
+      explanation: "REST (Representational State Transfer) is an architectural style for designing networked applications. RESTful APIs use HTTP methods (GET, POST, PUT, DELETE) to perform operations on resources identified by URLs. They're stateless, cacheable, and use standard HTTP status codes. JSON is commonly used for data exchange."
+    },
+    {
+      question: "What is the difference between '==' and '===' in JavaScript?",
+      options: ["No difference", "== checks value, === checks value and type", "=== is faster", "== is deprecated", "They're syntax errors"],
+      correct: 1,
+      explanation: "In JavaScript, == (loose equality) compares values after type coercion, while === (strict equality) compares both value and type without coercion. For example: '5' == 5 is true (type coercion), but '5' === 5 is false (different types). Always prefer === to avoid unexpected type conversions."
+    }
+  ];
+
+  // Randomly select 10 questions from the question bank
+  function getRandomQuestions(bank, count) {
+    const shuffled = [...bank].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, count);
+  }
+
+  const selectedQuestions = getRandomQuestions(questionBank, 10);
+
+  // Generate quiz HTML
+  const quizContainer = document.getElementById('quizContainer');
+  selectedQuestions.forEach((q, index) => {
+    const questionDiv = document.createElement('div');
+    questionDiv.className = 'bg-white rounded-xl shadow-lg p-8 border-l-4 border-orange-500';
+    questionDiv.innerHTML = `
+      <h3 class="text-xl font-bold mb-4 text-gray-800">Question ${index + 1}</h3>
+      <p class="text-lg text-gray-700 mb-4">${q.question}</p>
+      <div class="space-y-3">
+        ${q.options.map((option, optIndex) => `
+          <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+            <input type="radio" name="q${index}" value="${optIndex}" class="w-5 h-5 text-orange-600">
+            <span class="text-gray-700">${option}</span>
+          </label>
+        `).join('')}
+      </div>
+      <div class="feedback hidden mt-4"></div>
+    `;
+    quizContainer.appendChild(questionDiv);
+  });
+
+  // Submit Quiz
+  document.getElementById('submitQuiz').addEventListener('click', function() {
+    let score = 0;
+    let totalQuestions = selectedQuestions.length;
+
+    selectedQuestions.forEach((q, index) => {
+      const selected = document.querySelector(`input[name="q${index}"]:checked`);
+      const questionDiv = document.querySelectorAll('.bg-white.rounded-xl.shadow-lg')[index];
+      const feedbackDiv = questionDiv.querySelector('.feedback');
+      
+      if (selected) {
+        if (parseInt(selected.value) === q.correct) {
+          score++;
+          feedbackDiv.innerHTML = `<div class="p-4 bg-green-100 border-l-4 border-green-500 rounded"><p class="font-semibold text-green-800">✓ Correct!</p><p class="text-green-700 mt-2">${q.explanation}</p></div>`;
+        } else {
+          feedbackDiv.innerHTML = `<div class="p-4 bg-red-100 border-l-4 border-red-500 rounded"><p class="font-semibold text-red-800">✗ Incorrect</p><p class="text-red-700 mt-2">${q.explanation}</p></div>`;
+        }
+        feedbackDiv.classList.remove('hidden');
+      } else {
+        feedbackDiv.innerHTML = `<div class="p-4 bg-yellow-100 border-l-4 border-yellow-500 rounded"><p class="font-semibold text-yellow-800">⚠ Not answered</p><p class="text-yellow-700 mt-2">${q.explanation}</p></div>`;
+        feedbackDiv.classList.remove('hidden');
+      }
+    });
+
+    // Calculate percentage
+    let percentage = Math.round((score / totalQuestions) * 100);
+    
+    // Display results
+    let resultColor = percentage >= 70 ? 'text-green-600' : percentage >= 50 ? 'text-yellow-600' : 'text-red-600';
+    let resultMessage = percentage >= 70 ? 'Great job!' : percentage >= 50 ? 'Good effort!' : 'Keep studying!';
+    
+    document.getElementById('scoreDisplay').innerHTML = `
+      <div class="text-6xl font-bold ${resultColor} mb-4">${score}/${totalQuestions}</div>
+      <div class="text-2xl font-semibold text-gray-700">${percentage}%</div>
+      <div class="text-xl text-gray-600 mt-2">${resultMessage}</div>
+    `;
+    
+    document.getElementById('quizResults').classList.remove('hidden');
+    
+    // Scroll to results
+    document.getElementById('quizResults').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

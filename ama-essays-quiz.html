@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AMA Essays Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-pink-500 rounded-full mb-6">
+      <i data-lucide="file-edit" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">AMA Essays Quiz</h1>
+    <p class="text-xl text-gray-600">Test your knowledge of AMA format, citations, and medical writing</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Questions will be dynamically generated here -->
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-red-600 text-white text-lg font-semibold rounded-lg hover:bg-red-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="quizResults" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-red-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="ama-essays-analysis.html" class="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition flex items-center gap-2">
+        <i data-lucide="book-open" class="w-5 h-5"></i>
+        Review Material
+      </a>
+      <button onclick="location.reload()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+        Retake Quiz
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Question Bank - 40 questions total
+  const questionBank = [
+    {
+      question: "What does AMA stand for in the context of citation styles?",
+      options: ["American Medical Association", "Advanced Manuscript Analysis", "Academic Medicine Articles", "Applied Medical Annotation", "Association of Medical Academics"],
+      correct: 0,
+      explanation: "AMA stands for American Medical Association. The AMA Manual of Style is a widely used style guide for medical and scientific publications, providing guidelines for formatting, citations, and references in medical writing."
+    },
+    {
+      question: "In AMA format, how should a journal article citation appear in the reference list?",
+      options: ["Author(s). Article title. Journal Name. Year;volume(issue):page numbers.", "Author(s). \"Article title.\" Journal Name, vol. volume, no. issue, Year, pp. page numbers.", "Author(s), Article title, Journal Name, volume(issue), page numbers (Year).", "Author(s). Article title. Journal Name. Volume(Issue):page numbers; Year.", "Author(s) (Year). Article title. Journal Name, volume(issue), page numbers."],
+      correct: 0,
+      explanation: "In AMA format, journal articles follow this pattern: Author(s). Article title. Journal Name. Year;volume(issue):page numbers. For example: Smith J, Jones K. Treatment outcomes. JAMA. 2020;315(4):234-240. Note that journal names are abbreviated and italicized."
+    },
+    {
+      question: "How are author names formatted in AMA reference citations?",
+      options: ["First name Last name", "Last name, First initial Middle initial", "Last name First initial", "First initial Last name", "Last name, First name, Middle name"],
+      correct: 1,
+      explanation: "In AMA format, author names are listed as Last name, First initial Middle initial (if available). For example: Smith JK or Jones AB. Multiple authors are separated by commas, and the word 'and' is not used before the final author."
+    },
+    {
+      question: "What is the maximum number of authors listed in an AMA citation before using 'et al.'?",
+      options: ["3 authors", "5 authors", "6 authors", "7 authors", "10 authors"],
+      correct: 2,
+      explanation: "In AMA format, if a source has 6 or fewer authors, all authors are listed. If there are 7 or more authors, list the first 3 authors followed by 'et al.' For example: Smith J, Jones K, Brown L, et al."
+    },
+    {
+      question: "How should superscript numerals be placed in AMA in-text citations?",
+      options: ["Before punctuation marks", "After punctuation marks", "Within parentheses", "Before the first word of the sentence", "At the end of the paragraph"],
+      correct: 1,
+      explanation: "In AMA format, superscript numerals for citations should be placed after punctuation marks (commas, periods, etc.). For example: 'This finding was significant.¹' or 'According to recent research,² the treatment was effective.'"
+    },
+    {
+      question: "What is the correct format for a book citation in AMA style?",
+      options: ["Author(s). Book Title. City, State: Publisher; Year.", "Author(s). Book Title. Publisher: City; Year.", "Author(s), Book Title (Publisher, Year).", "Author(s). Book Title. Edition. City, State: Publisher; Year.", "Author(s) (Year). Book Title. City: Publisher."],
+      correct: 3,
+      explanation: "The correct AMA format for a book is: Author(s). Book Title. Edition (if not first). City, State: Publisher; Year. For example: Harrison TR. Principles of Internal Medicine. 20th ed. New York, NY: McGraw-Hill; 2018."
+    },
+    {
+      question: "How should journal names be formatted in AMA citations?",
+      options: ["In quotation marks", "Underlined", "Italicized and abbreviated", "In bold", "In plain text, spelled out fully"],
+      correct: 2,
+      explanation: "In AMA format, journal names should be italicized and abbreviated according to the National Library of Medicine's abbreviation list. For example, 'Journal of the American Medical Association' becomes 'J Am Med Assoc' or 'JAMA'."
+    },
+    {
+      question: "When citing an online article in AMA format, what information must be included?",
+      options: ["URL only", "DOI only", "URL and access date", "URL or DOI and access date", "Publication date only"],
+      correct: 3,
+      explanation: "For online articles in AMA format, include either the URL or DOI (Digital Object Identifier) along with the date accessed. For example: 'Accessed January 15, 2024. https://www.example.com' or 'doi:10.1001/jama.2020.12345'"
+    },
+    {
+      question: "What is the appropriate line spacing for an AMA-formatted manuscript?",
+      options: ["Single-spaced", "1.5-spaced", "Double-spaced", "Triple-spaced", "Variable spacing"],
+      correct: 2,
+      explanation: "AMA-formatted manuscripts should be double-spaced throughout, including the reference list, tables, and figure legends. This allows for easier review and annotation by editors and reviewers."
+    },
+    {
+      question: "How should figures and tables be referenced in AMA format text?",
+      options: ["(see figure 1)", "Figure 1", "(Figure 1)", "fig. 1", "[Figure 1]"],
+      correct: 1,
+      explanation: "In AMA format, figures and tables should be referenced in the text without parentheses and with the word capitalized. For example: 'as shown in Figure 1' or 'the results in Table 2 demonstrate.' The figure or table number is not italicized."
+    },
+    {
+      question: "What is the correct order of sections in an AMA-formatted research paper?",
+      options: ["Abstract, Introduction, Methods, Results, Discussion, References", "Introduction, Abstract, Methods, Results, Discussion, References", "Title, Abstract, Introduction, Discussion, Methods, Results, References", "Abstract, Methods, Introduction, Results, Discussion, References", "Title, Introduction, Methods, Results, Discussion, Abstract, References"],
+      correct: 0,
+      explanation: "The standard order for an AMA-formatted research paper is: Title page, Abstract, Introduction, Methods, Results, Discussion (or combined Results and Discussion), Acknowledgments, References, Tables, and Figures."
+    },
+    {
+      question: "How should direct quotations be cited in AMA format?",
+      options: ["Quotation marks with superscript citation number only", "Quotation marks with superscript citation number and page number in parentheses", "Italicized text with superscript citation", "Indented block quote without quotation marks", "Author name in parentheses followed by quotation"],
+      correct: 1,
+      explanation: "In AMA format, direct quotations should be enclosed in quotation marks, followed by a superscript citation number, and include the page number in parentheses. For example: 'This treatment shows promise'¹⁽ᵖ²³⁴⁾ or more commonly: 'This treatment shows promise' (p234).¹"
+    },
+    {
+      question: "What is the preferred abbreviation for 'page' in AMA citations?",
+      options: ["pg", "p", "pp", "page", "pgs"],
+      correct: 1,
+      explanation: "In AMA format, the preferred abbreviation for 'page' is simply 'p' (lowercase). For multiple pages, use a hyphen without 'pp': p234-240, not pp234-240."
+    },
+    {
+      question: "How should a chapter in an edited book be cited in AMA format?",
+      options: ["Chapter author. Chapter title. In: Editor, ed. Book Title. City, State: Publisher; Year:page numbers.", "Chapter author. Book Title. Chapter title. Publisher; Year.", "Editor, ed. Book Title. Chapter author. Chapter title. Year:pages.", "Chapter title. In: Book Title. Editor. Publisher; Year.", "Chapter author, Chapter title (Book Title, Editor, Year)."],
+      correct: 0,
+      explanation: "For a chapter in an edited book, use: Chapter Author. Chapter title. In: Editor, ed. Book Title. Edition. City, State: Publisher; Year:page numbers. For example: Jones K. Pain management. In: Smith J, ed. Clinical Handbook. 3rd ed. Boston, MA: Medical Press; 2020:45-67."
+    },
+    {
+      question: "What should be included in an AMA abstract?",
+      options: ["Only the conclusion", "Background, methods, results, and conclusions", "Introduction and references", "Title and author information only", "Discussion points only"],
+      correct: 1,
+      explanation: "An AMA abstract should be structured and include: Background/Objective, Methods, Results, and Conclusions. It should be concise (usually 150-300 words) and provide a complete summary of the study without requiring reference to the full text."
+    },
+    {
+      question: "How are website citations formatted in AMA style?",
+      options: ["Author. Page title. Website name. URL. Accessed date.", "Author. Page title. Website name. Published date. Updated date. Accessed date. URL.", "Website name. Author. Page title. URL.", "URL. Author. Page title. Date.", "Author (Date). Page title. Website. URL."],
+      correct: 1,
+      explanation: "For websites in AMA format: Author (if available). Page title. Website name. Published date. Updated date (if available). Accessed date. URL. For example: Smith J. Treatment guidelines. Mayo Clinic. Published January 1, 2020. Updated June 15, 2021. Accessed March 10, 2022. https://www.mayoclinic.org"
+    },
+    {
+      question: "What is the correct way to cite a secondary source in AMA format?",
+      options: ["Cite the original source only", "Cite both sources with 'cited in'", "Cite the secondary source only", "Use 'as cited in' notation", "Avoid secondary sources entirely"],
+      correct: 3,
+      explanation: "In AMA format, when citing a secondary source (a source you found mentioned in another source), use the format: Original Author. Original work title (as cited in: Secondary Author. Secondary work title. etc.). However, it's strongly preferred to access and cite the original source directly whenever possible."
+    },
+    {
+      question: "How should abbreviations be handled in AMA-formatted papers?",
+      options: ["Use freely without definition", "Define at first use, then use abbreviation", "Avoid all abbreviations", "Define in a separate glossary only", "Use only standard medical abbreviations"],
+      correct: 1,
+      explanation: "In AMA format, abbreviations should be spelled out at first use in the text, followed by the abbreviation in parentheses. After that, the abbreviation can be used throughout. For example: 'computed tomography (CT)' then 'CT' thereafter. Standard units of measurement don't need to be spelled out."
+    },
+    {
+      question: "What margins are typically required for AMA-formatted manuscripts?",
+      options: ["0.5 inch all around", "1 inch all around", "1.5 inches all around", "1 inch top/bottom, 0.5 inch sides", "Variable margins"],
+      correct: 1,
+      explanation: "AMA-formatted manuscripts typically require 1-inch (2.54 cm) margins on all sides (top, bottom, left, and right). This provides adequate white space for editorial comments and ensures the document is easy to read."
+    },
+    {
+      question: "How should statistical data be presented in AMA format?",
+      options: ["In narrative form only", "In tables and figures with P values", "Without statistical significance indicators", "In an appendix only", "In footnotes exclusively"],
+      correct: 1,
+      explanation: "Statistical data in AMA format should be presented clearly in tables and figures when appropriate, with P values reported to indicate statistical significance. P values should be reported as exact values (e.g., P = .03) unless very small (P < .001). The 'P' is italicized and capitalized."
+    },
+    {
+      question: "What is the purpose of the Methods section in an AMA research paper?",
+      options: ["To discuss the implications of findings", "To describe study design, participants, and procedures in sufficient detail for replication", "To present statistical results", "To review previous literature", "To state the hypothesis only"],
+      correct: 1,
+      explanation: "The Methods section in an AMA research paper should provide enough detail for another researcher to replicate the study. It should include study design, setting, participants, interventions, measurements, and statistical analyses. This ensures transparency and reproducibility in scientific research."
+    },
+    {
+      question: "How should drug names be written in AMA format?",
+      options: ["Brand name only", "Generic name only", "Generic name followed by brand name in parentheses", "Brand name followed by generic name in parentheses", "Either brand or generic name"],
+      correct: 2,
+      explanation: "In AMA format, use the generic (nonproprietary) drug name followed by the brand name in parentheses at first mention if relevant. For example: 'acetaminophen (Tylenol)'. After first mention, use only the generic name. Generic names are lowercase unless they begin a sentence."
+    },
+    {
+      question: "What information should be included on the title page of an AMA manuscript?",
+      options: ["Title and author name only", "Title, authors with affiliations, corresponding author contact, word count, and running head", "Title and abstract only", "Title, authors, and references", "Title, date, and page numbers"],
+      correct: 1,
+      explanation: "An AMA title page should include: the full title, all authors' names with their degrees and affiliations, corresponding author's contact information, word count, number of tables/figures, and a short running head. Funding sources and conflicts of interest may also be listed."
+    },
+    {
+      question: "How are reference numbers ordered in AMA format?",
+      options: ["Alphabetically by author", "By order of importance", "In the order they appear in the text", "By publication date", "Randomly"],
+      correct: 2,
+      explanation: "In AMA format, references are numbered consecutively in the order they first appear in the text. The same number is used each time that reference is cited. References are then listed in numerical order in the reference list, not alphabetically."
+    },
+    {
+      question: "What is the appropriate format for patient confidentiality in AMA case reports?",
+      options: ["Use full patient names", "Use patient initials only", "Remove all identifying information or obtain written consent", "Use patient ID numbers", "Use first names only"],
+      correct: 2,
+      explanation: "AMA guidelines require protecting patient confidentiality. In case reports, all identifying information should be removed (e.g., names, dates, photos showing faces) unless written informed consent from the patient has been obtained and is documented. This protects patient privacy and complies with HIPAA regulations."
+    },
+    {
+      question: "How should institutional affiliations be listed for multiple authors in AMA format?",
+      options: ["Not listed", "Listed once at the end", "Using superscript numbers matching each author to their institution", "In alphabetical order only", "In the acknowledgments section only"],
+      correct: 2,
+      explanation: "In AMA format, when authors have different institutional affiliations, use superscript numbers after each author's name corresponding to numbered institutional affiliations listed below. For example: John Smith¹, Jane Doe²; ¹Harvard Medical School, ²Mayo Clinic."
+    },
+    {
+      question: "What is the correct format for citing a government report in AMA style?",
+      options: ["Agency name. Report title. Publication number. City, State: Publisher; Year.", "Report title. Agency. Year.", "Government Report. Title. Year. URL.", "Author. Agency report. Year:pages.", "Title (Agency, Year)."],
+      correct: 0,
+      explanation: "For government reports in AMA format: Agency name. Report title. Publication or report number (if available). City, State: Publisher; Year. For example: Centers for Disease Control and Prevention. Health Statistics Report 2020. Publication No. 123-45. Atlanta, GA: US Dept of Health and Human Services; 2020."
+    },
+    {
+      question: "How should conflicts of interest be disclosed in AMA manuscripts?",
+      options: ["They should not be mentioned", "In a separate section or footnote with specific details", "Only in the cover letter", "In the abstract only", "Verbally to the editor only"],
+      correct: 1,
+      explanation: "AMA requires disclosure of all potential conflicts of interest, including financial relationships with entities that have interest in the subject matter. This should be stated explicitly in a separate section (often 'Conflict of Interest Disclosure' or 'Financial Disclosures') or in a footnote, with specific details about the nature of the relationship."
+    },
+    {
+      question: "What is the recommended font and size for AMA manuscript text?",
+      options: ["Arial 10 pt", "Calibri 11 pt", "Times New Roman 12 pt", "Courier 12 pt", "Helvetica 11 pt"],
+      correct: 2,
+      explanation: "AMA style recommends using Times New Roman 12-point font for manuscript text. This standard serif font is highly readable and widely accepted in academic and professional publishing. The font should be consistent throughout the manuscript."
+    },
+    {
+      question: "How should running heads be formatted in AMA manuscripts?",
+      options: ["Full title on every page", "Abbreviated title (50 characters or less) in header", "Author name and page number", "Nothing in the header", "Journal name in header"],
+      correct: 1,
+      explanation: "In AMA format, the running head is an abbreviated version of the title (usually 50 characters or fewer, including spaces) that appears in the header of each page. It's typically placed in the upper right corner along with the page number. For example, if the title is 'Effectiveness of Novel Treatment for Type 2 Diabetes,' the running head might be 'Novel Treatment for Type 2 Diabetes.'"
+    },
+    {
+      question: "What is the purpose of the Discussion section in an AMA research paper?",
+      options: ["To repeat the results verbatim", "To introduce new data not in Results", "To interpret findings, compare with other studies, discuss limitations, and propose implications", "To provide detailed methodology", "To list all references"],
+      correct: 2,
+      explanation: "The Discussion section in an AMA research paper should interpret the findings presented in the Results section, compare them with findings from other studies, acknowledge limitations of the current study, and discuss the implications for clinical practice or future research. It should not introduce new data but should provide context and meaning to the results."
+    },
+    {
+      question: "How should editorial comments or corrections be indicated in quoted material in AMA format?",
+      options: ["In curly braces { }", "In square brackets [ ]", "In angle brackets < >", "In double parentheses (( ))", "Not allowed"],
+      correct: 1,
+      explanation: "In AMA format, editorial comments, corrections, or clarifications inserted into quoted material should be placed in square brackets [ ]. For example: 'The patient [a 45-year-old woman] reported symptoms...' or '[sic]' to indicate an error in the original quoted text. Brackets indicate these are not part of the original quotation."
+    },
+    {
+      question: "What is required in the Acknowledgments section of an AMA manuscript?",
+      options: ["Nothing, it's optional", "Recognition of contributors who don't meet authorship criteria, funding sources, and potential conflicts", "Only funding information", "Only technical assistance", "Personal thanks to family"],
+      correct: 1,
+      explanation: "The Acknowledgments section in AMA manuscripts should recognize individuals who contributed to the work but don't meet criteria for authorship (with their permission), identify funding sources, technical support, and restate any conflicts of interest or financial disclosures. Personal acknowledgments to family are generally not included in scientific manuscripts."
+    },
+    {
+      question: "How should a clinical trial be referenced in an AMA paper?",
+      options: ["By the trial name only", "With the trial registration number and database (e.g., ClinicalTrials.gov identifier)", "By the hospital name", "By the lead investigator only", "Clinical trials don't need special notation"],
+      correct: 1,
+      explanation: "In AMA format, clinical trials should be referenced with their registration information, including the trial registration number and database. For example: 'ClinicalTrials.gov identifier: NCT01234567' or 'ISRCTN12345678.' This promotes transparency and allows readers to access detailed trial protocols and outcomes."
+    },
+    {
+      question: "What is the appropriate way to present P values in AMA format?",
+      options: ["P < 0.05 only", "Exact P values (e.g., P = .03) unless very small", "P values are not necessary", "P > 0.05 only", "Rounded to whole numbers"],
+      correct: 1,
+      explanation: "AMA format requires reporting exact P values (e.g., P = .03, P = .42) rather than inequality expressions, unless the P value is very small (P < .001). The 'P' is italicized and capitalized. Never report P = 0 or P = 1; instead use P < .001 or P > .99. This provides more information about the strength of statistical evidence."
+    },
+    {
+      question: "How should tables be numbered in an AMA manuscript?",
+      options: ["Roman numerals (I, II, III)", "Letters (A, B, C)", "Arabic numerals in order of mention (1, 2, 3)", "By section number (1.1, 1.2)", "Tables are not numbered"],
+      correct: 2,
+      explanation: "In AMA format, tables are numbered with Arabic numerals (Table 1, Table 2, etc.) in the order they are first mentioned in the text. Each table should have a brief, descriptive title and be placed on a separate page after the reference list. Tables are referenced in the text as 'Table 1' without parentheses."
+    },
+    {
+      question: "What is the correct way to cite a conference presentation or abstract in AMA format?",
+      options: ["Presenter name. Title. Conference name; date; location.", "Title. Conference. Year.", "Conference name. Presenter. Year.", "Presenter, Title, Conference, Year, Location", "Not cited in AMA format"],
+      correct: 0,
+      explanation: "For conference presentations or abstracts in AMA format: Presenter(s). Presentation title. Paper presented at: Conference Name; Date; Location. For example: Smith J, Jones K. Novel treatment outcomes. Paper presented at: American Medical Association Annual Meeting; June 15, 2020; Chicago, IL. If it's a published abstract, include the publication information instead."
+    },
+    {
+      question: "How should percentage symbols (%) be used in AMA format?",
+      options: ["% immediately after the number with no space (25%)", "Spell out 'percent' always", "% with a space before it (25 %)", "'pct' abbreviation", "Avoid using percentages"],
+      correct: 0,
+      explanation: "In AMA format, the percent symbol (%) should be used immediately after the number with no space (e.g., 25%, 3.5%). In text, you can use either the symbol or spell out 'percent' depending on journal preference, but in tables and figures, always use the % symbol. When starting a sentence, spell out the number and 'percent.'"
+    },
+    {
+      question: "What level of detail should be included in figure legends for AMA manuscripts?",
+      options: ["Title only", "Complete description allowing interpretation without text reference", "Minimal description", "Statistical methods only", "No legend necessary"],
+      correct: 1,
+      explanation: "Figure legends in AMA format should be detailed enough that the figure can be understood without referring to the main text. Include a brief title, explanation of all symbols, abbreviations, and statistical methods used, and define any error bars or significance indicators. Each figure should be self-contained with its legend."
+    }
+  ];
+
+  // Shuffle and select 15 random questions
+  function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  const selectedQuestions = shuffleArray(questionBank).slice(0, 15);
+  const quizContainer = document.getElementById('quizContainer');
+
+  // Generate quiz questions
+  selectedQuestions.forEach((q, index) => {
+    const questionDiv = document.createElement('div');
+    questionDiv.className = 'bg-white rounded-xl shadow-lg p-6 border-l-4 border-red-500';
+    questionDiv.innerHTML = `
+      <h3 class="text-xl font-bold mb-4 text-gray-800">Question ${index + 1}</h3>
+      <p class="text-lg mb-4 text-gray-700">${q.question}</p>
+      <div class="space-y-3">
+        ${q.options.map((option, i) => `
+          <label class="flex items-start p-3 rounded-lg border-2 border-gray-200 cursor-pointer hover:bg-red-50 transition">
+            <input type="radio" name="q${index}" value="${i}" class="mt-1 mr-3">
+            <span class="text-gray-700">${option}</span>
+          </label>
+        `).join('')}
+      </div>
+      <div class="mt-4 p-4 bg-gray-50 rounded-lg hidden" id="explanation${index}">
+        <p class="text-sm font-semibold mb-2 text-gray-700">Explanation:</p>
+        <p class="text-sm text-gray-600">${q.explanation}</p>
+      </div>
+    `;
+    quizContainer.appendChild(questionDiv);
+  });
+
+  // Submit quiz
+  const submitBtn = document.getElementById('submitQuiz');
+  const resultDiv = document.getElementById('quizResults');
+  const scoreDisplay = document.getElementById('scoreDisplay');
+
+  submitBtn.addEventListener('click', () => {
+    let score = 0;
+    let answered = 0;
+    
+    selectedQuestions.forEach((q, index) => {
+      const selected = document.querySelector(`input[name="q${index}"]:checked`);
+      const explanationDiv = document.getElementById(`explanation${index}`);
+      
+      if (selected) {
+        answered++;
+        const answer = parseInt(selected.value);
+        
+        if (answer === q.correct) {
+          score++;
+          selected.parentElement.classList.add('!border-green-500', 'bg-green-50');
+        } else {
+          selected.parentElement.classList.add('!border-red-500', 'bg-red-50');
+          // Highlight correct answer
+          const labels = document.querySelectorAll(`input[name="q${index}"]`);
+          labels[q.correct].parentElement.classList.add('!border-green-500', 'bg-green-50');
+        }
+        
+        explanationDiv.classList.remove('hidden');
+      }
+    });
+    
+    if (answered < 15) {
+      alert('Please answer all questions before submitting.');
+      return;
+    }
+    
+    const percentage = Math.round((score / 15) * 100);
+    let gradeColor = 'text-red-600';
+    let message = 'Keep studying! Review the material and try again.';
+    
+    if (percentage >= 90) {
+      gradeColor = 'text-green-600';
+      message = 'Excellent! You have mastered this material!';
+    } else if (percentage >= 80) {
+      gradeColor = 'text-blue-600';
+      message = 'Great job! You have a strong understanding!';
+    } else if (percentage >= 70) {
+      gradeColor = 'text-yellow-600';
+      message = 'Good work! Review the explanations to improve.';
+    } else if (percentage >= 60) {
+      gradeColor = 'text-orange-600';
+      message = 'Fair. Consider reviewing the material more thoroughly.';
+    }
+    
+    scoreDisplay.innerHTML = `
+      <div class="text-center">
+        <div class="text-6xl font-bold ${gradeColor} mb-4">${percentage}%</div>
+        <p class="text-2xl text-gray-700 mb-2">${score} out of 15 correct</p>
+        <p class="text-xl text-gray-600 mb-6">${message}</p>
+      </div>
+    `;
+    
+    resultDiv.classList.remove('hidden');
+    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

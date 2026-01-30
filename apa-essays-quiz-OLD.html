@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>APA Essays Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    </nav>
+
+    <button id="menuBtn" class="md:hidden p-2">
+      <i data-lucide="menu" class="w-6 h-6"></i>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-emerald-500 to-green-600 rounded-full mb-6">
+      <i data-lucide="clipboard-check" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">APA Essays Quiz</h1>
+    <p class="text-xl text-gray-600">Test your knowledge of APA formatting and citation style</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Question 1 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-emerald-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 1</h3>
+      <p class="text-lg text-gray-700 mb-6">What does APA stand for?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q1" value="a" class="mt-1">
+          <span class="text-gray-700">American Psychological Association</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q1" value="b" class="mt-1">
+          <span class="text-gray-700">American Publishing Association</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q1" value="c" class="mt-1">
+          <span class="text-gray-700">Academic Paper Association</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q1" value="d" class="mt-1">
+          <span class="text-gray-700">Advanced Publication Alliance</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-emerald-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 2</h3>
+      <p class="text-lg text-gray-700 mb-6">What is the standard font and size for APA format papers?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="a" class="mt-1">
+          <span class="text-gray-700">Times New Roman, 12pt</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="b" class="mt-1">
+          <span class="text-gray-700">Arial, 11pt</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="c" class="mt-1">
+          <span class="text-gray-700">Calibri, 12pt</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="d" class="mt-1">
+          <span class="text-gray-700">Helvetica, 10pt</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-emerald-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 3</h3>
+      <p class="text-lg text-gray-700 mb-6">What are the required margins for an APA formatted paper?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="a" class="mt-1">
+          <span class="text-gray-700">0.5 inches on all sides</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="b" class="mt-1">
+          <span class="text-gray-700">1 inch on all sides</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="c" class="mt-1">
+          <span class="text-gray-700">1.5 inches on all sides</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="d" class="mt-1">
+          <span class="text-gray-700">2 inches on all sides</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-emerald-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 4</h3>
+      <p class="text-lg text-gray-700 mb-6">How should an in-text citation for a work with two authors appear?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="a" class="mt-1">
+          <span class="text-gray-700">(Smith and Jones, 2020)</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="b" class="mt-1">
+          <span class="text-gray-700">(Smith & Jones, 2020)</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="c" class="mt-1">
+          <span class="text-gray-700">(Smith et al., 2020)</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="d" class="mt-1">
+          <span class="text-gray-700">(Smith, Jones, 2020)</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-emerald-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 5</h3>
+      <p class="text-lg text-gray-700 mb-6">Where does the running head appear in an APA paper?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="a" class="mt-1">
+          <span class="text-gray-700">Top left of every page</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="b" class="mt-1">
+          <span class="text-gray-700">Top center of every page</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="c" class="mt-1">
+          <span class="text-gray-700">Bottom of every page</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="d" class="mt-1">
+          <span class="text-gray-700">Only on the title page</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-emerald-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 6</h3>
+      <p class="text-lg text-gray-700 mb-6">What is the correct order of elements on an APA title page?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="a" class="mt-1">
+          <span class="text-gray-700">Title, Author Name, Institution, Course, Date</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="b" class="mt-1">
+          <span class="text-gray-700">Title, Author Name, Institutional Affiliation</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="c" class="mt-1">
+          <span class="text-gray-700">Running Head, Title, Author Name, Date</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="d" class="mt-1">
+          <span class="text-gray-700">Author Name, Title, Institution</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-emerald-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 7</h3>
+      <p class="text-lg text-gray-700 mb-6">How should the reference list be organized?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="a" class="mt-1">
+          <span class="text-gray-700">Alphabetically by author's last name</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="b" class="mt-1">
+          <span class="text-gray-700">By date of publication</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="c" class="mt-1">
+          <span class="text-gray-700">By order of appearance in the paper</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="d" class="mt-1">
+          <span class="text-gray-700">By type of source</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-emerald-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 8</h3>
+      <p class="text-lg text-gray-700 mb-6">What is the correct spacing for an APA formatted paper?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="a" class="mt-1">
+          <span class="text-gray-700">Single-spaced</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="b" class="mt-1">
+          <span class="text-gray-700">Double-spaced</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="c" class="mt-1">
+          <span class="text-gray-700">1.5 spacing</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="d" class="mt-1">
+          <span class="text-gray-700">Triple-spaced</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-emerald-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 9</h3>
+      <p class="text-lg text-gray-700 mb-6">When citing a work with three or more authors, what should you use after the first author's name?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="a" class="mt-1">
+          <span class="text-gray-700">and others</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="b" class="mt-1">
+          <span class="text-gray-700">et al.</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="c" class="mt-1">
+          <span class="text-gray-700">etc.</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="d" class="mt-1">
+          <span class="text-gray-700">&amp; co.</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-emerald-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 10</h3>
+      <p class="text-lg text-gray-700 mb-6">What is the proper formatting for a direct quote that is 40 words or longer?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="a" class="mt-1">
+          <span class="text-gray-700">Use quotation marks and include inline</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="b" class="mt-1">
+          <span class="text-gray-700">Create a block quote, indented 0.5 inches, without quotation marks</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="c" class="mt-1">
+          <span class="text-gray-700">Use italics and quotation marks</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="d" class="mt-1">
+          <span class="text-gray-700">Place in a footnote</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-emerald-600 text-white text-lg font-semibold rounded-lg hover:bg-emerald-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="results" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-emerald-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div id="answerReview" class="space-y-4"></div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="apa-essays.html" class="px-6 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Back to APA Essays
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Quiz Logic
+  const correctAnswers = {
+    q1: 'a',
+    q2: 'a',
+    q3: 'b',
+    q4: 'b',
+    q5: 'a',
+    q6: 'b',
+    q7: 'a',
+    q8: 'b',
+    q9: 'b',
+    q10: 'b'
+  };
+
+  const explanations = {
+    q1: 'APA stands for American Psychological Association, the organization that created and maintains this citation and formatting style widely used in social sciences.',
+    q2: 'The standard font for APA format is Times New Roman, 12pt. Other acceptable fonts include Arial (11pt), Calibri (11pt), and Georgia (11pt), but Times New Roman 12pt is most common.',
+    q3: 'APA format requires 1-inch margins on all sides (top, bottom, left, and right) of the page. This ensures consistent formatting and readability.',
+    q4: 'When citing a work with two authors in APA format, use an ampersand (&) between the authors\' names: (Smith & Jones, 2020). Use "and" only when the names appear in narrative text.',
+    q5: 'In APA 7th edition, the running head appears in the top left of every page. It includes a shortened version of your title (up to 50 characters) and the page number appears in the top right.',
+    q6: 'An APA title page should include (in order from top to bottom): Title, Author Name, and Institutional Affiliation, all centered on the page. Student papers may also include course information, instructor name, and due date.',
+    q7: 'The reference list should be organized alphabetically by the first author\'s last name. If there is no author, alphabetize by the title of the work (ignoring A, An, The).',
+    q8: 'All APA formatted papers should be double-spaced throughout, including the title page, abstract, body text, references, and any appendices. There should be no extra spaces between paragraphs.',
+    q9: 'When citing a work with three or more authors in APA format, use "et al." (meaning "and others") after the first author\'s name from the first citation onward: (Smith et al., 2020).',
+    q10: 'Quotes of 40 words or longer should be formatted as block quotes: start on a new line, indent 0.5 inches from the left margin, double-space, and do not use quotation marks. The citation follows the final punctuation.'
+  };
+
+  document.getElementById('submitQuiz').addEventListener('click', function() {
+    let score = 0;
+    let totalQuestions = Object.keys(correctAnswers).length;
+    let answerReviewHTML = '';
+
+    // Check each answer
+    for (let question in correctAnswers) {
+      const selected = document.querySelector(`input[name="${question}"]:checked`);
+      const questionDiv = document.querySelector(`input[name="${question}"]`).closest('.quiz-question');
+      const feedbackDiv = questionDiv.querySelector('.feedback');
+      
+      if (selected) {
+        if (selected.value === correctAnswers[question]) {
+          score++;
+          feedbackDiv.innerHTML = `<div class="p-4 bg-green-100 border-l-4 border-green-500 rounded"><p class="font-semibold text-green-800">✓ Correct!</p><p class="text-green-700 mt-2">${explanations[question]}</p></div>`;
+        } else {
+          feedbackDiv.innerHTML = `<div class="p-4 bg-red-100 border-l-4 border-red-500 rounded"><p class="font-semibold text-red-800">✗ Incorrect</p><p class="text-red-700 mt-2">${explanations[question]}</p></div>`;
+        }
+        feedbackDiv.classList.remove('hidden');
+      } else {
+        feedbackDiv.innerHTML = `<div class="p-4 bg-yellow-100 border-l-4 border-yellow-500 rounded"><p class="font-semibold text-yellow-800">⚠ Not answered</p><p class="text-yellow-700 mt-2">${explanations[question]}</p></div>`;
+        feedbackDiv.classList.remove('hidden');
+      }
+    }
+
+    // Calculate percentage
+    let percentage = Math.round((score / totalQuestions) * 100);
+    
+    // Display results
+    let resultColor = percentage >= 70 ? 'text-green-600' : percentage >= 50 ? 'text-yellow-600' : 'text-red-600';
+    let resultMessage = percentage >= 70 ? 'Great job!' : percentage >= 50 ? 'Good effort!' : 'Keep studying!';
+    
+    document.getElementById('scoreDisplay').innerHTML = `
+      <div class="text-6xl font-bold ${resultColor} mb-4">${score}/${totalQuestions}</div>
+      <div class="text-2xl font-semibold text-gray-700">${percentage}%</div>
+      <div class="text-xl text-gray-600 mt-2">${resultMessage}</div>
+    `;
+    
+    document.getElementById('results').classList.remove('hidden');
+    
+    // Scroll to results
+    document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+</script>
+
+</body>
+</html>

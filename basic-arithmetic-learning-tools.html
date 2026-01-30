@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Basic & Arithmetic Math Learning Tools - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <!-- Back Button -->
+  <div class="mb-6">
+    <a href="high-school-learning-tools.html" class="inline-flex items-center gap-2 px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back to Learning Tools</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="flex justify-center mb-4">
+      <div class="p-4 bg-gradient-to-br from-orange-600 to-amber-600 rounded-full">
+        <i data-lucide="calculator" class="w-16 h-16 text-white"></i>
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Basic & Arithmetic Math Learning Tools</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Essential resources for mastering fundamental math operations, fractions, decimals, and number sense
+    </p>
+  </div>
+
+  <!-- Online Calculators -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-orange-50 to-amber-50 rounded-xl shadow-lg p-8 border-l-4 border-orange-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="calculator" class="w-7 h-7 text-orange-600"></i>
+        Online Calculators
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.calculator.net/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Calculator.net ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive collection of free online calculators</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Basic arithmetic operations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Fraction and decimal calculators</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Percentage calculator</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.mathway.com/BasicMath" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Mathway Basic Math ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Solve basic math problems with step-by-step solutions</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Instant problem solving</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Detailed explanations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Multiple math operations</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.calculator-1.com/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Calculator-1 ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Simple online calculator for quick calculations</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Easy-to-use interface</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Basic operations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Memory functions</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.rapidtables.com/calc/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Rapid Tables Calculators ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Collection of specialized math calculators</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Percentage calculators</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Fraction converters</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Ratio calculators</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Learning Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl shadow-lg p-8 border-l-4 border-yellow-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="gamepad-2" class="w-7 h-7 text-yellow-600"></i>
+        Interactive Learning Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.mathplayground.com/" target="_blank" class="text-yellow-600 hover:text-yellow-700 hover:underline">Math Playground ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Fun math games and interactive activities</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Arithmetic games</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Logic puzzles</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Problem-solving activities</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.coolmath4kids.com/" target="_blank" class="text-yellow-600 hover:text-yellow-700 hover:underline">Cool Math 4 Kids ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Math lessons and practice for elementary students</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Basic operations practice</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Interactive lessons</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Math games</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.mathgametime.com/" target="_blank" class="text-yellow-600 hover:text-yellow-700 hover:underline">Math Game Time ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free educational math games</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Addition and subtraction</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Multiplication and division</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Educational videos</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.ixl.com/math/skill-plans" target="_blank" class="text-yellow-600 hover:text-yellow-700 hover:underline">IXL Math ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Personalized math practice for all grades</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Adaptive learning</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Thousands of skills</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-600">•</span>
+              <span>Real-time diagnostics</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learning Platforms & Tutorials -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="graduation-cap" class="w-7 h-7 text-blue-600"></i>
+        Learning Platforms & Tutorials
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.khanacademy.org/math/arithmetic" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Khan Academy Arithmetic ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free comprehensive arithmetic courses</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Complete curriculum</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Video lessons</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Practice exercises</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.mathsisfun.com/numbers/index.html" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Math is Fun ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Clear explanations of math concepts</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Easy-to-understand lessons</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Interactive examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Worksheets and puzzles</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.mathgoodies.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Math Goodies ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Interactive math lessons and homework help</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Step-by-step tutorials</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Practice problems</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Interactive worksheets</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.mathhelp.com/" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">MathHelp.com ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive math help and tutoring</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Video lessons</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Practice questions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Quizzes and tests</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Tutorials -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl shadow-lg p-8 border-l-4 border-green-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="video" class="w-7 h-7 text-green-600"></i>
+        Video Tutorials
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/user/numberock" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">Numberock ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Math songs and videos for elementary concepts</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Catchy educational songs</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Visual explanations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Engaging animations</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/user/mathantics" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">Math Antics ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Clear math instruction videos</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Basic arithmetic lessons</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Easy-to-follow format</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Practice worksheets</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/user/TheOrganicChemistryTutor" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">Organic Chemistry Tutor ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive math tutorials</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Arithmetic operations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Fractions and decimals</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Worked examples</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/user/tecmath" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">Tecmath ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Math tricks and shortcuts</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Quick calculation methods</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Mental math techniques</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Time-saving tricks</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice Worksheets & Exercises -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl shadow-lg p-8 border-l-4 border-purple-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="clipboard-check" class="w-7 h-7 text-purple-600"></i>
+        Practice Worksheets & Exercises
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.math-drills.com/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Math-Drills ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free math worksheets for practice</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Thousands of worksheets</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Printable PDFs</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Answer keys included</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.education.com/worksheets/math/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Education.com Worksheets ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Grade-level math worksheets</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Organized by grade</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Curriculum-aligned</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Colorful and engaging</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.commoncoresheets.com/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Common Core Sheets ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Standards-aligned worksheets and quizzes</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Common Core aligned</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Auto-grading available</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Multiple versions</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.k5learning.com/free-math-worksheets" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">K5 Learning ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free math worksheets for K-5 students</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Elementary-focused</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>High-quality worksheets</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Free downloads</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reference Materials & Guides -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-red-50 to-rose-50 rounded-xl shadow-lg p-8 border-l-4 border-red-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="book-open" class="w-7 h-7 text-red-600"></i>
+        Reference Materials & Guides
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.splashlearn.com/" target="_blank" class="text-red-600 hover:text-red-700 hover:underline">SplashLearn ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Math games and curriculum for elementary students</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Game-based learning</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Adaptive curriculum</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Progress tracking</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.mathway.com/" target="_blank" class="text-red-600 hover:text-red-700 hover:underline">Mathway ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Problem solver with instant answers</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Multiple math topics</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Camera input support</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Step-by-step solutions</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.aaamath.com/" target="_blank" class="text-red-600 hover:text-red-700 hover:underline">AAA Math ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Interactive arithmetic lessons and practice</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Hundreds of pages</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Interactive practice</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Explanations and challenges</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.softschools.com/math/" target="_blank" class="text-red-600 hover:text-red-700 hover:underline">SoftSchools Math ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Math games, quizzes, and worksheets</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Interactive quizzes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Educational games</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Printable worksheets</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links to Related Pages -->
+  <section class="mb-12">
+    <div class="bg-white rounded-xl shadow-lg p-8">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="link" class="w-7 h-7 text-blue-600"></i>
+        Related Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-3 gap-4">
+        <a href="basic-math.html" class="flex items-center gap-3 p-4 bg-gradient-to-r from-orange-50 to-amber-50 rounded-lg border-l-4 border-orange-500 hover:shadow-md transition">
+          <i data-lucide="book" class="w-6 h-6 text-orange-600"></i>
+          <div>
+            <h3 class="font-semibold text-gray-800">Basic Math Topics</h3>
+            <p class="text-sm text-gray-600">Study main concepts</p>
+          </div>
+        </a>
+
+        <a href="basic-math-quiz.html" class="flex items-center gap-3 p-4 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg border-l-4 border-yellow-500 hover:shadow-md transition">
+          <i data-lucide="clipboard-list" class="w-6 h-6 text-yellow-600"></i>
+          <div>
+            <h3 class="font-semibold text-gray-800">Practice Quiz</h3>
+            <p class="text-sm text-gray-600">Test your knowledge</p>
+          </div>
+        </a>
+
+        <a href="high-school-learning-tools.html" class="flex items-center gap-3 p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg border-l-4 border-blue-500 hover:shadow-md transition">
+          <i data-lucide="library" class="w-6 h-6 text-blue-600"></i>
+          <div>
+            <h3 class="font-semibold text-gray-800">All Learning Tools</h3>
+            <p class="text-sm text-gray-600">Browse other subjects</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-white border-t mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <div class="text-center text-gray-600">
+      <p>&copy; 2026 StudyZone. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="script.js"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+</body>
+</html>

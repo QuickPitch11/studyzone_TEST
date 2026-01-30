@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>APA Essays Learning Tools - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-4 py-12">
+  <!-- Back Button -->
+  <div class="mb-6">
+    <a href="college-learning-tools.html" class="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back to Learning Tools</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="flex justify-center mb-4">
+      <div class="p-4 bg-gradient-to-br from-red-600 to-rose-600 rounded-full">
+        <i data-lucide="file-text" class="w-16 h-16 text-white"></i>
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">APA Essays Learning Tools</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Comprehensive resources for mastering APA format citations, references, and academic writing
+    </p>
+  </div>
+
+  <!-- Citation Generators & Formatting Tools -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-red-50 to-rose-50 rounded-xl shadow-lg p-8 border-l-4 border-red-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="quote" class="w-7 h-7 text-red-600"></i>
+        Citation Generators & Formatting Tools
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.citationmachine.net/apa" target="_blank" class="text-red-600 hover:text-red-700 hover:underline">Citation Machine APA ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free automatic APA citation generator for all source types</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>In-text and reference citations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Multiple source types supported</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>APA 7th edition compliant</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.easybib.com/cite/apa" target="_blank" class="text-red-600 hover:text-red-700 hover:underline">EasyBib APA ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Simple APA citation tool with plagiarism checker</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Quick citation generation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Grammar checking features</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Bibliography builder</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.scribbr.com/apa-citation-generator/" target="_blank" class="text-red-600 hover:text-red-700 hover:underline">Scribbr APA Citation Generator ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Accurate APA citations with helpful formatting guides</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>100% accurate citations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Smart source suggestions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Export to Word/Google Docs</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.mybib.com/tools/apa-citation-generator" target="_blank" class="text-red-600 hover:text-red-700 hover:underline">MyBib APA Generator ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free APA citation generator with project organization</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Automatic URL citations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Organize multiple projects</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-red-600">•</span>
+              <span>Copy and export features</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APA Style Guides & Official Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl shadow-lg p-8 border-l-4 border-rose-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="book-open-text" class="w-7 h-7 text-rose-600"></i>
+        APA Style Guides & Official Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://apastyle.apa.org/" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">APA Style (Official) ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Official APA Style website with authoritative guidance</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>APA 7th edition guidelines</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Style and grammar tips</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Common questions answered</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_style_introduction.html" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">Purdue OWL APA Guide ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive APA formatting and style guide</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Detailed formatting instructions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Sample papers and templates</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Citation examples</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.scribbr.com/category/apa-style/" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">Scribbr APA Style Guide ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">In-depth articles on APA formatting and citations</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Step-by-step tutorials</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Visual examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Free downloadable guides</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.bibme.org/apa" target="_blank" class="text-rose-600 hover:text-rose-700 hover:underline">BibMe APA Format Guide ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">APA formatting guide with citation tools</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Format cheat sheets</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Reference examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-600">•</span>
+              <span>Integrated citation tools</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grammar & Plagiarism Checkers -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-orange-50 to-amber-50 rounded-xl shadow-lg p-8 border-l-4 border-orange-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="shield-check" class="w-7 h-7 text-orange-600"></i>
+        Grammar & Plagiarism Checkers
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.grammarly.com/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Grammarly ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AI-powered writing assistant for grammar and clarity</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Real-time grammar checking</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Style and tone suggestions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Plagiarism detection</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.turnitin.com/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Turnitin ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Industry-standard plagiarism detection software</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Comprehensive plagiarism checks</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Similarity reports</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Academic integrity tools</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://hemingwayapp.com/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">Hemingway Editor ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Writing clarity and readability improvement tool</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Readability scoring</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Sentence structure analysis</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Clear, bold writing emphasis</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://quillbot.com/" target="_blank" class="text-orange-600 hover:text-orange-700 hover:underline">QuillBot ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">AI paraphrasing and grammar checking tool</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Paraphrasing assistance</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Grammar and spelling check</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-orange-600">•</span>
+              <span>Citation generator included</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video & Tutorial Resources -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="video" class="w-7 h-7 text-blue-600"></i>
+        Video & Tutorial Resources
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/user/AcademicEnglishHelp" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Academic English Help ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">YouTube channel with APA formatting tutorials</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>APA 7th edition videos</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Citation examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Paper formatting guides</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.youtube.com/c/DavidTaylorPhD" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">David Taylor (APA Tutorials) ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Detailed APA format tutorial videos</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Step-by-step formatting</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Reference page tutorials</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>In-text citation guidance</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.lynda.com/Writing-tutorials/Writing-Research-Papers/158319-2.html" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">LinkedIn Learning (Writing) ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Professional courses on academic writing and APA style</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Structured learning paths</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Research paper writing</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Citation management</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.khanacademy.org/test-prep/sat/new-sat-tips-planning/new-sat-how-to-prep/v/grammar-overview" target="_blank" class="text-blue-600 hover:text-blue-700 hover:underline">Khan Academy Writing ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free grammar and writing fundamentals courses</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Grammar foundations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Writing conventions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600">•</span>
+              <span>Practice exercises</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sample Papers & Templates -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-purple-50 to-violet-50 rounded-xl shadow-lg p-8 border-l-4 border-purple-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="file-check" class="w-7 h-7 text-purple-600"></i>
+        Sample Papers & Templates
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://apastyle.apa.org/style-grammar-guidelines/paper-format/sample-papers" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">APA Sample Papers (Official) ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Official APA sample papers and formatting examples</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Student and professional papers</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Annotated examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>APA 7th edition format</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/apa_sample_paper.html" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Purdue OWL Sample Papers ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Downloadable APA format sample papers</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Multiple paper examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Formatting annotations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Free downloads</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.scribbr.com/apa-examples/" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Scribbr APA Examples ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Extensive collection of APA citation examples</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Citation format examples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Reference list samples</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Searchable database</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://templates.office.com/en-us/apa-style-report-tm03985489" target="_blank" class="text-purple-600 hover:text-purple-700 hover:underline">Microsoft APA Templates ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Pre-formatted APA templates for Microsoft Word</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Ready-to-use templates</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Built-in formatting</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-600">•</span>
+              <span>Free download</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Writing Centers & Academic Support -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl shadow-lg p-8 border-l-4 border-green-500">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 flex items-center gap-3">
+        <i data-lucide="users" class="w-7 h-7 text-green-600"></i>
+        Writing Centers & Academic Support
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://writingcenter.unc.edu/tips-and-tools/" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">UNC Writing Center ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Comprehensive academic writing resources and handouts</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Writing tips and strategies</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Citation style guides</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Research paper guidance</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.grammarly.com/blog/category/handbook/" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">Grammarly Handbook ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free online writing handbook with grammar rules</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Grammar explanations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Writing style tips</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Common mistakes guide</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.coursera.org/courses?query=academic%20writing" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">Coursera Academic Writing ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Free and paid courses on academic writing</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>University-level courses</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Certificates available</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Self-paced learning</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg p-6 shadow-md">
+          <h3 class="text-xl font-semibold mb-3 text-gray-800">
+            <a href="https://www.reddit.com/r/AskAcademia/" target="_blank" class="text-green-600 hover:text-green-700 hover:underline">r/AskAcademia ↗</a>
+          </h3>
+          <p class="text-gray-700 mb-3">Reddit community for academic writing questions</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Peer support and advice</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Academic discussions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600">•</span>
+              <span>Citation help</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="apa-essays.html" class="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      APA Essays Basics
+    </a>
+    <a href="apa-essays-quiz.html" class="px-6 py-3 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Take Quiz
+    </a>
+    <a href="college-learning-tools.html" class="px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      All Learning Tools
+    </a>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

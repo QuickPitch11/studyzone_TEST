@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="account.html" class="font-medium text-gray-700 hover:text-blue-600">My Account</a>
+      <a href="about.html" class="font-medium text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <a href="index.html" class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition md:hidden">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span>Back</span>
+    </a>
+  </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <!-- Return to Homepage Button -->
+  <div class="mb-6">
+    <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+      <i data-lucide="home" class="w-5 h-5"></i>
+      <span>Return to Homepage</span>
+    </a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-6">
+      <i data-lucide="info" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">About StudyZone</h1>
+    <p class="text-xl text-gray-600">
+      Empowering the next generation of scientists and healthcare professionals
+    </p>
+  </div>
+
+  <!-- Main Content -->
+  <div class="space-y-8">
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-12">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Our Mission</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        StudyZone provides accurate, structured learning tools for students pursuing healthcare, science, and research careers. We believe that quality education should be accessible to everyone, and we're committed to creating comprehensive resources that help students master complex scientific concepts.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        Our platform combines interactive learning materials, detailed study guides, and research tools to create an all-in-one educational experience for aspiring scientists and healthcare professionals.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-12">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800">What We Offer</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i data-lucide="book-open" class="w-6 h-6 text-blue-600"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-lg mb-2">Comprehensive Subjects</h3>
+            <p class="text-gray-600">
+              In-depth coverage of Kinesiology, Biology, Chemistry, Anatomy & Physiology, and Physics.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i data-lucide="graduation-cap" class="w-6 h-6 text-green-600"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-lg mb-2">Interactive Learning</h3>
+            <p class="text-gray-600">
+              Engaging study materials including flashcards, quizzes, and practice exercises.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i data-lucide="microscope" class="w-6 h-6 text-purple-600"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-lg mb-2">Research Tools</h3>
+            <p class="text-gray-600">
+              Access to research databases, scientific calculators, and study resources.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i data-lucide="target" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-lg mb-2">Career-Focused</h3>
+            <p class="text-gray-600">
+              Content designed specifically for healthcare and science career preparation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-12">
+      <h2 class="text-2xl font-bold mb-4 text-gray-800">Our Values</h2>
+      <ul class="space-y-4 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Accuracy:</strong> All content is carefully curated and verified for scientific accuracy</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Accessibility:</strong> Free and open access to quality educational resources</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Innovation:</strong> Continuously improving our platform with new features and content</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-blue-600 font-bold">•</span>
+          <span><strong>Student Success:</strong> Our primary goal is to help students achieve their academic and career objectives</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl shadow-lg p-8 md:p-12 text-white text-center">
+      <h2 class="text-2xl font-bold mb-4">Ready to Start Learning?</h2>
+      <p class="text-lg mb-6 opacity-90">
+        Explore our subjects and begin your journey toward mastering the sciences.
+      </p>
+      <a href="subjects.html" class="inline-block px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition font-semibold">
+        Browse Subjects
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

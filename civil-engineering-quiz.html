@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Civil Engineering Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-6">
+      <i data-lucide="clipboard-check" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Civil Engineering Quiz</h1>
+    <p class="text-xl text-gray-600">Test your advanced knowledge of civil engineering principles and applications</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Questions will be dynamically generated here -->
+  </div>
+
+    <!-- Question 2 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 2</h3>
+      <p class="text-lg text-gray-700 mb-6">According to Terzaghi's effective stress principle, which equation correctly represents the relationship between total stress, effective stress, and pore water pressure?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="a" class="mt-1">
+          <span class="text-gray-700">σ = σ' + u</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="b" class="mt-1">
+          <span class="text-gray-700">σ' = σ - u</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="c" class="mt-1">
+          <span class="text-gray-700">σ' = σ × u</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="d" class="mt-1">
+          <span class="text-gray-700">u = σ + σ'</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q2" value="e" class="mt-1">
+          <span class="text-gray-700">σ = σ' - u</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 3</h3>
+      <p class="text-lg text-gray-700 mb-6">In flexible pavement design, which layer is primarily responsible for distributing traffic loads to the subgrade?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="a" class="mt-1">
+          <span class="text-gray-700">Surface course only</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="b" class="mt-1">
+          <span class="text-gray-700">Base and subbase layers working together as a structural system</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="c" class="mt-1">
+          <span class="text-gray-700">Subgrade soil</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="d" class="mt-1">
+          <span class="text-gray-700">Prime coat layer</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q3" value="e" class="mt-1">
+          <span class="text-gray-700">Tack coat layer</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 4</h3>
+      <p class="text-lg text-gray-700 mb-6">A water flow rate of 2 m³/s passes through a pipe with a cross-sectional area of 0.5 m². Using the continuity equation (Q = A × V), what is the flow velocity in the pipe?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="a" class="mt-1">
+          <span class="text-gray-700">1 m/s</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="b" class="mt-1">
+          <span class="text-gray-700">2 m/s</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="c" class="mt-1">
+          <span class="text-gray-700">4 m/s</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="d" class="mt-1">
+          <span class="text-gray-700">5 m/s</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q4" value="e" class="mt-1">
+          <span class="text-gray-700">8 m/s</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 5</h3>
+      <p class="text-lg text-gray-700 mb-6">In the USCS (Unified Soil Classification System), what does the symbol "CL" represent?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="a" class="mt-1">
+          <span class="text-gray-700">Clayey loam</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="b" class="mt-1">
+          <span class="text-gray-700">Low plasticity clay (lean clay)</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="c" class="mt-1">
+          <span class="text-gray-700">Clean limestone</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="d" class="mt-1">
+          <span class="text-gray-700">Coarse-grained layer</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q5" value="e" class="mt-1">
+          <span class="text-gray-700">Cemented layer</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 6</h3>
+      <p class="text-lg text-gray-700 mb-6">Which construction project delivery method involves a single entity being responsible for both design and construction?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="a" class="mt-1">
+          <span class="text-gray-700">Design-Bid-Build</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="b" class="mt-1">
+          <span class="text-gray-700">Design-Build</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="c" class="mt-1">
+          <span class="text-gray-700">Construction Management at Risk</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="d" class="mt-1">
+          <span class="text-gray-700">Public-Private Partnership</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q6" value="e" class="mt-1">
+          <span class="text-gray-700">Integrated Project Delivery</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 7</h3>
+      <p class="text-lg text-gray-700 mb-6">In reinforced concrete design, why is steel reinforcement necessary?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="a" class="mt-1">
+          <span class="text-gray-700">To increase the compressive strength of concrete</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="b" class="mt-1">
+          <span class="text-gray-700">To provide tensile strength, as concrete is weak in tension</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="c" class="mt-1">
+          <span class="text-gray-700">To reduce the weight of the structure</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="d" class="mt-1">
+          <span class="text-gray-700">To improve the aesthetic appearance</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q7" value="e" class="mt-1">
+          <span class="text-gray-700">To prevent water seepage</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 8</h3>
+      <p class="text-lg text-gray-700 mb-6">In wastewater treatment, the activated sludge process occurs during which treatment stage?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="a" class="mt-1">
+          <span class="text-gray-700">Preliminary treatment</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="b" class="mt-1">
+          <span class="text-gray-700">Primary treatment</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="c" class="mt-1">
+          <span class="text-gray-700">Secondary (biological) treatment</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="d" class="mt-1">
+          <span class="text-gray-700">Tertiary (advanced) treatment</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q8" value="e" class="mt-1">
+          <span class="text-gray-700">Disinfection stage</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 9</h3>
+      <p class="text-lg text-gray-700 mb-6">When designing highway horizontal curves, what is the primary purpose of superelevation (banking)?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="a" class="mt-1">
+          <span class="text-gray-700">To improve drainage on the roadway</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="b" class="mt-1">
+          <span class="text-gray-700">To counteract centrifugal force and prevent vehicles from sliding outward</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="c" class="mt-1">
+          <span class="text-gray-700">To increase sight distance</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="d" class="mt-1">
+          <span class="text-gray-700">To reduce construction costs</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q9" value="e" class="mt-1">
+          <span class="text-gray-700">To accommodate larger vehicles</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 10</h3>
+      <p class="text-lg text-gray-700 mb-6">In the Critical Path Method (CPM) for project scheduling, what is "float" or "slack"?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="a" class="mt-1">
+          <span class="text-gray-700">The total project duration</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="b" class="mt-1">
+          <span class="text-gray-700">The amount of time an activity can be delayed without delaying the project</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="c" class="mt-1">
+          <span class="text-gray-700">The shortest path through the network</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="d" class="mt-1">
+          <span class="text-gray-700">The cost contingency for the project</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q10" value="e" class="mt-1">
+          <span class="text-gray-700">The number of workers on site</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 11</h3>
+      <p class="text-lg text-gray-700 mb-6">According to Hooke's Law (σ = E × ε), if a steel bar with Young's Modulus E = 200 GPa experiences a strain of 0.001, what is the normal stress?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q11" value="a" class="mt-1">
+          <span class="text-gray-700">20 MPa</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q11" value="b" class="mt-1">
+          <span class="text-gray-700">100 MPa</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q11" value="c" class="mt-1">
+          <span class="text-gray-700">200 MPa</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q11" value="d" class="mt-1">
+          <span class="text-gray-700">2000 MPa</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q11" value="e" class="mt-1">
+          <span class="text-gray-700">0.2 MPa</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 12</h3>
+      <p class="text-lg text-gray-700 mb-6">What is the primary advantage of using drilled shafts (caissons) over driven piles for deep foundations?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q12" value="a" class="mt-1">
+          <span class="text-gray-700">They are always cheaper</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q12" value="b" class="mt-1">
+          <span class="text-gray-700">They can be installed with minimal vibration and noise in urban areas</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q12" value="c" class="mt-1">
+          <span class="text-gray-700">They require no specialized equipment</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q12" value="d" class="mt-1">
+          <span class="text-gray-700">They can only be used in sandy soils</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q12" value="e" class="mt-1">
+          <span class="text-gray-700">They have lower load capacity</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 13</h3>
+      <p class="text-lg text-gray-700 mb-6">In sustainable infrastructure design, what does LEED certification primarily evaluate?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q13" value="a" class="mt-1">
+          <span class="text-gray-700">Structural strength only</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q13" value="b" class="mt-1">
+          <span class="text-gray-700">Construction speed</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q13" value="c" class="mt-1">
+          <span class="text-gray-700">Environmental performance and sustainability of buildings</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q13" value="d" class="mt-1">
+          <span class="text-gray-700">Project budget efficiency</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q13" value="e" class="mt-1">
+          <span class="text-gray-700">Labor productivity</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 14</h3>
+      <p class="text-lg text-gray-700 mb-6">What is the most critical requirement before a Professional Engineer (PE) can sign and seal engineering documents?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q14" value="a" class="mt-1">
+          <span class="text-gray-700">Having a bachelor's degree in engineering</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q14" value="b" class="mt-1">
+          <span class="text-gray-700">Passing the PE exam only</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q14" value="c" class="mt-1">
+          <span class="text-gray-700">Being licensed by the state/jurisdiction where work is performed</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q14" value="d" class="mt-1">
+          <span class="text-gray-700">Working for a large engineering firm</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q14" value="e" class="mt-1">
+          <span class="text-gray-700">Having 10 years of experience</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+      <h3 class="text-2xl font-bold mb-4 text-gray-800">Question 15</h3>
+      <p class="text-lg text-gray-700 mb-6">For a 100-year flood event used in civil engineering design, what is the annual exceedance probability?</p>
+      <div class="space-y-3">
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q15" value="a" class="mt-1">
+          <span class="text-gray-700">0.1% (1 in 1000)</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q15" value="b" class="mt-1">
+          <span class="text-gray-700">1% (1 in 100)</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q15" value="c" class="mt-1">
+          <span class="text-gray-700">10% (1 in 10)</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q15" value="d" class="mt-1">
+          <span class="text-gray-700">100%</span>
+        </label>
+        <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+          <input type="radio" name="q15" value="e" class="mt-1">
+          <span class="text-gray-700">50% (1 in 2)</span>
+        </label>
+      </div>
+      <div class="feedback mt-4 hidden"></div>
+    </div>
+
+  </div>
+
+  <!-- Submit Button -->
+  <div class="text-center mt-12">
+    <button id="submitQuiz" class="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold text-lg shadow-lg hover:shadow-xl">
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="results" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Your Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div class="text-center">
+      <a href="civil-engineering-analysis.html" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition mr-4">
+        Review Material
+      </a>
+      <button onclick="location.reload()" class="inline-block px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition">
+        Retake Quiz
+      </button>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Question Bank - 40 questions total
+  const questionBank = [
+    {
+      question: "A simply supported beam is subjected to a uniformly distributed load (UDL) of 10 kN/m over a span of 6 meters. What is the maximum bending moment at the center of the beam?",
+      options: ["30 kN·m", "45 kN·m", "60 kN·m", "90 kN·m", "120 kN·m"],
+      correct: 1,
+      explanation: "For a simply supported beam with UDL, the maximum bending moment at the center is M = wL²/8. With w = 10 kN/m and L = 6 m: M = (10 × 6²)/8 = 360/8 = 45 kN·m. This formula is fundamental in structural analysis for beam design."
+    },
+    {
+      question: "According to Terzaghi's effective stress principle, which equation correctly represents the relationship between total stress, effective stress, and pore water pressure?",
+      options: ["σ = σ' + u", "σ' = σ - u", "σ' = σ × u", "u = σ + σ'", "σ = σ' - u"],
+      correct: 1,
+      explanation: "Terzaghi's effective stress principle states that σ' = σ - u, where σ' is effective stress (which controls soil behavior), σ is total stress, and u is pore water pressure. This principle is fundamental in geotechnical engineering as it explains that only the effective stress transmitted through the soil skeleton controls strength and deformation."
+    },
+    {
+      question: "In flexible pavement design, which layer is primarily responsible for distributing traffic loads to the subgrade?",
+      options: ["Surface course only", "Base and subbase layers working together as a structural system", "Subgrade soil", "Prime coat layer", "Tack coat layer"],
+      correct: 1,
+      explanation: "In flexible pavement, the base and subbase layers work together as a structural system to distribute traffic loads to the subgrade. The surface course provides a smooth riding surface and protects underlying layers, but load distribution primarily occurs through the base/subbase system."
+    },
+    {
+      question: "A water flow rate of 2 m³/s passes through a pipe with a cross-sectional area of 0.5 m². Using the continuity equation (Q = A × V), what is the flow velocity in the pipe?",
+      options: ["1 m/s", "2 m/s", "4 m/s", "5 m/s", "8 m/s"],
+      correct: 2,
+      explanation: "Using the continuity equation Q = A × V, we can solve for velocity: V = Q/A = 2 m³/s ÷ 0.5 m² = 4 m/s. This fundamental equation in fluid mechanics states that flow rate equals cross-sectional area times velocity and is essential for hydraulic design."
+    },
+    {
+      question: "In the USCS (Unified Soil Classification System), what does the symbol 'CL' represent?",
+      options: ["Clayey loam", "Low plasticity clay (lean clay)", "Clean limestone", "Coarse-grained layer", "Cemented layer"],
+      correct: 1,
+      explanation: "In the USCS, 'CL' stands for low plasticity clay (also called lean clay). The first letter 'C' indicates clay, and the second letter 'L' indicates low plasticity. This classification system is crucial for soil identification and engineering property estimation."
+    },
+    {
+      question: "Which construction project delivery method involves a single entity being responsible for both design and construction?",
+      options: ["Design-Bid-Build", "Design-Build", "Construction Management at Risk", "Public-Private Partnership", "Integrated Project Delivery"],
+      correct: 1,
+      explanation: "Design-Build is a project delivery method where a single entity contracts with the owner to provide both design and construction services. This approach offers single-point responsibility, potentially faster delivery, and better integration between design and construction phases compared to traditional Design-Bid-Build."
+    },
+    {
+      question: "In reinforced concrete design, why is steel reinforcement necessary?",
+      options: ["To increase the compressive strength of concrete", "To provide tensile strength, as concrete is weak in tension", "To reduce the weight of the structure", "To improve the aesthetic appearance", "To prevent water seepage"],
+      correct: 1,
+      explanation: "Steel reinforcement is necessary in concrete because concrete has high compressive strength (~20-60 MPa) but very low tensile strength (about 10% of compressive strength). The steel bars are placed in tension zones to resist tensile stresses, creating a composite material that effectively resists both compression and tension."
+    },
+    {
+      question: "In wastewater treatment, the activated sludge process occurs during which treatment stage?",
+      options: ["Preliminary treatment", "Primary treatment", "Secondary (biological) treatment", "Tertiary (advanced) treatment", "Disinfection stage"],
+      correct: 2,
+      explanation: "The activated sludge process is a biological (secondary) treatment method where aerobic bacteria consume organic matter in wastewater. Microorganisms are mixed with wastewater in an aeration tank, consuming organic pollutants and reducing BOD (biochemical oxygen demand) by approximately 90%."
+    },
+    {
+      question: "When designing highway horizontal curves, what is the primary purpose of superelevation (banking)?",
+      options: ["To improve drainage on the roadway", "To counteract centrifugal force and prevent vehicles from sliding outward", "To increase sight distance", "To reduce construction costs", "To accommodate larger vehicles"],
+      correct: 1,
+      explanation: "Superelevation (banking) on horizontal curves counteracts centrifugal force, helping vehicles negotiate curves safely at design speed. The roadway is tilted inward toward the center of the curve, combining with friction to provide the necessary centripetal force to keep vehicles on their path."
+    },
+    {
+      question: "In the Critical Path Method (CPM) for project scheduling, what is 'float' or 'slack'?",
+      options: ["The total project duration", "The amount of time an activity can be delayed without delaying the project", "The shortest path through the network", "The cost contingency for the project", "The number of workers on site"],
+      correct: 1,
+      explanation: "Float (or slack) is the amount of time an activity can be delayed without delaying the overall project completion. Activities on the critical path have zero float, meaning any delay will delay the project. Non-critical activities have positive float, providing scheduling flexibility."
+    },
+    {
+      question: "According to Hooke's Law (σ = E × ε), if a steel bar with Young's Modulus E = 200 GPa experiences a strain of 0.001, what is the normal stress?",
+      options: ["20 MPa", "100 MPa", "200 MPa", "2000 MPa", "0.2 MPa"],
+      correct: 2,
+      explanation: "Using Hooke's Law σ = E × ε: σ = 200 GPa × 0.001 = 200,000 MPa × 0.001 = 200 MPa. Note that 1 GPa = 1000 MPa. This linear relationship between stress and strain holds in the elastic region of material behavior and is fundamental to structural analysis."
+    },
+    {
+      question: "What is the primary advantage of using drilled shafts (caissons) over driven piles for deep foundations?",
+      options: ["They are always cheaper", "They can be installed with minimal vibration and noise in urban areas", "They require no specialized equipment", "They can only be used in sandy soils", "They have lower load capacity"],
+      correct: 1,
+      explanation: "Drilled shafts (caissons) can be installed with minimal vibration and noise, making them ideal for urban environments and sites near sensitive structures. Unlike driven piles which use impact hammers, drilled shafts are excavated and filled with concrete, providing a quieter installation process. They also allow inspection of soil conditions during construction."
+    },
+    {
+      question: "In sustainable infrastructure design, what does LEED certification primarily evaluate?",
+      options: ["Structural strength only", "Construction speed", "Environmental performance and sustainability of buildings", "Project budget efficiency", "Labor productivity"],
+      correct: 2,
+      explanation: "LEED (Leadership in Energy and Environmental Design) certification evaluates the environmental performance and sustainability of buildings across multiple categories including sustainable sites, water efficiency, energy and atmosphere, materials and resources, indoor environmental quality, and innovation. It provides a framework for green building design and construction."
+    },
+    {
+      question: "What is the most critical requirement before a Professional Engineer (PE) can sign and seal engineering documents?",
+      options: ["Having a bachelor's degree in engineering", "Passing the PE exam only", "Being licensed by the state/jurisdiction where work is performed", "Working for a large engineering firm", "Having 10 years of experience"],
+      correct: 2,
+      explanation: "A Professional Engineer must be licensed by the state or jurisdiction where the engineering work is being performed to legally sign and seal engineering documents. While passing the PE exam, having an ABET-accredited degree, and gaining experience are requirements for obtaining licensure, the actual license from the relevant jurisdiction is what grants legal authority to certify engineering work."
+    },
+    {
+      question: "For a 100-year flood event used in civil engineering design, what is the annual exceedance probability?",
+      options: ["0.1% (1 in 1000)", "1% (1 in 100)", "10% (1 in 10)", "100%", "50% (1 in 2)"],
+      correct: 1,
+      explanation: "A 100-year flood has a 1% annual exceedance probability (1 in 100 chance in any given year). This is often misunderstood - it doesn't mean the flood occurs once every 100 years, but rather that there's a 1% chance of a flood of that magnitude occurring in any single year. This concept is crucial for flood risk assessment and infrastructure design."
+    },
+    {
+      question: "A cantilever beam of length 4 meters supports a point load of 20 kN at its free end. What is the maximum bending moment?",
+      options: ["40 kN·m", "60 kN·m", "80 kN·m", "100 kN·m", "120 kN·m"],
+      correct: 2,
+      explanation: "For a cantilever beam with a point load at the free end, the maximum bending moment occurs at the fixed support and is M = P × L = 20 kN × 4 m = 80 kN·m. The moment diagram is triangular with maximum value at the support."
+    },
+    {
+      question: "What is the primary purpose of conducting a Standard Penetration Test (SPT) in geotechnical investigation?",
+      options: ["To measure groundwater depth only", "To estimate soil strength and density characteristics", "To determine chemical composition of soil", "To measure soil temperature", "To identify rock types"],
+      correct: 1,
+      explanation: "The SPT is used to estimate the relative density of granular soils and the consistency of cohesive soils. The N-value (blow count) obtained correlates with soil strength, density, and engineering properties. It's one of the most widely used in-situ testing methods in geotechnical engineering."
+    },
+    {
+      question: "In open channel flow, what does the Froude number indicate?",
+      options: ["Water temperature", "Flow rate magnitude", "The ratio of inertial forces to gravitational forces", "Channel roughness", "Water density"],
+      correct: 2,
+      explanation: "The Froude number (Fr = V/√(gD)) represents the ratio of inertial forces to gravitational forces in open channel flow. Fr < 1 indicates subcritical (tranquil) flow, Fr = 1 is critical flow, and Fr > 1 is supercritical (rapid) flow. This dimensionless number is essential for hydraulic jump analysis and channel design."
+    },
+    {
+      question: "Which type of foundation would be most appropriate for a building on deep, weak clay with strong bearing strata at 25 meters depth?",
+      options: ["Shallow spread footings", "Mat foundation", "Driven piles or drilled shafts", "Strip footings", "Raft foundation"],
+      correct: 2,
+      explanation: "Deep foundations (driven piles or drilled shafts) are required when surface soils are weak and strong bearing strata exist at significant depth. These foundations transfer loads through weak soils to the strong bearing layer below, either through end bearing or a combination of skin friction and end bearing."
+    },
+    {
+      question: "What is the primary difference between BOD (Biochemical Oxygen Demand) and COD (Chemical Oxygen Demand) in water quality testing?",
+      options: ["They measure the same thing", "BOD uses biological oxidation; COD uses chemical oxidation", "COD is only for saltwater", "BOD is faster to measure", "They measure pH levels"],
+      correct: 1,
+      explanation: "BOD measures the amount of oxygen consumed by biological organisms when decomposing organic matter over a specific time period (typically 5 days). COD uses chemical oxidation to measure all oxidizable matter, both biodegradable and non-biodegradable. COD is faster but less specific than BOD for measuring biologically degradable organic pollution."
+    },
+    {
+      question: "In prestressed concrete, what is the main advantage of applying compressive stress before loading?",
+      options: ["To make concrete lighter", "To counteract tensile stresses that will develop under service loads", "To improve color", "To speed up curing", "To reduce material costs"],
+      correct: 1,
+      explanation: "Prestressing applies compressive stress to concrete before it experiences service loads. Since concrete is weak in tension, prestressing counteracts the tensile stresses that develop under loading, allowing the concrete to remain in compression throughout its cross-section. This enables longer spans and reduced cracking compared to conventional reinforced concrete."
+    },
+    {
+      question: "What is the purpose of a hydraulic jump in open channel flow?",
+      options: ["To increase flow velocity", "To dissipate energy and transition from supercritical to subcritical flow", "To add oxygen to water", "To filter sediment", "To measure flow rate"],
+      correct: 1,
+      explanation: "A hydraulic jump is a phenomenon where supercritical flow (Fr > 1) transitions to subcritical flow (Fr < 1), accompanied by a sudden rise in water depth and significant energy dissipation. It's commonly used in spillways and stilling basins to dissipate excess energy and prevent downstream erosion."
+    },
+    {
+      question: "In traffic engineering, what does LOS (Level of Service) Grade F indicate?",
+      options: ["Excellent free-flow conditions", "Stable flow with minor delays", "Unstable flow approaching capacity", "Forced flow with severe congestion and delays", "No traffic"],
+      correct: 3,
+      explanation: "LOS is graded from A (best) to F (worst). LOS F represents forced or breakdown flow conditions where demand exceeds capacity, resulting in stop-and-go traffic, long queues, and severe delays. Traffic operates well below capacity due to congestion, and travel times are highly unpredictable."
+    },
+    {
+      question: "What does the term 'consolidation' mean in geotechnical engineering?",
+      options: ["Mixing different soil types", "Time-dependent settlement due to expulsion of pore water from saturated clay", "Immediate settlement of sand", "Freezing of soil", "Soil erosion"],
+      correct: 1,
+      explanation: "Consolidation is the gradual reduction in volume of saturated clay soil due to expulsion of pore water under sustained loading. It's a time-dependent process that can take months or years. Terzaghi's consolidation theory predicts settlement magnitude and rate, which is critical for foundation design on clay soils."
+    },
+    {
+      question: "In structural steel design, what is the primary purpose of lateral bracing for beams?",
+      options: ["To add weight", "To prevent lateral-torsional buckling", "To improve aesthetics", "To reduce material costs", "To speed up construction"],
+      correct: 1,
+      explanation: "Lateral bracing prevents lateral-torsional buckling, a failure mode where a beam deflects laterally and twists under load. Unbraced or inadequately braced beams can buckle at loads well below their theoretical bending capacity. Proper bracing at intervals allows the beam to develop its full moment capacity."
+    },
+    {
+      question: "What is the main purpose of a detention pond in stormwater management?",
+      options: ["To permanently store water", "To temporarily detain runoff and reduce peak discharge rates", "To treat sewage", "To generate power", "To provide drinking water"],
+      correct: 1,
+      explanation: "Detention ponds temporarily store stormwater runoff during rainfall events and release it slowly over time, reducing peak discharge rates and preventing downstream flooding. Unlike retention ponds which maintain a permanent pool, detention ponds drain completely between storm events."
+    },
+    {
+      question: "In pavement design, what is 'rutting'?",
+      options: ["Surface cracking", "Permanent deformation in wheel paths", "Edge breaking", "Color fading", "Joint separation"],
+      correct: 1,
+      explanation: "Rutting is permanent deformation that appears as longitudinal depressions in the wheel paths of asphalt pavements. It's caused by repeated traffic loading and results from either densification (compaction) or lateral flow (shear deformation) of pavement materials. Rutting can create safety hazards by causing water accumulation and hydroplaning."
+    },
+    {
+      question: "What does the slump test measure in fresh concrete?",
+      options: ["Compressive strength", "Workability and consistency", "Color uniformity", "Curing time", "Aggregate size"],
+      correct: 1,
+      explanation: "The slump test measures the consistency and workability of fresh concrete. A cone of concrete is formed and then removed; the decrease in height (slump) indicates how fluid the mixture is. Higher slump indicates more workable (flowable) concrete, while lower slump indicates stiffer concrete. Typical slumps range from 25mm to 200mm depending on application."
+    },
+    {
+      question: "In surveying, what is the purpose of differential leveling?",
+      options: ["To measure horizontal distances", "To determine elevation differences between points", "To measure angles", "To locate property boundaries", "To measure areas"],
+      correct: 1,
+      explanation: "Differential leveling is a surveying technique used to determine the difference in elevation between two or more points. A level instrument and graduated rod are used to measure vertical height differences. This is essential for establishing benchmarks, grading plans, and ensuring proper drainage design."
+    },
+    {
+      question: "What is the primary function of a weir in hydraulic engineering?",
+      options: ["To generate electricity", "To measure flow rate or control water level", "To filter water", "To add chemicals", "To heat water"],
+      correct: 1,
+      explanation: "A weir is a barrier across a river or channel that alters flow characteristics. Weirs are primarily used for flow measurement (using weir equations) or water level control. Common types include rectangular, triangular (V-notch), and broad-crested weirs. The relationship between head and discharge is well-defined, making weirs accurate flow measurement devices."
+    },
+    {
+      question: "In retaining wall design, what is 'active earth pressure'?",
+      options: ["Pressure when wall moves away from soil", "Pressure when wall is stationary", "Pressure when wall moves into soil", "Pressure from water only", "Atmospheric pressure"],
+      correct: 0,
+      explanation: "Active earth pressure is the lateral pressure exerted by soil on a retaining wall when the wall moves slightly away from the retained soil mass. This movement allows the soil to expand and reach a state of plastic equilibrium, resulting in the minimum lateral pressure. Active pressure is less than at-rest pressure and is used in most retaining wall designs."
+    },
+    {
+      question: "What is the purpose of a construction joint in concrete structures?",
+      options: ["To create decorative patterns", "To provide a planned stopping point in concrete placement where construction must cease", "To allow thermal expansion only", "To reduce costs", "To add color"],
+      correct: 1,
+      explanation: "Construction joints are planned stopping points in concrete placement where construction must cease temporarily (end of work day, pour size limitations, etc.). They're designed to allow proper load transfer between adjacent pours and maintain structural integrity. Proper preparation of construction joints is essential for ensuring monolithic behavior of the completed structure."
+    },
+    {
+      question: "In soil mechanics, what does the term 'liquefaction' refer to?",
+      options: ["Soil turning into liquid permanently", "Loss of soil strength due to increased pore pressure during seismic events", "Melting of frozen soil", "Soil becoming very dry", "Chemical dissolution"],
+      correct: 1,
+      explanation: "Liquefaction occurs when saturated, loose, granular soils lose strength and stiffness due to increased pore water pressure during cyclic loading (typically earthquakes). The effective stress decreases to near zero, causing the soil to behave like a liquid. This phenomenon can cause buildings to sink, slope failures, and lateral spreading."
+    },
+    {
+      question: "What is the primary purpose of using admixtures in concrete?",
+      options: ["To change concrete color", "To modify properties such as workability, setting time, or durability", "To reduce cement content significantly", "To eliminate need for curing", "To make concrete transparent"],
+      correct: 1,
+      explanation: "Admixtures are ingredients added to concrete (other than cement, water, and aggregates) to modify its properties. Common types include: water reducers (improve workability), accelerators (speed setting), retarders (delay setting), air-entraining agents (improve freeze-thaw resistance), and superplasticizers (high-range water reduction). Proper admixture use can significantly enhance concrete performance."
+    },
+    {
+      question: "In transportation engineering, what is the primary purpose of a 'transition curve' between a straight section and a circular curve?",
+      options: ["To save construction costs", "To provide gradual change in curvature and superelevation", "To reduce speed limit", "To add aesthetic value", "To shorten the route"],
+      correct: 1,
+      explanation: "Transition curves (typically spirals) provide a gradual change from zero curvature (straight) to the full curvature of the circular curve. This allows for gradual introduction of centrifugal force and smooth transition of superelevation. Without transition curves, abrupt changes would cause discomfort and safety issues at higher speeds."
+    },
+    {
+      question: "What is the main difference between 'cut' and 'fill' in earthwork operations?",
+      options: ["No difference", "Cut is excavation; fill is placement of soil to raise grade", "Cut is for drainage; fill is for foundations", "Cut is temporary; fill is permanent", "They use different equipment"],
+      correct: 1,
+      explanation: "Cut refers to excavation or removal of soil/rock to lower the ground surface to the desired grade. Fill refers to placement and compaction of soil to raise the ground surface to the desired grade. Mass diagram analysis is used to balance cut and fill volumes, minimizing haul distances and costs in earthwork operations."
+    },
+    {
+      question: "In water treatment, what is the purpose of coagulation and flocculation?",
+      options: ["To kill bacteria", "To aggregate small particles into larger flocs for easier removal", "To adjust pH", "To add oxygen", "To measure flow rate"],
+      correct: 1,
+      explanation: "Coagulation involves adding chemicals (coagulants like alum) to destabilize suspended particles. Flocculation is gentle mixing that causes these destabilized particles to aggregate into larger flocs. These larger particles settle more easily in sedimentation basins. This process is essential for removing turbidity, color, and microorganisms from water."
+    },
+    {
+      question: "What is the purpose of a 'benchmark' in surveying and construction?",
+      options: ["To mark property boundaries", "A point of known elevation used as reference for leveling", "To indicate magnetic north", "To measure horizontal distances", "To mark construction limits"],
+      correct: 1,
+      explanation: "A benchmark is a permanent point of known elevation established by precise leveling. It serves as a vertical reference for all elevation measurements on a project. Benchmarks are typically marked on stable objects like concrete monuments, bridge abutments, or bedrock, and their elevations are carefully documented and preserved."
+    },
+    {
+      question: "In reinforced concrete beam design, where are tensile reinforcement bars typically placed?",
+      options: ["At the top of the beam everywhere", "At the bottom in positive moment regions; at the top in negative moment regions", "In the middle of the beam", "Randomly distributed", "Only at the ends"],
+      correct: 1,
+      explanation: "Concrete cracks where tensile stresses occur. In simply supported beams, positive moments cause tension at the bottom, requiring bottom reinforcement. In continuous beams over supports, negative moments cause tension at the top, requiring top reinforcement. Proper placement of reinforcement in tension zones is fundamental to reinforced concrete design."
+    },
+    {
+      question: "What does the California Bearing Ratio (CBR) test measure?",
+      options: ["Concrete strength", "Soil bearing capacity and stiffness for pavement design", "Water content", "Chemical composition", "Temperature resistance"],
+      correct: 1,
+      explanation: "The CBR test measures the strength and stiffness of soil and aggregate materials for pavement design. It compares the force required to penetrate the test material to that required for standard crushed stone (100% CBR). Higher CBR values indicate stronger materials. CBR is used to determine pavement thickness requirements and subgrade strength classification."
+    }
+  ];
+
+  // Shuffle array function
+  function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  // Select 15 random questions
+  const selectedQuestions = shuffleArray(questionBank).slice(0, 15);
+  const correctAnswers = {};
+  const explanations = {};
+
+  // Generate quiz HTML
+  const quizContainer = document.getElementById('quizContainer');
+  selectedQuestions.forEach((q, index) => {
+    const questionNum = index + 1;
+    const questionId = `q${questionNum}`;
+    
+    // Store correct answer and explanation
+    correctAnswers[questionId] = q.correct;
+    explanations[questionId] = q.explanation;
+    
+    // Shuffle options with correct answer tracking
+    const optionsWithIndex = q.options.map((opt, idx) => ({ text: opt, originalIndex: idx }));
+    const shuffledOptions = shuffleArray(optionsWithIndex);
+    
+    // Find new position of correct answer
+    const newCorrectIndex = shuffledOptions.findIndex(opt => opt.originalIndex === q.correct);
+    correctAnswers[questionId] = newCorrectIndex;
+    
+    // Create question HTML
+    const questionHTML = `
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500 quiz-question">
+        <h3 class="text-2xl font-bold mb-4 text-gray-800">Question ${questionNum}</h3>
+        <p class="text-lg text-gray-700 mb-6">${q.question}</p>
+        <div class="space-y-3">
+          ${shuffledOptions.map((opt, optIndex) => `
+            <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+              <input type="radio" name="${questionId}" value="${optIndex}" class="mt-1">
+              <span class="text-gray-700">${opt.text}</span>
+            </label>
+          `).join('')}
+        </div>
+        <div class="feedback mt-4 hidden"></div>
+      </div>
+    `;
+    
+    quizContainer.innerHTML += questionHTML;
+  });
+
+  lucide.createIcons();
+
+  document.getElementById('submitQuiz').addEventListener('click', function() {
+    let score = 0;
+    let totalQuestions = Object.keys(correctAnswers).length;
+
+    // Check each answer
+    for (let question in correctAnswers) {
+      const selected = document.querySelector(`input[name="${question}"]:checked`);
+      const questionDiv = document.querySelector(`input[name="${question}"]`).closest('.quiz-question');
+      const feedbackDiv = questionDiv.querySelector('.feedback');
+      
+      if (selected) {
+        if (selected.value === correctAnswers[question]) {
+          score++;
+          feedbackDiv.innerHTML = `<div class="p-4 bg-green-100 border-l-4 border-green-500 rounded"><p class="font-semibold text-green-800">✓ Correct!</p><p class="text-green-700 mt-2">${explanations[question]}</p></div>`;
+        } else {
+          feedbackDiv.innerHTML = `<div class="p-4 bg-red-100 border-l-4 border-red-500 rounded"><p class="font-semibold text-red-800">✗ Incorrect</p><p class="text-red-700 mt-2">${explanations[question]}</p></div>`;
+        }
+        feedbackDiv.classList.remove('hidden');
+      } else {
+        feedbackDiv.innerHTML = `<div class="p-4 bg-yellow-100 border-l-4 border-yellow-500 rounded"><p class="font-semibold text-yellow-800">⚠ Not answered</p><p class="text-yellow-700 mt-2">${explanations[question]}</p></div>`;
+        feedbackDiv.classList.remove('hidden');
+      }
+    }
+
+    // Calculate percentage
+    let percentage = Math.round((score / totalQuestions) * 100);
+    
+    // Display results
+    let resultColor = percentage >= 70 ? 'text-green-600' : percentage >= 50 ? 'text-yellow-600' : 'text-red-600';
+    let resultMessage = percentage >= 70 ? 'Excellent work!' : percentage >= 50 ? 'Good effort! Review the material and try again.' : 'Keep studying! Review the in-depth analysis.';
+    
+    document.getElementById('scoreDisplay').innerHTML = `
+      <div class="text-6xl font-bold ${resultColor} mb-4">${score}/${totalQuestions}</div>
+      <div class="text-2xl font-semibold text-gray-700">${percentage}%</div>
+      <div class="text-xl text-gray-600 mt-2">${resultMessage}</div>
+    `;
+    
+    document.getElementById('results').classList.remove('hidden');
+    
+    // Scroll to results
+    document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

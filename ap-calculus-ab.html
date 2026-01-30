@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AP Calculus AB - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-indigo-500 to-sky-500 rounded-full mb-6">
+      <i data-lucide="function-square" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">AP Calculus AB: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">Comprehensive exploration of limits, derivatives, and integration</p>
+  </div>
+
+  <div class="space-y-10">
+    <!-- Introduction -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Introduction to AP Calculus AB</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        AP Calculus AB is equivalent to a first-semester college calculus course, focusing on differential and integral calculus. The course emphasizes a multi-representational approach to calculus, with concepts, results, and problems expressed graphically, numerically, analytically, and verbally. The primary textbook content includes limits and continuity, derivatives and their applications, and integrals and their applications. Students develop the ability to work with functions represented in various ways (graphical, numerical, analytical, verbal) and to understand the connections among these representations.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The AP Calculus AB exam consists of two sections: a multiple-choice section (45 questions, 105 minutes) and a free-response section (6 questions, 90 minutes). Both sections are split into calculator-active and calculator-inactive portions. The exam tests conceptual understanding, computational skills, analytical reasoning, and the ability to communicate mathematical ideas clearly. Students who score a 3, 4, or 5 typically receive college credit for a one-semester calculus course.
+      </p>
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Course Prerequisites and Skills:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Algebra:</strong> Strong proficiency in algebraic manipulation, solving equations, factoring, working with exponents and radicals, and understanding function notation.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Functions:</strong> Deep understanding of linear, polynomial, rational, exponential, logarithmic, and trigonometric functions, including transformations, compositions, and inverses.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Trigonometry:</strong> Knowledge of trigonometric identities, unit circle, trigonometric equations, and graphs of trigonometric functions.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Analytical Geometry:</strong> Understanding of coordinate geometry, distance formula, equation of a line, circles, and conic sections.</span></li>
+      </ul>
+    </div>
+
+    <!-- Unit 1: Limits and Continuity -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Unit 1: Limits and Continuity</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Understanding Limits</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        A limit describes the value that a function approaches as the input approaches some value. The notation lim(x→a) f(x) = L means that as x gets arbitrarily close to a (but not necessarily equal to a), f(x) gets arbitrarily close to L. Limits are foundational to calculus because they allow us to work with instantaneous rates of change (derivatives) and accumulated quantities (integrals).
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>One-Sided Limits:</strong> Left-hand limit lim(x→a⁻) f(x) approaches from the left; right-hand limit lim(x→a⁺) f(x) approaches from the right. For a limit to exist, both one-sided limits must exist and be equal.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Infinite Limits:</strong> When f(x) grows without bound as x approaches a, we write lim(x→a) f(x) = ∞ or -∞. This indicates vertical asymptotes in the graph.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Limits at Infinity:</strong> lim(x→∞) f(x) describes the behavior of f(x) as x becomes arbitrarily large. This determines horizontal asymptotes.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Indeterminate Forms:</strong> Forms like 0/0, ∞/∞ require algebraic manipulation (factoring, conjugate multiplication, L'Hôpital's Rule in BC) to evaluate.</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Continuity</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        A function f is continuous at x = a if: (1) f(a) exists, (2) lim(x→a) f(x) exists, and (3) lim(x→a) f(x) = f(a). Intuitively, a function is continuous if you can draw its graph without lifting your pencil. Discontinuities can be removable (hole), jump, or infinite (vertical asymptote).
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Types of Discontinuities:</strong> Removable (can be "fixed" by redefining one point), jump (left and right limits exist but are unequal), infinite (function approaches ±∞).</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Intermediate Value Theorem (IVT):</strong> If f is continuous on [a,b] and N is between f(a) and f(b), then there exists c in (a,b) such that f(c) = N. Used to guarantee solutions to equations.</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Continuous Functions:</strong> Polynomials, rational functions (on their domains), exponential, logarithmic, and trigonometric functions are continuous on their domains.</span></li>
+      </ul>
+    </div>
+
+    <!-- Unit 2: Differentiation: Definition and Fundamental Properties -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Unit 2: Differentiation - Definition and Fundamental Properties</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">The Derivative as a Limit</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The derivative of f at x = a is defined as f'(a) = lim(h→0) [f(a+h) - f(a)]/h, which represents the instantaneous rate of change of f at a. Geometrically, it's the slope of the tangent line to the graph of f at the point (a, f(a)). The derivative can also be interpreted as velocity (if f represents position), marginal cost (economics), or any rate of change.
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Differentiation Rules</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Power Rule:</strong> d/dx[xⁿ] = n·xⁿ⁻¹</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Constant Multiple Rule:</strong> d/dx[c·f(x)] = c·f'(x)</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Sum/Difference Rule:</strong> d/dx[f(x) ± g(x)] = f'(x) ± g'(x)</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Product Rule:</strong> d/dx[f(x)·g(x)] = f'(x)·g(x) + f(x)·g'(x)</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Quotient Rule:</strong> d/dx[f(x)/g(x)] = [f'(x)·g(x) - f(x)·g'(x)]/[g(x)]²</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Chain Rule:</strong> d/dx[f(g(x))] = f'(g(x))·g'(x) — essential for composite functions</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Common Derivatives</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Trigonometric:</strong> d/dx[sin x] = cos x, d/dx[cos x] = -sin x, d/dx[tan x] = sec²x</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Exponential:</strong> d/dx[eˣ] = eˣ, d/dx[aˣ] = aˣ·ln(a)</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Logarithmic:</strong> d/dx[ln x] = 1/x, d/dx[log_a x] = 1/(x·ln a)</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Inverse Trig:</strong> d/dx[arcsin x] = 1/√(1-x²), d/dx[arctan x] = 1/(1+x²)</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Implicit Differentiation</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        When y is defined implicitly by an equation (e.g., x² + y² = 25), differentiate both sides with respect to x, treating y as a function of x and applying the chain rule. Then solve for dy/dx. This technique is essential for curves that aren't functions (circles, ellipses) and related rates problems.
+      </p>
+    </div>
+
+    <!-- Unit 3: Differentiation: Composite, Implicit, and Inverse Functions -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Unit 3: Composite, Implicit, and Inverse Functions</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Chain Rule Mastery</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The chain rule is one of the most powerful and frequently used differentiation techniques. When differentiating composite functions f(g(x)), remember: derivative of outer function evaluated at inner function, times derivative of inner function. Common applications include exponential functions with non-trivial exponents (e.g., e^(x²)), trigonometric functions with polynomial arguments (sin(3x²)), and nested compositions.
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Derivatives of Inverse Functions</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        If f and g are inverse functions, then g'(x) = 1/f'(g(x)). This relationship is crucial for finding derivatives of inverse trigonometric functions and understanding the symmetry between a function and its inverse. The graphs of f and f⁻¹ are reflections across y = x, and their tangent lines at corresponding points have reciprocal slopes.
+      </p>
+    </div>
+
+    <!-- Unit 4: Contextual Applications of Differentiation -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Unit 4: Contextual Applications of Differentiation</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Related Rates</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Related rates problems involve finding the rate at which one quantity changes with respect to time, given information about the rate of change of related quantities. Strategy: (1) Draw a diagram and label variables, (2) Write an equation relating the variables, (3) Differentiate both sides with respect to time t (using implicit differentiation and chain rule), (4) Substitute known values and solve for the unknown rate.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Common scenarios include: ladders sliding down walls, water draining from tanks, shadows changing length, distance between moving objects, inflation of balloons, and expansion of ripples in water.
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Linear Approximation and Differentials</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The tangent line to f at x = a provides a linear approximation: L(x) = f(a) + f'(a)(x - a). This approximates f(x) for x near a. Differentials provide notation: dy = f'(x)dx represents the change in y along the tangent line when x changes by dx. Used for approximating function values and estimating errors in measurements.
+      </p>
+    </div>
+
+    <!-- Unit 5: Analytical Applications of Differentiation -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Unit 5: Analytical Applications of Differentiation</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Mean Value Theorem (MVT)</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        If f is continuous on [a,b] and differentiable on (a,b), then there exists c in (a,b) such that f'(c) = [f(b) - f(a)]/(b - a). Interpretation: At some point, the instantaneous rate of change equals the average rate of change. The MVT guarantees the existence of a point where the tangent line is parallel to the secant line connecting the endpoints.
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Extreme Value Theorem and Critical Points</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        A continuous function on a closed interval [a,b] attains both a maximum and minimum value. Critical points occur where f'(x) = 0 or f'(x) is undefined. To find absolute extrema: (1) Find all critical points in the interval, (2) Evaluate f at critical points and endpoints, (3) The largest value is the absolute maximum, smallest is absolute minimum.
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">First Derivative Test (Increasing/Decreasing)</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span>If f'(x) > 0 on an interval, f is increasing on that interval</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span>If f'(x) < 0 on an interval, f is decreasing on that interval</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span>Local maximum occurs when f' changes from positive to negative</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span>Local minimum occurs when f' changes from negative to positive</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Second Derivative Test (Concavity)</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span>If f''(x) > 0, f is concave up (graph curves upward, like ∪)</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span>If f''(x) < 0, f is concave down (graph curves downward, like ∩)</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span>Points of inflection occur where concavity changes (f'' changes sign)</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span>If f'(c) = 0 and f''(c) > 0, then f has a local minimum at c</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span>If f'(c) = 0 and f''(c) < 0, then f has a local maximum at c</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Optimization Problems</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Optimization involves finding maximum or minimum values in real-world contexts. Strategy: (1) Draw and label a diagram, (2) Write the quantity to be optimized as a function of one variable, (3) Find the domain (realistic constraints), (4) Find critical points by taking derivative and setting equal to zero, (5) Use first or second derivative test to confirm maximum/minimum, (6) Check endpoints if applicable.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        Common problems: minimizing cost, maximizing area or volume with constraints, minimizing materials, maximizing revenue or profit, minimizing time or distance.
+      </p>
+    </div>
+
+    <!-- Unit 6: Integration and Accumulation of Change -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Unit 6: Integration and Accumulation of Change</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Antiderivatives and Indefinite Integrals</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        An antiderivative of f is a function F such that F'(x) = f(x). The indefinite integral ∫f(x)dx represents the family of all antiderivatives, written as F(x) + C, where C is an arbitrary constant. Integration reverses differentiation.
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Power Rule:</strong> ∫xⁿdx = xⁿ⁺¹/(n+1) + C (for n ≠ -1)</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Exponential:</strong> ∫eˣdx = eˣ + C</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Trigonometric:</strong> ∫sin x dx = -cos x + C, ∫cos x dx = sin x + C</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Special:</strong> ∫(1/x)dx = ln|x| + C</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Riemann Sums and Definite Integrals</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        A Riemann sum approximates the area under a curve by summing areas of rectangles. Methods include left endpoint, right endpoint, midpoint, and trapezoidal approximations. As the number of rectangles approaches infinity, the Riemann sum approaches the definite integral ∫[a to b]f(x)dx, which represents the exact signed area between the curve and x-axis from x = a to x = b.
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-8 00 mt-6">Fundamental Theorem of Calculus (FTC)</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        <strong>FTC Part 1:</strong> If F(x) = ∫[a to x]f(t)dt, then F'(x) = f(x). This connects differentiation and integration: the derivative of an integral gives back the original function.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        <strong>FTC Part 2:</strong> ∫[a to b]f(x)dx = F(b) - F(a), where F is any antiderivative of f. To evaluate a definite integral, find an antiderivative and subtract its values at the endpoints. This provides a practical method for calculating exact areas.
+      </p>
+    </div>
+
+    <!-- Unit 7: Differential Equations and Mathematical Modeling -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Unit 7: Differential Equations and Mathematical Modeling</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Separable Differential Equations</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        A differential equation of the form dy/dx = g(x)h(y) can be solved by separation of variables: (1) Rewrite as dy/h(y) = g(x)dx, (2) Integrate both sides, (3) Solve for y if possible. The constant of integration is determined by an initial condition. Common applications include exponential growth/decay, Newton's Law of Cooling, and logistic growth.
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Slope Fields</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        A slope field (direction field) is a graphical representation of a differential equation dy/dx = f(x,y). At each point (x,y), draw a small line segment with slope f(x,y). Solution curves to the differential equation follow the flow of the slope field. Slope fields allow qualitative analysis of solutions without solving the equation explicitly.
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Exponential Growth and Decay</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        The differential equation dy/dt = ky (where k is a constant) models exponential growth (k > 0) or decay (k < 0). The solution is y = y₀e^(kt), where y₀ is the initial value. Applications include population growth, radioactive decay, compound interest, and Newton's Law of Cooling (dT/dt = k(T - Tₐ), where Tₐ is ambient temperature).
+      </p>
+    </div>
+
+    <!-- Unit 8: Applications of Integration -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Unit 8: Applications of Integration</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Area Between Curves</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        To find the area between f(x) and g(x) from x = a to x = b (where f(x) ≥ g(x)): Area = ∫[a to b][f(x) - g(x)]dx. The integrand is always "top function minus bottom function." If the curves intersect, find intersection points and split the integral accordingly. For curves defined as x = f(y) and x = g(y), integrate with respect to y.
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Volume of Solids of Revolution</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        <strong>Disk Method:</strong> When rotating f(x) about the x-axis from x = a to x = b, the volume is V = π∫[a to b][f(x)]²dx. Each cross-section perpendicular to the axis is a disk with radius f(x).
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        <strong>Washer Method:</strong> When rotating the region between f(x) and g(x) about the x-axis (f(x) ≥ g(x)), the volume is V = π∫[a to b]([f(x)]² - [g(x)]²)dx. Each cross-section is a washer with outer radius f(x) and inner radius g(x).
+      </p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Accumulation and Net Change</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        If f(t) represents a rate of change, then ∫[a to b]f(t)dt represents the net change (accumulation) in the quantity from t = a to t = b. Applications include distance traveled given velocity (∫v(t)dt), total amount of water added to a tank given flow rate, total production given production rate, and population change given birth/death rates.
+      </p>
+    </div>
+
+    <!-- Exam Strategies -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-indigo-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">AP Exam Strategies and Tips</h2>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Calculator Skills</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span>Know how to find numerical derivatives and integrals on your calculator</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span>Practice finding intersection points, zeros, and extrema using calculator features</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span>Be able to graph functions and analyze behavior graphically</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span>Remember: calculator answers should be rounded to 3 decimal places unless otherwise specified</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Free Response Tips</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Show all work:</strong> Partial credit is awarded for correct intermediate steps even if the final answer is wrong</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Justify answers:</strong> When asked to "justify," provide mathematical reasoning (not just calculations)</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Use proper notation:</strong> Include differentials (dx, dt), limits of integration, and equal signs correctly</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Label answers:</strong> Circle or box final answers with units when applicable</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span><strong>Read carefully:</strong> Answer the specific question asked (e.g., "find the rate" vs "is the rate increasing or decreasing")</span></li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Common Mistakes to Avoid</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span>Forgetting absolute value in ln|x| when integrating 1/x</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span>Confusing when to use product rule vs. chain rule</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span>Forgetting the constant of integration C in indefinite integrals</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span>Misidentifying "top minus bottom" in area between curves problems</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span>Not checking that a function is differentiable/continuous before applying theorems</span></li>
+        <li class="flex items-start gap-3"><span class="text-indigo-600 font-bold">•</span><span>Forgetting to multiply by π in volume problems</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="calculus-quiz.html" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="calculus-highschool.html" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to High School Calculus
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to More Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

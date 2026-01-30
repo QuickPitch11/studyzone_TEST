@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chemistry - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-fuchsia-500 rounded-full mb-6">
+      <i data-lucide="flask-conical" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Chemistry: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">Comprehensive exploration of matter and its transformations</p>
+  </div>
+
+  <div class="space-y-10">
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Introduction to Chemistry</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Chemistry is the science that studies matter, its properties, composition, structure, and the changes it undergoes during chemical reactions. Chemistry connects the microscopic world of atoms and molecules to the macroscopic world we observe, explaining everything from why water freezes to how our bodies convert food into energy.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        The field encompasses multiple branches: organic chemistry (carbon compounds), inorganic chemistry (non-carbon compounds), physical chemistry (energy and dynamics), analytical chemistry (identification and measurement), and biochemistry (chemistry of living systems). Understanding chemistry is fundamental to fields including medicine, engineering, environmental science, and materials science.
+      </p>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        Chemistry's impact on society is profound: pharmaceuticals combat disease, fertilizers feed populations, materials science creates new technologies, and environmental chemistry addresses pollution and sustainability challenges. The principles of chemistry underlie all biological processes and most physical phenomena.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Atomic Structure: The Foundation of Matter</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Atoms are the fundamental building blocks of matter. Understanding atomic structure is essential for explaining chemical behavior, bonding, and reactions. Modern atomic theory describes atoms as consisting of a dense, positively charged nucleus surrounded by a cloud of negatively charged electrons.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Atomic Components:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Protons:</strong> Positively charged particles in the nucleus. Mass ≈ 1.67 × 10⁻²⁷ kg (1 atomic mass unit, amu). Number of protons defines the element (atomic number, Z). Each element has unique number of protons.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Neutrons:</strong> Neutral particles in the nucleus. Mass ≈ 1 amu (slightly heavier than protons). Number of neutrons can vary in same element (isotopes). Mass number (A) = protons + neutrons.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Electrons:</strong> Negatively charged particles orbiting nucleus. Mass ≈ 9.11 × 10⁻³¹ kg (1/1836 amu, negligible). In neutral atoms, number of electrons = number of protons. Electrons determine chemical properties and bonding behavior.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Isotopes:</strong> Atoms of same element with different numbers of neutrons (different mass numbers). Same chemical properties but different masses. Examples: Carbon-12 (6p, 6n), Carbon-13 (6p, 7n), Carbon-14 (6p, 8n, radioactive).</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Electron Configuration and Quantum Mechanics:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Electrons occupy regions of space called orbitals, described by quantum mechanics. The arrangement of electrons determines chemical properties.
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Quantum Numbers:</strong> Four numbers describe each electron's location and properties: Principal quantum number (n, energy level: 1, 2, 3...), Azimuthal quantum number (l, orbital shape: 0=s, 1=p, 2=d, 3=f), Magnetic quantum number (m_l, orbital orientation), Spin quantum number (m_s, electron spin: +½ or -½).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Orbitals:</strong> Regions of space where electrons are most likely to be found. s orbitals (spherical, 1 per energy level), p orbitals (dumbbell-shaped, 3 per energy level, oriented along x, y, z axes), d orbitals (complex shapes, 5 per energy level), f orbitals (very complex, 7 per energy level). Each orbital holds maximum 2 electrons (Pauli exclusion principle).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Aufbau Principle:</strong> Electrons fill lowest energy orbitals first. Order: 1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s → 4d → 5p → 6s → 4f → 5d → 6p...</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Hund's Rule:</strong> When filling degenerate orbitals (same energy), electrons occupy separate orbitals with parallel spins before pairing. Maximizes unpaired electrons.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Valence Electrons:</strong> Electrons in outermost energy level (highest n). Determine chemical reactivity and bonding. Elements in same group have same number of valence electrons, explaining periodic trends.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Periodic Table and Periodic Trends:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        The periodic table organizes elements by atomic number, revealing periodic trends in properties that reflect electron configurations.
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Periods:</strong> Horizontal rows. Number indicates highest energy level with electrons. Elements in same period have same number of electron shells.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Groups/Families:</strong> Vertical columns. Elements in same group have same number of valence electrons and similar chemical properties. Examples: Group 1 (alkali metals: 1 valence electron), Group 17 (halogens: 7 valence electrons), Group 18 (noble gases: 8 valence electrons, stable).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Atomic Radius:</strong> Size of atom. Decreases left to right across period (increased nuclear charge pulls electrons closer), increases top to bottom down group (additional electron shells).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Ionization Energy:</strong> Energy required to remove an electron. Increases left to right (stronger attraction to nucleus), decreases top to bottom (electrons farther from nucleus). First ionization energy: removing first electron. Successive ionization energies higher (removing electron from positive ion harder).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Electronegativity:</strong> Ability to attract electrons in a bond. Increases left to right, decreases top to bottom. Fluorine (most electronegative, 4.0) → Cesium/Francium (least electronegative, ~0.7). Differences in electronegativity determine bond polarity.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Electron Affinity:</strong> Energy change when atom gains electron. More negative = stronger attraction. Generally increases left to right (except noble gases), varies down groups.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Chemical Bonding: How Atoms Connect</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Chemical bonds form when atoms interact, resulting in stable structures with lower energy than separate atoms. The type of bond depends on the atoms involved and their electron configurations.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Ionic Bonds:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Formation:</strong> Complete transfer of electrons from metal (low electronegativity) to nonmetal (high electronegativity). Metal loses electrons → becomes positive ion (cation). Nonmetal gains electrons → becomes negative ion (anion). Oppositely charged ions attract electrostatically.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Characteristics:</strong> Strong bonds, high melting and boiling points, form crystalline solids, conduct electricity when molten or dissolved (ions free to move), typically soluble in polar solvents like water. Example: NaCl (sodium chloride, table salt): Na⁺ and Cl⁻ ions in crystal lattice.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Ionic Compounds:</strong> Ratio of ions determined by charges (to achieve neutrality). Formula shows smallest whole number ratio (empirical formula). Example: CaCl₂ (calcium loses 2 electrons, each chlorine gains 1 electron, need 2 chlorines per calcium).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Lattice Energy:</strong> Energy released when gaseous ions form solid crystal. Higher charges and smaller ions → greater lattice energy → stronger bonds → higher melting points.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Covalent Bonds:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Formation:</strong> Sharing of electron pairs between atoms, typically between nonmetals. Each atom contributes one electron to shared pair. Achieves stable electron configuration (usually octet rule: 8 valence electrons) without transferring electrons.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Single, Double, Triple Bonds:</strong> Single bond (1 shared pair, σ bond), Double bond (2 shared pairs: 1 σ + 1 π bond), Triple bond (3 shared pairs: 1 σ + 2 π bonds). More bonds = shorter bond length, stronger bond, higher bond energy.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Polar vs. Nonpolar Covalent:</strong> Nonpolar: Equal sharing (same electronegativity, e.g., H₂, O₂, C-H). Polar: Unequal sharing (different electronegativity, e.g., H₂O, HCl). Creates partial charges: δ+ on less electronegative atom, δ- on more electronegative atom. Dipole moment: measure of polarity.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Lewis Structures:</strong> Diagrams showing valence electrons and bonds. Rules: Count valence electrons, connect atoms with single bonds, complete octets (except H with 2), place extra electrons on most electronegative atom, use double/triple bonds if needed. Resonance: Multiple valid structures for same molecule (actual structure is average/hybrid).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>VSEPR Theory (Valence Shell Electron Pair Repulsion):</strong> Electron pairs (bonding and lone pairs) repel each other, arranging to maximize distance. Predicts molecular geometry. Shapes: Linear (2 electron domains), Trigonal planar (3), Tetrahedral (4), Trigonal bipyramidal (5), Octahedral (6). Lone pairs occupy more space than bonding pairs, distorting geometry.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Hybridization:</strong> Mixing of atomic orbitals to form hybrid orbitals for bonding. sp (linear, 2 electron domains), sp² (trigonal planar, 3 domains), sp³ (tetrahedral, 4 domains), sp³d (trigonal bipyramidal, 5), sp³d² (octahedral, 6). Explains observed bond angles and molecular shapes.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Metallic Bonds:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Formation:</strong> Delocalized valence electrons shared among all metal atoms. Metal atoms lose valence electrons easily (low ionization energy), creating "sea of electrons" surrounding positive metal ions.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Properties:</strong> High electrical conductivity (free electrons carry current), high thermal conductivity (electrons transfer heat), malleability (can be hammered into sheets), ductility (can be drawn into wires), luster (electrons reflect light), typically high melting points (except mercury, group 12).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Alloys:</strong> Mixtures of metals (or metal + nonmetal). Often superior properties to pure metals: Steel (iron + carbon) stronger, Bronze (copper + tin) harder, Brass (copper + zinc) more corrosion-resistant. Interstitial alloys (smaller atoms fit in spaces) and substitutional alloys (similar-sized atoms replace each other).</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Intermolecular Forces (Van der Waals Forces):</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Weaker than chemical bonds but important for determining physical properties like melting/boiling points, solubility, and phase transitions.
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Hydrogen Bonds:</strong> Strong dipole-dipole interaction. Hydrogen bonded to highly electronegative atom (N, O, F) attracted to lone pair on another electronegative atom. 5-10% strength of covalent bond but much stronger than other intermolecular forces. Crucial for: Water's high boiling point, DNA double helix structure, protein secondary structure (α-helix, β-sheet), ice density (less dense than liquid water, floats).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Dipole-Dipole Forces:</strong> Attractions between polar molecules. Positive end of one molecule attracts negative end of another. Stronger than London forces, weaker than hydrogen bonds. Example: HCl, HBr.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>London Dispersion Forces (Van der Waals Forces):</strong> Weakest intermolecular forces. Temporary dipoles created by electron movement induce dipoles in neighboring molecules. Present in all molecules, but especially important for nonpolar molecules (only intermolecular force they have). Strength increases with molecular size (more electrons = stronger temporary dipoles). Example: Noble gases, hydrocarbons like methane, propane.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Influence on Properties:</strong> Stronger intermolecular forces → Higher melting/boiling points (more energy needed to overcome), Higher viscosity (resistance to flow), Higher surface tension (cohesive forces at surface). Hydrogen bonding > Dipole-dipole > London forces.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Chemical Reactions: Transformations of Matter</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Chemical reactions involve breaking and forming bonds, resulting in the transformation of reactants into products. Understanding reaction types, mechanisms, and conditions is fundamental to chemistry.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Balancing Chemical Equations:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Chemical equations must satisfy the law of conservation of mass: atoms are neither created nor destroyed. Coefficients are adjusted to balance atoms on both sides.
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Stoichiometry:</strong> Quantitative relationships in chemical reactions. Coefficients represent mole ratios. Used to calculate amounts of reactants needed or products formed. Example: 2H₂ + O₂ → 2H₂O means 2 moles H₂ react with 1 mole O₂ to produce 2 moles H₂O.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Limiting Reactant:</strong> Reactant that runs out first, limiting product amount. Excess reactant remains unreacted. Calculations identify limiting reactant and theoretical yield (maximum product possible).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Percent Yield:</strong> Actual yield / Theoretical yield × 100%. Always less than 100% due to incomplete reactions, side reactions, losses. Used to evaluate reaction efficiency.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Types of Chemical Reactions:</h3>
+      <ol class="space-y-4 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">1.</span>
+          <div>
+            <strong>Synthesis (Combination):</strong> Combination of reactants to form products (A + B → AB). Two or more substances combine to form more complex product. Example: 2H₂ + O₂ → 2H₂O (hydrogen and oxygen form water), N₂ + 3H₂ → 2NH₃ (nitrogen and hydrogen form ammonia).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">2.</span>
+          <div>
+            <strong>Decomposition:</strong> Breaking down compounds into simpler substances (AB → A + B). One compound splits into two or more simpler products. Often requires energy (heat, electricity, light). Example: 2H₂O₂ → 2H₂O + O₂ (hydrogen peroxide decomposes), CaCO₃ → CaO + CO₂ (calcium carbonate decomposes when heated).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">3.</span>
+          <div>
+            <strong>Single Replacement (Displacement):</strong> One element replaces another in a compound (A + BC → AC + B). More reactive element replaces less reactive element. Activity series predicts if reaction occurs: Elements above H replace H from acids; elements above others replace them from compounds. Example: Zn + 2HCl → ZnCl₂ + H₂ (zinc replaces hydrogen), Cu + 2AgNO₃ → Cu(NO₃)₂ + 2Ag (copper replaces silver).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">4.</span>
+          <div>
+            <strong>Double Replacement (Exchange):</strong> Exchange of ions between compounds (AB + CD → AD + CB). Ions "swap partners". Occurs if precipitate forms, gas produced, or weak electrolyte formed. Example: AgNO₃ + NaCl → AgCl↓ + NaNO₃ (silver chloride precipitate), HCl + NaOH → NaCl + H₂O (acid-base neutralization).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">5.</span>
+          <div>
+            <strong>Combustion:</strong> Rapid reaction with oxygen, producing heat and light. Hydrocarbons + O₂ → CO₂ + H₂O. Complete combustion produces CO₂ and H₂O; incomplete combustion produces CO and/or C (soot). Example: CH₄ + 2O₂ → CO₂ + 2H₂O (methane combustion), C₃H₈ + 5O₂ → 3CO₂ + 4H₂O (propane combustion). Essential for energy production.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">6.</span>
+          <div>
+            <strong>Redox (Oxidation-Reduction) Reactions:</strong> Involve electron transfer. Oxidation: Loss of electrons (increase in oxidation number). Reduction: Gain of electrons (decrease in oxidation number). Redox reactions always involve both: oxidizing agent gains electrons (reduced), reducing agent loses electrons (oxidized). Fundamental in: Cellular respiration (glucose oxidized to CO₂), Photosynthesis (CO₂ reduced to glucose), Corrosion (iron oxidized), Batteries (electrons flow from anode to cathode).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">7.</span>
+          <div>
+            <strong>Acid-Base Reactions (Neutralization):</strong> Acid + Base → Salt + Water. Arrhenius definition: Acids produce H⁺, bases produce OH⁻. Bronsted-Lowry definition: Acids donate H⁺ (protons), bases accept H⁺. Example: HCl + NaOH → NaCl + H₂O. pH measures acidity: pH < 7 (acidic), pH = 7 (neutral), pH > 7 (basic). Buffer solutions resist pH changes.
+          </div>
+        </li>
+      </ol>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Reaction Mechanisms:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Elementary Steps:</strong> Individual steps in reaction mechanism. Molecularity: Number of molecules participating (unimolecular: 1, bimolecular: 2, termolecular: 3, rare). Rate-determining step: Slowest step, determines overall rate.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Catalysts:</strong> Substances that increase reaction rate without being consumed. Lower activation energy, providing alternative pathway. Homogeneous catalysts (same phase as reactants) and heterogeneous catalysts (different phase, e.g., solid catalyst with gaseous reactants). Enzymes are biological catalysts (proteins that catalyze biochemical reactions).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Intermediates:</strong> Species formed and consumed during reaction, not in final products. Reactants → Intermediate → Products. Often unstable, difficult to isolate.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Reaction Kinetics: Rates of Chemical Reactions</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Chemical kinetics studies reaction rates (how fast reactions occur) and mechanisms (how reactions proceed step-by-step). Understanding kinetics is essential for controlling reactions and understanding chemical processes.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Reaction Rate:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Definition:</strong> Change in concentration of reactant or product per unit time. Rate = -Δ[Reactant]/Δt = +Δ[Product]/Δt. Units: mol/L·s or M/s. Rate decreases as reaction proceeds (reactants consumed).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Average vs. Instantaneous Rate:</strong> Average rate: Change over time interval. Instantaneous rate: Rate at specific moment (slope of tangent on concentration vs. time graph). Initial rate: Rate at start of reaction (t = 0), used to determine rate law.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Factors Affecting Reaction Rate:</h3>
+      <ol class="space-y-4 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">1.</span>
+          <div>
+            <strong>Concentration:</strong> Higher concentration → More frequent collisions → Faster rate. Collision theory: Reactions require collisions with sufficient energy (activation energy) and proper orientation. Rate law: Rate = k[A]^m[B]^n, where k = rate constant, m and n = reaction orders (determined experimentally), sum = overall order.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">2.</span>
+          <div>
+            <strong>Temperature:</strong> Higher temperature → Higher kinetic energy → More collisions with sufficient energy (above activation energy) → Faster rate. Arrhenius equation: k = Ae^(-Ea/RT), where A = frequency factor, Ea = activation energy, R = gas constant, T = temperature. Rule of thumb: 10°C increase approximately doubles rate (for many reactions).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">3.</span>
+          <div>
+            <strong>Surface Area (for heterogeneous reactions):</strong> Larger surface area → More collision sites → Faster rate. Example: Powdered zinc reacts faster than zinc chunk with acid. Important in reactions involving solids.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">4.</span>
+          <div>
+            <strong>Catalysts:</strong> Lower activation energy → More molecules have sufficient energy → Faster rate. Catalysts provide alternative pathway with lower energy barrier. Not consumed in reaction, can be recovered. Types: Enzymes (biological), transition metals (industrial processes like Haber process for ammonia), acid/base catalysts.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">5.</span>
+          <span><strong>Nature of Reactants:</strong> Strong bonds require more energy to break → Slower rate. Ionic compounds often react faster than covalent compounds. Gases react faster than liquids, which react faster than solids (more mobile particles).</span>
+        </li>
+      </ol>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Reaction Orders:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Zero Order:</strong> Rate independent of reactant concentration. Rate = k. Concentration decreases linearly with time. Rare, often when reactant is in excess or catalyst is saturated.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>First Order:</strong> Rate proportional to one reactant concentration. Rate = k[A]. Concentration decreases exponentially: ln[A] vs. t is linear (slope = -k). Half-life (t₁/₂): Time for half of reactant to decompose, constant for first-order reactions: t₁/₂ = 0.693/k. Examples: Radioactive decay, many decomposition reactions.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Second Order:</strong> Rate proportional to square of concentration or product of two concentrations. Rate = k[A]² or k[A][B]. Example: 2NO₂ → 2NO + O₂. Half-life increases as concentration decreases.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Thermodynamics: Energy in Chemical Processes</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Thermodynamics describes energy changes in chemical processes, predicting whether reactions occur spontaneously and how energy flows. Understanding thermodynamics is essential for predicting reaction feasibility and understanding energy transformations.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">First Law of Thermodynamics (Conservation of Energy):</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Energy Conservation:</strong> Energy cannot be created or destroyed, only converted between forms. ΔE = q + w, where ΔE = change in internal energy, q = heat, w = work. In chemical reactions, energy changes manifest as heat and/or work.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Enthalpy (H):</strong> Heat content at constant pressure. ΔH = H_products - H_reactants. Enthalpy change (ΔH) equals heat absorbed or released at constant pressure. Negative ΔH (exothermic): Releases heat, products have less energy than reactants. Positive ΔH (endothermic): Absorbs heat, products have more energy than reactants. Measured in kJ/mol.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Hess's Law:</strong> Overall enthalpy change equals sum of enthalpy changes for individual steps. Allows calculation of ΔH from known reactions. Independent of pathway: Only initial and final states matter. Used to determine ΔH for reactions difficult to measure directly.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Standard Enthalpy of Formation (ΔH°f):</strong> Enthalpy change when 1 mole of compound forms from elements in standard states. ΔH°f = 0 for elements in standard states. Used to calculate ΔH° for reactions: ΔH° = ΣnΔH°f(products) - ΣmΔH°f(reactants).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Bond Energies:</strong> Energy required to break bonds (endothermic, positive) or released when bonds form (exothermic, negative). ΔH ≈ Σ(Bond energies broken) - Σ(Bond energies formed). Average bond energies used (actual values vary with molecular environment).</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Second Law of Thermodynamics and Entropy:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Entropy (S):</strong> Measure of disorder or randomness. More disordered = higher entropy. Units: J/mol·K. Absolute entropy can be determined (third law: S = 0 at absolute zero for perfect crystal).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Second Law:</strong> Total entropy of universe increases in spontaneous processes. Isolated systems tend toward maximum entropy (maximum disorder). ΔS_universe = ΔS_system + ΔS_surroundings > 0 for spontaneous processes.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Entropy Changes:</strong> Increase entropy: Phase transitions (solid → liquid → gas), temperature increase, volume increase (gases), number of particles increase, mixing, dissolution. Decrease entropy: Condensation, freezing, complex formation. Gas > Liquid > Solid (entropy order).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Standard Entropy (S°):</strong> Entropy at standard conditions. ΔS° = ΣnS°(products) - ΣmS°(reactants). Can predict entropy changes from standard values.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Gibbs Free Energy and Spontaneity:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Gibbs Free Energy (G):</strong> Combines enthalpy and entropy: G = H - TS. At constant temperature and pressure: ΔG = ΔH - TΔS. Predicts spontaneity and useful work available from reaction.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Spontaneity Criteria:</strong> Negative ΔG (ΔG < 0): Spontaneous reaction, proceeds forward. Positive ΔG (ΔG > 0): Non-spontaneous, reverse reaction spontaneous. Zero ΔG (ΔG = 0): At equilibrium, no net change. ΔG° = ΔH° - TΔS° (standard conditions).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Temperature Effects:</strong> Temperature influences spontaneity through -TΔS term. Endothermic reactions (ΔH > 0) can be spontaneous if ΔS > 0 (entropy increase drives reaction). At high temperature: -TΔS dominates (entropy-driven). At low temperature: ΔH dominates (enthalpy-driven).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Free Energy and Equilibrium:</strong> ΔG° = -RT ln K, where R = gas constant, T = temperature, K = equilibrium constant. Large negative ΔG° → Large K → Products favored. Large positive ΔG° → Small K → Reactants favored. At equilibrium: ΔG = 0, Q = K.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Chemical Equilibrium: Dynamic Balance</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Chemical equilibrium occurs when forward and reverse reaction rates are equal, resulting in constant concentrations (though reactions continue). Understanding equilibrium is crucial for predicting reaction outcomes and optimizing conditions.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Equilibrium Concepts:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Dynamic Equilibrium:</strong> Forward and reverse rates equal, concentrations constant, but reactions continue. Macroscopic properties constant, microscopic processes continue. Reversible reactions reach equilibrium: aA + bB ⇌ cC + dD.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Equilibrium Constant (K):</strong> Ratio of product and reactant concentrations at equilibrium. K = [C]^c[D]^d / [A]^a[B]^b. Pure solids and liquids not included (activity = 1). K_c (concentrations) and K_p (partial pressures for gases). Large K (>1): Products favored at equilibrium. Small K (<1): Reactants favored at equilibrium.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Reaction Quotient (Q):</strong> Same expression as K but using concentrations at any point. Q < K: Forward reaction favored (toward products). Q = K: At equilibrium. Q > K: Reverse reaction favored (toward reactants). Used to predict direction of reaction.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Relationship Between K and ΔG°:</strong> ΔG° = -RT ln K. Negative ΔG° → K > 1 (products favored). Positive ΔG° → K < 1 (reactants favored). Allows calculation of equilibrium constant from thermodynamic data.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Le Chatelier's Principle:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        When a system at equilibrium is disturbed, it shifts to counteract the disturbance and re-establish equilibrium.
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Concentration Changes:</strong> Increase reactant concentration → Shift toward products (consume added reactant). Increase product concentration → Shift toward reactants (consume added product). Decrease reactant → Shift toward reactants. Decrease product → Shift toward products.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Pressure Changes (for gases):</strong> Increase pressure → Shift toward fewer gas molecules (reduces pressure). Decrease pressure → Shift toward more gas molecules (increases pressure). No effect if equal numbers of gas molecules on both sides. Volume changes have opposite effect (decrease volume = increase pressure).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Temperature Changes:</strong> Exothermic reaction (ΔH < 0): Increase temperature → Shift toward reactants (endothermic direction). Decrease temperature → Shift toward products (exothermic direction). Endothermic reaction (ΔH > 0): Increase temperature → Shift toward products. Decrease temperature → Shift toward reactants. Temperature changes alter K (equilibrium constant changes with temperature).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Catalysts:</strong> No effect on equilibrium position or K. Catalysts speed up both forward and reverse reactions equally, so equilibrium reached faster but composition unchanged. Only affects rate, not thermodynamics.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Organic Chemistry: Carbon-Containing Compounds</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Organic chemistry focuses on carbon-containing compounds. Carbon's unique ability to form four covalent bonds and catenate (form chains and rings) creates immense molecular diversity, forming the basis of life and many materials.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Carbon Bonding and Hybridization:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Carbon's Versatility:</strong> Forms 4 covalent bonds (tetravalent), can form single, double, or triple bonds, can catenate (bond to itself forming chains), can form rings, bonds to many other elements (H, N, O, S, P, halogens). Millions of organic compounds possible.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Hybridization in Carbon:</strong> sp³ (tetrahedral, 109.5°, single bonds, e.g., methane CH₄, ethane C₂H₆), sp² (trigonal planar, 120°, double bonds, e.g., ethene C₂H₄, benzene C₆H₆), sp (linear, 180°, triple bonds, e.g., ethyne C₂H₂). Explains bond angles and molecular geometries.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Hydrocarbons: Fundamental Organic Molecules</h3>
+      <ol class="space-y-4 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">1.</span>
+          <div>
+            <strong>Alkanes:</strong> Saturated hydrocarbons (only single bonds). General formula: CₙH₂ₙ₊₂. Names end in -ane. Examples: Methane (CH₄), Ethane (C₂H₆), Propane (C₃H₈), Butane (C₄H₁₀). Straight-chain and branched isomers. Naming: IUPAC nomenclature (longest chain, number substituents, alphabetical order). Properties: Nonpolar, low boiling points (increase with size), used as fuels.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">2.</span>
+          <div>
+            <strong>Alkenes:</strong> Unsaturated hydrocarbons with double bonds. General formula: CₙH₂ₙ. Names end in -ene. Examples: Ethene (C₂H₄), Propene (C₃H₆). Geometric isomers (cis/trans) possible when each double-bond carbon has different substituents. More reactive than alkanes (double bond can undergo addition reactions).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">3.</span>
+          <div>
+            <strong>Alkynes:</strong> Unsaturated hydrocarbons with triple bonds. General formula: CₙH₂ₙ₋₂. Names end in -yne. Examples: Ethyne (C₂H₂, acetylene), Propyne (C₃H₄). Most reactive hydrocarbons (triple bond very reactive). Used in welding (acetylene torch).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">4.</span>
+          <div>
+            <strong>Aromatic Compounds:</strong> Contain benzene ring (C₆H₆) or similar structures. Benzene has delocalized electrons (resonance), making it unusually stable. Substituted benzenes: Toluene (methylbenzene), Phenol (hydroxybenzene), Aniline (aminobenzene). Many have distinctive odors. Important in pharmaceuticals, dyes, plastics.
+          </div>
+        </li>
+      </ol>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Functional Groups: Chemical Reactivity</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Functional groups are specific arrangements of atoms that determine chemical properties and reactivity. Compounds with same functional group have similar properties.
+      </p>
+      <ol class="space-y-4 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">1.</span>
+          <div>
+            <strong>Alcohols (-OH):</strong> Contain hydroxyl group. Naming: -ol suffix. Examples: Methanol (CH₃OH), Ethanol (C₂H₅OH, alcohol in beverages), Propanol (C₃H₇OH). Primary (1°): C-OH, Secondary (2°): C-C-OH, Tertiary (3°): C-C(OH)-C. Can hydrogen bond (high boiling points), soluble in water (small alcohols). Important in: Biological systems, solvents, fuels, pharmaceuticals.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">2.</span>
+          <div>
+            <strong>Aldehydes (-CHO) and Ketones (-C=O):</strong> Carbonyl groups. Aldehydes: Terminal C=O (formaldehyde HCHO, acetaldehyde CH₃CHO). Ketones: C=O between carbons (acetone CH₃COCH₃). Naming: Aldehydes end in -al, ketones in -one. Polar, can hydrogen bond (not as strong as alcohols). Important in: Biological processes (sugars), solvents, pharmaceuticals.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">3.</span>
+          <div>
+            <strong>Carboxylic Acids (-COOH):</strong> Contain carboxyl group. Naming: -oic acid suffix. Examples: Formic acid (HCOOH, ant venom), Acetic acid (CH₃COOH, vinegar), Stearic acid (fatty acid). Can hydrogen bond (dimers), acidic (donate H⁺), higher boiling points. Important in: Amino acids, fatty acids (lipids), carboxylic acid derivatives.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">4.</span>
+          <div>
+            <strong>Esters (-COO-):</strong> Derivatives of carboxylic acids. Formed from acid + alcohol → ester + water. Naming: Alkyl from alcohol + -ate from acid. Examples: Ethyl acetate (fruit smells), fats and oils (triglycerides). Often pleasant odors (fruits, flowers). Important in: Fats, oils, waxes, perfumes, flavors, plastics (polyesters).
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">5.</span>
+          <div>
+            <strong>Amines (-NH₂, -NHR, -NR₂):</strong> Contain nitrogen. Primary (1°): R-NH₂, Secondary (2°): R₂NH, Tertiary (3°): R₃N. Naming: -amine suffix. Examples: Methylamine (CH₃NH₂), Aniline (C₆H₅NH₂). Basic (accept H⁺, form salts), can hydrogen bond. Important in: Amino acids (proteins), neurotransmitters (dopamine, serotonin), pharmaceuticals, dyes.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">6.</span>
+          <div>
+            <strong>Amides (-CONH₂, -CONHR, -CONR₂):</strong> Contain carbonyl bonded to nitrogen. Formed from acid + amine. Naming: -amide suffix. Examples: Acetamide, peptides, proteins. Can hydrogen bond (strong), relatively unreactive. Important in: Proteins (peptide bonds), synthetic polymers (nylons), pharmaceuticals.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">7.</span>
+          <div>
+            <strong>Ethers (-O-):</strong> Oxygen between carbons. Naming: Alkyl-alkyl ether. Examples: Diethyl ether (solvent, anesthetic), THF (tetrahydrofuran, solvent). Polar but cannot hydrogen bond (lower boiling points than alcohols), good solvents. Important in: Solvents, anesthetics, starting materials.
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">8.</span>
+          <div>
+            <strong>Halides (-X, X = F, Cl, Br, I):</strong> Halogen substituents. Naming: Halo- prefix. Examples: Chloroform (CHCl₃), Teflon (poly(tetrafluoroethylene)). Important in: Pharmaceuticals, polymers, refrigerants (CFCs, now phased out), solvents.
+          </div>
+        </li>
+      </ol>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Isomerism in Organic Chemistry:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Structural Isomers:</strong> Same molecular formula, different connectivity. Different chemical and physical properties. Examples: Butane vs. 2-methylpropane (branched), propanol vs. methoxyethane.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Stereoisomers:</strong> Same connectivity, different spatial arrangement. Geometric isomers (cis/trans, E/Z): Different arrangement around double bond or ring. Enantiomers: Mirror images (chiral molecules, not superimposable), rotate plane-polarized light in opposite directions, identical physical properties except optical activity. Diastereomers: Non-mirror-image stereoisomers, different physical properties.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Chirality:</strong> Molecules not superimposable on their mirror images. Have chiral centers (carbon with 4 different substituents). Enantiomers have identical properties except interaction with polarized light and chiral environments (e.g., biological systems). One enantiomer may be biologically active, other inactive or harmful. Important in: Pharmaceuticals (one enantiomer may be drug, other may be harmful), biological molecules (amino acids, sugars usually one enantiomer).</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Acids, Bases, and pH</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Acids and bases are fundamental to chemistry, biology, and everyday life. Understanding acid-base chemistry is essential for understanding biological processes, environmental chemistry, and many industrial applications.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Acid-Base Definitions:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Arrhenius Definition:</strong> Acids produce H⁺ (H₃O⁺ in water) when dissolved. Bases produce OH⁻ when dissolved. Limited to aqueous solutions. Example: HCl → H⁺ + Cl⁻ (acid), NaOH → Na⁺ + OH⁻ (base).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Bronsted-Lowry Definition:</strong> Acids donate protons (H⁺), bases accept protons. More general than Arrhenius. Acid-base pairs: Conjugate acid-base pairs differ by one proton. Example: NH₃ (base) + H₂O (acid) ⇌ NH₄⁺ (conjugate acid) + OH⁻ (conjugate base). Amphoteric substances can act as acid or base (e.g., water, HCO₃⁻).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Lewis Definition:</strong> Acids accept electron pairs, bases donate electron pairs. Most general definition. Includes species without protons. Example: BF₃ (Lewis acid, electron-deficient) + NH₃ (Lewis base, lone pair donor) → F₃B-NH₃ (adduct).</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">pH Scale and Calculations:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>pH Scale:</strong> Logarithmic scale measuring acidity: pH = -log[H⁺]. Range: 0-14 (in water). pH < 7: Acidic ([H⁺] > [OH⁻]). pH = 7: Neutral ([H⁺] = [OH⁻] = 10⁻⁷ M). pH > 7: Basic/Alkaline ([H⁺] < [OH⁻]). Each pH unit represents 10× change in [H⁺]. pOH = -log[OH⁻]. pH + pOH = 14 (at 25°C).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Strong vs. Weak Acids/Bases:</strong> Strong acids/bases: Completely dissociate in water. Strong acids: HCl, H₂SO₄, HNO₃, HBr, HI, HClO₄. Strong bases: NaOH, KOH, Ca(OH)₂. Weak acids/bases: Partially dissociate, establish equilibrium. Weak acids: CH₃COOH, H₂CO₃, H₃PO₄. Weak bases: NH₃, CH₃NH₂. Ka (acid dissociation constant) and Kb (base dissociation constant) measure strength.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Acid-Base Reactions (Neutralization):</strong> Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O. Equivalence point: Moles acid = moles base. Can be titrated to determine concentration. Indicators change color at endpoint (near equivalence point).</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Buffers:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Buffer Solutions:</strong> Resist pH changes when small amounts of acid or base added. Contain weak acid and its conjugate base (or weak base and its conjugate acid). Buffer capacity: Amount of acid/base that can be added without significant pH change. Example: CH₃COOH/CH₃COO⁻ (acetic acid/sodium acetate).</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Henderson-Hasselbalch Equation:</strong> pH = pKa + log([A⁻]/[HA]), where [A⁻] = conjugate base concentration, [HA] = weak acid concentration. Used to calculate buffer pH. When [A⁻] = [HA]: pH = pKa (maximum buffer capacity). Effective buffer range: pH = pKa ± 1.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Biological Importance:</strong> Blood buffers maintain pH ~7.4 (HCO₃⁻/H₂CO₃ system). Cellular pH regulation critical for enzyme function, protein structure, metabolic processes. Buffers prevent dangerous pH swings in biological systems.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Solutions and Solubility</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Solutions are homogeneous mixtures of two or more substances. Understanding solutions and solubility is essential for understanding many chemical and biological processes.
+      </p>
+      
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Solution Properties:</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Solution Components:</strong> Solvent: Component present in greater amount (usually liquid, e.g., water). Solute: Component present in smaller amount, dissolves in solvent. Homogeneous mixture: Uniform composition throughout.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Concentration Units:</strong> Molarity (M): Moles solute / Liters solution. Molality (m): Moles solute / Kilograms solvent. Mass percent: (Mass solute / Mass solution) × 100%. Mole fraction (X): Moles component / Total moles. Parts per million (ppm): Mass solute / Mass solution × 10⁶. Used for very dilute solutions.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Solubility:</strong> Maximum amount of solute that dissolves in given amount of solvent at specific temperature. Saturated solution: Contains maximum dissolved solute at equilibrium. Unsaturated: Less than maximum, can dissolve more. Supersaturated: More than maximum (unstable, metastable). Like dissolves like: Polar solutes dissolve in polar solvents, nonpolar in nonpolar.</span>
+        </li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-6">Colligative Properties:</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        Properties depending on number of solute particles, not their identity. Caused by decreased solvent concentration.
+      </p>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Vapor Pressure Lowering:</strong> Addition of nonvolatile solute lowers vapor pressure of solvent (Raoult's law). Vapor pressure = X_solvent × P°_solvent, where X = mole fraction, P° = pure solvent vapor pressure. Explains why salt solutions evaporate slower than pure water.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Boiling Point Elevation:</strong> Solution boils at higher temperature than pure solvent. ΔTb = Kb × m × i, where Kb = molal boiling point constant, m = molality, i = van't Hoff factor (number of particles per formula unit). Example: Salt water boils above 100°C.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Freezing Point Depression:</strong> Solution freezes at lower temperature than pure solvent. ΔTf = Kf × m × i, where Kf = molal freezing point constant. Example: Antifreeze in car radiators (ethylene glycol lowers freezing point), salt on icy roads melts ice.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-purple-600 font-bold">•</span>
+          <span><strong>Osmotic Pressure:</strong> Pressure needed to prevent osmosis (net movement of solvent through semipermeable membrane). π = MRT × i, where π = osmotic pressure, M = molarity, R = gas constant, T = temperature. Critical in biological systems (cell membranes, kidney function). Hypertonic: Higher solute concentration. Hypotonic: Lower solute concentration. Isotonic: Equal concentrations.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="chemistry-quiz.html" class="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

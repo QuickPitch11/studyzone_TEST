@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculus Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mb-6">
+      <i data-lucide="function-square" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Calculus Quiz</h1>
+    <p class="text-xl text-gray-600">Test your knowledge of limits, derivatives, integrals, and infinite series</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Questions will be dynamically generated here -->
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-indigo-600 text-white text-lg font-semibold rounded-lg hover:bg-indigo-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="quizResults" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-indigo-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="calculus-analysis.html" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center gap-2">
+        <i data-lucide="book-open" class="w-5 h-5"></i>
+        Review Material
+      </a>
+      <button onclick="location.reload()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+        Retake Quiz
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="calculus.html" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Back to Calculus
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Question Bank - 40 questions total
+  const questionBank = [
+    {
+      question: "What is a limit in calculus?",
+      options: ["The maximum value of a function", "The value a function approaches as the input approaches a point", "The derivative of a function", "The area under a curve", "The slope of a tangent line"],
+      correct: 1,
+      explanation: "A limit describes the value that a function approaches as the input (usually x) gets closer and closer to a specific point. Limits are fundamental to calculus and are used to define derivatives and integrals. The notation lim(x→a) f(x) = L means f(x) approaches L as x approaches a."
+    },
+    {
+      question: "What is the derivative of x²?",
+      options: ["x", "2x", "x²/2", "2", "x³/3"],
+      correct: 1,
+      explanation: "Using the power rule for derivatives, d/dx(xⁿ) = nxⁿ⁻¹, we get d/dx(x²) = 2x¹ = 2x. The power rule is one of the most fundamental differentiation rules and applies to any power of x."
+    },
+    {
+      question: "What does the derivative represent geometrically?",
+      options: ["Area under the curve", "The slope of the tangent line to the curve", "The x-intercept", "The maximum value", "The average rate of change"],
+      correct: 1,
+      explanation: "The derivative at a point represents the slope of the tangent line to the function at that point. It gives the instantaneous rate of change of the function. This geometric interpretation connects calculus to the concept of linear approximation."
+    },
+    {
+      question: "What is the integral of 2x?",
+      options: ["2", "x²", "x² + C", "2x²", "x²/2 + C"],
+      correct: 2,
+      explanation: "The integral (antiderivative) of 2x is x² + C, where C is the constant of integration. Integration reverses differentiation. Since d/dx(x²) = 2x, we have ∫2x dx = x² + C. The constant C accounts for all possible antiderivatives."
+    },
+    {
+      question: "What is the Fundamental Theorem of Calculus?",
+      options: ["Integration and differentiation are inverse operations", "Derivatives measure slopes", "Limits define continuity", "All functions are continuous", "The chain rule for derivatives"],
+      correct: 0,
+      explanation: "The Fundamental Theorem of Calculus (FTC) establishes that differentiation and integration are inverse operations. It has two parts: (1) If F'(x) = f(x), then ∫ₐᵇ f(x)dx = F(b) - F(a), and (2) d/dx ∫ₐˣ f(t)dt = f(x). This theorem connects the two main branches of calculus."
+    },
+    {
+      question: "What is the chain rule?",
+      options: ["d/dx[f(g(x))] = f'(x)g'(x)", "d/dx[f(g(x))] = f'(g(x)) · g'(x)", "d/dx[f(x)g(x)] = f'(x)g(x) + f(x)g'(x)", "d/dx[f(x)/g(x)] = [f'(x)g(x) - f(x)g'(x)]/g²(x)", "d/dx[xⁿ] = nxⁿ⁻¹"],
+      correct: 1,
+      explanation: "The chain rule states that the derivative of a composite function f(g(x)) is f'(g(x)) · g'(x). In words: take the derivative of the outer function (evaluated at the inner function) and multiply by the derivative of the inner function. For example, d/dx[sin(x²)] = cos(x²) · 2x."
+    },
+    {
+      question: "What is the product rule for derivatives?",
+      options: ["d/dx[f(x)g(x)] = f'(x)g'(x)", "d/dx[f(x)g(x)] = f'(x)g(x) + f(x)g'(x)", "d/dx[f(x)g(x)] = f(x)g(x)", "d/dx[f(x)g(x)] = [f'(x) + g'(x)]", "d/dx[f(x)g(x)] = f'(x)/g'(x)"],
+      correct: 1,
+      explanation: "The product rule states that the derivative of a product of two functions is: d/dx[f(x)g(x)] = f'(x)g(x) + f(x)g'(x). In words: the derivative of the first times the second plus the first times the derivative of the second. This is essential for differentiating products of functions."
+    },
+    {
+      question: "What is a critical point of a function?",
+      options: ["Where f(x) = 0", "Where f'(x) = 0 or f'(x) is undefined", "Where f(x) is maximum", "Where f(x) is continuous", "Where f(x) is undefined"],
+      correct: 1,
+      explanation: "A critical point occurs where the derivative f'(x) equals zero or is undefined. Critical points are candidates for local maxima, local minima, or saddle points. To classify them, we use the first or second derivative test. Not all critical points are extrema."
+    },
+    {
+      question: "What does it mean for a function to be continuous at a point?",
+      options: ["The function is differentiable there", "lim(x→a) f(x) = f(a)", "The derivative exists there", "The function has no jumps anywhere", "The function is increasing"],
+      correct: 1,
+      explanation: "A function f is continuous at point a if three conditions hold: (1) f(a) is defined, (2) lim(x→a) f(x) exists, and (3) lim(x→a) f(x) = f(a). Intuitively, the graph has no breaks, jumps, or holes at that point. Continuity is essential for applying many calculus theorems."
+    },
+    {
+      question: "What is the derivative of sin(x)?",
+      options: ["-cos(x)", "cos(x)", "-sin(x)", "tan(x)", "sec(x)"],
+      correct: 1,
+      explanation: "The derivative of sin(x) is cos(x): d/dx[sin(x)] = cos(x). This can be proven using the limit definition of the derivative and trigonometric identities. Similarly, d/dx[cos(x)] = -sin(x). These derivatives are fundamental in calculus and physics."
+    },
+    {
+      question: "What is integration by parts based on?",
+      options: ["The chain rule", "The product rule", "The quotient rule", "The power rule", "L'Hôpital's rule"],
+      correct: 1,
+      explanation: "Integration by parts is based on the product rule for derivatives. If d/dx[uv] = u'v + uv', then integrating both sides gives: ∫u dv = uv - ∫v du. This technique is useful for integrating products of functions, especially when one function simplifies upon differentiation."
+    },
+    {
+      question: "What is the second derivative test used for?",
+      options: ["Finding limits", "Classifying critical points as maxima, minima, or saddle points", "Finding antiderivatives", "Solving differential equations", "Finding inflection points"],
+      correct: 1,
+      explanation: "The second derivative test classifies critical points. If f'(c) = 0 and f''(c) > 0, then f has a local minimum at c. If f''(c) < 0, there's a local maximum. If f''(c) = 0, the test is inconclusive. This test uses concavity to determine the nature of critical points."
+    },
+    {
+      question: "What is an inflection point?",
+      options: ["Where f'(x) = 0", "Where f''(x) changes sign", "Where f(x) = 0", "Where f'(x) is undefined", "Where f(x) is maximum"],
+      correct: 1,
+      explanation: "An inflection point is where the concavity of the function changes - where the second derivative changes sign. At inflection points, f''(x) = 0 or is undefined, AND f'' changes from positive to negative or vice versa. The graph changes from concave up to concave down (or vice versa)."
+    },
+    {
+      question: "What is L'Hôpital's Rule used for?",
+      options: ["Finding derivatives", "Evaluating limits of indeterminate forms", "Finding integrals", "Solving differential equations", "Finding critical points"],
+      correct: 1,
+      explanation: "L'Hôpital's Rule is used to evaluate limits that result in indeterminate forms like 0/0 or ∞/∞. It states that lim(x→a) f(x)/g(x) = lim(x→a) f'(x)/g'(x), provided certain conditions are met. This powerful tool simplifies many difficult limit problems."
+    },
+    {
+      question: "What is the Mean Value Theorem?",
+      options: ["The average of a function equals its maximum", "There exists a point where the instantaneous rate equals the average rate", "All functions have a mean", "Derivatives equal integrals", "Limits always exist"],
+      correct: 1,
+      explanation: "The Mean Value Theorem states that if f is continuous on [a,b] and differentiable on (a,b), then there exists at least one point c in (a,b) where f'(c) = [f(b)-f(a)]/(b-a). In other words, there's a point where the instantaneous rate of change equals the average rate of change."
+    },
+    {
+      question: "What is the integral ∫eˣ dx?",
+      options: ["eˣ/x + C", "xeˣ + C", "eˣ + C", "ln(x) + C", "e^(x²) + C"],
+      correct: 2,
+      explanation: "The integral of eˣ is eˣ + C. The exponential function eˣ is unique in that it's its own derivative and antiderivative (up to a constant). This property makes eˣ extremely important in calculus, differential equations, and many applications."
+    },
+    {
+      question: "What is the derivative of ln(x)?",
+      options: ["1/x", "x", "1/x²", "ln(x)/x", "e^x"],
+      correct: 0,
+      explanation: "The derivative of the natural logarithm ln(x) is 1/x: d/dx[ln(x)] = 1/x, for x > 0. This can be proven using the definition of e and implicit differentiation. The natural logarithm and exponential function are inverse functions, and their derivatives reflect this relationship."
+    },
+    {
+      question: "What is a Taylor series?",
+      options: ["A polynomial approximation", "An infinite series representation of a function", "A method for finding limits", "A type of integral", "A differential equation"],
+      correct: 1,
+      explanation: "A Taylor series represents a function as an infinite sum of terms calculated from the function's derivatives at a single point. For a function f centered at a: f(x) = Σ[f⁽ⁿ⁾(a)/n!](x-a)ⁿ. When a=0, it's called a Maclaurin series. Taylor series are powerful tools for approximation and analysis."
+    },
+    {
+      question: "What is the quotient rule for derivatives?",
+      options: ["d/dx[f/g] = f'/g'", "d/dx[f/g] = (f'g - fg')/g²", "d/dx[f/g] = (f'g + fg')/g²", "d/dx[f/g] = f'/g + f/g'", "d/dx[f/g] = (fg' - f'g)/g²"],
+      correct: 1,
+      explanation: "The quotient rule states: d/dx[f(x)/g(x)] = [f'(x)g(x) - f(x)g'(x)]/[g(x)]². In words: (derivative of top times bottom minus top times derivative of bottom) over bottom squared. This can be remembered as 'low d-high minus high d-low, over low squared.'"
+    },
+    {
+      question: "What is the power rule for integration?",
+      options: ["∫xⁿ dx = xⁿ⁺¹ + C", "∫xⁿ dx = xⁿ⁺¹/(n+1) + C for n ≠ -1", "∫xⁿ dx = nxⁿ⁻¹ + C", "∫xⁿ dx = ln|x| + C", "∫xⁿ dx = xⁿ/n + C"],
+      correct: 1,
+      explanation: "The power rule for integration states: ∫xⁿ dx = xⁿ⁺¹/(n+1) + C, provided n ≠ -1. This reverses the power rule for differentiation. When n = -1, we have ∫x⁻¹ dx = ∫(1/x) dx = ln|x| + C, which is a special case."
+    },
+    {
+      question: "What is a definite integral?",
+      options: ["An antiderivative", "The area under a curve between two points", "The slope of a tangent line", "A limit of a function", "A critical point"],
+      correct: 1,
+      explanation: "A definite integral ∫ₐᵇ f(x) dx represents the signed area between the function f(x) and the x-axis from x=a to x=b. It's evaluated using the Fundamental Theorem: ∫ₐᵇ f(x) dx = F(b) - F(a), where F is an antiderivative of f. Areas below the x-axis are negative."
+    },
+    {
+      question: "What is implicit differentiation used for?",
+      options: ["Differentiating explicit functions", "Differentiating equations not solved for y", "Finding integrals", "Evaluating limits", "Finding critical points"],
+      correct: 1,
+      explanation: "Implicit differentiation is used to find dy/dx when the equation is not explicitly solved for y, such as x² + y² = 1. We differentiate both sides with respect to x, treating y as an implicit function of x and using the chain rule: d/dx[y] = dy/dx. This is essential for curves that aren't functions."
+    },
+    {
+      question: "What is the derivative of tan(x)?",
+      options: ["sec²(x)", "cot(x)", "-sec²(x)", "csc²(x)", "sec(x)tan(x)"],
+      correct: 0,
+      explanation: "The derivative of tan(x) is sec²(x): d/dx[tan(x)] = sec²(x). This can be derived using the quotient rule on tan(x) = sin(x)/cos(x), or by differentiating the identity tan²(x) + 1 = sec²(x). This derivative is important in trigonometric integration and differentiation."
+    },
+    {
+      question: "What is u-substitution in integration?",
+      options: ["The reverse chain rule", "A method for integration by parts", "Finding critical points", "Evaluating limits", "A differential equation technique"],
+      correct: 0,
+      explanation: "U-substitution (or variable substitution) is the reverse of the chain rule. If we can write ∫f(g(x))g'(x) dx, we substitute u = g(x), du = g'(x)dx, transforming it to ∫f(u) du. This technique simplifies many integrals by changing variables to a more manageable form."
+    },
+    {
+      question: "What is the Intermediate Value Theorem?",
+      options: ["All continuous functions have derivatives", "A continuous function takes all values between f(a) and f(b)", "Limits always exist", "Integrals equal derivatives", "Critical points always exist"],
+      correct: 1,
+      explanation: "The Intermediate Value Theorem states that if f is continuous on [a,b] and k is any value between f(a) and f(b), then there exists at least one c in (a,b) such that f(c) = k. This guarantees that continuous functions don't 'skip' values and is used to prove existence of roots."
+    },
+    {
+      question: "What is a Riemann sum?",
+      options: ["The derivative of a sum", "An approximation of a definite integral using rectangles", "The sum of a series", "A type of limit", "The product rule for sums"],
+      correct: 1,
+      explanation: "A Riemann sum approximates the definite integral by dividing the region into rectangles and summing their areas. As the number of rectangles increases (width approaches zero), the Riemann sum approaches the exact integral. This concept provides the formal definition of the definite integral."
+    },
+    {
+      question: "What does it mean for a series to converge?",
+      options: ["The terms approach zero", "The partial sums approach a finite limit", "The series is infinite", "The terms are positive", "The series can be integrated"],
+      correct: 1,
+      explanation: "An infinite series Σaₙ converges if the sequence of partial sums Sₙ = Σᵏ₌₁ⁿ aₖ approaches a finite limit as n→∞. If the partial sums don't approach a finite limit, the series diverges. Convergence means the infinite sum has a finite value. Note: terms approaching zero is necessary but not sufficient for convergence."
+    },
+    {
+      question: "What is the ratio test for series convergence?",
+      options: ["Compare consecutive terms", "If lim|aₙ₊₁/aₙ| < 1, the series converges", "Sum all terms", "Check if terms approach zero", "Integrate the series"],
+      correct: 1,
+      explanation: "The ratio test states: for series Σaₙ, let L = lim(n→∞)|aₙ₊₁/aₙ|. If L < 1, the series converges absolutely. If L > 1, it diverges. If L = 1, the test is inconclusive. This test is particularly useful for series with factorials or exponentials."
+    },
+    {
+      question: "What is a partial derivative?",
+      options: ["Half of a derivative", "Derivative with respect to one variable, treating others as constants", "The derivative of a part of a function", "An incomplete derivative", "The derivative of a series"],
+      correct: 1,
+      explanation: "A partial derivative is the derivative of a multivariable function with respect to one variable while treating all other variables as constants. For f(x,y), ∂f/∂x represents the rate of change with respect to x holding y fixed. Partial derivatives are fundamental in multivariable calculus."
+    },
+    {
+      question: "What is the gradient of a function?",
+      options: ["The slope at a point", "The vector of all partial derivatives", "The maximum value", "The directional derivative", "The Laplacian"],
+      correct: 1,
+      explanation: "The gradient of a scalar function f is the vector of all its partial derivatives: ∇f = (∂f/∂x, ∂f/∂y, ∂f/∂z, ...). The gradient points in the direction of steepest ascent and its magnitude gives the rate of change in that direction. It's fundamental in optimization and vector calculus."
+    },
+    {
+      question: "What is the geometric series formula?",
+      options: ["Σrⁿ = 1/(1-r) for |r| < 1", "Σn = n(n+1)/2", "Σ1/n diverges", "Σ1/n² = π²/6", "Σaⁿ/n! = eᵃ"],
+      correct: 0,
+      explanation: "The geometric series Σ(n=0 to ∞) rⁿ converges to 1/(1-r) when |r| < 1, and diverges otherwise. This is one of the most important series in mathematics. The partial sum formula is Sₙ = (1-rⁿ⁺¹)/(1-r). Geometric series appear frequently in applications and as building blocks for other series."
+    },
+    {
+      question: "What is related rates?",
+      options: ["Comparing two rates", "Finding rates of change of related quantities using implicit differentiation", "The quotient of derivatives", "Integration by substitution", "The chain rule"],
+      correct: 1,
+      explanation: "Related rates problems involve finding the rate of change of one quantity given the rate of change of a related quantity. We use implicit differentiation with respect to time on an equation relating the quantities. For example, given a ladder sliding down a wall, we can find how fast the top is falling given how fast the bottom is moving away."
+    },
+    {
+      question: "What is linear approximation?",
+      options: ["Drawing a line through two points", "Approximating f(x) near a point using the tangent line", "Finding the average value", "Linearizing a differential equation", "The first derivative test"],
+      correct: 1,
+      explanation: "Linear approximation (or tangent line approximation) uses the tangent line to approximate a function near a point: f(x) ≈ f(a) + f'(a)(x-a) for x near a. This is the first-order Taylor approximation and is useful for estimating function values and understanding local behavior. It's the basis for differential notation df = f'(x)dx."
+    },
+    {
+      question: "What is the alternating series test?",
+      options: ["For Σ(-1)ⁿaₙ, if aₙ decreases to 0, the series converges", "All alternating series converge", "Alternating series diverge", "Compare to geometric series", "Use the ratio test"],
+      correct: 0,
+      explanation: "The alternating series test states that if Σ(-1)ⁿaₙ (or Σ(-1)ⁿ⁺¹aₙ) has terms aₙ that are decreasing and approach zero (aₙ₊₁ ≤ aₙ and lim aₙ = 0), then the series converges. The classic example is the alternating harmonic series Σ(-1)ⁿ⁺¹/n, which converges even though the harmonic series diverges."
+    },
+    {
+      question: "What is the disk method for volumes?",
+      options: ["Finding area of circles", "Rotating a region about an axis to find volume using V = π∫[f(x)]² dx", "Integration by disks", "Finding surface area", "The shell method"],
+      correct: 1,
+      explanation: "The disk method finds the volume of a solid of revolution by rotating a region about an axis. When rotating y = f(x) about the x-axis, the volume is V = π∫ₐᵇ [f(x)]² dx. Each cross-section perpendicular to the axis is a disk with radius f(x), giving area π[f(x)]². Integrating sums all the disks."
+    },
+    {
+      question: "What is the shell method for volumes?",
+      options: ["Cylindrical shells: V = 2π∫x·f(x) dx", "The same as disk method", "Finding surface area", "Integration by parts", "Volume of spheres"],
+      correct: 0,
+      explanation: "The shell method finds volumes by integrating cylindrical shells. When rotating y = f(x) about the y-axis, each shell at position x has radius x, height f(x), and thickness dx, giving volume 2πx·f(x)dx. Integrating: V = 2π∫ₐᵇ x·f(x) dx. This method is useful when the disk method is difficult or when rotating about a vertical axis."
+    },
+    {
+      question: "What is arc length for a curve y = f(x)?",
+      options: ["∫|f(x)| dx", "∫f'(x) dx", "∫√(1 + [f'(x)]²) dx", "∫f(x) dx", "∫[f(x)]² dx"],
+      correct: 2,
+      explanation: "The arc length of a curve y = f(x) from x = a to x = b is L = ∫ₐᵇ √(1 + [f'(x)]²) dx. This formula comes from the Pythagorean theorem applied to infinitesimal segments: ds = √(dx² + dy²) = √(1 + (dy/dx)²) dx. Arc length measures the actual distance along the curve."
+    },
+    {
+      question: "What is the comparison test for series?",
+      options: ["Compare series to geometric series", "If 0 ≤ aₙ ≤ bₙ and Σbₙ converges, then Σaₙ converges", "All series can be compared", "Subtract two series", "Divide two series"],
+      correct: 1,
+      explanation: "The comparison test states: if 0 ≤ aₙ ≤ bₙ for all n and Σbₙ converges, then Σaₙ converges. Conversely, if aₙ ≥ bₙ ≥ 0 and Σbₙ diverges, then Σaₙ diverges. We compare an unknown series to a known convergent or divergent series. Common comparisons include geometric and p-series."
+    },
+    {
+      question: "What is the p-series test?",
+      options: ["All p-series converge", "Σ1/nᵖ converges if and only if p > 1", "Σpⁿ is geometric", "p-series always diverge", "p must be prime"],
+      correct: 1,
+      explanation: "The p-series Σ(n=1 to ∞) 1/nᵖ converges if p > 1 and diverges if p ≤ 1. Special cases: p=1 is the harmonic series (diverges), p=2 converges to π²/6. The p-series is a standard comparison for testing other series. This test is derived from the integral test."
+    }
+  ];
+
+  // Shuffle array function
+  function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  // Select 15 random questions
+  const selectedQuestions = shuffleArray(questionBank).slice(0, 15);
+  const correctAnswers = {};
+  const explanations = {};
+
+  // Generate quiz HTML
+  const quizContainer = document.getElementById('quizContainer');
+  selectedQuestions.forEach((q, index) => {
+    const questionNum = index + 1;
+    const questionId = `q${questionNum}`;
+    
+    // Store correct answer and explanation
+    correctAnswers[questionId] = q.correct;
+    explanations[questionId] = q.explanation;
+    
+    // Shuffle options with correct answer tracking
+    const optionsWithIndex = q.options.map((opt, idx) => ({ text: opt, originalIndex: idx }));
+    const shuffledOptions = shuffleArray(optionsWithIndex);
+    
+    // Find new position of correct answer
+    const newCorrectIndex = shuffledOptions.findIndex(opt => opt.originalIndex === q.correct);
+    correctAnswers[questionId] = newCorrectIndex;
+    
+    // Create question HTML
+    const questionHTML = `
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-indigo-500 quiz-question">
+        <h3 class="text-2xl font-bold mb-4 text-gray-800">Question ${questionNum}</h3>
+        <p class="text-lg text-gray-700 mb-6">${q.question}</p>
+        <div class="space-y-3">
+          ${shuffledOptions.map((opt, optIndex) => `
+            <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+              <input type="radio" name="${questionId}" value="${optIndex}" class="mt-1">
+              <span class="text-gray-700">${opt.text}</span>
+            </label>
+          `).join('')}
+        </div>
+        <div class="feedback mt-4 hidden"></div>
+      </div>
+    `;
+    
+    quizContainer.innerHTML += questionHTML;
+  });
+
+  lucide.createIcons();
+
+  // Submit button handler
+  document.getElementById('submitQuiz').addEventListener('click', () => {
+    let score = 0;
+    let answered = 0;
+    
+    const questions = document.querySelectorAll('.quiz-question');
+    
+    questions.forEach((question, index) => {
+      const questionId = `q${index + 1}`;
+      const selected = question.querySelector(`input[name="${questionId}"]:checked`);
+      const feedback = question.querySelector('.feedback');
+      
+      if (selected) {
+        answered++;
+        const selectedValue = parseInt(selected.value);
+        const isCorrect = selectedValue === correctAnswers[questionId];
+        
+        if (isCorrect) {
+          score++;
+          question.classList.remove('border-red-500', 'border-yellow-500');
+          question.classList.add('border-indigo-500');
+          feedback.innerHTML = `
+            <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4 rounded">
+              <p class="font-semibold text-indigo-800 mb-2">✓ Correct!</p>
+              <p class="text-indigo-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        } else {
+          question.classList.remove('border-indigo-500', 'border-yellow-500');
+          question.classList.add('border-red-500');
+          feedback.innerHTML = `
+            <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded">
+              <p class="font-semibold text-red-800 mb-2">✗ Incorrect</p>
+              <p class="text-red-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        }
+        
+        feedback.classList.remove('hidden');
+      } else {
+        question.classList.remove('border-indigo-500', 'border-red-500');
+        question.classList.add('border-yellow-500');
+        feedback.innerHTML = `
+          <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+            <p class="font-semibold text-yellow-800">Question not answered</p>
+          </div>
+        `;
+        feedback.classList.remove('hidden');
+      }
+    });
+    
+    const percentage = answered > 0 ? Math.round((score / 15) * 100) : 0;
+    const resultDiv = document.getElementById('quizResults');
+    const scoreDisplay = document.getElementById('scoreDisplay');
+    
+    let gradeColor = 'text-red-600';
+    let message = 'Keep studying!';
+    
+    if (percentage >= 90) {
+      gradeColor = 'text-indigo-600';
+      message = 'Excellent! You have mastered this material!';
+    } else if (percentage >= 80) {
+      gradeColor = 'text-blue-600';
+      message = 'Great job! You have a strong understanding!';
+    } else if (percentage >= 70) {
+      gradeColor = 'text-yellow-600';
+      message = 'Good work! Review the explanations to improve.';
+    } else if (percentage >= 60) {
+      gradeColor = 'text-orange-600';
+      message = 'Fair. Consider reviewing the material more thoroughly.';
+    }
+    
+    scoreDisplay.innerHTML = `
+      <div class="text-center">
+        <div class="text-6xl font-bold ${gradeColor} mb-4">${percentage}%</div>
+        <p class="text-2xl text-gray-700 mb-2">${score} out of 15 correct</p>
+        <p class="text-xl text-gray-600 mb-6">${message}</p>
+      </div>
+    `;
+    
+    resultDiv.classList.remove('hidden');
+    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

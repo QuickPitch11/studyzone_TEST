@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Arithmetic - In Depth Analysis | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full mb-6">
+      <i data-lucide="calculator" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Arithmetic: In Depth Analysis</h1>
+    <p class="text-xl text-gray-600">A comprehensive, structured look at arithmetic: concepts, algorithms, proofs, and pedagogy</p>
+  </div>
+
+  <div class="space-y-10">
+    <!-- Introduction -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Introduction</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">Arithmetic is the oldest and most basic branch of mathematics. It focuses on manipulating numbers through the four elementary operations and developing reliable algorithms for computation. Historically, arithmetic developed concrete techniques for commerce, astronomy, and engineering and evolved into formal number systems and algorithmic methods that underpin modern computation.</p>
+      <p class="text-gray-700 leading-relaxed text-lg">This analysis covers foundational definitions, core algorithms (including worked examples), computational representations, pedagogical guidance, common misconceptions, and connections to more advanced fields such as number theory and numerical analysis.</p>
+    </div>
+
+    <!-- Foundations -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Foundations</h2>
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Number Systems</h3>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg mb-4">
+        <li><strong>Natural numbers</strong> — counting numbers starting at 1 (or 0, depending on convention).</li>
+        <li><strong>Integers</strong> — extend naturals with zero and negatives.</li>
+        <li><strong>Rational numbers</strong> — ratios of integers p/q (q ≠ 0), representable exactly as fractions or repeating decimals.</li>
+        <li><strong>Real numbers</strong> — completion of rationals to include limits and irrationals (e.g., √2, π).</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Algebraic Properties</h3>
+      <p class="text-gray-700 leading-relaxed text-lg">Arithmetic operations obey basic algebraic laws that make computation predictable: commutativity and associativity of addition and multiplication, distributivity of multiplication over addition, and existence of additive (0) and multiplicative (1) identities and inverses (additive inverse −a; multiplicative inverse a⁻¹ for a ≠ 0).</p>
+    </div>
+
+    <!-- Core Topics & Algorithms -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Core Topics &amp; Algorithms</h2>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Addition &amp; Subtraction</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Place-value column algorithms use carries and borrows. They rest on the representation of numbers as sums of digits times powers of the base (e.g., base 10). Mastery of place-value is essential for correctness and mental strategies.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Multiplication</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Long multiplication multiplies each digit of one factor by the other and sums appropriately shifted partial products. For large integers, faster algorithms exist: Karatsuba (O(n^1.585)) and FFT-based methods (O(n log n)).</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Division &amp; Long Division</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Integer division yields quotient and remainder: for integers a and b &gt; 0, a = bq + r with 0 ≤ r &lt; b. Long division produces quotient digits sequentially and maintains this invariant at every step.</p>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>Worked example — Long Division:</strong> Compute 252 ÷ 105.</p>
+        <p class="text-gray-700 font-mono text-sm">252 = 2·105 + 42 → 105 = 2·42 + 21 → 42 = 2·21 + 0. So gcd(252,105)=21 and 252÷105 = 2 remainder 42 (or decimal ~2.4).</p>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Euclidean Algorithm (gcd)</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Compute gcd(a,b) by repeated remainder: replace (a,b) with (b,a mod b) until b = 0; last nonzero a is gcd. This is efficient and foundational for fraction simplification and number-theoretic algorithms.</p>
+
+      <h3 class="text-2xl font-bold mb-4 text-gray-800 mt-2">Modular Arithmetic</h3>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Congruence arithmetic (a ≡ b (mod m)) studies remainders; it's central to cryptography, hashing, and cyclic computations. Use properties like (a + b) mod m = ((a mod m) + (b mod m)) mod m and similar for multiplication.</p>
+    </div>
+
+    <!-- Computational Representation -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Computational Representation</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Numbers are stored using positional bases; computers use binary. Floating-point (IEEE 754) stores approximations with finite precision causing rounding errors, non-associativity, and special values (NaN, ±∞). Integer operations are exact up to machine word limits, where overflow can occur.</p>
+      <p class="text-gray-700 leading-relaxed text-lg">Algorithm choice matters: for large integers use big-integer libraries and asymptotically faster multiplication; for real arithmetic prefer numerically stable algorithms to limit error growth.</p>
+    </div>
+
+    <!-- Proofs & Correctness -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Proofs &amp; Correctness</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">School algorithms derive from algebraic identities: place-value expansions and distributivity prove long multiplication; invariants like a = bq + r prove long division. Reasoning with invariants and induction gives formal correctness proofs.</p>
+    </div>
+
+    <!-- Applications -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Applications</h2>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li><strong>Everyday:</strong> budgeting, measurement, recipes, timekeeping.</li>
+        <li><strong>Science &amp; Engineering:</strong> unit conversion, baseline computations, measurement calculations.</li>
+        <li><strong>Computer Science:</strong> integer arithmetic, hashing, modular exponentiation, checksums, cryptography.</li>
+        <li><strong>Education:</strong> foundational numeracy for further mathematics.</li>
+      </ul>
+    </div>
+
+    <!-- Pedagogy & Learning -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Pedagogy &amp; Learning</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Effective sequence: concrete manipulatives → place-value understanding → algorithm practice → mental strategies → connections to abstract ideas (fractions, ratios, modular arithmetic). Reinforce with varied representations and estimation to build flexibility and number sense.</p>
+      <p class="text-gray-700 leading-relaxed text-lg">Common instructional strategies include using base-ten blocks, number lines, decomposition techniques (split-and-add), and spaced practice that mixes problem types.</p>
+    </div>
+
+    <!-- Common Pitfalls -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Common Pitfalls</h2>
+      <ul class="space-y-3 text-gray-700 leading-relaxed text-lg">
+        <li>Place-value misunderstandings leading to incorrect carries/borrows.</li>
+        <li>Confusing fraction and decimal representations.</li>
+        <li>Assuming algebraic properties hold exactly under floating-point arithmetic.</li>
+        <li>Overreliance on rote algorithms without conceptual grounding.</li>
+      </ul>
+    </div>
+
+    <!-- Advanced Connections -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Advanced Connections</h2>
+      <p class="text-gray-700 leading-relaxed text-lg mb-3">Arithmetic extends into algebra (rings, fields), number theory (primes, gcd, modular arithmetic), and numerical analysis (error, stability). Large-integer arithmetic and modular exponentiation are key to modern cryptography.</p>
+    </div>
+
+    <!-- Practical Examples -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Practical Examples &amp; Worked Problems</h2>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>Euclidean Algorithm — Example</strong></p>
+        <p class="text-gray-700 font-mono text-sm">gcd(252, 105): 252 = 2·105 + 42 → 105 = 2·42 + 21 → 42 = 2·21 + 0 → gcd = 21.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>Long Multiplication — Example</strong></p>
+        <p class="text-gray-700 font-mono text-sm">47 × 23 = 47×(20+3) = 47×20 + 47×3 = 940 + 141 = 1081.</p>
+      </div>
+
+      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-gray-700 font-mono text-sm mb-2"><strong>Rounding Error Estimate</strong></p>
+        <p class="text-gray-700 font-mono text-sm">Rounding to n significant digits gives relative error ≤ 0.5×10<sup>-n</sup>.</p>
+      </div>
+    </div>
+
+    <!-- Further Reading -->
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Further Reading</h2>
+      <p class="text-gray-700 leading-relaxed text-lg">Recommended: introductory number theory, numerical analysis for floating-point/error, and arithmetic pedagogy texts for teaching strategies. Online interactive manipulatives and algorithm visualizers are useful for practice.</p>
+    </div>
+  </div>
+
+  <!-- Diagrams & Code Examples -->
+  <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-purple-500 mt-10">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">Diagrams &amp; Code Examples</h2>
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+      <div class="space-y-4">
+        <h3 class="text-xl font-semibold text-gray-800">Number Line (Addition &amp; Ordering)</h3>
+        <svg viewBox="0 0 600 120" class="w-full h-32 rounded border bg-white" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="number line">
+          <line x1="20" y1="60" x2="580" y2="60" stroke="#94a3b8" stroke-width="3" />
+          <!-- ticks -->
+          <g stroke="#475569" stroke-width="1">
+            <line x1="60" y1="50" x2="60" y2="70" />
+            <line x1="120" y1="50" x2="120" y2="70" />
+            <line x1="180" y1="50" x2="180" y2="70" />
+            <line x1="240" y1="50" x2="240" y2="70" />
+            <line x1="300" y1="50" x2="300" y2="70" />
+            <line x1="360" y1="50" x2="360" y2="70" />
+            <line x1="420" y1="50" x2="420" y2="70" />
+            <line x1="480" y1="50" x2="480" y2="70" />
+            <line x1="540" y1="50" x2="540" y2="70" />
+          </g>
+          <!-- labels -->
+          <g font-family="system-ui, Arial" font-size="12" fill="#0f172a" text-anchor="middle">
+            <text x="60" y="90">-4</text>
+            <text x="120" y="90">-3</text>
+            <text x="180" y="90">-2</text>
+            <text x="240" y="90">-1</text>
+            <text x="300" y="90">0</text>
+            <text x="360" y="90">1</text>
+            <text x="420" y="90">2</text>
+            <text x="480" y="90">3</text>
+            <text x="540" y="90">4</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-xl font-semibold text-gray-800">Fraction Visualization</h3>
+        <svg viewBox="0 0 200 120" class="w-full h-32 rounded border bg-white" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="fraction pizza">
+          <!-- circle divided into 8 slices, highlight 3/8 -->
+          <g transform="translate(100,60)">
+            <defs>
+              <clipPath id="slice">
+                <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" />
+              </clipPath>
+            </defs>
+            <!-- all slices light -->
+            <g fill="#e6eef8" stroke="#cbd5e1" stroke-width="1">
+              <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(0)" />
+              <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(45)" />
+              <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(90)" />
+              <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(135)" />
+              <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(180)" />
+              <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(225)" />
+              <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(270)" />
+              <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(315)" />
+            </g>
+            <!-- highlight 3 slices -->
+            <g fill="#7c3aed" stroke="#6d28d9" stroke-width="1" opacity="0.95">
+              <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(0)" />
+              <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(45)" />
+              <path d="M0 0 L80 0 A80 80 0 0 1 69.14 -45.26 Z" transform="rotate(90)" />
+            </g>
+            <circle r="82" fill="none" stroke="#0f172a" stroke-width="0.5" />
+          </g>
+        </svg>
+        <p class="text-gray-600 text-sm">This visual shows 3/8 highlighted — useful for explaining fraction addition and equivalence.</p>
+      </div>
+    </div>
+    </div>
+
+  <div class="mt-12 flex justify-center gap-4">
+    <a href="arithmetic-math-quiz.html" class="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition flex items-center gap-2">
+      <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+      Test Yourself
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

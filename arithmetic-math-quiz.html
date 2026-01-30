@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Arithmetic Math Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full mb-6">
+      <i data-lucide="calculator" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Arithmetic Math Quiz</h1>
+    <p class="text-xl text-gray-600">Test your knowledge of basic arithmetic operations and number sense</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Questions will be dynamically generated here -->
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-yellow-600 text-white text-lg font-semibold rounded-lg hover:bg-yellow-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="quizResults" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-yellow-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="arithmetic-analysis.html" class="px-6 py-3 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition flex items-center gap-2">
+        <i data-lucide="book-open" class="w-5 h-5"></i>
+        Review Material
+      </a>
+      <button onclick="location.reload()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+        Retake Quiz
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="arithmetic-math.html" class="px-6 py-3 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Back to Arithmetic Math
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Question Bank - 40 questions total
+  const questionBank = [
+    {
+      question: "What is 347 + 589?",
+      options: ["926", "936", "946", "956", "916"],
+      correct: 1,
+      explanation: "To add 347 + 589, align the numbers vertically and add column by column: 7+9=16 (carry 1), 4+8+1=13 (carry 1), 3+5+1=9. The answer is 936."
+    },
+    {
+      question: "What is 1,254 - 876?",
+      options: ["378", "388", "368", "358", "398"],
+      correct: 0,
+      explanation: "To subtract 876 from 1,254, align the numbers vertically and subtract column by column with borrowing as needed: 14-6=8, 4-7 requires borrowing (14-7=7), 11-8=3. The answer is 378."
+    },
+    {
+      question: "What is 45 × 12?",
+      options: ["520", "530", "540", "550", "560"],
+      correct: 2,
+      explanation: "To multiply 45 × 12: multiply 45 × 2 = 90, then multiply 45 × 10 = 450, and add them together: 450 + 90 = 540."
+    },
+    {
+      question: "What is 576 ÷ 12?",
+      options: ["46", "47", "48", "49", "50"],
+      correct: 2,
+      explanation: "To divide 576 by 12, we can use long division or think: 12 × 48 = 576. The answer is 48."
+    },
+    {
+      question: "What is the value of 5 + 3 × 4?",
+      options: ["32", "20", "17", "12", "23"],
+      correct: 2,
+      explanation: "Following the order of operations (PEMDAS), we multiply before adding: 3 × 4 = 12, then 5 + 12 = 17."
+    },
+    {
+      question: "What is 3/4 + 1/4?",
+      options: ["4/8", "1/2", "1", "4/4", "2/4"],
+      correct: 2,
+      explanation: "When adding fractions with the same denominator, add the numerators and keep the denominator: 3/4 + 1/4 = 4/4 = 1."
+    },
+    {
+      question: "What is 0.75 as a percentage?",
+      options: ["7.5%", "75%", "750%", "0.75%", "7500%"],
+      correct: 1,
+      explanation: "To convert a decimal to a percentage, multiply by 100: 0.75 × 100 = 75%."
+    },
+    {
+      question: "What is 25% of 80?",
+      options: ["15", "20", "25", "30", "35"],
+      correct: 1,
+      explanation: "To find 25% of 80, multiply 80 × 0.25 = 20. Alternatively, 25% is 1/4, so 80 ÷ 4 = 20."
+    },
+    {
+      question: "What is the ratio 12:16 simplified?",
+      options: ["6:8", "3:4", "4:3", "2:3", "1:2"],
+      correct: 1,
+      explanation: "To simplify 12:16, find the greatest common factor (GCF) of 12 and 16, which is 4. Divide both numbers by 4: 12÷4 = 3, 16÷4 = 4. The simplified ratio is 3:4."
+    },
+    {
+      question: "Which number is prime: 27, 29, 33, or 35?",
+      options: ["27", "29", "33", "35", "All are prime"],
+      correct: 1,
+      explanation: "A prime number has exactly two factors: 1 and itself. 29 is prime (only divisible by 1 and 29). 27=3×9, 33=3×11, and 35=5×7 are all composite."
+    },
+    {
+      question: "What is the prime factorization of 36?",
+      options: ["2 × 18", "3 × 12", "2² × 3²", "6²", "4 × 9"],
+      correct: 2,
+      explanation: "The prime factorization expresses a number as a product of prime numbers only: 36 = 2 × 2 × 3 × 3 = 2² × 3²."
+    },
+    {
+      question: "What is the Least Common Multiple (LCM) of 6 and 8?",
+      options: ["12", "16", "24", "48", "36"],
+      correct: 2,
+      explanation: "The LCM is the smallest number that both 6 and 8 divide into evenly. Multiples of 6: 6, 12, 18, 24... Multiples of 8: 8, 16, 24... The LCM is 24."
+    },
+    {
+      question: "What is the Greatest Common Factor (GCF) of 24 and 36?",
+      options: ["6", "8", "12", "18", "24"],
+      correct: 2,
+      explanation: "The GCF is the largest number that divides evenly into both numbers. Factors of 24: 1, 2, 3, 4, 6, 8, 12, 24. Factors of 36: 1, 2, 3, 4, 6, 9, 12, 18, 36. The GCF is 12."
+    },
+    {
+      question: "What is -15 + 23?",
+      options: ["-38", "-8", "8", "38", "15"],
+      correct: 2,
+      explanation: "When adding a negative and a positive number, find the difference of their absolute values and use the sign of the larger absolute value: |23| - |-15| = 23 - 15 = 8 (positive)."
+    },
+    {
+      question: "What is -8 × -7?",
+      options: ["-56", "56", "-15", "15", "1"],
+      correct: 1,
+      explanation: "When multiplying two negative numbers, the result is positive. -8 × -7 = 56. The rule is: negative × negative = positive."
+    },
+    {
+      question: "What is 2.5 + 3.75?",
+      options: ["5.25", "6.00", "6.25", "5.50", "6.50"],
+      correct: 2,
+      explanation: "Align the decimal points and add: 2.50 + 3.75 = 6.25."
+    },
+    {
+      question: "What is 7.2 ÷ 0.6?",
+      options: ["1.2", "12", "120", "0.12", "1.02"],
+      correct: 1,
+      explanation: "To divide decimals, multiply both numbers by 10 to make the divisor a whole number: 72 ÷ 6 = 12."
+    },
+    {
+      question: "Round 4,567 to the nearest hundred:",
+      options: ["4,500", "4,600", "4,000", "5,000", "4,550"],
+      correct: 1,
+      explanation: "Look at the tens digit (6). Since 6 ≥ 5, round up: 4,567 rounds to 4,600."
+    },
+    {
+      question: "Estimate 48 × 21 to the nearest ten:",
+      options: ["900", "950", "1,000", "1,050", "1,100"],
+      correct: 2,
+      explanation: "Round each number to the nearest ten: 48 ≈ 50, 21 ≈ 20. Then multiply: 50 × 20 = 1,000."
+    },
+    {
+      question: "If 5 apples cost $3.75, what is the cost per apple?",
+      options: ["$0.65", "$0.70", "$0.75", "$0.80", "$0.85"],
+      correct: 2,
+      explanation: "Divide the total cost by the number of apples: $3.75 ÷ 5 = $0.75 per apple."
+    },
+    {
+      question: "A store offers a 20% discount on a $45 item. What is the sale price?",
+      options: ["$9", "$25", "$36", "$40", "$35"],
+      correct: 2,
+      explanation: "Find the discount: 20% of $45 = 0.20 × $45 = $9. Subtract from original price: $45 - $9 = $36."
+    },
+    {
+      question: "What is 3/5 as a decimal?",
+      options: ["0.35", "0.5", "0.6", "0.65", "0.8"],
+      correct: 2,
+      explanation: "To convert a fraction to a decimal, divide the numerator by the denominator: 3 ÷ 5 = 0.6."
+    },
+    {
+      question: "What is 40% as a fraction in simplest form?",
+      options: ["4/10", "2/5", "40/100", "1/4", "8/20"],
+      correct: 1,
+      explanation: "40% = 40/100. Simplify by dividing both numerator and denominator by their GCF (20): 40÷20 = 2, 100÷20 = 5. The answer is 2/5."
+    },
+    {
+      question: "What is 1/2 + 1/3?",
+      options: ["2/5", "2/6", "5/6", "3/5", "4/6"],
+      correct: 2,
+      explanation: "Find a common denominator (6): 1/2 = 3/6, 1/3 = 2/6. Add: 3/6 + 2/6 = 5/6."
+    },
+    {
+      question: "What is 2/3 × 3/4?",
+      options: ["5/7", "6/12", "1/2", "2/4", "5/12"],
+      correct: 2,
+      explanation: "Multiply numerators and denominators: (2×3)/(3×4) = 6/12 = 1/2."
+    },
+    {
+      question: "What is 3/4 ÷ 1/2?",
+      options: ["3/8", "3/2", "1/2", "6/4", "4/6"],
+      correct: 1,
+      explanation: "To divide fractions, multiply by the reciprocal: 3/4 ÷ 1/2 = 3/4 × 2/1 = 6/4 = 3/2 or 1.5."
+    },
+    {
+      question: "If a train travels 180 miles in 3 hours, what is its average speed?",
+      options: ["50 mph", "55 mph", "60 mph", "65 mph", "70 mph"],
+      correct: 2,
+      explanation: "Speed = Distance ÷ Time = 180 miles ÷ 3 hours = 60 miles per hour."
+    },
+    {
+      question: "What is (8 + 2) × (6 - 3)?",
+      options: ["18", "24", "30", "36", "42"],
+      correct: 2,
+      explanation: "Using PEMDAS, calculate parentheses first: (8+2) = 10, (6-3) = 3. Then multiply: 10 × 3 = 30."
+    },
+    {
+      question: "What is 12 - 3 × 2 + 4?",
+      options: ["10", "12", "14", "16", "18"],
+      correct: 0,
+      explanation: "Following order of operations: 3 × 2 = 6, then 12 - 6 + 4 = 10."
+    },
+    {
+      question: "What is 48 ÷ 6 + 2 × 3?",
+      options: ["12", "14", "16", "18", "20"],
+      correct: 1,
+      explanation: "Following order of operations: 48 ÷ 6 = 8, 2 × 3 = 6, then 8 + 6 = 14."
+    },
+    {
+      question: "What is the value of 2³?",
+      options: ["6", "8", "9", "12", "16"],
+      correct: 1,
+      explanation: "2³ means 2 × 2 × 2 = 8. The exponent 3 indicates how many times to multiply 2 by itself."
+    },
+    {
+      question: "How do you mentally calculate 25 × 16?",
+      options: ["250", "300", "350", "400", "450"],
+      correct: 3,
+      explanation: "25 × 16 = 25 × 4 × 4 = 100 × 4 = 400. Recognize that 25 × 4 = 100."
+    },
+    {
+      question: "What is a quick way to calculate 99 × 7?",
+      options: ["683", "693", "703", "713", "723"],
+      correct: 1,
+      explanation: "Think of 99 as (100 - 1): 100 × 7 = 700, then subtract 7: 700 - 7 = 693."
+    },
+    {
+      question: "Which of these numbers is divisible by 3: 124, 135, 142, or 151?",
+      options: ["124", "135", "142", "151", "None"],
+      correct: 1,
+      explanation: "A number is divisible by 3 if the sum of its digits is divisible by 3. For 135: 1+3+5 = 9, which is divisible by 3."
+    },
+    {
+      question: "Which number is divisible by 9: 234, 345, 456, or 567?",
+      options: ["234", "345", "456", "567", "All of them"],
+      correct: 3,
+      explanation: "A number is divisible by 9 if the sum of its digits is divisible by 9. For 567: 5+6+7 = 18, which is divisible by 9."
+    },
+    {
+      question: "What is the absolute value of -25?",
+      options: ["-25", "0", "25", "50", "-50"],
+      correct: 2,
+      explanation: "The absolute value of a number is its distance from zero, always positive. |-25| = 25."
+    },
+    {
+      question: "What is (-3) + (-7)?",
+      options: ["-10", "-4", "4", "10", "-21"],
+      correct: 0,
+      explanation: "When adding two negative numbers, add their absolute values and keep the negative sign: -3 + (-7) = -10."
+    },
+    {
+      question: "What is 15 - (-8)?",
+      options: ["7", "-7", "23", "-23", "15"],
+      correct: 2,
+      explanation: "Subtracting a negative is the same as adding a positive: 15 - (-8) = 15 + 8 = 23."
+    },
+    {
+      question: "In a class of 30 students, 18 are girls. What is the ratio of girls to boys?",
+      options: ["18:30", "18:12", "3:2", "2:3", "12:18"],
+      correct: 2,
+      explanation: "Boys = 30 - 18 = 12. Ratio of girls to boys = 18:12. Simplify by dividing by GCF (6): 18÷6 = 3, 12÷6 = 2. The ratio is 3:2."
+    },
+    {
+      question: "If 4 pencils cost $2.40, how much do 7 pencils cost?",
+      options: ["$3.60", "$4.00", "$4.20", "$4.80", "$5.00"],
+      correct: 2,
+      explanation: "Find the cost per pencil: $2.40 ÷ 4 = $0.60. Then multiply by 7: $0.60 × 7 = $4.20."
+    }
+  ];
+
+  // Shuffle array function
+  function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  // Select 15 random questions
+  const selectedQuestions = shuffleArray(questionBank).slice(0, 15);
+  const correctAnswers = {};
+  const explanations = {};
+
+  // Generate quiz HTML
+  const quizContainer = document.getElementById('quizContainer');
+  selectedQuestions.forEach((q, index) => {
+    const questionNum = index + 1;
+    const questionId = `q${questionNum}`;
+    
+    // Store correct answer and explanation
+    correctAnswers[questionId] = q.correct;
+    explanations[questionId] = q.explanation;
+    
+    // Shuffle options with correct answer tracking
+    const optionsWithIndex = q.options.map((opt, idx) => ({ text: opt, originalIndex: idx }));
+    const shuffledOptions = shuffleArray(optionsWithIndex);
+    
+    // Find new position of correct answer
+    const newCorrectIndex = shuffledOptions.findIndex(opt => opt.originalIndex === q.correct);
+    correctAnswers[questionId] = newCorrectIndex;
+    
+    // Create question HTML
+    const questionHTML = `
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-yellow-500 quiz-question">
+        <h3 class="text-2xl font-bold mb-4 text-gray-800">Question ${questionNum}</h3>
+        <p class="text-lg text-gray-700 mb-6">${q.question}</p>
+        <div class="space-y-3">
+          ${shuffledOptions.map((opt, optIndex) => `
+            <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+              <input type="radio" name="${questionId}" value="${optIndex}" class="mt-1">
+              <span class="text-gray-700">${opt.text}</span>
+            </label>
+          `).join('')}
+        </div>
+        <div class="feedback mt-4 hidden"></div>
+      </div>
+    `;
+    
+    quizContainer.innerHTML += questionHTML;
+  });
+
+  lucide.createIcons();
+
+  // Submit button handler
+  document.getElementById('submitQuiz').addEventListener('click', () => {
+    let score = 0;
+    let answered = 0;
+    
+    const questions = document.querySelectorAll('.quiz-question');
+    
+    questions.forEach((question, index) => {
+      const questionId = `q${index + 1}`;
+      const selected = question.querySelector(`input[name="${questionId}"]:checked`);
+      const feedback = question.querySelector('.feedback');
+      
+      if (selected) {
+        answered++;
+        const selectedValue = parseInt(selected.value);
+        const isCorrect = selectedValue === correctAnswers[questionId];
+        
+        if (isCorrect) {
+          score++;
+          question.classList.remove('border-red-500', 'border-amber-500');
+          question.classList.add('border-yellow-500');
+          feedback.innerHTML = `
+            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <p class="font-semibold text-green-800 mb-2">✓ Correct!</p>
+              <p class="text-green-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        } else {
+          question.classList.remove('border-yellow-500', 'border-amber-500');
+          question.classList.add('border-red-500');
+          feedback.innerHTML = `
+            <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded">
+              <p class="font-semibold text-red-800 mb-2">✗ Incorrect</p>
+              <p class="text-red-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        }
+        
+        feedback.classList.remove('hidden');
+      } else {
+        question.classList.remove('border-yellow-500', 'border-red-500');
+        question.classList.add('border-amber-500');
+        feedback.innerHTML = `
+          <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+            <p class="font-semibold text-yellow-800">Question not answered</p>
+          </div>
+        `;
+        feedback.classList.remove('hidden');
+      }
+    });
+
+    // Calculate percentage
+    const percentage = answered > 0 ? Math.round((score / 15) * 100) : 0;
+    
+    // Display score
+    let resultColor = percentage >= 70 ? 'text-green-600' : percentage >= 50 ? 'text-yellow-600' : 'text-red-600';
+    let resultMessage = percentage >= 70 ? 'Excellent work!' : percentage >= 50 ? 'Good effort!' : 'Keep practicing!';
+    
+    document.getElementById('scoreDisplay').innerHTML = `
+      <div class="text-6xl font-bold ${resultColor} mb-4">${score}/15</div>
+      <div class="text-2xl font-semibold text-gray-700">${percentage}%</div>
+      <div class="text-xl text-gray-600 mt-2">${resultMessage}</div>
+    `;
+    
+    document.getElementById('quizResults').classList.remove('hidden');
+    document.getElementById('quizResults').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>

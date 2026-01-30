@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Civil Engineering — Overview | StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full mb-6">
+      <i data-lucide="building-2" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Civil Engineering</h1>
+    <p class="text-xl text-gray-600">Design and construction of infrastructure and buildings</p>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 mb-10">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">What is Civil Engineering?</h2>
+    <p class="text-gray-700 leading-relaxed text-lg mb-4">Civil engineering is one of the oldest and broadest engineering disciplines, focused on designing, building, and maintaining the infrastructure that forms the foundation of modern society. From bridges and buildings to water supply systems and highways, civil engineers create the physical structures that enable communities to function and thrive.</p>
+    
+    <p class="text-gray-700 leading-relaxed text-lg mb-4">Civil engineers combine knowledge of mathematics, physics, materials science, and environmental considerations to develop safe, sustainable, and economically viable solutions to infrastructure challenges. They work on projects ranging from small residential foundations to massive dam projects, transportation networks, and urban development.</p>
+
+    <p class="text-gray-700 leading-relaxed text-lg">The profession encompasses numerous specializations including structural engineering, geotechnical engineering, transportation engineering, water resources, environmental engineering, and construction management. Civil engineers have a profound responsibility to protect public safety, health, and welfare through their designs and decisions.</p>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 mb-10">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">Key Areas of Civil Engineering</h2>
+    
+    <div class="space-y-6">
+      <div class="border-l-4 border-orange-500 pl-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Structural Engineering</h3>
+        <p class="text-gray-700">Design and analysis of buildings, bridges, towers, and other structures to ensure they can safely withstand loads and environmental forces. Involves understanding materials, stress analysis, and structural systems.</p>
+      </div>
+
+      <div class="border-l-4 border-amber-500 pl-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Geotechnical Engineering</h3>
+        <p class="text-gray-700">Study of soil and rock mechanics to design foundations, retaining walls, tunnels, and earth structures. Critical for ensuring structures have adequate support from the ground.</p>
+      </div>
+
+      <div class="border-l-4 border-orange-500 pl-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Transportation Engineering</h3>
+        <p class="text-gray-700">Planning, design, and operation of highways, railways, airports, and public transit systems. Focuses on safe, efficient movement of people and goods.</p>
+      </div>
+
+      <div class="border-l-4 border-amber-500 pl-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Water Resources Engineering</h3>
+        <p class="text-gray-700">Management of water for beneficial uses including water supply, flood control, irrigation, and hydroelectric power. Involves hydrology, hydraulics, and environmental considerations.</p>
+      </div>
+
+      <div class="border-l-4 border-orange-500 pl-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Environmental Engineering</h3>
+        <p class="text-gray-700">Protection of human health and the environment through water and wastewater treatment, air quality management, and solid waste disposal systems.</p>
+      </div>
+
+      <div class="border-l-4 border-amber-500 pl-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Construction Management</h3>
+        <p class="text-gray-700">Planning, coordinating, and controlling construction projects from conception to completion, ensuring they meet quality, time, and budget requirements.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 mb-10">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">What You'll Learn</h2>
+    
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-lg">
+        <div class="flex items-start gap-3">
+          <div class="flex-shrink-0">
+            <i data-lucide="check-circle" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-2">Structural Analysis</h3>
+            <p class="text-gray-700 text-sm">Load calculations, stress and strain analysis, structural design principles, and material behavior</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-lg">
+        <div class="flex items-start gap-3">
+          <div class="flex-shrink-0">
+            <i data-lucide="check-circle" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-2">Soil Mechanics</h3>
+            <p class="text-gray-700 text-sm">Soil classification, bearing capacity, settlement analysis, and foundation design</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-lg">
+        <div class="flex items-start gap-3">
+          <div class="flex-shrink-0">
+            <i data-lucide="check-circle" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-2">Fluid Mechanics & Hydraulics</h3>
+            <p class="text-gray-700 text-sm">Fluid properties, flow in pipes and channels, pump design, and water distribution systems</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-lg">
+        <div class="flex items-start gap-3">
+          <div class="flex-shrink-0">
+            <i data-lucide="check-circle" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-2">Transportation Systems</h3>
+            <p class="text-gray-700 text-sm">Highway geometric design, pavement design, traffic engineering, and transportation planning</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-lg">
+        <div class="flex items-start gap-3">
+          <div class="flex-shrink-0">
+            <i data-lucide="check-circle" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-2">Construction Methods</h3>
+            <p class="text-gray-700 text-sm">Project scheduling, cost estimation, construction techniques, and quality control</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-lg">
+        <div class="flex items-start gap-3">
+          <div class="flex-shrink-0">
+            <i data-lucide="check-circle" class="w-6 h-6 text-orange-600"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-800 mb-2">Sustainability & Ethics</h3>
+            <p class="text-gray-700 text-sm">Green building practices, climate resilience, professional responsibility, and engineering ethics</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 mb-10">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">Why Study Civil Engineering?</h2>
+    
+    <div class="space-y-4">
+      <div class="flex gap-4 items-start">
+        <div class="flex-shrink-0 w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+          <i data-lucide="lightbulb" class="w-5 h-5 text-orange-600"></i>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800 mb-1">Impact on Society</h3>
+          <p class="text-gray-700">Create infrastructure that directly improves quality of life and serves communities for generations</p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="flex-shrink-0 w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+          <i data-lucide="trending-up" class="w-5 h-5 text-orange-600"></i>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800 mb-1">Strong Career Prospects</h3>
+          <p class="text-gray-700">Growing demand for infrastructure development, maintenance, and climate adaptation creates abundant opportunities</p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="flex-shrink-0 w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+          <i data-lucide="users" class="w-5 h-5 text-orange-600"></i>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800 mb-1">Diverse Career Paths</h3>
+          <p class="text-gray-700">Work in consulting firms, government agencies, construction companies, or start your own practice</p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="flex-shrink-0 w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+          <i data-lucide="globe" class="w-5 h-5 text-orange-600"></i>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800 mb-1">Address Global Challenges</h3>
+          <p class="text-gray-700">Tackle climate change, urbanization, sustainable development, and resilient infrastructure challenges</p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="flex-shrink-0 w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+          <i data-lucide="award" class="w-5 h-5 text-orange-600"></i>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800 mb-1">Professional Recognition</h3>
+          <p class="text-gray-700">Earn Professional Engineer (PE) licensure and gain authority to approve and certify engineering projects</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <a href="civil-engineering-analysis.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all hover:scale-105">
+      <span>View In-Depth Analysis</span>
+      <i data-lucide="arrow-right" class="w-5 h-5"></i>
+    </a>
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-white py-10 text-center mt-16">
+  <p class="text-gray-400">© 2026 StudyZone. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Medical Terminology Quiz - StudyZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+<header class="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+        <i data-lucide="book-open" class="w-8 h-8 text-blue-600"></i>
+        <h1 class="text-2xl font-bold">StudyZone</h1>
+      </a>
+    </div>
+
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="research.html" class="font-medium text-gray-700 hover:text-blue-600">Research</a>
+      <a href="textbooks.html" class="font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-blue-600">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+      <a href="account.html" class="p-2 hover:bg-gray-100 rounded-lg transition" title="My Account">
+        <i data-lucide="user-circle" class="w-6 h-6 text-gray-700"></i>
+      </a>
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button class="p-2 dark-mode-toggle">
+        <i data-lucide="moon" class="w-5 h-5 dark-mode-icon"></i>
+      </button>
+      <button id="menuBtn" class="p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden border-t px-4 py-4 bg-white">
+    <a href="research.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Research</a>
+    <a href="textbooks.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Textbooks</a>
+    <a href="about.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">About</a>
+    <a href="contact.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+    <a href="account.html" class="block py-2 font-medium text-gray-700 hover:text-blue-600">My Account</a>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full mb-6">
+      <i data-lucide="file-text" class="w-10 h-10 text-white"></i>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Medical Terminology Quiz</h1>
+    <p class="text-xl text-gray-600">Test your knowledge of medical prefixes, suffixes, and root words</p>
+  </div>
+
+  <!-- Quiz Container -->
+  <div id="quizContainer" class="space-y-8">
+    <!-- Questions will be dynamically generated here -->
+  </div>
+
+  <!-- Submit Button -->
+  <div class="mt-12 text-center">
+    <button id="submitQuiz" class="px-8 py-4 bg-teal-600 text-white text-lg font-semibold rounded-lg hover:bg-teal-700 transition flex items-center gap-2 mx-auto">
+      <i data-lucide="check-circle" class="w-6 h-6"></i>
+      Submit Quiz
+    </button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="quizResults" class="hidden mt-12 bg-white rounded-xl shadow-lg p-8 border-l-4 border-teal-500">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Quiz Results</h2>
+    <div id="scoreDisplay" class="text-center mb-8"></div>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="medical-terminology-analysis.html" class="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition flex items-center gap-2">
+        <i data-lucide="book-open" class="w-5 h-5"></i>
+        Review Material
+      </a>
+      <button onclick="location.reload()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+        Retake Quiz
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="mt-12 flex justify-center gap-4 flex-wrap">
+    <a href="medical-terminology.html" class="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition flex items-center gap-2">
+      <i data-lucide="book-open" class="w-5 h-5"></i>
+      Back to Medical Terminology
+    </a>
+    <a href="more-subjects.html" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      Back to Subjects
+    </a>
+  </div>
+</main>
+
+<script>
+  lucide.createIcons();
+  
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Question Bank - 40 questions total
+  const questionBank = [
+    {
+      question: "What does the prefix 'hyper-' mean?",
+      options: ["Below normal", "Above normal", "Before", "After", "Within"],
+      correct: 1,
+      explanation: "'Hyper-' means above, excessive, or beyond normal. Examples include hypertension (high blood pressure), hyperglycemia (high blood sugar), and hyperthermia (elevated body temperature)."
+    },
+    {
+      question: "What does the prefix 'hypo-' mean?",
+      options: ["Above normal", "Below normal", "Between", "Around", "Through"],
+      correct: 1,
+      explanation: "'Hypo-' means below, under, or deficient. Examples include hypotension (low blood pressure), hypothermia (low body temperature), and hypoglycemia (low blood sugar)."
+    },
+    {
+      question: "The suffix '-itis' indicates:",
+      options: ["Removal", "Inflammation", "Study of", "Pain", "Tumor"],
+      correct: 1,
+      explanation: "'-itis' means inflammation. Common examples include arthritis (joint inflammation), bronchitis (bronchial inflammation), and appendicitis (appendix inflammation)."
+    },
+    {
+      question: "What does the suffix '-ectomy' mean?",
+      options: ["Incision into", "Surgical removal", "Enlargement", "Inflammation", "Viewing"],
+      correct: 1,
+      explanation: "'-ectomy' means surgical removal or excision. Examples include appendectomy (removal of appendix), tonsillectomy (removal of tonsils), and hysterectomy (removal of uterus)."
+    },
+    {
+      question: "The root word 'cardi/o' refers to:",
+      options: ["Lung", "Heart", "Liver", "Kidney", "Stomach"],
+      correct: 1,
+      explanation: "'Cardi/o' refers to the heart. Related terms include cardiology (study of the heart), cardiologist (heart specialist), and cardiovascular (relating to heart and blood vessels)."
+    },
+    {
+      question: "What does the prefix 'tachy-' mean?",
+      options: ["Slow", "Fast", "Large", "Small", "Painful"],
+      correct: 1,
+      explanation: "'Tachy-' means fast or rapid. Tachycardia refers to a rapid heart rate, and tachypnea refers to rapid breathing."
+    },
+    {
+      question: "What does the prefix 'brady-' mean?",
+      options: ["Fast", "Slow", "New", "Old", "Half"],
+      correct: 1,
+      explanation: "'Brady-' means slow. Bradycardia refers to a slow heart rate, and bradypnea refers to abnormally slow breathing."
+    },
+    {
+      question: "The suffix '-ology' means:",
+      options: ["Pain", "Disease", "Study of", "Treatment", "Specialist"],
+      correct: 2,
+      explanation: "'-ology' means the study of or science of. Examples include biology (study of life), cardiology (study of the heart), and pathology (study of disease)."
+    },
+    {
+      question: "What does 'dys-' as a prefix indicate?",
+      options: ["Normal", "Difficult or painful", "Before", "After", "Good"],
+      correct: 1,
+      explanation: "'Dys-' means difficult, painful, or abnormal. Examples include dysphagia (difficulty swallowing), dyspnea (difficulty breathing), and dysfunction (abnormal function)."
+    },
+    {
+      question: "The root 'nephr/o' refers to:",
+      options: ["Liver", "Kidney", "Lung", "Heart", "Brain"],
+      correct: 1,
+      explanation: "'Nephr/o' refers to the kidney. Related terms include nephrology (study of kidneys), nephrologist (kidney specialist), and nephritis (kidney inflammation)."
+    },
+    {
+      question: "What does the suffix '-algia' mean?",
+      options: ["Inflammation", "Pain", "Removal", "Enlargement", "Tumor"],
+      correct: 1,
+      explanation: "'-algia' means pain. Examples include neuralgia (nerve pain), myalgia (muscle pain), and arthralgia (joint pain)."
+    },
+    {
+      question: "The prefix 'poly-' means:",
+      options: ["One", "Two", "Many", "Half", "None"],
+      correct: 2,
+      explanation: "'Poly-' means many or multiple. Examples include polydipsia (excessive thirst), polyuria (excessive urination), and polypharmacy (use of multiple medications)."
+    },
+    {
+      question: "What does the root 'hepat/o' refer to?",
+      options: ["Heart", "Liver", "Lung", "Kidney", "Stomach"],
+      correct: 1,
+      explanation: "'Hepat/o' refers to the liver. Related terms include hepatitis (liver inflammation), hepatology (study of liver), and hepatomegaly (enlarged liver)."
+    },
+    {
+      question: "The suffix '-scope' means:",
+      options: ["Surgical removal", "Instrument for viewing", "Incision", "Inflammation", "Pain"],
+      correct: 1,
+      explanation: "'-scope' means an instrument for viewing or examining. Examples include stethoscope, endoscope, and otoscope."
+    },
+    {
+      question: "What does the prefix 'a-' or 'an-' mean?",
+      options: ["With", "Without or absence of", "Before", "After", "Around"],
+      correct: 1,
+      explanation: "'A-' or 'an-' means without, absence of, or lack of. Examples include anemia (without adequate blood), apnea (absence of breathing), and anoxia (absence of oxygen)."
+    },
+    {
+      question: "The root 'gastr/o' refers to:",
+      options: ["Liver", "Intestine", "Stomach", "Esophagus", "Pancreas"],
+      correct: 2,
+      explanation: "'Gastr/o' refers to the stomach. Related terms include gastritis (stomach inflammation), gastroenterology (study of stomach and intestines), and gastrectomy (surgical removal of stomach)."
+    },
+    {
+      question: "What does the suffix '-pathy' mean?",
+      options: ["Study of", "Disease", "Treatment", "Inflammation", "Removal"],
+      correct: 1,
+      explanation: "'-pathy' means disease or disorder. Examples include neuropathy (nerve disease), cardiomyopathy (heart muscle disease), and nephropathy (kidney disease)."
+    },
+    {
+      question: "The prefix 'hemi-' means:",
+      options: ["Half", "Whole", "Double", "Triple", "Quarter"],
+      correct: 0,
+      explanation: "'Hemi-' means half. Examples include hemiplegia (paralysis of one side of the body) and hemisphere (half of a sphere, like the brain hemispheres)."
+    },
+    {
+      question: "What does 'dermat/o' or 'derm/o' refer to?",
+      options: ["Bone", "Muscle", "Skin", "Nerve", "Blood"],
+      correct: 2,
+      explanation: "'Dermat/o' or 'derm/o' refers to skin. Related terms include dermatology (study of skin), dermatitis (skin inflammation), and dermatologist (skin specialist)."
+    },
+    {
+      question: "The suffix '-osis' indicates:",
+      options: ["Inflammation", "Abnormal condition or disease", "Pain", "Removal", "Viewing"],
+      correct: 1,
+      explanation: "'-osis' indicates an abnormal condition, disease, or increase. Examples include osteoporosis (bone condition), cirrhosis (liver condition), and neurosis (nervous condition)."
+    },
+    {
+      question: "What does the prefix 'inter-' mean?",
+      options: ["Within", "Between", "Above", "Below", "Around"],
+      correct: 1,
+      explanation: "'Inter-' means between. Examples include intercostal (between the ribs), intercellular (between cells), and interpersonal (between people)."
+    },
+    {
+      question: "The root 'oste/o' refers to:",
+      options: ["Joint", "Bone", "Muscle", "Cartilage", "Tendon"],
+      correct: 1,
+      explanation: "'Oste/o' refers to bone. Related terms include osteoporosis (bone porosity), osteology (study of bones), and osteomyelitis (bone marrow inflammation)."
+    },
+    {
+      question: "What does the suffix '-plasty' mean?",
+      options: ["Removal", "Inflammation", "Surgical repair", "Pain", "Disease"],
+      correct: 2,
+      explanation: "'-plasty' means surgical repair or reconstruction. Examples include rhinoplasty (nose reconstruction), arthroplasty (joint repair), and angioplasty (blood vessel repair)."
+    },
+    {
+      question: "The prefix 'macro-' means:",
+      options: ["Small", "Large", "Normal", "Narrow", "Wide"],
+      correct: 1,
+      explanation: "'Macro-' means large or abnormally large. Examples include macrocephaly (abnormally large head) and macrophage (large cell that engulfs foreign material)."
+    },
+    {
+      question: "What does 'pneum/o' or 'pulmon/o' refer to?",
+      options: ["Heart", "Lung", "Liver", "Kidney", "Brain"],
+      correct: 1,
+      explanation: "'Pneum/o' or 'pulmon/o' refers to the lung or air. Related terms include pneumonia (lung infection), pneumothorax (air in chest cavity), and pulmonary (relating to lungs)."
+    },
+    {
+      question: "The suffix '-otomy' means:",
+      options: ["Removal", "Incision into", "Viewing", "Pain", "Inflammation"],
+      correct: 1,
+      explanation: "'-otomy' means cutting into or incision. Examples include tracheotomy (incision into trachea), laparotomy (incision into abdomen), and thoracotomy (incision into chest)."
+    },
+    {
+      question: "What does the prefix 'peri-' mean?",
+      options: ["Before", "After", "Around", "Within", "Between"],
+      correct: 2,
+      explanation: "'Peri-' means around or surrounding. Examples include pericardium (membrane around the heart), periodontal (around the teeth), and peripheral (around the outside)."
+    },
+    {
+      question: "The root 'arthr/o' refers to:",
+      options: ["Bone", "Muscle", "Joint", "Cartilage", "Ligament"],
+      correct: 2,
+      explanation: "'Arthr/o' refers to a joint. Related terms include arthritis (joint inflammation), arthroscopy (joint examination), and arthroplasty (joint replacement)."
+    },
+    {
+      question: "What does the suffix '-megaly' mean?",
+      options: ["Small", "Enlargement", "Inflammation", "Pain", "Removal"],
+      correct: 1,
+      explanation: "'-megaly' means abnormal enlargement. Examples include cardiomegaly (enlarged heart), hepatomegaly (enlarged liver), and splenomegaly (enlarged spleen)."
+    },
+    {
+      question: "The prefix 'endo-' means:",
+      options: ["Outside", "Within or inside", "Around", "Between", "Above"],
+      correct: 1,
+      explanation: "'Endo-' means within, inside, or internal. Examples include endocardium (inner lining of heart), endoscopy (examination inside body), and endocrine (secreting internally)."
+    },
+    {
+      question: "What does 'hem/o' or 'hemat/o' refer to?",
+      options: ["Heart", "Liver", "Blood", "Lung", "Kidney"],
+      correct: 2,
+      explanation: "'Hem/o' or 'hemat/o' refers to blood. Related terms include hematology (study of blood), hemoglobin (blood protein), and hemorrhage (excessive bleeding)."
+    },
+    {
+      question: "The suffix '-gram' means:",
+      options: ["Study of", "Record or picture", "Instrument", "Pain", "Inflammation"],
+      correct: 1,
+      explanation: "'-gram' means a record, picture, or written record. Examples include electrocardiogram (EKG/ECG - heart record), mammogram (breast x-ray), and angiogram (blood vessel image)."
+    },
+    {
+      question: "What does the prefix 'trans-' mean?",
+      options: ["Within", "Across or through", "Around", "Before", "After"],
+      correct: 1,
+      explanation: "'Trans-' means across, through, or beyond. Examples include transplant (transfer across), transdermal (through the skin), and transfusion (transfer of blood)."
+    },
+    {
+      question: "The root 'my/o' refers to:",
+      options: ["Bone", "Muscle", "Nerve", "Blood", "Skin"],
+      correct: 1,
+      explanation: "'My/o' refers to muscle. Related terms include myocardium (heart muscle), myalgia (muscle pain), and myopathy (muscle disease)."
+    },
+    {
+      question: "What does the suffix '-rrhea' mean?",
+      options: ["Pain", "Flow or discharge", "Inflammation", "Removal", "Enlargement"],
+      correct: 1,
+      explanation: "'-rrhea' means flow or discharge. Examples include diarrhea (excessive bowel discharge), rhinorrhea (nasal discharge/runny nose), and dysmenorrhea (painful menstrual flow)."
+    },
+    {
+      question: "The prefix 'epi-' means:",
+      options: ["Below", "Above or upon", "Within", "Between", "Around"],
+      correct: 1,
+      explanation: "'Epi-' means above, upon, or over. Examples include epidermis (outer layer of skin), epicardium (outer layer of heart), and epidural (above the dura mater)."
+    },
+    {
+      question: "What does 'neur/o' refer to?",
+      options: ["Brain only", "Nerve", "Spinal cord only", "Muscle", "Bone"],
+      correct: 1,
+      explanation: "'Neur/o' refers to nerve or nervous system. Related terms include neurology (study of nervous system), neuron (nerve cell), and neuropathy (nerve disease)."
+    },
+    {
+      question: "The suffix '-stenosis' means:",
+      options: ["Enlargement", "Narrowing or stricture", "Opening", "Inflammation", "Pain"],
+      correct: 1,
+      explanation: "'-stenosis' means abnormal narrowing or stricture. Examples include aortic stenosis (narrowed aortic valve), spinal stenosis (narrowed spinal canal), and pyloric stenosis (narrowed stomach outlet)."
+    },
+    {
+      question: "What does the prefix 'micro-' mean?",
+      options: ["Large", "Small", "Normal", "Many", "Few"],
+      correct: 1,
+      explanation: "'Micro-' means small or microscopic. Examples include microorganism (small organism visible only under microscope), microcephaly (abnormally small head), and microscope (instrument for viewing small objects)."
+    },
+    {
+      question: "The root 'cyt/o' refers to:",
+      options: ["Tissue", "Cell", "Organ", "Blood", "Bone"],
+      correct: 1,
+      explanation: "'Cyt/o' refers to a cell. Related terms include cytology (study of cells), cytoplasm (cell substance), and leukocyte (white blood cell)."
+    }
+  ];
+
+  // Shuffle array function
+  function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  // Select 15 random questions
+  const selectedQuestions = shuffleArray(questionBank).slice(0, 15);
+  const correctAnswers = {};
+  const explanations = {};
+
+  // Generate quiz HTML
+  const quizContainer = document.getElementById('quizContainer');
+  selectedQuestions.forEach((q, index) => {
+    const questionNum = index + 1;
+    const questionId = `q${questionNum}`;
+    
+    // Store correct answer and explanation
+    correctAnswers[questionId] = q.correct;
+    explanations[questionId] = q.explanation;
+    
+    // Shuffle options with correct answer tracking
+    const optionsWithIndex = q.options.map((opt, idx) => ({ text: opt, originalIndex: idx }));
+    const shuffledOptions = shuffleArray(optionsWithIndex);
+    
+    // Find new position of correct answer
+    const newCorrectIndex = shuffledOptions.findIndex(opt => opt.originalIndex === q.correct);
+    correctAnswers[questionId] = newCorrectIndex;
+    
+    // Create question HTML
+    const questionHTML = `
+      <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-teal-500 quiz-question">
+        <h3 class="text-2xl font-bold mb-4 text-gray-800">Question ${questionNum}</h3>
+        <p class="text-lg text-gray-700 mb-6">${q.question}</p>
+        <div class="space-y-3">
+          ${shuffledOptions.map((opt, optIndex) => `
+            <label class="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 cursor-pointer transition">
+              <input type="radio" name="${questionId}" value="${optIndex}" class="mt-1">
+              <span class="text-gray-700">${opt.text}</span>
+            </label>
+          `).join('')}
+        </div>
+        <div class="feedback mt-4 hidden"></div>
+      </div>
+    `;
+    
+    quizContainer.innerHTML += questionHTML;
+  });
+
+  lucide.createIcons();
+
+  // Submit button handler
+  document.getElementById('submitQuiz').addEventListener('click', () => {
+    let score = 0;
+    let answered = 0;
+    
+    const questions = document.querySelectorAll('.quiz-question');
+    
+    questions.forEach((question, index) => {
+      const questionId = `q${index + 1}`;
+      const selected = question.querySelector(`input[name="${questionId}"]:checked`);
+      const feedback = question.querySelector('.feedback');
+      
+      if (selected) {
+        answered++;
+        const selectedValue = parseInt(selected.value);
+        const isCorrect = selectedValue === correctAnswers[questionId];
+        
+        if (isCorrect) {
+          score++;
+          question.classList.remove('border-red-500', 'border-yellow-500');
+          question.classList.add('border-teal-500');
+          feedback.innerHTML = `
+            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <p class="font-semibold text-green-800 mb-2">✓ Correct!</p>
+              <p class="text-green-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        } else {
+          question.classList.remove('border-teal-500', 'border-yellow-500');
+          question.classList.add('border-red-500');
+          feedback.innerHTML = `
+            <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded">
+              <p class="font-semibold text-red-800 mb-2">✗ Incorrect</p>
+              <p class="text-red-700">${explanations[questionId]}</p>
+            </div>
+          `;
+        }
+        
+        feedback.classList.remove('hidden');
+      } else {
+        question.classList.remove('border-teal-500', 'border-red-500');
+        question.classList.add('border-yellow-500');
+        feedback.innerHTML = `
+          <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+            <p class="font-semibold text-yellow-800">Question not answered</p>
+          </div>
+        `;
+        feedback.classList.remove('hidden');
+      }
+    });
+    
+    const percentage = answered > 0 ? Math.round((score / 15) * 100) : 0;
+    const resultDiv = document.getElementById('quizResults');
+    const scoreDisplay = document.getElementById('scoreDisplay');
+    
+    let gradeColor = 'text-red-600';
+    let message = 'Keep studying!';
+    
+    if (percentage >= 90) {
+      gradeColor = 'text-green-600';
+      message = 'Excellent! You have mastered this material!';
+    } else if (percentage >= 80) {
+      gradeColor = 'text-blue-600';
+      message = 'Great job! You have a strong understanding!';
+    } else if (percentage >= 70) {
+      gradeColor = 'text-yellow-600';
+      message = 'Good work! Review the explanations to improve.';
+    } else if (percentage >= 60) {
+      gradeColor = 'text-orange-600';
+      message = 'Fair. Consider reviewing the material more thoroughly.';
+    }
+    
+    scoreDisplay.innerHTML = `
+      <div class="text-center">
+        <div class="text-6xl font-bold ${gradeColor} mb-4">${percentage}%</div>
+        <p class="text-2xl text-gray-700 mb-2">${score} out of 15 correct</p>
+        <p class="text-xl text-gray-600 mb-6">${message}</p>
+      </div>
+    `;
+    
+    resultDiv.classList.remove('hidden');
+    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Dark Mode Toggle
+  const darkModeToggles = document.querySelectorAll('.dark-mode-toggle');
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  function updateDarkModeIcon() {
+    const isDark = document.body.classList.contains('dark-mode');
+    darkModeIcons.forEach(icon => {
+      icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+    });
+    lucide.createIcons();
+  }
+
+  // Initialize icons and dark mode
+  lucide.createIcons();
+  setTimeout(() => {
+    updateDarkModeIcon();
+  }, 100);
+
+  darkModeToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('dark-mode');
+      const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateDarkModeIcon();
+    });
+  });
+</script>
+
+</body>
+</html>
